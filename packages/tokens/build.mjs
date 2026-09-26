@@ -13,7 +13,7 @@ for (const s of t.shadow.tokens) { shadowLight[camel(s.name)] = s.value.light; s
 const space = Object.fromEntries(t.spacing.tokens.map((x) => [x.name.split('-')[1], px(x.value)]));
 const radius = Object.fromEntries(t.radius.tokens.map((x) => [x.name.split('-')[1], px(x.value)]));
 
-const ts = `// Сгенерировано из tokens.json. Не править вручную: pnpm tokens.
+const ts = `// Сгенерировано из tokens.json. Не править вручную: npm run tokens.
 export const light = ${JSON.stringify(light, null, 2)};
 export type Palette = { [K in keyof typeof light]: string };
 export const dark: Palette = ${JSON.stringify(dark, null, 2)};
@@ -43,7 +43,7 @@ export const type = {
 
 const vars = (obj, sh) => Object.entries({ ...obj, ...sh })
   .map(([k, v]) => `  --${k.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())}: ${v};`).join('\n');
-const css = `/* Сгенерировано из tokens.json. Не править вручную: pnpm tokens. */
+const css = `/* Сгенерировано из tokens.json. Не править вручную: npm run tokens. */
 :root, [data-theme="light"] {
 ${vars(light, shadowLight)}
 }
