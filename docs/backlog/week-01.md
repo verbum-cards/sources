@@ -2,7 +2,7 @@
 
 ## Задачи для Claude Code
 
-- [ ] **T1.1 Монорепозиторий.** Настроить npm workspaces в корневом `package.json`, общий `tsconfig.base.json`, скрипт `npm run typecheck --workspaces` по всем пакетам.
+- [x] **T1.1 Монорепозиторий.** Настроить npm workspaces в корневом `package.json`, общий `tsconfig.base.json`, скрипт `npm run typecheck --workspaces` по всем пакетам.
   - Приёмка: `npm install` и `npm run typecheck --workspaces` проходят в чистом клоне.
 
 - [ ] **T1.2 Пакет токенов.** В `packages/tokens` — скрипт сборки из `tokens.json` в `dist/tokens.ts` (light, dark, space, radius, fonts, type) и `dist/tokens.css` (CSS-переменные, темы через `[data-theme]`).

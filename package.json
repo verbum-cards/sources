@@ -1,0 +1,11 @@
+{
+  "name": "cards",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
