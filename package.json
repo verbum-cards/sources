@@ -5,6 +5,10 @@
     "apps/*",
     "packages/*"
   ],
+  "scripts": {
+    "tokens": "npm run build --workspace=@cards/tokens",
+    "postinstall": "npm run tokens"
+  },
   "devDependencies": {
     "typescript": "^7.0.2"
   }

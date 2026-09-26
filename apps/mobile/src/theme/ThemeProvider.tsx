@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import { useColorScheme } from 'react-native';
-import { dark, light, Palette, radius, space, type } from './tokens';
+import { dark, light, Palette, radius, space, type } from '@cards/tokens';
 
 type Scheme = 'light' | 'dark';
 type Mode = Scheme | 'system';

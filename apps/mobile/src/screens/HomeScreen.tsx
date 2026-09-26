@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 import { Chip } from '../components/Chip';
 import { ProgressBar } from '../components/ProgressBar';
 import { ReviewPanel } from '../components/ReviewPanel';
@@ -27,6 +28,7 @@ const DEMO = {
 
 export function HomeScreen() {
   const { colors, radius, space, type } = useTheme();
+  const { t } = useTranslation('home');
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState<TabKey>('home');
 
@@ -42,10 +44,10 @@ export function HomeScreen() {
           <View style={{ gap: 6, flexShrink: 1 }}>
             <Text style={[type.bodyS, { color: colors.inkMuted }]}>{today.charAt(0).toUpperCase() + today.slice(1)}</Text>
             <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
-              Привет, {DEMO.name}
+              {t('header.greeting', { name: DEMO.name })}
             </Text>
           </View>
-          <Chip label={`${DEMO.streak} дней`} variant="streak" />
+          <Chip label={t('header.streak', { count: DEMO.streak })} variant="streak" />
         </View>
 
         <WordInput value={query} onChangeText={setQuery} onSubmit={() => {/* F6: поиск в локальном словаре */}} />
@@ -54,12 +56,17 @@ export function HomeScreen() {
           <ReviewPanel due={DEMO.due} minutes={Math.max(1, Math.round(DEMO.due * 0.25))} onStart={() => {/* F10 */}} />
         ) : null}
 
-        <ProgressBar title="Цель дня" meta={`${DEMO.done} из ${DEMO.goal} карточек`} value={DEMO.done} max={DEMO.goal} />
+        <ProgressBar
+          title={t('goal.title')}
+          meta={t('goal.meta', { count: DEMO.goal, done: DEMO.done })}
+          value={DEMO.done}
+          max={DEMO.goal}
+        />
 
         <View style={{ flexDirection: 'row', gap: space[2] }}>
           {[
-            { n: DEMO.learned, label: 'слов выучено' },
-            { n: DEMO.queued, label: 'новых в очереди' },
+            { n: DEMO.learned, label: t('stats.learned', { count: DEMO.learned }) },
+            { n: DEMO.queued, label: t('stats.queued', { count: DEMO.queued }) },
           ].map((s) => (
             <View key={s.label} style={{ flex: 1, backgroundColor: colors.surfaceSunken, borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: space[4], gap: 2 }}>
               <Text style={[type.displayL, { fontSize: 24, lineHeight: 30, color: colors.ink }]}>{s.n}</Text>
@@ -70,7 +77,7 @@ export function HomeScreen() {
 
         <View style={{ gap: space[2] }}>
           <Text accessibilityRole="header" style={[type.button, { fontSize: 15, color: colors.ink }]}>
-            Недавно добавлены
+            {t('recent.title')}
           </Text>
           <View style={{ backgroundColor: colors.surface, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' }}>
             {DEMO.recent.map((w, i) => (
