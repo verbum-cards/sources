@@ -1,0 +1,12 @@
+{
+  "name": "@cards/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/tokens.ts",
+  "types": "dist/tokens.ts",
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "echo tokens: ok"
+  }
+}

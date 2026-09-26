@@ -1,0 +1,90 @@
+/* Сгенерировано из tokens.json. Не править вручную: pnpm tokens. */
+:root, [data-theme="light"] {
+  --paper: #f5f3ee;
+  --surface: #ffffff;
+  --surface-sunken: #ece9e2;
+  --line: #dedad0;
+  --line-strong: #8f8a7e;
+  --ink: #15140f;
+  --ink-muted: #5c584f;
+  --action: #15140f;
+  --on-action: #f5f3ee;
+  --highlight: #d4f24a;
+  --on-highlight: #15140f;
+  --highlight-soft: #eef8c4;
+  --panel: #15140f;
+  --on-panel: #f5f3ee;
+  --panel-muted: #b8b4a8;
+  --signal: #ff6b2c;
+  --on-signal: #15140f;
+  --signal-ink: #b23c0b;
+  --signal-soft: #ffe2d1;
+  --meter: #15140f;
+  --focus: #15140f;
+  --shadow-card: 0 1px 2px rgba(21,20,15,0.06), 0 8px 24px rgba(21,20,15,0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --paper: #121210;
+  --surface: #1c1c19;
+  --surface-sunken: #262622;
+  --line: #34342f;
+  --line-strong: #75726a;
+  --ink: #f2f0ea;
+  --ink-muted: #a9a59b;
+  --action: #d4f24a;
+  --on-action: #15140f;
+  --highlight: #d4f24a;
+  --on-highlight: #15140f;
+  --highlight-soft: #2e3312;
+  --panel: #26261f;
+  --on-panel: #f2f0ea;
+  --panel-muted: #a9a59b;
+  --signal: #ff7a45;
+  --on-signal: #15140f;
+  --signal-ink: #ff8a55;
+  --signal-soft: #3a1b0d;
+  --meter: #d4f24a;
+  --focus: #d4f24a;
+  --shadow-card: none;
+  }
+}
+[data-theme="dark"] {
+  --paper: #121210;
+  --surface: #1c1c19;
+  --surface-sunken: #262622;
+  --line: #34342f;
+  --line-strong: #75726a;
+  --ink: #f2f0ea;
+  --ink-muted: #a9a59b;
+  --action: #d4f24a;
+  --on-action: #15140f;
+  --highlight: #d4f24a;
+  --on-highlight: #15140f;
+  --highlight-soft: #2e3312;
+  --panel: #26261f;
+  --on-panel: #f2f0ea;
+  --panel-muted: #a9a59b;
+  --signal: #ff7a45;
+  --on-signal: #15140f;
+  --signal-ink: #ff8a55;
+  --signal-soft: #3a1b0d;
+  --meter: #d4f24a;
+  --focus: #d4f24a;
+  --shadow-card: none;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --font-display: Unbounded, "Arial Black", system-ui, sans-serif;
+  --font-sans: Onest, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
