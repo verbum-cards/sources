@@ -1,5 +1,6 @@
 import React from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../theme/ThemeProvider';
 
 type Props = {
@@ -11,11 +12,12 @@ type Props = {
 // Главный вход в приложение: подпись видна всегда, плейсхолдер — пример слова.
 export function WordInput({ value, onChangeText, onSubmit }: Props) {
   const { colors, radius, space, type } = useTheme();
+  const { t } = useTranslation('common');
 
   return (
     <View style={{ gap: space[2] }}>
       <Text nativeID="new-word-label" style={[type.caption, { color: colors.inkMuted, fontSize: 13 }]}>
-        Новое слово
+        {t('wordInput.label')}
       </Text>
       <View style={{ flexDirection: 'row', gap: space[2] }}>
         <TextInput
@@ -23,7 +25,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
           value={value}
           onChangeText={onChangeText}
           onSubmitEditing={onSubmit}
-          placeholder="Например, serendipity"
+          placeholder={t('wordInput.placeholder')}
           placeholderTextColor={colors.inkMuted}
           autoCapitalize="none"
           autoCorrect={false}
@@ -45,7 +47,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
         />
         <Pressable
           accessibilityRole="button"
-          accessibilityLabel="Найти перевод"
+          accessibilityLabel={t('wordInput.submitLabel')}
           onPress={onSubmit}
           style={({ pressed }) => ({
             width: 52,

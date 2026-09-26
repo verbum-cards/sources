@@ -1,4 +1,4 @@
-/* Сгенерировано из tokens.json. Не править вручную: pnpm tokens. */
+/* Сгенерировано из tokens.json. Не править вручную: npm run tokens. */
 :root, [data-theme="light"] {
   --paper: #f5f3ee;
   --surface: #ffffff;

@@ -3,3 +3,13 @@
 /.idea/
 node_modules/
 
+/packages/tokens/dist/
+
+# Expo (apps/mobile)
+apps/mobile/.expo/
+apps/mobile/ios/
+apps/mobile/android/
+apps/mobile/dist/
+apps/mobile/web-build/
+apps/mobile/expo-env.d.ts
+*.tsbuildinfo

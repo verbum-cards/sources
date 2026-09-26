@@ -5,10 +5,10 @@
 - [x] **T1.1 Монорепозиторий.** Настроить npm workspaces в корневом `package.json`, общий `tsconfig.base.json`, скрипт `npm run typecheck --workspaces` по всем пакетам.
   - Приёмка: `npm install` и `npm run typecheck --workspaces` проходят в чистом клоне.
 
-- [ ] **T1.2 Пакет токенов.** В `packages/tokens` — скрипт сборки из `tokens.json` в `dist/tokens.ts` (light, dark, space, radius, fonts, type) и `dist/tokens.css` (CSS-переменные, темы через `[data-theme]`).
+- [x] **T1.2 Пакет токенов.** В `packages/tokens` — скрипт сборки из `tokens.json` в `dist/tokens.ts` (light, dark, space, radius, fonts, type) и `dist/tokens.css` (CSS-переменные, темы через `[data-theme]`).
   - Приёмка: `npm run tokens` генерирует оба файла; значения совпадают с `tokens.json`; мобильное приложение импортирует `@cards/tokens`.
 
-- [ ] **T1.3 Мобильное приложение в монорепозитории.** Создать Expo-проект (TypeScript) в `apps/mobile`, перенести `src/` и `App.tsx` из `apps/mobile/starter/`, подключить `@cards/tokens`, i18n (русский), lucide-react-native вместо временных глифов в TabBar.
+- [x] **T1.3 Мобильное приложение в монорепозитории.** Создать Expo-проект (TypeScript) в `apps/mobile`, перенести `src/` и `App.tsx` из `apps/mobile/starter/`, подключить `@cards/tokens`, i18n (русский), lucide-react-native вместо временных глифов в TabBar.
   - Приёмка: главный экран открывается на телефоне в светлой и тёмной теме; в компонентах нет hex-цветов; все строки — через i18n.
 
 - [ ] **T1.4 Схема локальной базы.** **[план сначала]** По `docs/data-model.md` — таблицы SQLite (expo-sqlite) для пользовательских данных и словаря, миграции, типы в `@cards/contracts`.

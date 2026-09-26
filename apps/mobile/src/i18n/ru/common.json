@@ -1,0 +1,18 @@
+{
+  "tabBar": {
+    "home": "Главная",
+    "decks": "Колоды",
+    "progress": "Прогресс",
+    "profile": "Профиль"
+  },
+  "wordInput": {
+    "label": "Новое слово",
+    "placeholder": "Например, serendipity",
+    "submitLabel": "Найти перевод"
+  },
+  "reviewPanel": {
+    "title": "К повторению сегодня",
+    "minutes": "≈ {{count}} мин",
+    "button": "Повторить"
+  }
+}

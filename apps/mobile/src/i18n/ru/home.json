@@ -1,0 +1,29 @@
+{
+  "header": {
+    "greeting": "Привет, {{name}}",
+    "streak_one": "{{count}} день",
+    "streak_few": "{{count}} дня",
+    "streak_many": "{{count}} дней",
+    "streak_other": "{{count}} дня"
+  },
+  "goal": {
+    "title": "Цель дня",
+    "meta_one": "{{done}} из {{count}} карточки",
+    "meta_few": "{{done}} из {{count}} карточек",
+    "meta_many": "{{done}} из {{count}} карточек",
+    "meta_other": "{{done}} из {{count}} карточек"
+  },
+  "stats": {
+    "learned_one": "слово выучено",
+    "learned_few": "слова выучено",
+    "learned_many": "слов выучено",
+    "learned_other": "слова выучено",
+    "queued_one": "новое в очереди",
+    "queued_few": "новых в очереди",
+    "queued_many": "новых в очереди",
+    "queued_other": "новых в очереди"
+  },
+  "recent": {
+    "title": "Недавно добавлены"
+  }
+}

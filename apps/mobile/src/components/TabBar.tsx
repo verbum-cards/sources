@@ -1,21 +1,24 @@
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Home, Layers, BarChart2, User } from 'lucide-react-native';
+import { useTranslation } from 'react-i18next';
+import { fonts } from '@cards/tokens';
 import { useTheme } from '../theme/ThemeProvider';
 
 export type TabKey = 'home' | 'decks' | 'progress' | 'profile';
 
-const TABS: { key: TabKey; label: string; glyph: string }[] = [
-  { key: 'home', label: 'Главная', glyph: '⌂' },
-  { key: 'decks', label: 'Колоды', glyph: '▤' },
-  { key: 'progress', label: 'Прогресс', glyph: '▮' },
-  { key: 'profile', label: 'Профиль', glyph: '○' },
+const TABS: { key: TabKey; labelKey: string; Icon: typeof Home }[] = [
+  { key: 'home', labelKey: 'tabBar.home', Icon: Home },
+  { key: 'decks', labelKey: 'tabBar.decks', Icon: Layers },
+  { key: 'progress', labelKey: 'tabBar.progress', Icon: BarChart2 },
+  { key: 'profile', labelKey: 'tabBar.profile', Icon: User },
 ];
 
-// Иконки-глифы — временные; в проекте подключаем lucide-react-native (см. README).
 export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: TabKey) => void }) {
   const { colors, radius, space, type } = useTheme();
   const insets = useSafeAreaInsets();
+  const { t } = useTranslation('common');
 
   return (
     <View
@@ -32,10 +35,12 @@ export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: T
     >
       {TABS.map((tab) => {
         const on = tab.key === active;
+        const label = t(tab.labelKey);
         return (
           <Pressable
             key={tab.key}
             accessibilityRole="tab"
+            accessibilityLabel={label}
             accessibilityState={{ selected: on }}
             onPress={() => onChange(tab.key)}
             style={{ flex: 1, minHeight: 56, alignItems: 'center', justifyContent: 'center', gap: space[1] }}
@@ -50,10 +55,10 @@ export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: T
                 backgroundColor: on ? colors.highlight : 'transparent',
               }}
             >
-              <Text style={{ fontSize: 16, color: on ? colors.onHighlight : colors.inkMuted }}>{tab.glyph}</Text>
+              <tab.Icon size={20} strokeWidth={2} color={on ? colors.onHighlight : colors.inkMuted} />
             </View>
-            <Text style={[type.caption, { color: on ? colors.ink : colors.inkMuted, fontFamily: on ? 'Onest_600SemiBold' : 'Onest_500Medium' }]}>
-              {tab.label}
+            <Text style={[type.caption, { color: on ? colors.ink : colors.inkMuted, fontFamily: on ? fonts.semibold : fonts.medium }]}>
+              {label}
             </Text>
           </Pressable>
         );
