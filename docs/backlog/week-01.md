@@ -2,11 +2,11 @@
 
 ## Задачи для Claude Code
 
-- [ ] **T1.1 Монорепозиторий.** Настроить pnpm workspaces по `pnpm-workspace.yaml`, общий `tsconfig.base.json`, скрипт `pnpm typecheck` по всем пакетам.
-  - Приёмка: `pnpm install` и `pnpm typecheck` проходят в чистом клоне.
+- [ ] **T1.1 Монорепозиторий.** Настроить npm workspaces в корневом `package.json`, общий `tsconfig.base.json`, скрипт `npm run typecheck --workspaces` по всем пакетам.
+  - Приёмка: `npm install` и `npm run typecheck --workspaces` проходят в чистом клоне.
 
 - [ ] **T1.2 Пакет токенов.** В `packages/tokens` — скрипт сборки из `tokens.json` в `dist/tokens.ts` (light, dark, space, radius, fonts, type) и `dist/tokens.css` (CSS-переменные, темы через `[data-theme]`).
-  - Приёмка: `pnpm tokens` генерирует оба файла; значения совпадают с `tokens.json`; мобильное приложение импортирует `@cards/tokens`.
+  - Приёмка: `npm run tokens` генерирует оба файла; значения совпадают с `tokens.json`; мобильное приложение импортирует `@cards/tokens`.
 
 - [ ] **T1.3 Мобильное приложение в монорепозитории.** Создать Expo-проект (TypeScript) в `apps/mobile`, перенести `src/` и `App.tsx` из `apps/mobile/starter/`, подключить `@cards/tokens`, i18n (русский), lucide-react-native вместо временных глифов в TabBar.
   - Приёмка: главный экран открывается на телефоне в светлой и тёмной теме; в компонентах нет hex-цветов; все строки — через i18n.
