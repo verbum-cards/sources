@@ -28,7 +28,7 @@ skills: implement-issue, expo-mobile, design-system, i18n-russian, fsrs-schedule
 
 # Проверки перед PR
 
-- `pnpm --filter mobile typecheck` и тесты затронутой логики;
+- `npm run typecheck --workspace=mobile` и тесты затронутой логики;
 - ручная проверка по разделу «Как проверить на телефоне» из issue — опиши в PR, что именно проверено в симуляторе или веб-сборке, а что требует проверки на реальном устройстве владельцем.
 
 # Ограничения

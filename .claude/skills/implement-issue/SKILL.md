@@ -2,7 +2,7 @@
 name: implement-issue
 description: "Порядок реализации GitHub issue в проекте Cards от метки ready до pull request — проверка готовности, выбор агента по области, план комментарием, ветка, маленькие коммиты, тесты, проверки, PR с «Closes #N» и инструкцией проверки на телефоне. Используй всегда, когда нужно взять задачу в работу, сделать issue, реализовать функцию или исправить баг по issue."
 argument-hint: "<номер issue>"
-allowed-tools: Read, Grep, Glob, Edit, Write, Agent, Bash(gh:*), Bash(git:*), Bash(pnpm:*), Bash(npx:*), Bash(node:*)
+allowed-tools: Read, Grep, Glob, Edit, Write, Agent, Bash(gh:*), Bash(git:*), Bash(npm:*), Bash(npx:*), Bash(node:*)
 ---
 
 # Реализация issue
@@ -53,9 +53,9 @@ git checkout -b issue-$ISSUE-<короткое-описание-латинице
 ## 6. Проверки
 
 ```bash
-pnpm install --frozen-lockfile
-pnpm -r typecheck
-pnpm -r test --if-present
+npm ci
+npm run typecheck --workspaces --if-present
+npm run test --workspaces --if-present
 ```
 
 Если чего-то нет (проект ещё не настроен) — отметь в PR, что не проверено и почему. Не отключай проверки и тесты, чтобы они прошли.
