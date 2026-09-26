@@ -13,7 +13,12 @@ packages/
   contracts/    Общие типы: модель данных, протокол синхронизации, API
 data/           Открытые списки уровней CEFR и образец формата словаря
 docs/           Продуктовые и технические документы — источник правды
+.claude/        Агенты, скиллы и настройки Claude Code
+.github/        Воркфлоу фоновой разработки, шаблоны issues и PR
+scripts/        Служебные скрипты (метки GitHub)
 ```
+
+Фоновая разработка через GitHub Issues — `docs/automation.md`.
 
 Как начать: см. `docs/backlog/week-01.md`. Правила работы для Claude Code — в `CLAUDE.md`.
 

@@ -1,0 +1,36 @@
+name: Функция
+description: Новая функция или изменение поведения
+title: "[Функция] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что нужно
+      description: Опишите результат, а не реализацию. Можно коротко — агент-проджект уточнит и допишет критерии.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Зачем и для кого
+      description: Какую проблему пользователя это решает.
+  - type: input
+    id: links
+    attributes:
+      label: Связано
+      description: FR, флоу, прототип, другие issues — если знаете.
+      placeholder: "FR-21, флоу F10, #12"
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Критерии приёмки
+      description: Необязательно — если пусто, их напишет агент.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Насколько важно для беты
+      options:
+        - Обязательно для беты
+        - Желательно
+        - После беты

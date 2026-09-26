@@ -1,0 +1,44 @@
+# Разбор issues агентом project-manager (скилл triage-issue).
+# Запуск: новый, изменённый или переоткрытый issue; ответ владельца в issue с меткой needs-info.
+name: Triage
+
+on:
+  issues:
+    types: [opened, edited, reopened]
+  issue_comment:
+    types: [created]
+
+concurrency:
+  group: triage-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  triage:
+    if: >-
+      !github.event.issue.pull_request &&
+      !contains(github.event.issue.labels.*.name, 'report') &&
+      !contains(github.event.issue.labels.*.name, 'type:owner') &&
+      !contains(github.event.issue.labels.*.name, 'ready') &&
+      (github.event_name == 'issues' ||
+        (contains(github.event.issue.labels.*.name, 'needs-info') &&
+         !startsWith(github.event.comment.body, '<!--')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_BOT_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.CARDS_BOT_TOKEN }}
+          prompt: "/triage-issue ${{ github.event.issue.number }}"
+          claude_args: |
+            --model claude-sonnet-5
+            --max-turns 30

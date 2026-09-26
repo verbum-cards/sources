@@ -1,0 +1,33 @@
+# После merge: project-manager закрывает задачи и отмечает устаревшие issues.
+name: After merge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  after-merge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_BOT_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.CARDS_BOT_TOKEN }}
+          prompt: |
+            Используй агента project-manager в режиме «После merge» для PR #${{ github.event.pull_request.number }}.
+          claude_args: |
+            --model claude-sonnet-5
+            --max-turns 20
+            --allowedTools "Read,Grep,Glob,Agent,Bash(gh issue:*),Bash(gh pr view:*),Bash(gh api:*)"

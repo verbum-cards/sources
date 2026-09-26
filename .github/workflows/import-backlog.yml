@@ -1,0 +1,34 @@
+# Ручной запуск: импорт задач недели из docs/backlog/week-NN.md в issues.
+name: Import backlog
+
+on:
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Номер недели, две цифры (например, 01)"
+        required: true
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_BOT_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.CARDS_BOT_TOKEN }}
+          prompt: |
+            Используй агента project-manager в режиме «Импорт бэклога»: импортируй docs/backlog/week-${{ inputs.week }}.md.
+          claude_args: |
+            --model claude-sonnet-5
+            --max-turns 40
+            --allowedTools "Read,Grep,Glob,Agent,Bash(gh issue:*),Bash(gh label:*),Bash(gh api:*)"

@@ -1,0 +1,36 @@
+# План архитектора для задач с меткой needs-design.
+name: Design
+
+on:
+  issues:
+    types: [labeled]
+
+concurrency:
+  group: design-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  design:
+    if: github.event.label.name == 'needs-design'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_BOT_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.CARDS_BOT_TOKEN }}
+          prompt: |
+            Используй агента architect: подготовь план для issue #${{ github.event.issue.number }} по его инструкциям и опубликуй его комментарием в issue.
+          claude_args: |
+            --model claude-opus-5-5
+            --max-turns 40
+            --allowedTools "Read,Grep,Glob,Agent,Bash(gh issue:*),Bash(gh api:*)"

@@ -1,0 +1,31 @@
+# Еженедельный отчёт по понедельникам в 09:00 по Стамбулу (06:00 UTC) и по кнопке.
+name: Weekly report
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.CARDS_BOT_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ secrets.CARDS_BOT_TOKEN }}
+          prompt: "/weekly-report"
+          claude_args: |
+            --model claude-haiku-4-5-20251001
+            --max-turns 25

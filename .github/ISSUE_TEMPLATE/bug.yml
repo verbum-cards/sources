@@ -1,0 +1,47 @@
+name: Баг
+description: Что-то работает не так
+title: "[Баг] "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: |
+        1. Открыть …
+        2. Нажать …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Что ожидалось
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Что произошло
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Устройство и ОС
+      placeholder: "iPhone 13, iOS 18.2"
+  - type: input
+    id: build
+    attributes:
+      label: Версия сборки
+      description: Видна в профиле приложения.
+  - type: checkboxes
+    id: severity
+    attributes:
+      label: Серьёзность
+      options:
+        - label: Пропали или испортились данные (карточки, прогресс)
+        - label: Приложение падает или не запускается
+  - type: textarea
+    id: media
+    attributes:
+      label: Скриншоты или видео
