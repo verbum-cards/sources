@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@cards/contracts": "*",
     "@cards/tokens": "*",
     "@expo-google-fonts/onest": "^0.4.2",
     "@expo-google-fonts/unbounded": "^0.4.1",
     "expo": "~57.0.25",
     "expo-font": "~57.0.4",
+    "expo-sqlite": "~57.0.3",
     "expo-status-bar": "~57.0.1",
     "i18next": "^26.4.2",
     "lucide-react-native": "^1.48.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "tsx": "^4.23.15",
     "typescript": "~6.0.3"
   },
   "scripts": {
@@ -26,7 +29,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
+    "test": "node --import tsx --test tests/db/*.test.ts"
   },
   "private": true
 }
