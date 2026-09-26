@@ -1,0 +1,107 @@
+index	idx_card_schedule_due	card_schedule	CREATE INDEX idx_card_schedule_due ON card_schedule (due)
+index	idx_card_user_created	card	CREATE INDEX idx_card_user_created ON card (user_id, created_at DESC) WHERE deleted_at IS NULL
+index	idx_card_user_item	card	CREATE INDEX idx_card_user_item ON card (user_id, item_type, item_id)
+index	idx_review_log_card_reviewed	review_log	CREATE INDEX idx_review_log_card_reviewed ON review_log (card_id, reviewed_at)
+index	idx_review_log_reviewed	review_log	CREATE INDEX idx_review_log_reviewed ON review_log (reviewed_at)
+index	idx_review_log_unsynced	review_log	CREATE INDEX idx_review_log_unsynced ON review_log (reviewed_at) WHERE synced_at IS NULL
+index	idx_sync_op_unacked	sync_op	CREATE INDEX idx_sync_op_unacked ON sync_op (client_ts) WHERE acked_at IS NULL
+index	sqlite_autoindex_app_meta_1	app_meta	
+index	sqlite_autoindex_card_1	card	
+index	sqlite_autoindex_card_content_1	card_content	
+index	sqlite_autoindex_card_schedule_1	card_schedule	
+index	sqlite_autoindex_review_log_1	review_log	
+index	sqlite_autoindex_sync_op_1	sync_op	
+index	sqlite_autoindex_user_deck_1	user_deck	
+index	sqlite_autoindex_user_profile_1	user_profile	
+table	app_meta	app_meta	CREATE TABLE app_meta (
+      key TEXT PRIMARY KEY,
+      value TEXT
+    )
+table	card	card	CREATE TABLE card (
+      id TEXT PRIMARY KEY,
+      user_id TEXT NOT NULL,
+      item_type TEXT NOT NULL CHECK (item_type IN ('sense', 'expression')),
+      item_id TEXT NOT NULL,
+      source_deck_id TEXT,
+      overrides TEXT,
+      state TEXT NOT NULL CHECK (state IN ('new', 'learning', 'review', 'suspended', 'known')),
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      deleted_at TEXT,
+      field_meta TEXT
+    )
+table	card_content	card_content	CREATE TABLE card_content (
+      card_id TEXT PRIMARY KEY REFERENCES card (id) ON DELETE CASCADE,
+      lemma TEXT NOT NULL,
+      pos TEXT,
+      ipa TEXT,
+      audio_url TEXT,
+      cefr TEXT,
+      translation TEXT NOT NULL,
+      example TEXT,
+      example_highlight TEXT,
+      example_translation TEXT,
+      source TEXT NOT NULL CHECK (source IN ('pack', 'server', 'manual')),
+      content_version INTEGER,
+      refreshed_at TEXT NOT NULL
+    )
+table	card_schedule	card_schedule	CREATE TABLE card_schedule (
+      card_id TEXT PRIMARY KEY REFERENCES card (id) ON DELETE CASCADE,
+      due TEXT,
+      stability REAL,
+      difficulty REAL,
+      elapsed_days INTEGER,
+      scheduled_days INTEGER,
+      reps INTEGER,
+      lapses INTEGER,
+      fsrs_state INTEGER,
+      last_review TEXT,
+      first_review_at TEXT
+    )
+table	review_log	review_log	CREATE TABLE review_log (
+      id TEXT PRIMARY KEY,
+      card_id TEXT NOT NULL,
+      user_id TEXT NOT NULL,
+      rating TEXT NOT NULL CHECK (rating IN ('again', 'hard', 'good', 'easy')),
+      reviewed_at TEXT NOT NULL,
+      elapsed_ms INTEGER NOT NULL,
+      device_id TEXT NOT NULL,
+      tz_offset_min INTEGER NOT NULL,
+      synced_at TEXT
+    )
+table	sync_op	sync_op	CREATE TABLE sync_op (
+      op_id TEXT PRIMARY KEY,
+      schema_version INTEGER NOT NULL,
+      entity TEXT NOT NULL,
+      entity_id TEXT NOT NULL,
+      kind TEXT NOT NULL,
+      fields TEXT,
+      client_ts TEXT NOT NULL,
+      device_id TEXT NOT NULL,
+      user_id TEXT NOT NULL,
+      created_at TEXT NOT NULL,
+      sent_at TEXT,
+      acked_at TEXT
+    )
+table	user_deck	user_deck	CREATE TABLE user_deck (
+      user_id TEXT NOT NULL,
+      deck_id TEXT NOT NULL,
+      added_at TEXT NOT NULL,
+      fast_mode INTEGER NOT NULL DEFAULT 0,
+      updated_at TEXT NOT NULL,
+      deleted_at TEXT,
+      field_meta TEXT,
+      PRIMARY KEY (user_id, deck_id)
+    )
+table	user_profile	user_profile	CREATE TABLE user_profile (
+      user_id TEXT PRIMARY KEY,
+      native_lang TEXT NOT NULL,
+      target_lang TEXT NOT NULL,
+      level TEXT NOT NULL,
+      goals TEXT NOT NULL,
+      daily_minutes INTEGER NOT NULL,
+      new_per_day INTEGER NOT NULL,
+      waitlist_langs TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      field_meta TEXT
+    )

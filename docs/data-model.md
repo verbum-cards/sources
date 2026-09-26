@@ -24,10 +24,10 @@
 
 | Сущность | Ключевые поля |
 |---|---|
-| `user_profile` | user_id, native_lang, target_lang, level, goals[], daily_minutes, new_per_day, waitlist_langs[] |
-| `card` | id (UUID v7), user_id, item_type, item_id, source_deck_id, overrides (личные правки полей), state (new / learning / review / suspended / known), created_at, deleted_at |
-| `review_log` | id, card_id, user_id, rating, reviewed_at, elapsed_ms, device_id — **только добавление** |
-| `user_deck` | user_id, deck_id, added_at, fast_mode |
+| `user_profile` | user_id, native_lang, target_lang, level, goals[], daily_minutes, new_per_day, waitlist_langs[], updated_at |
+| `card` | id (UUID v7), user_id, item_type, item_id, source_deck_id, overrides (личные правки полей), state (new / learning / review / suspended / known), created_at, updated_at, deleted_at |
+| `review_log` | id, card_id, user_id, rating, reviewed_at, elapsed_ms, device_id, tz_offset_min — **только добавление** |
+| `user_deck` | user_id, deck_id, added_at, fast_mode, updated_at, deleted_at |
 
 Состояние FSRS карточки (stability, difficulty, due) — производное: пересчитывается из `review_log`, хранится на устройстве как кеш.
 
@@ -45,3 +45,21 @@
 | Основной | 20 000 | ~15 МБ | В фоне после первого запуска (~5 МБ сжатый) |
 
 Формат — SQLite. Обновления — дельтами. Аудио не входит в пакет: скачивается при первом прослушивании и кешируется.
+
+## Локальное хранилище на устройстве (T1.4)
+
+На устройстве — два независимых файла SQLite, без `ATTACH`/JOIN между ними:
+
+- **`cards-user.db`** — пользовательские данные. Миграции по `PRAGMA user_version`, только вперёд, каждая в одной эксклюзивной транзакции. Схема и миграции — `apps/mobile/src/db/migrations`.
+- **`dictionary-<lang>-<native>.db`** — общий контент словаря. Только чтение (`PRAGMA query_only = 1`), без миграций: пакет заменяется целиком или дельтой. Версия формата — `DICTIONARY_SCHEMA_VERSION` (сверяется и с `PRAGMA user_version`, и с `pack_meta.schema_version`); версия контента — `pack_meta.content_version`. DDL пакета — `DICTIONARY_SCHEMA_SQL` в `@cards/contracts`, один и тот же для mobile (чтение) и будущего конвейера `apps/api/scripts` (сборка).
+
+Таблицы синхронизируемых сущностей (`user_profile`, `card`, `review_log`, `user_deck`) в `cards-user.db` совпадают по полям с типами `@cards/contracts`. Кроме них в `cards-user.db` есть таблицы, которые **не синхронизируются** и не входят в контракты — это локальные кеши и очередь:
+
+| Таблица | Роль | Что произойдёт при потере |
+|---|---|---|
+| `card_content` | Снимок контента карточки (лемма, перевод, пример, аудио) на момент добавления/обновления. Сессия и главный экран читают только его — не зависят от версии или наличия пакета словаря. | Пересобирается из пакета словаря или с сервера редких слов по `card.item_type/item_id`. |
+| `card_schedule` | Кеш состояния FSRS (`stability`, `difficulty`, `due`, `state`…). | Пересчитывается повтором `review_log` через планировщик (см. скилл `fsrs-scheduler`). |
+| `sync_op` | Исходящая очередь операций синхронизации. | Восстанавливается диффом локального состояния с последним подтверждённым `sync_cursor` (детали — T1.5). |
+| `app_meta` | Локальные метаданные устройства: `device_id`, `sync_cursor`, `dictionary_content_version` и т.п. Токены входа — не здесь, только `expo-secure-store`. | `device_id` генерируется заново; курсор синхронизации переустанавливается с сервера. |
+
+Источник правды по журналу повторений — `review_log` (только добавление); `card_schedule` — производное и может быть удалено и пересчитано в любой момент.
