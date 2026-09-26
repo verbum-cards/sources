@@ -26,5 +26,7 @@
 | `blocked` | 000000 | Ждёт другую задачу |
 | `later` | CCCCCC | После беты |
 | `duplicate` | CCCCCC | Дубликат |
+| `flow` | C2E0C6 | Флоу целиком — зонтик для подзадач |
+| `report` | BFD4F2 | Еженедельный отчёт |
 
 Создание: `gh label create "area:mobile" --color 1D76DB --description "Мобильное приложение"`.
