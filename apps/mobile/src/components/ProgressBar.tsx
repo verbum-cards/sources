@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 
 type Props = { value: number; max: number; title?: string; meta?: string };
 
@@ -20,9 +20,9 @@ export function ProgressBar({ value, max, title, meta }: Props) {
         accessibilityRole="progressbar"
         accessibilityLabel={title}
         accessibilityValue={{ min: 0, max, now: value }}
-        style={{ height: 8, borderRadius: radius.pill, backgroundColor: colors.surfaceSunken, overflow: 'hidden' }}
+        style={{ height: 16, borderRadius: radius.pill, backgroundColor: colors.surfaceSunken, overflow: 'hidden' }}
       >
-        <View style={{ width: `${pct}%`, height: 8, borderRadius: radius.pill, backgroundColor: colors.meter }} />
+        <View style={{ width: `${pct}%`, height: 16, borderRadius: radius.pill, backgroundColor: colors.meter }} />
       </View>
     </View>
   );

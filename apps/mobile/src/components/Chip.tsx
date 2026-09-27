@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 
 type Props = { label: string; variant?: 'default' | 'streak' | 'quiet'; icon?: React.ReactNode };
 
@@ -19,7 +19,7 @@ export function Chip({ label, variant = 'default', icon }: Props) {
         alignItems: 'center',
         gap: 6,
         height: v.h,
-        paddingHorizontal: variant === 'quiet' ? 10 : space[3],
+        paddingHorizontal: variant === 'quiet' ? 12 : space[3],
         borderRadius: radius.pill,
         backgroundColor: v.bg,
         borderWidth: v.border ? 1 : 0,

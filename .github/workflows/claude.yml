@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.CARDS_BOT_TOKEN }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 26
       - name: Install dependencies
         run: |
           if [ -f package-lock.json ]; then npm ci; else echo "Нет lockfile — пропускаю установку"; fi

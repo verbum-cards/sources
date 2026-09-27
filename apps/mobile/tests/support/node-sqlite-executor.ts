@@ -3,7 +3,8 @@ import type { DbExecutor } from '../../src/db/executor';
 
 // Тестовая реализация DbExecutor поверх node:sqlite (Node 24). migrate.ts и
 // хелперы пакета словаря не знают, что за исполнитель им передали — expo-sqlite
-// на устройстве (src/db/open.ts) или node:sqlite здесь.
+// на устройстве (src/db/user/open.ts, src/db/dictionary/open.ts) или node:sqlite
+// здесь.
 export function createNodeSqliteExecutor(db: DatabaseSync): DbExecutor {
   return {
     execRaw: async (sql) => {

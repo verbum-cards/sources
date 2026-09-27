@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 
 type Variant = 'primary' | 'highlight' | 'secondary' | 'signal';
 
@@ -36,7 +36,7 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', block
       style={({ pressed }) => [
         styles.base,
         {
-          height: size === 'lg' ? 56 : 48,
+          height: size === 'lg' ? 48 : 40,
           paddingHorizontal: size === 'lg' ? space[6] : space[5],
           borderRadius: radius.md,
           backgroundColor: palette.bg,
@@ -50,7 +50,7 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', block
       ]}
     >
       <View style={[styles.row, { gap: space[2] }]}>
-        <Text style={[type.button, { color: palette.fg, fontSize: size === 'lg' ? 17 : 16 }]}>{label}</Text>
+        <Text style={[type.button, { color: palette.fg, fontSize: size === 'lg' ? 16 : 14 }]}>{label}</Text>
         {icon}
       </View>
     </Pressable>

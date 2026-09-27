@@ -1,6 +1,16 @@
 import type { DbExecutor } from './executor';
 import { migrations as defaultMigrations } from './migrations';
-import type { Migration } from './types';
+
+export interface Migration {
+  version: number;
+  // Чистый SQL, без вызовов expo API — так миграции можно прогонять в node:sqlite.
+  statements: readonly string[];
+  // true — для миграций, перестраивающих таблицу, на которую ссылаются FK
+  // (пересоздание parent-таблицы: DROP TABLE её каскадирует детям при
+  // foreign_keys=ON). migrate.ts выключает FK на время миграции и проверяет
+  // целостность (PRAGMA foreign_key_check) сразу после включения обратно.
+  disableForeignKeys?: boolean;
+}
 
 export async function getUserVersion(db: DbExecutor): Promise<number> {
   const row = await db.get<{ user_version: number }>('PRAGMA user_version');

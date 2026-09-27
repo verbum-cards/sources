@@ -1,4 +1,4 @@
-import type { Migration } from '../types';
+import type { Migration } from '../migrate';
 import { m001 } from './001_init';
 import { m002 } from './002_card_status';
 

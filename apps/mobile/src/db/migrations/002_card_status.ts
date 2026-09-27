@@ -1,4 +1,4 @@
-import type { Migration } from '../types';
+import type { Migration } from '../migrate';
 
 // Миграция 002 — code-debt T1.5a (docs/sync-protocol.md → «Код-долг», пункты 1–2):
 //   - card.state (new/learning/review/suspended/known) -> card.status

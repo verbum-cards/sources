@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 import { Chip } from './Chip';
 
 type Props = { word: string; translation: string; when?: string; last?: boolean; onPress?: () => void };

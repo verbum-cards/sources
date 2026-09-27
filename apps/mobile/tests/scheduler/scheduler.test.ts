@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
 import { Rating as FsrsRating } from 'ts-fsrs';
 import { migrate } from '../../src/db/migrate';
-import type { CardScheduleRow } from '../../src/db/types';
+import type { CardScheduleRow } from '../../src/db/entities/user/types';
 import { BUTTON_TO_GRADE, GRADE_TO_RATING, RATING_TO_GRADE } from '../../src/scheduler/ratings';
 import { applyRating, getReviewLogs, recalculateSchedule } from '../../src/scheduler/scheduler';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';

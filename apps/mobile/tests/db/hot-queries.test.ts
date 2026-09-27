@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
 import { migrate } from '../../src/db/migrate';
-import { createEmptyDictionaryPackage } from '../../src/db/dictionary';
+import { createEmptyDictionaryPackage } from '../../src/db/entities/dictionary/build';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
 const USES_INDEX = /USING (COVERING )?INDEX/;

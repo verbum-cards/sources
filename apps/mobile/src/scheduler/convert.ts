@@ -1,5 +1,5 @@
 import { createEmptyCard, type Card as FsrsCard, type CardInput as FsrsCardInput } from 'ts-fsrs';
-import type { CardScheduleRow } from '../db/types';
+import type { CardScheduleRow } from '../db/entities/user/types';
 
 export type FsrsCardLike = FsrsCardInput | FsrsCard;
 

@@ -4,13 +4,13 @@ import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 import { useFonts, Unbounded_600SemiBold } from '@expo-google-fonts/unbounded';
 import { Onest_400Regular, Onest_500Medium, Onest_600SemiBold } from '@expo-google-fonts/onest';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
-import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
-import { HomeScreen } from './src/screens/HomeScreen';
-import { FsrsDebugScreen } from './src/screens/FsrsDebugScreen';
-import { DbProvider } from './src/db/DbContext';
-import { openUserDatabase } from './src/db/open';
+import { SafeAreaProviderWrapper } from './src/providers/safe-area.provider';
+import { ThemeProvider, useTheme } from './src/providers/theme.provider';
+import { HomeScreen } from './src/screens/home.screen';
+import { FsrsDebugScreen } from './src/screens/fsrs-debug.screen';
+import { DbProvider } from './src/providers/db.provider';
+import { openUserDatabase } from './src/db/entities/user/open';
 import type { DbExecutor } from './src/db/executor';
 
 type Screen = 'home' | 'fsrs-debug';
@@ -50,7 +50,7 @@ export default function App() {
 
   useEffect(() => {
     let cancelled = false;
-    // Открывает cards-user.db и прогоняет миграции (см. src/db/open.ts).
+    // Открывает cards-user.db и прогоняет миграции (см. src/db/user/open.ts).
     openUserDatabase()
       .then(({ executor }) => {
         if (!cancelled) setDb(executor);
@@ -66,7 +66,7 @@ export default function App() {
   if (!fontsLoaded || (!db && !dbError)) return null;
 
   return (
-    <SafeAreaProvider>
+    <SafeAreaProviderWrapper>
       <ThemeProvider>
         {dbError ? (
           <DbErrorView />
@@ -76,6 +76,6 @@ export default function App() {
           </DbProvider>
         )}
       </ThemeProvider>
-    </SafeAreaProvider>
+    </SafeAreaProviderWrapper>
   );
 }

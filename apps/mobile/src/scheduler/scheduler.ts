@@ -1,7 +1,8 @@
 import { fsrs, type Card as FsrsCard, type Grade } from 'ts-fsrs';
+import { notifyChange } from '../utilities/event-bus';
 import type { DbExecutor } from '../db/executor';
-import { uuidv7 } from '../db/id';
-import type { CardScheduleRow, ReviewLogRow } from '../db/types';
+import { uuidv7 } from '../utilities/id';
+import type { CardScheduleRow, ReviewLogRow } from '../db/entities/user/types';
 import { fsrsCardToScheduleRow, scheduleRowToFsrsInput, type FsrsCardLike } from './convert';
 import { BUTTON_TO_GRADE, GRADE_TO_RATING, RATING_TO_GRADE, type ButtonRating } from './ratings';
 
@@ -119,6 +120,7 @@ export async function applyRating(params: ApplyRatingParams): Promise<ApplyRatin
   );
 
   await upsertScheduleRow(params.db, scheduleRow);
+  notifyChange(['card_schedule', 'review_log']);
 
   return { schedule: scheduleRow, reviewLog: reviewLogRow };
 }
@@ -148,5 +150,6 @@ export async function recalculateAndPersist(db: DbExecutor, cardId: string): Pro
   const sorted = [...logs].sort((a, b) => a.reviewed_at.localeCompare(b.reviewed_at));
   const scheduleRow = fsrsCardToScheduleRow(cardId, card, sorted[0].reviewed_at);
   await upsertScheduleRow(db, scheduleRow);
+  notifyChange(['card_schedule', 'review_log']);
   return scheduleRow;
 }

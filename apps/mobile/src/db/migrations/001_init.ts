@@ -1,4 +1,4 @@
-import type { Migration } from '../types';
+import type { Migration } from '../migrate';
 
 // Миграция 001 — начальная схема cards-user.db (schema version 1).
 // Только чистый SQL: без STRICT-таблиц, jsonb, RIGHT JOIN — версии SQLite в

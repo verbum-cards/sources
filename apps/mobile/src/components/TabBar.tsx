@@ -4,7 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Home, Layers, BarChart2, User } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 import { fonts } from '@cards/tokens';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 
 export type TabKey = 'home' | 'decks' | 'progress' | 'profile';
 
@@ -55,7 +55,7 @@ export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: T
                 backgroundColor: on ? colors.highlight : 'transparent',
               }}
             >
-              <tab.Icon size={20} strokeWidth={2} color={on ? colors.onHighlight : colors.inkMuted} />
+              <tab.Icon size={24} strokeWidth={1.5} color={on ? colors.onHighlight : colors.inkMuted} />
             </View>
             <Text style={[type.caption, { color: on ? colors.ink : colors.inkMuted, fontFamily: on ? fonts.semibold : fonts.medium }]}>
               {label}

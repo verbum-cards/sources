@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { useTheme } from '../theme/ThemeProvider';
+import { useTheme } from '../providers/theme.provider';
 
 type Props = {
   value: string;
@@ -16,10 +16,10 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
 
   return (
     <View style={{ gap: space[2] }}>
-      <Text nativeID="new-word-label" style={[type.caption, { color: colors.inkMuted, fontSize: 13 }]}>
+      <Text nativeID="new-word-label" style={[type.caption, { color: colors.inkMuted, fontSize: 14 }]}>
         {t('wordInput.label')}
       </Text>
-      <View style={{ flexDirection: 'row', gap: space[2] }}>
+      <View style={{ flexDirection: 'row', gap: space[4] }}>
         <TextInput
           accessibilityLabelledBy="new-word-label"
           value={value}
@@ -41,7 +41,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
               borderColor: colors.lineStrong,
               backgroundColor: colors.surface,
               color: colors.ink,
-              fontSize: 17,
+              fontSize: 16,
             },
           ]}
         />
@@ -59,7 +59,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
             transform: [{ scale: pressed ? 0.98 : 1 }],
           })}
         >
-          <Text style={{ color: colors.onAction, fontSize: 26, lineHeight: 28 }}>+</Text>
+          <Text style={{ color: colors.onAction, fontSize: 24, lineHeight: 26 }}>+</Text>
         </Pressable>
       </View>
     </View>
