@@ -13,7 +13,7 @@ import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 import { dumpSchema, formatSchemaDump } from '../support/schema-dump';
 import { tempDbPath } from '../support/tmp-db';
 
-const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v2.txt');
+const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v3.txt');
 
 test('чистая установка: user_version 0 -> LATEST, схема совпадает со снимком', async () => {
   const db = new DatabaseSync(':memory:');

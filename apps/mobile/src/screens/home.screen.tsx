@@ -15,6 +15,7 @@ import { useDb } from '../hooks/use-db.hook';
 import { useQuery } from '../hooks/use-query.hook';
 import { DEMO } from '../mocks/home';
 import { useTheme } from '../providers/theme.provider';
+import { loadCurrentUserProfile } from './profile-logic';
 import { WordAddPanel } from './word-add-panel';
 
 // FR-38: пустое состояние вместо демо-данных, если у пользователя ещё нет ни
@@ -81,6 +82,8 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
   const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
+  const { data: profile } = useQuery(loadCurrentUserProfile, { tables: ['user_profile'] });
+  const name = profile?.name;
 
   const today = useMemo(
     () =>
@@ -112,7 +115,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
               {today.charAt(0).toUpperCase() + today.slice(1)}
             </Text>
             <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
-              {t('header.greeting', { name: DEMO.name })}
+              {name ? t('header.greeting', { name }) : t('header.greetingNoName')}
             </Text>
           </View>
           <Chip label={t('header.streak', { count: DEMO.streak })} variant="streak" />

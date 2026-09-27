@@ -27,6 +27,7 @@ test('hasCompletedOnboarding: false, пока нет строки user_profile; 
   const userId = await getOrCreateLocalUserId(db);
   await saveUserProfile(db, {
     userId,
+    name: null,
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'unknown',
@@ -54,6 +55,7 @@ test('saveUserProfile + getUserProfile: круговой обход сохран
 
   await saveUserProfile(db, {
     userId,
+    name: 'Александр',
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'B1',
@@ -68,6 +70,7 @@ test('saveUserProfile + getUserProfile: круговой обход сохран
   const profile = await getUserProfile(db, userId);
   assert.deepEqual(profile, {
     userId,
+    name: 'Александр',
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'B1',
@@ -86,6 +89,7 @@ test('saveUserProfile: повторный вызов апсертит, а не �
 
   await saveUserProfile(db, {
     userId,
+    name: null,
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'unknown',
@@ -98,6 +102,7 @@ test('saveUserProfile: повторный вызов апсертит, а не �
   });
   await saveUserProfile(db, {
     userId,
+    name: null,
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'B2',

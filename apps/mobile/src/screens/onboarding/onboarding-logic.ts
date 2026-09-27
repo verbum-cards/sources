@@ -136,6 +136,9 @@ export function buildUserProfileDraft(
 ): UserProfileStored {
   return {
     userId,
+    // Имя — не собирается в онбординге (F1), только на экране «Профиль»
+    // (profile-logic.ts::updateProfileName); здесь всегда null.
+    name: null,
     nativeLang: NATIVE_LANG,
     targetLang: TARGET_LANG,
     level: answers.level,

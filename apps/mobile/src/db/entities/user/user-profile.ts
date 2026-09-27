@@ -40,9 +40,10 @@ export async function hasCompletedOnboarding(db: DbExecutor): Promise<boolean> {
 export async function saveUserProfile(db: DbExecutor, profile: UserProfileStored): Promise<void> {
   const row = userProfileToRow(profile);
   await db.run(
-    `INSERT INTO user_profile (user_id, native_lang, target_lang, level, goals, daily_minutes, new_per_day, waitlist_langs, updated_at, field_meta)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    `INSERT INTO user_profile (user_id, name, native_lang, target_lang, level, goals, daily_minutes, new_per_day, waitlist_langs, updated_at, field_meta)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
      ON CONFLICT (user_id) DO UPDATE SET
+       name = excluded.name,
        native_lang = excluded.native_lang,
        target_lang = excluded.target_lang,
        level = excluded.level,
@@ -54,6 +55,7 @@ export async function saveUserProfile(db: DbExecutor, profile: UserProfileStored
        field_meta = excluded.field_meta`,
     [
       row.user_id,
+      row.name,
       row.native_lang,
       row.target_lang,
       row.level,

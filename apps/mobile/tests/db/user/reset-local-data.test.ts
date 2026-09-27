@@ -33,6 +33,7 @@ async function seedFullState(db: Awaited<ReturnType<typeof setupDb>>) {
 
   await saveUserProfile(db, {
     userId,
+    name: null,
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'unknown',

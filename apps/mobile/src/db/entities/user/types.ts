@@ -23,6 +23,7 @@ export interface AppMetaRow {
 
 export interface UserProfileRow {
   user_id: string;
+  name: string | null;
   native_lang: string;
   target_lang: string;
   level: string;

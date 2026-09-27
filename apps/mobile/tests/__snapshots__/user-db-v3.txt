@@ -105,4 +105,4 @@ table	user_profile	user_profile	CREATE TABLE user_profile (
       waitlist_langs TEXT NOT NULL,
       updated_at TEXT NOT NULL,
       field_meta TEXT
-    )
+    , name TEXT)

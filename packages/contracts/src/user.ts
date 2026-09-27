@@ -27,6 +27,7 @@ export type UserLevel = z.infer<typeof UserLevelSchema>;
 // (см. UserProfilePatchSchema ниже) — по журналу оно не едет.
 export const UserProfileSchema = z.object({
   userId: UuidSchema,
+  name: z.string().nullable(),
   nativeLang: LangSchema,
   targetLang: LangSchema,
   level: UserLevelSchema,

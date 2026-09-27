@@ -24,6 +24,7 @@ function parseFieldRevisions(fieldMeta: string | null): FieldRevisions {
 export function rowToUserProfile(row: UserProfileRow): UserProfileStored {
   return {
     userId: row.user_id,
+    name: row.name,
     nativeLang: row.native_lang as UserProfileStored['nativeLang'],
     targetLang: row.target_lang as UserProfileStored['targetLang'],
     level: row.level as UserLevel,
@@ -39,6 +40,7 @@ export function rowToUserProfile(row: UserProfileRow): UserProfileStored {
 export function userProfileToRow(profile: UserProfileStored): UserProfileRow {
   return {
     user_id: profile.userId,
+    name: profile.name,
     native_lang: profile.nativeLang,
     target_lang: profile.targetLang,
     level: profile.level,

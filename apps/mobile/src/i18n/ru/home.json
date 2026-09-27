@@ -1,6 +1,7 @@
 {
   "header": {
     "greeting": "Привет, {{name}}",
+    "greetingNoName": "Привет!",
     "streak_one": "{{count}} день",
     "streak_few": "{{count}} дня",
     "streak_many": "{{count}} дней",

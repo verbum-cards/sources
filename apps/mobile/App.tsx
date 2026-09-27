@@ -21,18 +21,20 @@ import { OnboardingScreen } from './src/screens/onboarding/onboarding.screen';
 type Screen = 'home' | 'fsrs-debug';
 
 const Root = () => {
-  const { scheme } = useTheme();
+  const { colors, scheme } = useTheme();
   const [screen, setScreen] = useState<Screen>('home');
 
   return (
-    <>
+    // Тот же фон-«подложка», что и в MainTabsScreen — без него переключение
+    // home <-> fsrs-debug на долю кадра показывает белый фон RN по умолчанию.
+    <View style={{ flex: 1, backgroundColor: colors.paper }}>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       {screen === 'home' ? (
         <MainTabsScreen onOpenFsrsDebug={() => setScreen('fsrs-debug')} />
       ) : (
         <FsrsDebugScreen onBack={() => setScreen('home')} />
       )}
-    </>
+    </View>
   );
 };
 

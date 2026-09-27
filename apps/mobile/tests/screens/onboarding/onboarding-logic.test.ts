@@ -114,6 +114,7 @@ test('buildUserProfileDraft: собирает полный профиль из �
 
   assert.deepEqual(profile, {
     userId: 'user-1',
+    name: null,
     nativeLang: 'ru',
     targetLang: 'en',
     level: 'B1',
