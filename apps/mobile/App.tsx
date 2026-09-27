@@ -15,7 +15,7 @@ import { DbProvider } from './src/providers/db.provider';
 import { SafeAreaProviderWrapper } from './src/providers/safe-area.provider';
 import { ThemeProvider, useTheme } from './src/providers/theme.provider';
 import { FsrsDebugScreen } from './src/screens/fsrs-debug.screen';
-import { HomeScreen } from './src/screens/home.screen';
+import { MainTabsScreen } from './src/screens/main-tabs.screen';
 import { OnboardingScreen } from './src/screens/onboarding/onboarding.screen';
 
 type Screen = 'home' | 'fsrs-debug';
@@ -28,7 +28,7 @@ const Root = () => {
     <>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
       {screen === 'home' ? (
-        <HomeScreen onOpenFsrsDebug={() => setScreen('fsrs-debug')} />
+        <MainTabsScreen onOpenFsrsDebug={() => setScreen('fsrs-debug')} />
       ) : (
         <FsrsDebugScreen onBack={() => setScreen('home')} />
       )}

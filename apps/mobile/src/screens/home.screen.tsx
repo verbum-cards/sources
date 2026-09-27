@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -7,7 +7,6 @@ import type { TFunction } from 'i18next';
 import { Chip } from '../components/Chip';
 import { ProgressBar } from '../components/ProgressBar';
 import { ReviewPanel } from '../components/ReviewPanel';
-import { TabBar, TabKey } from '../components/TabBar';
 import { WordRow } from '../components/WordRow';
 import { getOrCreateLocalUserId } from '../db/entities/user/app-meta';
 import { resetLocalData } from '../db/entities/user/reset-local-data';
@@ -79,7 +78,6 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
-  const [tab, setTab] = useState<TabKey>('home');
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
   const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
@@ -243,7 +241,6 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
           </Text>
         </Pressable>
       </ScrollView>
-      <TabBar active={tab} onChange={setTab} />
     </SafeAreaView>
   );
 };
