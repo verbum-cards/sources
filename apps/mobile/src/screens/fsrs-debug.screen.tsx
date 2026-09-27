@@ -8,9 +8,9 @@ import { Button } from '../components/Button';
 import { getOrCreateDeviceId } from '../db/entities/user/app-meta';
 import type { CardScheduleRow } from '../db/entities/user/types';
 import type { DbExecutor } from '../db/executor';
+import { useDb } from '../hooks/use-db.hook';
 import { useQuery } from '../hooks/use-query.hook';
 import { DEBUG_ITEM_TYPE, DEBUG_WORDS } from '../mocks/fsrs-debug-words';
-import { useDb } from '../providers/db.provider';
 import { useTheme } from '../providers/theme.provider';
 import {
   applyRating,

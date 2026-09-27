@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import type { DbExecutor } from '../db/executor';
-import { useDb } from '../providers/db.provider';
 import { subscribeToChanges } from '../utilities/event-bus';
+import { useDb } from './use-db.hook';
 
 export interface UseQueryOptions {
   // Таблицы, изменение которых должно вызвать перечитывание (см. change-bus.ts).

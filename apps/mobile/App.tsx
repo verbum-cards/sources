@@ -8,12 +8,15 @@ import { Unbounded_600SemiBold, useFonts } from '@expo-google-fonts/unbounded';
 import { StatusBar } from 'expo-status-bar';
 
 import { openUserDatabase } from './src/db/entities/user/open';
+import { hasCompletedOnboarding } from './src/db/entities/user/user-profile';
 import type { DbExecutor } from './src/db/executor';
+import { useQuery } from './src/hooks/use-query.hook';
 import { DbProvider } from './src/providers/db.provider';
 import { SafeAreaProviderWrapper } from './src/providers/safe-area.provider';
 import { ThemeProvider, useTheme } from './src/providers/theme.provider';
 import { FsrsDebugScreen } from './src/screens/fsrs-debug.screen';
 import { HomeScreen } from './src/screens/home.screen';
+import { OnboardingScreen } from './src/screens/onboarding/onboarding.screen';
 
 type Screen = 'home' | 'fsrs-debug';
 
@@ -31,6 +34,22 @@ const Root = () => {
       )}
     </>
   );
+};
+
+// Реактивная проверка «онбординг пройден» (F1): существование строки
+// user_profile для локального userId — единственный источник истины. useQuery
+// подписан на таблицу user_profile, поэтому переключение работает само —
+// без ручного перезапуска приложения — и после обычного завершения онбординга
+// (saveUserProfile сам зовёт notifyChange), и после технического сброса
+// локальных данных (resetLocalData на главном экране).
+const AppContent = () => {
+  const { data: onboardingComplete } = useQuery(hasCompletedOnboarding, {
+    tables: ['user_profile'],
+  });
+
+  if (onboardingComplete === undefined) return null;
+
+  return onboardingComplete ? <Root /> : <OnboardingScreen />;
 };
 
 const DbErrorView = () => {
@@ -97,7 +116,7 @@ export const App = () => {
           <DbErrorView />
         ) : (
           <DbProvider db={db!}>
-            <Root />
+            <AppContent />
           </DbProvider>
         )}
       </ThemeProvider>
