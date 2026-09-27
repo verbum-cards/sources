@@ -8,6 +8,8 @@ import type { Cefr, UserLevel } from '@cards/contracts';
 import { Button } from '../../components/Button';
 import { OptionPill } from '../../components/OptionPill';
 import { useTheme } from '../../providers/theme.provider';
+import { SKIPPED_GOALS } from './onboarding-logic';
+import { OnboardingProgress, type OnboardingProgressValue } from './onboarding-progress';
 
 // A1–C1 выбираемы напрямую (коды CEFR — не текст интерфейса, i18n не нужен);
 // C2 в онбординге не предлагаем — это не разумный стартовый уровень для беты.
@@ -15,7 +17,13 @@ const CEFR_OPTIONS: readonly Cefr[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
 
 // F1, шаг 3 «Уровень»: A1–C1 либо «Не знаю» (сохраняется как есть — MVP-логика
 // «старт с A2 и автокалибровка» для «Не знаю» здесь не реализуется, это T2.x).
-export const LevelScreen = ({ onNext }: { onNext: (level: UserLevel) => void }) => {
+export const LevelScreen = ({
+  progress,
+  onNext,
+}: {
+  progress: OnboardingProgressValue;
+  onNext: (level: UserLevel) => void;
+}) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('onboarding');
   const [selected, setSelected] = useState<UserLevel | null>(null);
@@ -39,11 +47,6 @@ export const LevelScreen = ({ onNext }: { onNext: (level: UserLevel) => void }) 
               onPress={() => setSelected(cefr)}
             />
           ))}
-          <OptionPill
-            label={t('level.unknown')}
-            selected={selected === 'unknown'}
-            onPress={() => setSelected('unknown')}
-          />
         </View>
 
         <View style={{ flex: 1 }} />
@@ -57,7 +60,15 @@ export const LevelScreen = ({ onNext }: { onNext: (level: UserLevel) => void }) 
             if (selected) onNext(selected);
           }}
         />
+        <Button
+          label={t('level.unknown')}
+          variant="secondary"
+          size="lg"
+          block
+          onPress={() => onNext('unknown')}
+        />
       </ScrollView>
+      <OnboardingProgress {...progress} />
     </SafeAreaView>
   );
 };

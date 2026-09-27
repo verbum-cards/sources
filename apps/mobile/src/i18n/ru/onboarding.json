@@ -30,15 +30,20 @@
     "progress": "{{current}} из {{total}}",
     "knowThisWord": "Знаю это слово",
     "dontKnowThisWord": "Не знаю",
+    "skip": "Пропустить",
     "finishedTitle": "5 слов в памяти",
     "finishedSubtitle": "Завтра проверим, что осталось",
+    "skippedTitle": "Хорошо, идём дальше",
+    "skippedSubtitle": "Слова можно добавлять в любой момент — прямо на главном экране",
     "continue": "Продолжить"
   },
   "signIn": {
     "title": "Сохраним первые 5 слов",
     "subtitle": "Прогресс не потеряется, если сменишь телефон",
     "apple": "Войти через Apple",
-    "google": "Войти через Google"
+    "google": "Войти через Google",
+    "skip": "Пропустить",
+    "back": "Назад"
   },
   "notifications": {
     "title": "Сколько времени в день?",

@@ -9,6 +9,7 @@ import { Button } from '../../components/Button';
 import { OptionPill } from '../../components/OptionPill';
 import { useTheme } from '../../providers/theme.provider';
 import { SKIPPED_GOALS, toggleGoal } from './onboarding-logic';
+import { OnboardingProgress, type OnboardingProgressValue } from './onboarding-progress';
 
 const GOAL_OPTIONS: readonly Goal[] = [
   'travel',
@@ -23,7 +24,13 @@ const GOAL_OPTIONS: readonly Goal[] = [
 
 // F1, шаг 2 «Цель» (FR-41): мультивыбор либо «Пропустить» — пропуск равнозначен
 // выбору «для себя» (docs/flows/f01.md).
-export const GoalScreen = ({ onNext }: { onNext: (goals: Goal[]) => void }) => {
+export const GoalScreen = ({
+  progress,
+  onNext,
+}: {
+  progress: OnboardingProgressValue;
+  onNext: (goals: Goal[]) => void;
+}) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('onboarding');
   const [selected, setSelected] = useState<Goal[]>([]);
@@ -31,7 +38,13 @@ export const GoalScreen = ({ onNext }: { onNext: (goals: Goal[]) => void }) => {
   return (
     <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1, backgroundColor: colors.paper }}>
       <ScrollView
-        contentContainerStyle={{ flexGrow: 1, padding: space[8], gap: space[4] }}
+        contentContainerStyle={{
+          flexGrow: 1,
+          paddingHorizontal: space[8],
+          paddingTop: space[8],
+          paddingBottom: space[5],
+          gap: space[4],
+        }}
         keyboardShouldPersistTaps="handled"
       >
         <View style={{ gap: space[2] }}>
@@ -55,7 +68,13 @@ export const GoalScreen = ({ onNext }: { onNext: (goals: Goal[]) => void }) => {
         <View style={{ flex: 1 }} />
 
         <View style={{ gap: space[3] }}>
-          <Button label={t('goal.next')} size="lg" block onPress={() => onNext(selected)} />
+          <Button
+            label={t('goal.next')}
+            size="lg"
+            block
+            disabled={selected.length === 0}
+            onPress={() => onNext(selected)}
+          />
           <Button
             label={t('goal.skip')}
             variant="secondary"
@@ -65,6 +84,7 @@ export const GoalScreen = ({ onNext }: { onNext: (goals: Goal[]) => void }) => {
           />
         </View>
       </ScrollView>
+      <OnboardingProgress {...progress} />
     </SafeAreaView>
   );
 };

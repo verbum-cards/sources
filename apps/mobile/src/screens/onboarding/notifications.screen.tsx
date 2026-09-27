@@ -8,6 +8,7 @@ import { Button } from '../../components/Button';
 import { OptionPill } from '../../components/OptionPill';
 import { useTheme } from '../../providers/theme.provider';
 import { DEFAULT_DAILY_MINUTES } from './onboarding-logic';
+import { OnboardingProgress, type OnboardingProgressValue } from './onboarding-progress';
 
 const DAILY_MINUTES_OPTIONS: readonly (5 | 10 | 15)[] = [5, 10, 15];
 
@@ -17,8 +18,10 @@ const DAILY_MINUTES_OPTIONS: readonly (5 | 10 | 15)[] = [5, 10, 15];
 // разрешений до первой сессии», skill expo-mobile) — до этого экрана он нигде
 // не запрашивается. Результат (разрешил/отказал) не блокирует продолжение.
 export const NotificationsScreen = ({
+  progress,
   onDone,
 }: {
+  progress: OnboardingProgressValue;
   onDone: (dailyMinutes: 5 | 10 | 15) => void;
 }) => {
   const { colors, space, type } = useTheme();
@@ -63,6 +66,7 @@ export const NotificationsScreen = ({
       <View style={{ padding: space[5] }}>
         <Button label={t('notifications.done')} size="lg" block onPress={handleDone} />
       </View>
+      <OnboardingProgress {...progress} />
     </SafeAreaView>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import type { Goal } from '@cards/contracts';
@@ -14,6 +14,7 @@ import {
   getFirstSessionWords,
   isFirstSessionFinished,
 } from './onboarding-logic';
+import { OnboardingProgress, type OnboardingProgressValue } from './onboarding-progress';
 
 // F1, шаг 4 «Первая сессия» — режим знакомства (FR-36) для ровно 5 слов,
 // подобранных по целям, выбранным на предыдущем шаге (docs/flows/f01.md →
@@ -23,9 +24,11 @@ import {
 // настоящая FSRS-очередь сессии из T2.x — просто локальный проход по
 // фиксированным 5 словам внутри онбординга.
 export const FirstSessionScreen = ({
+  progress,
   goals,
   onDone,
 }: {
+  progress: OnboardingProgressValue;
   goals: readonly Goal[];
   onDone: () => void;
 }) => {
@@ -33,6 +36,7 @@ export const FirstSessionScreen = ({
   const { t } = useTranslation('onboarding');
   const db = useDb();
   const [index, setIndex] = useState(0);
+  const [skippedAll, setSkippedAll] = useState(false);
 
   // goals — стабильная ссылка на протяжении жизни этого экрана (меняется
   // только на шаге «Цель», который уже пройден к этому моменту) — useMemo
@@ -55,16 +59,25 @@ export const FirstSessionScreen = ({
     [db, word]
   );
 
+  // «Пропустить» пропускает всю первую сессию целиком, а не одно слово: сразу
+  // переводит index за последнее слово (isFirstSessionFinished(index, total)
+  // становится true) и показывает отдельный текст — skippedAll вместо обычного
+  // «5 слов в памяти», ни одна карточка при этом не создаётся.
+  const skip = useCallback(() => {
+    setSkippedAll(true);
+    setIndex(words.length);
+  }, [words.length]);
+
   return (
     <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1, backgroundColor: colors.paper }}>
       <View style={{ flex: 1, justifyContent: 'center', padding: space[5], gap: space[3] }}>
         {finished || !word ? (
           <View style={{ gap: space[2] }}>
             <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
-              {t('firstSession.finishedTitle')}
+              {t(skippedAll ? 'firstSession.skippedTitle' : 'firstSession.finishedTitle')}
             </Text>
             <Text style={[type.body, { color: colors.inkMuted }]}>
-              {t('firstSession.finishedSubtitle')}
+              {t(skippedAll ? 'firstSession.skippedSubtitle' : 'firstSession.finishedSubtitle')}
             </Text>
           </View>
         ) : (
@@ -84,22 +97,34 @@ export const FirstSessionScreen = ({
           <Button label={t('firstSession.continue')} size="lg" block onPress={onDone} />
         ) : (
           <>
-            <Button
-              label={t('firstSession.knowThisWord')}
-              size="lg"
-              block
-              onPress={() => void answer(true)}
-            />
-            <Button
-              label={t('firstSession.dontKnowThisWord')}
-              variant="secondary"
-              size="lg"
-              block
-              onPress={() => void answer(false)}
-            />
+            <View style={{ flexDirection: 'row', gap: space[4] }}>
+              <Button
+                label={t('firstSession.dontKnowThisWord')}
+                variant="secondary"
+                size="lg"
+                style={{ flex: 1 }}
+                onPress={() => void answer(false)}
+              />
+              <Button
+                label={t('firstSession.knowThisWord')}
+                size="lg"
+                style={{ flex: 1 }}
+                onPress={() => void answer(true)}
+              />
+            </View>
+            <Pressable
+              accessibilityRole="button"
+              onPress={skip}
+              style={{ height: 40, alignItems: 'center', justifyContent: 'center' }}
+            >
+              <Text style={[type.button, { color: colors.inkMuted }]}>
+                {t('firstSession.skip')}
+              </Text>
+            </Pressable>
           </>
         )}
       </View>
+      <OnboardingProgress {...progress} />
     </SafeAreaView>
   );
 };
