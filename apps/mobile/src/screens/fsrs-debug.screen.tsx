@@ -9,6 +9,7 @@ import { getOrCreateDeviceId } from '../db/entities/user/app-meta';
 import type { CardScheduleRow } from '../db/entities/user/types';
 import type { DbExecutor } from '../db/executor';
 import { useQuery } from '../hooks/use-query.hook';
+import { DEBUG_ITEM_TYPE, DEBUG_WORDS } from '../mocks/fsrs-debug-words';
 import { useDb } from '../providers/db.provider';
 import { useTheme } from '../providers/theme.provider';
 import {
@@ -25,7 +26,6 @@ import {
   type DebugCard,
   type DebugCardRow,
 } from './fsrsDebugDeck';
-import { DEBUG_ITEM_TYPE, DEBUG_WORDS } from './fsrsDebugWords';
 
 // T1.7: временный дебаг-экран «добавить тестовые карточки -> оценивать одну за
 // другой -> увидеть следующий интервал». Не часть финальной структуры экранов
@@ -41,6 +41,7 @@ function formatDue(t: TFunction<'fsrsDebug'>, dueIso: string): string {
   const hours = Math.round(minutes / 60);
   if (hours < 24) return t('dueInHours', { count: hours });
   const days = Math.round(hours / 24);
+
   return t('dueInDays', { count: days });
 }
 
@@ -54,6 +55,7 @@ async function loadDebugCards(db: DbExecutor): Promise<DebugCard[]> {
      WHERE c.user_id = ? AND c.item_type = ? AND c.deleted_at IS NULL AND c.item_id IN (${placeholders})`,
     [DEBUG_USER_ID, DEBUG_ITEM_TYPE, ...itemIds]
   );
+
   return orderCardsByWordList(DEBUG_WORDS, rows);
 }
 
@@ -80,6 +82,7 @@ export const FsrsDebugScreen = ({ onBack }: { onBack: () => void }) => {
     setRecalcStatus(null);
     if (!card) {
       setSchedule(null);
+
       return;
     }
     let cancelled = false;
@@ -91,6 +94,7 @@ export const FsrsDebugScreen = ({ onBack }: { onBack: () => void }) => {
         if (!cancelled) setSchedule(null);
       }
     })();
+
     return () => {
       cancelled = true;
     };

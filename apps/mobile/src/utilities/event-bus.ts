@@ -25,6 +25,7 @@ export function notifyChange(tables: readonly string[]): void {
 export function subscribeToChanges(tables: readonly string[], callback: () => void): () => void {
   const listener: ChangeListener = { tables: new Set(tables), callback };
   listeners.add(listener);
+
   return () => {
     listeners.delete(listener);
   };

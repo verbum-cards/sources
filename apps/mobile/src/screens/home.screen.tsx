@@ -9,23 +9,8 @@ import { ReviewPanel } from '../components/ReviewPanel';
 import { TabBar, TabKey } from '../components/TabBar';
 import { WordInput } from '../components/WordInput';
 import { WordRow } from '../components/WordRow';
+import { DEMO } from '../mocks/home';
 import { useTheme } from '../providers/theme.provider';
-
-// Демо-данные. Дальше их заменят локальная база (SQLite) и FSRS.
-const DEMO = {
-  name: 'Алекс',
-  streak: 12,
-  due: 23,
-  done: 12,
-  goal: 30,
-  learned: 486,
-  queued: 8,
-  recent: [
-    { word: 'wander', tr: 'бродить, странствовать', when: 'сегодня' },
-    { word: 'fierce', tr: 'свирепый, яростный', when: 'вчера' },
-    { word: 'tenant', tr: 'арендатор, жилец', when: 'вчера' },
-  ],
-};
 
 export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
   const { colors, radius, space, type } = useTheme();

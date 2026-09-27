@@ -38,6 +38,7 @@ export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: T
       {TABS.map((tab) => {
         const on = tab.key === active;
         const label = t(tab.labelKey);
+
         return (
           <Pressable
             key={tab.key}

@@ -49,6 +49,12 @@ export default defineConfig([
       'no-console': 'warn',
       // async/await везде вместо .then()/.catch()/.finally().
       'promise/prefer-await-to-then': 'error',
+      // Пустая строка перед return, если до него в блоке уже что-то было
+      // (если return — первая строка блока, правило не требует ничего).
+      'padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: '*', next: 'return' },
+      ],
     },
   },
   // node:test: test(...) не награждает await на верхнем уровне — раннер сам

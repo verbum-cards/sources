@@ -17,5 +17,6 @@ export async function openUserDatabase(
     await executor.execRaw(pragma);
   }
   await migrate(executor);
+
   return { db, executor };
 }

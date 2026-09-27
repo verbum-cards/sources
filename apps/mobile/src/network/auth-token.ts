@@ -11,5 +11,6 @@ export function setAuthTokenProvider(provider: AuthTokenProvider | null): void {
 
 export async function getAuthToken(): Promise<string | null> {
   if (!authTokenProvider) return null;
+
   return authTokenProvider();
 }

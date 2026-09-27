@@ -20,5 +20,6 @@ export function uuidv7(date: Date = new Date()): string {
   bytes[8] = (bytes[8] & 0x3f) | 0x80; // вариант RFC 4122
 
   const hex = Array.from(bytes, (b) => b.toString(16).padStart(2, '0')).join('');
+
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }

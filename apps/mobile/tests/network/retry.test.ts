@@ -22,6 +22,7 @@ test('withRetry: повторяет при TimeoutError и возвращает 
   const fn = async () => {
     calls += 1;
     if (calls < 3) throw new TimeoutError('таймаут');
+
     return 'ok';
   };
 

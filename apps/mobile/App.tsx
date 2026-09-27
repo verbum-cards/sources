@@ -17,9 +17,10 @@ import { HomeScreen } from './src/screens/home.screen';
 
 type Screen = 'home' | 'fsrs-debug';
 
-function Root() {
+const Root = () => {
   const { scheme } = useTheme();
   const [screen, setScreen] = useState<Screen>('home');
+
   return (
     <>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
@@ -30,11 +31,12 @@ function Root() {
       )}
     </>
   );
-}
+};
 
-function DbErrorView() {
+const DbErrorView = () => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('common');
+
   return (
     <View
       style={{
@@ -57,9 +59,9 @@ function DbErrorView() {
       </Text>
     </View>
   );
-}
+};
 
-export default function App() {
+export const App = () => {
   const [fontsLoaded] = useFonts({
     Unbounded_600SemiBold,
     Onest_400Regular,
@@ -80,6 +82,7 @@ export default function App() {
         if (!cancelled) setDbError(err instanceof Error ? err : new Error(String(err)));
       }
     })();
+
     return () => {
       cancelled = true;
     };
@@ -100,4 +103,4 @@ export default function App() {
       </ThemeProvider>
     </SafeAreaProviderWrapper>
   );
-}
+};

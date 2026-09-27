@@ -44,6 +44,7 @@ export function useQuery<T>(
   const runQuery = useCallback(() => {
     if (!enabled) {
       setLoading(false);
+
       return;
     }
     setLoading(true);
@@ -71,6 +72,7 @@ export function useQuery<T>(
   useEffect(() => {
     runQuery();
     if (!enabled) return;
+
     return subscribeToChanges(tables, runQuery);
     // Зависимость — tablesKey (см. выше), а не tables: массив стабилен по
     // содержимому, а не по ссылке.

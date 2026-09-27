@@ -14,6 +14,7 @@ export function scheduleRowToFsrsInput(row: CardScheduleRow | undefined): FsrsCa
   if (!row || row.fsrs_state == null) {
     return createEmptyCard();
   }
+
   return {
     due: row.due ?? new Date().toISOString(),
     stability: row.stability ?? 0,

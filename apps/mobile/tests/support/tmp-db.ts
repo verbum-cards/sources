@@ -6,5 +6,6 @@ import { join } from 'node:path';
 // journal_mode (в памяти SQLite всегда отвечает 'memory', а не 'delete'/'wal').
 export function tempDbPath(name: string): string {
   const dir = mkdtempSync(join(tmpdir(), 'cards-db-test-'));
+
   return join(dir, name);
 }

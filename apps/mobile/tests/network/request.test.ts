@@ -31,6 +31,7 @@ test('не-2xx кидает HttpError со статусом и распарсе�
       assert.ok(error instanceof HttpError);
       assert.equal(error.status, 422);
       assert.deepEqual(error.body, { reason: 'invalid_payload' });
+
       return true;
     }
   );
@@ -70,6 +71,7 @@ test('провайдер токена добавляет Authorization: Bearer',
   let capturedHeaders: Record<string, string> | undefined;
   const fetchImpl: FetchLike = async (_url, init) => {
     capturedHeaders = init.headers;
+
     return { ok: true, status: 200, text: async () => '' };
   };
 
@@ -86,6 +88,7 @@ test('без провайдера токена Authorization не добавля
   let capturedHeaders: Record<string, string> | undefined;
   const fetchImpl: FetchLike = async (_url, init) => {
     capturedHeaders = init.headers;
+
     return { ok: true, status: 200, text: async () => '' };
   };
 

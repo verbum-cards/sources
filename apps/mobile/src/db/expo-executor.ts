@@ -17,6 +17,7 @@ export function createExpoExecutor(db: SQLiteDatabase): DbExecutor {
 
     get: async (sql, params = []) => {
       const row = await db.getFirstAsync(sql, params as SQLiteBindParams);
+
       return (row ?? undefined) as never;
     },
 

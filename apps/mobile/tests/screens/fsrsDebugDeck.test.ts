@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 
+import { DEBUG_WORDS } from '../../src/mocks/fsrs-debug-words';
 import {
   missingWords,
   orderCardsByWordList,
   type DebugCardRow,
 } from '../../src/screens/fsrsDebugDeck';
-import { DEBUG_WORDS } from '../../src/screens/fsrsDebugWords';
 
 test('DEBUG_WORDS: от 20 до 30 слов, уникальные itemId и лемма', () => {
   assert.ok(

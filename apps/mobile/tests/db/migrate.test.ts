@@ -26,6 +26,7 @@ test('чистая установка: user_version 0 -> LATEST, схема со
   const actual = formatSchemaDump(dumpSchema(db));
   if (process.env.UPDATE_SNAPSHOTS === '1') {
     writeFileSync(SNAPSHOT_PATH, actual);
+
     return;
   }
   const expected = readFileSync(SNAPSHOT_PATH, 'utf8');

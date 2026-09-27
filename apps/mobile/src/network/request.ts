@@ -41,12 +41,14 @@ function getBaseUrl(): string {
       'EXPO_PUBLIC_API_URL не задан. Добавьте его в .env (см. .env.example) перед первым сетевым запросом.'
     );
   }
+
   return baseUrl;
 }
 
 function buildUrl(baseUrl: string, path: string): string {
   const trimmedBase = baseUrl.replace(/\/+$/, '');
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+
   return `${trimmedBase}${normalizedPath}`;
 }
 
@@ -55,6 +57,7 @@ async function parseBody(response: FetchResponseLike): Promise<unknown> {
   if (!text) return undefined;
   try {
     const parsed: unknown = JSON.parse(text);
+
     return parsed;
   } catch {
     return text;

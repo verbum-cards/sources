@@ -13,5 +13,6 @@ export function useDb(): DbExecutor {
   if (!db) {
     throw new Error('useDb must be used inside <DbProvider> once cards-user.db is open');
   }
+
   return db;
 }

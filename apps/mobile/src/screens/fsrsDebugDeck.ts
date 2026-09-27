@@ -1,16 +1,14 @@
-import type { DebugWord } from './fsrsDebugWords';
+import type { Uuid } from '@cards/contracts';
 
-export interface DebugCardRow {
-  id: string;
-  item_id: string;
-  lemma: string;
-  translation: string;
-  example: string | null;
-}
+import type { CardContentRow, CardRow } from '../db/entities/user/types';
+import type { DebugWord } from '../mocks/fsrs-debug-words';
+
+export type DebugCardRow = Pick<CardRow, 'id' | 'item_id'> &
+  Pick<CardContentRow, 'lemma' | 'translation' | 'example'>;
 
 export interface DebugCard {
-  id: string;
-  itemId: string;
+  id: Uuid;
+  itemId: Uuid;
   lemma: string;
   translation: string;
   example: string;
@@ -37,6 +35,7 @@ export function orderCardsByWordList(
       });
     }
   }
+
   return result;
 }
 

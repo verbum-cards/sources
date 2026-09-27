@@ -14,6 +14,7 @@ export interface Migration {
 
 export async function getUserVersion(db: DbExecutor): Promise<number> {
   const row = await db.get<{ user_version: number }>('PRAGMA user_version');
+
   return row?.user_version ?? 0;
 }
 

@@ -1,10 +1,12 @@
+import type { ItemType, Uuid } from '@cards/contracts';
+
 // T1.7: тестовый набор слов для дебаг-экрана проверки FSRS (см. FsrsDebugScreen).
 // Это данные изучаемого языка (лемма/перевод/пример), а не строки интерфейса —
 // через i18n не идут (skill i18n-russian: «слова, примеры и транскрипции из
 // словаря не переводятся через i18n — это данные»). Настоящего словаря ещё нет
 // (T1.6), поэтому набор придуман вручную: 28 бытовых слов уровня A1–B2.
 export interface DebugWord {
-  itemId: string;
+  itemId: Uuid;
   lemma: string;
   pos: string;
   translation: string;
@@ -12,7 +14,7 @@ export interface DebugWord {
   exampleTranslation: string;
 }
 
-export const DEBUG_ITEM_TYPE = 'sense' as const;
+export const DEBUG_ITEM_TYPE: ItemType = 'sense';
 
 export const DEBUG_WORDS: readonly DebugWord[] = [
   {

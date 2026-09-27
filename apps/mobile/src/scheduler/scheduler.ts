@@ -34,6 +34,7 @@ export async function getReviewLogs(db: DbExecutor, cardId: string): Promise<Rev
     'SELECT * FROM review_log WHERE card_id = ? ORDER BY reviewed_at ASC',
     [cardId]
   );
+
   return rows.map((row) => ({ ...row }));
 }
 
@@ -146,6 +147,7 @@ export function recalculateSchedule(reviewLogs: readonly ReviewLogRow[]): FsrsCa
     const { card } = stepFsrs(current, new Date(log.reviewed_at), grade);
     current = card;
   }
+
   return current as FsrsCard;
 }
 
@@ -161,5 +163,6 @@ export async function recalculateAndPersist(
   const scheduleRow = fsrsCardToScheduleRow(cardId, card, sorted[0].reviewed_at);
   await upsertScheduleRow(db, scheduleRow);
   notifyChange(['card_schedule', 'review_log']);
+
   return scheduleRow;
 }

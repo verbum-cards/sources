@@ -12,6 +12,7 @@ function planText(db: DatabaseSync, sql: string, params: unknown[] = []): string
   const rows = db.prepare(`EXPLAIN QUERY PLAN ${sql}`).all(...(params as never[])) as {
     detail: string;
   }[];
+
   return rows.map((r) => r.detail).join('\n');
 }
 
