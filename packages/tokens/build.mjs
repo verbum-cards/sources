@@ -37,15 +37,17 @@ export const fonts = {
   semibold: 'Onest_600SemiBold',
 } as const;
 export const type = {
-  displayXl: { fontFamily: fonts.display, fontSize: 44, lineHeight: 48, letterSpacing: -0.9 },
-  displayL: { fontFamily: fonts.display, fontSize: 28, lineHeight: 34, letterSpacing: -0.3 },
-  displayWord: { fontFamily: fonts.display, fontSize: 34, lineHeight: 40 },
-  title: { fontFamily: fonts.semibold, fontSize: 20, lineHeight: 28 },
+  displayXl: { fontFamily: fonts.display, fontSize: 48, lineHeight: 52, letterSpacing: -0.9 },
+  displayL: { fontFamily: fonts.display, fontSize: 36, lineHeight: 44, letterSpacing: -0.3 },
+  displayWord: { fontFamily: fonts.display, fontSize: 40, lineHeight: 48 },
+  titleL: { fontFamily: fonts.semibold, fontSize: 32, lineHeight: 40 },
+  title: { fontFamily: fonts.semibold, fontSize: 28, lineHeight: 32 },
   button: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 20 },
-  body: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 24 },
-  bodyS: { fontFamily: fonts.regular, fontSize: 14, lineHeight: 20 },
-  label: { fontFamily: fonts.semibold, fontSize: 12, lineHeight: 16, letterSpacing: 1 },
-  caption: { fontFamily: fonts.medium, fontSize: 12, lineHeight: 16 },
+  body: { fontFamily: fonts.regular, fontSize: 24, lineHeight: 32 },
+  bodyS: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 20 },
+  label: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 20, letterSpacing: 1 },
+  caption: { fontFamily: fonts.medium, fontSize: 16, lineHeight: 20 },
+  captionS: { fontFamily: fonts.medium, fontSize: 14, lineHeight: 16 },
 } as const;
 `;
 

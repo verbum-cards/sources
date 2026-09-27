@@ -186,26 +186,35 @@ export const WordAddPanel = () => {
             backgroundColor: colors.surface,
             borderRadius: radius.lg,
             padding: space[5],
-            gap: space[2],
+            gap: space[8],
           }}
         >
-          <Text style={[type.title, { color: colors.ink }]}>{phase.word.lemma}</Text>
-          <Text style={[type.body, { color: colors.inkMuted }]}>{phase.word.translation}</Text>
-          <Text style={[type.bodyS, { color: colors.inkMuted }]}>
-            {previewExample.before}
-            {previewExample.match ? (
-              <Text
-                style={{
-                  backgroundColor: colors.highlightSoft,
-                  color: colors.ink,
-                  borderRadius: radius.sm,
-                }}
-              >
-                {previewExample.match}
-              </Text>
-            ) : null}
-            {previewExample.after}
-          </Text>
+          <View style={{ gap: space[2] }}>
+            <Text style={[type.title, { color: colors.ink }]}>{phase.word.lemma}</Text>
+            <Text style={[type.body, { color: colors.inkMuted }]}>{phase.word.translation}</Text>
+          </View>
+
+          <View style={{ gap: space[2] }}>
+            <Text style={[type.body, { color: colors.inkMuted }]}>
+              {previewExample.before}
+              {previewExample.match ? (
+                <Text
+                  style={{
+                    backgroundColor: colors.highlightSoft,
+                    color: colors.ink,
+                    borderRadius: radius.sm,
+                  }}
+                >
+                  {previewExample.match}
+                </Text>
+              ) : null}
+              {previewExample.after}
+            </Text>
+            <Text style={[type.body, { color: colors.inkMuted }]}>
+              {phase.word.exampleTranslation}
+            </Text>
+          </View>
+
           <Button
             label={t('wordAdd.preview.addButton')}
             size="lg"

@@ -39,8 +39,8 @@ export const ProfileLogout = ({ db }: Props) => {
           backgroundColor: colors.surface,
         }}
       >
-        <Text style={[type.caption, { color: colors.inkMuted }]}>{t('logout.factLabel')}</Text>
-        <Text style={[type.body, { color: colors.ink }]}>{t('logout.fact')}</Text>
+        <Text style={[type.captionS, { color: colors.inkMuted }]}>{t('logout.factLabel')}</Text>
+        <Text style={[type.bodyS, { color: colors.ink }]}>{t('logout.fact')}</Text>
       </View>
 
       <Button label={t('logout.button')} variant="signal" size="lg" block onPress={handleLogout} />

@@ -72,7 +72,7 @@ export function TabBar({ active, onChange }: { active: TabKey; onChange: (key: T
             </View>
             <Text
               style={[
-                type.caption,
+                type.captionS,
                 {
                   color: on ? colors.ink : colors.inkMuted,
                   fontFamily: on ? fonts.semibold : fonts.medium,

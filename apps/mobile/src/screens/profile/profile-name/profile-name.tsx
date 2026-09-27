@@ -31,10 +31,7 @@ export const ProfileName = ({ db, profile }: Props) => {
 
   return (
     <View style={{ gap: space[2] }}>
-      <Text
-        nativeID="profile-name-label"
-        style={[type.caption, { color: colors.inkMuted, fontSize: 14 }]}
-      >
+      <Text nativeID="profile-name-label" style={[type.caption, { color: colors.inkMuted }]}>
         {t('name.label')}
       </Text>
       <View style={{ flexDirection: 'row', gap: space[2] }}>
