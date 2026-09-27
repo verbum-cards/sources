@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
+
 import { useTheme } from '../providers/theme.provider';
 
 type Props = { label: string; variant?: 'default' | 'streak' | 'quiet'; icon?: React.ReactNode };
@@ -27,7 +28,12 @@ export function Chip({ label, variant = 'default', icon }: Props) {
       }}
     >
       {icon}
-      <Text style={[variant === 'quiet' ? type.caption : type.button, { color: v.fg, fontSize: variant === 'quiet' ? 12 : 14 }]}>
+      <Text
+        style={[
+          variant === 'quiet' ? type.caption : type.button,
+          { color: v.fg, fontSize: variant === 'quiet' ? 12 : 14 },
+        ]}
+      >
         {label}
       </Text>
     </View>

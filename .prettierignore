@@ -1,0 +1,16 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.expo/
+**/.expo/
+coverage/
+package-lock.json
+apps/mobile/tests/__snapshots__/
+data/
+packages/tokens/tokens.json
+packages/tokens/dist/
+
+# Документы — структурированный контент с таблицами, форматируем вручную.
+*.md
+**/*.md

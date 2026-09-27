@@ -1,4 +1,5 @@
 import { createEmptyCard, type Card as FsrsCard, type CardInput as FsrsCardInput } from 'ts-fsrs';
+
 import type { CardScheduleRow } from '../db/entities/user/types';
 
 export type FsrsCardLike = FsrsCardInput | FsrsCard;
@@ -27,7 +28,11 @@ export function scheduleRowToFsrsInput(row: CardScheduleRow | undefined): FsrsCa
   };
 }
 
-export function fsrsCardToScheduleRow(cardId: string, card: FsrsCard, firstReviewAt: string): CardScheduleRow {
+export function fsrsCardToScheduleRow(
+  cardId: string,
+  card: FsrsCard,
+  firstReviewAt: string
+): CardScheduleRow {
   return {
     card_id: cardId,
     due: card.due.toISOString(),

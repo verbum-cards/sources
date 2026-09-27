@@ -1,7 +1,7 @@
 name: Функция
 description: Новая функция или изменение поведения
-title: "[Функция] "
-labels: ["type:feature"]
+title: '[Функция] '
+labels: ['type:feature']
 body:
   - type: textarea
     id: what
@@ -20,7 +20,7 @@ body:
     attributes:
       label: Связано
       description: FR, флоу, прототип, другие issues — если знаете.
-      placeholder: "FR-21, флоу F10, #12"
+      placeholder: 'FR-21, флоу F10, #12'
   - type: textarea
     id: criteria
     attributes:

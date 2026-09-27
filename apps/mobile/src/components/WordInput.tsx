@@ -1,6 +1,7 @@
 import React from 'react';
-import { Pressable, Text, TextInput, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
+import { Pressable, Text, TextInput, View } from 'react-native';
+
 import { useTheme } from '../providers/theme.provider';
 
 type Props = {
@@ -16,7 +17,10 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
 
   return (
     <View style={{ gap: space[2] }}>
-      <Text nativeID="new-word-label" style={[type.caption, { color: colors.inkMuted, fontSize: 14 }]}>
+      <Text
+        nativeID="new-word-label"
+        style={[type.caption, { color: colors.inkMuted, fontSize: 14 }]}
+      >
         {t('wordInput.label')}
       </Text>
       <View style={{ flexDirection: 'row', gap: space[4] }}>

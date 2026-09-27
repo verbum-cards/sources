@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       week:
-        description: "Номер недели, две цифры (например, 01)"
+        description: 'Номер недели, две цифры (например, 01)'
         required: true
 
 jobs:

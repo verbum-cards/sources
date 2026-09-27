@@ -20,7 +20,10 @@ const realDelay = (ms: number): Promise<void> => new Promise((resolve) => setTim
 // минуту», см. docs/sync-protocol.md — это в будущем sync-модуле, не здесь).
 // Повторяет только на NetworkError/TimeoutError: ошибку сервера (HttpError)
 // вслепую ретраить нельзя — её должен разобрать вызывающий код.
-export async function withRetry<T>(fn: () => Promise<T>, options: WithRetryOptions = {}): Promise<T> {
+export async function withRetry<T>(
+  fn: () => Promise<T>,
+  options: WithRetryOptions = {}
+): Promise<T> {
   const { maxAttempts = 3, baseDelayMs = 500, delay = realDelay } = options;
 
   let attempt = 0;

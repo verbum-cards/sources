@@ -1,6 +1,7 @@
 // Пользовательские данные (на устройстве, синхронизируются; всё с user_id).
 // Источник правды по протоколу — docs/sync-protocol.md (ADR-14).
 import { z } from 'zod';
+
 import { CefrSchema, IsoDateSchema, ItemTypeSchema, LangSchema, UuidSchema } from './content';
 // FieldRevisions живёт в sync.ts; здесь нужен только как тип (см. CardStored
 // и др. ниже) — type-only импорт не создаёт рантайм-цикл user.ts <-> sync.ts.
@@ -120,24 +121,29 @@ export type CardCreate = z.infer<typeof CardCreateSchema>;
 // Частичный патч (kind='upsert'): только изменённые поля. itemType/itemId/
 // createdAt неизменяемы после создания — в патче их нет вовсе. updatedAt
 // (производное) и deletedAt (только через kind='delete') тоже исключены.
-export const CardPatchSchema = CardSchema
-  .omit({
-    id: true,
-    userId: true,
-    itemType: true,
-    itemId: true,
-    createdAt: true,
-    updatedAt: true,
-    deletedAt: true,
-  })
-  .partial();
+export const CardPatchSchema = CardSchema.omit({
+  id: true,
+  userId: true,
+  itemType: true,
+  itemId: true,
+  createdAt: true,
+  updatedAt: true,
+  deletedAt: true,
+}).partial();
 export type CardPatch = z.infer<typeof CardPatchSchema>;
 
 // updatedAt — производное везде, поэтому его нет ни в одном патче синхронизации.
-export const UserProfilePatchSchema = UserProfileSchema.omit({ userId: true, updatedAt: true }).partial();
+export const UserProfilePatchSchema = UserProfileSchema.omit({
+  userId: true,
+  updatedAt: true,
+}).partial();
 export type UserProfilePatch = z.infer<typeof UserProfilePatchSchema>;
 
-export const UserDeckPatchSchema = UserDeckSchema.omit({ userId: true, deckId: true, updatedAt: true }).partial();
+export const UserDeckPatchSchema = UserDeckSchema.omit({
+  userId: true,
+  deckId: true,
+  updatedAt: true,
+}).partial();
 export type UserDeckPatch = z.infer<typeof UserDeckPatchSchema>;
 
 // review_log — только добавление (kind='create', см. sync.ts), патч не нужен:

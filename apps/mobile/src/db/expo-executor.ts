@@ -1,5 +1,6 @@
 import { type SQLiteBindParams, type SQLiteDatabase } from 'expo-sqlite';
-import { DbExecutor } from "./executor";
+
+import { DbExecutor } from './executor';
 
 // Оборачивает expo-sqlite в общий DbExecutor — общий адаптер для обеих баз
 // (cards-user.db и dictionary-*.db), используется их open.ts (db/user/open.ts,

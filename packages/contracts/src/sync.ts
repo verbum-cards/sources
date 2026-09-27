@@ -1,6 +1,7 @@
 // Синхронизация по журналу операций (docs/sync-protocol.md, согласовано ADR-14).
 // Найденные противоречия протокола, ушедшие в отдельные задачи, здесь не решаются.
 import { z } from 'zod';
+
 import { IsoDateSchema, UuidSchema } from './content';
 import {
   CardCreateSchema,
@@ -19,7 +20,10 @@ export type SyncEntity = z.infer<typeof SyncEntitySchema>;
 // на уровне поля, а не всей записи. Ключи для личных правок карточки — плоские:
 // overrides.translation, overrides.example, overrides.note. Это не поле XSchema —
 // см. CardStored/UserProfileStored/UserDeckStored в user.ts.
-export const FieldRevisionsSchema = z.record(z.string(), z.object({ ts: IsoDateSchema, deviceId: z.string() }));
+export const FieldRevisionsSchema = z.record(
+  z.string(),
+  z.object({ ts: IsoDateSchema, deviceId: z.string() })
+);
 export type FieldRevisions = z.infer<typeof FieldRevisionsSchema>;
 
 // Виды операций, по сущностям (docs/sync-protocol.md → «Виды операций»):
@@ -41,11 +45,30 @@ const syncOpBase = {
 // card — единственная сущность, где форма fields зависит от kind: create несёт
 // полный CardCreate, upsert — частичный CardPatch, delete — null (удаление
 // ставится по kind, а не по полю; см. docs/sync-protocol.md → «Виды операций»).
-export const CardCreateOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('create'), fields: CardCreateSchema });
-export const CardUpsertOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('upsert'), fields: CardPatchSchema });
-export const CardDeleteOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('delete'), fields: z.null() });
+export const CardCreateOpSchema = z.object({
+  ...syncOpBase,
+  entity: z.literal('card'),
+  kind: z.literal('create'),
+  fields: CardCreateSchema,
+});
+export const CardUpsertOpSchema = z.object({
+  ...syncOpBase,
+  entity: z.literal('card'),
+  kind: z.literal('upsert'),
+  fields: CardPatchSchema,
+});
+export const CardDeleteOpSchema = z.object({
+  ...syncOpBase,
+  entity: z.literal('card'),
+  kind: z.literal('delete'),
+  fields: z.null(),
+});
 
-export const CardSyncOpSchema = z.discriminatedUnion('kind', [CardCreateOpSchema, CardUpsertOpSchema, CardDeleteOpSchema]);
+export const CardSyncOpSchema = z.discriminatedUnion('kind', [
+  CardCreateOpSchema,
+  CardUpsertOpSchema,
+  CardDeleteOpSchema,
+]);
 export type CardSyncOp = z.infer<typeof CardSyncOpSchema>;
 
 export const ReviewLogSyncOpSchema = z.object({
@@ -91,7 +114,9 @@ export type SyncOpTyped = z.infer<typeof SyncOpTypedSchema>;
 // схем, что и патчи, поэтому не может разойтись с типами. Для card — объединение
 // полей create и patch (upsert может прислать любое из них, кроме неизменяемых).
 export const SYNCED_FIELDS: Record<SyncEntity, readonly string[]> = {
-  card: Array.from(new Set([...Object.keys(CardCreateSchema.shape), ...Object.keys(CardPatchSchema.shape)])),
+  card: Array.from(
+    new Set([...Object.keys(CardCreateSchema.shape), ...Object.keys(CardPatchSchema.shape)])
+  ),
   review_log: Object.keys(ReviewLogPayloadSchema.shape),
   user_profile: Object.keys(UserProfilePatchSchema.shape),
   user_deck: Object.keys(UserDeckPatchSchema.shape),

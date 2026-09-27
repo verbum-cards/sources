@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useTranslation } from 'react-i18next';
+
 import { Chip } from '../components/Chip';
 import { ProgressBar } from '../components/ProgressBar';
 import { ReviewPanel } from '../components/ReviewPanel';
@@ -32,17 +33,35 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const [query, setQuery] = useState('');
   const [tab, setTab] = useState<TabKey>('home');
 
-  const today = new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' });
+  const today = useMemo(
+    () =>
+      new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' }),
+    []
+  );
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
       <ScrollView
         keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{ paddingHorizontal: space[5], paddingTop: space[6], paddingBottom: space[6], gap: space[4] }}
+        contentContainerStyle={{
+          paddingHorizontal: space[5],
+          paddingTop: space[6],
+          paddingBottom: space[6],
+          gap: space[4],
+        }}
       >
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', gap: space[3] }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+            gap: space[3],
+          }}
+        >
           <View style={{ gap: 6, flexShrink: 1 }}>
-            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{today.charAt(0).toUpperCase() + today.slice(1)}</Text>
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+              {today.charAt(0).toUpperCase() + today.slice(1)}
+            </Text>
             <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
               {t('header.greeting', { name: DEMO.name })}
             </Text>
@@ -50,10 +69,22 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
           <Chip label={t('header.streak', { count: DEMO.streak })} variant="streak" />
         </View>
 
-        <WordInput value={query} onChangeText={setQuery} onSubmit={() => {/* F6: поиск в локальном словаре */}} />
+        <WordInput
+          value={query}
+          onChangeText={setQuery}
+          onSubmit={() => {
+            /* F6: поиск в локальном словаре */
+          }}
+        />
 
         {DEMO.due > 0 ? (
-          <ReviewPanel due={DEMO.due} minutes={Math.max(1, Math.round(DEMO.due * 0.25))} onStart={() => {/* F10 */}} />
+          <ReviewPanel
+            due={DEMO.due}
+            minutes={Math.max(1, Math.round(DEMO.due * 0.25))}
+            onStart={() => {
+              /* F10 */
+            }}
+          />
         ) : null}
 
         <ProgressBar
@@ -68,20 +99,53 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
             { n: DEMO.learned, label: t('stats.learned', { count: DEMO.learned }) },
             { n: DEMO.queued, label: t('stats.queued', { count: DEMO.queued }) },
           ].map((s) => (
-            <View key={s.label} style={{ flex: 1, backgroundColor: colors.surfaceSunken, borderRadius: radius.md, paddingVertical: 14, paddingHorizontal: space[4], gap: 2 }}>
-              <Text style={[type.displayL, { fontSize: 24, lineHeight: 30, color: colors.ink }]}>{s.n}</Text>
-              <Text style={[type.caption, { fontSize: 13, lineHeight: 18, color: colors.inkMuted }]}>{s.label}</Text>
+            <View
+              key={s.label}
+              style={{
+                flex: 1,
+                backgroundColor: colors.surfaceSunken,
+                borderRadius: radius.md,
+                paddingVertical: 14,
+                paddingHorizontal: space[4],
+                gap: 2,
+              }}
+            >
+              <Text style={[type.displayL, { fontSize: 24, lineHeight: 30, color: colors.ink }]}>
+                {s.n}
+              </Text>
+              <Text
+                style={[type.caption, { fontSize: 13, lineHeight: 18, color: colors.inkMuted }]}
+              >
+                {s.label}
+              </Text>
             </View>
           ))}
         </View>
 
         <View style={{ gap: space[2] }}>
-          <Text accessibilityRole="header" style={[type.button, { fontSize: 15, color: colors.ink }]}>
+          <Text
+            accessibilityRole="header"
+            style={[type.button, { fontSize: 15, color: colors.ink }]}
+          >
             {t('recent.title')}
           </Text>
-          <View style={{ backgroundColor: colors.surface, borderRadius: radius.lg, borderWidth: 1, borderColor: colors.line, overflow: 'hidden' }}>
+          <View
+            style={{
+              backgroundColor: colors.surface,
+              borderRadius: radius.lg,
+              borderWidth: 1,
+              borderColor: colors.line,
+              overflow: 'hidden',
+            }}
+          >
             {DEMO.recent.map((w, i) => (
-              <WordRow key={w.word} word={w.word} translation={w.tr} when={w.when} last={i === DEMO.recent.length - 1} />
+              <WordRow
+                key={w.word}
+                word={w.word}
+                translation={w.tr}
+                when={w.when}
+                last={i === DEMO.recent.length - 1}
+              />
             ))}
           </View>
         </View>
@@ -94,7 +158,9 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
             onPress={onOpenFsrsDebug}
             style={{ minHeight: 44, justifyContent: 'center' }}
           >
-            <Text style={[type.bodyS, { color: colors.inkMuted, textDecorationLine: 'underline' }]}>{t('debug.openFsrs')}</Text>
+            <Text style={[type.bodyS, { color: colors.inkMuted, textDecorationLine: 'underline' }]}>
+              {t('debug.openFsrs')}
+            </Text>
           </Pressable>
         ) : null}
       </ScrollView>

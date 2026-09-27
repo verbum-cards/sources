@@ -1,8 +1,9 @@
 import { fsrs, type Card as FsrsCard, type Grade } from 'ts-fsrs';
-import { notifyChange } from '../utilities/event-bus';
-import type { DbExecutor } from '../db/executor';
-import { uuidv7 } from '../utilities/id';
+
 import type { CardScheduleRow, ReviewLogRow } from '../db/entities/user/types';
+import type { DbExecutor } from '../db/executor';
+import { notifyChange } from '../utilities/event-bus';
+import { uuidv7 } from '../utilities/id';
 import { fsrsCardToScheduleRow, scheduleRowToFsrsInput, type FsrsCardLike } from './convert';
 import { BUTTON_TO_GRADE, GRADE_TO_RATING, RATING_TO_GRADE, type ButtonRating } from './ratings';
 
@@ -21,12 +22,18 @@ function stepFsrs(input: FsrsCardLike, now: Date, grade: Grade) {
   return scheduler.next(input, now, grade);
 }
 
-export async function getCardSchedule(db: DbExecutor, cardId: string): Promise<CardScheduleRow | undefined> {
+export async function getCardSchedule(
+  db: DbExecutor,
+  cardId: string
+): Promise<CardScheduleRow | undefined> {
   return db.get<CardScheduleRow>('SELECT * FROM card_schedule WHERE card_id = ?', [cardId]);
 }
 
 export async function getReviewLogs(db: DbExecutor, cardId: string): Promise<ReviewLogRow[]> {
-  const rows = await db.all<ReviewLogRow>('SELECT * FROM review_log WHERE card_id = ? ORDER BY reviewed_at ASC', [cardId]);
+  const rows = await db.all<ReviewLogRow>(
+    'SELECT * FROM review_log WHERE card_id = ? ORDER BY reviewed_at ASC',
+    [cardId]
+  );
   return rows.map((row) => ({ ...row }));
 }
 
@@ -57,7 +64,7 @@ async function upsertScheduleRow(db: DbExecutor, row: CardScheduleRow): Promise<
       row.fsrs_state,
       row.last_review,
       row.first_review_at,
-    ],
+    ]
   );
 }
 
@@ -116,7 +123,7 @@ export async function applyRating(params: ApplyRatingParams): Promise<ApplyRatin
       reviewLogRow.device_id,
       reviewLogRow.tz_offset_min,
       reviewLogRow.synced_at,
-    ],
+    ]
   );
 
   await upsertScheduleRow(params.db, scheduleRow);
@@ -142,7 +149,10 @@ export function recalculateSchedule(reviewLogs: readonly ReviewLogRow[]): FsrsCa
   return current as FsrsCard;
 }
 
-export async function recalculateAndPersist(db: DbExecutor, cardId: string): Promise<CardScheduleRow | null> {
+export async function recalculateAndPersist(
+  db: DbExecutor,
+  cardId: string
+): Promise<CardScheduleRow | null> {
   const logs = await getReviewLogs(db, cardId);
   const card = recalculateSchedule(logs);
   if (!card) return null;

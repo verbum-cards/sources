@@ -3,6 +3,7 @@
 // пакет заменяется целиком или дельтой. Версия формата — DICTIONARY_SCHEMA_VERSION
 // (сверяется с PRAGMA user_version пакета и с pack_meta.schema_version).
 import { z } from 'zod';
+
 import { IsoDateSchema, LangSchema } from './content';
 
 export const DICTIONARY_SCHEMA_VERSION = 1;

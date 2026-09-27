@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+
 import { HttpError, NetworkError, TimeoutError } from '../../src/network/errors';
 import { withRetry } from '../../src/network/retry';
 

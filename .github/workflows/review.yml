@@ -29,7 +29,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.CARDS_BOT_TOKEN }}
-          prompt: "/review-pr ${{ github.repository }}/pull/${{ github.event.pull_request.number }}"
+          prompt: '/review-pr ${{ github.repository }}/pull/${{ github.event.pull_request.number }}'
           claude_args: |
             --model claude-opus-5-5
             --max-turns 40

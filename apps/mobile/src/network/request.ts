@@ -35,10 +35,10 @@ function getBaseUrl(): string {
   // EXPO_PUBLIC_* — стандартный способ публичных env-переменных в Expo (инлайнятся
   // в бандл на этапе сборки). Ошибка бросается здесь, при первом реальном вызове,
   // а не молча подставляется фейковый адрес.
-  const baseUrl = process.env.EXPO_PUBLIC_API_URL;
+  const baseUrl = process.env.EXPO_PUBLIC_API_URL as string | undefined;
   if (!baseUrl) {
     throw new Error(
-      'EXPO_PUBLIC_API_URL не задан. Добавьте его в .env (см. .env.example) перед первым сетевым запросом.',
+      'EXPO_PUBLIC_API_URL не задан. Добавьте его в .env (см. .env.example) перед первым сетевым запросом.'
     );
   }
   return baseUrl;
@@ -54,7 +54,8 @@ async function parseBody(response: FetchResponseLike): Promise<unknown> {
   const text = await response.text();
   if (!text) return undefined;
   try {
-    return JSON.parse(text);
+    const parsed: unknown = JSON.parse(text);
+    return parsed;
   } catch {
     return text;
   }
@@ -69,7 +70,13 @@ function isAbortError(error: unknown): boolean {
 // исхода: NetworkError (fetch упал), TimeoutError (не уложились в timeoutMs),
 // HttpError (сервер ответил не 2xx) — см. errors.ts.
 export async function request<T>(path: string, options: RequestOptions = {}): Promise<T> {
-  const { method = 'GET', body, headers = {}, timeoutMs = DEFAULT_TIMEOUT_MS, fetchImpl = fetch as unknown as FetchLike } = options;
+  const {
+    method = 'GET',
+    body,
+    headers = {},
+    timeoutMs = DEFAULT_TIMEOUT_MS,
+    fetchImpl = fetch,
+  } = options;
 
   const baseUrl = getBaseUrl();
   const url = buildUrl(baseUrl, path);
@@ -107,7 +114,11 @@ export async function request<T>(path: string, options: RequestOptions = {}): Pr
   const parsedBody = await parseBody(response);
 
   if (!response.ok) {
-    throw new HttpError(response.status, parsedBody, `HTTP ${response.status} для ${method} ${path}`);
+    throw new HttpError(
+      response.status,
+      parsedBody,
+      `HTTP ${response.status} для ${method} ${path}`
+    );
   }
 
   return parsedBody as T;

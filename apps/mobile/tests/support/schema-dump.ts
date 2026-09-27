@@ -8,9 +8,13 @@ export interface SqliteMasterRow {
 }
 
 export function dumpSchema(db: DatabaseSync): SqliteMasterRow[] {
-  return db.prepare('SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name').all() as unknown as SqliteMasterRow[];
+  return db
+    .prepare('SELECT type, name, tbl_name, sql FROM sqlite_master ORDER BY type, name')
+    .all() as unknown as SqliteMasterRow[];
 }
 
 export function formatSchemaDump(rows: readonly SqliteMasterRow[]): string {
-  return rows.map((row) => `${row.type}\t${row.name}\t${row.tbl_name}\t${row.sql ?? ''}`).join('\n') + '\n';
+  return `${rows
+    .map((row) => `${row.type}\t${row.name}\t${row.tbl_name}\t${row.sql ?? ''}`)
+    .join('\n')}\n`;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View, ViewStyle } from 'react-native';
+
 import { useTheme } from '../providers/theme.provider';
 
 type Variant = 'primary' | 'highlight' | 'secondary' | 'signal';
@@ -17,7 +18,16 @@ type Props = {
 
 // Кнопка из дизайн-системы: primary — одна на экран, highlight — только внутри Panel,
 // signal — «Не помню» и необратимые действия.
-export function Button({ label, onPress, variant = 'primary', size = 'md', block, disabled, icon, style }: Props) {
+export function Button({
+  label,
+  onPress,
+  variant = 'primary',
+  size = 'md',
+  block,
+  disabled,
+  icon,
+  style,
+}: Props) {
   const { colors, radius, space, type } = useTheme();
 
   const palette = {
@@ -50,7 +60,9 @@ export function Button({ label, onPress, variant = 'primary', size = 'md', block
       ]}
     >
       <View style={[styles.row, { gap: space[2] }]}>
-        <Text style={[type.button, { color: palette.fg, fontSize: size === 'lg' ? 16 : 14 }]}>{label}</Text>
+        <Text style={[type.button, { color: palette.fg, fontSize: size === 'lg' ? 16 : 14 }]}>
+          {label}
+        </Text>
         {icon}
       </View>
     </Pressable>

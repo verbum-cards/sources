@@ -1,11 +1,13 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+
 import {
   IsoDateSchema,
   SyncOpTypedSchema,
   SyncPushResponseSchema,
   UuidSchema,
 } from '@cards/contracts';
+
 import { FIXED_ISO, FIXED_UUID_1, FIXED_UUID_2 } from '../support/fixtures';
 
 // Item 7 code-debt T1.5a: UuidSchema -> z.uuid(), IsoDateSchema -> z.iso.datetime()
@@ -18,11 +20,15 @@ test('UuidSchema отклоняет не-UUID строки', () => {
 });
 
 test('IsoDateSchema требует Z и запрещает смещение часового пояса', () => {
-  assert.equal(IsoDateSchema.safeParse('2026-09-27').success, false, 'дата без времени должна быть отклонена');
+  assert.equal(
+    IsoDateSchema.safeParse('2026-09-27').success,
+    false,
+    'дата без времени должна быть отклонена'
+  );
   assert.equal(
     IsoDateSchema.safeParse('2026-09-27T10:00:00+03:00').success,
     false,
-    'смещение вместо Z должно быть отклонено',
+    'смещение вместо Z должно быть отклонено'
   );
   assert.equal(IsoDateSchema.safeParse(FIXED_ISO).success, true);
 });
@@ -81,7 +87,11 @@ test('SyncOpTypedSchema: card upsert различает "не менялось" 
     fields: { itemType: 'sense', status: 'known' },
   });
   assert.equal(withImmutableField.success, true);
-  if (withImmutableField.success && withImmutableField.data.entity === 'card' && withImmutableField.data.kind === 'upsert') {
+  if (
+    withImmutableField.success &&
+    withImmutableField.data.entity === 'card' &&
+    withImmutableField.data.kind === 'upsert'
+  ) {
     assert.equal((withImmutableField.data.fields as Record<string, unknown>).itemType, undefined);
     assert.equal(withImmutableField.data.fields?.status, 'known');
   }

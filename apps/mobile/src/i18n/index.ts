@@ -1,8 +1,9 @@
-import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
+
 import common from './ru/common.json';
-import home from './ru/home.json';
 import fsrsDebug from './ru/fsrsDebug.json';
+import home from './ru/home.json';
 
 // Язык интерфейса в бете один — русский, но все строки идут через i18n,
 // чтобы добавление второго языка не потребовало правок компонентов.

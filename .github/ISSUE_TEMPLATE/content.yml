@@ -1,7 +1,7 @@
 name: Контент словаря или колоды
 description: Ошибка в слове, переводе, примере или предложение по колоде
-title: "[Контент] "
-labels: ["type:content", "area:content"]
+title: '[Контент] '
+labels: ['type:content', 'area:content']
 body:
   - type: dropdown
     id: kind
@@ -18,7 +18,7 @@ body:
     id: item
     attributes:
       label: Слово или колода
-      placeholder: "bill (счёт в ресторане) / колода «Ресторан и кафе»"
+      placeholder: 'bill (счёт в ресторане) / колода «Ресторан и кафе»'
     validations:
       required: true
   - type: textarea

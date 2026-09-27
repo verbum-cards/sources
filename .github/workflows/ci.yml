@@ -1,4 +1,4 @@
-# Проверки для каждого PR и основной ветки: типы и тесты.
+# Проверки для каждого PR и основной ветки: форматирование, линт, типы и тесты.
 name: CI
 
 on:
@@ -18,6 +18,12 @@ jobs:
       - name: Install
         run: |
           if [ -f package-lock.json ]; then npm ci; else echo "Нет lockfile — проверки пропущены"; exit 0; fi
+      - name: Format check
+        if: hashFiles('package-lock.json') != ''
+        run: npm run format:check
+      - name: Lint
+        if: hashFiles('package-lock.json') != ''
+        run: npm run lint
       - name: Typecheck
         if: hashFiles('package-lock.json') != ''
         run: npm run typecheck --workspaces --if-present

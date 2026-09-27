@@ -1,13 +1,14 @@
+import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import assert from 'node:assert/strict';
-import { test } from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
+import { test } from 'node:test';
+
+import { USER_DB_PRAGMAS } from '../../src/db/entities/user/user.config';
 import { getUserVersion, migrate } from '../../src/db/migrate';
+import type { Migration } from '../../src/db/migrate';
 import { LATEST_VERSION, migrations } from '../../src/db/migrations';
 import { m001 } from '../../src/db/migrations/001_init';
-import type { Migration } from '../../src/db/migrate';
-import { USER_DB_PRAGMAS } from '../../src/db/entities/user/user.config';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 import { dumpSchema, formatSchemaDump } from '../support/schema-dump';
 import { tempDbPath } from '../support/tmp-db';
@@ -48,8 +49,8 @@ test('обновление (механизм): база версии N-1 с да
   // что делают реальные миграции приложения (это отдельно проверяет тест
   // "обновление 001 -> 002" ниже, на настоящей второй миграции).
   const testMigrations: Migration[] = [
-    { version: 1, statements: ["CREATE TABLE widget (id TEXT PRIMARY KEY, name TEXT NOT NULL)"] },
-    { version: 2, statements: ["ALTER TABLE widget ADD COLUMN note TEXT"] },
+    { version: 1, statements: ['CREATE TABLE widget (id TEXT PRIMARY KEY, name TEXT NOT NULL)'] },
+    { version: 2, statements: ['ALTER TABLE widget ADD COLUMN note TEXT'] },
   ];
 
   const db = new DatabaseSync(':memory:');
@@ -63,7 +64,10 @@ test('обновление (механизм): база версии N-1 с да
   await migrate(executor, testMigrations);
 
   assert.equal(await getUserVersion(executor), 2);
-  const row = await executor.get<{ id: string; name: string; note: string | null }>('SELECT * FROM widget WHERE id = ?', ['w1']);
+  const row = await executor.get<{ id: string; name: string; note: string | null }>(
+    'SELECT * FROM widget WHERE id = ?',
+    ['w1']
+  );
   assert.deepEqual({ ...row }, { id: 'w1', name: 'Hello', note: null });
 });
 
@@ -80,36 +84,41 @@ test('обновление 001 -> 002: state -> status, merged_into_card_id, FK-
   await migrate(executor, [m001]);
   await executor.run(
     'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    ['c1', 'u1', 'sense', 'i1', 'review', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    ['c1', 'u1', 'sense', 'i1', 'review', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
   );
   await executor.run(
     'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    ['c2', 'u1', 'sense', 'i2', 'suspended', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    ['c2', 'u1', 'sense', 'i2', 'suspended', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
   );
   await executor.run(
     'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    ['c3', 'u1', 'sense', 'i3', 'known', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    ['c3', 'u1', 'sense', 'i3', 'known', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
   );
   await executor.run(
     'INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at) VALUES (?, ?, ?, ?, ?)',
-    ['c1', 'wander', 'бродить', 'pack', '2026-01-01T00:00:00.000Z'],
+    ['c1', 'wander', 'бродить', 'pack', '2026-01-01T00:00:00.000Z']
   );
-  await executor.run('INSERT INTO card_schedule (card_id, due) VALUES (?, ?)', ['c1', '2026-01-02T00:00:00.000Z']);
+  await executor.run('INSERT INTO card_schedule (card_id, due) VALUES (?, ?)', [
+    'c1',
+    '2026-01-02T00:00:00.000Z',
+  ]);
 
   await migrate(executor, migrations);
 
   assert.equal(await getUserVersion(executor), LATEST_VERSION);
 
-  const rows = await executor.all<{ id: string; status: string; merged_into_card_id: string | null }>(
-    'SELECT id, status, merged_into_card_id FROM card ORDER BY id',
-  );
+  const rows = await executor.all<{
+    id: string;
+    status: string;
+    merged_into_card_id: string | null;
+  }>('SELECT id, status, merged_into_card_id FROM card ORDER BY id');
   assert.deepEqual(
     rows.map((r) => ({ ...r })),
     [
       { id: 'c1', status: 'active', merged_into_card_id: null }, // 'review' -> 'active'
       { id: 'c2', status: 'suspended', merged_into_card_id: null },
       { id: 'c3', status: 'known', merged_into_card_id: null },
-    ],
+    ]
   );
 
   // Доказательство, что disableForeignKeys действительно защитил детей от каскада.
@@ -126,7 +135,7 @@ test('обновление 001 -> 002: state -> status, merged_into_card_id, FK-
 
   // ALTER TABLE ... RENAME TO card должен был сохранить FK-текст детей нетронутым.
   const childDdl = await executor.all<{ name: string; sql: string }>(
-    "SELECT name, sql FROM sqlite_master WHERE name IN ('card_content', 'card_schedule')",
+    "SELECT name, sql FROM sqlite_master WHERE name IN ('card_content', 'card_schedule')"
   );
   for (const child of childDdl) {
     assert.match(child.sql, /REFERENCES card \(id\)/);
@@ -152,7 +161,7 @@ test('ошибка миграции: rollback, user_version не меняетс�
   assert.equal(await getUserVersion(executor), 0);
 
   const tables = await executor.all<{ name: string }>(
-    "SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'will_be_rolled_back'",
+    "SELECT name FROM sqlite_master WHERE type = 'table' AND name = 'will_be_rolled_back'"
   );
   assert.equal(tables.length, 0);
 });
@@ -165,22 +174,38 @@ test('ограничения: CHECK по item_type/status/rating соблюда�
   await assert.rejects(() =>
     executor.run(
       'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      ['c1', 'u1', 'not-a-real-type', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
-    ),
+      [
+        'c1',
+        'u1',
+        'not-a-real-type',
+        'i1',
+        'active',
+        '2026-01-01T00:00:00.000Z',
+        '2026-01-01T00:00:00.000Z',
+      ]
+    )
   );
 
   await assert.rejects(() =>
     executor.run(
       'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      ['c1', 'u1', 'sense', 'i1', 'not-a-real-status', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
-    ),
+      [
+        'c1',
+        'u1',
+        'sense',
+        'i1',
+        'not-a-real-status',
+        '2026-01-01T00:00:00.000Z',
+        '2026-01-01T00:00:00.000Z',
+      ]
+    )
   );
 
   await assert.rejects(() =>
     executor.run(
       'INSERT INTO review_log (id, card_id, user_id, rating, reviewed_at, elapsed_ms, device_id, tz_offset_min) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-      ['r1', 'c1', 'u1', 'not-a-real-rating', '2026-01-01T00:00:00.000Z', 1000, 'd1', 180],
-    ),
+      ['r1', 'c1', 'u1', 'not-a-real-rating', '2026-01-01T00:00:00.000Z', 1000, 'd1', 180]
+    )
   );
 });
 
@@ -198,13 +223,16 @@ test('ограничения: foreign_keys включены, каскад чис
 
   await executor.run(
     'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    ['c1', 'u1', 'sense', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    ['c1', 'u1', 'sense', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
   );
   await executor.run(
     'INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at) VALUES (?, ?, ?, ?, ?)',
-    ['c1', 'wander', 'бродить', 'pack', '2026-01-01T00:00:00.000Z'],
+    ['c1', 'wander', 'бродить', 'pack', '2026-01-01T00:00:00.000Z']
   );
-  await executor.run('INSERT INTO card_schedule (card_id, due) VALUES (?, ?)', ['c1', '2026-01-02T00:00:00.000Z']);
+  await executor.run('INSERT INTO card_schedule (card_id, due) VALUES (?, ?)', [
+    'c1',
+    '2026-01-02T00:00:00.000Z',
+  ]);
 
   await executor.run('DELETE FROM card WHERE id = ?', ['c1']);
 

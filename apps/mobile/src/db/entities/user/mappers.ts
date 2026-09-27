@@ -9,6 +9,7 @@ import type {
   UserLevel,
   UserProfileStored,
 } from '@cards/contracts';
+
 import type { CardContentRow, CardRow, ReviewLogRow, UserDeckRow, UserProfileRow } from './types';
 
 function parseFieldRevisions(fieldMeta: string | null): FieldRevisions {
@@ -143,7 +144,11 @@ export function userDeckToRow(deck: UserDeckStored): UserDeckRow {
 
 // ---------- card_content -> ItemPreview (для карточки на экране) ----------
 
-export function cardContentRowToItemPreview(row: CardContentRow, itemType: ItemPreview['itemType'], itemId: string): ItemPreview {
+export function cardContentRowToItemPreview(
+  row: CardContentRow,
+  itemType: ItemPreview['itemType'],
+  itemId: string
+): ItemPreview {
   return {
     itemType,
     itemId,
@@ -154,7 +159,9 @@ export function cardContentRowToItemPreview(row: CardContentRow, itemType: ItemP
     cefr: (row.cefr ?? 'A1') as ItemPreview['cefr'],
     translation: row.translation,
     example: row.example ?? undefined,
-    exampleHighlight: row.example_highlight ? (JSON.parse(row.example_highlight) as [number, number]) : undefined,
+    exampleHighlight: row.example_highlight
+      ? (JSON.parse(row.example_highlight) as [number, number])
+      : undefined,
     exampleTranslation: row.example_translation ?? undefined,
   };
 }

@@ -1,15 +1,23 @@
 // Собирает tokens.json (дизайн-система «Слово») в dist/tokens.ts и dist/tokens.css.
 // tokens.json — единственный источник значений; dist/ не правится руками.
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 
 const t = JSON.parse(readFileSync(new URL('./tokens.json', import.meta.url), 'utf8'));
 const camel = (s) => s.replace(/-(\w)/g, (_, c) => c.toUpperCase());
 const px = (v) => Number(String(v).replace('px', ''));
 
-const light = {}, dark = {};
-for (const c of t.color.tokens) { light[camel(c.name)] = c.value.light; dark[camel(c.name)] = c.value.dark; }
-const shadowLight = {}, shadowDark = {};
-for (const s of t.shadow.tokens) { shadowLight[camel(s.name)] = s.value.light; shadowDark[camel(s.name)] = s.value.dark; }
+const light = {},
+  dark = {};
+for (const c of t.color.tokens) {
+  light[camel(c.name)] = c.value.light;
+  dark[camel(c.name)] = c.value.dark;
+}
+const shadowLight = {},
+  shadowDark = {};
+for (const s of t.shadow.tokens) {
+  shadowLight[camel(s.name)] = s.value.light;
+  shadowDark[camel(s.name)] = s.value.dark;
+}
 const space = Object.fromEntries(t.spacing.tokens.map((x) => [x.name.split('-')[1], px(x.value)]));
 const radius = Object.fromEntries(t.radius.tokens.map((x) => [x.name.split('-')[1], px(x.value)]));
 
@@ -41,8 +49,10 @@ export const type = {
 } as const;
 `;
 
-const vars = (obj, sh) => Object.entries({ ...obj, ...sh })
-  .map(([k, v]) => `  --${k.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())}: ${v};`).join('\n');
+const vars = (obj, sh) =>
+  Object.entries({ ...obj, ...sh })
+    .map(([k, v]) => `  --${k.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`)}: ${v};`)
+    .join('\n');
 const css = `/* Сгенерировано из tokens.json. Не править вручную: npm run tokens. */
 :root, [data-theme="light"] {
 ${vars(light, shadowLight)}
@@ -56,9 +66,15 @@ ${vars(dark, shadowDark)}
 ${vars(dark, shadowDark)}
 }
 :root {
-${Object.entries(space).map(([k, v]) => `  --space-${k}: ${v}px;`).join('\n')}
-${Object.entries(radius).map(([k, v]) => `  --radius-${k}: ${v}px;`).join('\n')}
-${Object.entries(t.type.families).map(([k, v]) => `  --font-${k}: ${v};`).join('\n')}
+${Object.entries(space)
+  .map(([k, v]) => `  --space-${k}: ${v}px;`)
+  .join('\n')}
+${Object.entries(radius)
+  .map(([k, v]) => `  --radius-${k}: ${v}px;`)
+  .join('\n')}
+${Object.entries(t.type.families)
+  .map(([k, v]) => `  --font-${k}: ${v};`)
+  .join('\n')}
 }
 `;
 

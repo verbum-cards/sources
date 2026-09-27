@@ -30,9 +30,15 @@ export async function getUserVersion(db: DbExecutor): Promise<number> {
 // а DROP TABLE родителя при foreign_keys=ON каскадом стёр бы детей. Поэтому FK
 // выключается до BEGIN, включается обратно после COMMIT, и сразу проверяется
 // PRAGMA foreign_key_check — если миграция оставила висячие ссылки, это ошибка.
-export async function migrate(db: DbExecutor, migrationList: readonly Migration[] = defaultMigrations): Promise<void> {
+export async function migrate(
+  db: DbExecutor,
+  migrationList: readonly Migration[] = defaultMigrations
+): Promise<void> {
   const current = await getUserVersion(db);
-  const pending = migrationList.filter((m) => m.version > current).slice().sort((a, b) => a.version - b.version);
+  const pending = migrationList
+    .filter((m) => m.version > current)
+    .slice()
+    .sort((a, b) => a.version - b.version);
 
   for (const migration of pending) {
     if (migration.disableForeignKeys) {
@@ -58,7 +64,9 @@ export async function migrate(db: DbExecutor, migrationList: readonly Migration[
     if (migration.disableForeignKeys) {
       const violations = await db.all('PRAGMA foreign_key_check');
       if (violations.length > 0) {
-        throw new Error(`Миграция ${migration.version} нарушила ссылочную целостность: ${JSON.stringify(violations)}`);
+        throw new Error(
+          `Миграция ${migration.version} нарушила ссылочную целостность: ${JSON.stringify(violations)}`
+        );
       }
     }
   }

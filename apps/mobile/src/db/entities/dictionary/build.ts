@@ -1,4 +1,5 @@
 import { DICTIONARY_SCHEMA_SQL, DICTIONARY_SCHEMA_VERSION, type Lang } from '@cards/contracts';
+
 import type { DbExecutor } from '../../executor';
 import { DICTIONARY_BUILD_PRAGMAS } from './dictionary.config';
 
@@ -12,7 +13,10 @@ export interface EmptyDictionaryPackageOptions {
 // миграций/запросов и для локальной разработки до готовности конвейера
 // apps/api/scripts. Работает через DbExecutor, поэтому пригоден и для
 // expo-sqlite на устройстве, и для node:sqlite в тестах.
-export async function createEmptyDictionaryPackage(db: DbExecutor, options: EmptyDictionaryPackageOptions): Promise<void> {
+export async function createEmptyDictionaryPackage(
+  db: DbExecutor,
+  options: EmptyDictionaryPackageOptions
+): Promise<void> {
   for (const pragma of DICTIONARY_BUILD_PRAGMAS) {
     await db.execRaw(pragma);
   }

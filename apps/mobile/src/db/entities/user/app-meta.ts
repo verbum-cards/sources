@@ -1,5 +1,5 @@
-import type { DbExecutor } from '../../executor';
 import { uuidv7 } from '../../../utilities/id';
+import type { DbExecutor } from '../../executor';
 import type { AppMetaRow } from './types';
 
 // deviceId — UUID v7, генерируется при первом запуске и хранится в app_meta.device_id

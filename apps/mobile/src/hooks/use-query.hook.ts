@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { subscribeToChanges } from '../utilities/event-bus';
+
 import type { DbExecutor } from '../db/executor';
 import { useDb } from '../providers/db.provider';
+import { subscribeToChanges } from '../utilities/event-bus';
 
 export interface UseQueryOptions {
   // Таблицы, изменение которых должно вызвать перечитывание (см. change-bus.ts).
@@ -22,7 +23,10 @@ export interface UseQueryResult<T> {
 // источником правды, хук просто перечитывает queryFn(db), когда notifyChange()
 // сообщает об изменении одной из tables (см. utilities/change-bus.ts), плюс при монтировании
 // и по ручному refetch().
-export function useQuery<T>(queryFn: (db: DbExecutor) => Promise<T>, options: UseQueryOptions): UseQueryResult<T> {
+export function useQuery<T>(
+  queryFn: (db: DbExecutor) => Promise<T>,
+  options: UseQueryOptions
+): UseQueryResult<T> {
   const db = useDb();
   const { tables, enabled = true } = options;
 
@@ -33,7 +37,9 @@ export function useQuery<T>(queryFn: (db: DbExecutor) => Promise<T>, options: Us
   // queryFn часто передают инлайн-стрелкой (новая identity на каждый рендер) —
   // держим последнюю версию в ref, чтобы не гонять эффект/подписку из-за этого.
   const queryFnRef = useRef(queryFn);
-  queryFnRef.current = queryFn;
+  useEffect(() => {
+    queryFnRef.current = queryFn;
+  });
 
   const runQuery = useCallback(() => {
     if (!enabled) {
@@ -41,18 +47,20 @@ export function useQuery<T>(queryFn: (db: DbExecutor) => Promise<T>, options: Us
       return;
     }
     setLoading(true);
-    queryFnRef
-      .current(db)
-      .then((result) => {
+    // runQuery остаётся синхронной (её сигнатура — () => void, её передают в
+    // subscribeToChanges и возвращают как refetch), поэтому async-версия внутри —
+    // самовызывающаяся функция, а не сама runQuery.
+    void (async () => {
+      try {
+        const result = await queryFnRef.current(db);
         setData(result);
         setError(null);
-      })
-      .catch((err: unknown) => {
+      } catch (err) {
         setError(err instanceof Error ? err : new Error(String(err)));
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
+      }
+    })();
   }, [db, enabled]);
 
   // tables обычно передают инлайн-массивом (новая identity на каждый рендер) —

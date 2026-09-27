@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import { useColorScheme } from 'react-native';
+
 import { dark, light, Palette, radius, space, type } from '@cards/tokens';
 
 type Scheme = 'light' | 'dark';
@@ -23,8 +24,16 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const scheme: Scheme = mode === 'system' ? (system === 'dark' ? 'dark' : 'light') : mode;
 
   const value = useMemo<Theme>(
-    () => ({ scheme, colors: scheme === 'dark' ? dark : light, space, radius, type, mode, setMode }),
-    [scheme, mode],
+    () => ({
+      scheme,
+      colors: scheme === 'dark' ? dark : light,
+      space,
+      radius,
+      type,
+      mode,
+      setMode,
+    }),
+    [scheme, mode]
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

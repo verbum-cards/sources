@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { HttpError, NetworkError, TimeoutError } from '../../src/network/errors';
+
 import { setAuthTokenProvider } from '../../src/network/auth-token';
+import { HttpError, NetworkError, TimeoutError } from '../../src/network/errors';
 import { request, type FetchLike, type FetchRequestInitLike } from '../../src/network/request';
 
 process.env.EXPO_PUBLIC_API_URL = 'https://api.example.test';
@@ -31,7 +32,7 @@ test('не-2xx кидает HttpError со статусом и распарсе�
       assert.equal(error.status, 422);
       assert.deepEqual(error.body, { reason: 'invalid_payload' });
       return true;
-    },
+    }
   );
 });
 
@@ -42,7 +43,7 @@ test('отказ fetch кидает NetworkError', async () => {
 
   await assert.rejects(
     () => request('/ping', { fetchImpl }),
-    (error: unknown) => error instanceof NetworkError,
+    (error: unknown) => error instanceof NetworkError
   );
 });
 
@@ -60,7 +61,7 @@ test('таймаут кидает TimeoutError', async () => {
 
   await assert.rejects(
     () => request('/ping', { fetchImpl, timeoutMs: 10 }),
-    (error: unknown) => error instanceof TimeoutError,
+    (error: unknown) => error instanceof TimeoutError
   );
 });
 
@@ -97,8 +98,11 @@ test('без EXPO_PUBLIC_API_URL — понятная ошибка, а не фе
   delete process.env.EXPO_PUBLIC_API_URL;
   try {
     await assert.rejects(
-      () => request('/ping', { fetchImpl: async () => ({ ok: true, status: 200, text: async () => '' }) }),
-      /EXPO_PUBLIC_API_URL/,
+      () =>
+        request('/ping', {
+          fetchImpl: async () => ({ ok: true, status: 200, text: async () => '' }),
+        }),
+      /EXPO_PUBLIC_API_URL/
     );
   } finally {
     process.env.EXPO_PUBLIC_API_URL = original;

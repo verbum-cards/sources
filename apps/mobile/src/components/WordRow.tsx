@@ -1,9 +1,16 @@
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
+
 import { useTheme } from '../providers/theme.provider';
 import { Chip } from './Chip';
 
-type Props = { word: string; translation: string; when?: string; last?: boolean; onPress?: () => void };
+type Props = {
+  word: string;
+  translation: string;
+  when?: string;
+  last?: boolean;
+  onPress?: () => void;
+};
 
 export function WordRow({ word, translation, when, last, onPress }: Props) {
   const { colors, space, type } = useTheme();

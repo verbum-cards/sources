@@ -1,4 +1,5 @@
 import { DatabaseSync } from 'node:sqlite';
+
 import type { DbExecutor } from '../../src/db/executor';
 
 // Тестовая реализация DbExecutor поверх node:sqlite (Node 24). migrate.ts и
@@ -13,8 +14,10 @@ export function createNodeSqliteExecutor(db: DatabaseSync): DbExecutor {
     run: async (sql, params = []) => {
       db.prepare(sql).run(...(params as never[]));
     },
-    get: async <T>(sql: string, params: readonly unknown[] = []) => db.prepare(sql).get(...(params as never[])) as T | undefined,
-    all: async <T>(sql: string, params: readonly unknown[] = []) => db.prepare(sql).all(...(params as never[])) as T[],
+    get: async <T>(sql: string, params: readonly unknown[] = []) =>
+      db.prepare(sql).get(...(params as never[])) as T | undefined,
+    all: async <T>(sql: string, params: readonly unknown[] = []) =>
+      db.prepare(sql).all(...(params as never[])) as T[],
   };
 }
 

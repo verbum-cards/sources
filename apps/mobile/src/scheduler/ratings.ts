@@ -1,4 +1,5 @@
 import { Rating as FsrsRating, type Grade } from 'ts-fsrs';
+
 import type { Rating as OurRating } from '@cards/contracts';
 
 // Дефолтный 2-кнопочный режим (.claude/skills/fsrs-scheduler/SKILL.md):

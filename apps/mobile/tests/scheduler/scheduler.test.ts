@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
-import { test } from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
+import { test } from 'node:test';
 import { Rating as FsrsRating } from 'ts-fsrs';
-import { migrate } from '../../src/db/migrate';
+
 import type { CardScheduleRow } from '../../src/db/entities/user/types';
+import { migrate } from '../../src/db/migrate';
 import { BUTTON_TO_GRADE, GRADE_TO_RATING, RATING_TO_GRADE } from '../../src/scheduler/ratings';
 import { applyRating, getReviewLogs, recalculateSchedule } from '../../src/scheduler/scheduler';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
@@ -18,7 +19,15 @@ async function setupDb() {
   await migrate(executor);
   await executor.run(
     'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    [CARD_ID, USER_ID, 'sense', 'item-1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    [
+      CARD_ID,
+      USER_ID,
+      'sense',
+      'item-1',
+      'active',
+      '2026-01-01T00:00:00.000Z',
+      '2026-01-01T00:00:00.000Z',
+    ]
   );
   return executor;
 }
@@ -59,18 +68,18 @@ test('новая карточка -> Again -> Good: due после Good позж
   assert.equal(afterGood.reviewLog.rating, 'good');
   assert.ok(
     new Date(afterGood.schedule.due!).getTime() > new Date(afterAgain.schedule.due!).getTime(),
-    'due после "Помню" должно быть позже, чем due после "Не помню"',
+    'due после "Помню" должно быть позже, чем due после "Не помню"'
   );
   assert.ok(
     new Date(afterGood.schedule.due!).getTime() > new Date('2026-01-01T10:05:00.000Z').getTime(),
-    'следующее due должно быть в будущем относительно момента ответа',
+    'следующее due должно быть в будущем относительно момента ответа'
   );
 
   const logs = await getReviewLogs(db, CARD_ID);
   assert.equal(logs.length, 2);
   assert.deepEqual(
     logs.map((l) => l.rating),
-    ['again', 'good'],
+    ['again', 'good']
   );
 });
 
@@ -87,7 +96,13 @@ test('пересчёт из журнала даёт то же состояние
 
   let last: CardScheduleRow | undefined;
   for (const step of steps) {
-    const result = await applyRating({ db, cardId: CARD_ID, userId: USER_ID, deviceId: DEVICE_ID, ...step });
+    const result = await applyRating({
+      db,
+      cardId: CARD_ID,
+      userId: USER_ID,
+      deviceId: DEVICE_ID,
+      ...step,
+    });
     last = result.schedule;
   }
 
@@ -98,13 +113,13 @@ test('пересчёт из журнала даёт то же состояние
   assert.ok(recalculated, 'пересчёт не должен вернуть null при непустом журнале');
   assert.ok(last);
 
-  assert.equal(recalculated!.due.toISOString(), last!.due);
-  assert.equal(recalculated!.stability, last!.stability);
-  assert.equal(recalculated!.difficulty, last!.difficulty);
-  assert.equal(recalculated!.reps, last!.reps);
-  assert.equal(recalculated!.lapses, last!.lapses);
-  assert.equal(recalculated!.state, last!.fsrs_state);
-  assert.equal(recalculated!.scheduled_days, last!.scheduled_days);
+  assert.equal(recalculated.due.toISOString(), last.due);
+  assert.equal(recalculated.stability, last.stability);
+  assert.equal(recalculated.difficulty, last.difficulty);
+  assert.equal(recalculated.reps, last.reps);
+  assert.equal(recalculated.lapses, last.lapses);
+  assert.equal(recalculated.state, last.fsrs_state);
+  assert.equal(recalculated.scheduled_days, last.scheduled_days);
 });
 
 test('пересчёт из пустого журнала возвращает null', () => {
