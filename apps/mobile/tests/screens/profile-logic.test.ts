@@ -11,7 +11,7 @@ import {
   updateProfileGoals,
   updateProfileLevel,
   updateProfileName,
-} from '../../src/screens/profile-logic';
+} from '../../src/screens/profile/profile-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
 async function setupDbWithProfile() {

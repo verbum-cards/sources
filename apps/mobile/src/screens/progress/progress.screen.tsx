@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { useTheme } from '../providers/theme.provider';
+import { useTheme } from '../../providers/theme.provider';
 
 // Заглушка таба «Прогресс» — реальный экран и данные придут отдельной задачей.
 export const ProgressScreen = () => {

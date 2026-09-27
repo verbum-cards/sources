@@ -4,19 +4,19 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { TFunction } from 'i18next';
 
-import { Chip } from '../components/Chip';
-import { ProgressBar } from '../components/ProgressBar';
-import { ReviewPanel } from '../components/ReviewPanel';
-import { WordRow } from '../components/WordRow';
-import { getOrCreateLocalUserId } from '../db/entities/user/app-meta';
-import { resetLocalData } from '../db/entities/user/reset-local-data';
-import type { DbExecutor } from '../db/executor';
-import { useDb } from '../hooks/use-db.hook';
-import { useQuery } from '../hooks/use-query.hook';
-import { DEMO } from '../mocks/home';
-import { useTheme } from '../providers/theme.provider';
-import { loadCurrentUserProfile } from './profile-logic';
-import { WordAddPanel } from './word-add-panel';
+import { Chip } from '../../components/Chip';
+import { ProgressBar } from '../../components/ProgressBar';
+import { ReviewPanel } from '../../components/ReviewPanel';
+import { WordRow } from '../../components/WordRow';
+import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { resetLocalData } from '../../db/entities/user/reset-local-data';
+import type { DbExecutor } from '../../db/executor';
+import { useDb } from '../../hooks/use-db.hook';
+import { useQuery } from '../../hooks/use-query.hook';
+import { DEMO } from '../../mocks/home';
+import { useTheme } from '../../providers/theme.provider';
+import { loadCurrentUserProfile } from '../profile/profile-logic';
+import { WordAddPanel } from '../word-add-panel';
 
 // FR-38: пустое состояние вместо демо-данных, если у пользователя ещё нет ни
 // одной живой карточки. Дальше (не в этой задаче) сюда придут реальные данные

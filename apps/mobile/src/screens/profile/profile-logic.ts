@@ -1,9 +1,9 @@
 import type { Goal, UserLevel, UserProfileStored } from '@cards/contracts';
 
-import { getOrCreateLocalUserId } from '../db/entities/user/app-meta';
-import { getUserProfile, saveUserProfile } from '../db/entities/user/user-profile';
-import type { DbExecutor } from '../db/executor';
-import { mapDailyMinutesToNewPerDay } from './onboarding/onboarding-logic';
+import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { getUserProfile, saveUserProfile } from '../../db/entities/user/user-profile';
+import type { DbExecutor } from '../../db/executor';
+import { mapDailyMinutesToNewPerDay } from '../onboarding/onboarding-logic';
 
 // Экран «Профиль»: те же поля, что собраны в F1 (level/goals/dailyMinutes),
 // редактируются напрямую и сохраняются сразу — тем же saveUserProfile, что и

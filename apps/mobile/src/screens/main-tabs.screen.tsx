@@ -3,10 +3,10 @@ import { Animated, View } from 'react-native';
 
 import { TabBar, TabKey } from '../components/TabBar';
 import { useTheme } from '../providers/theme.provider';
-import { DecksScreen } from './decks.screen';
-import { HomeScreen } from './home.screen';
-import { ProfileScreen } from './profile.screen';
-import { ProgressScreen } from './progress.screen';
+import { DecksScreen } from './decks/decks.screen';
+import { HomeScreen } from './home/home.screen';
+import { ProfileScreen } from './profile/profile.screen';
+import { ProgressScreen } from './progress/progress.screen';
 
 // Оболочка с настоящим переключением табов: TabBar сам не меняет контент —
 // он просто сообщает, какой ключ выбран (см. components/TabBar.tsx), а какой
