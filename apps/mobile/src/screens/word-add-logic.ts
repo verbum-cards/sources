@@ -26,6 +26,21 @@ export async function isWordAlreadyAdded(db: DbExecutor, itemId: string): Promis
   return row != null;
 }
 
+// Тот же критерий «дубликата», что и в isWordAlreadyAdded, но сразу для всех
+// живых карточек пользователя — чтобы пометить уже добавленные слова прямо в
+// списке подсказок (docs/flows/f06.md), не гоняя запрос на каждую подсказку.
+export async function loadAddedItemIds(db: DbExecutor): Promise<Set<string>> {
+  const userId = await getOrCreateLocalUserId(db);
+  const rows = await db.all<{ item_id: string }>(
+    `SELECT item_id FROM card
+     WHERE user_id = ? AND item_type = ?
+       AND status IN ('active', 'known') AND deleted_at IS NULL`,
+    [userId, DEBUG_ITEM_TYPE]
+  );
+
+  return new Set(rows.map((row) => row.item_id));
+}
+
 export interface AddWordFromDictionaryParams {
   db: DbExecutor;
   word: DebugWord;

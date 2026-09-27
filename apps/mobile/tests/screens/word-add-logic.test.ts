@@ -9,6 +9,7 @@ import {
   addManualWord,
   addWordFromDictionary,
   isWordAlreadyAdded,
+  loadAddedItemIds,
   undoAddedCard,
 } from '../../src/screens/word-add-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
@@ -46,6 +47,23 @@ test('isWordAlreadyAdded: false после отмены (мягкое удале
   await undoAddedCard(db, cardId);
 
   assert.equal(await isWordAlreadyAdded(db, word.itemId), false);
+});
+
+test('loadAddedItemIds: пусто, пока карточек нет', async () => {
+  const { db } = await setupDb();
+
+  assert.deepEqual(await loadAddedItemIds(db), new Set());
+});
+
+test('loadAddedItemIds: содержит item_id добавленных слов, не содержит отменённые', async () => {
+  const { db } = await setupDb();
+  const [added, undone] = DEBUG_WORDS;
+
+  await addWordFromDictionary({ db, word: added });
+  const undoneCardId = await addWordFromDictionary({ db, word: undone });
+  await undoAddedCard(db, undoneCardId);
+
+  assert.deepEqual(await loadAddedItemIds(db), new Set([added.itemId]));
 });
 
 test('addWordFromDictionary: создаёт card (status=active, item_type=sense) и card_content (source=pack)', async () => {

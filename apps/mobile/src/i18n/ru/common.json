@@ -8,7 +8,8 @@
   "wordInput": {
     "label": "Новое слово",
     "placeholder": "Например, serendipity",
-    "submitLabel": "Найти перевод"
+    "submitLabel": "Найти перевод",
+    "clear": "Очистить поле"
   },
   "reviewPanel": {
     "title": "К повторению сегодня",

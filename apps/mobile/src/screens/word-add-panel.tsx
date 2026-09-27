@@ -7,6 +7,7 @@ import { WordInput } from '../components/WordInput';
 import { WordRow } from '../components/WordRow';
 import { findWordByLemma, searchWordsByPrefix } from '../dictionary/search';
 import { useDb } from '../hooks/use-db.hook';
+import { useQuery } from '../hooks/use-query.hook';
 import type { DebugWord } from '../mocks/fsrs-debug-words';
 import { useTheme } from '../providers/theme.provider';
 import { splitAroundWord } from '../utilities/highlight-word';
@@ -14,6 +15,7 @@ import {
   addManualWord,
   addWordFromDictionary,
   isWordAlreadyAdded,
+  loadAddedItemIds,
   undoAddedCard,
 } from './word-add-logic';
 
@@ -59,6 +61,11 @@ export const WordAddPanel = () => {
     () => (phase.kind === 'idle' ? searchWordsByPrefix(query) : []),
     [phase.kind, query]
   );
+
+  // Помечаем в подсказках слова, которые уже добавлены (docs/flows/f06.md) —
+  // тап по ним по-прежнему работает как обычно и заведёт в phase 'duplicate'
+  // через resolve(), метка тут просто экономит один лишний тап.
+  const { data: addedItemIds } = useQuery(loadAddedItemIds, { tables: ['card'] });
 
   const showConfirmation = useCallback((cardId: string) => {
     if (confirmationTimerRef.current) clearTimeout(confirmationTimerRef.current);
@@ -173,6 +180,7 @@ export const WordAddPanel = () => {
               key={word.itemId}
               word={word.lemma}
               translation={word.translation}
+              when={addedItemIds?.has(word.itemId) ? t('wordAdd.alreadyAdded') : undefined}
               last={i === all.length - 1}
               onPress={() => handleSuggestionPress(word)}
             />

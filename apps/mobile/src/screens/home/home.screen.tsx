@@ -6,60 +6,23 @@ import type { TFunction } from 'i18next';
 
 import { Chip } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
-import { ReviewPanel } from '../../components/ReviewPanel';
 import { WordRow } from '../../components/WordRow';
-import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
 import { resetLocalData } from '../../db/entities/user/reset-local-data';
-import type { DbExecutor } from '../../db/executor';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
-import { DEMO } from '../../mocks/home';
 import { useTheme } from '../../providers/theme.provider';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
 import { WordAddPanel } from '../word-add-panel';
-
-// FR-38: пустое состояние вместо демо-данных, если у пользователя ещё нет ни
-// одной живой карточки. Дальше (не в этой задаче) сюда придут реальные данные
-// и для непустого состояния тоже — сейчас непустая ветка остаётся на demo.
-async function countUserCards(db: DbExecutor): Promise<number> {
-  const userId = await getOrCreateLocalUserId(db);
-  const row = await db.get<{ count: number }>(
-    'SELECT COUNT(*) as count FROM card WHERE user_id = ? AND deleted_at IS NULL',
-    [userId]
-  );
-
-  return row?.count ?? 0;
-}
-
-const RECENT_CARDS_LIMIT = 10;
-
-interface RecentCard {
-  word: string;
-  translation: string;
-  createdAt: string;
-}
-
-// Блок «Недавно добавлены» — единственный кусок непустого состояния, который
-// уже переведён на реальные данные (остальное — стрик/ReviewPanel/статистика —
-// сознательно остаётся на demo, это отдельная задача).
-async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
-  const userId = await getOrCreateLocalUserId(db);
-  const rows = await db.all<{ lemma: string; translation: string; created_at: string }>(
-    `SELECT cc.lemma, cc.translation, c.created_at
-     FROM card c
-     JOIN card_content cc ON cc.card_id = c.id
-     WHERE c.user_id = ? AND c.deleted_at IS NULL
-     ORDER BY c.created_at DESC
-     LIMIT ?`,
-    [userId, RECENT_CARDS_LIMIT]
-  );
-
-  return rows.map((row) => ({
-    word: row.lemma,
-    translation: row.translation,
-    createdAt: row.created_at,
-  }));
-}
+import {
+  computeStreakDays,
+  countCardsCreatedToday,
+  countUserCards,
+  HOME_WIDGETS_REVEAL_THRESHOLD,
+  loadCardCreationDates,
+  loadHomeStats,
+  loadRecentCards,
+  STREAK_REVEAL_THRESHOLD,
+} from './home-logic';
 
 // «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
 // Не переусложняем — это подпись-подсказка, а не точная метка времени.
@@ -75,20 +38,46 @@ function formatRecentWhen(t: TFunction<'home'>, createdAtIso: string): string {
   return new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long' }).format(created);
 }
 
+// FR-38 + принцип «Просто работает» (docs/product.md): главный экран не
+// вываливает весь набор виджетов сразу после онбординга. Виджеты появляются
+// постепенно, по мере реального использования (см. home-logic.ts):
+//   - 0 карточек            -> только пустое состояние, WordAddPanel ведёт
+//                              к первому своему слову;
+//   - 1..2 карточки         -> + «Недавно добавлены»;
+//   - >= HOME_WIDGETS_REVEAL_THRESHOLD (3, та же цифра, что и в гипотезе
+//     активации) -> + «Цель дня» и плитки «выучено»/«в очереди»;
+//   - >= STREAK_REVEAL_THRESHOLD (2) дней подряд -> + стрик в шапке.
+// «Повторить сейчас» (ReviewPanel) на экране нет вовсе: F10 (сессия
+// повторения) ещё не реализован, а кнопка, которая ничего не делает, хуже
+// отсутствующей кнопки.
 export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
+  const now = useMemo(() => new Date(), []);
+
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
+  const showWidgets = (cardCount ?? 0) >= HOME_WIDGETS_REVEAL_THRESHOLD;
+
   const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
   const { data: profile } = useQuery(loadCurrentUserProfile, { tables: ['user_profile'] });
   const name = profile?.name;
+  // Онбординг (F1) всегда пишет user_profile перед тем, как главный экран
+  // становится доступен (App.tsx -> AppContent) — newPerDay уже есть; 10 —
+  // тот же дефолт, что и DEFAULT_DAILY_MINUTES в onboarding-logic.ts, на
+  // случай доли секунды до того, как useQuery отдаст первое значение.
+  const dailyGoal = profile?.newPerDay ?? 10;
+
+  const { data: stats } = useQuery(loadHomeStats, { tables: ['card', 'card_schedule'] });
+  const { data: cardDates } = useQuery(loadCardCreationDates, { tables: ['card'] });
+  const todayAdded = countCardsCreatedToday(cardDates ?? [], now);
+  const streakDays = computeStreakDays(cardDates ?? [], now);
+  const showStreak = streakDays >= STREAK_REVEAL_THRESHOLD;
 
   const today = useMemo(
-    () =>
-      new Date().toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' }),
-    []
+    () => now.toLocaleDateString('ru-RU', { weekday: 'long', day: 'numeric', month: 'long' }),
+    [now]
   );
 
   return (
@@ -118,59 +107,64 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
               {name ? t('header.greeting', { name }) : t('header.greetingNoName')}
             </Text>
           </View>
-          <Chip label={t('header.streak', { count: DEMO.streak })} variant="streak" />
+          {showStreak ? (
+            <Chip label={t('header.streak', { count: streakDays })} variant="streak" />
+          ) : null}
         </View>
 
         <WordAddPanel />
 
         {hasCards ? (
           <>
-            {DEMO.due > 0 ? (
-              <ReviewPanel
-                due={DEMO.due}
-                minutes={Math.max(1, Math.round(DEMO.due * 0.25))}
-                onStart={() => {
-                  /* F10 */
-                }}
-              />
-            ) : null}
+            {showWidgets ? (
+              <>
+                <ProgressBar
+                  title={t('goal.title')}
+                  meta={t('goal.meta', { count: dailyGoal, done: todayAdded })}
+                  value={todayAdded}
+                  max={dailyGoal}
+                />
 
-            <ProgressBar
-              title={t('goal.title')}
-              meta={t('goal.meta', { count: DEMO.goal, done: DEMO.done })}
-              value={DEMO.done}
-              max={DEMO.goal}
-            />
-
-            <View style={{ flexDirection: 'row', gap: space[2] }}>
-              {[
-                { n: DEMO.learned, label: t('stats.learned', { count: DEMO.learned }) },
-                { n: DEMO.queued, label: t('stats.queued', { count: DEMO.queued }) },
-              ].map((s) => (
-                <View
-                  key={s.label}
-                  style={{
-                    flex: 1,
-                    backgroundColor: colors.surfaceSunken,
-                    borderRadius: radius.md,
-                    paddingVertical: 14,
-                    paddingHorizontal: space[4],
-                    gap: 2,
-                  }}
-                >
-                  <Text
-                    style={[type.displayL, { fontSize: 24, lineHeight: 30, color: colors.ink }]}
-                  >
-                    {s.n}
-                  </Text>
-                  <Text
-                    style={[type.caption, { fontSize: 13, lineHeight: 18, color: colors.inkMuted }]}
-                  >
-                    {s.label}
-                  </Text>
+                <View style={{ flexDirection: 'row', gap: space[2] }}>
+                  {[
+                    {
+                      n: stats?.learned ?? 0,
+                      label: t('stats.learned', { count: stats?.learned ?? 0 }),
+                    },
+                    {
+                      n: stats?.queued ?? 0,
+                      label: t('stats.queued', { count: stats?.queued ?? 0 }),
+                    },
+                  ].map((s) => (
+                    <View
+                      key={s.label}
+                      style={{
+                        flex: 1,
+                        backgroundColor: colors.surfaceSunken,
+                        borderRadius: radius.md,
+                        paddingVertical: 14,
+                        paddingHorizontal: space[4],
+                        gap: 2,
+                      }}
+                    >
+                      <Text
+                        style={[type.displayL, { fontSize: 24, lineHeight: 30, color: colors.ink }]}
+                      >
+                        {s.n}
+                      </Text>
+                      <Text
+                        style={[
+                          type.caption,
+                          { fontSize: 13, lineHeight: 18, color: colors.inkMuted },
+                        ]}
+                      >
+                        {s.label}
+                      </Text>
+                    </View>
+                  ))}
                 </View>
-              ))}
-            </View>
+              </>
+            ) : null}
 
             <View style={{ gap: space[2] }}>
               <Text
