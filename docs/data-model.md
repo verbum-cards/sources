@@ -25,11 +25,11 @@
 | Сущность | Ключевые поля |
 |---|---|
 | `user_profile` | user_id, native_lang, target_lang, level, goals[], daily_minutes, new_per_day, waitlist_langs[], updated_at |
-| `card` | id (UUID v7), user_id, item_type, item_id, source_deck_id, overrides (личные правки полей), state (new / learning / review / suspended / known), created_at, updated_at, deleted_at |
+| `card` | id (UUID v7), user_id, item_type, item_id, source_deck_id, overrides (личные правки полей), status (active / suspended / known — намерение пользователя), merged_into_card_id (при слиянии дублей), created_at, updated_at, deleted_at |
 | `review_log` | id, card_id, user_id, rating, reviewed_at, elapsed_ms, device_id, tz_offset_min — **только добавление** |
 | `user_deck` | user_id, deck_id, added_at, fast_mode, updated_at, deleted_at |
 
-Состояние FSRS карточки (stability, difficulty, due) — производное: пересчитывается из `review_log`, хранится на устройстве как кеш.
+Состояние FSRS карточки (stability, difficulty, due) — производное: пересчитывается из `review_log`, хранится на устройстве как кеш. Фаза обучения (new / learning / review) — тоже производное от кеша и журнала; синхронизируется только намерение пользователя `card.status` (ADR-14). Инвариант: одна живая карточка на `(user_id, item_type, item_id)`; при слиянии дублей проигравшая помечается `deleted_at` и `merged_into_card_id`, журнал повторений не переписывается — правило в `docs/sync-protocol.md`.
 
 ## Уровни CEFR
 

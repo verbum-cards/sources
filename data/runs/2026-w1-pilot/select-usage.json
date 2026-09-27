@@ -1,0 +1,22 @@
+[
+  {
+    "promptTokens": 133,
+    "completionTokens": 515
+  },
+  {
+    "promptTokens": 133,
+    "completionTokens": 525
+  },
+  {
+    "promptTokens": 133,
+    "completionTokens": 633
+  },
+  {
+    "promptTokens": 134,
+    "completionTokens": 16384
+  },
+  {
+    "promptTokens": 134,
+    "completionTokens": 683
+  }
+]

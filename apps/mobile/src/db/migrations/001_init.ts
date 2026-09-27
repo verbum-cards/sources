@@ -37,8 +37,10 @@ export const m001: Migration = {
       deleted_at TEXT,
       field_meta TEXT
     )`,
-    // Сознательно без UNIQUE по (item_type, item_id): одно значение можно добавить
-    // несколько раз (например, из разных колод).
+    // Без UNIQUE намеренно: инвариант «одна живая карточка на (user_id, item_type,
+    // item_id)» держится правилом слияния дублей (docs/sync-protocol.md → «Конфликты
+    // → Дубли карточек»), а не индексом — иначе входящая операция с другого
+    // устройства не применилась бы. Миграция 002 переименовывает state в status.
     `CREATE INDEX idx_card_user_item ON card (user_id, item_type, item_id)`,
     `CREATE INDEX idx_card_user_created ON card (user_id, created_at DESC) WHERE deleted_at IS NULL`,
 

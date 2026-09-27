@@ -1,0 +1,20 @@
+[
+  {
+    "senseId": "9d385134-1306-4ef8-b5cb-b92f8d864493",
+    "lemma": "how",
+    "pos": "adverb",
+    "reason": "duplicate_sense"
+  },
+  {
+    "senseId": "2915981a-a7d8-457c-b79a-c024c19faed8",
+    "lemma": "how",
+    "pos": "adverb",
+    "reason": "duplicate_sense"
+  },
+  {
+    "senseId": "84e8bfa0-6934-46be-b46a-47ce7d4c4b6d",
+    "lemma": "how",
+    "pos": "adverb",
+    "reason": "duplicate_sense"
+  }
+]

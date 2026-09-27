@@ -17,14 +17,15 @@ table	app_meta	app_meta	CREATE TABLE app_meta (
       key TEXT PRIMARY KEY,
       value TEXT
     )
-table	card	card	CREATE TABLE card (
+table	card	card	CREATE TABLE "card" (
       id TEXT PRIMARY KEY,
       user_id TEXT NOT NULL,
       item_type TEXT NOT NULL CHECK (item_type IN ('sense', 'expression')),
       item_id TEXT NOT NULL,
       source_deck_id TEXT,
       overrides TEXT,
-      state TEXT NOT NULL CHECK (state IN ('new', 'learning', 'review', 'suspended', 'known')),
+      status TEXT NOT NULL CHECK (status IN ('active', 'suspended', 'known')),
+      merged_into_card_id TEXT,
       created_at TEXT NOT NULL,
       updated_at TEXT NOT NULL,
       deleted_at TEXT,

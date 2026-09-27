@@ -2,16 +2,17 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import common from './ru/common.json';
 import home from './ru/home.json';
+import fsrsDebug from './ru/fsrsDebug.json';
 
 // Язык интерфейса в бете один — русский, но все строки идут через i18n,
 // чтобы добавление второго языка не потребовало правок компонентов.
 void i18n.use(initReactI18next).init({
   lng: 'ru',
   fallbackLng: 'ru',
-  ns: ['common', 'home'],
+  ns: ['common', 'home', 'fsrsDebug'],
   defaultNS: 'common',
   resources: {
-    ru: { common, home },
+    ru: { common, home, fsrsDebug },
   },
   // Ресурсы подключены инлайн (resources), поэтому i18next инициализируется
   // синхронно и isInitialized становится true до первого рендера App.

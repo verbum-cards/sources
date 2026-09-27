@@ -1,0 +1,1919 @@
+[
+  {
+    "senseId": "c6e98f6d-3c6a-4f7d-8917-3d279ef1050f",
+    "lemma": "where",
+    "pos": "adverb",
+    "ipa": "/wɛr/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "directions",
+      "general"
+    ],
+    "ru": "где",
+    "example": "Where is the nearest bus stop?",
+    "highlight": [
+      0,
+      5
+    ],
+    "exampleRu": "Где ближайшая автобусная остановка?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "4c1612cf-7eae-4609-819b-86c341f776a7",
+    "lemma": "menu",
+    "pos": "noun",
+    "ipa": "/ˈmɛnjuː/",
+    "cefr": "A2",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "меню",
+    "example": "Can I see the menu, please?",
+    "highlight": [
+      14,
+      18
+    ],
+    "exampleRu": "Могу я увидеть меню, пожалуйста?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "9a1623ce-3078-4e71-b56d-aff10920610d",
+    "lemma": "menu",
+    "pos": "noun",
+    "ipa": "/ˈmɛnjuː/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "список блюд",
+    "example": "The menu has many delicious options.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "В меню много вкусных вариантов.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "afa79cda-d504-48d1-9d94-23ad76408783",
+    "lemma": "menu",
+    "pos": "noun",
+    "ipa": "/ˈmɛnjuː/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "выбор",
+    "example": "I love trying new dishes from the seasonal menu.",
+    "highlight": [
+      43,
+      47
+    ],
+    "exampleRu": "Мне нравится пробовать новые блюда из сезонного меню.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "5b598c6f-b1e7-48b7-847d-f37cedfd0e04",
+    "lemma": "menu",
+    "pos": "noun",
+    "ipa": "/ˈmɛnjuː/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "разнообразие",
+    "example": "The chef changes the menu regularly to keep it fresh.",
+    "highlight": [
+      21,
+      25
+    ],
+    "exampleRu": "Шеф-повар регулярно меняет меню, чтобы оно оставалось свежим.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "25d8d76b-9238-429c-8d45-08ba8ea41afd",
+    "lemma": "airport",
+    "pos": "noun",
+    "ipa": "/ˈɛrˌpɔrt/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "аэропорт",
+    "example": "I will meet you at the airport tomorrow.",
+    "highlight": [
+      23,
+      30
+    ],
+    "exampleRu": "Я встречу тебя в аэропорту завтра.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "fcc26145-73b3-4fb8-9f07-2d40a29953c6",
+    "lemma": "airport",
+    "pos": "noun",
+    "ipa": "/ˈɛrˌpɔrt/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "аэропорт",
+    "example": "The airport is very busy in the summer.",
+    "highlight": [
+      4,
+      11
+    ],
+    "exampleRu": "Аэропорт очень загружен летом.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "d0225322-df61-4d29-8a05-4c1876fe636a",
+    "lemma": "airport",
+    "pos": "noun",
+    "ipa": "/ˈɛrˌpɔrt/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "аэропорт",
+    "example": "She arrived at the airport two hours before her flight.",
+    "highlight": [
+      19,
+      26
+    ],
+    "exampleRu": "Она приехала в аэропорт за два часа до рейса.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "dedafbff-0001-4616-8124-5dc011f29dcd",
+    "lemma": "airport",
+    "pos": "noun",
+    "ipa": "/ˈɛrˌpɔrt/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "аэропорт",
+    "example": "The new airport terminal has many shops and restaurants.",
+    "highlight": [
+      8,
+      15
+    ],
+    "exampleRu": "Новый терминал аэропорта имеет множество магазинов и ресторанов.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "8fafe8a4-aca2-4241-bd40-e657a0377909",
+    "lemma": "table",
+    "pos": "noun",
+    "ipa": "/ˈteɪ.bəl/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "home",
+      "restaurant"
+    ],
+    "ru": "стол",
+    "example": "We eat dinner at the table every night.",
+    "highlight": [
+      21,
+      26
+    ],
+    "exampleRu": "Мы ужинаем за столом каждую ночь.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "09d5a47c-909b-497c-82ec-416dc2081dd0",
+    "lemma": "table",
+    "pos": "noun",
+    "ipa": "/ˈteɪ.bəl/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "home",
+      "shopping"
+    ],
+    "ru": "стол",
+    "example": "I bought a new table for my kitchen.",
+    "highlight": [
+      15,
+      20
+    ],
+    "exampleRu": "Я купил новый стол для своей кухни.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "d69b8abb-39b6-4c47-a1a4-98044386bd17",
+    "lemma": "table",
+    "pos": "noun",
+    "ipa": "/ˈteɪ.bəl/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "work",
+      "meetings"
+    ],
+    "ru": "таблица",
+    "example": "Please look at the table for the sales data.",
+    "highlight": [
+      19,
+      24
+    ],
+    "exampleRu": "Пожалуйста, посмотрите на таблицу с данными о продажах.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "02fab368-ae78-44ec-a1e2-609a67360b29",
+    "lemma": "table",
+    "pos": "noun",
+    "ipa": "/ˈteɪ.bəl/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "academic"
+    ],
+    "ru": "таблица",
+    "example": "The table shows the results of the experiment clearly.",
+    "highlight": [
+      4,
+      9
+    ],
+    "exampleRu": "Таблица ясно показывает результаты эксперимента.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "420770f8-79c1-4566-a1ab-4e810109db68",
+    "lemma": "hotel",
+    "pos": "noun",
+    "ipa": "/hoʊˈtɛl/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "travel",
+      "hotel"
+    ],
+    "ru": "гостиница",
+    "example": "I need to book a hotel for my trip.",
+    "highlight": [
+      17,
+      22
+    ],
+    "exampleRu": "Мне нужно забронировать гостиницу для поездки.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "bc1176a7-a4a1-49b5-97cc-9a9f2757573b",
+    "lemma": "hotel",
+    "pos": "noun",
+    "ipa": "/hoʊˈtɛl/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "hotel"
+    ],
+    "ru": "гостиница",
+    "example": "The hotel has a swimming pool and a restaurant.",
+    "highlight": [
+      4,
+      9
+    ],
+    "exampleRu": "В гостинице есть бассейн и ресторан.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "ea38a136-12a3-47dc-a9a0-3a6e407e8403",
+    "lemma": "hotel",
+    "pos": "noun",
+    "ipa": "/hoʊˈtɛl/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "hotel"
+    ],
+    "ru": "гостиница",
+    "example": "We stayed at a nice hotel near the beach.",
+    "highlight": [
+      20,
+      25
+    ],
+    "exampleRu": "Мы остановились в хорошей гостинице рядом с пляжем.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "dd8dd898-fd8f-4448-8339-577bbcffb364",
+    "lemma": "hotel",
+    "pos": "noun",
+    "ipa": "/hoʊˈtɛl/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "hotel"
+    ],
+    "ru": "гостиница",
+    "example": "The hotel offers free Wi-Fi and breakfast included.",
+    "highlight": [
+      4,
+      9
+    ],
+    "exampleRu": "Гостиница предлагает бесплатный Wi-Fi и завтрак включен.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "e404d64f-dc68-4df7-ba54-f432fed306e3",
+    "lemma": "where",
+    "pos": "conjunction",
+    "ipa": "/wɛr/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "general"
+    ],
+    "ru": "где",
+    "example": "I don't know where he is now.",
+    "highlight": [
+      13,
+      18
+    ],
+    "exampleRu": "Я не знаю, где он сейчас.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "8f36728b-076c-437a-ba7e-6873cf2c49a0",
+    "lemma": "room",
+    "pos": "noun",
+    "ipa": "/ruːm/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "hotel",
+      "home"
+    ],
+    "ru": "комната",
+    "example": "I have a big room in my house.",
+    "highlight": [
+      13,
+      17
+    ],
+    "exampleRu": "У меня есть большая комната в доме.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "510ddf31-5454-4c6e-a611-55b22a7989b7",
+    "lemma": "room",
+    "pos": "noun",
+    "ipa": "/ruːm/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "hotel",
+      "home"
+    ],
+    "ru": "помещение",
+    "example": "We need a room for the meeting tomorrow.",
+    "highlight": [
+      10,
+      14
+    ],
+    "exampleRu": "Нам нужна комната для встречи завтра.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "51f5ba85-c919-497e-83fc-4e75c47ca504",
+    "lemma": "room",
+    "pos": "noun",
+    "ipa": "/ruːm/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "hotel",
+      "work"
+    ],
+    "ru": "место",
+    "example": "There is enough room for everyone at the table.",
+    "highlight": [
+      16,
+      20
+    ],
+    "exampleRu": "За столом достаточно места для всех.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "f2321eb6-455d-4eb8-b8dd-dd38172345ac",
+    "lemma": "room",
+    "pos": "noun",
+    "ipa": "/ruːm/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "пространство",
+    "example": "Make sure there is room for your luggage in the car.",
+    "highlight": [
+      19,
+      23
+    ],
+    "exampleRu": "Убедитесь, что в машине есть место для вашего багажа.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "477e7017-53d2-4a20-8682-47f815ca0d45",
+    "lemma": "room",
+    "pos": "verb",
+    "ipa": "/ruːm/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "hotel",
+      "general"
+    ],
+    "ru": "предоставлять место",
+    "example": "We need to room two more guests tonight.",
+    "highlight": [
+      11,
+      15
+    ],
+    "exampleRu": "Нам нужно разместить еще двух гостей сегодня ночью.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "39d33a08-6189-4a07-8f68-1377d42bef37",
+    "lemma": "ticket",
+    "pos": "noun",
+    "ipa": "/ˈtɪkɪt/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "transport",
+      "travel"
+    ],
+    "ru": "билет",
+    "example": "I need a ticket to London, please.",
+    "highlight": [
+      9,
+      15
+    ],
+    "exampleRu": "Мне нужен билет в Лондон, пожалуйста.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "63daa71d-740d-4c45-b289-b08c600507f1",
+    "lemma": "ticket",
+    "pos": "noun",
+    "ipa": "/ˈtɪkɪt/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "transport",
+      "travel"
+    ],
+    "ru": "билет на мероприятие",
+    "example": "She bought a ticket for the concert next week.",
+    "highlight": [
+      13,
+      19
+    ],
+    "exampleRu": "Она купила билет на концерт на следующей неделе.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "67df7917-1a65-425c-9fae-0569e8f0c3d0",
+    "lemma": "ticket",
+    "pos": "noun",
+    "ipa": "/ˈtɪkɪt/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "transport",
+      "travel"
+    ],
+    "ru": "штрафной билет",
+    "example": "He got a ticket for parking in the wrong place.",
+    "highlight": [
+      9,
+      15
+    ],
+    "exampleRu": "Он получил штрафной билет за парковку не в том месте.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "698779f5-08ba-48f1-af99-5bc26dea765f",
+    "lemma": "ticket",
+    "pos": "noun",
+    "ipa": "/ˈtɪkɪt/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "documents"
+    ],
+    "ru": "билет на поезд",
+    "example": "Make sure to keep your train ticket until the end of the journey.",
+    "highlight": [
+      29,
+      35
+    ],
+    "exampleRu": "Убедитесь, что вы держите билет на поезд до конца поездки.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "9d3024de-e951-481b-ade4-8c91d6c56060",
+    "lemma": "reservation",
+    "pos": "noun",
+    "ipa": "/ˌrɛzərˈveɪʃən/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "hotel",
+      "restaurant"
+    ],
+    "ru": "бронирование",
+    "example": "I made a reservation for dinner at the new restaurant.",
+    "highlight": [
+      9,
+      20
+    ],
+    "exampleRu": "Я сделал бронирование на ужин в новом ресторане.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "deb43db8-8845-48a3-aed5-8570b5d1de93",
+    "lemma": "reservation",
+    "pos": "noun",
+    "ipa": "/ˌrɛzərˈveɪʃən/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel"
+    ],
+    "ru": "резервирование",
+    "example": "She confirmed her reservation for the hotel online.",
+    "highlight": [
+      18,
+      29
+    ],
+    "exampleRu": "Она подтвердила свое резервирование в отеле онлайн.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "cc73afc8-b07f-4674-b605-e174010fabf8",
+    "lemma": "reservation",
+    "pos": "noun",
+    "ipa": "/ˌrɛzərˈveɪʃən/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "documents"
+    ],
+    "ru": "заказ",
+    "example": "The reservation process can be complicated for large groups.",
+    "highlight": [
+      4,
+      15
+    ],
+    "exampleRu": "Процесс заказа может быть сложным для больших групп.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "89a8e837-2c56-46c4-b76a-92c2e02d677f",
+    "lemma": "reservation",
+    "pos": "noun",
+    "ipa": "/ˌrɛzərˈveɪʃən/",
+    "cefr": "C2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "ограничение",
+    "example": "He expressed his reservation about the proposed changes.",
+    "highlight": [
+      17,
+      28
+    ],
+    "exampleRu": "Он выразил свое ограничение по поводу предложенных изменений.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "a5b23c31-974c-4020-aadf-b0421d44bf43",
+    "lemma": "key",
+    "pos": "adjective",
+    "ipa": "/kiː/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "general"
+    ],
+    "ru": "ключевой",
+    "example": "This is the key point of our discussion.",
+    "highlight": [
+      12,
+      15
+    ],
+    "exampleRu": "Это ключевой момент нашего обсуждения.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "fb7ef8bd-0388-4049-8479-507694671e3a",
+    "lemma": "waiter",
+    "pos": "noun",
+    "ipa": "/ˈweɪtə/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "официант",
+    "example": "The waiter brought our food quickly.",
+    "highlight": [
+      4,
+      10
+    ],
+    "exampleRu": "Официант быстро принёс нашу еду.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "8ddecbca-6361-40f7-ab54-1d121d35d8a4",
+    "lemma": "waiter",
+    "pos": "noun",
+    "ipa": "/ˈweɪtə/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "официант",
+    "example": "I asked the waiter for the bill.",
+    "highlight": [
+      12,
+      18
+    ],
+    "exampleRu": "Я попросил официанта принести счёт.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "72548b1b-b5d0-451c-b1a9-d2a83d2e7a76",
+    "lemma": "waiter",
+    "pos": "noun",
+    "ipa": "/ˈweɪtə/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "официант",
+    "example": "The waiter recommended a delicious dessert.",
+    "highlight": [
+      4,
+      10
+    ],
+    "exampleRu": "Официант порекомендовал вкусный десерт.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "3b56bd76-f0b2-4d1d-91e1-f23b7fa6c1fa",
+    "lemma": "waiter",
+    "pos": "noun",
+    "ipa": "/ˈweɪtə/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "restaurant"
+    ],
+    "ru": "официант",
+    "example": "The waiter was very polite and helpful during our dinner.",
+    "highlight": [
+      4,
+      10
+    ],
+    "exampleRu": "Официант был очень вежлив и полезен во время нашего ужина.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "1f123c17-5389-4f6a-b891-b50d9c458751",
+    "lemma": "passport",
+    "pos": "noun",
+    "ipa": "/ˈpæspɔːrt/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "travel",
+      "documents"
+    ],
+    "ru": "паспорт",
+    "example": "Don't forget to bring your passport when you travel abroad.",
+    "highlight": [
+      27,
+      35
+    ],
+    "exampleRu": "Не забудь взять свой паспорт, когда будешь путешествовать за границу.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "6a5094be-2f14-4b4f-a483-1b6957452383",
+    "lemma": "passport",
+    "pos": "noun",
+    "ipa": "/ˈpæspɔːrt/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "documents"
+    ],
+    "ru": "документ для поездки",
+    "example": "You need a valid passport to enter most countries.",
+    "highlight": [
+      17,
+      25
+    ],
+    "exampleRu": "Для въезда в большинство стран нужен действующий паспорт.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "e35d0fb7-c268-490f-85e1-134df7758d02",
+    "lemma": "passport",
+    "pos": "noun",
+    "ipa": "/ˈpæspɔːrt/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "documents"
+    ],
+    "ru": "идентификационный документ",
+    "example": "Her passport was about to expire, so she renewed it before her trip.",
+    "highlight": [
+      4,
+      12
+    ],
+    "exampleRu": "Её паспорт вот-вот истечёт, поэтому она обновила его перед поездкой.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "aea9f657-2e57-40e9-9f6b-ef68a9112ec4",
+    "lemma": "passport",
+    "pos": "noun",
+    "ipa": "/ˈpæspɔːrt/",
+    "cefr": "C2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "documents"
+    ],
+    "ru": "государственный документ",
+    "example": "A passport is an essential document for international travel.",
+    "highlight": [
+      2,
+      10
+    ],
+    "exampleRu": "Паспорт — это необходимый документ для международных поездок.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "35a14c51-59b0-4fc9-aa24-bf51f5ca8ac5",
+    "lemma": "how",
+    "pos": "adverb",
+    "ipa": "/haʊ/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "smalltalk",
+      "general"
+    ],
+    "ru": "как",
+    "example": "How do you get to the station?",
+    "highlight": [
+      0,
+      3
+    ],
+    "exampleRu": "Как добраться до станции?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "9267a36f-97dd-4dbd-b908-22f7738b3b7b",
+    "lemma": "how",
+    "pos": "adverb",
+    "ipa": "/haʊ/",
+    "cefr": "A1",
+    "cefrSource": "llm",
+    "tags": [
+      "smalltalk",
+      "general"
+    ],
+    "ru": "как",
+    "example": "How are you today?",
+    "highlight": [
+      0,
+      3
+    ],
+    "exampleRu": "Как ты сегодня?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "d59870ac-9f38-4ef6-8da1-7c77985e05cb",
+    "lemma": "how",
+    "pos": "adverb",
+    "ipa": "/haʊ/",
+    "cefr": "A1",
+    "cefrSource": "llm",
+    "tags": [
+      "smalltalk",
+      "general"
+    ],
+    "ru": "как",
+    "example": "How is the weather?",
+    "highlight": [
+      0,
+      3
+    ],
+    "exampleRu": "Как погода?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "4bd1bd5c-d082-42bc-bf00-392df17e7448",
+    "lemma": "how",
+    "pos": "adverb",
+    "ipa": "/haʊ/",
+    "cefr": "A1",
+    "cefrSource": "llm",
+    "tags": [
+      "smalltalk",
+      "general"
+    ],
+    "ru": "как",
+    "example": "How much does this cost?",
+    "highlight": [
+      0,
+      3
+    ],
+    "exampleRu": "Сколько это стоит?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "8ff68d47-57fd-4d46-b846-6817673568c1",
+    "lemma": "waitress",
+    "pos": "noun",
+    "ipa": "/ˈweɪ.trəs/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "restaurant",
+      "work"
+    ],
+    "ru": "официантка",
+    "example": "The waitress brought us our drinks quickly.",
+    "highlight": [
+      4,
+      12
+    ],
+    "exampleRu": "Официантка быстро принесла нам напитки.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "23dc326f-542c-4344-a586-c9e0ebb81d9b",
+    "lemma": "luggage",
+    "pos": "noun",
+    "ipa": "/ˈlʌɡɪdʒ/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "багаж",
+    "example": "I need to pick up my luggage from the carousel.",
+    "highlight": [
+      21,
+      28
+    ],
+    "exampleRu": "Мне нужно забрать свой багаж с карусели.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "ea3c9d87-c2a1-47f4-bf59-594b7fa5b131",
+    "lemma": "luggage",
+    "pos": "noun",
+    "ipa": "/ˈlʌɡɪdʒ/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "чемоданы",
+    "example": "Make sure your luggage is within the weight limit.",
+    "highlight": [
+      15,
+      22
+    ],
+    "exampleRu": "Убедитесь, что ваш багаж в пределах лимита по весу.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "98cee985-f811-4f2a-bf5c-6d2e244c1374",
+    "lemma": "luggage",
+    "pos": "noun",
+    "ipa": "/ˈlʌɡɪdʒ/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "сумки",
+    "example": "Her luggage was lost during the flight, causing a lot of stress.",
+    "highlight": [
+      4,
+      11
+    ],
+    "exampleRu": "Её сумки потерялись во время полета, что вызвало много стресса.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "11f387c1-241d-4508-bd0a-5057f80fae96",
+    "lemma": "luggage",
+    "pos": "noun",
+    "ipa": "/ˈlʌɡɪdʒ/",
+    "cefr": "C2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "груз",
+    "example": "Traveling with excess luggage can be quite expensive.",
+    "highlight": [
+      22,
+      29
+    ],
+    "exampleRu": "Путешествие с избыточным грузом может быть довольно дорогим.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "ef73bb72-6e61-4538-ab62-8e20e8a2acc0",
+    "lemma": "left",
+    "pos": "adjective",
+    "ipa": "/lɛft/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "directions"
+    ],
+    "ru": "левый",
+    "example": "Turn left at the corner of the street.",
+    "highlight": [
+      5,
+      9
+    ],
+    "exampleRu": "Поверните налево на углу улицы.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "5c622f10-228f-4660-bc73-7ff43ded8dcc",
+    "lemma": "left",
+    "pos": "adjective",
+    "ipa": "/lɛft/",
+    "cefr": "A1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "оставшийся",
+    "example": "I have only left money in my wallet.",
+    "highlight": [
+      12,
+      16
+    ],
+    "exampleRu": "У меня остались только деньги в кошельке.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "38e03565-c80f-4067-a041-991a7715ca3b",
+    "lemma": "left",
+    "pos": "adjective",
+    "ipa": "/lɛft/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "покинутый",
+    "example": "The left book is mine, not yours.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "Левая книга моя, а не твоя.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "ae87c61f-b0bd-47bb-96fe-b9f9fcef7e3d",
+    "lemma": "left",
+    "pos": "adjective",
+    "ipa": "/lɛft/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "прошедший",
+    "example": "He left his job last month.",
+    "highlight": [
+      3,
+      7
+    ],
+    "exampleRu": "Он ушел с работы в прошлом месяце.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "068aaef0-b09f-4134-9466-7fbc816d927c",
+    "lemma": "key",
+    "pos": "noun",
+    "ipa": "/kiː/",
+    "cefr": "A1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "home",
+      "general"
+    ],
+    "ru": "ключ",
+    "example": "I lost my key at home yesterday.",
+    "highlight": [
+      10,
+      13
+    ],
+    "exampleRu": "Вчера я потерял ключ дома.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "3a06661a-d99b-44dd-918a-6ab56e87a422",
+    "lemma": "key",
+    "pos": "noun",
+    "ipa": "/kiː/",
+    "cefr": "A2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "ключевой элемент",
+    "example": "This is the key to solving the problem.",
+    "highlight": [
+      12,
+      15
+    ],
+    "exampleRu": "Это ключ к решению проблемы.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "7c60edbb-13b3-438d-b678-6e23df97ed56",
+    "lemma": "key",
+    "pos": "noun",
+    "ipa": "/kiː/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "ключ к чему-либо",
+    "example": "Communication is the key to a good relationship.",
+    "highlight": [
+      21,
+      24
+    ],
+    "exampleRu": "Общение — это ключ к хорошим отношениям.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "13e759b5-5f0c-4125-b1bd-9d51bc3d7410",
+    "lemma": "key",
+    "pos": "noun",
+    "ipa": "/kiː/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "ключевой",
+    "example": "He played a key role in the project.",
+    "highlight": [
+      12,
+      15
+    ],
+    "exampleRu": "Он сыграл ключевую роль в проекте.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "61afe3df-ef78-495f-9b20-f74bb77fb0b6",
+    "lemma": "baggage",
+    "pos": "noun",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "travel",
+      "airport"
+    ],
+    "ru": "багаж",
+    "example": "I need to collect my baggage from the carousel.",
+    "highlight": [
+      21,
+      28
+    ],
+    "exampleRu": "Мне нужно забрать свой багаж с карусели.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "20d41a52-b5da-42eb-99d5-1c628937e49a",
+    "lemma": "baggage",
+    "pos": "noun",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "travel"
+    ],
+    "ru": "груз",
+    "example": "Make sure your baggage is within the weight limit.",
+    "highlight": [
+      15,
+      22
+    ],
+    "exampleRu": "Убедитесь, что ваш груз в пределах лимита веса.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "e1dea578-598d-409d-8219-558c1ab79e7e",
+    "lemma": "baggage",
+    "pos": "noun",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "психологический груз",
+    "example": "He carries a lot of emotional baggage from his past.",
+    "highlight": [
+      30,
+      37
+    ],
+    "exampleRu": "Он несет большой психологический груз из своего прошлого.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "0bfefe0b-4a81-450b-b7bd-0a382f2ee52d",
+    "lemma": "baggage",
+    "pos": "noun",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "cefr": "C2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "тяжесть",
+    "example": "Her baggage of regrets was hard to let go.",
+    "highlight": [
+      4,
+      11
+    ],
+    "exampleRu": "Ей было трудно отпустить тяжесть сожалений.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "5126f55d-226b-4f65-b62d-24093bfa4de6",
+    "lemma": "left",
+    "pos": "adverb",
+    "ipa": "lɛft",
+    "cefr": "A2",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "directions"
+    ],
+    "ru": "налево",
+    "example": "Turn left at the traffic light.",
+    "highlight": [
+      5,
+      9
+    ],
+    "exampleRu": "Поверните налево на светофоре.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "e03b7ad0-3522-47e4-9d6a-a86596904896",
+    "lemma": "left",
+    "pos": "adverb",
+    "ipa": "lɛft",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "directions"
+    ],
+    "ru": "влево",
+    "example": "She walked left towards the park.",
+    "highlight": [
+      11,
+      15
+    ],
+    "exampleRu": "Она пошла влево к парку.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "b63b9b32-b26f-4d39-85fb-0bfee50094b0",
+    "lemma": "left",
+    "pos": "adverb",
+    "ipa": "lɛft",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "directions"
+    ],
+    "ru": "в сторону",
+    "example": "He looked left and saw the store.",
+    "highlight": [
+      10,
+      14
+    ],
+    "exampleRu": "Он посмотрел влево и увидел магазин.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "924ef529-f38e-4ec6-a62a-0dd34b2f7088",
+    "lemma": "left",
+    "pos": "adverb",
+    "ipa": "lɛft",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "оставшийся",
+    "example": "There are only a few tickets left.",
+    "highlight": [
+      29,
+      33
+    ],
+    "exampleRu": "Осталось всего несколько билетов.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "84d7d752-db07-4bac-adcd-a2878c3f2021",
+    "lemma": "bill",
+    "pos": "noun",
+    "ipa": "bɪl",
+    "cefr": "A2",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "restaurant",
+      "money"
+    ],
+    "ru": "счет",
+    "example": "Can I have the bill, please?",
+    "highlight": [
+      15,
+      19
+    ],
+    "exampleRu": "Можно мне счет, пожалуйста?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "94ca7f00-da22-4ffe-bd1c-4ea799e00fd5",
+    "lemma": "bill",
+    "pos": "noun",
+    "ipa": "bɪl",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "money"
+    ],
+    "ru": "законопроект",
+    "example": "The government passed a new bill last week.",
+    "highlight": [
+      28,
+      32
+    ],
+    "exampleRu": "Правительство приняло новый законопроект на прошлой неделе.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "4d0fd885-e361-4120-837c-347451e55fbf",
+    "lemma": "bill",
+    "pos": "noun",
+    "ipa": "bɪl",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "money"
+    ],
+    "ru": "платеж",
+    "example": "I need to pay my electricity bill today.",
+    "highlight": [
+      29,
+      33
+    ],
+    "exampleRu": "Мне нужно оплатить счет за электричество сегодня.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "f6361be2-32fc-4ad2-8c41-d52f42cdb86e",
+    "lemma": "bill",
+    "pos": "noun",
+    "ipa": "bɪl",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "долг",
+    "example": "He received a bill for the services rendered.",
+    "highlight": [
+      14,
+      18
+    ],
+    "exampleRu": "Он получил счет за оказанные услуги.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "66377444-8dfc-42de-8f30-b34d97e74301",
+    "lemma": "reception",
+    "pos": "noun",
+    "ipa": "/rɪˈsɛpʃən/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "hotel",
+      "smalltalk"
+    ],
+    "ru": "прием, ресепшн",
+    "example": "I will meet you at the reception of the hotel.",
+    "highlight": [
+      23,
+      32
+    ],
+    "exampleRu": "Я встречу тебя на ресепшене отеля.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "86957326-2608-403b-912e-260337e2cfb0",
+    "lemma": "reception",
+    "pos": "noun",
+    "ipa": "/rɪˈsɛpʃən/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "work",
+      "meetings"
+    ],
+    "ru": "встреча, прием",
+    "example": "The reception for the new employees was very welcoming.",
+    "highlight": [
+      4,
+      13
+    ],
+    "exampleRu": "Прием для новых сотрудников был очень дружелюбным.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "358054de-4432-42f4-b6c0-127aa30eb598",
+    "lemma": "reception",
+    "pos": "noun",
+    "ipa": "/rɪˈsɛpʃən/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "general",
+      "feelings"
+    ],
+    "ru": "восприятие",
+    "example": "The reception of her speech was overwhelmingly positive.",
+    "highlight": [
+      4,
+      13
+    ],
+    "exampleRu": "Восприятие ее речи было исключительно положительным.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "faf5e4af-5f87-400d-8225-e61a2c97250c",
+    "lemma": "reception",
+    "pos": "noun",
+    "ipa": "/rɪˈsɛpʃən/",
+    "cefr": "C2",
+    "cefrSource": "llm",
+    "tags": [
+      "academic",
+      "media"
+    ],
+    "ru": "реакция",
+    "example": "The reception of the film by critics was mixed.",
+    "highlight": [
+      4,
+      13
+    ],
+    "exampleRu": "Реакция критиков на фильм была смешанной.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "0c3586cd-90ba-4873-86c0-823f4418be6e",
+    "lemma": "gate",
+    "pos": "noun",
+    "ipa": "/ɡeɪt/",
+    "cefr": "A2",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "airport",
+      "transport"
+    ],
+    "ru": "ворота",
+    "example": "The gate is on your left side.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "Ворота находятся слева от вас.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "4727a6bd-8674-472d-a137-36a7616b8814",
+    "lemma": "gate",
+    "pos": "noun",
+    "ipa": "/ɡeɪt/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "airport",
+      "transport"
+    ],
+    "ru": "выход",
+    "example": "We need to find our gate before boarding.",
+    "highlight": [
+      20,
+      24
+    ],
+    "exampleRu": "Нам нужно найти наш выход перед посадкой.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "19170b67-cd2d-4415-8813-0a1e685b54a0",
+    "lemma": "gate",
+    "pos": "noun",
+    "ipa": "/ɡeɪt/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "airport",
+      "transport"
+    ],
+    "ru": "переправа",
+    "example": "The gate opens two hours before the flight.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "Ворота открываются за два часа до рейса.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "092a7c76-ed69-430f-9c06-a7d5401af93f",
+    "lemma": "gate",
+    "pos": "noun",
+    "ipa": "/ɡeɪt/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "airport",
+      "transport"
+    ],
+    "ru": "контроль",
+    "example": "Passengers must show their tickets at the gate.",
+    "highlight": [
+      42,
+      46
+    ],
+    "exampleRu": "Пассажиры должны показать свои билеты на контроле.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "98f1a681-6c0c-4e57-ace3-f6b7103a7377",
+    "lemma": "left",
+    "pos": "noun",
+    "ipa": "lɛft",
+    "cefr": "A2",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "general"
+    ],
+    "ru": "лево",
+    "example": "Turn left at the traffic light.",
+    "highlight": [
+      5,
+      9
+    ],
+    "exampleRu": "Поверните налево на светофоре.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "f025fd19-89a7-411d-8fea-774af372ab78",
+    "lemma": "left",
+    "pos": "noun",
+    "ipa": "lɛft",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "левый",
+    "example": "The left side of the street is busy.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "Левая сторона улицы оживлённая.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "c87f5083-d617-4024-9bfa-568c88da65b8",
+    "lemma": "left",
+    "pos": "noun",
+    "ipa": "lɛft",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "остававшееся",
+    "example": "There is little left to do before the deadline.",
+    "highlight": [
+      16,
+      20
+    ],
+    "exampleRu": "Осталось немного сделать до крайнего срока.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "79444ce5-c253-4ab5-b52b-bca6ebe8ee57",
+    "lemma": "left",
+    "pos": "noun",
+    "ipa": "lɛft",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "general"
+    ],
+    "ru": "осталось",
+    "example": "Only a few left from the original group.",
+    "highlight": [
+      11,
+      15
+    ],
+    "exampleRu": "Только несколько осталось из оригинальной группы.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "06f51da3-a2d5-4645-a1b0-75144ef9f183",
+    "lemma": "bill",
+    "pos": "verb",
+    "ipa": "/bɪl/",
+    "cefr": "B1",
+    "cefrSource": "cefr-j",
+    "tags": [
+      "money",
+      "restaurant"
+    ],
+    "ru": "выставлять счет",
+    "example": "Could you bill me for the meal we had last night?",
+    "highlight": [
+      10,
+      14
+    ],
+    "exampleRu": "Не могли бы вы выставить мне счет за ужин, который мы ели прошлой ночью?",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "a038cb62-8346-42a6-a7d3-8fb0771528ee",
+    "lemma": "bill",
+    "pos": "verb",
+    "ipa": "/bɪl/",
+    "cefr": "B1",
+    "cefrSource": "llm",
+    "tags": [
+      "work",
+      "documents"
+    ],
+    "ru": "выставлять счет",
+    "example": "The company will bill you for the services provided.",
+    "highlight": [
+      17,
+      21
+    ],
+    "exampleRu": "Компания выставит вам счет за предоставленные услуги.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "b0b9d772-dc9f-44f9-8558-032e7763c758",
+    "lemma": "bill",
+    "pos": "verb",
+    "ipa": "/bɪl/",
+    "cefr": "B2",
+    "cefrSource": "llm",
+    "tags": [
+      "work",
+      "meetings"
+    ],
+    "ru": "представлять на рассмотрение",
+    "example": "They plan to bill the new proposal at the next meeting.",
+    "highlight": [
+      13,
+      17
+    ],
+    "exampleRu": "Они планируют представить новое предложение на следующей встрече.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  },
+  {
+    "senseId": "ff9dbc55-f6da-4c5a-b28b-5ff8820d55ec",
+    "lemma": "bill",
+    "pos": "verb",
+    "ipa": "/bɪl/",
+    "cefr": "C1",
+    "cefrSource": "llm",
+    "tags": [
+      "academic"
+    ],
+    "ru": "законодательный акт",
+    "example": "The bill was passed after a long debate in parliament.",
+    "highlight": [
+      4,
+      8
+    ],
+    "exampleRu": "Законопроект был принят после долгих дебатов в парламенте.",
+    "source": "llm",
+    "status": "unverified",
+    "model": "gpt-4o-mini",
+    "runId": "2026-w1-pilot"
+  }
+]

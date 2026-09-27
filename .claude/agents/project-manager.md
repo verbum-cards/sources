@@ -20,7 +20,7 @@ skills: triage-issue, weekly-report
 - `CLAUDE.md` — правила проекта;
 - `docs/product.md` — объём беты и что в неё не входит;
 - `docs/requirements-beta.md` — требования FR и критерии приёмки;
-- `docs/user_flows.md`, `docs/data-model.md`, `docs/sync-protocol.md`, `docs/design-system.md`;
+- `docs/flows/`, `docs/data-model.md`, `docs/sync-protocol.md`, `docs/design-system.md`;
 - `docs/plan.md` — план на 12 недель;
 - `docs/decisions.md` — принятые решения.
 
