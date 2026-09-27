@@ -1,30 +1,80 @@
 import './src/i18n';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
+import { Text, View } from 'react-native';
 import { useFonts, Unbounded_600SemiBold } from '@expo-google-fonts/unbounded';
 import { Onest_400Regular, Onest_500Medium, Onest_600SemiBold } from '@expo-google-fonts/onest';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useTranslation } from 'react-i18next';
 import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
 import { HomeScreen } from './src/screens/HomeScreen';
+import { FsrsDebugScreen } from './src/screens/FsrsDebugScreen';
+import { DbProvider } from './src/db/DbContext';
+import { openUserDatabase } from './src/db/open';
+import type { DbExecutor } from './src/db/executor';
+
+type Screen = 'home' | 'fsrs-debug';
 
 function Root() {
   const { scheme } = useTheme();
+  const [screen, setScreen] = useState<Screen>('home');
   return (
     <>
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
-      <HomeScreen />
+      {screen === 'home' ? (
+        <HomeScreen onOpenFsrsDebug={() => setScreen('fsrs-debug')} />
+      ) : (
+        <FsrsDebugScreen onBack={() => setScreen('home')} />
+      )}
     </>
   );
 }
 
+function DbErrorView() {
+  const { colors, space, type } = useTheme();
+  const { t } = useTranslation('common');
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: space[5], gap: space[2], backgroundColor: colors.paper }}>
+      <Text accessibilityRole="header" style={[type.title, { color: colors.ink, textAlign: 'center' }]}>
+        {t('dbError.title')}
+      </Text>
+      <Text style={[type.body, { color: colors.inkMuted, textAlign: 'center' }]}>{t('dbError.hint')}</Text>
+    </View>
+  );
+}
+
 export default function App() {
-  const [loaded] = useFonts({ Unbounded_600SemiBold, Onest_400Regular, Onest_500Medium, Onest_600SemiBold });
-  if (!loaded) return null;
+  const [fontsLoaded] = useFonts({ Unbounded_600SemiBold, Onest_400Regular, Onest_500Medium, Onest_600SemiBold });
+  const [db, setDb] = useState<DbExecutor | null>(null);
+  const [dbError, setDbError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    // Открывает cards-user.db и прогоняет миграции (см. src/db/open.ts).
+    openUserDatabase()
+      .then(({ executor }) => {
+        if (!cancelled) setDb(executor);
+      })
+      .catch((err: unknown) => {
+        if (!cancelled) setDbError(err instanceof Error ? err : new Error(String(err)));
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  if (!fontsLoaded || (!db && !dbError)) return null;
 
   return (
     <SafeAreaProvider>
       <ThemeProvider>
-        <Root />
+        {dbError ? (
+          <DbErrorView />
+        ) : (
+          <DbProvider db={db!}>
+            <Root />
+          </DbProvider>
+        )}
       </ThemeProvider>
     </SafeAreaProvider>
   );

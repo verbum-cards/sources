@@ -4,14 +4,15 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { DatabaseSync } from 'node:sqlite';
 import { getUserVersion, migrate } from '../../src/db/migrate';
-import { LATEST_VERSION } from '../../src/db/migrations';
+import { LATEST_VERSION, migrations } from '../../src/db/migrations';
+import { m001 } from '../../src/db/migrations/001_init';
 import type { Migration } from '../../src/db/types';
 import { USER_DB_PRAGMAS } from '../../src/db/pragmas';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 import { dumpSchema, formatSchemaDump } from '../support/schema-dump';
 import { tempDbPath } from '../support/tmp-db';
 
-const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v1.txt');
+const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v2.txt');
 
 test('чистая установка: user_version 0 -> LATEST, схема совпадает со снимком', async () => {
   const db = new DatabaseSync(':memory:');
@@ -42,11 +43,10 @@ test('идемпотентность: повторный migrate на актуа
   assert.equal(formatSchemaDump(dumpSchema(db)), before);
 });
 
-test('обновление: база версии N-1 с данными -> миграции применяются, данные сохраняются', async () => {
-  // Синтетический двухшаговый список миграций — проверяет сам механизм upgrade
-  // (он не зависит от количества реальных миграций приложения). На сегодня в
-  // приложении есть только m001, поэтому "апгрейд" реальной схемы описывается
-  // тривиально тестом идемпотентности выше; здесь проверяется общий путь.
+test('обновление (механизм): база версии N-1 с данными -> миграции применяются, данные сохраняются', async () => {
+  // Синтетический список — проверяет сам механизм upgrade независимо от того,
+  // что делают реальные миграции приложения (это отдельно проверяет тест
+  // "обновление 001 -> 002" ниже, на настоящей второй миграции).
   const testMigrations: Migration[] = [
     { version: 1, statements: ["CREATE TABLE widget (id TEXT PRIMARY KEY, name TEXT NOT NULL)"] },
     { version: 2, statements: ["ALTER TABLE widget ADD COLUMN note TEXT"] },
@@ -65,6 +65,73 @@ test('обновление: база версии N-1 с данными -> ми�
   assert.equal(await getUserVersion(executor), 2);
   const row = await executor.get<{ id: string; name: string; note: string | null }>('SELECT * FROM widget WHERE id = ?', ['w1']);
   assert.deepEqual({ ...row }, { id: 'w1', name: 'Hello', note: null });
+});
+
+test('обновление 001 -> 002: state -> status, merged_into_card_id, FK-дети сохранены', async () => {
+  // Файловая база с реальными USER_DB_PRAGMAS (foreign_keys=ON) — именно этот
+  // сценарий закаскадировал бы card_content/card_schedule без disableForeignKeys.
+  const path = tempDbPath('cards-user-upgrade.db');
+  const db = new DatabaseSync(path);
+  const executor = createNodeSqliteExecutor(db);
+  for (const pragma of USER_DB_PRAGMAS) {
+    await executor.execRaw(pragma);
+  }
+
+  await migrate(executor, [m001]);
+  await executor.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c1', 'u1', 'sense', 'i1', 'review', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+  );
+  await executor.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c2', 'u1', 'sense', 'i2', 'suspended', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+  );
+  await executor.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c3', 'u1', 'sense', 'i3', 'known', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+  );
+  await executor.run(
+    'INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at) VALUES (?, ?, ?, ?, ?)',
+    ['c1', 'wander', 'бродить', 'pack', '2026-01-01T00:00:00.000Z'],
+  );
+  await executor.run('INSERT INTO card_schedule (card_id, due) VALUES (?, ?)', ['c1', '2026-01-02T00:00:00.000Z']);
+
+  await migrate(executor, migrations);
+
+  assert.equal(await getUserVersion(executor), LATEST_VERSION);
+
+  const rows = await executor.all<{ id: string; status: string; merged_into_card_id: string | null }>(
+    'SELECT id, status, merged_into_card_id FROM card ORDER BY id',
+  );
+  assert.deepEqual(
+    rows.map((r) => ({ ...r })),
+    [
+      { id: 'c1', status: 'active', merged_into_card_id: null }, // 'review' -> 'active'
+      { id: 'c2', status: 'suspended', merged_into_card_id: null },
+      { id: 'c3', status: 'known', merged_into_card_id: null },
+    ],
+  );
+
+  // Доказательство, что disableForeignKeys действительно защитил детей от каскада.
+  const content = await executor.all('SELECT * FROM card_content WHERE card_id = ?', ['c1']);
+  const schedule = await executor.all('SELECT * FROM card_schedule WHERE card_id = ?', ['c1']);
+  assert.equal(content.length, 1);
+  assert.equal(schedule.length, 1);
+
+  const fkCheck = await executor.all('PRAGMA foreign_key_check');
+  assert.equal(fkCheck.length, 0);
+
+  const fk = await executor.get<{ foreign_keys: number }>('PRAGMA foreign_keys');
+  assert.equal(fk?.foreign_keys, 1); // восстановлено после миграции
+
+  // ALTER TABLE ... RENAME TO card должен был сохранить FK-текст детей нетронутым.
+  const childDdl = await executor.all<{ name: string; sql: string }>(
+    "SELECT name, sql FROM sqlite_master WHERE name IN ('card_content', 'card_schedule')",
+  );
+  for (const child of childDdl) {
+    assert.match(child.sql, /REFERENCES card \(id\)/);
+    assert.doesNotMatch(child.sql, /card_new/);
+  }
 });
 
 test('ошибка миграции: rollback, user_version не меняется, частичных таблиц нет', async () => {
@@ -90,22 +157,22 @@ test('ошибка миграции: rollback, user_version не меняетс�
   assert.equal(tables.length, 0);
 });
 
-test('ограничения: CHECK по item_type/state/rating соблюдаются', async () => {
+test('ограничения: CHECK по item_type/status/rating соблюдаются', async () => {
   const db = new DatabaseSync(':memory:');
   const executor = createNodeSqliteExecutor(db);
   await migrate(executor);
 
   await assert.rejects(() =>
     executor.run(
-      'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      ['c1', 'u1', 'not-a-real-type', 'i1', 'new', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+      'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      ['c1', 'u1', 'not-a-real-type', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
     ),
   );
 
   await assert.rejects(() =>
     executor.run(
-      'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      ['c1', 'u1', 'sense', 'i1', 'not-a-real-state', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+      'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      ['c1', 'u1', 'sense', 'i1', 'not-a-real-status', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
     ),
   );
 
@@ -130,8 +197,8 @@ test('ограничения: foreign_keys включены, каскад чис
   assert.equal(fk?.foreign_keys, 1);
 
   await executor.run(
-    'INSERT INTO card (id, user_id, item_type, item_id, state, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    ['c1', 'u1', 'sense', 'i1', 'new', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c1', 'u1', 'sense', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z'],
   );
   await executor.run(
     'INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at) VALUES (?, ?, ?, ?, ?)',

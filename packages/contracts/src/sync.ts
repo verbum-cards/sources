@@ -1,9 +1,14 @@
-// Синхронизация по журналу операций (docs/sync-protocol.md).
-// Найденные противоречия протокола (entity_id для user_profile/user_deck,
-// kind=delete для review_log, deck.type=user и т.п.) — предмет T1.5, не этого файла.
+// Синхронизация по журналу операций (docs/sync-protocol.md, согласовано ADR-14).
+// Найденные противоречия протокола, ушедшие в отдельные задачи, здесь не решаются.
 import { z } from 'zod';
 import { IsoDateSchema, UuidSchema } from './content';
-import { CardPatchSchema, ReviewLogPayloadSchema, UserDeckPatchSchema, UserProfilePatchSchema } from './user';
+import {
+  CardCreateSchema,
+  CardPatchSchema,
+  ReviewLogPayloadSchema,
+  UserDeckPatchSchema,
+  UserProfilePatchSchema,
+} from './user';
 
 export const SYNC_SCHEMA_VERSION = 1;
 
@@ -12,12 +17,17 @@ export type SyncEntity = z.infer<typeof SyncEntitySchema>;
 
 // Метаданные «последняя правка по полю» — для разрешения конфликтов last-write-wins
 // на уровне поля, а не всей записи. Ключи для личных правок карточки — плоские:
-// overrides.translation, overrides.example, overrides.note.
+// overrides.translation, overrides.example, overrides.note. Это не поле XSchema —
+// см. CardStored/UserProfileStored/UserDeckStored в user.ts.
 export const FieldRevisionsSchema = z.record(z.string(), z.object({ ts: IsoDateSchema, deviceId: z.string() }));
 export type FieldRevisions = z.infer<typeof FieldRevisionsSchema>;
 
-const SyncOpKindSchema = z.enum(['upsert', 'delete']);
-export type SyncOpKind = z.infer<typeof SyncOpKindSchema>;
+// Виды операций, по сущностям (docs/sync-protocol.md → «Виды операций»):
+//   card         — create | upsert | delete
+//   review_log   — create (журнал только добавляется)
+//   user_profile — create | upsert (профиль никогда не удаляется отдельной операцией)
+//   user_deck    — create | upsert | delete
+export type SyncOpKind = 'create' | 'upsert' | 'delete';
 
 const syncOpBase = {
   opId: UuidSchema,
@@ -28,26 +38,30 @@ const syncOpBase = {
   clientTs: IsoDateSchema,
 };
 
-export const CardSyncOpSchema = z.object({
-  ...syncOpBase,
-  entity: z.literal('card'),
-  kind: SyncOpKindSchema,
-  fields: CardPatchSchema.nullable(),
-});
+// card — единственная сущность, где форма fields зависит от kind: create несёт
+// полный CardCreate, upsert — частичный CardPatch, delete — null (удаление
+// ставится по kind, а не по полю; см. docs/sync-protocol.md → «Виды операций»).
+export const CardCreateOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('create'), fields: CardCreateSchema });
+export const CardUpsertOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('upsert'), fields: CardPatchSchema });
+export const CardDeleteOpSchema = z.object({ ...syncOpBase, entity: z.literal('card'), kind: z.literal('delete'), fields: z.null() });
+
+export const CardSyncOpSchema = z.discriminatedUnion('kind', [CardCreateOpSchema, CardUpsertOpSchema, CardDeleteOpSchema]);
 export type CardSyncOp = z.infer<typeof CardSyncOpSchema>;
 
 export const ReviewLogSyncOpSchema = z.object({
   ...syncOpBase,
   entity: z.literal('review_log'),
-  kind: z.literal('upsert'), // журнал только добавляется, delete недопустим
+  kind: z.literal('create'), // журнал только добавляется, upsert/delete недопустимы
   fields: ReviewLogPayloadSchema,
 });
 export type ReviewLogSyncOp = z.infer<typeof ReviewLogSyncOpSchema>;
 
+// У user_profile нет отдельного Create-типа: create и upsert несут один и тот же
+// UserProfilePatch (профиль — одна запись, «создание» это просто первый upsert).
 export const UserProfileSyncOpSchema = z.object({
   ...syncOpBase,
   entity: z.literal('user_profile'),
-  kind: z.literal('upsert'),
+  kind: z.enum(['create', 'upsert']),
   fields: UserProfilePatchSchema,
 });
 export type UserProfileSyncOp = z.infer<typeof UserProfileSyncOpSchema>;
@@ -55,13 +69,18 @@ export type UserProfileSyncOp = z.infer<typeof UserProfileSyncOpSchema>;
 export const UserDeckSyncOpSchema = z.object({
   ...syncOpBase,
   entity: z.literal('user_deck'),
-  kind: SyncOpKindSchema,
+  kind: z.enum(['create', 'upsert', 'delete']),
   fields: UserDeckPatchSchema.nullable(),
 });
 export type UserDeckSyncOp = z.infer<typeof UserDeckSyncOpSchema>;
 
-export const SyncOpTypedSchema = z.discriminatedUnion('entity', [
-  CardSyncOpSchema,
+// Плоское объединение (не discriminatedUnion): card сам по себе уже размечен по
+// kind и делит значение entity='card' на три варианта, поэтому единый дискриминант
+// entity здесь не был бы уникален по всем веткам.
+export const SyncOpTypedSchema = z.union([
+  CardCreateOpSchema,
+  CardUpsertOpSchema,
+  CardDeleteOpSchema,
   ReviewLogSyncOpSchema,
   UserProfileSyncOpSchema,
   UserDeckSyncOpSchema,
@@ -69,13 +88,33 @@ export const SyncOpTypedSchema = z.discriminatedUnion('entity', [
 export type SyncOpTyped = z.infer<typeof SyncOpTypedSchema>;
 
 // Рантайм-список разрешённых полей операции по сущности — выводится из тех же
-// схем, что и патчи, поэтому не может разойтись с типами.
+// схем, что и патчи, поэтому не может разойтись с типами. Для card — объединение
+// полей create и patch (upsert может прислать любое из них, кроме неизменяемых).
 export const SYNCED_FIELDS: Record<SyncEntity, readonly string[]> = {
-  card: Object.keys(CardPatchSchema.shape),
+  card: Array.from(new Set([...Object.keys(CardCreateSchema.shape), ...Object.keys(CardPatchSchema.shape)])),
   review_log: Object.keys(ReviewLogPayloadSchema.shape),
   user_profile: Object.keys(UserProfilePatchSchema.shape),
   user_deck: Object.keys(UserDeckPatchSchema.shape),
 };
+
+// Закрытый перечень причин отказа push (docs/sync-protocol.md → «Обмен → push»).
+export const SyncRejectReasonSchema = z.enum([
+  'invalid_payload',
+  'foreign_user',
+  'review_log_immutable',
+  'account_deleted',
+  'schema_too_new',
+  'clock_skew',
+  'rate_limited',
+]);
+export type SyncRejectReason = z.infer<typeof SyncRejectReasonSchema>;
+
+export const SyncRejectedOpSchema = z.object({
+  opId: UuidSchema,
+  reason: SyncRejectReasonSchema,
+  retryable: z.boolean(),
+});
+export type SyncRejectedOp = z.infer<typeof SyncRejectedOpSchema>;
 
 export const SyncPushRequestSchema = z.object({
   deviceId: z.string(),
@@ -83,9 +122,15 @@ export const SyncPushRequestSchema = z.object({
 });
 export type SyncPushRequest = z.infer<typeof SyncPushRequestSchema>;
 
+// Курсора в ответе push намеренно нет: двигать его может только pull — иначе
+// клиент перескочил бы операции других устройств с меньшим serverSeq и молча
+// потерял бы их (docs/sync-protocol.md → «Обмен → push»). serverSeqMax — только
+// диагностика.
 export const SyncPushResponseSchema = z.object({
   accepted: z.array(UuidSchema),
-  cursor: z.number(),
+  rejected: z.array(SyncRejectedOpSchema),
+  serverSchemaVersion: z.number(),
+  serverSeqMax: z.number(),
 });
 export type SyncPushResponse = z.infer<typeof SyncPushResponseSchema>;
 

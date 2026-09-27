@@ -17,7 +17,8 @@
     "react-i18next": "^17.0.15",
     "react-native": "0.86.3",
     "react-native-safe-area-context": "~5.7.0",
-    "react-native-svg": "15.15.4"
+    "react-native-svg": "15.15.4",
+    "ts-fsrs": "^5.4.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
@@ -30,7 +31,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
-    "test": "node --import tsx --test tests/db/*.test.ts"
+    "test": "node --import tsx --test tests/db/*.test.ts tests/scheduler/*.test.ts tests/screens/*.test.ts"
   },
   "private": true
 }

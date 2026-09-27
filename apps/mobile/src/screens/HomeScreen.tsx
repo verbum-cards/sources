@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTranslation } from 'react-i18next';
 import { Chip } from '../components/Chip';
@@ -26,7 +26,7 @@ const DEMO = {
   ],
 };
 
-export function HomeScreen() {
+export function HomeScreen({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const [query, setQuery] = useState('');
@@ -85,6 +85,18 @@ export function HomeScreen() {
             ))}
           </View>
         </View>
+
+        {onOpenFsrsDebug ? (
+          // Временный вход в дебаг-экран T1.7 — не часть финальной структуры табов.
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('debug.openFsrs')}
+            onPress={onOpenFsrsDebug}
+            style={{ minHeight: 44, justifyContent: 'center' }}
+          >
+            <Text style={[type.bodyS, { color: colors.inkMuted, textDecorationLine: 'underline' }]}>{t('debug.openFsrs')}</Text>
+          </Pressable>
+        ) : null}
       </ScrollView>
       <TabBar active={tab} onChange={setTab} />
     </SafeAreaView>

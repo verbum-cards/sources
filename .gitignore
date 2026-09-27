@@ -13,3 +13,12 @@ apps/mobile/dist/
 apps/mobile/web-build/
 apps/mobile/expo-env.d.ts
 *.tsbuildinfo
+
+# Секреты
+.env
+.env.local
+
+# Конвейер словаря (T1.6): сырые ответы LLM по каждому слову — кеш для ретраев,
+# не нужен в git; остальные артефакты прогона (selection.csv, senses*.json,
+# rejected.json, editor.csv, report.*) коммитятся для ревью.
+data/runs/*/raw/

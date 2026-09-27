@@ -7,7 +7,7 @@ description: "Конвейер словаря Cards — от открытых с
 
 ## Этапы
 
-1. **Исходный список** — `data/cefr_seed.csv` (headword, pos, cefr, source, license), собирается `data/build_seed.py` из CEFR-J (A1–B2) и Octanove (C1–C2).
+1. **Исходный список** — `data/cefr_seed.csv` (headword, pos, cefr, source, license), собирается `apps/api/scripts/dictionary/build-seed.ts` из CEFR-J (A1–B2) и Octanove (C1–C2, до сборки полного пакета не используется — см. `data/README.md`).
 2. **Разбор на значения через LLM** — формат `data/senses_sample.json`; промпт — `references/prompt.md`.
 3. **Валидация** — схема, длины, уровни, теги (см. ниже).
 4. **Выгрузка редактору** — CSV в порядке приоритета: слова колод и первой сессии → первые 3 000 по частотности → остальное.

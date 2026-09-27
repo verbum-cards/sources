@@ -1,12 +1,17 @@
 // Локальные типы cards-user.db. Общие с сервером/веб типы живут в @cards/contracts;
 // здесь — только то, что не синхронизируется (снимок контента, кеш FSRS, очередь,
 // локальные метаданные устройства) плюс snake_case-формы синхронизируемых таблиц.
-import type { CardState, ItemType, Rating, SyncEntity, SyncOpKind } from '@cards/contracts';
+import type { CardStatus, ItemType, Rating, SyncEntity, SyncOpKind } from '@cards/contracts';
 
 export interface Migration {
   version: number;
   // Чистый SQL, без вызовов expo API — так миграции можно прогонять в node:sqlite.
   statements: readonly string[];
+  // true — для миграций, перестраивающих таблицу, на которую ссылаются FK
+  // (пересоздание parent-таблицы: DROP TABLE её каскадирует детям при
+  // foreign_keys=ON). migrate.ts выключает FK на время миграции и проверяет
+  // целостность (PRAGMA foreign_key_check) сразу после включения обратно.
+  disableForeignKeys?: boolean;
 }
 
 // ---------- app_meta (локальное, ключ-значение) ----------
@@ -37,7 +42,7 @@ export interface UserProfileRow {
   new_per_day: number;
   waitlist_langs: string; // JSON string[]
   updated_at: string;
-  field_meta: string | null; // JSON FieldRevisions, локальное (не в контрактах)
+  field_meta: string | null; // JSON FieldRevisions (тип из @cards/contracts, но сама колонка — локальная)
 }
 
 // ---------- card ----------
@@ -49,11 +54,12 @@ export interface CardRow {
   item_id: string;
   source_deck_id: string | null;
   overrides: string | null; // JSON CardOverrides
-  state: CardState;
+  status: CardStatus;
+  merged_into_card_id: string | null;
   created_at: string;
   updated_at: string;
   deleted_at: string | null;
-  field_meta: string | null; // JSON FieldRevisions, локальное (не в контрактах)
+  field_meta: string | null; // JSON FieldRevisions
 }
 
 // ---------- card_content (локальный снимок, не синхронизируется) ----------
@@ -115,7 +121,7 @@ export interface UserDeckRow {
   fast_mode: 0 | 1;
   updated_at: string;
   deleted_at: string | null;
-  field_meta: string | null; // JSON FieldRevisions, локальное (не в контрактах)
+  field_meta: string | null; // JSON FieldRevisions (тип из @cards/contracts, но сама колонка — локальная)
 }
 
 // ---------- sync_op (локальная исходящая очередь) ----------

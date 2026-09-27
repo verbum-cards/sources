@@ -13,21 +13,43 @@ export async function getUserVersion(db: DbExecutor): Promise<number> {
 // Ошибка в любой миграции — rollback и явный throw: старт не продолжается
 // на сломанной схеме. Чистая установка (user_version = 0) и обновление —
 // один и тот же код: просто применяются все миграции по порядку с самого начала.
+//
+// migration.disableForeignKeys — для миграций, пересоздающих таблицу-родителя FK
+// (например card, на которую ссылаются card_content/card_schedule): PRAGMA
+// foreign_keys нельзя переключить внутри транзакции (SQLite делает это no-op),
+// а DROP TABLE родителя при foreign_keys=ON каскадом стёр бы детей. Поэтому FK
+// выключается до BEGIN, включается обратно после COMMIT, и сразу проверяется
+// PRAGMA foreign_key_check — если миграция оставила висячие ссылки, это ошибка.
 export async function migrate(db: DbExecutor, migrationList: readonly Migration[] = defaultMigrations): Promise<void> {
   const current = await getUserVersion(db);
   const pending = migrationList.filter((m) => m.version > current).slice().sort((a, b) => a.version - b.version);
 
   for (const migration of pending) {
-    await db.execRaw('BEGIN EXCLUSIVE');
+    if (migration.disableForeignKeys) {
+      await db.execRaw('PRAGMA foreign_keys = OFF');
+    }
     try {
-      for (const statement of migration.statements) {
-        await db.execRaw(statement);
+      await db.execRaw('BEGIN EXCLUSIVE');
+      try {
+        for (const statement of migration.statements) {
+          await db.execRaw(statement);
+        }
+        await db.execRaw(`PRAGMA user_version = ${migration.version}`);
+        await db.execRaw('COMMIT');
+      } catch (err) {
+        await db.execRaw('ROLLBACK');
+        throw err;
       }
-      await db.execRaw(`PRAGMA user_version = ${migration.version}`);
-      await db.execRaw('COMMIT');
-    } catch (err) {
-      await db.execRaw('ROLLBACK');
-      throw err;
+    } finally {
+      if (migration.disableForeignKeys) {
+        await db.execRaw('PRAGMA foreign_keys = ON');
+      }
+    }
+    if (migration.disableForeignKeys) {
+      const violations = await db.all('PRAGMA foreign_key_check');
+      if (violations.length > 0) {
+        throw new Error(`Миграция ${migration.version} нарушила ссылочную целостность: ${JSON.stringify(violations)}`);
+      }
     }
   }
 }

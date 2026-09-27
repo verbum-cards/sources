@@ -1,0 +1,29 @@
+{
+  "runId": "2026-w1-pilot-v2",
+  "model": "gpt-4o-mini",
+  "wordsIn": 25,
+  "sensesOut": 48,
+  "expressionsOut": 0,
+  "rejectedTotal": 3,
+  "rejectedByReason": {
+    "duplicate_sense": 3
+  },
+  "parseErrorsCount": 0,
+  "durationMs": 15494,
+  "totalTokens": {
+    "promptTokens": 16553,
+    "completionTokens": 3808
+  },
+  "costUsd": 0.004767749999999999,
+  "costPer1000WordsUsd": 0.19070999999999996,
+  "extrapolation": [
+    {
+      "words": 5000,
+      "estimatedCostUsd": 0.9535499999999998
+    },
+    {
+      "words": 20000,
+      "estimatedCostUsd": 3.814199999999999
+    }
+  ]
+}

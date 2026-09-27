@@ -8,13 +8,13 @@ export type Lang = z.infer<typeof LangSchema>;
 export const CefrSchema = z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 export type Cefr = z.infer<typeof CefrSchema>;
 
-// UUID и ISO-дата валидируются структурно (строка), без формата: строгая
-// проверка формата откладывается до появления реальных данных с бэкенда,
-// чтобы не отбрасывать валидные тестовые фикстуры на неточном regexp.
-export const UuidSchema = z.string();
+// UUID (v7, создаётся клиентом) и ISO-дата — с проверкой формата. По умолчанию
+// z.iso.datetime() требует суффикс Z и запрещает смещение — это ровно наш формат:
+// UTC, отдельное смещение часового пояса — в review_log.tzOffsetMin.
+export const UuidSchema = z.uuid();
 export type Uuid = z.infer<typeof UuidSchema>;
 
-export const IsoDateSchema = z.string();
+export const IsoDateSchema = z.iso.datetime();
 export type IsoDate = z.infer<typeof IsoDateSchema>;
 
 export const LexemeSchema = z.object({
