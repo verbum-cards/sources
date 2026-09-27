@@ -7,7 +7,16 @@ import { CefrSchema, IsoDateSchema, ItemTypeSchema, LangSchema, UuidSchema } fro
 // и др. ниже) — type-only импорт не создаёт рантайм-цикл user.ts <-> sync.ts.
 import type { FieldRevisions } from './sync';
 
-export const GoalSchema = z.enum(['travel', 'work', 'move', 'exam', 'media', 'self']);
+export const GoalSchema = z.enum([
+  'travel',
+  'work',
+  'move',
+  'exam',
+  'media',
+  'self',
+  'games',
+  'tech',
+]);
 export type Goal = z.infer<typeof GoalSchema>;
 
 export const UserLevelSchema = z.union([CefrSchema, z.literal('unknown')]);

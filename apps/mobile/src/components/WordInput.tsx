@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, Text, TextInput, View } from 'react-native';
+import { Text, TextInput, View } from 'react-native';
 
 import { useTheme } from '../providers/theme.provider';
 
@@ -8,10 +8,13 @@ type Props = {
   value: string;
   onChangeText: (text: string) => void;
   onSubmit: () => void;
+  ref?: React.Ref<TextInput>;
 };
 
 // Главный вход в приложение: подпись видна всегда, плейсхолдер — пример слова.
-export function WordInput({ value, onChangeText, onSubmit }: Props) {
+// ref (React 19 — обычный проп, без forwardRef) — чтобы F6 (word-add-panel.tsx)
+// могло вернуть фокус в пустое поле после добавления карточки (docs/flows/f06.md, шаг 5).
+export const WordInput = ({ value, onChangeText, onSubmit, ref }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('common');
 
@@ -25,6 +28,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
       </Text>
       <View style={{ flexDirection: 'row', gap: space[4] }}>
         <TextInput
+          ref={ref}
           accessibilityLabelledBy="new-word-label"
           value={value}
           onChangeText={onChangeText}
@@ -39,6 +43,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
             {
               flex: 1,
               height: 52,
+              lineHeight: 22,
               paddingHorizontal: space[4],
               borderRadius: radius.md,
               borderWidth: 1.5,
@@ -49,23 +54,7 @@ export function WordInput({ value, onChangeText, onSubmit }: Props) {
             },
           ]}
         />
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('wordInput.submitLabel')}
-          onPress={onSubmit}
-          style={({ pressed }) => ({
-            width: 52,
-            height: 52,
-            borderRadius: radius.md,
-            backgroundColor: colors.action,
-            alignItems: 'center',
-            justifyContent: 'center',
-            transform: [{ scale: pressed ? 0.98 : 1 }],
-          })}
-        >
-          <Text style={{ color: colors.onAction, fontSize: 24, lineHeight: 26 }}>+</Text>
-        </Pressable>
       </View>
     </View>
   );
-}
+};

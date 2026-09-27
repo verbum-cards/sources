@@ -81,7 +81,7 @@ export const OnboardingScreen = () => {
         />
       );
     case 'first-session':
-      return <FirstSessionScreen onDone={() => setStep('sign-in')} />;
+      return <FirstSessionScreen goals={goals} onDone={() => setStep('sign-in')} />;
     case 'sign-in':
       return (
         <SignInScreen

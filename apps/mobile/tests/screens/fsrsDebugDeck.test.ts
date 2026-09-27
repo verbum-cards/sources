@@ -8,10 +8,10 @@ import {
   type DebugCardRow,
 } from '../../src/screens/fsrsDebugDeck';
 
-test('DEBUG_WORDS: от 20 до 30 слов, уникальные itemId и лемма', () => {
+test('DEBUG_WORDS: от 20 до 60 слов, уникальные itemId и лемма', () => {
   assert.ok(
-    DEBUG_WORDS.length >= 20 && DEBUG_WORDS.length <= 30,
-    `ожидалось 20..30 слов, получили ${DEBUG_WORDS.length}`
+    DEBUG_WORDS.length >= 20 && DEBUG_WORDS.length <= 60,
+    `ожидалось 20..60 слов, получили ${DEBUG_WORDS.length}`
   );
   assert.equal(
     new Set(DEBUG_WORDS.map((w) => w.itemId)).size,

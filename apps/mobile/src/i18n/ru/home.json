@@ -24,7 +24,27 @@
     "queued_other": "новых в очереди"
   },
   "recent": {
-    "title": "Недавно добавлены"
+    "title": "Недавно добавлены",
+    "today": "сегодня",
+    "yesterday": "вчера"
+  },
+  "wordAdd": {
+    "duplicate": "Уже в твоих карточках",
+    "preview": {
+      "addButton": "Добавить карточку"
+    },
+    "confirmation": {
+      "added": "Добавлено",
+      "undo": "Отменить"
+    },
+    "notFound": {
+      "title": "Не нашли такого слова",
+      "translationLabel": "Перевод",
+      "translationPlaceholder": "Например, счастливая случайность",
+      "exampleLabel": "Пример (необязательно)",
+      "examplePlaceholder": "Например, It was pure serendipity.",
+      "addButton": "Добавить вручную"
+    }
   },
   "debug": {
     "openFsrs": "Проверка FSRS (временный экран)",

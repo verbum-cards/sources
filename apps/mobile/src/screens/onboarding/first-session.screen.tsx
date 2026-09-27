@@ -1,24 +1,59 @@
-import React, { useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Button } from '../../components/Button';
-import { useTheme } from '../../providers/theme.provider';
-import { getFirstSessionWords, isFirstSessionFinished } from './onboarding-logic';
+import type { Goal } from '@cards/contracts';
 
-// F1, шаг 4 «Первая сессия» — режим знакомства (FR-36) для ровно 5 фиксированных
-// слов (временный набор, T1.6 ещё не готов). Это НЕ настоящий FSRS-режим
-// знакомства из T2.x: ответы нигде не пишутся (ни card/card_content, ни
-// review_log/card_schedule) — просто локальный проход внутри онбординга.
-export const FirstSessionScreen = ({ onDone }: { onDone: () => void }) => {
+import { Button } from '../../components/Button';
+import { getOrCreateDeviceId, getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { useDb } from '../../hooks/use-db.hook';
+import { useTheme } from '../../providers/theme.provider';
+import {
+  answerFirstSessionWord,
+  getFirstSessionWords,
+  isFirstSessionFinished,
+} from './onboarding-logic';
+
+// F1, шаг 4 «Первая сессия» — режим знакомства (FR-36) для ровно 5 слов,
+// подобранных по целям, выбранным на предыдущем шаге (docs/flows/f01.md →
+// «Как используется цель»). Временный набор (T1.6 ещё не готов), но уже с
+// учётом goals — см. getFirstSessionWords в onboarding-logic.ts. Каждый ответ
+// создаёт настоящую карточку — см. answerFirstSessionWord там же. Это НЕ
+// настоящая FSRS-очередь сессии из T2.x — просто локальный проход по
+// фиксированным 5 словам внутри онбординга.
+export const FirstSessionScreen = ({
+  goals,
+  onDone,
+}: {
+  goals: readonly Goal[];
+  onDone: () => void;
+}) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('onboarding');
+  const db = useDb();
   const [index, setIndex] = useState(0);
 
-  const words = getFirstSessionWords();
+  // goals — стабильная ссылка на протяжении жизни этого экрана (меняется
+  // только на шаге «Цель», который уже пройден к этому моменту) — useMemo
+  // даёт React Compiler'у то же самое, что стабильный модульный массив давал
+  // раньше, когда подбор ещё не зависел от goals.
+  const words = useMemo(() => getFirstSessionWords(goals), [goals]);
   const finished = isFirstSessionFinished(index, words.length);
   const word = words[index];
+
+  const answer = useCallback(
+    async (knowsWord: boolean) => {
+      if (!word) return;
+
+      const userId = await getOrCreateLocalUserId(db);
+      const deviceId = await getOrCreateDeviceId(db);
+      await answerFirstSessionWord({ db, userId, deviceId, word, knowsWord });
+
+      setIndex((i) => i + 1);
+    },
+    [db, word]
+  );
 
   return (
     <SafeAreaView edges={['top', 'bottom']} style={{ flex: 1, backgroundColor: colors.paper }}>
@@ -44,48 +79,23 @@ export const FirstSessionScreen = ({ onDone }: { onDone: () => void }) => {
           </View>
         )}
       </View>
-      <View style={{ padding: space[8], gap: space[4] }}>
-        {finished && (
-          <Button
-            label={finished || !word ? t('firstSession.continue') : t('firstSession.knowThisWord')}
-            size="lg"
-            block
-            onPress={() => {
-              if (finished || !word) {
-                onDone();
-              } else {
-                setIndex((i) => i + 1);
-              }
-            }}
-          />
-        )}
-
-        {!finished && (
+      <View style={{ padding: space[5], gap: space[3] }}>
+        {finished || !word ? (
+          <Button label={t('firstSession.continue')} size="lg" block onPress={onDone} />
+        ) : (
           <>
             <Button
-              label={!word ? t('firstSession.continue') : t('firstSession.knowThisWord')}
+              label={t('firstSession.knowThisWord')}
               size="lg"
               block
-              onPress={() => {
-                if (!word) {
-                  onDone();
-                } else {
-                  setIndex((i) => i + 1);
-                }
-              }}
+              onPress={() => void answer(true)}
             />
             <Button
-              label={!word ? t('firstSession.continue') : t('firstSession.dontKnowThisWord')}
-              size="lg"
+              label={t('firstSession.dontKnowThisWord')}
               variant="secondary"
+              size="lg"
               block
-              onPress={() => {
-                if (!word) {
-                  onDone();
-                } else {
-                  setIndex((i) => i + 1);
-                }
-              }}
+              onPress={() => void answer(false)}
             />
           </>
         )}

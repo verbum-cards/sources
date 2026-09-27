@@ -1,19 +1,98 @@
 import type { Goal, UserLevel, UserProfileStored } from '@cards/contracts';
 
-import { DEBUG_WORDS, type DebugWord } from '../../mocks/fsrs-debug-words';
+import type { DbExecutor } from '../../db/executor';
+import { DEBUG_ITEM_TYPE, DEBUG_WORDS, type DebugWord } from '../../mocks/fsrs-debug-words';
+import { applyRating } from '../../scheduler/scheduler';
+import { notifyChange } from '../../utilities/event-bus';
+import { uuidv7 } from '../../utilities/id';
 
 // F1, шаг «Первая сессия»: настоящего словаря по уровню/цели ещё нет (T1.6),
-// поэтому набор — первые FIRST_SESSION_SIZE слов общего временного мока
-// (см. mocks/fsrs-debug-words.ts). Один и тот же набор для всех — не выбирается
-// по уровню/цели, это сознательное упрощение.
+// поэтому набор — временный мок (см. mocks/fsrs-debug-words.ts), но подобранный
+// по выбранным на шаге «Цель» темам (docs/flows/f01.md → «Как используется
+// цель: ... первые слова берутся из тем выбранных целей»), а не просто первые
+// FIRST_SESSION_SIZE по порядку.
 export const FIRST_SESSION_SIZE = 5;
 
-export function getFirstSessionWords(): readonly DebugWord[] {
-  return DEBUG_WORDS.slice(0, FIRST_SESSION_SIZE);
+// 1. Слова, чьи goals пересекаются с переданными goals, — первыми, в исходном
+//    порядке списка.
+// 2. Если таких меньше FIRST_SESSION_SIZE — дополняем остальными словами (не из
+//    отфильтрованных), тоже в исходном порядке, без дублей.
+// 3. Пустой goals (по факту не должен приходить — «Пропустить» на шаге цели
+//    сохраняет ['self'], см. SKIPPED_GOALS ниже) не ломает функцию: ничего не
+//    совпадёт, и результат — первые FIRST_SESSION_SIZE слов по порядку, как
+//    было раньше.
+export function getFirstSessionWords(goals: readonly Goal[]): readonly DebugWord[] {
+  const goalSet = new Set(goals);
+  const matching = DEBUG_WORDS.filter((word) => word.goals.some((goal) => goalSet.has(goal)));
+  if (matching.length >= FIRST_SESSION_SIZE) {
+    return matching.slice(0, FIRST_SESSION_SIZE);
+  }
+
+  const matchingIds = new Set(matching.map((word) => word.itemId));
+  const rest = DEBUG_WORDS.filter((word) => !matchingIds.has(word.itemId));
+
+  return [...matching, ...rest].slice(0, FIRST_SESSION_SIZE);
 }
 
 export function isFirstSessionFinished(index: number, total: number): boolean {
   return index >= total;
+}
+
+export interface AnswerFirstSessionWordParams {
+  db: DbExecutor;
+  userId: string;
+  deviceId: string;
+  word: DebugWord;
+  // true — «Знаю это слово», false — «Не знаю» (см. ниже).
+  knowsWord: boolean;
+  now?: Date;
+}
+
+// Каждый ответ первой сессии создаёт настоящую карточку (card + card_content,
+// тот же паттерн, что в fsrs-debug.screen.tsx::addTestCards):
+//   «Знаю это слово» -> card.status = 'known', без review_log/card_schedule —
+//                        известные слова исключены из повторений (FR-22).
+//   «Не знаю»        -> card.status = 'active' + applyRating(rating: 'again') —
+//                        по-настоящему заводит review_log/card_schedule тем же
+//                        планировщиком, что и весь остальной продукт; никакой
+//                        новой логики планирования здесь не изобретаем.
+// Возвращает id созданной карточки.
+export async function answerFirstSessionWord({
+  db,
+  userId,
+  deviceId,
+  word,
+  knowsWord,
+  now = new Date(),
+}: AnswerFirstSessionWordParams): Promise<string> {
+  const nowIso = now.toISOString();
+  const cardId = uuidv7(now);
+
+  await db.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, knowsWord ? 'known' : 'active', nowIso, nowIso]
+  );
+  await db.run(
+    `INSERT INTO card_content (card_id, lemma, pos, translation, example, example_translation, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      cardId,
+      word.lemma,
+      word.pos,
+      word.translation,
+      word.example,
+      word.exampleTranslation,
+      'manual',
+      nowIso,
+    ]
+  );
+  notifyChange(['card', 'card_content']);
+
+  if (!knowsWord) {
+    await applyRating({ db, cardId, userId, deviceId, rating: 'again', now });
+  }
+
+  return cardId;
 }
 
 // «Пропустить» на шаге цели работает как выбор «для себя» (docs/flows/f01.md

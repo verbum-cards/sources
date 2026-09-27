@@ -2,12 +2,12 @@ import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import type { TFunction } from 'i18next';
 
 import { Chip } from '../components/Chip';
 import { ProgressBar } from '../components/ProgressBar';
 import { ReviewPanel } from '../components/ReviewPanel';
 import { TabBar, TabKey } from '../components/TabBar';
-import { WordInput } from '../components/WordInput';
 import { WordRow } from '../components/WordRow';
 import { getOrCreateLocalUserId } from '../db/entities/user/app-meta';
 import { resetLocalData } from '../db/entities/user/reset-local-data';
@@ -16,6 +16,7 @@ import { useDb } from '../hooks/use-db.hook';
 import { useQuery } from '../hooks/use-query.hook';
 import { DEMO } from '../mocks/home';
 import { useTheme } from '../providers/theme.provider';
+import { WordAddPanel } from './word-add-panel';
 
 // FR-38: пустое состояние вместо демо-данных, если у пользователя ещё нет ни
 // одной живой карточки. Дальше (не в этой задаче) сюда придут реальные данные
@@ -30,14 +31,58 @@ async function countUserCards(db: DbExecutor): Promise<number> {
   return row?.count ?? 0;
 }
 
+const RECENT_CARDS_LIMIT = 10;
+
+interface RecentCard {
+  word: string;
+  translation: string;
+  createdAt: string;
+}
+
+// Блок «Недавно добавлены» — единственный кусок непустого состояния, который
+// уже переведён на реальные данные (остальное — стрик/ReviewPanel/статистика —
+// сознательно остаётся на demo, это отдельная задача).
+async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
+  const userId = await getOrCreateLocalUserId(db);
+  const rows = await db.all<{ lemma: string; translation: string; created_at: string }>(
+    `SELECT cc.lemma, cc.translation, c.created_at
+     FROM card c
+     JOIN card_content cc ON cc.card_id = c.id
+     WHERE c.user_id = ? AND c.deleted_at IS NULL
+     ORDER BY c.created_at DESC
+     LIMIT ?`,
+    [userId, RECENT_CARDS_LIMIT]
+  );
+
+  return rows.map((row) => ({
+    word: row.lemma,
+    translation: row.translation,
+    createdAt: row.created_at,
+  }));
+}
+
+// «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
+// Не переусложняем — это подпись-подсказка, а не точная метка времени.
+function formatRecentWhen(t: TFunction<'home'>, createdAtIso: string): string {
+  const created = new Date(createdAtIso);
+  const now = new Date();
+  const yesterday = new Date(now);
+  yesterday.setDate(now.getDate() - 1);
+
+  if (created.toDateString() === now.toDateString()) return t('recent.today');
+  if (created.toDateString() === yesterday.toDateString()) return t('recent.yesterday');
+
+  return new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long' }).format(created);
+}
+
 export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
-  const [query, setQuery] = useState('');
   const [tab, setTab] = useState<TabKey>('home');
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
+  const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
 
   const today = useMemo(
     () =>
@@ -75,13 +120,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
           <Chip label={t('header.streak', { count: DEMO.streak })} variant="streak" />
         </View>
 
-        <WordInput
-          value={query}
-          onChangeText={setQuery}
-          onSubmit={() => {
-            /* F6: поиск в локальном словаре */
-          }}
-        />
+        <WordAddPanel />
 
         {hasCards ? (
           <>
@@ -148,13 +187,13 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
                   overflow: 'hidden',
                 }}
               >
-                {DEMO.recent.map((w, i) => (
+                {(recentCards ?? []).map((card, i, all) => (
                   <WordRow
-                    key={w.word}
-                    word={w.word}
-                    translation={w.tr}
-                    when={w.when}
-                    last={i === DEMO.recent.length - 1}
+                    key={`${card.word}-${card.createdAt}`}
+                    word={card.word}
+                    translation={card.translation}
+                    when={formatRecentWhen(t, card.createdAt)}
+                    last={i === all.length - 1}
                   />
                 ))}
               </View>

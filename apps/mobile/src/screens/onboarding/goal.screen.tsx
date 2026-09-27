@@ -10,7 +10,16 @@ import { OptionPill } from '../../components/OptionPill';
 import { useTheme } from '../../providers/theme.provider';
 import { SKIPPED_GOALS, toggleGoal } from './onboarding-logic';
 
-const GOAL_OPTIONS: readonly Goal[] = ['travel', 'work', 'move', 'exam', 'media', 'self'];
+const GOAL_OPTIONS: readonly Goal[] = [
+  'travel',
+  'work',
+  'move',
+  'exam',
+  'media',
+  'self',
+  'games',
+  'tech',
+];
 
 // F1, шаг 2 «Цель» (FR-41): мультивыбор либо «Пропустить» — пропуск равнозначен
 // выбору «для себя» (docs/flows/f01.md).

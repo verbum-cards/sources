@@ -1,10 +1,14 @@
-import type { ItemType, Uuid } from '@cards/contracts';
+import type { Goal, ItemType, Uuid } from '@cards/contracts';
 
-// T1.7: тестовый набор слов для дебаг-экрана проверки FSRS (см. FsrsDebugScreen).
-// Это данные изучаемого языка (лемма/перевод/пример), а не строки интерфейса —
-// через i18n не идут (skill i18n-russian: «слова, примеры и транскрипции из
-// словаря не переводятся через i18n — это данные»). Настоящего словаря ещё нет
-// (T1.6), поэтому набор придуман вручную: 28 бытовых слов уровня A1–B2.
+// T1.7: тестовый набор слов для дебаг-экрана проверки FSRS (см. FsrsDebugScreen)
+// и для первой сессии онбординга (F1, см. onboarding-logic.ts). Это данные
+// изучаемого языка (лемма/перевод/пример), а не строки интерфейса — через i18n
+// не идут (skill i18n-russian: «слова, примеры и транскрипции из словаря не
+// переводятся через i18n — это данные»). Настоящего словаря ещё нет (T1.6),
+// поэтому набор придуман вручную: 28 бытовых слов уровня A1–B2.
+//
+// goals — временная ручная разметка (как и весь набор): в настоящем словаре
+// (T1.6) это будет sense_tag/deck_goal_tag, не поле на слове.
 export interface DebugWord {
   itemId: Uuid;
   lemma: string;
@@ -12,6 +16,7 @@ export interface DebugWord {
   translation: string;
   example: string;
   exampleTranslation: string;
+  goals: readonly Goal[];
 }
 
 export const DEBUG_ITEM_TYPE: ItemType = 'sense';
@@ -24,6 +29,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'бродить, странствовать',
     example: 'She loves to wander through the old town.',
     exampleTranslation: 'Она любит бродить по старому городу.',
+    goals: ['travel'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000002',
@@ -32,6 +38,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'свирепый, яростный',
     example: 'The fierce storm knocked down several trees.',
     exampleTranslation: 'Свирепый шторм повалил несколько деревьев.',
+    goals: ['media', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000003',
@@ -40,6 +47,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'арендатор, жилец',
     example: 'The new tenant moved in last week.',
     exampleTranslation: 'Новый арендатор въехал на прошлой неделе.',
+    goals: ['move'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000004',
@@ -48,6 +56,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'одалживать, брать взаймы',
     example: 'Can I borrow your pen for a minute?',
     exampleTranslation: 'Можно одолжить твою ручку на минуту?',
+    goals: ['work', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000005',
@@ -56,6 +65,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'переполненный, многолюдный',
     example: 'The train was too crowded to sit down.',
     exampleTranslation: 'Поезд был слишком переполнен, чтобы сесть.',
+    goals: ['travel'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000006',
@@ -64,6 +74,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'сосед',
     example: 'Our neighbor waters our plants when we travel.',
     exampleTranslation: 'Наш сосед поливает наши растения, когда мы путешествуем.',
+    goals: ['move', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000007',
@@ -72,6 +83,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'внезапно',
     example: 'Suddenly, the lights went out.',
     exampleTranslation: 'Внезапно погас свет.',
+    goals: ['media', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000008',
@@ -80,6 +92,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'улучшать',
     example: 'He wants to improve his English this year.',
     exampleTranslation: 'Он хочет улучшить свой английский в этом году.',
+    goals: ['work', 'exam', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000009',
@@ -88,6 +101,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'изнурённый, измотанный',
     example: 'After the hike, we were completely exhausted.',
     exampleTranslation: 'После похода мы были совершенно измотаны.',
+    goals: ['work', 'travel'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000a',
@@ -96,6 +110,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'крайний срок',
     example: 'The deadline for the report is Friday.',
     exampleTranslation: 'Крайний срок сдачи отчёта — пятница.',
+    goals: ['work', 'exam'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000b',
@@ -104,6 +119,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'полагаться',
     example: 'You can always rely on your family.',
     exampleTranslation: 'Ты всегда можешь полагаться на свою семью.',
+    goals: ['work', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000c',
@@ -112,6 +128,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'искренний',
     example: 'She gave a sincere apology.',
     exampleTranslation: 'Она принесла искренние извинения.',
+    goals: ['self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000d',
@@ -120,6 +137,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'собирать(ся)',
     example: "We gather at grandma's house every Sunday.",
     exampleTranslation: 'Мы собираемся в доме у бабушки каждое воскресенье.',
+    goals: ['self', 'work'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000e',
@@ -128,6 +146,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'упрямый',
     example: 'My little brother is very stubborn.',
     exampleTranslation: 'Мой младший брат очень упрямый.',
+    goals: ['self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000000f',
@@ -136,6 +155,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'угроза',
     example: 'Pollution is a serious threat to the ocean.',
     exampleTranslation: 'Загрязнение — серьёзная угроза для океана.',
+    goals: ['media', 'work'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000010',
@@ -144,6 +164,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'шептать',
     example: 'She whispered the secret to her friend.',
     exampleTranslation: 'Она прошептала секрет подруге.',
+    goals: ['media', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000011',
@@ -152,6 +173,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'щедрый',
     example: 'He is generous with his time and money.',
     exampleTranslation: 'Он щедр своим временем и деньгами.',
+    goals: ['self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000012',
@@ -160,6 +182,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'путешествие, поездка',
     example: 'Our journey across the country took five days.',
     exampleTranslation: 'Наше путешествие через страну заняло пять дней.',
+    goals: ['travel'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000013',
@@ -168,6 +191,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'избегать',
     example: 'Try to avoid sugar before bedtime.',
     exampleTranslation: 'Старайся избегать сахара перед сном.',
+    goals: ['work', 'exam', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000014',
@@ -176,6 +200,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'любопытный',
     example: 'The curious cat explored every corner of the room.',
     exampleTranslation: 'Любопытный кот исследовал каждый угол комнаты.',
+    goals: ['exam', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000015',
@@ -184,6 +209,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'справляться, обращаться',
     example: 'She can handle stressful situations calmly.',
     exampleTranslation: 'Она умеет спокойно справляться со стрессовыми ситуациями.',
+    goals: ['work', 'exam'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000016',
@@ -192,6 +218,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'узкий',
     example: 'The narrow street was hard to drive through.',
     exampleTranslation: 'По узкой улице было трудно проехать.',
+    goals: ['travel', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000017',
@@ -200,6 +227,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'процветать',
     example: 'Small businesses thrive in this neighborhood.',
     exampleTranslation: 'Малый бизнес процветает в этом районе.',
+    goals: ['work', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000018',
@@ -208,6 +236,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'неохотный, не желающий',
     example: 'He was reluctant to leave the party early.',
     exampleTranslation: 'Он неохотно уходил с вечеринки раньше времени.',
+    goals: ['work', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-000000000019',
@@ -216,6 +245,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'достигать',
     example: 'She worked hard to achieve her goals.',
     exampleTranslation: 'Она усердно работала, чтобы достичь своих целей.',
+    goals: ['work', 'exam', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000001a',
@@ -224,6 +254,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'краткий',
     example: "Let's keep the meeting brief today.",
     exampleTranslation: 'Давайте сегодня проведём встречу кратко.',
+    goals: ['work', 'exam'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000001b',
@@ -232,6 +263,7 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'уютный',
     example: 'Their cabin felt cozy in the winter.',
     exampleTranslation: 'Их домик казался уютным зимой.',
+    goals: ['move', 'self'],
   },
   {
     itemId: '0195c000-0000-7000-8000-00000000001c',
@@ -240,5 +272,186 @@ export const DEBUG_WORDS: readonly DebugWord[] = [
     translation: 'ценный',
     example: 'Time is a valuable resource.',
     exampleTranslation: 'Время — ценный ресурс.',
+    goals: ['work', 'self'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000001d',
+    lemma: 'level',
+    pos: 'noun',
+    translation: 'уровень',
+    example: 'She finally reached the last level of the game.',
+    exampleTranslation: 'Она наконец дошла до последнего уровня игры.',
+    goals: ['games', 'tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000001e',
+    lemma: 'opponent',
+    pos: 'noun',
+    translation: 'соперник',
+    example: 'He beat his opponent in the final round.',
+    exampleTranslation: 'Он победил соперника в финальном раунде.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000001f',
+    lemma: 'controller',
+    pos: 'noun',
+    translation: 'геймпад',
+    example: 'My little brother dropped the controller again.',
+    exampleTranslation: 'Мой младший брат снова уронил геймпад.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000020',
+    lemma: 'score',
+    pos: 'noun',
+    translation: 'счёт',
+    example: 'Try to beat your best score this time.',
+    exampleTranslation: 'Постарайся побить свой лучший счёт в этот раз.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000025',
+    lemma: 'player',
+    pos: 'noun',
+    translation: 'игрок',
+    example: 'Each player gets three cards.',
+    exampleTranslation: 'Каждый игрок получает три карты.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000026',
+    lemma: 'team',
+    pos: 'noun',
+    translation: 'команда',
+    example: 'Our team won the last match.',
+    exampleTranslation: 'Наша команда выиграла последний матч.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000027',
+    lemma: 'win',
+    pos: 'verb',
+    translation: 'выигрывать',
+    example: 'I hope we win this game.',
+    exampleTranslation: 'Надеюсь, мы выиграем в этой игре.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000028',
+    lemma: 'lose',
+    pos: 'verb',
+    translation: 'проигрывать',
+    example: 'Nobody likes to lose.',
+    exampleTranslation: 'Никто не любит проигрывать.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000029',
+    lemma: 'rule',
+    pos: 'noun',
+    translation: 'правило',
+    example: "Let's read the rules before we start.",
+    exampleTranslation: 'Давай прочитаем правила, прежде чем начать.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002a',
+    lemma: 'turn',
+    pos: 'noun',
+    translation: 'ход',
+    example: "It's your turn now.",
+    exampleTranslation: 'Теперь твоя очередь.',
+    goals: ['games'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000021',
+    lemma: 'password',
+    pos: 'noun',
+    translation: 'пароль',
+    example: 'I forgot my password again.',
+    exampleTranslation: 'Я снова забыл свой пароль.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000022',
+    lemma: 'update',
+    pos: 'verb',
+    translation: 'обновлять',
+    example: 'You should update the app before using it.',
+    exampleTranslation: 'Тебе стоит обновить приложение перед использованием.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000023',
+    lemma: 'install',
+    pos: 'verb',
+    translation: 'устанавливать',
+    example: 'It only takes a minute to install this program.',
+    exampleTranslation: 'Установка этой программы занимает всего минуту.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000024',
+    lemma: 'device',
+    pos: 'noun',
+    translation: 'устройство',
+    example: 'Charge your device before the trip.',
+    exampleTranslation: 'Зарядите устройство перед поездкой.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002b',
+    lemma: 'screen',
+    pos: 'noun',
+    translation: 'экран',
+    example: 'The screen is cracked.',
+    exampleTranslation: 'Экран треснул.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002c',
+    lemma: 'battery',
+    pos: 'noun',
+    translation: 'аккумулятор',
+    example: 'My battery is almost dead.',
+    exampleTranslation: 'Мой аккумулятор почти разряжен.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002d',
+    lemma: 'charger',
+    pos: 'noun',
+    translation: 'зарядное устройство',
+    example: 'Can I borrow your charger?',
+    exampleTranslation: 'Можно одолжить твоё зарядное устройство?',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002e',
+    lemma: 'click',
+    pos: 'verb',
+    translation: 'нажимать',
+    example: 'Just click this button to continue.',
+    exampleTranslation: 'Просто нажми эту кнопку, чтобы продолжить.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-00000000002f',
+    lemma: 'connect',
+    pos: 'verb',
+    translation: 'подключаться',
+    example: 'Try to connect to the Wi-Fi.',
+    exampleTranslation: 'Попробуй подключиться к Wi-Fi.',
+    goals: ['tech'],
+  },
+  {
+    itemId: '0195c000-0000-7000-8000-000000000030',
+    lemma: 'file',
+    pos: 'noun',
+    translation: 'файл',
+    example: 'I saved the file on my computer.',
+    exampleTranslation: 'Я сохранил файл на компьютере.',
+    goals: ['tech'],
   },
 ];
