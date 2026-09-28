@@ -266,7 +266,7 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
           </>
         ) : emptyStateDismissed ? null : (
           // FR-38: пустое состояние вместо демо-данных — показываем, только
-          // пока карточек вообще нет; WordInput выше уже ведёт к первому
+          // пока карточек вообще нет; WordAddPanel выше уже ведёт к первому
           // своему слову.
           <Animated.View
             style={{

@@ -24,7 +24,7 @@
     "create": "Создать колоду",
     "createTitle": "Новая колода",
     "namePlaceholder": "Например, Слова из фильма",
-    "searchPlaceholder": "Найти слово в словаре",
+    "searchPlaceholder": "Введите новое слово",
     "wordsInDeck_one": "{{count}} слово в колоде",
     "wordsInDeck_few": "{{count}} слова в колоде",
     "wordsInDeck_many": "{{count}} слов в колоде",

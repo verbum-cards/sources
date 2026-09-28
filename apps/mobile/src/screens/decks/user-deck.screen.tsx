@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ChevronLeft } from 'lucide-react-native';
 
 import { Button } from '../../components/Button';
+import { WordNew } from '../../components/WordNew';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import type { PackWord } from '../../db/entities/dictionary/lookup';
-import { searchPackWordsByPrefix } from '../../db/entities/dictionary/lookup';
 import { useDb } from '../../hooks/use-db.hook';
 import { useDictionaryDb } from '../../hooks/use-dictionary-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
-import { useToast } from '../../hooks/use-toast.hook';
 import { useTheme } from '../../providers/theme.provider';
 import { addWordToUserDeck, createUserDeck, loadUserDeckWords } from './user-deck-logic';
 
@@ -99,14 +98,11 @@ export const CreateUserDeckModal = ({
   );
 };
 
-const SEARCH_DEBOUNCE_MS = 250;
-
 export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () => void }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
   const dictionaryDb = useDictionaryDb();
-  const toast = useToast();
 
   const { data: deckWords } = useQuery(
     (userDb) => loadUserDeckWords(userDb, dictionaryDb, deckId),
@@ -114,46 +110,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
   );
   const addedRefs = new Set((deckWords ?? []).map((word) => `${word.itemType}:${word.itemId}`));
 
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<readonly PackWord[]>([]);
   const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
-
-  // Дебаунс — тот же бюджет превью слова (≤300мс, apps/mobile/CLAUDE.md), но
-  // здесь запрос идёт в пакет словаря, а не в моки, поэтому не мгновенно.
-  useEffect(() => {
-    if (query.trim().length < 2) {
-      setResults([]);
-
-      return;
-    }
-    let cancelled = false;
-    const timer = setTimeout(() => {
-      void (async () => {
-        const words = await searchPackWordsByPrefix(dictionaryDb, query);
-        if (!cancelled) setResults(words);
-      })();
-    }, SEARCH_DEBOUNCE_MS);
-
-    return () => {
-      cancelled = true;
-      clearTimeout(timer);
-    };
-  }, [query, dictionaryDb]);
-
-  const handleAddWord = async (word: PackWord) => {
-    await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
-    setQuery('');
-    toast.show({ message: t('wordAdded', { word: word.lemma }) });
-  };
-
-  // Уже добавленные — в конец списка саджестов: сначала только новые слова,
-  // которые действительно можно добавить.
-  const sortedResults = [...results].sort((a, b) => {
-    const aAdded = addedRefs.has(`${a.itemType}:${a.itemId}`);
-    const bAdded = addedRefs.has(`${b.itemType}:${b.itemId}`);
-
-    return Number(aAdded) - Number(bAdded);
-  });
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
@@ -177,49 +134,12 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
           <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
         </Pressable>
 
-        <TextInput
-          value={query}
-          onChangeText={setQuery}
-          placeholder={t('userDecks.searchPlaceholder')}
-          placeholderTextColor={colors.inkMuted}
-          style={{
-            height: 52,
-            paddingHorizontal: space[4],
-            borderRadius: radius.md,
-            borderWidth: 1.5,
-            borderColor: colors.lineStrong,
-            backgroundColor: colors.surface,
-            color: colors.ink,
-            fontSize: 16,
+        <WordNew
+          onAddWord={async (word) => {
+            await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
           }}
+          addedRefs={addedRefs}
         />
-
-        {sortedResults.length > 0 ? (
-          <View
-            style={{
-              backgroundColor: colors.surface,
-              borderRadius: radius.md,
-              borderWidth: 1,
-              borderColor: colors.line,
-              overflow: 'hidden',
-            }}
-          >
-            {sortedResults.map((word, i, all) => (
-              <WordRow
-                key={`${word.itemType}:${word.itemId}`}
-                word={word.lemma}
-                ipa={word.ipa}
-                cefr={word.cefr}
-                translation={word.translation}
-                last={i === all.length - 1}
-                added={addedRefs.has(`${word.itemType}:${word.itemId}`)}
-                addLabel={t('addWord')}
-                onAdd={() => void handleAddWord(word)}
-                onPress={() => setSelectedWord(word)}
-              />
-            ))}
-          </View>
-        ) : null}
 
         <View style={{ gap: space[2] }}>
           <Text
@@ -268,14 +188,6 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
             exampleTranslation: selectedWord.exampleTranslation,
             definition: selectedWord.definition,
           }
-        }
-        onSave={
-          selectedWord && !addedRefs.has(`${selectedWord.itemType}:${selectedWord.itemId}`)
-            ? () => {
-                void handleAddWord(selectedWord);
-                setSelectedWord(null);
-              }
-            : undefined
         }
         onClose={() => setSelectedWord(null)}
       />

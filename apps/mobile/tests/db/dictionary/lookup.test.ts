@@ -4,6 +4,7 @@ import { test } from 'node:test';
 
 import { createEmptyDictionaryPackage } from '../../../src/db/entities/dictionary/build';
 import {
+  findPackWordByLemma,
   loadPackWordsByRefs,
   searchPackWordsByPrefix,
 } from '../../../src/db/entities/dictionary/lookup';
@@ -93,4 +94,33 @@ test('loadPackWordsByRefs: пустой список refs -> пусто, без 
   const { db } = await setupPack();
 
   assert.deepEqual(await loadPackWordsByRefs(db, []), []);
+});
+
+test('findPackWordByLemma: точное совпадение без учёта регистра', async () => {
+  const { db } = await setupPack();
+
+  const word = await findPackWordByLemma(db, 'MENU');
+  assert.equal(word?.lemma, 'menu');
+});
+
+test('findPackWordByLemma: находит и expression по точному тексту фразы', async () => {
+  const { db } = await setupPack();
+  const phrase = WORDS.find((w) => w.itemType === 'expression');
+  assert.ok(phrase);
+
+  const word = await findPackWordByLemma(db, phrase.lemma);
+  assert.equal(word?.itemType, 'expression');
+  assert.equal(word?.itemId, phrase.itemId);
+});
+
+test('findPackWordByLemma: частичное совпадение (префикс) не считается', async () => {
+  const { db } = await setupPack();
+
+  assert.equal(await findPackWordByLemma(db, 'men'), undefined);
+});
+
+test('findPackWordByLemma: слова нет в пакете -> undefined', async () => {
+  const { db } = await setupPack();
+
+  assert.equal(await findPackWordByLemma(db, 'nonexistentword'), undefined);
 });

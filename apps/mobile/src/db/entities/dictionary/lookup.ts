@@ -134,9 +134,33 @@ export async function loadPackWordsByRefs(
     .filter((word): word is PackWord => word != null);
 }
 
+// Точное совпадение леммы/фразы (без учёта регистра) — Enter/сабмит инпута в
+// WordNew.tsx: решает, открывать ли превью найденного слова или (только на
+// главном экране, components/WordNew.tsx::onNotFound) вести в ручной ввод.
+// При омонимах (несколько item_id на один term_norm) берётся первый по rank
+// — та же неоднозначность, что и в prefix-поиске ниже.
+export async function findPackWordByLemma(
+  db: DbExecutor,
+  lemma: string
+): Promise<PackWord | undefined> {
+  const normalized = lemma.trim().toLowerCase();
+  if (!normalized) return undefined;
+
+  const row = await db.get<{ item_type: ItemType; item_id: string }>(
+    `SELECT item_type, item_id FROM search_term WHERE term_norm = ? ORDER BY rank LIMIT 1`,
+    [normalized]
+  );
+  if (!row) return undefined;
+
+  const [word] = await loadPackWordsByRefs(db, [{ itemType: row.item_type, itemId: row.item_id }]);
+
+  return word;
+}
+
 // Префиксный поиск по search_term (idx_search_term_lookup, бюджет ≤300мс) —
-// подбор слов в свою колоду (screens/decks/user-deck.screen.tsx). kind сейчас
-// всегда 'lemma' (см. seed.ts) — поиск по переводу этим не покрывается.
+// подбор слов в колоды (components/WordNew.tsx: свои колоды и главный экран).
+// kind сейчас всегда 'lemma' (см. seed.ts) — поиск по переводу этим не
+// покрывается.
 export async function searchPackWordsByPrefix(
   db: DbExecutor,
   query: string,

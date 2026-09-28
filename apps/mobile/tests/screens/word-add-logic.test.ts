@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { test } from 'node:test';
 
+import type { PackWord } from '../../src/db/entities/dictionary/lookup';
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { migrate } from '../../src/db/migrate';
 import { DEBUG_WORDS } from '../../src/mocks/fsrs-debug-words';
@@ -28,7 +29,7 @@ test('isWordAlreadyAdded: false, пока карточки нет', async () => 
   const { db } = await setupDb();
   const word = DEBUG_WORDS[0];
 
-  assert.equal(await isWordAlreadyAdded(db, word.itemId), false);
+  assert.equal(await isWordAlreadyAdded(db, word.itemType, word.itemId), false);
 });
 
 test('isWordAlreadyAdded: true после добавления слова из словаря', async () => {
@@ -37,7 +38,7 @@ test('isWordAlreadyAdded: true после добавления слова из �
 
   await addWordFromDictionary({ db, word });
 
-  assert.equal(await isWordAlreadyAdded(db, word.itemId), true);
+  assert.equal(await isWordAlreadyAdded(db, word.itemType, word.itemId), true);
 });
 
 test('isWordAlreadyAdded: false после отмены (мягкое удаление) — можно добавить снова', async () => {
@@ -47,7 +48,7 @@ test('isWordAlreadyAdded: false после отмены (мягкое удале
   const cardId = await addWordFromDictionary({ db, word });
   await undoAddedCard(db, cardId);
 
-  assert.equal(await isWordAlreadyAdded(db, word.itemId), false);
+  assert.equal(await isWordAlreadyAdded(db, word.itemType, word.itemId), false);
 });
 
 test('loadAddedItemIds: пусто, пока карточек нет', async () => {
@@ -64,7 +65,7 @@ test('loadAddedItemIds: содержит item_id добавленных слов
   const undoneCardId = await addWordFromDictionary({ db, word: undone });
   await undoAddedCard(db, undoneCardId);
 
-  assert.deepEqual(await loadAddedItemIds(db), new Set([added.itemId]));
+  assert.deepEqual(await loadAddedItemIds(db), new Set([`${added.itemType}:${added.itemId}`]));
 });
 
 test('addWordFromDictionary: создаёт card (status=active, item_type=sense) и card_content (source=pack)', async () => {
@@ -112,6 +113,39 @@ test('addWordFromDictionary: создаёт card (status=active, item_type=sense
       definition: word.definition,
       source: 'pack',
     }
+  );
+});
+
+test('addWordFromDictionary: слово-фраза (item_type=expression) пишет expression, а не sense', async () => {
+  const { db, userId } = await setupDb();
+  const word: PackWord = {
+    itemId: 'expr-1',
+    itemType: 'expression',
+    lemma: 'give it a shot',
+    translation: 'попробовать',
+    example: "Let's give it a shot.",
+    exampleTranslation: 'Давай попробуем.',
+    definition: 'to attempt something',
+  };
+
+  const cardId = await addWordFromDictionary({ db, word });
+
+  const card = await db.get<{ item_type: string; item_id: string }>(
+    'SELECT item_type, item_id FROM card WHERE id = ? AND user_id = ?',
+    [cardId, userId]
+  );
+  assert.equal(card?.item_type, 'expression');
+  assert.equal(card?.item_id, word.itemId);
+
+  assert.equal(
+    await isWordAlreadyAdded(db, 'expression', word.itemId),
+    true,
+    'дубликат должен определяться по expression, не по sense'
+  );
+  assert.equal(
+    await isWordAlreadyAdded(db, 'sense', word.itemId),
+    false,
+    'тот же itemId под другим itemType не считается дублем'
   );
 });
 

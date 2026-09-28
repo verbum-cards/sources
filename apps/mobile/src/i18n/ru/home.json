@@ -31,15 +31,6 @@
     "close": "Закрыть"
   },
   "wordAdd": {
-    "duplicate": "Уже в твоих карточках",
-    "alreadyAdded": "Добавлено",
-    "preview": {
-      "addButton": "Добавить карточку"
-    },
-    "confirmation": {
-      "added": "Добавлено",
-      "undo": "Отменить"
-    },
     "notFound": {
       "title": "Не нашли такого слова",
       "translationLabel": "Перевод",
