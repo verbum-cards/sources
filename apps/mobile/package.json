@@ -33,7 +33,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "typecheck": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
-    "test": "node --import tsx --test tests/db/*.test.ts tests/db/dictionary/*.test.ts tests/db/user/*.test.ts tests/dictionary/*.test.ts tests/scheduler/*.test.ts tests/screens/*.test.ts tests/screens/onboarding/*.test.ts tests/network/*.test.ts tests/utilities/*.test.ts"
+    "test": "node --import tsx --test tests/db/*.test.ts tests/db/dictionary/*.test.ts tests/db/user/*.test.ts tests/dictionary/*.test.ts tests/mocks/*.test.ts tests/scheduler/*.test.ts tests/screens/*.test.ts tests/screens/onboarding/*.test.ts tests/network/*.test.ts tests/utilities/*.test.ts"
   },
   "private": true
 }
