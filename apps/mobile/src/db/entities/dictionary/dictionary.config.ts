@@ -1,6 +1,9 @@
 // Чистая конфигурация dictionary-<lang>-<native>.db — без логики.
 
-export const DICTIONARY_DB_FILENAME = 'user_dictionary.db';
+// Для MVP всегда en-ru (одна пара, docs/decisions.md ADR-30) — имя файла уже
+// соответствует задокументированному формату пакета, менять при переходе на
+// несколько пар в v2 не придётся.
+export const DICTIONARY_DB_FILENAME = 'dictionary-en-ru.db';
 
 // Собирается один раз, не WAL — файл должен быть самодостаточным при
 // копировании/скачивании (без -wal/-shm спутников).
