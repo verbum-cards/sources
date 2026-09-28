@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Animated, View } from 'react-native';
 
 import { TabBar, TabKey } from '../components/TabBar';
 import { useTheme } from '../providers/theme.provider';
-import { DecksScreen } from './decks/decks.screen';
-import { HomeScreen } from './home/home.screen';
+import { DecksScreen, type DecksScreenHandle } from './decks/decks.screen';
+import { HomeScreen, type HomeScreenHandle } from './home/home.screen';
 import { ProfileScreen } from './profile/profile.screen';
 import { ProgressScreen } from './progress/progress.screen';
 
@@ -15,17 +15,18 @@ import { ProgressScreen } from './progress/progress.screen';
 export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
   const { colors } = useTheme();
   const [tab, setTab] = useState<TabKey>('home');
-  // Повторный тап по уже активному табу — сигнал «вернуться к стартовому
-  // экрану», как в стандартных таб-барах: при смене таба HomeScreen/DecksScreen
-  // и так размонтируются (условный рендер ниже), а вот повторный тап по тому
-  // же табу — нет, поэтому используем как key: смена значения пересоздаёт
-  // компонент и сбрасывает всё его внутреннее состояние (выбранную колоду,
-  // открытый попап слова) без ручного отслеживания каждого поля.
-  const [resetSignal, setResetSignal] = useState(0);
+  const homeRef = useRef<HomeScreenHandle>(null);
+  const decksRef = useRef<DecksScreenHandle>(null);
 
+  // Повторный тап по уже активному табу — сигнал «вернуться к стартовому
+  // экрану», как в стандартных таб-барах: вызывает resetToRoot экрана через
+  // ref, а не пересоздаёт компонент целиком — если пользователь и так на
+  // стартовом списке (не внутри колоды/без открытого попапа), setState на
+  // уже такое же значение ничего не меняет и не перезагружает экран.
   const handleTabChange = (key: TabKey) => {
     if (key === tab) {
-      setResetSignal((n) => n + 1);
+      if (key === 'home') homeRef.current?.resetToRoot();
+      if (key === 'decks') decksRef.current?.resetToRoot();
 
       return;
     }
@@ -55,13 +56,13 @@ export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => vo
       <Animated.View style={{ flex: 1, opacity }}>
         {tab === 'home' ? (
           <HomeScreen
-            key={resetSignal}
+            ref={homeRef}
             onOpenFsrsDebug={onOpenFsrsDebug}
             onOpenDecks={() => setTab('decks')}
           />
         ) : null}
         {tab === 'decks' ? (
-          <DecksScreen key={resetSignal} onOpenProgress={() => setTab('progress')} />
+          <DecksScreen ref={decksRef} onOpenProgress={() => setTab('progress')} />
         ) : null}
         {tab === 'progress' ? <ProgressScreen /> : null}
         {tab === 'profile' ? <ProfileScreen /> : null}

@@ -1,4 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Animated, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -61,12 +68,20 @@ function formatRecentWhen(t: TFunction<'home'>, createdAtIso: string): string {
 // «Повторить сейчас» (ReviewPanel) на экране нет вовсе: F10 (сессия
 // повторения) ещё не реализован, а кнопка, которая ничего не делает, хуже
 // отсутствующей кнопки.
+// Императивный доступ извне — нужен main-tabs.screen.tsx: повторный тап по
+// уже активному табу «Главная» закрывает попап слова, но только если он
+// открыт (setState на уже null-значение — нет-оп, без лишнего ререндера).
+export interface HomeScreenHandle {
+  resetToRoot: () => void;
+}
+
 interface Props {
   onOpenFsrsDebug?: () => void;
   onOpenDecks?: () => void;
+  ref?: React.Ref<HomeScreenHandle>;
 }
 
-export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
+export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks, ref }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
@@ -74,6 +89,8 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
   const now = useMemo(() => new Date(), []);
   const [selectedCard, setSelectedCard] = useState<RecentCard | null>(null);
   const wordNewRef = useRef<WordNewHandle>(null);
+
+  useImperativeHandle(ref, () => ({ resetToRoot: () => setSelectedCard(null) }), []);
 
   const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
 

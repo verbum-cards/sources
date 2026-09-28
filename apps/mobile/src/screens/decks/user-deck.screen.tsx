@@ -50,7 +50,7 @@ export const CreateUserDeckModal = ({
         onPress={onClose}
         style={{
           flex: 1,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
           justifyContent: 'center',
           padding: space[5],
         }}

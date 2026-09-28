@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useImperativeHandle, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -53,12 +53,26 @@ const GOAL_ICONS: Record<Goal, LucideIcon> = {
   tech: Cpu,
 };
 
+// Императивный доступ извне — нужен main-tabs.screen.tsx: повторный тап по
+// уже активному табу «Колоды» возвращает к стартовому списку, но только если
+// мы не там (setState на уже null-значение — нет-оп, ререндера и «прыжка»
+// скролла/перезапроса не будет, если пользователь и так на списке).
+export interface DecksScreenHandle {
+  resetToRoot: () => void;
+}
+
 // Таб «Колоды» — каталог + детали, без библиотеки навигации (тот же приём,
 // что и в OnboardingScreen/FsrsDebugScreen): локальный useState с выбранной
 // колодой вместо экрана. Настоящего каталога официальных колод ещё нет
 // (docs/data-model.md, data/ и apps/api удалены) — список зашит в
 // mocks/decks.ts, тот же временный приём, что и словарь для F6/первой сессии.
-export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void }) => {
+export const DecksScreen = ({
+  onOpenProgress,
+  ref,
+}: {
+  onOpenProgress?: () => void;
+  ref?: React.Ref<DecksScreenHandle>;
+}) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
@@ -68,6 +82,18 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      resetToRoot: () => {
+        setSelectedDeck(null);
+        setSelectedUserDeckId(null);
+        setIsCreatingDeck(false);
+      },
+    }),
+    []
+  );
 
   // «Мой словарь» видна в «Мои колоды» сразу, даже пустой — не ждём первого
   // слова (get-or-create тот же, что и при добавлении слова откуда угодно,
