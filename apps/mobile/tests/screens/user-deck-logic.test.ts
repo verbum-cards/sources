@@ -53,6 +53,25 @@ test('createUserDeck: обрезает пробелы по краям назва
   assert.equal(deck?.title, 'Моя колода');
 });
 
+test('loadUserDecks: «Мой словарь» всегда первая, даже если она самая старая', async () => {
+  const { db } = await setupDbs();
+
+  const myVocabularyId = await getOrCreateMyVocabularyDeck(
+    db,
+    'Мой словарь',
+    new Date('2026-01-01T00:00:00.000Z')
+  );
+  await createUserDeck(db, 'Слова из фильма', new Date('2026-02-01T00:00:00.000Z'));
+  await createUserDeck(db, 'Свежая колода', new Date('2026-03-01T00:00:00.000Z'));
+
+  const decks = await loadUserDecks(db);
+  assert.equal(decks[0]?.id, myVocabularyId);
+  assert.deepEqual(
+    decks.map((d) => d.title),
+    ['Мой словарь', 'Свежая колода', 'Слова из фильма']
+  );
+});
+
 test('getOrCreateMyVocabularyDeck: повторный вызов возвращает тот же id, колода не дублируется', async () => {
   const { db } = await setupDbs();
 

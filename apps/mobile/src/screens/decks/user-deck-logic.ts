@@ -22,6 +22,9 @@ export interface UserDeck {
   itemCount: number;
 }
 
+// «Мой словарь» всегда первая в списке (id сверяется с app_meta, не с
+// названием — оно просто текст, ничем не защищено от совпадения), дальше —
+// остальные колоды по свежести.
 export async function loadUserDecks(db: DbExecutor): Promise<readonly UserDeck[]> {
   const userId = await getOrCreateLocalUserId(db);
   const rows = await db.all<{ id: string; title: string; item_count: number }>(
@@ -30,7 +33,8 @@ export async function loadUserDecks(db: DbExecutor): Promise<readonly UserDeck[]
      LEFT JOIN deck_item di ON di.deck_id = d.id
      WHERE d.user_id = ? AND d.deleted_at IS NULL
      GROUP BY d.id
-     ORDER BY d.created_at DESC`,
+     ORDER BY (d.id = (SELECT value FROM app_meta WHERE key = 'my_vocabulary_deck_id')) DESC,
+              d.created_at DESC`,
     [userId]
   );
 

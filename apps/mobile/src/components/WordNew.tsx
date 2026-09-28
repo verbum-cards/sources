@@ -16,9 +16,7 @@ import { WordRow } from './WordRow';
 const SEARCH_DEBOUNCE_MS = 250;
 
 // Императивный доступ извне — нужен главному экрану: пустое состояние
-// (кнопка «Добавить слово», home.screen.tsx) фокусирует поле, а после
-// ручного добавления слова word-add-panel.tsx очищает поиск (сам WordNew
-// делает то же после своего onAddWord, но о ручном вводе не знает).
+// (кнопка «Добавить слово», home.screen.tsx) фокусирует поле.
 export interface WordNewHandle {
   focus: () => void;
   clear: () => void;
@@ -26,15 +24,11 @@ export interface WordNewHandle {
 
 interface Props {
   // Само добавление — экран решает сам: своя колода зовёт addWordToUserDeck,
-  // главный экран — addWordFromDictionary.
+  // главный экран — addWordToUserDeck с id «Моего словаря».
   onAddWord: (word: PackWord) => Promise<void>;
   // itemType:itemId уже добавленных слов — не создавать вторую карточку и
   // показывать их в подсказках последними.
   addedRefs: ReadonlySet<string>;
-  // Enter/сабмит по слову, которого нет в пакете — только на главном экране
-  // (ручной ввод перевода, docs/flows/f06.md). Свои колоды такого не
-  // допускают (ADR-29, слова только из пакета) и проп не передают.
-  onNotFound?: (query: string) => void;
   // Прячет пустое состояние главного экрана, если тапнули прямо в поле
   // (home.screen.tsx) — decks его не передают.
   onFocus?: () => void;
@@ -43,11 +37,13 @@ interface Props {
 
 // Добавление нового слова — общая логика для своих колод
 // (screens/decks/user-deck.screen.tsx) и главного экрана
-// (screens/home/word-add-panel.tsx): поиск по пакету словаря с дебаунсом
+// (screens/home/home.screen.tsx): поиск по пакету словаря с дебаунсом
 // (≤300мс, apps/mobile/CLAUDE.md), список подсказок со значком «+»
 // (мгновенное добавление) и превью по тапу на строку/Enter с кнопкой
-// «Сохранить» в попапе.
-export const WordNew = ({ onAddWord, addedRefs, onNotFound, onFocus, ref }: Props) => {
+// «Сохранить» в попапе. Слово, которого нет в пакете (Enter/сабмит без
+// точного совпадения) — пока без ручного ввода перевода: раньше был на
+// главном экране, временно убран.
+export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
   const { colors, radius, space } = useTheme();
   const { t } = useTranslation('decks');
   const dictionaryDb = useDictionaryDb();
@@ -93,8 +89,8 @@ export const WordNew = ({ onAddWord, addedRefs, onNotFound, onFocus, ref }: Prop
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
   };
 
-  // Enter/сабмит: точное совпадение — превью (как тап по строке), иначе,
-  // если родитель поддерживает ручной ввод (главный экран), передаём ему.
+  // Enter/сабмит: точное совпадение — превью (как тап по строке); слова нет
+  // в пакете — нет-оп (ручного ввода пока нет).
   const handleSubmit = async () => {
     const trimmed = query.trim();
     if (!trimmed) return;
@@ -102,8 +98,6 @@ export const WordNew = ({ onAddWord, addedRefs, onNotFound, onFocus, ref }: Prop
     const found = await findPackWordByLemma(dictionaryDb, trimmed);
     if (found) {
       setSelectedWord(found);
-    } else {
-      onNotFound?.(trimmed);
     }
   };
 

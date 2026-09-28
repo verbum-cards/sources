@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Animated, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -8,8 +8,10 @@ import { Layers, WholeWord } from 'lucide-react-native';
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
+import { WordNew, type WordNewHandle } from '../../components/WordNew';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
+import type { PackWord } from '../../db/entities/dictionary/lookup';
 import { loadDictionaryPackMeta } from '../../db/entities/dictionary/pack-meta';
 import { resetLocalData } from '../../db/entities/user/reset-local-data';
 import { useDb } from '../../hooks/use-db.hook';
@@ -17,6 +19,8 @@ import { useDictionaryDb } from '../../hooks/use-dictionary-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
+import { loadAddedDeckItemIds } from '../decks/decks-logic';
+import { addWordToUserDeck, getOrCreateMyVocabularyDeck } from '../decks/user-deck-logic';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
 import {
   computeStreakDays,
@@ -30,7 +34,6 @@ import {
   type RecentCard,
 } from './home-logic';
 import { ReminderPrompt } from './reminder-prompt';
-import { WordAddPanel, type WordAddPanelHandle } from './word-add-panel';
 
 // «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
 // Не переусложняем — это подпись-подсказка, а не точная метка времени.
@@ -49,7 +52,7 @@ function formatRecentWhen(t: TFunction<'home'>, createdAtIso: string): string {
 // FR-38 + принцип «Просто работает» (docs/product.md): главный экран не
 // вываливает весь набор виджетов сразу после онбординга. Виджеты появляются
 // постепенно, по мере реального использования (см. home-logic.ts):
-//   - 0 карточек            -> только пустое состояние, WordAddPanel ведёт
+//   - 0 карточек            -> только пустое состояние, WordNew ведёт
 //                              к первому своему слову;
 //   - 1..2 карточки         -> + «Недавно добавлены»;
 //   - >= HOME_WIDGETS_REVEAL_THRESHOLD (3, та же цифра, что и в гипотезе
@@ -70,7 +73,18 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
   const dictionaryDb = useDictionaryDb();
   const now = useMemo(() => new Date(), []);
   const [selectedCard, setSelectedCard] = useState<RecentCard | null>(null);
-  const wordAddPanelRef = useRef<WordAddPanelHandle>(null);
+  const wordNewRef = useRef<WordNewHandle>(null);
+
+  const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
+
+  const handleAddWord = useCallback(
+    async (word: PackWord) => {
+      const myVocabularyTitle = t('myVocabularyTitle', { ns: 'common' });
+      const deckId = await getOrCreateMyVocabularyDeck(db, myVocabularyTitle);
+      await addWordToUserDeck(db, deckId, word, myVocabularyTitle);
+    },
+    [db, t]
+  );
 
   // Дебаг-проверка (см. docs/decisions.md, ADR-25): пакет словаря сейчас
   // собирается на месте при первом запуске (App.tsx) — эта строка доказывает
@@ -109,7 +123,7 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
   };
 
   const handleStartAddingFirstWord = () => {
-    wordAddPanelRef.current?.focus();
+    wordNewRef.current?.focus();
     dismissEmptyState();
   };
 
@@ -175,7 +189,12 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
           ) : null}
         </View>
 
-        <WordAddPanel ref={wordAddPanelRef} onFocus={dismissEmptyState} />
+        <WordNew
+          ref={wordNewRef}
+          onFocus={dismissEmptyState}
+          onAddWord={handleAddWord}
+          addedRefs={addedItemIds ?? new Set()}
+        />
 
         {hasCards ? (
           <>
@@ -266,7 +285,7 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
           </>
         ) : emptyStateDismissed ? null : (
           // FR-38: пустое состояние вместо демо-данных — показываем, только
-          // пока карточек вообще нет; WordAddPanel выше уже ведёт к первому
+          // пока карточек вообще нет; WordNew выше уже ведёт к первому
           // своему слову.
           <Animated.View
             style={{

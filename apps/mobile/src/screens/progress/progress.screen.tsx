@@ -69,95 +69,108 @@ export const ProgressScreen = () => {
           <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
         </View>
 
-        {hasCards ? (
-          <>
-            <View style={{ flexDirection: 'row', gap: space[2] }}>
-              {[
-                { n: totalWords ?? 0, label: t('stats.total', { count: totalWords ?? 0 }) },
-                {
-                  n: stats?.learned ?? 0,
-                  label: t('stats.learned', { count: stats?.learned ?? 0 }),
-                },
-                { n: stats?.queued ?? 0, label: t('stats.queued', { count: stats?.queued ?? 0 }) },
-              ].map((s) => (
-                <View
-                  key={s.label}
-                  style={{
-                    flex: 1,
-                    backgroundColor: colors.surfaceSunken,
-                    borderRadius: radius.md,
-                    paddingVertical: 14,
-                    paddingHorizontal: space[3],
-                    gap: 2,
-                  }}
-                >
-                  <Text
-                    style={[type.displayL, { fontSize: 22, lineHeight: 28, color: colors.ink }]}
+        <View style={{ gap: space[8] }}>
+          {hasCards ? (
+            <>
+              <View style={{ flexDirection: 'row', gap: space[4] }}>
+                {[
+                  { n: totalWords ?? 0, label: t('stats.total', { count: totalWords ?? 0 }) },
+                  {
+                    n: stats?.learned ?? 0,
+                    label: t('stats.learned', { count: stats?.learned ?? 0 }),
+                  },
+                  {
+                    n: stats?.queued ?? 0,
+                    label: t('stats.queued', { count: stats?.queued ?? 0 }),
+                  },
+                ].map((s) => (
+                  <View
+                    key={s.label}
+                    style={{
+                      flex: 1,
+                      backgroundColor: colors.surfaceSunken,
+                      borderRadius: radius.md,
+                      paddingVertical: 14,
+                      paddingHorizontal: space[3],
+                      gap: 2,
+                    }}
                   >
-                    {s.n}
-                  </Text>
-                  <Text
-                    style={[type.caption, { fontSize: 12, lineHeight: 16, color: colors.inkMuted }]}
-                  >
-                    {s.label}
-                  </Text>
-                </View>
-              ))}
-            </View>
-
-            <View style={{ gap: space[2] }}>
-              <Text
-                accessibilityRole="header"
-                style={[type.button, { fontSize: 15, color: colors.ink }]}
-              >
-                {t('activity.title')}
-              </Text>
-              <View
-                style={{ flexDirection: 'row', alignItems: 'flex-end', gap: space[2], height: 80 }}
-              >
-                {activity.map((day) => (
-                  <View key={day.date} style={{ flex: 1, alignItems: 'center', gap: space[1] }}>
-                    <View
-                      style={{
-                        width: '100%',
-                        height: Math.max(4, (day.count / maxActivity) * 64),
-                        borderRadius: radius.sm,
-                        backgroundColor: day.count > 0 ? colors.meter : colors.surfaceSunken,
-                      }}
-                    />
-                    <Text style={[type.captionS, { fontSize: 10, color: colors.inkMuted }]}>
-                      {formatDayLabel(day.date)}
+                    <Text
+                      style={[type.displayL, { fontSize: 24, lineHeight: 28, color: colors.ink }]}
+                    >
+                      {s.n}
+                    </Text>
+                    <Text
+                      style={[
+                        type.caption,
+                        { fontSize: 12, lineHeight: 16, color: colors.inkMuted },
+                      ]}
+                    >
+                      {s.label}
                     </Text>
                   </View>
                 ))}
               </View>
-            </View>
 
-            {(deckProgress ?? []).length > 0 ? (
-              <View style={{ gap: space[3] }}>
+              <View style={{ gap: space[2] }}>
                 <Text
                   accessibilityRole="header"
-                  style={[type.button, { fontSize: 15, color: colors.ink }]}
+                  style={[type.button, { fontSize: 24, color: colors.ink }]}
                 >
-                  {t('decks.title')}
+                  {t('activity.title')}
                 </Text>
-                <View style={{ gap: space[4] }}>
-                  {(deckProgress ?? []).map((deck) => (
-                    <ProgressBar
-                      key={deck.deckId}
-                      title={deck.title}
-                      meta={t('decks.meta', { added: deck.added, count: deck.total })}
-                      value={deck.added}
-                      max={deck.total}
-                    />
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'flex-end',
+                    gap: space[2],
+                    height: 80,
+                  }}
+                >
+                  {activity.map((day) => (
+                    <View key={day.date} style={{ flex: 1, alignItems: 'center', gap: space[1] }}>
+                      <View
+                        style={{
+                          width: '100%',
+                          height: Math.max(4, (day.count / maxActivity) * 64),
+                          borderRadius: radius.sm,
+                          backgroundColor: day.count > 0 ? colors.meter : colors.surfaceSunken,
+                        }}
+                      />
+                      <Text style={[type.captionS, { fontSize: 10, color: colors.inkMuted }]}>
+                        {formatDayLabel(day.date)}
+                      </Text>
+                    </View>
                   ))}
                 </View>
               </View>
-            ) : null}
-          </>
-        ) : (
-          <Text style={[type.body, { color: colors.inkMuted }]}>{t('emptyState')}</Text>
-        )}
+
+              {(deckProgress ?? []).length > 0 ? (
+                <View style={{ gap: space[3] }}>
+                  <Text
+                    accessibilityRole="header"
+                    style={[type.button, { fontSize: 24, color: colors.ink }]}
+                  >
+                    {t('decks.title')}
+                  </Text>
+                  <View style={{ gap: space[4] }}>
+                    {(deckProgress ?? []).map((deck) => (
+                      <ProgressBar
+                        key={deck.deckId}
+                        title={deck.title}
+                        meta={t('decks.meta', { added: deck.added, count: deck.total })}
+                        value={deck.added}
+                        max={deck.total}
+                      />
+                    ))}
+                  </View>
+                </View>
+              ) : null}
+            </>
+          ) : (
+            <Text style={[type.body, { color: colors.inkMuted }]}>{t('emptyState')}</Text>
+          )}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

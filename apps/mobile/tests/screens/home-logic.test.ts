@@ -2,14 +2,20 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { test } from 'node:test';
 
+import type { PackWord } from '../../src/db/entities/dictionary/lookup';
 import {
   getOrCreateDeviceId,
   getOrCreateLocalUserId,
   markOnboardingCompleted,
 } from '../../src/db/entities/user/app-meta';
+import type { DbExecutor } from '../../src/db/executor';
 import { migrate } from '../../src/db/migrate';
 import { DEBUG_WORDS } from '../../src/mocks/fsrs-debug-words';
 import { applyRating } from '../../src/scheduler/scheduler';
+import {
+  addWordToUserDeck,
+  getOrCreateMyVocabularyDeck,
+} from '../../src/screens/decks/user-deck-logic';
 import {
   computeStreakDays,
   countCardsCreatedToday,
@@ -20,16 +26,46 @@ import {
   loadRecentCards,
   shouldPromptForReminders,
 } from '../../src/screens/home/home-logic';
-import { addManualWord, addWordFromDictionary } from '../../src/screens/home/word-add-logic';
+import { uuidv7 } from '../../src/utilities/id';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
+const MY_VOCABULARY_TITLE = 'Мой словарь';
+
 // created_at всегда пишется как new Date().toISOString() от локального
-// момента (см. addManualWord и т.д.) — конструируем тестовые фикстуры так же,
-// через локальные компоненты даты, а не литералы с суффиксом Z: иначе тест
-// зависит от часового пояса машины, на которой запущен (день по UTC и день
-// по местному времени — не одно и то же около полуночи).
+// момента (см. addWordToUserDeck и т.д.) — конструируем тестовые фикстуры так
+// же, через локальные компоненты даты, а не литералы с суффиксом Z: иначе
+// тест зависит от часового пояса машины, на которой запущен (день по UTC и
+// день по местному времени — не одно и то же около полуночи).
 function localIso(year: number, month: number, day: number, hour = 12): string {
   return new Date(year, month, day, hour).toISOString();
+}
+
+// Замена бывших word-add-logic.ts::addWordFromDictionary/addManualWord
+// (удалены — главный экран теперь использует components/WordNew.tsx напрямую
+// через user-deck-logic.ts): тот же результат (card + card_content в «Моём
+// словаре»), собранный из уже существующей логики добавления слова в колоду.
+async function addWordFixture(db: DbExecutor, word: PackWord): Promise<string> {
+  const deckId = await getOrCreateMyVocabularyDeck(db, MY_VOCABULARY_TITLE);
+  await addWordToUserDeck(db, deckId, word, MY_VOCABULARY_TITLE);
+  const card = await db.get<{ id: string }>('SELECT id FROM card WHERE item_id = ?', [word.itemId]);
+
+  return card!.id;
+}
+
+async function addManualWordFixture(
+  db: DbExecutor,
+  { lemma, translation, example = '' }: { lemma: string; translation: string; example?: string }
+): Promise<string> {
+  return addWordFixture(db, {
+    itemId: uuidv7(),
+    itemType: 'sense',
+    lemma,
+    translation,
+    example,
+    exampleTranslation: '',
+    definition: '',
+    cefr: 'A2',
+  });
 }
 
 async function setupDb() {
@@ -53,7 +89,7 @@ test('loadRecentCards: отдаёт ipa, pos, cefr и definition из слова
   const { db } = await setupDb();
   const word = DEBUG_WORDS[0];
 
-  await addWordFromDictionary({ db, word });
+  await addWordFixture(db, word);
 
   const [card] = await loadRecentCards(db);
   assert.equal(card?.ipa, word.ipa);
@@ -63,15 +99,29 @@ test('loadRecentCards: отдаёт ipa, pos, cefr и definition из слова
   assert.equal(card?.itemType, 'sense');
 });
 
-test('loadRecentCards: отдаёт example/exampleTranslation — нужны карточке обучения по тапу на слово', async () => {
-  const { db } = await setupDb();
+test('loadRecentCards: отдаёт example/exampleTranslation, null для отсутствующего example_translation', async () => {
+  const { db, userId } = await setupDb();
+  const now = new Date().toISOString();
 
-  await addManualWord({
-    db,
-    lemma: 'serendipity',
-    translation: 'счастливая случайность',
-    example: 'It was pure serendipity.',
-  });
+  // Раньше это писал word-add-logic.ts::addManualWord, оставляя
+  // example_translation NULL (колонку не заполнял вовсе) — тот же случай,
+  // но напрямую SQL, раз готовой функции под это больше нет.
+  await db.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['manual-card', userId, 'sense', 'manual-item', 'active', now, now]
+  );
+  await db.run(
+    `INSERT INTO card_content (card_id, lemma, translation, example, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?)`,
+    [
+      'manual-card',
+      'serendipity',
+      'счастливая случайность',
+      'It was pure serendipity.',
+      'manual',
+      now,
+    ]
+  );
 
   const [card] = await loadRecentCards(db);
   assert.equal(card?.example, 'It was pure serendipity.');
@@ -81,10 +131,10 @@ test('loadRecentCards: отдаёт example/exampleTranslation — нужны к
 test('loadHomeStats: known -> learned, активная без ревью -> queued, после applyRating выходит из queued', async () => {
   const { db, userId, deviceId } = await setupDb();
 
-  const knownCardId = await addManualWord({ db, lemma: 'wander', translation: 'бродить' });
+  const knownCardId = await addManualWordFixture(db, { lemma: 'wander', translation: 'бродить' });
   await db.run("UPDATE card SET status = 'known' WHERE id = ?", [knownCardId]);
 
-  const queuedCardId = await addManualWord({ db, lemma: 'fierce', translation: 'свирепый' });
+  const queuedCardId = await addManualWordFixture(db, { lemma: 'fierce', translation: 'свирепый' });
 
   assert.deepEqual(await loadHomeStats(db), { learned: 1, queued: 1 });
 
@@ -138,8 +188,8 @@ test('computeStreakDays: ни сегодня, ни вчера -> 0', () => {
 
 test('loadCardCreationDates: отдаёт created_at всех живых карточек пользователя', async () => {
   const { db } = await setupDb();
-  await addManualWord({ db, lemma: 'wander', translation: 'бродить' });
-  await addManualWord({ db, lemma: 'fierce', translation: 'свирепый' });
+  await addManualWordFixture(db, { lemma: 'wander', translation: 'бродить' });
+  await addManualWordFixture(db, { lemma: 'fierce', translation: 'свирепый' });
 
   const dates = await loadCardCreationDates(db);
   assert.equal(dates.length, 2);
