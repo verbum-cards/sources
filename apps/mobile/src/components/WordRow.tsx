@@ -1,24 +1,40 @@
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
+import { Check, ListPlus } from 'lucide-react-native';
 
 import { useTheme } from '../providers/theme.provider';
-import { formatPos } from '../utilities/format-pos';
 import { Chip } from './Chip';
 
 type Props = {
   word: string;
   ipa?: string | null;
-  pos?: string | null;
   cefr?: string | null;
   translation: string;
   when?: string;
   last?: boolean;
   onPress?: () => void;
+  // Иконка добавления слова по одному (колода, decks.screen.tsx) — если
+  // задан onAdd, addLabel обязателен (аккессибилити-подпись кнопки); added
+  // переключает иконку на «уже добавлено» (не нажимается). Взаимоисключимо
+  // с when — оба сразу нигде не используются.
+  onAdd?: () => void;
+  added?: boolean;
+  addLabel?: string;
 };
 
-export function WordRow({ word, ipa, pos, cefr, translation, when, last, onPress }: Props) {
+export function WordRow({
+  word,
+  ipa,
+  cefr,
+  translation,
+  when,
+  last,
+  onPress,
+  onAdd,
+  added,
+  addLabel,
+}: Props) {
   const { colors, space, type } = useTheme();
-  const posLabel = formatPos(pos);
 
   return (
     <Pressable
@@ -46,7 +62,25 @@ export function WordRow({ word, ipa, pos, cefr, translation, when, last, onPress
           {translation}
         </Text>
       </View>
-      {when ? <Chip label={when} variant="quiet" /> : null}
+      {onAdd ? (
+        added ? (
+          <View style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}>
+            <Check size={20} color={colors.inkMuted} />
+          </View>
+        ) : (
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={addLabel}
+            onPress={onAdd}
+            hitSlop={8}
+            style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}
+          >
+            <ListPlus size={20} color={colors.action} />
+          </Pressable>
+        )
+      ) : when ? (
+        <Chip label={when} variant="quiet" />
+      ) : null}
     </Pressable>
   );
 }

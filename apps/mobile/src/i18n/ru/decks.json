@@ -8,6 +8,7 @@
   "wordsCount_other": "{{count}} слова",
   "back": "Колоды",
   "addDeck": "Добавить колоду",
+  "addWord": "Добавить слово",
   "alreadyAdded": "Колода уже добавлена",
   "goToProgress": "Перейти к тренировкам",
   "categories": {

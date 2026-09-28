@@ -2,17 +2,52 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ChevronLeft } from 'lucide-react-native';
+import {
+  Briefcase,
+  ChevronLeft,
+  Cpu,
+  Film,
+  Gamepad2,
+  GraduationCap,
+  Heart,
+  Plane,
+  Truck,
+  type LucideIcon,
+} from 'lucide-react-native';
+
+import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
-import { DECKS, type MockDeck } from '../../mocks/decks';
+import { DECKS, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
-import { addDeckToUser, loadAddedDeckIds } from './decks-logic';
+import {
+  addDeckToUser,
+  addSingleDeckWord,
+  groupDecksByGoal,
+  isDeckWordAdded,
+  loadAddedDeckIds,
+  loadAddedDeckItemIds,
+} from './decks-logic';
+
+// Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
+// онбординга) — один значок на категорию, а не на колоду: новая колода
+// просто получает существующий тег, без необходимости придумывать под неё
+// отдельную иконку.
+const GOAL_ICONS: Record<Goal, LucideIcon> = {
+  travel: Plane,
+  work: Briefcase,
+  move: Truck,
+  exam: GraduationCap,
+  media: Film,
+  self: Heart,
+  games: Gamepad2,
+  tech: Cpu,
+};
 
 // Таб «Колоды» — каталог + детали, без библиотеки навигации (тот же приём,
 // что и в OnboardingScreen/FsrsDebugScreen): локальный useState с выбранной
@@ -24,6 +59,7 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
   const { t } = useTranslation('decks');
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
+  const deckGroups = groupDecksByGoal(DECKS);
 
   if (selectedDeck) {
     return (
@@ -38,7 +74,7 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
-      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[4] }}>
+      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
         <View style={{ gap: space[2] }}>
           <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
             {t('title')}
@@ -46,15 +82,34 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
           <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
         </View>
 
-        <View style={{ gap: space[3] }}>
-          {DECKS.map((deck) => (
-            <DeckRow
-              key={deck.id}
-              deck={deck}
-              isAdded={addedDeckIds?.has(deck.id) ?? false}
-              onPress={() => setSelectedDeck(deck)}
-            />
-          ))}
+        <View style={{ gap: space[8] }}>
+          {deckGroups.map((group) => {
+            const Icon = GOAL_ICONS[group.goal];
+
+            return (
+              <View key={group.goal} style={{ gap: space[4] }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+                  <Icon size={40} color={colors.ink} />
+                  <Text
+                    accessibilityRole="header"
+                    style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
+                  >
+                    {t(`goal.options.${group.goal}`, { ns: 'onboarding' })}
+                  </Text>
+                </View>
+                <View style={{ gap: space[3] }}>
+                  {group.decks.map((deck) => (
+                    <DeckRow
+                      key={deck.id}
+                      deck={deck}
+                      isAdded={addedDeckIds?.has(deck.id) ?? false}
+                      onPress={() => setSelectedDeck(deck)}
+                    />
+                  ))}
+                </View>
+              </View>
+            );
+          })}
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -79,10 +134,10 @@ const DeckRow = ({
       onPress={onPress}
       style={{
         backgroundColor: colors.surface,
-        borderRadius: radius.lg,
+        borderRadius: radius.md,
         borderWidth: 1,
         borderColor: colors.line,
-        padding: space[4],
+        padding: space[6],
         gap: space[1],
       }}
     >
@@ -94,7 +149,7 @@ const DeckRow = ({
           gap: space[2],
         }}
       >
-        <Text style={[type.title, { color: colors.ink }]}>{deck.title}</Text>
+        <Text style={[type.title, { fontSize: 24, color: colors.ink }]}>{deck.title}</Text>
         {isAdded ? <Chip label={t('added')} variant="quiet" /> : null}
       </View>
       <Text style={[type.bodyS, { color: colors.inkMuted }]}>
@@ -119,11 +174,16 @@ const DeckDetail = ({
   const { t } = useTranslation('decks');
   const db = useDb();
   const [isAdding, setIsAdding] = useState(false);
+  const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
 
   const handleAdd = async () => {
     setIsAdding(true);
     await addDeckToUser(db, deck);
     setIsAdding(false);
+  };
+
+  const handleAddWord = async (word: DeckWord) => {
+    await addSingleDeckWord(db, deck, word);
   };
 
   return (
@@ -166,7 +226,7 @@ const DeckDetail = ({
               <View
                 style={{
                   backgroundColor: colors.surface,
-                  borderRadius: radius.lg,
+                  borderRadius: radius.md,
                   borderWidth: 1,
                   borderColor: colors.line,
                   overflow: 'hidden',
@@ -180,6 +240,9 @@ const DeckDetail = ({
                     cefr={word.cefr}
                     translation={word.translation}
                     last={i === all.length - 1}
+                    added={isDeckWordAdded(addedItemIds ?? new Set(), word)}
+                    addLabel={t('addWord')}
+                    onAdd={() => void handleAddWord(word)}
                   />
                 ))}
               </View>
@@ -188,7 +251,15 @@ const DeckDetail = ({
         </View>
       </ScrollView>
 
-      <View style={{ padding: space[5], gap: space[2] }}>
+      <View
+        style={{
+          padding: space[5],
+          gap: space[2],
+          borderTopLeftRadius: radius.md,
+          borderTopRightRadius: radius.md,
+          backgroundColor: colors.surface,
+        }}
+      >
         {isAdded ? (
           <>
             <Text style={[type.bodyS, { color: colors.inkMuted, textAlign: 'center' }]}>

@@ -12,6 +12,13 @@ import type { Cefr, DeckContext, Deck as DeckMeta, ItemType, Uuid } from '@cards
 // полный чек-лист скилла (25–50, доля выражений ≥30%) — осознанное сокращение
 // для первой версии, не ошибка: 12–15 на колоду, доля выражений всё равно
 // держится ≥30%.
+//
+// goalTags (ADR-24, decks.screen.tsx группирует каталог по ним) — не только
+// «travel»: у всех ситуационных колод добавлен «work» там, где это реальный
+// сценарий (деловая поездка — тот же ресторан/отель/аэропорт/такси, что и в
+// отпуске), «move» — там, где лексика нужна переехавшему (ориентация в новом
+// городе, знакомство с соседями). Без искусственных тегов ради разнообразия
+// групп — «games»/«tech»/«exam»/«media» этим колодам не подходят.
 export interface DeckWord {
   itemId: Uuid;
   itemType: ItemType;
@@ -154,7 +161,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Ресторан и кафе',
-    goalTags: ['travel', 'self'],
+    goalTags: ['travel', 'self', 'work'],
     type: 'official',
     context: restaurantContext,
     items: [
@@ -324,7 +331,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Отель',
-    goalTags: ['travel'],
+    goalTags: ['travel', 'work'],
     type: 'official',
     context: hotelContext,
     items: [
@@ -492,7 +499,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Аэропорт и перелёт',
-    goalTags: ['travel'],
+    goalTags: ['travel', 'work'],
     type: 'official',
     context: airportContext,
     items: [
@@ -662,7 +669,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Такси',
-    goalTags: ['travel'],
+    goalTags: ['travel', 'work'],
     type: 'official',
     context: taxiContext,
     items: [
@@ -830,7 +837,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Как пройти',
-    goalTags: ['travel'],
+    goalTags: ['travel', 'move'],
     type: 'official',
     context: directionsContext,
     items: [
@@ -994,7 +1001,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Знакомство и small talk',
-    goalTags: ['self', 'travel'],
+    goalTags: ['self', 'travel', 'work', 'move'],
     type: 'official',
     context: smallTalkContext,
     items: [
