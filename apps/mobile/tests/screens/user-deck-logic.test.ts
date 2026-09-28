@@ -14,6 +14,7 @@ import {
   getOrCreateMyVocabularyDeck,
   loadUserDecks,
   loadUserDeckWords,
+  removeWordFromUserDeck,
 } from '../../src/screens/decks/user-deck-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
@@ -231,6 +232,51 @@ test('loadUserDeckWords: слово, которого нет в пакете (в
   assert.equal(words[0]?.lemma, 'serendipity');
   assert.equal(words[0]?.translation, 'счастливая случайность');
   assert.equal(words[0]?.cefr, undefined);
+});
+
+test('removeWordFromUserDeck: убирает слово из колоды (deck_item), карточку не трогает', async () => {
+  const { db, dictionaryDb, userId } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+
+  await removeWordFromUserDeck(db, deckId, menu.itemType, menu.itemId);
+
+  const words = await loadUserDeckWords(db, dictionaryDb, deckId);
+  assert.deepEqual(words, []);
+
+  const card = await db.get<{ id: string; deleted_at: string | null }>(
+    'SELECT id, deleted_at FROM card WHERE user_id = ? AND item_id = ?',
+    [userId, menu.itemId]
+  );
+  assert.ok(card, 'карточка остаётся — свайп по колоде не удаляет слово из словаря пользователя');
+  assert.equal(card?.deleted_at, null);
+});
+
+test('removeWordFromUserDeck: не трогает то же слово в другой колоде', async () => {
+  const { db, dictionaryDb } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  const otherDeckId = await createUserDeck(db, 'Другая колода');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+  await addWordToUserDeck(db, otherDeckId, menu, 'Мой словарь');
+
+  await removeWordFromUserDeck(db, deckId, menu.itemType, menu.itemId);
+
+  assert.deepEqual(await loadUserDeckWords(db, dictionaryDb, deckId), []);
+  const otherWords = await loadUserDeckWords(db, dictionaryDb, otherDeckId);
+  assert.equal(otherWords.length, 1);
+});
+
+test('removeWordFromUserDeck: слова не было в колоде — нет-оп, без ошибки', async () => {
+  const { db, dictionaryDb } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+
+  await removeWordFromUserDeck(db, deckId, 'sense', 'not-there');
+
+  assert.deepEqual(await loadUserDeckWords(db, dictionaryDb, deckId), []);
 });
 
 test('addWordToUserDeck: слово попадает и в свою колоду, и в «Мой словарь»', async () => {

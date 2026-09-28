@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ChevronLeft } from 'lucide-react-native';
 
 import { Button } from '../../components/Button';
+import { SwipeToDelete } from '../../components/SwipeToDelete';
 import { WordNew } from '../../components/WordNew';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
@@ -13,7 +14,12 @@ import { useDb } from '../../hooks/use-db.hook';
 import { useDictionaryDb } from '../../hooks/use-dictionary-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
-import { addWordToUserDeck, createUserDeck, loadUserDeckWords } from './user-deck-logic';
+import {
+  addWordToUserDeck,
+  createUserDeck,
+  loadUserDeckWords,
+  removeWordFromUserDeck,
+} from './user-deck-logic';
 
 // «Создать колоду» — только название, тело как у ProfileName (TextInput +
 // сохранение), но в модалке, а не на постоянном экране: одноразовое
@@ -111,70 +117,96 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
   const addedRefs = new Set((deckWords ?? []).map((word) => `${word.itemType}:${word.itemId}`));
 
   const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
+  // Один ключ на весь список слов колоды — одновременно открыт максимум один
+  // SwipeToDelete: свайп по другой строке или тап вне уже открытой закрывают
+  // предыдущую, а не добавляют вторую открытую поверх.
+  const [revealedWordKey, setRevealedWordKey] = useState<string | null>(null);
+
+  const handleRemoveWord = (word: PackWord) => {
+    void removeWordFromUserDeck(db, deckId, word.itemType, word.itemId);
+  };
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
-      <ScrollView
-        keyboardShouldPersistTaps="handled"
-        contentContainerStyle={{ padding: space[5], gap: space[4] }}
-      >
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('back')}
-          onPress={onBack}
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: space[1],
-            minHeight: 44,
-            alignSelf: 'flex-start',
-          }}
+      {/* Тап вне открытой строки (по пустому месту — вложенные Pressable
+          вроде WordRow/кнопок забирают touch себе раньше) закрывает свайп. */}
+      <Pressable style={{ flex: 1 }} onPress={() => setRevealedWordKey(null)}>
+        <ScrollView
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={{ padding: space[5], gap: space[4] }}
         >
-          <ChevronLeft size={20} color={colors.inkMuted} />
-          <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
-        </Pressable>
-
-        <WordNew
-          onAddWord={async (word) => {
-            await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
-          }}
-          addedRefs={addedRefs}
-        />
-
-        <View style={{ gap: space[2] }}>
-          <Text
-            accessibilityRole="header"
-            style={[type.button, { fontSize: 15, color: colors.ink }]}
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('back')}
+            onPress={onBack}
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: space[1],
+              minHeight: 44,
+              alignSelf: 'flex-start',
+            }}
           >
-            {t('userDecks.wordsInDeck', { count: deckWords?.length ?? 0 })}
-          </Text>
-          {deckWords && deckWords.length > 0 ? (
-            <View
-              style={{
-                backgroundColor: colors.surface,
-                borderRadius: radius.md,
-                borderWidth: 1,
-                borderColor: colors.line,
-                overflow: 'hidden',
-              }}
+            <ChevronLeft size={20} color={colors.inkMuted} />
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
+          </Pressable>
+
+          <WordNew
+            onAddWord={async (word) => {
+              await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
+            }}
+            addedRefs={addedRefs}
+          />
+
+          <View style={{ gap: space[2] }}>
+            <Text
+              accessibilityRole="header"
+              style={[type.button, { fontSize: 15, color: colors.ink }]}
             >
-              {deckWords.map((word, i, all) => (
-                <WordRow
-                  key={`${word.itemType}:${word.itemId}`}
-                  word={word.lemma}
-                  ipa={word.ipa}
-                  cefr={word.cefr}
-                  translation={word.translation}
-                  last={i === all.length - 1}
-                  onPress={() => setSelectedWord(word)}
-                />
-              ))}
-            </View>
-          ) : (
-            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('userDecks.empty')}</Text>
-          )}
-        </View>
-      </ScrollView>
+              {t('userDecks.wordsInDeck', { count: deckWords?.length ?? 0 })}
+            </Text>
+            {deckWords && deckWords.length > 0 ? (
+              <View
+                style={{
+                  backgroundColor: colors.surface,
+                  borderRadius: radius.md,
+                  borderWidth: 1,
+                  borderColor: colors.line,
+                  overflow: 'hidden',
+                }}
+              >
+                {deckWords.map((word, i, all) => {
+                  const wordKey = `${word.itemType}:${word.itemId}`;
+
+                  return (
+                    <SwipeToDelete
+                      key={wordKey}
+                      deleteLabel={t('userDecks.removeWord')}
+                      onDelete={() => handleRemoveWord(word)}
+                      revealed={revealedWordKey === wordKey}
+                      onReveal={() => setRevealedWordKey(wordKey)}
+                      onHide={() =>
+                        setRevealedWordKey((current) => (current === wordKey ? null : current))
+                      }
+                    >
+                      <WordRow
+                        word={word.lemma}
+                        ipa={word.ipa}
+                        cefr={word.cefr}
+                        translation={word.translation}
+                        last={i === all.length - 1}
+                        onPress={() => setSelectedWord(word)}
+                      />
+                    </SwipeToDelete>
+                  );
+                })}
+              </View>
+            ) : (
+              <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('userDecks.empty')}</Text>
+            )}
+          </View>
+        </ScrollView>
+      </Pressable>
 
       <WordPopup
         card={

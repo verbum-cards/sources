@@ -219,6 +219,26 @@ export async function addExistingCardToDeck(
   notifyChange(['deck_item']);
 }
 
+// Свайп по слову в списке «в колоде» (UserDeckDetail) — убирает только
+// ссылку (deck_item) из этой конкретной колоды, саму карточку не трогает:
+// слово может быть ещё в «Мой словарь» или другой колоде, да и повторения
+// FSRS по нему — отдельная история, свайп по списку колоды её не отменяет.
+export async function removeWordFromUserDeck(
+  db: DbExecutor,
+  deckId: string,
+  itemType: ItemType,
+  itemId: string,
+  now: Date = new Date()
+): Promise<void> {
+  await db.run(`DELETE FROM deck_item WHERE deck_id = ? AND item_type = ? AND item_id = ?`, [
+    deckId,
+    itemType,
+    itemId,
+  ]);
+  await db.run(`UPDATE deck SET updated_at = ? WHERE id = ?`, [now.toISOString(), deckId]);
+  notifyChange(['deck_item']);
+}
+
 // Любое отдельное слово, которое пользователь добавляет себе в карточки — с
 // главного экрана (word-add-logic.ts), из официальной колоды
 // (decks-logic.ts::addSingleDeckWord) или из своей (addWordToUserDeck ниже)

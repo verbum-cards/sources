@@ -6,7 +6,7 @@
 
 - Expo (актуальный SDK), EAS Build и EAS Submit, EAS Update для беты.
 - expo-sqlite — локальная база; ts-fsrs — интервалы повторения.
-- Reanimated — анимации; lucide-react-native — иконки; шрифты Unbounded и Onest через @expo-google-fonts.
+- Reanimated — анимации; react-native-gesture-handler — жесты (свайпы; `GestureHandlerRootView` в `App.tsx`, ADR-31); lucide-react-native — иконки; шрифты Unbounded и Onest через @expo-google-fonts.
 - Тема — `@cards/tokens`, типы — `@cards/contracts`.
 
 ## Структура (целевая)

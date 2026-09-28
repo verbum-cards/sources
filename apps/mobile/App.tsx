@@ -3,6 +3,7 @@ import './src/i18n';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Text, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Onest_400Regular, Onest_500Medium, Onest_600SemiBold } from '@expo-google-fonts/onest';
 import { Unbounded_600SemiBold, useFonts } from '@expo-google-fonts/unbounded';
 import { StatusBar } from 'expo-status-bar';
@@ -125,20 +126,24 @@ export const App = () => {
   if (!fontsLoaded || ((!db || !dictionaryDb) && !dbError)) return null;
 
   return (
-    <SafeAreaProviderWrapper>
-      <ThemeProvider>
-        <ToastProvider>
-          {dbError ? (
-            <DbErrorView />
-          ) : (
-            <DbProvider db={db!}>
-              <DictionaryDbProvider db={dictionaryDb!}>
-                <AppContent />
-              </DictionaryDbProvider>
-            </DbProvider>
-          )}
-        </ToastProvider>
-      </ThemeProvider>
-    </SafeAreaProviderWrapper>
+    // Снаружи всего остального — так требует сама библиотека (react-native-gesture-handler),
+    // иначе жесты (сейчас — свайп-удаление слова, components/SwipeToDelete.tsx) не работают.
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProviderWrapper>
+        <ThemeProvider>
+          <ToastProvider>
+            {dbError ? (
+              <DbErrorView />
+            ) : (
+              <DbProvider db={db!}>
+                <DictionaryDbProvider db={dictionaryDb!}>
+                  <AppContent />
+                </DictionaryDbProvider>
+              </DbProvider>
+            )}
+          </ToastProvider>
+        </ThemeProvider>
+      </SafeAreaProviderWrapper>
+    </GestureHandlerRootView>
   );
 };
