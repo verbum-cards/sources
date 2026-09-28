@@ -186,8 +186,12 @@ export async function addDeckToUser(
 // Заодно попадает и в «Мой словарь» (user-deck-logic.ts::addToMyVocabulary) —
 // source_deck_id карточки при этом не меняется, он по-прежнему указывает на
 // эту официальную колоду, «Мой словарь» — отдельная ссылка (deck_item), не
-// замена источника. Возвращает false, если слово уже было — нет-оп, а не
-// ошибка (тот же критерий, что и addDeckToUser).
+// замена источника. Возвращает false, если карточка уже была (нет-оп для
+// card/card_content, а не ошибка — тот же критерий, что и addDeckToUser), но
+// «Мой словарь» всё равно пополняется: слово может уже быть карточкой из
+// другой колоды или с главного экрана — тогда именно это действие (нажатие
+// «+»/«Сохранить» здесь) и есть единственный шанс связать его с «Мой
+// словарь», пропускать его нельзя.
 export async function addSingleDeckWord(
   db: DbExecutor,
   deck: MockDeck,
@@ -197,11 +201,13 @@ export async function addSingleDeckWord(
 ): Promise<boolean> {
   const userId = await getOrCreateLocalUserId(db);
   const exists = await isItemAlreadyAdded(db, userId, word.itemType, word.itemId);
-  if (exists) return false;
 
-  await addDeckWordCard(db, userId, word, deck.id, now);
+  if (!exists) {
+    await addDeckWordCard(db, userId, word, deck.id, now);
+    notifyChange(['card', 'card_content']);
+  }
+
   await addToMyVocabulary(db, word.itemType, word.itemId, myVocabularyTitle, now);
-  notifyChange(['card', 'card_content']);
 
-  return true;
+  return !exists;
 }

@@ -6,6 +6,7 @@ import { EqualApproximately, X } from 'lucide-react-native';
 import { useTheme } from '../providers/theme.provider';
 import { formatPos } from '../utilities/format-pos';
 import { splitAroundWord } from '../utilities/highlight-word';
+import { Button } from './Button';
 
 // Минимальная форма слова, которая нужна попапу — не завязана на RecentCard
 // (Home), чтобы им же можно было показывать слова из колод (DeckWord,
@@ -25,9 +26,14 @@ export interface WordPopupCard {
 interface Props {
   card: WordPopupCard | null;
   onClose: () => void;
+  // То же действие, что и иконка добавления у строки слова в колоде
+  // (decks.screen.tsx/user-deck.screen.tsx) — вызывающий передаёт её, только
+  // если слово ещё не добавлено; если undefined, кнопка не показывается (как
+  // и сама иконка в этом случае).
+  onSave?: () => void;
 }
 
-export const WordPopup = ({ card, onClose }: Props) => {
+export const WordPopup = ({ card, onClose, onSave }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const example = card?.example ? splitAroundWord(card.example, card.word) : null;
@@ -132,7 +138,7 @@ export const WordPopup = ({ card, onClose }: Props) => {
                     paddingHorizontal: space[2],
                   }}
                 >
-                  <EqualApproximately style={{ marginTop: -2, color: colors.inkMuted }} />
+                  <EqualApproximately size={16} color={colors.inkMuted} />
                   <Text
                     style={[
                       type.bodyS,
@@ -175,6 +181,12 @@ export const WordPopup = ({ card, onClose }: Props) => {
                       {card.exampleTranslation}
                     </Text>
                   ) : null}
+                </View>
+              ) : null}
+
+              {onSave ? (
+                <View style={{ paddingHorizontal: space[4], paddingBottom: space[4] }}>
+                  <Button label={t('save', { ns: 'common' })} size="lg" block onPress={onSave} />
                 </View>
               ) : null}
             </View>

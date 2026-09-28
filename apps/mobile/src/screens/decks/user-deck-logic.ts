@@ -66,18 +66,32 @@ export async function getOrCreateMyVocabularyDeck(
   title: string,
   now: Date = new Date()
 ): Promise<string> {
+  const userId = await getOrCreateLocalUserId(db);
   const existing = await db.get<{ value: string }>(
     "SELECT value FROM app_meta WHERE key = 'my_vocabulary_deck_id'"
   );
   if (existing?.value) {
-    return existing.value;
+    // app_meta и deck — разные таблицы без FK (deck.id не ссылается никуда
+    // формально), поэтому указатель может «протухнуть»: например, если
+    // локальный user_id сменился (пересоздание app_meta при разработке) —
+    // тогда колода с этим id физически есть, но принадлежит уже другому
+    // user_id, и loadUserDecks её не найдёт. Проверяем оба условия, не
+    // только факт существования строки.
+    const deckRow = await db.get<{ id: string }>(
+      'SELECT id FROM deck WHERE id = ? AND user_id = ? AND deleted_at IS NULL',
+      [existing.value, userId]
+    );
+    if (deckRow) {
+      return existing.value;
+    }
   }
 
   const deckId = await createUserDeck(db, title, now);
-  await db.run('INSERT INTO app_meta (key, value) VALUES (?, ?)', [
-    'my_vocabulary_deck_id',
-    deckId,
-  ]);
+  await db.run(
+    `INSERT INTO app_meta (key, value) VALUES ('my_vocabulary_deck_id', ?)
+     ON CONFLICT (key) DO UPDATE SET value = excluded.value`,
+    [deckId]
+  );
 
   return deckId;
 }

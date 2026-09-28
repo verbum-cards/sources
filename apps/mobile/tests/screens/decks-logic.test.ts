@@ -243,3 +243,23 @@ test('addSingleDeckWord: слово попадает и в «Мой словар
   );
   assert.equal(card?.source_deck_id, restaurant.id);
 });
+
+test('addSingleDeckWord: слово, уже существующее карточкой из другого источника, всё равно попадает в «Мой словарь»', async () => {
+  const { db, userId } = await setupDb();
+  const word = restaurant.items[0];
+  const now = '2026-01-01T00:00:00.000Z';
+
+  // Карточка уже есть — например, слово добавили с главного экрана или из
+  // другой колоды, где оно тоже встречается.
+  await db.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['existing-card', userId, word.itemType, word.itemId, 'active', now, now]
+  );
+
+  const added = await addSingleDeckWord(db, restaurant, word, 'Мой словарь', new Date(now));
+
+  assert.equal(added, false, 'новая карточка не создаётся — она уже была');
+  const [myVocabulary] = await loadUserDecks(db);
+  assert.equal(myVocabulary?.title, 'Мой словарь');
+  assert.equal(myVocabulary?.itemCount, 1);
+});

@@ -11,6 +11,7 @@ import {
   addExistingCardToDeck,
   addWordToUserDeck,
   createUserDeck,
+  getOrCreateMyVocabularyDeck,
   loadUserDecks,
   loadUserDeckWords,
 } from '../../src/screens/decks/user-deck-logic';
@@ -50,6 +51,64 @@ test('createUserDeck: обрезает пробелы по краям назва
 
   const [deck] = await loadUserDecks(db);
   assert.equal(deck?.title, 'Моя колода');
+});
+
+test('getOrCreateMyVocabularyDeck: повторный вызов возвращает тот же id, колода не дублируется', async () => {
+  const { db } = await setupDbs();
+
+  const first = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+  const second = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+
+  assert.equal(first, second);
+  const decks = await loadUserDecks(db);
+  assert.equal(decks.length, 1);
+});
+
+test('getOrCreateMyVocabularyDeck: протухший указатель в app_meta (колода удалена/не создана) — создаёт новую, а не возвращает мёртвый id', async () => {
+  const { db } = await setupDbs();
+
+  await db.run('INSERT INTO app_meta (key, value) VALUES (?, ?)', [
+    'my_vocabulary_deck_id',
+    'does-not-exist',
+  ]);
+
+  const deckId = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+
+  assert.notEqual(deckId, 'does-not-exist');
+  const decks = await loadUserDecks(db);
+  assert.equal(decks.length, 1);
+  assert.equal(decks[0]?.id, deckId);
+
+  // Указатель в app_meta перезаписан на новый id — следующий вызов не будет
+  // снова спотыкаться о мёртвую ссылку.
+  const second = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+  assert.equal(second, deckId);
+});
+
+test('getOrCreateMyVocabularyDeck: указатель ведёт на колоду другого user_id — создаёт новую для текущего пользователя', async () => {
+  const { db } = await setupDbs();
+  const now = '2026-01-01T00:00:00.000Z';
+  const foreignDeckId = 'deck-of-another-user';
+
+  // Колода физически существует (та же строка id), но принадлежит другому
+  // user_id — воспроизводит протухший указатель после смены локального
+  // пользователя (например, при повторном прогоне миграций в разработке).
+  await db.run(
+    `INSERT INTO deck (id, user_id, title, lang, native_lang, type, created_at, updated_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [foreignDeckId, 'some-other-user-id', 'Мой словарь', 'en', 'ru', 'user', now, now]
+  );
+  await db.run('INSERT INTO app_meta (key, value) VALUES (?, ?)', [
+    'my_vocabulary_deck_id',
+    foreignDeckId,
+  ]);
+
+  const deckId = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+
+  assert.notEqual(deckId, foreignDeckId);
+  const decks = await loadUserDecks(db);
+  assert.equal(decks.length, 1);
+  assert.equal(decks[0]?.id, deckId);
 });
 
 test('addWordToUserDeck: добавляет ссылку и создаёт настоящую карточку', async () => {
@@ -167,5 +226,24 @@ test('addWordToUserDeck: слово попадает и в свою колоду
   const ownDeck = decks.find((d) => d.id === deckId);
   const myVocabulary = decks.find((d) => d.title === 'Мой словарь');
   assert.equal(ownDeck?.itemCount, 1);
+  assert.equal(myVocabulary?.itemCount, 1);
+});
+
+test('addWordToUserDeck: слово, уже существующее карточкой из другого источника, тоже попадает в «Мой словарь»', async () => {
+  const { db, dictionaryDb, userId } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+
+  const now = '2026-01-01T00:00:00.000Z';
+  await db.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['existing-card', userId, menu.itemType, menu.itemId, 'active', now, now]
+  );
+
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь', new Date(now));
+
+  const decks = await loadUserDecks(db);
+  const myVocabulary = decks.find((d) => d.title === 'Мой словарь');
   assert.equal(myVocabulary?.itemCount, 1);
 });

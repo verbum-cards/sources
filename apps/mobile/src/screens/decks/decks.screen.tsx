@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -35,7 +35,7 @@ import {
   loadAddedDeckIds,
   loadAddedDeckItemIds,
 } from './decks-logic';
-import { loadUserDecks } from './user-deck-logic';
+import { getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
 import { CreateUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
@@ -61,12 +61,20 @@ const GOAL_ICONS: Record<Goal, LucideIcon> = {
 export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void }) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('decks');
+  const db = useDb();
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
   const [isCreatingDeck, setIsCreatingDeck] = useState(false);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
+
+  // «Мой словарь» видна в «Мои колоды» сразу, даже пустой — не ждём первого
+  // слова (get-or-create тот же, что и при добавлении слова откуда угодно,
+  // просто вызван раньше; повторный вызов при последующих словах — нет-оп).
+  useEffect(() => {
+    void getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+  }, [db, t]);
   // «Добавить колоду» сохраняет официальную колоду в «Мои колоды» — весь
   // прогресс пользователя (свои колоды + добавленные официальные) виден в
   // одном месте, а не только по чипу «Добавлена» в каталоге ниже.
@@ -386,6 +394,14 @@ const DeckDetail = ({
             exampleTranslation: selectedWord.exampleTranslation,
             definition: selectedWord.definition,
           }
+        }
+        onSave={
+          selectedWord && !isAdded && !isDeckWordAdded(addedItemIds ?? new Set(), selectedWord)
+            ? () => {
+                void handleAddWord(selectedWord);
+                setSelectedWord(null);
+              }
+            : undefined
         }
         onClose={() => setSelectedWord(null)}
       />

@@ -269,6 +269,14 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
             definition: selectedWord.definition,
           }
         }
+        onSave={
+          selectedWord && !addedRefs.has(`${selectedWord.itemType}:${selectedWord.itemId}`)
+            ? () => {
+                void handleAddWord(selectedWord);
+                setSelectedWord(null);
+              }
+            : undefined
+        }
         onClose={() => setSelectedWord(null)}
       />
     </SafeAreaView>
