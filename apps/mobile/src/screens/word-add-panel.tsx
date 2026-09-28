@@ -1,4 +1,11 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useImperativeHandle,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, Text, TextInput, View } from 'react-native';
 
@@ -21,6 +28,13 @@ import {
 
 const CONFIRMATION_DURATION_MS = 5000;
 
+// Императивный доступ к фокусу поля — нужен пустому состоянию главного экрана
+// (кнопка «Добавить слово»): переносить туда query/phase этого виджета не
+// имеет смысла, а просто сфокусировать уже видимое поле ввода — самое простое.
+export interface WordAddPanelHandle {
+  focus: () => void;
+}
+
 // Что показать под полем ввода вместо/помимо подсказок (docs/flows/f06.md).
 // 'idle' — только подсказки (или ничего, если запрос короче 2 символов).
 type Phase =
@@ -34,12 +48,20 @@ type Phase =
 // screens/*, но встроен внутрь HomeScreen). Реального словаря ещё нет (T1.6) —
 // источник подсказок/превью изолирован в dictionary/search.ts, сама запись в
 // БД — в word-add-logic.ts; этот файл — только состояние экрана и вёрстка.
-export const WordAddPanel = () => {
+export const WordAddPanel = ({
+  onFocus,
+  ref,
+}: {
+  onFocus?: () => void;
+  ref?: React.Ref<WordAddPanelHandle>;
+}) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
   const inputRef = useRef<TextInput>(null);
   const confirmationTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useImperativeHandle(ref, () => ({ focus: () => inputRef.current?.focus() }), []);
 
   const [query, setQuery] = useState('');
   const [phase, setPhase] = useState<Phase>({ kind: 'idle' });
@@ -163,6 +185,7 @@ export const WordAddPanel = () => {
         value={query}
         onChangeText={handleChangeText}
         onSubmit={handleSubmit}
+        onFocus={onFocus}
       />
 
       {suggestions.length > 0 ? (
@@ -193,7 +216,7 @@ export const WordAddPanel = () => {
           style={{
             backgroundColor: colors.surface,
             borderRadius: radius.lg,
-            padding: space[5],
+            padding: space[4],
             gap: space[8],
           }}
         >
@@ -203,7 +226,7 @@ export const WordAddPanel = () => {
           </View>
 
           <View style={{ gap: space[2] }}>
-            <Text style={[type.body, { color: colors.inkMuted }]}>
+            <Text style={[type.body, { color: colors.ink }]}>
               {previewExample.before}
               {previewExample.match ? (
                 <Text
@@ -211,6 +234,8 @@ export const WordAddPanel = () => {
                     backgroundColor: colors.highlightSoft,
                     color: colors.ink,
                     borderRadius: radius.sm,
+                    paddingHorizontal: space[2],
+                    display: 'flex',
                   }}
                 >
                   {previewExample.match}
@@ -218,7 +243,7 @@ export const WordAddPanel = () => {
               ) : null}
               {previewExample.after}
             </Text>
-            <Text style={[type.body, { color: colors.inkMuted }]}>
+            <Text style={[type.captionS, { color: colors.inkMuted }]}>
               {phase.word.exampleTranslation}
             </Text>
           </View>

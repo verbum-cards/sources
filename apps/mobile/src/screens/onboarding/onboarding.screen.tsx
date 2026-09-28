@@ -7,7 +7,6 @@ import { getOrCreateLocalUserId, markOnboardingCompleted } from '../../db/entiti
 import { saveUserProfile } from '../../db/entities/user/user-profile';
 import { useDb } from '../../hooks/use-db.hook';
 import { useTheme } from '../../providers/theme.provider';
-import { DailyMinutesScreen } from './daily-minutes.screen';
 import { FirstSessionScreen } from './first-session.screen';
 import { GoalScreen } from './goal.screen';
 import { LevelScreen } from './level.screen';
@@ -15,20 +14,13 @@ import { buildUserProfileDraft, DEFAULT_DAILY_MINUTES, DEFAULT_LEVEL } from './o
 import { SignInScreen } from './sign-in.screen';
 import { WelcomeScreen } from './welcome.screen';
 
-type Step = 'welcome' | 'goal' | 'level' | 'first-session' | 'sign-in' | 'daily-minutes';
+type Step = 'welcome' | 'goal' | 'level' | 'first-session' | 'sign-in';
 
 // Порядок для индикатора-точек (OnboardingProgress) — «сколько шагов
 // осталось до появления в приложении». Ветка «Уже есть аккаунт» (welcome ->
 // sign-in напрямую) индикатору не мешает: он просто покажет реальный прыжок
 // с 1-го шага на 5-й, что и произошло.
-const STEPS: readonly Step[] = [
-  'welcome',
-  'goal',
-  'level',
-  'first-session',
-  'sign-in',
-  'daily-minutes',
-];
+const STEPS: readonly Step[] = ['welcome', 'goal', 'level', 'first-session', 'sign-in'];
 
 // F1 «Первый запуск и онбординг» (docs/flows/f01.md), шаги 1–7 — оркестратор
 // без библиотеки навигации, как и Root в App.tsx: просто useState с текущим
@@ -129,12 +121,12 @@ export const OnboardingScreen = () => {
         // попали через «Уже есть аккаунт» на приветствии, второй кнопкой
         // должен быть «Назад» — на welcome, а не «Пропустить» вперёд по флоу,
         // в котором пользователь не участвовал.
+        //
+        // Отдельного шага «Время в день» после входа больше нет — онбординг
+        // сразу завершается с дефолтным лимитом (DEFAULT_DAILY_MINUTES),
+        // поменять его можно потом в профиле.
         const proceed = () => {
-          if (skippedToSignIn) {
-            void finish(DEFAULT_DAILY_MINUTES);
-          } else {
-            setStep('daily-minutes');
-          }
+          void finish(DEFAULT_DAILY_MINUTES);
         };
         const secondaryAction = skippedToSignIn
           ? {
@@ -154,13 +146,6 @@ export const OnboardingScreen = () => {
           />
         );
       }
-      case 'daily-minutes':
-        return (
-          <DailyMinutesScreen
-            progress={progress}
-            onDone={(dailyMinutes) => void finish(dailyMinutes)}
-          />
-        );
     }
   })();
 

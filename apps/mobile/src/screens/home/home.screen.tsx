@@ -1,9 +1,10 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Animated, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { TFunction } from 'i18next';
 
+import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
 import { WordRow } from '../../components/WordRow';
@@ -12,7 +13,7 @@ import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
-import { WordAddPanel } from '../word-add-panel';
+import { WordAddPanel, type WordAddPanelHandle } from '../word-add-panel';
 import {
   computeStreakDays,
   countCardsCreatedToday,
@@ -59,6 +60,31 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const db = useDb();
   const now = useMemo(() => new Date(), []);
   const [selectedCard, setSelectedCard] = useState<RecentCard | null>(null);
+  const wordAddPanelRef = useRef<WordAddPanelHandle>(null);
+
+  // Пустое состояние прячем сразу, как только пользователь начал добавлять
+  // слово — тапом на «Добавить слово» или прямо в поле ввода — плавным
+  // fade-out, а не резко (и не дожидаясь, пока реально появится карточка).
+  // emptyStateDismissed — защёлка на время жизни экрана: если пользователь
+  // так и не добавит слово, пустое состояние не должно всплыть обратно само,
+  // тап/фокус уже были явным намерением «дальше сам». useState с ленивым
+  // инициализатором для Animated.Value — не useRef(...).current, иначе чтение
+  // в рендере нарушает react-hooks/refs (тот же приём, что и в MainTabsScreen).
+  const [emptyStateDismissed, setEmptyStateDismissed] = useState(false);
+  const [emptyStateOpacity] = useState(() => new Animated.Value(1));
+
+  const dismissEmptyState = () => {
+    Animated.timing(emptyStateOpacity, {
+      toValue: 0,
+      duration: 200,
+      useNativeDriver: true,
+    }).start(() => setEmptyStateDismissed(true));
+  };
+
+  const handleStartAddingFirstWord = () => {
+    wordAddPanelRef.current?.focus();
+    dismissEmptyState();
+  };
 
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
@@ -116,7 +142,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
           ) : null}
         </View>
 
-        <WordAddPanel />
+        <WordAddPanel ref={wordAddPanelRef} onFocus={dismissEmptyState} />
 
         {hasCards ? (
           <>
@@ -199,20 +225,29 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
               </View>
             </View>
           </>
-        ) : (
-          // FR-38: пустое состояние вместо демо-данных — карточек ещё нет,
-          // WordInput выше уже ведёт к первому своему слову.
-          <View
+        ) : emptyStateDismissed ? null : (
+          // FR-38: пустое состояние вместо демо-данных — показываем, только
+          // пока карточек вообще нет; WordInput выше уже ведёт к первому
+          // своему слову.
+          <Animated.View
             style={{
+              opacity: emptyStateOpacity,
               backgroundColor: colors.surfaceSunken,
               borderRadius: radius.lg,
-              padding: space[5],
-              gap: space[1],
+              padding: space[8],
+              gap: space[4],
             }}
           >
-            <Text style={[type.title, { color: colors.ink }]}>{t('emptyState.title')}</Text>
+            <Text style={[type.titleL, { color: colors.ink }]}>{t('emptyState.title')}</Text>
             <Text style={[type.body, { color: colors.inkMuted }]}>{t('emptyState.subtitle')}</Text>
-          </View>
+
+            <Button
+              label={t('emptyState.newWord')}
+              size="lg"
+              block
+              onPress={handleStartAddingFirstWord}
+            />
+          </Animated.View>
         )}
 
         <ReminderPrompt />

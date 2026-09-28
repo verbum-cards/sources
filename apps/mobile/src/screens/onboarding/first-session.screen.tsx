@@ -92,6 +92,7 @@ export const FirstSessionScreen = ({
           </View>
         )}
       </View>
+
       <View style={{ padding: space[5], gap: space[3] }}>
         {finished || !word ? (
           <Button label={t('firstSession.continue')} size="lg" block onPress={onDone} />

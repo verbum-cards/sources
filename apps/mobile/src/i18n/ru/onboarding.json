@@ -44,14 +44,5 @@
     "google": "Войти через Google",
     "skip": "Пропустить",
     "back": "Назад"
-  },
-  "dailyMinutes": {
-    "title": "Сколько времени в день?",
-    "subtitle": "Поможет подобрать дневную норму новых слов",
-    "minutes_one": "{{count}} минута",
-    "minutes_few": "{{count}} минуты",
-    "minutes_many": "{{count}} минут",
-    "minutes_other": "{{count}} минуты",
-    "done": "Готово"
   }
 }

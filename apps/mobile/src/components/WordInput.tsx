@@ -9,13 +9,17 @@ type Props = {
   value: string;
   onChangeText: (text: string) => void;
   onSubmit: () => void;
+  onFocus?: () => void;
   ref?: React.Ref<TextInput>;
 };
 
 // Главный вход в приложение: подпись видна всегда, плейсхолдер — пример слова.
 // ref (React 19 — обычный проп, без forwardRef) — чтобы F6 (word-add-panel.tsx)
 // могло вернуть фокус в пустое поле после добавления карточки (docs/flows/f06.md, шаг 5).
-export const WordInput = ({ value, onChangeText, onSubmit, ref }: Props) => {
+// onFocus — наружу, отдельно от внутреннего isFocused: HomeScreen прячет по
+// нему пустое состояние главного экрана, если пользователь тапнул прямо в
+// поле, минуя кнопку «Добавить слово».
+export const WordInput = ({ value, onChangeText, onSubmit, onFocus, ref }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('common');
   const [isFocused, setIsFocused] = useState(false);
@@ -36,7 +40,10 @@ export const WordInput = ({ value, onChangeText, onSubmit, ref }: Props) => {
             value={value}
             onChangeText={onChangeText}
             onSubmitEditing={onSubmit}
-            onFocus={() => setIsFocused(true)}
+            onFocus={() => {
+              setIsFocused(true);
+              onFocus?.();
+            }}
             onBlur={() => setIsFocused(false)}
             placeholder={t('wordInput.placeholder')}
             placeholderTextColor={colors.inkMuted}
