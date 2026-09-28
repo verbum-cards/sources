@@ -204,7 +204,6 @@ export const WordAddPanel = ({
               key={word.itemId}
               word={word.lemma}
               ipa={word.ipa}
-              pos={word.pos}
               cefr={word.cefr}
               translation={word.translation}
               when={addedItemIds?.has(word.itemId) ? t('wordAdd.alreadyAdded') : undefined}

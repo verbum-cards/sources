@@ -232,7 +232,6 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
                         key={`${card.word}-${card.createdAt}`}
                         word={card.word}
                         ipa={card.ipa}
-                        pos={card.pos}
                         cefr={card.cefr}
                         translation={card.translation}
                         when={formatRecentWhen(t, card.createdAt)}
