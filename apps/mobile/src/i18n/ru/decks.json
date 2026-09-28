@@ -10,7 +10,6 @@
   "addDeck": "Добавить колоду",
   "addWord": "Добавить слово",
   "wordAdded": "«{{word}}» добавлено",
-  "alreadyAdded": "Колода уже добавлена",
   "goToProgress": "Перейти к тренировкам",
   "categories": {
     "nouns": "Существительные",

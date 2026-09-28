@@ -73,7 +73,7 @@ test('loadDeckProgress: колода без единого добавленно�
   const { db } = await setupDb();
   const otherDeck = DECKS[1];
 
-  await addSingleDeckWord(db, otherDeck, otherDeck.items[0]);
+  await addSingleDeckWord(db, otherDeck, otherDeck.items[0], 'Мой словарь');
 
   const progress = await loadDeckProgress(db);
   assert.equal(
@@ -85,8 +85,8 @@ test('loadDeckProgress: колода без единого добавленно�
 test('loadDeckProgress: отражает частичное добавление слов колоды', async () => {
   const { db } = await setupDb();
 
-  await addSingleDeckWord(db, restaurant, restaurant.items[0]);
-  await addSingleDeckWord(db, restaurant, restaurant.items[1]);
+  await addSingleDeckWord(db, restaurant, restaurant.items[0], 'Мой словарь');
+  await addSingleDeckWord(db, restaurant, restaurant.items[1], 'Мой словарь');
 
   const progress = await loadDeckProgress(db);
   const entry = progress.find((p) => p.deckId === restaurant.id);

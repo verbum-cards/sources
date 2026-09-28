@@ -150,7 +150,7 @@ export const WordAddPanel = ({
     const cardId = await addWordFromDictionary({
       db,
       word: phase.word,
-      myVocabularyTitle: t('wordAdd.myVocabularyTitle'),
+      myVocabularyTitle: t('myVocabularyTitle', { ns: 'common' }),
     });
     showConfirmation(cardId);
     resetAfterAdd();
@@ -166,7 +166,7 @@ export const WordAddPanel = ({
       lemma: phase.lemma,
       translation,
       example: manualExample,
-      myVocabularyTitle: t('wordAdd.myVocabularyTitle'),
+      myVocabularyTitle: t('myVocabularyTitle', { ns: 'common' }),
     });
     showConfirmation(cardId);
     resetAfterAdd();

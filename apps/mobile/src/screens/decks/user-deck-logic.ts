@@ -201,14 +201,35 @@ export async function addExistingCardToDeck(
   notifyChange(['deck_item']);
 }
 
+// Любое отдельное слово, которое пользователь добавляет себе в карточки — с
+// главного экрана (word-add-logic.ts), из официальной колоды
+// (decks-logic.ts::addSingleDeckWord) или из своей (addWordToUserDeck ниже)
+// — попадает и в «Мой словарь» тоже, отдельной ссылкой deck_item, независимо
+// от source_deck_id карточки (тот указывает, откуда слово взяли, это не
+// меняется). Нет-оп, если слово там уже есть (та же колода дважды или сама
+// «Мой словарь» — тоже безопасно).
+export async function addToMyVocabulary(
+  db: DbExecutor,
+  itemType: ItemType,
+  itemId: string,
+  title: string,
+  now: Date = new Date()
+): Promise<void> {
+  const deckId = await getOrCreateMyVocabularyDeck(db, title, now);
+  await addExistingCardToDeck(db, deckId, itemType, itemId, now);
+}
+
 // Добавляет слово из пакета в свою колоду: ссылка (deck_item) + сразу личная
 // карточка (card + card_content), тем же способом, что и официальные колоды
 // (decks-logic.ts::addDeckWordCard) — источник данных теперь пакет словаря,
-// а не mocks/decks.ts. Возвращает false, если слово уже в этой колоде — нет-оп.
+// а не mocks/decks.ts. Заодно попадает и в «Мой словарь» (addToMyVocabulary) —
+// нет-оп, если это и есть сама «Мой словарь». Возвращает false, если слово
+// уже в этой колоде — нет-оп.
 export async function addWordToUserDeck(
   db: DbExecutor,
   deckId: string,
   word: PackWord,
+  myVocabularyTitle: string,
   now: Date = new Date()
 ): Promise<boolean> {
   const alreadyInDeck = await db.get<{ deck_id: string }>(
@@ -218,6 +239,7 @@ export async function addWordToUserDeck(
   if (alreadyInDeck) return false;
 
   await addExistingCardToDeck(db, deckId, word.itemType, word.itemId, now);
+  await addToMyVocabulary(db, word.itemType, word.itemId, myVocabularyTitle, now);
 
   const userId = await getOrCreateLocalUserId(db);
   // Тот же критерий дубликата, что и в decks-logic.ts::isItemAlreadyAdded —

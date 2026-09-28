@@ -19,6 +19,7 @@ import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
+import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
@@ -58,7 +59,7 @@ const GOAL_ICONS: Record<Goal, LucideIcon> = {
 // (docs/data-model.md, data/ и apps/api удалены) — список зашит в
 // mocks/decks.ts, тот же временный приём, что и словарь для F6/первой сессии.
 export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void }) => {
-  const { colors, radius, space, type } = useTheme();
+  const { colors, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
@@ -66,6 +67,10 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
+  // «Добавить колоду» сохраняет официальную колоду в «Мои колоды» — весь
+  // прогресс пользователя (свои колоды + добавленные официальные) виден в
+  // одном месте, а не только по чипу «Добавлена» в каталоге ниже.
+  const officialAddedDecks = DECKS.filter((deck) => addedDeckIds?.has(deck.id));
 
   if (selectedDeck) {
     return (
@@ -102,24 +107,20 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
             {t('userDecks.title')}
           </Text>
           {(userDecks ?? []).map((deck) => (
-            <Pressable
+            <MyDeckRow
               key={deck.id}
-              accessibilityRole="button"
+              title={deck.title}
+              itemCount={deck.itemCount}
               onPress={() => setSelectedUserDeckId(deck.id)}
-              style={{
-                backgroundColor: colors.surface,
-                borderRadius: radius.md,
-                borderWidth: 1,
-                borderColor: colors.line,
-                padding: space[4],
-                gap: space[1],
-              }}
-            >
-              <Text style={[type.title, { fontSize: 20, color: colors.ink }]}>{deck.title}</Text>
-              <Text style={[type.bodyS, { color: colors.inkMuted }]}>
-                {t('wordsCount', { count: deck.itemCount })}
-              </Text>
-            </Pressable>
+            />
+          ))}
+          {officialAddedDecks.map((deck) => (
+            <MyDeckRow
+              key={deck.id}
+              title={deck.title}
+              itemCount={deck.items.length}
+              onPress={() => setSelectedDeck(deck)}
+            />
           ))}
           <Button
             label={t('userDecks.create')}
@@ -170,6 +171,42 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
         }}
       />
     </SafeAreaView>
+  );
+};
+
+// Строка секции «Мои колоды» — общая для своих колод (userDecks) и
+// официальных, добавленных через «Добавить колоду»: экран, на который ведёт
+// нажатие (UserDeckDetail или DeckDetail), задаёт вызывающий через onPress.
+const MyDeckRow = ({
+  title,
+  itemCount,
+  onPress,
+}: {
+  title: string;
+  itemCount: number;
+  onPress: () => void;
+}) => {
+  const { colors, radius, space, type } = useTheme();
+  const { t } = useTranslation('decks');
+
+  return (
+    <Pressable
+      accessibilityRole="button"
+      onPress={onPress}
+      style={{
+        backgroundColor: colors.surface,
+        borderRadius: radius.md,
+        borderWidth: 1,
+        borderColor: colors.line,
+        padding: space[4],
+        gap: space[1],
+      }}
+    >
+      <Text style={[type.title, { fontSize: 20, color: colors.ink }]}>{title}</Text>
+      <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+        {t('wordsCount', { count: itemCount })}
+      </Text>
+    </Pressable>
   );
 };
 
@@ -232,6 +269,7 @@ const DeckDetail = ({
   const db = useDb();
   const toast = useToast();
   const [isAdding, setIsAdding] = useState(false);
+  const [selectedWord, setSelectedWord] = useState<DeckWord | null>(null);
   const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
 
   const handleAdd = async () => {
@@ -241,7 +279,7 @@ const DeckDetail = ({
   };
 
   const handleAddWord = async (word: DeckWord) => {
-    await addSingleDeckWord(db, deck, word);
+    await addSingleDeckWord(db, deck, word, t('myVocabularyTitle', { ns: 'common' }));
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
   };
 
@@ -299,9 +337,13 @@ const DeckDetail = ({
                     cefr={word.cefr}
                     translation={word.translation}
                     last={i === all.length - 1}
-                    added={isDeckWordAdded(addedItemIds ?? new Set(), word)}
-                    addLabel={t('addWord')}
-                    onAdd={() => void handleAddWord(word)}
+                    // Вся колода уже добавлена — галочка/плюс на каждом слове
+                    // ничего не сообщают (по определению уже добавлено) и
+                    // выглядят как приглашение добавить то, что и так есть.
+                    added={isAdded ? undefined : isDeckWordAdded(addedItemIds ?? new Set(), word)}
+                    addLabel={isAdded ? undefined : t('addWord')}
+                    onAdd={isAdded ? undefined : () => void handleAddWord(word)}
+                    onPress={() => setSelectedWord(word)}
                   />
                 ))}
               </View>
@@ -320,12 +362,7 @@ const DeckDetail = ({
         }}
       >
         {isAdded ? (
-          <>
-            <Text style={[type.bodyS, { color: colors.inkMuted, textAlign: 'center' }]}>
-              {t('alreadyAdded')}
-            </Text>
-            <Button label={t('goToProgress')} size="lg" block onPress={() => onOpenProgress?.()} />
-          </>
+          <Button label={t('goToProgress')} size="lg" block onPress={() => onOpenProgress?.()} />
         ) : (
           <Button
             label={t('addDeck')}
@@ -336,6 +373,22 @@ const DeckDetail = ({
           />
         )}
       </View>
+
+      <WordPopup
+        card={
+          selectedWord && {
+            word: selectedWord.lemma,
+            ipa: selectedWord.ipa,
+            pos: selectedWord.pos,
+            cefr: selectedWord.cefr,
+            translation: selectedWord.translation,
+            example: selectedWord.example,
+            exampleTranslation: selectedWord.exampleTranslation,
+            definition: selectedWord.definition,
+          }
+        }
+        onClose={() => setSelectedWord(null)}
+      />
     </SafeAreaView>
   );
 };

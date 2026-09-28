@@ -5,6 +5,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { ChevronLeft } from 'lucide-react-native';
 
 import { Button } from '../../components/Button';
+import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import type { PackWord } from '../../db/entities/dictionary/lookup';
 import { searchPackWordsByPrefix } from '../../db/entities/dictionary/lookup';
@@ -115,6 +116,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
 
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<readonly PackWord[]>([]);
+  const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
 
   // Дебаунс — тот же бюджет превью слова (≤300мс, apps/mobile/CLAUDE.md), но
   // здесь запрос идёт в пакет словаря, а не в моки, поэтому не мгновенно.
@@ -139,7 +141,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
   }, [query, dictionaryDb]);
 
   const handleAddWord = async (word: PackWord) => {
-    await addWordToUserDeck(db, deckId, word);
+    await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
     setQuery('');
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
   };
@@ -213,6 +215,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
                 added={addedRefs.has(`${word.itemType}:${word.itemId}`)}
                 addLabel={t('addWord')}
                 onAdd={() => void handleAddWord(word)}
+                onPress={() => setSelectedWord(word)}
               />
             ))}
           </View>
@@ -243,6 +246,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
                   cefr={word.cefr}
                   translation={word.translation}
                   last={i === all.length - 1}
+                  onPress={() => setSelectedWord(word)}
                 />
               ))}
             </View>
@@ -251,6 +255,22 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
           )}
         </View>
       </ScrollView>
+
+      <WordPopup
+        card={
+          selectedWord && {
+            word: selectedWord.lemma,
+            ipa: selectedWord.ipa,
+            pos: selectedWord.pos,
+            cefr: selectedWord.cefr,
+            translation: selectedWord.translation,
+            example: selectedWord.example,
+            exampleTranslation: selectedWord.exampleTranslation,
+            definition: selectedWord.definition,
+          }
+        }
+        onClose={() => setSelectedWord(null)}
+      />
     </SafeAreaView>
   );
 };

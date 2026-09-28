@@ -7,6 +7,7 @@ import type { DbExecutor } from '../../db/executor';
 import type { DeckWord, MockDeck } from '../../mocks/decks';
 import { notifyChange } from '../../utilities/event-bus';
 import { uuidv7 } from '../../utilities/id';
+import { addToMyVocabulary } from './user-deck-logic';
 
 export async function loadAddedDeckIds(db: DbExecutor): Promise<Set<string>> {
   const userId = await getOrCreateLocalUserId(db);
@@ -182,12 +183,16 @@ export async function addDeckToUser(
 // Добавление одного слова из колоды по иконке в WordRow — без апсерта
 // user_deck: сама колода не считается «добавленной» (это отдельное действие,
 // «Добавить колоду»), просто у пользователя появляется ещё одна карточка.
-// Возвращает false, если слово уже было — нет-оп, а не ошибка (тот же
-// критерий, что и addDeckToUser).
+// Заодно попадает и в «Мой словарь» (user-deck-logic.ts::addToMyVocabulary) —
+// source_deck_id карточки при этом не меняется, он по-прежнему указывает на
+// эту официальную колоду, «Мой словарь» — отдельная ссылка (deck_item), не
+// замена источника. Возвращает false, если слово уже было — нет-оп, а не
+// ошибка (тот же критерий, что и addDeckToUser).
 export async function addSingleDeckWord(
   db: DbExecutor,
   deck: MockDeck,
   word: DeckWord,
+  myVocabularyTitle: string,
   now: Date = new Date()
 ): Promise<boolean> {
   const userId = await getOrCreateLocalUserId(db);
@@ -195,6 +200,7 @@ export async function addSingleDeckWord(
   if (exists) return false;
 
   await addDeckWordCard(db, userId, word, deck.id, now);
+  await addToMyVocabulary(db, word.itemType, word.itemId, myVocabularyTitle, now);
   notifyChange(['card', 'card_content']);
 
   return true;

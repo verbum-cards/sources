@@ -8,6 +8,7 @@ import { Layers, WholeWord } from 'lucide-react-native';
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
+import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import { loadDictionaryPackMeta } from '../../db/entities/dictionary/pack-meta';
 import { resetLocalData } from '../../db/entities/user/reset-local-data';
@@ -30,7 +31,6 @@ import {
 } from './home-logic';
 import { ReminderPrompt } from './reminder-prompt';
 import { WordAddPanel, type WordAddPanelHandle } from './word-add-panel';
-import { WordStudyCard } from './word-study-card';
 
 // «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
 // Не переусложняем — это подпись-подсказка, а не точная метка времени.
@@ -340,7 +340,7 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
         </Pressable>
       </ScrollView>
 
-      <WordStudyCard card={selectedCard} onClose={() => setSelectedCard(null)} />
+      <WordPopup card={selectedCard} onClose={() => setSelectedCard(null)} />
     </SafeAreaView>
   );
 };

@@ -17,6 +17,7 @@ import {
   loadAddedDeckIds,
   loadAddedDeckItemIds,
 } from '../../src/screens/decks/decks-logic';
+import { loadUserDecks } from '../../src/screens/decks/user-deck-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
 async function setupDb() {
@@ -195,7 +196,7 @@ test('addSingleDeckWord: добавляет одно слово, не трога
   const { db, userId } = await setupDb();
   const word = restaurant.items[0];
 
-  const added = await addSingleDeckWord(db, restaurant, word);
+  const added = await addSingleDeckWord(db, restaurant, word, 'Мой словарь');
 
   assert.equal(added, true);
   const cards = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
@@ -207,8 +208,8 @@ test('addSingleDeckWord: повторный вызов на то же слово
   const { db, userId } = await setupDb();
   const word = restaurant.items[0];
 
-  await addSingleDeckWord(db, restaurant, word);
-  const second = await addSingleDeckWord(db, restaurant, word);
+  await addSingleDeckWord(db, restaurant, word, 'Мой словарь');
+  const second = await addSingleDeckWord(db, restaurant, word, 'Мой словарь');
 
   assert.equal(second, false);
   const cards = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
@@ -219,9 +220,26 @@ test('loadAddedDeckItemIds + isDeckWordAdded: отражают только ре
   const { db } = await setupDb();
   const [first, second] = restaurant.items;
 
-  await addSingleDeckWord(db, restaurant, first);
+  await addSingleDeckWord(db, restaurant, first, 'Мой словарь');
 
   const addedItemIds = await loadAddedDeckItemIds(db);
   assert.equal(isDeckWordAdded(addedItemIds, first), true);
   assert.equal(isDeckWordAdded(addedItemIds, second), false);
+});
+
+test('addSingleDeckWord: слово попадает и в «Мой словарь», source_deck_id остаётся исходной колодой', async () => {
+  const { db } = await setupDb();
+  const word = restaurant.items[0];
+
+  await addSingleDeckWord(db, restaurant, word, 'Мой словарь');
+
+  const [myVocabulary] = await loadUserDecks(db);
+  assert.equal(myVocabulary?.title, 'Мой словарь');
+  assert.equal(myVocabulary?.itemCount, 1);
+
+  const card = await db.get<{ source_deck_id: string }>(
+    'SELECT source_deck_id FROM card WHERE item_id = ?',
+    [word.itemId]
+  );
+  assert.equal(card?.source_deck_id, restaurant.id);
 });

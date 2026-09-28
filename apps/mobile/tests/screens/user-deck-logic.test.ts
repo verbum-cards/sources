@@ -58,7 +58,7 @@ test('addWordToUserDeck: добавляет ссылку и создаёт на�
   const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
   assert.ok(menu);
 
-  const added = await addWordToUserDeck(db, deckId, menu);
+  const added = await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
 
   assert.equal(added, true);
   const [deck] = await loadUserDecks(db);
@@ -86,8 +86,8 @@ test('addWordToUserDeck: повторное добавление того же �
   const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
   assert.ok(menu);
 
-  await addWordToUserDeck(db, deckId, menu);
-  const second = await addWordToUserDeck(db, deckId, menu);
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+  const second = await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
 
   assert.equal(second, false);
   const [deck] = await loadUserDecks(db);
@@ -106,7 +106,7 @@ test('addWordToUserDeck: слово, уже добавленное вручну�
     ['manual-card', userId, menu.itemType, menu.itemId, 'active', now, now]
   );
 
-  await addWordToUserDeck(db, deckId, menu, new Date(now));
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь', new Date(now));
 
   const cards = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
   assert.equal(cards.length, 1);
@@ -119,8 +119,8 @@ test('loadUserDeckWords: слова колоды в порядке добавл�
   const [waiter] = await searchPackWordsByPrefix(dictionaryDb, 'waiter');
   assert.ok(menu && waiter);
 
-  await addWordToUserDeck(db, deckId, menu);
-  await addWordToUserDeck(db, deckId, waiter);
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+  await addWordToUserDeck(db, deckId, waiter, 'Мой словарь');
 
   const words = await loadUserDeckWords(db, dictionaryDb, deckId);
   assert.deepEqual(
@@ -153,4 +153,19 @@ test('loadUserDeckWords: слово, которого нет в пакете (в
   assert.equal(words[0]?.lemma, 'serendipity');
   assert.equal(words[0]?.translation, 'счастливая случайность');
   assert.equal(words[0]?.cefr, undefined);
+});
+
+test('addWordToUserDeck: слово попадает и в свою колоду, и в «Мой словарь»', async () => {
+  const { db, dictionaryDb } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+
+  const decks = await loadUserDecks(db);
+  const ownDeck = decks.find((d) => d.id === deckId);
+  const myVocabulary = decks.find((d) => d.title === 'Мой словарь');
+  assert.equal(ownDeck?.itemCount, 1);
+  assert.equal(myVocabulary?.itemCount, 1);
 });
