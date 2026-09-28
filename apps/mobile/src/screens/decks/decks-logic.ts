@@ -211,3 +211,22 @@ export async function addSingleDeckWord(
 
   return !exists;
 }
+
+// Свайп по официальной колоде в «Мои колоды» — «убрать» её оттуда: мягко
+// удаляет строку user_deck (deletedAt), карточки и их прогресс не трогает.
+// Повторное «Добавить колоду» позже снова апсертит ту же строку (saveUserDeck)
+// и убирает deletedAt — та же логика восстановления, что и в контракте
+// UserDeckSchema.
+export async function removeDeckFromUser(
+  db: DbExecutor,
+  deckId: string,
+  now: Date = new Date()
+): Promise<void> {
+  const userId = await getOrCreateLocalUserId(db);
+  const nowIso = now.toISOString();
+  await db.run(
+    `UPDATE user_deck SET deleted_at = ?, updated_at = ? WHERE user_id = ? AND deck_id = ?`,
+    [nowIso, nowIso, userId, deckId]
+  );
+  notifyChange(['user_deck']);
+}

@@ -30,6 +30,11 @@
     "wordsInDeck_many": "{{count}} слов в колоде",
     "wordsInDeck_other": "{{count}} слова в колоде",
     "empty": "Пока пусто — найдите слово выше и добавьте его в колоду",
-    "removeWord": "Удалить"
+    "removeWord": "Удалить",
+    "removeDeck": "Удалить",
+    "deleteConfirmTitle": "Удалить колоду «{{title}}»?",
+    "deleteConfirmMessage": "Слова останутся в ваших карточках — удалится только сама колода.",
+    "deleteCancelButton": "Отмена",
+    "deleteConfirmButton": "Удалить"
   }
 }

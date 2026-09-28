@@ -60,6 +60,27 @@ export async function createUserDeck(
   return deckId;
 }
 
+// Свайп по своей колоде в «Мои колоды» — мягкое удаление (deleted_at), тем
+// же полем, что и у остальных пользовательских данных (docs/data-model.md,
+// инвариант 7). Ссылки deck_item на неё не трогаем — loadUserDecks и так
+// фильтрует по deck.deleted_at IS NULL, они просто перестают быть видны.
+// «Мой словарь» этой функцией не защищена — запрет только на экране
+// (decks.screen.tsx не показывает жест на этой строке), сама функция ничем
+// не отличает её от любой другой колоды.
+export async function deleteUserDeck(
+  db: DbExecutor,
+  deckId: string,
+  now: Date = new Date()
+): Promise<void> {
+  const nowIso = now.toISOString();
+  await db.run(`UPDATE deck SET deleted_at = ?, updated_at = ? WHERE id = ?`, [
+    nowIso,
+    nowIso,
+    deckId,
+  ]);
+  notifyChange(['deck']);
+}
+
 // Колода «Мой словарь» — заводится сама, при первом слове, добавленном с
 // главного экрана (word-add-logic.ts); id хранится в app_meta, а не
 // вычисляется по названию — переименование в будущем не сломает связь.

@@ -1,6 +1,6 @@
 import React, { useEffect, useImperativeHandle, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   Briefcase,
@@ -19,6 +19,7 @@ import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
+import { SwipeToDelete } from '../../components/SwipeToDelete';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
@@ -34,8 +35,9 @@ import {
   isDeckWordAdded,
   loadAddedDeckIds,
   loadAddedDeckItemIds,
+  removeDeckFromUser,
 } from './decks-logic';
-import { getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
+import { deleteUserDeck, getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
 import { CreateUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
@@ -82,6 +84,10 @@ export const DecksScreen = ({
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+  // Один ключ на весь список «Мои колоды» — одновременно открыт максимум
+  // один свайп, тем же приёмом, что и у слов внутри колоды (UserDeckDetail).
+  const [revealedDeckKey, setRevealedDeckKey] = useState<string | null>(null);
 
   useImperativeHandle(
     ref,
@@ -98,13 +104,39 @@ export const DecksScreen = ({
   // «Мой словарь» видна в «Мои колоды» сразу, даже пустой — не ждём первого
   // слова (get-or-create тот же, что и при добавлении слова откуда угодно,
   // просто вызван раньше; повторный вызов при последующих словах — нет-оп).
+  // Id запоминаем — по нему решаем, показывать ли жест удаления на строке
+  // (её саму удалить нельзя).
   useEffect(() => {
-    void getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+    void (async () => {
+      const deckId = await getOrCreateMyVocabularyDeck(
+        db,
+        t('myVocabularyTitle', { ns: 'common' })
+      );
+      setMyVocabularyDeckId(deckId);
+    })();
   }, [db, t]);
   // «Добавить колоду» сохраняет официальную колоду в «Мои колоды» — весь
   // прогресс пользователя (свои колоды + добавленные официальные) виден в
   // одном месте, а не только по чипу «Добавлена» в каталоге ниже.
   const officialAddedDecks = DECKS.filter((deck) => addedDeckIds?.has(deck.id));
+
+  // Удаление колоды — с подтверждением (тот же приём, что и у выхода с
+  // удалением данных, profile-logout.tsx): в отличие от удаления одного
+  // слова, тут один свайп+тап может унести из виду сразу всю колоду.
+  const confirmDeleteDeck = (title: string, onConfirm: () => void) => {
+    Alert.alert(t('userDecks.deleteConfirmTitle', { title }), t('userDecks.deleteConfirmMessage'), [
+      { text: t('userDecks.deleteCancelButton'), style: 'cancel' },
+      { text: t('userDecks.deleteConfirmButton'), style: 'destructive', onPress: onConfirm },
+    ]);
+  };
+
+  const handleDeleteUserDeck = (deckId: string, title: string) => {
+    confirmDeleteDeck(title, () => void deleteUserDeck(db, deckId));
+  };
+
+  const handleRemoveOfficialDeck = (deckId: string, title: string) => {
+    confirmDeleteDeck(title, () => void removeDeckFromUser(db, deckId));
+  };
 
   if (selectedDeck) {
     return (
@@ -125,76 +157,115 @@ export const DecksScreen = ({
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
-      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
-        <View style={{ gap: space[2] }}>
-          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
-            {t('title')}
-          </Text>
-          <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
-        </View>
+      {/* Тап вне открытой строки закрывает свайп — вложенные Pressable
+          (строки колод, кнопки) перехватывают тач раньше и наружу не
+          всплывают, но тап по пустому месту сюда доходит. */}
+      <Pressable style={{ flex: 1 }} onPress={() => setRevealedDeckKey(null)}>
+        <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
+          <View style={{ gap: space[2] }}>
+            <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+              {t('title')}
+            </Text>
+            <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
+          </View>
 
-        <View style={{ gap: space[3] }}>
-          <Text
-            accessibilityRole="header"
-            style={[type.button, { fontSize: 15, color: colors.ink }]}
-          >
-            {t('userDecks.title')}
-          </Text>
-          {(userDecks ?? []).map((deck) => (
-            <MyDeckRow
-              key={deck.id}
-              title={deck.title}
-              itemCount={deck.itemCount}
-              onPress={() => setSelectedUserDeckId(deck.id)}
+          <View style={{ gap: space[3] }}>
+            <Text
+              accessibilityRole="header"
+              style={[type.button, { fontSize: 15, color: colors.ink }]}
+            >
+              {t('userDecks.title')}
+            </Text>
+            {(userDecks ?? []).map((deck) => {
+              // «Мой словарь» удалить нельзя — жеста на этой строке нет вовсе.
+              if (deck.id === myVocabularyDeckId) {
+                return (
+                  <MyDeckRow
+                    key={deck.id}
+                    title={deck.title}
+                    itemCount={deck.itemCount}
+                    onPress={() => setSelectedUserDeckId(deck.id)}
+                  />
+                );
+              }
+
+              return (
+                <SwipeToDelete
+                  key={deck.id}
+                  deleteLabel={t('userDecks.removeDeck')}
+                  onDelete={() => handleDeleteUserDeck(deck.id, deck.title)}
+                  revealed={revealedDeckKey === deck.id}
+                  onReveal={() => setRevealedDeckKey(deck.id)}
+                  onHide={() =>
+                    setRevealedDeckKey((current) => (current === deck.id ? null : current))
+                  }
+                >
+                  <MyDeckRow
+                    title={deck.title}
+                    itemCount={deck.itemCount}
+                    onPress={() => setSelectedUserDeckId(deck.id)}
+                  />
+                </SwipeToDelete>
+              );
+            })}
+            {officialAddedDecks.map((deck) => (
+              <SwipeToDelete
+                key={deck.id}
+                deleteLabel={t('userDecks.removeDeck')}
+                onDelete={() => handleRemoveOfficialDeck(deck.id, deck.title)}
+                revealed={revealedDeckKey === deck.id}
+                onReveal={() => setRevealedDeckKey(deck.id)}
+                onHide={() =>
+                  setRevealedDeckKey((current) => (current === deck.id ? null : current))
+                }
+              >
+                <MyDeckRow
+                  title={deck.title}
+                  itemCount={deck.items.length}
+                  onPress={() => setSelectedDeck(deck)}
+                />
+              </SwipeToDelete>
+            ))}
+            <Button
+              label={t('userDecks.create')}
+              variant="secondary"
+              size="lg"
+              block
+              onPress={() => setIsCreatingDeck(true)}
             />
-          ))}
-          {officialAddedDecks.map((deck) => (
-            <MyDeckRow
-              key={deck.id}
-              title={deck.title}
-              itemCount={deck.items.length}
-              onPress={() => setSelectedDeck(deck)}
-            />
-          ))}
-          <Button
-            label={t('userDecks.create')}
-            variant="secondary"
-            size="lg"
-            block
-            onPress={() => setIsCreatingDeck(true)}
-          />
-        </View>
+          </View>
 
-        <View style={{ gap: space[8] }}>
-          {deckGroups.map((group) => {
-            const Icon = GOAL_ICONS[group.goal];
+          <View style={{ gap: space[8] }}>
+            {deckGroups.map((group) => {
+              const Icon = GOAL_ICONS[group.goal];
 
-            return (
-              <View key={group.goal} style={{ gap: space[4] }}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
-                  <Icon size={40} color={colors.ink} />
-                  <Text
-                    accessibilityRole="header"
-                    style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
-                  >
-                    {t(`goal.options.${group.goal}`, { ns: 'onboarding' })}
-                  </Text>
+              return (
+                <View key={group.goal} style={{ gap: space[4] }}>
+                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+                    <Icon size={40} color={colors.ink} />
+                    <Text
+                      accessibilityRole="header"
+                      style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
+                    >
+                      {t(`goal.options.${group.goal}`, { ns: 'onboarding' })}
+                    </Text>
+                  </View>
+                  <View style={{ gap: space[3] }}>
+                    {group.decks.map((deck) => (
+                      <DeckRow
+                        key={deck.id}
+                        deck={deck}
+                        isAdded={addedDeckIds?.has(deck.id) ?? false}
+                        onPress={() => setSelectedDeck(deck)}
+                      />
+                    ))}
+                  </View>
                 </View>
-                <View style={{ gap: space[3] }}>
-                  {group.decks.map((deck) => (
-                    <DeckRow
-                      key={deck.id}
-                      deck={deck}
-                      isAdded={addedDeckIds?.has(deck.id) ?? false}
-                      onPress={() => setSelectedDeck(deck)}
-                    />
-                  ))}
-                </View>
-              </View>
-            );
-          })}
-        </View>
-      </ScrollView>
+              );
+            })}
+          </View>
+        </ScrollView>
+      </Pressable>
 
       <CreateUserDeckModal
         visible={isCreatingDeck}
