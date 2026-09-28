@@ -15,6 +15,22 @@ import { ProgressScreen } from './progress/progress.screen';
 export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
   const { colors } = useTheme();
   const [tab, setTab] = useState<TabKey>('home');
+  // Повторный тап по уже активному табу — сигнал «вернуться к стартовому
+  // экрану», как в стандартных таб-барах: при смене таба HomeScreen/DecksScreen
+  // и так размонтируются (условный рендер ниже), а вот повторный тап по тому
+  // же табу — нет, поэтому используем как key: смена значения пересоздаёт
+  // компонент и сбрасывает всё его внутреннее состояние (выбранную колоду,
+  // открытый попап слова) без ручного отслеживания каждого поля.
+  const [resetSignal, setResetSignal] = useState(0);
+
+  const handleTabChange = (key: TabKey) => {
+    if (key === tab) {
+      setResetSignal((n) => n + 1);
+
+      return;
+    }
+    setTab(key);
+  };
 
   // Резкая смена экрана (разный скролл/высота контента) выглядит как «прыжок»
   // даже с правильным фоном — короткий fade-in на каждую смену таба маскирует
@@ -38,14 +54,20 @@ export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => vo
     <View style={{ flex: 1, backgroundColor: colors.paper }}>
       <Animated.View style={{ flex: 1, opacity }}>
         {tab === 'home' ? (
-          <HomeScreen onOpenFsrsDebug={onOpenFsrsDebug} onOpenDecks={() => setTab('decks')} />
+          <HomeScreen
+            key={resetSignal}
+            onOpenFsrsDebug={onOpenFsrsDebug}
+            onOpenDecks={() => setTab('decks')}
+          />
         ) : null}
-        {tab === 'decks' ? <DecksScreen onOpenProgress={() => setTab('progress')} /> : null}
+        {tab === 'decks' ? (
+          <DecksScreen key={resetSignal} onOpenProgress={() => setTab('progress')} />
+        ) : null}
         {tab === 'progress' ? <ProgressScreen /> : null}
         {tab === 'profile' ? <ProfileScreen /> : null}
       </Animated.View>
 
-      <TabBar active={tab} onChange={setTab} />
+      <TabBar active={tab} onChange={handleTabChange} />
     </View>
   );
 };
