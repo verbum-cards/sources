@@ -1,6 +1,7 @@
 index	idx_card_schedule_due	card_schedule	CREATE INDEX idx_card_schedule_due ON card_schedule (due)
 index	idx_card_user_created	card	CREATE INDEX idx_card_user_created ON card (user_id, created_at DESC) WHERE deleted_at IS NULL
 index	idx_card_user_item	card	CREATE INDEX idx_card_user_item ON card (user_id, item_type, item_id)
+index	idx_deck_user	deck	CREATE INDEX idx_deck_user ON deck (user_id) WHERE deleted_at IS NULL
 index	idx_review_log_card_reviewed	review_log	CREATE INDEX idx_review_log_card_reviewed ON review_log (card_id, reviewed_at)
 index	idx_review_log_reviewed	review_log	CREATE INDEX idx_review_log_reviewed ON review_log (reviewed_at)
 index	idx_review_log_unsynced	review_log	CREATE INDEX idx_review_log_unsynced ON review_log (reviewed_at) WHERE synced_at IS NULL
@@ -9,6 +10,8 @@ index	sqlite_autoindex_app_meta_1	app_meta
 index	sqlite_autoindex_card_1	card	
 index	sqlite_autoindex_card_content_1	card_content	
 index	sqlite_autoindex_card_schedule_1	card_schedule	
+index	sqlite_autoindex_deck_1	deck	
+index	sqlite_autoindex_deck_item_1	deck_item	
 index	sqlite_autoindex_review_log_1	review_log	
 index	sqlite_autoindex_sync_op_1	sync_op	
 index	sqlite_autoindex_user_deck_1	user_deck	
@@ -58,6 +61,25 @@ table	card_schedule	card_schedule	CREATE TABLE card_schedule (
       fsrs_state INTEGER,
       last_review TEXT,
       first_review_at TEXT
+    )
+table	deck	deck	CREATE TABLE deck (
+      id TEXT PRIMARY KEY,
+      user_id TEXT NOT NULL,
+      title TEXT NOT NULL,
+      lang TEXT NOT NULL,
+      native_lang TEXT NOT NULL,
+      type TEXT NOT NULL CHECK (type = 'user'),
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      deleted_at TEXT
+    )
+table	deck_item	deck_item	CREATE TABLE deck_item (
+      deck_id TEXT NOT NULL REFERENCES deck (id) ON DELETE CASCADE,
+      item_type TEXT NOT NULL CHECK (item_type IN ('sense', 'expression')),
+      item_id TEXT NOT NULL,
+      position INTEGER NOT NULL,
+      added_at TEXT NOT NULL,
+      PRIMARY KEY (deck_id, item_type, item_id)
     )
 table	review_log	review_log	CREATE TABLE review_log (
       id TEXT PRIMARY KEY,

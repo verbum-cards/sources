@@ -70,10 +70,11 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                           {
                             color: colors.inkMuted,
                             backgroundColor: colors.surfaceSunken,
+                            marginTop: -space[1],
                             padding: space[2],
                             borderRadius: radius.pill,
                             width: 32,
-                            height: 28,
+                            height: 32,
                             textAlign: 'center',
                           },
                         ]}
@@ -93,7 +94,7 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                       </Text>
                     ) : null}
                   </View>
-                  <Text style={[type.body, { color: colors.inkMuted }]}>{card.translation}</Text>
+                  <Text style={[type.body, { color: colors.ink }]}>{card.translation}</Text>
                 </View>
 
                 <Pressable
@@ -138,7 +139,7 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                     {example.after}
                   </Text>
                   {card.exampleTranslation ? (
-                    <Text style={[type.captionS, { color: colors.inkMuted }]}>
+                    <Text style={[type.bodyS, { color: colors.inkMuted }]}>
                       {card.exampleTranslation}
                     </Text>
                   ) : null}

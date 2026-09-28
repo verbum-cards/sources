@@ -115,6 +115,28 @@ export interface UserDeckRow {
   field_meta: string | null; // JSON FieldRevisions (тип из @cards/contracts, но сама колонка — локальная)
 }
 
+// ---------- deck / deck_item (свои колоды, тип 'user' — локально, без синхронизации) ----------
+
+export interface DeckRow {
+  id: string;
+  user_id: string;
+  title: string;
+  lang: string;
+  native_lang: string;
+  type: 'user';
+  created_at: string;
+  updated_at: string;
+  deleted_at: string | null;
+}
+
+export interface DeckItemRow {
+  deck_id: string;
+  item_type: ItemType;
+  item_id: string;
+  position: number;
+  added_at: string;
+}
+
 // ---------- sync_op (локальная исходящая очередь) ----------
 
 export interface SyncOpRow {

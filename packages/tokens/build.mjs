@@ -42,12 +42,12 @@ export const type = {
   displayWord: { fontFamily: fonts.display, fontSize: 40, lineHeight: 48 },
   titleL: { fontFamily: fonts.semibold, fontSize: 32, lineHeight: 40 },
   title: { fontFamily: fonts.semibold, fontSize: 28, lineHeight: 32 },
-  button: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 20 },
+  button: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 24 },
   body: { fontFamily: fonts.regular, fontSize: 24, lineHeight: 32 },
-  bodyS: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 20 },
-  label: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 20, letterSpacing: 1 },
-  caption: { fontFamily: fonts.medium, fontSize: 16, lineHeight: 20 },
-  captionS: { fontFamily: fonts.medium, fontSize: 14, lineHeight: 16 },
+  bodyS: { fontFamily: fonts.regular, fontSize: 16, lineHeight: 24 },
+  label: { fontFamily: fonts.semibold, fontSize: 16, lineHeight: 24, letterSpacing: 1 },
+  caption: { fontFamily: fonts.medium, fontSize: 16, lineHeight: 24 },
+  captionS: { fontFamily: fonts.medium, fontSize: 14, lineHeight: 20 },
 } as const;
 `;
 

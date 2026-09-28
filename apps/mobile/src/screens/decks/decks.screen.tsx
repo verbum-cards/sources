@@ -22,6 +22,7 @@ import { Chip } from '../../components/Chip';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
+import { useToast } from '../../hooks/use-toast.hook';
 import { DECKS, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
@@ -33,6 +34,8 @@ import {
   loadAddedDeckIds,
   loadAddedDeckItemIds,
 } from './decks-logic';
+import { loadUserDecks } from './user-deck-logic';
+import { CreateUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
 // онбординга) — один значок на категорию, а не на колоду: новая колода
@@ -55,10 +58,13 @@ const GOAL_ICONS: Record<Goal, LucideIcon> = {
 // (docs/data-model.md, data/ и apps/api удалены) — список зашит в
 // mocks/decks.ts, тот же временный приём, что и словарь для F6/первой сессии.
 export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void }) => {
-  const { colors, space, type } = useTheme();
+  const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
+  const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
+  const [isCreatingDeck, setIsCreatingDeck] = useState(false);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
+  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
 
   if (selectedDeck) {
@@ -72,6 +78,12 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
     );
   }
 
+  if (selectedUserDeckId) {
+    return (
+      <UserDeckDetail deckId={selectedUserDeckId} onBack={() => setSelectedUserDeckId(null)} />
+    );
+  }
+
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
       <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
@@ -80,6 +92,42 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
             {t('title')}
           </Text>
           <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
+        </View>
+
+        <View style={{ gap: space[3] }}>
+          <Text
+            accessibilityRole="header"
+            style={[type.button, { fontSize: 15, color: colors.ink }]}
+          >
+            {t('userDecks.title')}
+          </Text>
+          {(userDecks ?? []).map((deck) => (
+            <Pressable
+              key={deck.id}
+              accessibilityRole="button"
+              onPress={() => setSelectedUserDeckId(deck.id)}
+              style={{
+                backgroundColor: colors.surface,
+                borderRadius: radius.md,
+                borderWidth: 1,
+                borderColor: colors.line,
+                padding: space[4],
+                gap: space[1],
+              }}
+            >
+              <Text style={[type.title, { fontSize: 20, color: colors.ink }]}>{deck.title}</Text>
+              <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+                {t('wordsCount', { count: deck.itemCount })}
+              </Text>
+            </Pressable>
+          ))}
+          <Button
+            label={t('userDecks.create')}
+            variant="secondary"
+            size="lg"
+            block
+            onPress={() => setIsCreatingDeck(true)}
+          />
         </View>
 
         <View style={{ gap: space[8] }}>
@@ -112,6 +160,15 @@ export const DecksScreen = ({ onOpenProgress }: { onOpenProgress?: () => void })
           })}
         </View>
       </ScrollView>
+
+      <CreateUserDeckModal
+        visible={isCreatingDeck}
+        onClose={() => setIsCreatingDeck(false)}
+        onCreated={(deckId) => {
+          setIsCreatingDeck(false);
+          setSelectedUserDeckId(deckId);
+        }}
+      />
     </SafeAreaView>
   );
 };
@@ -173,6 +230,7 @@ const DeckDetail = ({
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
+  const toast = useToast();
   const [isAdding, setIsAdding] = useState(false);
   const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
 
@@ -184,6 +242,7 @@ const DeckDetail = ({
 
   const handleAddWord = async (word: DeckWord) => {
     await addSingleDeckWord(db, deck, word);
+    toast.show({ message: t('wordAdded', { word: word.lemma }) });
   };
 
   return (

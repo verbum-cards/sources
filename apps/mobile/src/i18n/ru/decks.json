@@ -9,6 +9,7 @@
   "back": "Колоды",
   "addDeck": "Добавить колоду",
   "addWord": "Добавить слово",
+  "wordAdded": "«{{word}}» добавлено",
   "alreadyAdded": "Колода уже добавлена",
   "goToProgress": "Перейти к тренировкам",
   "categories": {
@@ -18,5 +19,17 @@
     "phrases": "Фразы",
     "questions": "Вопросы",
     "other": "Другое"
+  },
+  "userDecks": {
+    "title": "Мои колоды",
+    "create": "Создать колоду",
+    "createTitle": "Новая колода",
+    "namePlaceholder": "Например, Слова из фильма",
+    "searchPlaceholder": "Найти слово в словаре",
+    "wordsInDeck_one": "{{count}} слово в колоде",
+    "wordsInDeck_few": "{{count}} слова в колоде",
+    "wordsInDeck_many": "{{count}} слов в колоде",
+    "wordsInDeck_other": "{{count}} слова в колоде",
+    "empty": "Пока пусто — найдите слово выше и добавьте его в колоду"
   }
 }

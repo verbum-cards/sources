@@ -6,7 +6,7 @@ import { z } from 'zod';
 
 import { IsoDateSchema, LangSchema } from './content';
 
-export const DICTIONARY_SCHEMA_VERSION = 1;
+export const DICTIONARY_SCHEMA_VERSION = 2;
 
 export const DictionaryPackMetaSchema = z.object({
   schemaVersion: z.number(),
@@ -39,6 +39,9 @@ CREATE TABLE sense (
   concept_id TEXT NOT NULL,
   cefr TEXT NOT NULL,
   frequency_rank INTEGER,
+  -- Определение значения на изучаемом языке (см. card_content.definition,
+  -- apps/mobile) — добавлено версией 2, схема была написана раньше этого поля.
+  definition TEXT,
   status TEXT NOT NULL
 );
 
@@ -55,6 +58,9 @@ CREATE TABLE expression (
   text_norm TEXT NOT NULL,
   cefr TEXT NOT NULL,
   audio_url TEXT,
+  -- Пояснение, когда и как применяется фраза, на изучаемом языке (см.
+  -- card_content.definition) — добавлено версией 2, см. sense.definition выше.
+  definition TEXT,
   status TEXT NOT NULL
 );
 

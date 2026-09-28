@@ -5,15 +5,23 @@ import { wordByLemma, type MockWord } from './words';
 // Колоды под жизненные ситуации (docs/product.md, skill deck-authoring).
 // Настоящего словаря и конвейера колод ещё нет (data/ и apps/api удалены,
 // см. docs/decisions.md) — набор придуман вручную, по тому же принципу, что и
-// mocks/words.ts. Из списка 7 колод беты (skill deck-authoring →
-// «Колоды беты», ADR-22 — «Такси» перенесено туда из «к публичному релизу»)
-// здесь шесть: «Ресторан и кафе», «Отель», «Аэропорт и перелёт», «Такси»,
-// «Как пройти», «Знакомство и small talk» (в скилле это одна колода, не две —
-// разделять «знакомство» и «small talk» не стали, слишком тесно связаны). Не
-// хватает только «Мнение и обсуждение». Меньше элементов на колоду, чем
-// полный чек-лист скилла (25–50, доля выражений ≥30%) — осознанное сокращение
-// для первой версии, не ошибка: 12–15 на колоду, доля выражений всё равно
-// держится ≥30%.
+// mocks/words.ts. Из списка 8 колод беты (skill deck-authoring →
+// «Колоды беты», ADR-22 — «Такси», ADR-27 — «Работа») здесь семь: «Ресторан
+// и кафе», «Отель», «Аэропорт и перелёт», «Такси», «Как пройти», «Знакомство
+// и small talk» (в скилле это одна колода, не две — разделять «знакомство» и
+// «small talk» не стали, слишком тесно связаны), «Работа». Не хватает только
+// «Мнение и обсуждение». Меньше элементов на колоду, чем полный чек-лист
+// скилла (25–50, доля выражений ≥30%) — осознанное сокращение для первой
+// версии, не ошибка: 12–15 на колоду (кроме «Работы», см. ниже), доля
+// выражений всё равно держится ≥30%.
+//
+// «Работа» — два отступления от чек-листа, оба осознанные (ADR-26): уровни
+// смещены к B1/B2/C1 (не к 50/30/20 с ядром A2, как у остальных колод) —
+// лексика про увольнения и переговоры по природе не бытовая A2-начального
+// уровня; и 33 элемента при доле выражений ~15% (не ≥30%) — по прямому
+// запросу владельца продукта добавлено 20 отдельных слов без пропорциональных
+// фраз. Натягивать то и другое под чек-лист искусственно хуже, чем честно
+// отступить от него.
 //
 // goalTags (ADR-24, decks.screen.tsx группирует каталог по ним) — не только
 // «travel»: у всех ситуационных колод добавлен «work» там, где это реальный
@@ -151,6 +159,27 @@ const smallTalkContext: DeckContext = {
   cultureNotes: [
     'В англоязычной культуре small talk о погоде — совершенно обычная тема для начала разговора',
     'Личные вопросы (зарплата, возраст, вес) при первом знакомстве считаются неуместными',
+  ],
+};
+
+const workContext: DeckContext = {
+  situation: 'Разговор о работе: сокращения, реорганизация компании и переговоры об условиях',
+  roles: {
+    learner: 'сотрудник',
+    partner: 'коллега',
+    learnerGoal: 'обсудить ситуацию в компании, выразить мнение, спросить про условия и требования',
+    partnerGoal: 'поделиться новостями и своим мнением о происходящем',
+  },
+  register: 'neutral',
+  branches: [
+    'новости о сокращениях',
+    'переговоры об условиях',
+    'обсуждение новых требований',
+    'реакция на изменения в компании',
+  ],
+  cultureNotes: [
+    'В США и Великобритании после увольнений (layoffs) часто предлагают выходное пособие (severance package) и продление медицинской страховки на несколько месяцев',
+    'Открыто обсуждать зарплату и условия с коллегами более принято в США, чем во многих других культурах',
   ],
 };
 
@@ -298,6 +327,50 @@ export const DECKS: readonly MockDeck[] = [
       { lemma: 'hobby', importance: 2 },
       { lemma: 'to keep in touch', importance: 2 },
       { lemma: 'friendly', importance: 1 },
+    ]),
+  },
+  {
+    id: '0195d000-0000-7000-8000-000000000007',
+    lang: 'en',
+    nativeLang: 'ru',
+    title: 'Работа',
+    goalTags: ['work'],
+    type: 'official',
+    context: workContext,
+    items: resolveDeckItems([
+      { lemma: 'layoffs', importance: 3 },
+      { lemma: 'to be laid off', importance: 3 },
+      { lemma: 'requirement', importance: 2 },
+      { lemma: 'What are the requirements for this position?', importance: 2 },
+      { lemma: 'negotiate', importance: 3 },
+      { lemma: 'to reach an agreement', importance: 3 },
+      { lemma: 'consolidate', importance: 2 },
+      { lemma: 'to cut costs', importance: 2 },
+      { lemma: 'exacerbate', importance: 1 },
+      { lemma: 'vanish', importance: 1 },
+      { lemma: 'adoption', importance: 2 },
+      { lemma: 'to keep up with changes', importance: 1 },
+      { lemma: 'exposed', importance: 2 },
+      { lemma: 'redundant', importance: 2 },
+      { lemma: 'severance', importance: 3 },
+      { lemma: 'restructure', importance: 2 },
+      { lemma: 'downsize', importance: 3 },
+      { lemma: 'outsource', importance: 1 },
+      { lemma: 'compensation', importance: 3 },
+      { lemma: 'leverage', importance: 1 },
+      { lemma: 'mitigate', importance: 1 },
+      { lemma: 'accountable', importance: 1 },
+      { lemma: 'streamline', importance: 1 },
+      { lemma: 'viable', importance: 1 },
+      { lemma: 'turnover', importance: 2 },
+      { lemma: 'workforce', importance: 2 },
+      { lemma: 'contingency', importance: 1 },
+      { lemma: 'morale', importance: 2 },
+      { lemma: 'scrutiny', importance: 1 },
+      { lemma: 'transparent', importance: 2 },
+      { lemma: 'resilient', importance: 1 },
+      { lemma: 'incentive', importance: 2 },
+      { lemma: 'discrepancy', importance: 1 },
     ]),
   },
 ];

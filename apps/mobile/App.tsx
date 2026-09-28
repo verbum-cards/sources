@@ -7,13 +7,16 @@ import { Onest_400Regular, Onest_500Medium, Onest_600SemiBold } from '@expo-goog
 import { Unbounded_600SemiBold, useFonts } from '@expo-google-fonts/unbounded';
 import { StatusBar } from 'expo-status-bar';
 
+import { openOrBuildDictionaryDatabase } from './src/db/entities/dictionary/open';
 import { openUserDatabase } from './src/db/entities/user/open';
 import { hasCompletedOnboarding } from './src/db/entities/user/user-profile';
 import type { DbExecutor } from './src/db/executor';
 import { useQuery } from './src/hooks/use-query.hook';
 import { DbProvider } from './src/providers/db.provider';
+import { DictionaryDbProvider } from './src/providers/dictionary-db.provider';
 import { SafeAreaProviderWrapper } from './src/providers/safe-area.provider';
 import { ThemeProvider, useTheme } from './src/providers/theme.provider';
+import { ToastProvider } from './src/providers/toast.provider';
 import { FsrsDebugScreen } from './src/screens/fsrs-debug.screen';
 import { MainTabsScreen } from './src/screens/main-tabs.screen';
 import { OnboardingScreen } from './src/screens/onboarding/onboarding.screen';
@@ -90,15 +93,25 @@ export const App = () => {
     Onest_600SemiBold,
   });
   const [db, setDb] = useState<DbExecutor | null>(null);
+  const [dictionaryDb, setDictionaryDb] = useState<DbExecutor | null>(null);
   const [dbError, setDbError] = useState<Error | null>(null);
 
   useEffect(() => {
     let cancelled = false;
-    // Открывает cards-user.db и прогоняет миграции (см. src/db/user/open.ts).
+    // Открывает cards-user.db (миграции, см. src/db/user/open.ts) и пакет
+    // словаря (пока временно собирается на месте из моков, если ещё не
+    // собран — см. src/db/entities/dictionary/open.ts) — два независимых
+    // файла SQLite, открываются параллельно.
     void (async () => {
       try {
-        const { executor } = await openUserDatabase();
-        if (!cancelled) setDb(executor);
+        const [{ executor }, dictionaryExecutor] = await Promise.all([
+          openUserDatabase(),
+          openOrBuildDictionaryDatabase(),
+        ]);
+        if (!cancelled) {
+          setDb(executor);
+          setDictionaryDb(dictionaryExecutor);
+        }
       } catch (err) {
         if (!cancelled) setDbError(err instanceof Error ? err : new Error(String(err)));
       }
@@ -109,18 +122,22 @@ export const App = () => {
     };
   }, []);
 
-  if (!fontsLoaded || (!db && !dbError)) return null;
+  if (!fontsLoaded || ((!db || !dictionaryDb) && !dbError)) return null;
 
   return (
     <SafeAreaProviderWrapper>
       <ThemeProvider>
-        {dbError ? (
-          <DbErrorView />
-        ) : (
-          <DbProvider db={db!}>
-            <AppContent />
-          </DbProvider>
-        )}
+        <ToastProvider>
+          {dbError ? (
+            <DbErrorView />
+          ) : (
+            <DbProvider db={db!}>
+              <DictionaryDbProvider db={dictionaryDb!}>
+                <AppContent />
+              </DictionaryDbProvider>
+            </DbProvider>
+          )}
+        </ToastProvider>
       </ThemeProvider>
     </SafeAreaProviderWrapper>
   );

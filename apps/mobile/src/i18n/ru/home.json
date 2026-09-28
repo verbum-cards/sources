@@ -51,7 +51,8 @@
   },
   "debug": {
     "openFsrs": "Проверка FSRS (временный экран)",
-    "resetLocalData": "Сбросить локальные данные (техническое)"
+    "resetLocalData": "Сбросить локальные данные (техническое)",
+    "dictionaryPack": "Пакет словаря: v{{version}}, {{count}} значений"
   },
   "emptyState": {
     "title": "Слов пока нет",

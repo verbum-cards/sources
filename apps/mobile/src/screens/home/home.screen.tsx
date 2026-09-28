@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Animated, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -9,8 +9,10 @@ import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
 import { ProgressBar } from '../../components/ProgressBar';
 import { WordRow } from '../../components/WordRow';
+import { loadDictionaryPackMeta } from '../../db/entities/dictionary/pack-meta';
 import { resetLocalData } from '../../db/entities/user/reset-local-data';
 import { useDb } from '../../hooks/use-db.hook';
+import { useDictionaryDb } from '../../hooks/use-dictionary-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
@@ -65,9 +67,27 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
+  const dictionaryDb = useDictionaryDb();
   const now = useMemo(() => new Date(), []);
   const [selectedCard, setSelectedCard] = useState<RecentCard | null>(null);
   const wordAddPanelRef = useRef<WordAddPanelHandle>(null);
+
+  // Дебаг-проверка (см. docs/decisions.md, ADR-25): пакет словаря сейчас
+  // собирается на месте при первом запуске (App.tsx) — эта строка доказывает
+  // вживую, что он реально засеян, без ныряния в тесты. Разовое чтение, не
+  // useQuery: пакет read-only, меняться на лету ему нечему.
+  const [dictionaryPackMeta, setDictionaryPackMeta] = useState<Record<string, string> | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const meta = await loadDictionaryPackMeta(dictionaryDb);
+      if (!cancelled) setDictionaryPackMeta(meta);
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [dictionaryDb]);
 
   // Пустое состояние прячем сразу, как только пользователь начал добавлять
   // слово — тапом на «Добавить слово» или прямо в поле ввода — плавным
@@ -278,6 +298,18 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
         )}
 
         <ReminderPrompt />
+
+        {dictionaryPackMeta ? (
+          // Временная строка (ADR-25) — убрать, когда экраны переключатся на
+          // чтение из пакета и он перестанет быть единственным способом
+          // убедиться, что тот реально собрался на устройстве.
+          <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+            {t('debug.dictionaryPack', {
+              version: dictionaryPackMeta.content_version,
+              count: dictionaryPackMeta.sense_count,
+            })}
+          </Text>
+        ) : null}
 
         {onOpenFsrsDebug ? (
           // Временный вход в дебаг-экран T1.7 — не часть финальной структуры табов.
