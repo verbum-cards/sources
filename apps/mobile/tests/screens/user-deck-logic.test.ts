@@ -8,6 +8,7 @@ import { seedDictionaryPackage } from '../../src/db/entities/dictionary/seed';
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { migrate } from '../../src/db/migrate';
 import {
+  addExistingCardToDeck,
   addWordToUserDeck,
   createUserDeck,
   loadUserDecks,
@@ -126,4 +127,30 @@ test('loadUserDeckWords: слова колоды в порядке добавл�
     words.map((w) => w.lemma),
     ['menu', 'waiter']
   );
+});
+
+test('loadUserDeckWords: слово, которого нет в пакете (введено вручную), резолвится из card_content', async () => {
+  const { db, dictionaryDb, userId } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Мой словарь');
+
+  const now = '2026-01-01T00:00:00.000Z';
+  const cardId = 'manual-card';
+  const itemId = 'manual-item';
+  await db.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    [cardId, userId, 'sense', itemId, 'active', now, now]
+  );
+  await db.run(
+    `INSERT INTO card_content (card_id, lemma, translation, example, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?)`,
+    [cardId, 'serendipity', 'счастливая случайность', 'It was pure serendipity.', 'manual', now]
+  );
+  await addExistingCardToDeck(db, deckId, 'sense', itemId, new Date(now));
+
+  const words = await loadUserDeckWords(db, dictionaryDb, deckId);
+
+  assert.equal(words.length, 1);
+  assert.equal(words[0]?.lemma, 'serendipity');
+  assert.equal(words[0]?.translation, 'счастливая случайность');
+  assert.equal(words[0]?.cefr, undefined);
 });

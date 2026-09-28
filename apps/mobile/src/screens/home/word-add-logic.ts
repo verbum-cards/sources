@@ -3,6 +3,7 @@ import type { DbExecutor } from '../../db/executor';
 import { DEBUG_ITEM_TYPE, type DebugWord } from '../../mocks/fsrs-debug-words';
 import { notifyChange } from '../../utilities/event-bus';
 import { uuidv7 } from '../../utilities/id';
+import { addExistingCardToDeck, getOrCreateMyVocabularyDeck } from '../decks/user-deck-logic';
 
 // F6 «Добавление слова за 5 секунд» (docs/flows/f06.md, шаг 5). Тот же паттерн
 // «card + card_content», что и в первой сессии онбординга
@@ -10,6 +11,14 @@ import { uuidv7 } from '../../utilities/id';
 // синхронизируемая сущность, card_content — локальный снимок для отображения.
 // card.status здесь всегда 'active' (никакого режима знакомства — это только
 // шаг 4 F1, здесь его нет): слово сразу попадает в очередь новых (FR-21).
+//
+// Каждое слово, добавленное с главного экрана, автоматически попадает в
+// колоду «Мой словарь» (card.source_deck_id + deck_item, см.
+// user-deck-logic.ts) — она заводится сама при первом слове. myVocabularyTitle
+// передаёт вызывающий экран (доступ к i18n есть только у компонентов, не у
+// этого файла); значение по умолчанию — только для тестов и других
+// вызывающих кодов, которые ещё не думают об этой колоде.
+const DEFAULT_MY_VOCABULARY_TITLE = 'Мой словарь';
 
 // Дубликат (docs/flows/f06.md → «Слово уже есть»): у пользователя уже есть
 // живая (не удалённая) карточка на это же значение словаря со статусом
@@ -44,6 +53,7 @@ export async function loadAddedItemIds(db: DbExecutor): Promise<Set<string>> {
 export interface AddWordFromDictionaryParams {
   db: DbExecutor;
   word: DebugWord;
+  myVocabularyTitle?: string;
   now?: Date;
 }
 
@@ -52,15 +62,17 @@ export interface AddWordFromDictionaryParams {
 export async function addWordFromDictionary({
   db,
   word,
+  myVocabularyTitle = DEFAULT_MY_VOCABULARY_TITLE,
   now = new Date(),
 }: AddWordFromDictionaryParams): Promise<string> {
   const userId = await getOrCreateLocalUserId(db);
   const nowIso = now.toISOString();
   const cardId = uuidv7(now);
+  const myVocabularyDeckId = await getOrCreateMyVocabularyDeck(db, myVocabularyTitle, now);
 
   await db.run(
-    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, 'active', nowIso, nowIso]
+    'INSERT INTO card (id, user_id, item_type, item_id, source_deck_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+    [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, myVocabularyDeckId, 'active', nowIso, nowIso]
   );
   await db.run(
     `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
@@ -79,6 +91,7 @@ export async function addWordFromDictionary({
       nowIso,
     ]
   );
+  await addExistingCardToDeck(db, myVocabularyDeckId, DEBUG_ITEM_TYPE, word.itemId, now);
   notifyChange(['card', 'card_content']);
 
   return cardId;
@@ -89,6 +102,7 @@ export interface AddManualWordParams {
   lemma: string;
   translation: string;
   example?: string;
+  myVocabularyTitle?: string;
   now?: Date;
 }
 
@@ -103,6 +117,7 @@ export async function addManualWord({
   lemma,
   translation,
   example,
+  myVocabularyTitle = DEFAULT_MY_VOCABULARY_TITLE,
   now = new Date(),
 }: AddManualWordParams): Promise<string> {
   const userId = await getOrCreateLocalUserId(db);
@@ -110,16 +125,18 @@ export async function addManualWord({
   const cardId = uuidv7(now);
   const itemId = uuidv7(now);
   const trimmedExample = example?.trim();
+  const myVocabularyDeckId = await getOrCreateMyVocabularyDeck(db, myVocabularyTitle, now);
 
   await db.run(
-    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
-    [cardId, userId, DEBUG_ITEM_TYPE, itemId, 'active', nowIso, nowIso]
+    'INSERT INTO card (id, user_id, item_type, item_id, source_deck_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+    [cardId, userId, DEBUG_ITEM_TYPE, itemId, myVocabularyDeckId, 'active', nowIso, nowIso]
   );
   await db.run(
     `INSERT INTO card_content (card_id, lemma, translation, example, source, refreshed_at)
      VALUES (?, ?, ?, ?, ?, ?)`,
     [cardId, lemma.trim(), translation.trim(), trimmedExample || null, 'manual', nowIso]
   );
+  await addExistingCardToDeck(db, myVocabularyDeckId, DEBUG_ITEM_TYPE, itemId, now);
   notifyChange(['card', 'card_content']);
 
   return cardId;
@@ -127,17 +144,29 @@ export async function addManualWord({
 
 // «Отменить» в строке подтверждения, в течение 5 с после добавления (docs/flows/f06.md,
 // шаг 5) — мягкое удаление той же карточки, тем же полем deleted_at, что и
-// остальные пользовательские данные (docs/data-model.md, инвариант 7).
+// остальные пользовательские данные (docs/data-model.md, инвариант 7). Ссылку
+// в «Моём словаре» (deck_item) тоже убираем — иначе отменённое слово всё
+// равно осталось бы видно в этой колоде.
 export async function undoAddedCard(
   db: DbExecutor,
   cardId: string,
   now: Date = new Date()
 ): Promise<void> {
   const nowIso = now.toISOString();
+  const card = await db.get<{ item_type: string; item_id: string }>(
+    'SELECT item_type, item_id FROM card WHERE id = ?',
+    [cardId]
+  );
   await db.run('UPDATE card SET deleted_at = ?, updated_at = ? WHERE id = ?', [
     nowIso,
     nowIso,
     cardId,
   ]);
-  notifyChange(['card', 'card_content']);
+  if (card) {
+    await db.run('DELETE FROM deck_item WHERE item_type = ? AND item_id = ?', [
+      card.item_type,
+      card.item_id,
+    ]);
+  }
+  notifyChange(['card', 'card_content', 'deck_item']);
 }

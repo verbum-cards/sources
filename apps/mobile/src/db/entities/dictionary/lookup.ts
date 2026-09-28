@@ -4,6 +4,8 @@ import type { DbExecutor } from '../../executor';
 
 // Данные слова/выражения из пакета словаря — независимая от mocks/words.ts
 // форма (пакет читается и без моков, когда появится настоящий конвейер).
+// cefr необязателен: эта же форма используется и для слов, у которых его
+// нет (введённые вручную на главном экране, см. user-deck-logic.ts).
 export interface PackWord {
   itemId: string;
   itemType: ItemType;
@@ -14,7 +16,7 @@ export interface PackWord {
   example: string;
   exampleTranslation: string;
   definition: string;
-  cefr: Cefr;
+  cefr?: Cefr;
 }
 
 export interface PackWordRef {

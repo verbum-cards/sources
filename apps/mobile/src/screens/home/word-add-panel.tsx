@@ -147,10 +147,14 @@ export const WordAddPanel = ({
   const handleAddFromPreview = useCallback(async () => {
     if (phase.kind !== 'preview') return;
 
-    const cardId = await addWordFromDictionary({ db, word: phase.word });
+    const cardId = await addWordFromDictionary({
+      db,
+      word: phase.word,
+      myVocabularyTitle: t('wordAdd.myVocabularyTitle'),
+    });
     showConfirmation(cardId);
     resetAfterAdd();
-  }, [db, phase, showConfirmation, resetAfterAdd]);
+  }, [db, phase, showConfirmation, resetAfterAdd, t]);
 
   const handleAddManual = useCallback(async () => {
     if (phase.kind !== 'manual') return;
@@ -162,10 +166,11 @@ export const WordAddPanel = ({
       lemma: phase.lemma,
       translation,
       example: manualExample,
+      myVocabularyTitle: t('wordAdd.myVocabularyTitle'),
     });
     showConfirmation(cardId);
     resetAfterAdd();
-  }, [db, phase, manualTranslation, manualExample, showConfirmation, resetAfterAdd]);
+  }, [db, phase, manualTranslation, manualExample, showConfirmation, resetAfterAdd, t]);
 
   const handleUndo = useCallback(async () => {
     if (!confirmation) return;

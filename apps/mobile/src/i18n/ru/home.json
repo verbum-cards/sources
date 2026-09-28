@@ -33,6 +33,7 @@
   "wordAdd": {
     "duplicate": "Уже в твоих карточках",
     "alreadyAdded": "Добавлено",
+    "myVocabularyTitle": "Мой словарь",
     "preview": {
       "addButton": "Добавить карточку"
     },

@@ -5,6 +5,7 @@ import { test } from 'node:test';
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { migrate } from '../../src/db/migrate';
 import { DEBUG_WORDS } from '../../src/mocks/fsrs-debug-words';
+import { loadUserDecks } from '../../src/screens/decks/user-deck-logic';
 import {
   addManualWord,
   addWordFromDictionary,
@@ -180,4 +181,64 @@ test('undoAddedCard: помечает карточку deleted_at, не удал
     [cardId]
   );
   assert.equal(card?.deleted_at, '2026-01-01T00:00:00.000Z');
+});
+
+test('addWordFromDictionary: слово попадает в «Мой словарь» — source_deck_id, deck_item и счётчик колоды', async () => {
+  const { db } = await setupDb();
+  const word = DEBUG_WORDS[0];
+
+  const cardId = await addWordFromDictionary({ db, word, myVocabularyTitle: 'Мой словарь' });
+
+  const card = await db.get<{ source_deck_id: string | null }>(
+    'SELECT source_deck_id FROM card WHERE id = ?',
+    [cardId]
+  );
+  assert.ok(card?.source_deck_id);
+
+  const deckItem = await db.get('SELECT deck_id FROM deck_item WHERE deck_id = ? AND item_id = ?', [
+    card.source_deck_id,
+    word.itemId,
+  ]);
+  assert.ok(deckItem);
+
+  const [deck] = await loadUserDecks(db);
+  assert.equal(deck?.title, 'Мой словарь');
+  assert.equal(deck?.itemCount, 1);
+});
+
+test('addManualWord: тоже попадает в «Мой словарь», в ту же колоду, что и слова из словаря', async () => {
+  const { db } = await setupDb();
+
+  const dictCardId = await addWordFromDictionary({
+    db,
+    word: DEBUG_WORDS[0],
+    myVocabularyTitle: 'Мой словарь',
+  });
+  await addManualWord({
+    db,
+    lemma: 'serendipity',
+    translation: 'счастливая случайность',
+    myVocabularyTitle: 'Мой словарь',
+  });
+
+  const decks = await loadUserDecks(db);
+  assert.equal(decks.length, 1, 'колода «Мой словарь» не должна создаваться дважды');
+  assert.equal(decks[0]?.itemCount, 2);
+
+  const dictCard = await db.get<{ source_deck_id: string }>(
+    'SELECT source_deck_id FROM card WHERE id = ?',
+    [dictCardId]
+  );
+  assert.equal(dictCard?.source_deck_id, decks[0]?.id);
+});
+
+test('undoAddedCard: убирает слово и из «Моего словаря» (deck_item), не только из card', async () => {
+  const { db } = await setupDb();
+  const word = DEBUG_WORDS[0];
+  const cardId = await addWordFromDictionary({ db, word, myVocabularyTitle: 'Мой словарь' });
+
+  await undoAddedCard(db, cardId);
+
+  const [deck] = await loadUserDecks(db);
+  assert.equal(deck?.itemCount, 0);
 });

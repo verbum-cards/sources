@@ -12,7 +12,9 @@ export type AppMetaKey =
   | 'dictionary_content_version'
   | 'sync_cursor'
   | 'last_push_at'
-  | 'last_pull_at';
+  | 'last_pull_at'
+  | 'onboarding_completed_at'
+  | 'my_vocabulary_deck_id';
 
 export interface AppMetaRow {
   key: AppMetaKey;
