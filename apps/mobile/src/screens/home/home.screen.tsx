@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Animated, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import type { TFunction } from 'i18next';
+import { Layers, WholeWord } from 'lucide-react-native';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
@@ -12,8 +13,8 @@ import { resetLocalData } from '../../db/entities/user/reset-local-data';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
+import { groupWords } from '../../utilities/word-category';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
-import { WordAddPanel, type WordAddPanelHandle } from '../word-add-panel';
 import {
   computeStreakDays,
   countCardsCreatedToday,
@@ -26,6 +27,7 @@ import {
   type RecentCard,
 } from './home-logic';
 import { ReminderPrompt } from './reminder-prompt';
+import { WordAddPanel, type WordAddPanelHandle } from './word-add-panel';
 import { WordStudyCard } from './word-study-card';
 
 // «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
@@ -54,7 +56,12 @@ function formatRecentWhen(t: TFunction<'home'>, createdAtIso: string): string {
 // «Повторить сейчас» (ReviewPanel) на экране нет вовсе: F10 (сессия
 // повторения) ещё не реализован, а кнопка, которая ничего не делает, хуже
 // отсутствующей кнопки.
-export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }) => {
+interface Props {
+  onOpenFsrsDebug?: () => void;
+  onOpenDecks?: () => void;
+}
+
+export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
   const db = useDb();
@@ -91,6 +98,12 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const showWidgets = (cardCount ?? 0) >= HOME_WIDGETS_REVEAL_THRESHOLD;
 
   const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
+  // Те же подгруппы, что и внутри колоды (существительные/глаголы/прилагательные/
+  // фразы/вопросы), тем же приёмом — utilities/word-category.ts. lemma
+  // добавляется прямо тут: у RecentCard слово называется word, а не lemma.
+  const recentGroups = groupWords(
+    (recentCards ?? []).map((card) => ({ ...card, lemma: card.word }))
+  );
   const { data: profile } = useQuery(loadCurrentUserProfile, { tables: ['user_profile'] });
   const name = profile?.name;
   // Онбординг (F1) всегда пишет user_profile перед тем, как главный экран
@@ -115,10 +128,10 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{
-          paddingHorizontal: space[5],
+          paddingHorizontal: space[4],
           paddingTop: space[6],
           paddingBottom: space[6],
-          gap: space[4],
+          gap: space[6],
         }}
       >
         <View
@@ -126,7 +139,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
-            gap: space[3],
+            gap: space[4],
           }}
         >
           <View style={{ gap: 6, flexShrink: 1 }}>
@@ -147,7 +160,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
         {hasCards ? (
           <>
             {showWidgets ? (
-              <>
+              <View style={{ gap: space[4] }}>
                 <ProgressBar
                   title={t('goal.title')}
                   meta={t('goal.meta', { count: dailyGoal, done: todayAdded })}
@@ -193,36 +206,43 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
                     </View>
                   ))}
                 </View>
-              </>
+              </View>
             ) : null}
 
-            <View style={{ gap: space[2] }}>
-              <Text
-                accessibilityRole="header"
-                style={[type.button, { fontSize: 15, color: colors.ink }]}
-              >
+            <View style={{ gap: space[4], paddingTop: space[4] }}>
+              <Text accessibilityRole="header" style={[type.title, { color: colors.ink }]}>
                 {t('recent.title')}
               </Text>
-              <View
-                style={{
-                  backgroundColor: colors.surface,
-                  borderRadius: radius.lg,
-                  borderWidth: 1,
-                  borderColor: colors.line,
-                  overflow: 'hidden',
-                }}
-              >
-                {(recentCards ?? []).map((card, i, all) => (
-                  <WordRow
-                    key={`${card.word}-${card.createdAt}`}
-                    word={card.word}
-                    translation={card.translation}
-                    when={formatRecentWhen(t, card.createdAt)}
-                    last={i === all.length - 1}
-                    onPress={() => setSelectedCard(card)}
-                  />
-                ))}
-              </View>
+              {recentGroups.map((group) => (
+                <View key={group.category} style={{ gap: space[2] }}>
+                  <Text style={[type.caption, { color: colors.inkMuted }]}>
+                    {t(`categories.${group.category}`, { ns: 'decks' })}
+                  </Text>
+                  <View
+                    style={{
+                      backgroundColor: colors.surface,
+                      borderRadius: radius.md,
+                      borderWidth: 1,
+                      borderColor: colors.line,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    {group.items.map((card, i, all) => (
+                      <WordRow
+                        key={`${card.word}-${card.createdAt}`}
+                        word={card.word}
+                        ipa={card.ipa}
+                        pos={card.pos}
+                        cefr={card.cefr}
+                        translation={card.translation}
+                        when={formatRecentWhen(t, card.createdAt)}
+                        last={i === all.length - 1}
+                        onPress={() => setSelectedCard(card)}
+                      />
+                    ))}
+                  </View>
+                </View>
+              ))}
             </View>
           </>
         ) : emptyStateDismissed ? null : (
@@ -239,13 +259,21 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
             }}
           >
             <Text style={[type.titleL, { color: colors.ink }]}>{t('emptyState.title')}</Text>
-            <Text style={[type.body, { color: colors.inkMuted }]}>{t('emptyState.subtitle')}</Text>
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('emptyState.subtitle')}</Text>
 
             <Button
+              icon={<WholeWord size={24} color={colors.onAction} />}
               label={t('emptyState.newWord')}
               size="lg"
               block
               onPress={handleStartAddingFirstWord}
+            />
+            <Button
+              icon={<Layers size={24} color={colors.onAction} />}
+              label={t('emptyState.newDeck')}
+              size="lg"
+              block
+              onPress={() => onOpenDecks?.()}
             />
           </Animated.View>
         )}

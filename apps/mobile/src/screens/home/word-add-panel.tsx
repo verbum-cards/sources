@@ -9,15 +9,16 @@ import React, {
 import { useTranslation } from 'react-i18next';
 import { Pressable, Text, TextInput, View } from 'react-native';
 
-import { Button } from '../components/Button';
-import { WordInput } from '../components/WordInput';
-import { WordRow } from '../components/WordRow';
-import { findWordByLemma, searchWordsByPrefix } from '../dictionary/search';
-import { useDb } from '../hooks/use-db.hook';
-import { useQuery } from '../hooks/use-query.hook';
-import type { DebugWord } from '../mocks/fsrs-debug-words';
-import { useTheme } from '../providers/theme.provider';
-import { splitAroundWord } from '../utilities/highlight-word';
+import { Button } from '../../components/Button';
+import { WordInput } from '../../components/WordInput';
+import { WordRow } from '../../components/WordRow';
+import { findWordByLemma, searchWordsByPrefix } from '../../dictionary/search';
+import { useDb } from '../../hooks/use-db.hook';
+import { useQuery } from '../../hooks/use-query.hook';
+import type { DebugWord } from '../../mocks/fsrs-debug-words';
+import { useTheme } from '../../providers/theme.provider';
+import { formatPos } from '../../utilities/format-pos';
+import { splitAroundWord } from '../../utilities/highlight-word';
 import {
   addManualWord,
   addWordFromDictionary,
@@ -179,7 +180,7 @@ export const WordAddPanel = ({
     phase.kind === 'preview' ? splitAroundWord(phase.word.example, phase.word.lemma) : null;
 
   return (
-    <View style={{ gap: space[3] }}>
+    <View style={{ gap: space[1] }}>
       <WordInput
         ref={inputRef}
         value={query}
@@ -192,7 +193,7 @@ export const WordAddPanel = ({
         <View
           style={{
             backgroundColor: colors.surface,
-            borderRadius: radius.lg,
+            borderRadius: radius.md,
             borderWidth: 1,
             borderColor: colors.line,
             overflow: 'hidden',
@@ -202,6 +203,9 @@ export const WordAddPanel = ({
             <WordRow
               key={word.itemId}
               word={word.lemma}
+              ipa={word.ipa}
+              pos={word.pos}
+              cefr={word.cefr}
               translation={word.translation}
               when={addedItemIds?.has(word.itemId) ? t('wordAdd.alreadyAdded') : undefined}
               last={i === all.length - 1}
@@ -215,15 +219,33 @@ export const WordAddPanel = ({
         <View
           style={{
             backgroundColor: colors.surface,
-            borderRadius: radius.lg,
+            borderRadius: radius.md,
             padding: space[4],
             gap: space[8],
           }}
         >
           <View style={{ gap: space[2] }}>
-            <Text style={[type.title, { color: colors.ink }]}>{phase.word.lemma}</Text>
+            <Text style={[type.title, { color: colors.ink }]}>
+              {phase.word.lemma}
+              {phase.word.ipa ? (
+                <Text style={[type.body, { color: colors.inkMuted }]}> /{phase.word.ipa}/</Text>
+              ) : null}
+              {formatPos(phase.word.pos) ? (
+                <Text style={[type.body, { color: colors.inkMuted }]}>
+                  {' '}
+                  · {formatPos(phase.word.pos)}
+                </Text>
+              ) : null}
+              <Text style={[type.body, { color: colors.inkMuted }]}> · {phase.word.cefr}</Text>
+            </Text>
             <Text style={[type.body, { color: colors.inkMuted }]}>{phase.word.translation}</Text>
           </View>
+
+          {phase.word.definition ? (
+            <Text style={[type.bodyS, { color: colors.inkMuted, fontStyle: 'italic' }]}>
+              {phase.word.definition}
+            </Text>
+          ) : null}
 
           <View style={{ gap: space[2] }}>
             <Text style={[type.body, { color: colors.ink }]}>

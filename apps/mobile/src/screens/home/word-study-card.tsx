@@ -4,6 +4,7 @@ import { Modal, Pressable, Text, View } from 'react-native';
 import { X } from 'lucide-react-native';
 
 import { useTheme } from '../../providers/theme.provider';
+import { formatPos } from '../../utilities/format-pos';
 import { splitAroundWord } from '../../utilities/highlight-word';
 import type { RecentCard } from './home-logic';
 
@@ -40,8 +41,8 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
               style={{
                 backgroundColor: colors.surface,
                 borderRadius: radius.lg,
-                padding: space[5],
-                gap: space[8],
+                padding: space[2],
+                gap: space[6],
               }}
             >
               <View
@@ -49,13 +50,52 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                   flexDirection: 'row',
                   justifyContent: 'space-between',
                   alignItems: 'flex-start',
-                  gap: space[3],
+                  gap: space[4],
                 }}
               >
-                <View style={{ gap: space[2], flexShrink: 1 }}>
-                  <Text style={[type.title, { color: colors.ink }]}>{card.word}</Text>
+                <View style={{ gap: space[2], flexShrink: 1, padding: space[4] }}>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'flex-start',
+                      gap: space[4],
+                      paddingRight: space[2],
+                    }}
+                  >
+                    <Text style={[type.title, { color: colors.ink }]}>{card.word}</Text>
+                    {card.cefr ? (
+                      <Text
+                        style={[
+                          type.captionS,
+                          {
+                            color: colors.inkMuted,
+                            backgroundColor: colors.surfaceSunken,
+                            padding: space[2],
+                            borderRadius: radius.pill,
+                            width: 32,
+                            height: 28,
+                            textAlign: 'center',
+                          },
+                        ]}
+                      >
+                        {card.cefr}
+                      </Text>
+                    ) : null}
+                  </View>
+
+                  <View style={{ flexDirection: 'row', gap: space[1] }}>
+                    {card.ipa ? (
+                      <Text style={[type.caption, { color: colors.inkMuted }]}> /{card.ipa}/</Text>
+                    ) : null}
+                    {formatPos(card.pos) ? (
+                      <Text style={[type.caption, { color: colors.inkMuted }]}>
+                        · {formatPos(card.pos)}
+                      </Text>
+                    ) : null}
+                  </View>
                   <Text style={[type.body, { color: colors.inkMuted }]}>{card.translation}</Text>
                 </View>
+
                 <Pressable
                   accessibilityRole="button"
                   accessibilityLabel={t('recent.close')}
@@ -65,15 +105,24 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                     minHeight: 44,
                     alignItems: 'center',
                     justifyContent: 'center',
+                    padding: space[4],
                   }}
                 >
                   <X size={20} color={colors.inkMuted} />
                 </Pressable>
               </View>
 
+              {card.definition ? (
+                <View style={{ paddingHorizontal: space[4] }}>
+                  <Text style={[type.bodyS, { color: colors.inkMuted, fontStyle: 'italic' }]}>
+                    {card.definition}
+                  </Text>
+                </View>
+              ) : null}
+
               {example ? (
-                <View style={{ gap: space[2] }}>
-                  <Text style={[type.body, { color: colors.inkMuted }]}>
+                <View style={{ gap: space[2], padding: space[4] }}>
+                  <Text style={[type.body, { color: colors.ink }]}>
                     {example.before}
                     {example.match ? (
                       <Text
@@ -89,7 +138,7 @@ export const WordStudyCard = ({ card, onClose }: Props) => {
                     {example.after}
                   </Text>
                   {card.exampleTranslation ? (
-                    <Text style={[type.body, { color: colors.inkMuted }]}>
+                    <Text style={[type.captionS, { color: colors.inkMuted }]}>
                       {card.exampleTranslation}
                     </Text>
                   ) : null}

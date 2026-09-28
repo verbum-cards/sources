@@ -8,6 +8,7 @@ import {
   markOnboardingCompleted,
 } from '../../src/db/entities/user/app-meta';
 import { migrate } from '../../src/db/migrate';
+import { DEBUG_WORDS } from '../../src/mocks/fsrs-debug-words';
 import { applyRating } from '../../src/scheduler/scheduler';
 import {
   computeStreakDays,
@@ -19,7 +20,7 @@ import {
   loadRecentCards,
   shouldPromptForReminders,
 } from '../../src/screens/home/home-logic';
-import { addManualWord } from '../../src/screens/word-add-logic';
+import { addManualWord, addWordFromDictionary } from '../../src/screens/home/word-add-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
 // created_at всегда пишется как new Date().toISOString() от локального
@@ -46,6 +47,20 @@ test('countUserCards и loadRecentCards: 0, пока карточек нет', a
 
   assert.equal(await countUserCards(db), 0);
   assert.deepEqual(await loadRecentCards(db), []);
+});
+
+test('loadRecentCards: отдаёт ipa, pos, cefr и definition из словаря', async () => {
+  const { db } = await setupDb();
+  const word = DEBUG_WORDS[0];
+
+  await addWordFromDictionary({ db, word });
+
+  const [card] = await loadRecentCards(db);
+  assert.equal(card?.ipa, word.ipa);
+  assert.equal(card?.pos, word.pos);
+  assert.equal(card?.cefr, word.cefr);
+  assert.equal(card?.definition, word.definition);
+  assert.equal(card?.itemType, 'sense');
 });
 
 test('loadRecentCards: отдаёт example/exampleTranslation — нужны карточке обучения по тапу на слово', async () => {

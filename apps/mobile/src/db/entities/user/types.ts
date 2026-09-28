@@ -67,6 +67,7 @@ export interface CardContentRow {
   example: string | null;
   example_highlight: string | null; // JSON [start, end]
   example_translation: string | null;
+  definition: string | null;
   source: CardContentSource;
   content_version: number | null;
   refreshed_at: string;

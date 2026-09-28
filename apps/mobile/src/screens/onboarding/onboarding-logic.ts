@@ -73,15 +73,18 @@ export async function answerFirstSessionWord({
     [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, knowsWord ? 'known' : 'active', nowIso, nowIso]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, pos, translation, example, example_translation, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       cardId,
       word.lemma,
       word.pos,
+      word.ipa,
+      word.cefr,
       word.translation,
       word.example,
       word.exampleTranslation,
+      word.definition,
       'manual',
       nowIso,
     ]

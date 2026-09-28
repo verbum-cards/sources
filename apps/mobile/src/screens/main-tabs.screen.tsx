@@ -37,8 +37,10 @@ export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => vo
     // кадра виден белый фон RN по умолчанию — особенно заметно в тёмной теме.
     <View style={{ flex: 1, backgroundColor: colors.paper }}>
       <Animated.View style={{ flex: 1, opacity }}>
-        {tab === 'home' ? <HomeScreen onOpenFsrsDebug={onOpenFsrsDebug} /> : null}
-        {tab === 'decks' ? <DecksScreen /> : null}
+        {tab === 'home' ? (
+          <HomeScreen onOpenFsrsDebug={onOpenFsrsDebug} onOpenDecks={() => setTab('decks')} />
+        ) : null}
+        {tab === 'decks' ? <DecksScreen onOpenProgress={() => setTab('progress')} /> : null}
         {tab === 'progress' ? <ProgressScreen /> : null}
         {tab === 'profile' ? <ProfileScreen /> : null}
       </Animated.View>

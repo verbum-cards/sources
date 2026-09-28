@@ -26,10 +26,7 @@ export const WordInput = ({ value, onChangeText, onSubmit, onFocus, ref }: Props
 
   return (
     <View style={{ gap: space[2] }}>
-      <Text
-        nativeID="new-word-label"
-        style={[type.caption, { color: colors.inkMuted, fontSize: 14 }]}
-      >
+      <Text nativeID="new-word-label" style={[type.captionS, { color: colors.ink, fontSize: 14 }]}>
         {t('wordInput.label')}
       </Text>
       <View style={{ flexDirection: 'row', gap: space[4] }}>

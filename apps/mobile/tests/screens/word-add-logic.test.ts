@@ -11,7 +11,7 @@ import {
   isWordAlreadyAdded,
   loadAddedItemIds,
   undoAddedCard,
-} from '../../src/screens/word-add-logic';
+} from '../../src/screens/home/word-add-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
 async function setupDb() {
@@ -90,13 +90,27 @@ test('addWordFromDictionary: создаёт card (status=active, item_type=sense
     }
   );
 
-  const content = await db.get<{ lemma: string; translation: string; source: string }>(
-    'SELECT lemma, translation, source FROM card_content WHERE card_id = ?',
+  const content = await db.get<{
+    lemma: string;
+    ipa: string;
+    cefr: string;
+    translation: string;
+    definition: string;
+    source: string;
+  }>(
+    'SELECT lemma, ipa, cefr, translation, definition, source FROM card_content WHERE card_id = ?',
     [cardId]
   );
   assert.deepEqual(
     { ...content },
-    { lemma: word.lemma, translation: word.translation, source: 'pack' }
+    {
+      lemma: word.lemma,
+      ipa: word.ipa,
+      cefr: word.cefr,
+      translation: word.translation,
+      definition: word.definition,
+      source: 'pack',
+    }
   );
 });
 

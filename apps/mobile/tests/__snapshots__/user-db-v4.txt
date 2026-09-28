@@ -45,7 +45,7 @@ table	card_content	card_content	CREATE TABLE card_content (
       source TEXT NOT NULL CHECK (source IN ('pack', 'server', 'manual')),
       content_version INTEGER,
       refreshed_at TEXT NOT NULL
-    )
+    , definition TEXT)
 table	card_schedule	card_schedule	CREATE TABLE card_schedule (
       card_id TEXT PRIMARY KEY REFERENCES card (id) ON DELETE CASCADE,
       due TEXT,

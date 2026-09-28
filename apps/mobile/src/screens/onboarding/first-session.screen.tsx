@@ -9,6 +9,7 @@ import { Button } from '../../components/Button';
 import { getOrCreateDeviceId, getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
 import { useDb } from '../../hooks/use-db.hook';
 import { useTheme } from '../../providers/theme.provider';
+import { formatPos } from '../../utilities/format-pos';
 import {
   answerFirstSessionWord,
   getFirstSessionWords,
@@ -86,6 +87,9 @@ export const FirstSessionScreen = ({
               {t('firstSession.progress', { current: index + 1, total: words.length })}
             </Text>
             <Text style={[type.displayWord, { color: colors.ink }]}>{word.lemma}</Text>
+            <Text style={[type.body, { color: colors.inkMuted }]}>
+              /{word.ipa}/ · {formatPos(word.pos)} · {word.cefr}
+            </Text>
             <Text style={[type.body, { color: colors.inkMuted }]}>{word.translation}</Text>
             <Text style={[type.bodyS, { color: colors.inkMuted }]}>{word.example}</Text>
             <Text style={[type.bodyS, { color: colors.inkMuted }]}>{word.exampleTranslation}</Text>

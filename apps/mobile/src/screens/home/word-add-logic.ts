@@ -1,8 +1,8 @@
-import { getOrCreateLocalUserId } from '../db/entities/user/app-meta';
-import type { DbExecutor } from '../db/executor';
-import { DEBUG_ITEM_TYPE, type DebugWord } from '../mocks/fsrs-debug-words';
-import { notifyChange } from '../utilities/event-bus';
-import { uuidv7 } from '../utilities/id';
+import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import type { DbExecutor } from '../../db/executor';
+import { DEBUG_ITEM_TYPE, type DebugWord } from '../../mocks/fsrs-debug-words';
+import { notifyChange } from '../../utilities/event-bus';
+import { uuidv7 } from '../../utilities/id';
 
 // F6 «Добавление слова за 5 секунд» (docs/flows/f06.md, шаг 5). Тот же паттерн
 // «card + card_content», что и в первой сессии онбординга
@@ -63,15 +63,18 @@ export async function addWordFromDictionary({
     [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, 'active', nowIso, nowIso]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, pos, translation, example, example_translation, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       cardId,
       word.lemma,
       word.pos,
+      word.ipa,
+      word.cefr,
       word.translation,
       word.example,
       word.exampleTranslation,
+      word.definition,
       'pack',
       nowIso,
     ]

@@ -33,11 +33,25 @@ test('answerFirstSessionWord: «Знаю это слово» -> card.status=know
   );
   assert.deepEqual({ ...card }, { status: 'known', item_type: 'sense', item_id: word.itemId });
 
-  const content = await db.get<{ lemma: string; translation: string }>(
-    'SELECT lemma, translation FROM card_content WHERE card_id = ?',
-    [cardId]
+  const content = await db.get<{
+    lemma: string;
+    ipa: string;
+    cefr: string;
+    translation: string;
+    definition: string;
+  }>('SELECT lemma, ipa, cefr, translation, definition FROM card_content WHERE card_id = ?', [
+    cardId,
+  ]);
+  assert.deepEqual(
+    { ...content },
+    {
+      lemma: word.lemma,
+      ipa: word.ipa,
+      cefr: word.cefr,
+      translation: word.translation,
+      definition: word.definition,
+    }
   );
-  assert.deepEqual({ ...content }, { lemma: word.lemma, translation: word.translation });
 
   const reviewLogs = await db.all('SELECT * FROM review_log WHERE card_id = ?', [cardId]);
   const schedules = await db.all('SELECT * FROM card_schedule WHERE card_id = ?', [cardId]);
