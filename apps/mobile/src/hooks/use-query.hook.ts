@@ -41,6 +41,16 @@ export function useQuery<T>(
     queryFnRef.current = queryFn;
   });
 
+  // Счётчик запросов — если notifyChange срабатывает дважды подряд быстро
+  // (например, moveWordToDeck: сначала запись в одну колоду, потом удаление
+  // из другой, каждая со своим notifyChange), два runQuery летят параллельно
+  // и могут прийти в любом порядке. Без этой проверки более ранний, но
+  // случайно завершившийся позже (например, потому что читает из двух баз,
+  // а не из одной) перезаписывает уже свежий результат устаревшим — слово
+  // «зависает» в списке до следующего перечитывания. Применяем только
+  // результат самого последнего запущенного запроса.
+  const latestRequestIdRef = useRef(0);
+
   const runQuery = useCallback(() => {
     if (!enabled) {
       setLoading(false);
@@ -48,18 +58,21 @@ export function useQuery<T>(
       return;
     }
     setLoading(true);
+    const requestId = ++latestRequestIdRef.current;
     // runQuery остаётся синхронной (её сигнатура — () => void, её передают в
     // subscribeToChanges и возвращают как refetch), поэтому async-версия внутри —
     // самовызывающаяся функция, а не сама runQuery.
     void (async () => {
       try {
         const result = await queryFnRef.current(db);
+        if (latestRequestIdRef.current !== requestId) return;
         setData(result);
         setError(null);
       } catch (err) {
+        if (latestRequestIdRef.current !== requestId) return;
         setError(err instanceof Error ? err : new Error(String(err)));
       } finally {
-        setLoading(false);
+        if (latestRequestIdRef.current === requestId) setLoading(false);
       }
     })();
   }, [db, enabled]);

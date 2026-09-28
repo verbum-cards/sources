@@ -35,15 +35,27 @@ interface Props {
   revealed: boolean;
   onReveal: () => void;
   onHide: () => void;
+  // Свайп вправо — не reveal-иконки, а сразу действие (например, открыть
+  // список колод для перемещения слова). Необязательный: колоды в «Мои
+  // колоды» им не пользуются.
+  onSwipeRight?: () => void;
 }
 
 // Свайп влево на строке — не уезжающая строка, а оверлей поверх неё (0.5
 // прозрачности) и иконки действий справа, всплывающие fade-in + чуть снизу
-// вверх. react-native-gesture-handler (ADR-31, docs/decisions.md): жест
-// распознаётся нативно, а не в JS-потоке — activeOffsetX/failOffsetY отдают
-// предпочтение вертикальному ScrollView раньше, чем наш горизонтальный успел
-// бы «выиграть» гонку в JS.
-export const SwipeActions = ({ children, actions, revealed, onReveal, onHide }: Props) => {
+// вверх. Свайп вправо (onSwipeRight) — без оверлея, сразу вызывает колбэк:
+// порог пройден — жест сделал своё дело. react-native-gesture-handler
+// (ADR-31, docs/decisions.md): жест распознаётся нативно, а не в JS-потоке —
+// activeOffsetX/failOffsetY отдают предпочтение вертикальному ScrollView
+// раньше, чем наш горизонтальный успел бы «выиграть» гонку в JS.
+export const SwipeActions = ({
+  children,
+  actions,
+  revealed,
+  onReveal,
+  onHide,
+  onSwipeRight,
+}: Props) => {
   const { colors, space } = useTheme();
   // useState с ленивым инициализатором, а не useRef(...).current — читаются
   // прямо в рендере (opacity/transform), а useRef здесь нарушил бы
@@ -77,11 +89,14 @@ export const SwipeActions = ({ children, actions, revealed, onReveal, onHide }: 
 
   const panGesture = Gesture.Pan()
     .enabled(!revealed)
-    .activeOffsetX(-DIRECTION_LOCK_DX)
-    .failOffsetX(DIRECTION_LOCK_DX)
+    // Обе стороны активируют жест на уровне нативного распознавания — нет
+    // горизонтального ScrollView, с которым можно было бы конфликтовать,
+    // поэтому не нужен failOffsetX для одной из сторон, как раньше.
+    .activeOffsetX([-DIRECTION_LOCK_DX, DIRECTION_LOCK_DX])
     .failOffsetY([-VERTICAL_FAIL, VERTICAL_FAIL])
     .onEnd((event) => {
       if (event.translationX < -SWIPE_THRESHOLD) onReveal();
+      else if (event.translationX > SWIPE_THRESHOLD) onSwipeRight?.();
     });
 
   return (

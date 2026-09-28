@@ -16,6 +16,7 @@ import {
   loadUserDeck,
   loadUserDecks,
   loadUserDeckWords,
+  moveWordToDeck,
   removeWordFromUserDeck,
   renameUserDeck,
 } from '../../src/screens/decks/user-deck-logic';
@@ -95,6 +96,40 @@ test('renameUserDeck: пустое название (после trim) — нет
 
   const [deck] = await loadUserDecks(db);
   assert.equal(deck?.title, 'Название');
+});
+
+test('moveWordToDeck: слово пропадает из исходной колоды и появляется в целевой', async () => {
+  const { db, dictionaryDb } = await setupDbs();
+  const fromDeckId = await createUserDeck(db, 'Колода А');
+  const toDeckId = await createUserDeck(db, 'Колода Б');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+  await addWordToUserDeck(db, fromDeckId, menu, 'Мой словарь');
+
+  await moveWordToDeck(db, fromDeckId, toDeckId, menu.itemType, menu.itemId);
+
+  assert.deepEqual(await loadUserDeckWords(db, dictionaryDb, fromDeckId), []);
+  const toWords = await loadUserDeckWords(db, dictionaryDb, toDeckId);
+  assert.equal(toWords.length, 1);
+  assert.equal(toWords[0]?.itemId, menu.itemId);
+});
+
+test('moveWordToDeck: слово остаётся в «Мой словарь», карточка заново не создаётся', async () => {
+  const { db, dictionaryDb, userId } = await setupDbs();
+  const myVocabularyId = await getOrCreateMyVocabularyDeck(db, 'Мой словарь');
+  const fromDeckId = await createUserDeck(db, 'Колода А');
+  const toDeckId = await createUserDeck(db, 'Колода Б');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+  await addWordToUserDeck(db, fromDeckId, menu, 'Мой словарь');
+  const cardsBefore = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
+
+  await moveWordToDeck(db, fromDeckId, toDeckId, menu.itemType, menu.itemId);
+
+  const myVocabularyWords = await loadUserDeckWords(db, dictionaryDb, myVocabularyId);
+  assert.equal(myVocabularyWords.length, 1);
+  const cardsAfter = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
+  assert.deepEqual(cardsAfter, cardsBefore);
 });
 
 test('createUserDeck: обрезает пробелы по краям названия', async () => {

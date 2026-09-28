@@ -37,6 +37,9 @@
     "deleteCancelButton": "Отмена",
     "deleteConfirmButton": "Удалить",
     "rename": "Переименовать",
-    "renameTitle": "Переименовать колоду"
+    "renameTitle": "Переименовать колоду",
+    "moveTitle": "Переместить в колоду",
+    "moveEmpty": "Больше колод нет — создайте новую, чтобы перемещать слова",
+    "moveSuccess": "«{{word}}» перемещено в «{{deck}}»"
   }
 }

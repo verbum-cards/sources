@@ -297,6 +297,23 @@ export async function removeWordFromUserDeck(
   notifyChange(['deck_item']);
 }
 
+// Свайп вправо на слове (UserDeckDetail) — перемещение между своими
+// колодами: та же ссылка (deck_item), просто у другой колоды. Сначала
+// добавляем в целевую, потом убираем из исходной — слово ни на миг не
+// остаётся совсем без колоды, если между вызовами что-то пойдёт не так.
+// Карточку (FSRS-состояние) не трогаем — она вообще не привязана к колоде.
+export async function moveWordToDeck(
+  db: DbExecutor,
+  fromDeckId: string,
+  toDeckId: string,
+  itemType: ItemType,
+  itemId: string,
+  now: Date = new Date()
+): Promise<void> {
+  await addExistingCardToDeck(db, toDeckId, itemType, itemId, now);
+  await removeWordFromUserDeck(db, fromDeckId, itemType, itemId, now);
+}
+
 // Любое отдельное слово, которое пользователь добавляет себе в карточки — с
 // главного экрана (word-add-logic.ts), из официальной колоды
 // (decks-logic.ts::addSingleDeckWord) или из своей (addWordToUserDeck ниже)

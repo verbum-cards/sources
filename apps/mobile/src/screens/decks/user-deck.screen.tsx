@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
+import { LayoutAnimation, Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ChevronLeft, Trash2 } from 'lucide-react-native';
 
@@ -13,14 +13,19 @@ import type { PackWord } from '../../db/entities/dictionary/lookup';
 import { useDb } from '../../hooks/use-db.hook';
 import { useDictionaryDb } from '../../hooks/use-dictionary-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
+import { useToast } from '../../hooks/use-toast.hook';
 import { useTheme } from '../../providers/theme.provider';
 import {
   addWordToUserDeck,
   createUserDeck,
+  getOrCreateMyVocabularyDeck,
   loadUserDeck,
+  loadUserDecks,
   loadUserDeckWords,
+  moveWordToDeck,
   removeWordFromUserDeck,
   renameUserDeck,
+  type UserDeck,
 } from './user-deck-logic';
 
 // «Создать колоду» — только название, тело как у ProfileName (TextInput +
@@ -199,17 +204,116 @@ export const RenameUserDeckModal = ({
   );
 };
 
+// Длительность fade-анимации закрытия Modal (animationType="fade") — после
+// выбора колоды ждём столько же, прежде чем анимировать исчезновение строки:
+// раньше не получится увидеть анимацию за ещё не закрывшимся попапом.
+const MODAL_CLOSE_MS = 300;
+
+// Свайп вправо на слове (UserDeckDetail) — список своих колод, куда его
+// можно перенести. «Мой словарь» и текущая колода в список не входят: в
+// «Мой словарь» слово и так уже есть (addToMyVocabulary), а переносить в ту
+// же колоду, где оно уже лежит, бессмысленно — вызывающий отфильтровывает
+// оба случая до передачи `decks` сюда.
+export const MoveWordModal = ({
+  visible,
+  word,
+  fromDeckId,
+  decks,
+  onClose,
+  onMoved,
+}: {
+  visible: boolean;
+  word: PackWord | null;
+  fromDeckId: string;
+  decks: readonly UserDeck[];
+  onClose: () => void;
+  onMoved: (word: string, deckTitle: string) => void;
+}) => {
+  const { colors, radius, space, type } = useTheme();
+  const { t } = useTranslation('decks');
+  const db = useDb();
+
+  const handlePick = (deck: UserDeck) => {
+    if (!word) return;
+    const movedWord = word;
+    // Само перемещение и анимация исчезновения строки — после того, как
+    // попап закроется и перестанет закрывать собой список: иначе анимация
+    // проигрывается за ещё открытой модалкой и её не видно.
+    onClose();
+    setTimeout(() => {
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+      void (async () => {
+        await moveWordToDeck(db, fromDeckId, deck.id, movedWord.itemType, movedWord.itemId);
+        onMoved(movedWord.lemma, deck.title);
+      })();
+    }, MODAL_CLOSE_MS);
+  };
+
+  return (
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable
+        onPress={onClose}
+        style={{
+          flex: 1,
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+          justifyContent: 'center',
+          padding: space[5],
+        }}
+      >
+        <Pressable onPress={() => {}}>
+          <View
+            style={{
+              backgroundColor: colors.surface,
+              borderRadius: radius.lg,
+              padding: space[5],
+              gap: space[4],
+            }}
+          >
+            <Text style={[type.title, { color: colors.ink }]}>{t('userDecks.moveTitle')}</Text>
+            {decks.length > 0 ? (
+              <View style={{ gap: space[2] }}>
+                {decks.map((deck) => (
+                  <Pressable
+                    key={deck.id}
+                    accessibilityRole="button"
+                    onPress={() => handlePick(deck)}
+                    style={{
+                      paddingVertical: space[4],
+                      paddingHorizontal: space[4],
+                      borderRadius: radius.md,
+                      borderWidth: 1,
+                      borderColor: colors.line,
+                    }}
+                  >
+                    <Text style={[type.bodyS, { color: colors.ink }]}>{deck.title}</Text>
+                  </Pressable>
+                ))}
+              </View>
+            ) : (
+              <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+                {t('userDecks.moveEmpty')}
+              </Text>
+            )}
+          </View>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+};
+
 export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () => void }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
   const dictionaryDb = useDictionaryDb();
+  const toast = useToast();
 
   const { data: deck } = useQuery((userDb) => loadUserDeck(userDb, deckId), { tables: ['deck'] });
   const { data: deckWords } = useQuery(
     (userDb) => loadUserDeckWords(userDb, dictionaryDb, deckId),
     { tables: ['deck_item', 'card', 'card_content'] }
   );
+  const { data: allUserDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const addedRefs = new Set((deckWords ?? []).map((word) => `${word.itemType}:${word.itemId}`));
 
   const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
@@ -217,8 +321,25 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
   // SwipeActions: свайп по другой строке или тап вне уже открытой закрывают
   // предыдущую, а не добавляют вторую открытую поверх.
   const [revealedWordKey, setRevealedWordKey] = useState<string | null>(null);
+  const [movingWord, setMovingWord] = useState<PackWord | null>(null);
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+
+  // Тот же get-or-create, что и в decks.screen.tsx — нужен только id, чтобы
+  // исключить «Мой словарь» из списка целей перемещения (она и так уже
+  // содержит любое слово).
+  useEffect(() => {
+    void (async () => {
+      const id = await getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+      setMyVocabularyDeckId(id);
+    })();
+  }, [db, t]);
+
+  const moveTargetDecks = (allUserDecks ?? []).filter(
+    (candidate) => candidate.id !== deckId && candidate.id !== myVocabularyDeckId
+  );
 
   const handleRemoveWord = (word: PackWord) => {
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     void removeWordFromUserDeck(db, deckId, word.itemType, word.itemId);
   };
 
@@ -302,6 +423,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
                       onHide={() =>
                         setRevealedWordKey((current) => (current === wordKey ? null : current))
                       }
+                      onSwipeRight={() => setMovingWord(word)}
                     >
                       <WordRow
                         word={word.lemma}
@@ -336,6 +458,17 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
           }
         }
         onClose={() => setSelectedWord(null)}
+      />
+
+      <MoveWordModal
+        visible={movingWord !== null}
+        word={movingWord}
+        fromDeckId={deckId}
+        decks={moveTargetDecks}
+        onClose={() => setMovingWord(null)}
+        onMoved={(word, deckTitle) => {
+          toast.show({ message: t('userDecks.moveSuccess', { word, deck: deckTitle }) });
+        }}
       />
     </SafeAreaView>
   );
