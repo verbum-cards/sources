@@ -35,6 +35,8 @@
     "deleteConfirmTitle": "Удалить колоду «{{title}}»?",
     "deleteConfirmMessage": "Слова останутся в ваших карточках — удалится только сама колода.",
     "deleteCancelButton": "Отмена",
-    "deleteConfirmButton": "Удалить"
+    "deleteConfirmButton": "Удалить",
+    "rename": "Переименовать",
+    "renameTitle": "Переименовать колоду"
   }
 }

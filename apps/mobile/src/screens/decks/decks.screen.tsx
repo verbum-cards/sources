@@ -10,7 +10,9 @@ import {
   Gamepad2,
   GraduationCap,
   Heart,
+  Pencil,
   Plane,
+  Trash2,
   Truck,
   type LucideIcon,
 } from 'lucide-react-native';
@@ -19,7 +21,7 @@ import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
-import { SwipeToDelete } from '../../components/SwipeToDelete';
+import { SwipeActions } from '../../components/SwipeActions';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
@@ -38,7 +40,7 @@ import {
   removeDeckFromUser,
 } from './decks-logic';
 import { deleteUserDeck, getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
-import { CreateUserDeckModal, UserDeckDetail } from './user-deck.screen';
+import { CreateUserDeckModal, RenameUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
 // онбординга) — один значок на категорию, а не на колоду: новая колода
@@ -81,6 +83,7 @@ export const DecksScreen = ({
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
   const [isCreatingDeck, setIsCreatingDeck] = useState(false);
+  const [renamingDeck, setRenamingDeck] = useState<{ id: string; title: string } | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
   const deckGroups = groupDecksByGoal(DECKS);
@@ -96,6 +99,7 @@ export const DecksScreen = ({
         setSelectedDeck(null);
         setSelectedUserDeckId(null);
         setIsCreatingDeck(false);
+        setRenamingDeck(null);
       },
     }),
     []
@@ -159,8 +163,15 @@ export const DecksScreen = ({
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
       {/* Тап вне открытой строки закрывает свайп — вложенные Pressable
           (строки колод, кнопки) перехватывают тач раньше и наружу не
-          всплывают, но тап по пустому месту сюда доходит. */}
-      <Pressable style={{ flex: 1 }} onPress={() => setRevealedDeckKey(null)}>
+          всплывают, но тап по пустому месту сюда доходит. disabled, когда
+          нечего закрывать: иначе этот Pressable перехватывает responder везде,
+          где под пальцем нет своего вложенного Pressable (например, заголовок
+          категории «Путешествия»), и блокирует там скролл. */}
+      <Pressable
+        style={{ flex: 1 }}
+        onPress={() => setRevealedDeckKey(null)}
+        disabled={revealedDeckKey === null}
+      >
         <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
           <View style={{ gap: space[2] }}>
             <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
@@ -190,10 +201,27 @@ export const DecksScreen = ({
               }
 
               return (
-                <SwipeToDelete
+                <SwipeActions
                   key={deck.id}
-                  deleteLabel={t('userDecks.removeDeck')}
-                  onDelete={() => handleDeleteUserDeck(deck.id, deck.title)}
+                  actions={[
+                    {
+                      key: 'rename',
+                      icon: Pencil,
+                      label: t('userDecks.rename'),
+                      color: colors.ink,
+                      onPress: () => {
+                        setRevealedDeckKey(null);
+                        setRenamingDeck({ id: deck.id, title: deck.title });
+                      },
+                    },
+                    {
+                      key: 'delete',
+                      icon: Trash2,
+                      label: t('userDecks.removeDeck'),
+                      color: colors.signalInk,
+                      onPress: () => handleDeleteUserDeck(deck.id, deck.title),
+                    },
+                  ]}
                   revealed={revealedDeckKey === deck.id}
                   onReveal={() => setRevealedDeckKey(deck.id)}
                   onHide={() =>
@@ -205,14 +233,21 @@ export const DecksScreen = ({
                     itemCount={deck.itemCount}
                     onPress={() => setSelectedUserDeckId(deck.id)}
                   />
-                </SwipeToDelete>
+                </SwipeActions>
               );
             })}
             {officialAddedDecks.map((deck) => (
-              <SwipeToDelete
+              <SwipeActions
                 key={deck.id}
-                deleteLabel={t('userDecks.removeDeck')}
-                onDelete={() => handleRemoveOfficialDeck(deck.id, deck.title)}
+                actions={[
+                  {
+                    key: 'delete',
+                    icon: Trash2,
+                    label: t('userDecks.removeDeck'),
+                    color: colors.signalInk,
+                    onPress: () => handleRemoveOfficialDeck(deck.id, deck.title),
+                  },
+                ]}
                 revealed={revealedDeckKey === deck.id}
                 onReveal={() => setRevealedDeckKey(deck.id)}
                 onHide={() =>
@@ -224,7 +259,7 @@ export const DecksScreen = ({
                   itemCount={deck.items.length}
                   onPress={() => setSelectedDeck(deck)}
                 />
-              </SwipeToDelete>
+              </SwipeActions>
             ))}
             <Button
               label={t('userDecks.create')}
@@ -274,6 +309,13 @@ export const DecksScreen = ({
           setIsCreatingDeck(false);
           setSelectedUserDeckId(deckId);
         }}
+      />
+
+      <RenameUserDeckModal
+        visible={renamingDeck !== null}
+        deckId={renamingDeck?.id ?? null}
+        currentTitle={renamingDeck?.title ?? ''}
+        onClose={() => setRenamingDeck(null)}
       />
     </SafeAreaView>
   );

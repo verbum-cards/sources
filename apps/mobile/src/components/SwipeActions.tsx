@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Animated, Pressable, StyleSheet, View } from 'react-native';
 import { Gesture, GestureDetector } from 'react-native-gesture-handler';
-import { Trash2 } from 'lucide-react-native';
+import type { LucideIcon } from 'lucide-react-native';
 
 import { useTheme } from '../providers/theme.provider';
 
@@ -15,40 +15,42 @@ const DIRECTION_LOCK_DX = 10;
 // не мешает.
 const VERTICAL_FAIL = 20;
 
+export interface SwipeAction {
+  key: string;
+  icon: LucideIcon;
+  label: string;
+  color: string;
+  onPress: () => void;
+}
+
 interface Props {
   children: React.ReactNode;
-  onDelete: () => void;
-  deleteLabel: string;
+  // Одна или несколько иконок справа (например, переименовать + удалить у
+  // колоды, только удалить у слова) — вызывающий решает состав и порядок.
+  actions: readonly SwipeAction[];
   // Управляется снаружи, не собственным useState: список решает, какая из
   // строк сейчас открыта (один ключ на весь список), чтобы одновременно был
-  // раскрыт только один SwipeToDelete — открытие одного естественно
+  // раскрыт только один SwipeActions — открытие одного естественно
   // закрывает остальные, раз revealed у них становится false тем же путём.
   revealed: boolean;
   onReveal: () => void;
   onHide: () => void;
 }
 
-// Свайп влево на слове — не уезжающая строка, а оверлей поверх неё (0.5
-// прозрачности) и иконка действия справа, всплывающая fade-in + чуть снизу
-// вверх. react-native-gesture-handler (ADR-31, docs/decisions.md) вместо
-// plain PanResponder: жест распознаётся нативно, а не в JS-потоке —
-// activeOffsetX/failOffsetY отдают предпочтение вертикальному ScrollView
-// раньше, чем наш горизонтальный успел бы «выиграть» гонку в JS.
-export const SwipeToDelete = ({
-  children,
-  onDelete,
-  deleteLabel,
-  revealed,
-  onReveal,
-  onHide,
-}: Props) => {
+// Свайп влево на строке — не уезжающая строка, а оверлей поверх неё (0.5
+// прозрачности) и иконки действий справа, всплывающие fade-in + чуть снизу
+// вверх. react-native-gesture-handler (ADR-31, docs/decisions.md): жест
+// распознаётся нативно, а не в JS-потоке — activeOffsetX/failOffsetY отдают
+// предпочтение вертикальному ScrollView раньше, чем наш горизонтальный успел
+// бы «выиграть» гонку в JS.
+export const SwipeActions = ({ children, actions, revealed, onReveal, onHide }: Props) => {
   const { colors, space } = useTheme();
   // useState с ленивым инициализатором, а не useRef(...).current — читаются
   // прямо в рендере (opacity/transform), а useRef здесь нарушил бы
   // react-hooks/refs (React Compiler) — тот же приём, что и в MainTabsScreen.
   const [overlayOpacity] = useState(() => new Animated.Value(0));
-  const [iconOpacity] = useState(() => new Animated.Value(0));
-  const [iconTranslateY] = useState(() => new Animated.Value(8));
+  const [actionsOpacity] = useState(() => new Animated.Value(0));
+  const [actionsTranslateY] = useState(() => new Animated.Value(8));
 
   // Анимация следует за revealed, откуда бы он ни поменялся — свайпом этой
   // же строки (onReveal) или тем, что открылась другая (revealed сверху
@@ -60,18 +62,18 @@ export const SwipeToDelete = ({
         duration: ANIMATION_MS,
         useNativeDriver: true,
       }),
-      Animated.timing(iconOpacity, {
+      Animated.timing(actionsOpacity, {
         toValue: revealed ? 1 : 0,
         duration: ANIMATION_MS,
         useNativeDriver: true,
       }),
-      Animated.timing(iconTranslateY, {
+      Animated.timing(actionsTranslateY, {
         toValue: revealed ? 0 : 8,
         duration: ANIMATION_MS,
         useNativeDriver: true,
       }),
     ]).start();
-  }, [revealed, overlayOpacity, iconOpacity, iconTranslateY]);
+  }, [revealed, overlayOpacity, actionsOpacity, actionsTranslateY]);
 
   const panGesture = Gesture.Pan()
     .enabled(!revealed)
@@ -106,20 +108,25 @@ export const SwipeToDelete = ({
             right: space[4],
             top: 0,
             bottom: 0,
-            justifyContent: 'center',
-            opacity: iconOpacity,
-            transform: [{ translateY: iconTranslateY }],
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: space[2],
+            opacity: actionsOpacity,
+            transform: [{ translateY: actionsTranslateY }],
           }}
         >
-          <Pressable
-            accessibilityRole="button"
-            accessibilityLabel={deleteLabel}
-            onPress={onDelete}
-            hitSlop={8}
-            style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}
-          >
-            <Trash2 size={20} color={colors.signalInk} />
-          </Pressable>
+          {actions.map((action) => (
+            <Pressable
+              key={action.key}
+              accessibilityRole="button"
+              accessibilityLabel={action.label}
+              onPress={action.onPress}
+              hitSlop={8}
+              style={{ width: 44, height: 44, alignItems: 'center', justifyContent: 'center' }}
+            >
+              <action.icon size={20} color={action.color} />
+            </Pressable>
+          ))}
         </Animated.View>
       ) : null}
     </View>

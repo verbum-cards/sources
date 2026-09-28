@@ -41,6 +41,23 @@ export async function loadUserDecks(db: DbExecutor): Promise<readonly UserDeck[]
   return rows.map((row) => ({ id: row.id, title: row.title, itemCount: row.item_count }));
 }
 
+// Название своей колоды для заголовка UserDeckDetail — отдельным запросом,
+// а не поиском по loadUserDecks: экрану внутри колоды не нужен весь список,
+// и название остаётся живым (переподписка на 'deck'), если колоду
+// переименовали, пока пользователь в ней.
+export async function loadUserDeck(db: DbExecutor, deckId: string): Promise<UserDeck | undefined> {
+  const row = await db.get<{ id: string; title: string; item_count: number }>(
+    `SELECT d.id, d.title, COUNT(di.item_id) as item_count
+     FROM deck d
+     LEFT JOIN deck_item di ON di.deck_id = d.id
+     WHERE d.id = ? AND d.deleted_at IS NULL
+     GROUP BY d.id`,
+    [deckId]
+  );
+
+  return row ? { id: row.id, title: row.title, itemCount: row.item_count } : undefined;
+}
+
 export async function createUserDeck(
   db: DbExecutor,
   title: string,
@@ -76,6 +93,26 @@ export async function deleteUserDeck(
   await db.run(`UPDATE deck SET deleted_at = ?, updated_at = ? WHERE id = ?`, [
     nowIso,
     nowIso,
+    deckId,
+  ]);
+  notifyChange(['deck']);
+}
+
+// Вторая иконка того же свайпа — переименование своей колоды. Пустой title
+// (после trim) — нет-оп, а не запись пустой строки: экран уже не даёт нажать
+// кнопку сохранения в этом случае, но функция сама себя тоже защищает.
+export async function renameUserDeck(
+  db: DbExecutor,
+  deckId: string,
+  title: string,
+  now: Date = new Date()
+): Promise<void> {
+  const trimmed = title.trim();
+  if (!trimmed) return;
+
+  await db.run(`UPDATE deck SET title = ?, updated_at = ? WHERE id = ?`, [
+    trimmed,
+    now.toISOString(),
     deckId,
   ]);
   notifyChange(['deck']);

@@ -11,10 +11,13 @@ import {
   addExistingCardToDeck,
   addWordToUserDeck,
   createUserDeck,
+  deleteUserDeck,
   getOrCreateMyVocabularyDeck,
+  loadUserDeck,
   loadUserDecks,
   loadUserDeckWords,
   removeWordFromUserDeck,
+  renameUserDeck,
 } from '../../src/screens/decks/user-deck-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 
@@ -43,6 +46,55 @@ test('createUserDeck + loadUserDecks: новая колода появляетс
 
   const decks = await loadUserDecks(db);
   assert.deepEqual(decks, [{ id: deckId, title: 'Слова из фильма', itemCount: 0 }]);
+});
+
+test('loadUserDeck: отдаёт название и счётчик конкретной колоды', async () => {
+  const { db, dictionaryDb } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  const [menu] = await searchPackWordsByPrefix(dictionaryDb, 'menu');
+  assert.ok(menu);
+  await addWordToUserDeck(db, deckId, menu, 'Мой словарь');
+
+  const deck = await loadUserDeck(db, deckId);
+  assert.deepEqual(deck, { id: deckId, title: 'Слова из фильма', itemCount: 1 });
+});
+
+test('loadUserDeck: удалённая или несуществующая колода -> undefined', async () => {
+  const { db } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+  await deleteUserDeck(db, deckId);
+
+  assert.equal(await loadUserDeck(db, deckId), undefined);
+  assert.equal(await loadUserDeck(db, 'not-a-real-id'), undefined);
+});
+
+test('deleteUserDeck: колода пропадает из loadUserDecks (мягкое удаление)', async () => {
+  const { db } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Слова из фильма');
+
+  await deleteUserDeck(db, deckId);
+
+  assert.deepEqual(await loadUserDecks(db), []);
+});
+
+test('renameUserDeck: меняет название, обрезая пробелы', async () => {
+  const { db } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Старое название');
+
+  await renameUserDeck(db, deckId, '  Новое название  ');
+
+  const [deck] = await loadUserDecks(db);
+  assert.equal(deck?.title, 'Новое название');
+});
+
+test('renameUserDeck: пустое название (после trim) — нет-оп', async () => {
+  const { db } = await setupDbs();
+  const deckId = await createUserDeck(db, 'Название');
+
+  await renameUserDeck(db, deckId, '   ');
+
+  const [deck] = await loadUserDecks(db);
+  assert.equal(deck?.title, 'Название');
 });
 
 test('createUserDeck: обрезает пробелы по краям названия', async () => {

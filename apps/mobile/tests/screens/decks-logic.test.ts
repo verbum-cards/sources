@@ -16,6 +16,7 @@ import {
   isDeckWordAdded,
   loadAddedDeckIds,
   loadAddedDeckItemIds,
+  removeDeckFromUser,
 } from '../../src/screens/decks/decks-logic';
 import { loadUserDecks } from '../../src/screens/decks/user-deck-logic';
 import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
@@ -159,6 +160,27 @@ test('addDeckToUser: помечает колоду добавленной в use
   await addDeckToUser(db, restaurant);
 
   assert.deepEqual(await loadUserDeckIds(db, userId), new Set([restaurant.id]));
+  assert.deepEqual(await loadAddedDeckIds(db), new Set([restaurant.id]));
+});
+
+test('removeDeckFromUser: убирает колоду из loadAddedDeckIds (мягкое удаление user_deck), карточки не трогает', async () => {
+  const { db, userId } = await setupDb();
+  await addDeckToUser(db, restaurant);
+
+  await removeDeckFromUser(db, restaurant.id);
+
+  assert.deepEqual(await loadAddedDeckIds(db), new Set());
+  const cards = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
+  assert.equal(cards.length, restaurant.items.length);
+});
+
+test('removeDeckFromUser: повторное «Добавить колоду» после удаления снова помечает её добавленной', async () => {
+  const { db } = await setupDb();
+  await addDeckToUser(db, restaurant);
+  await removeDeckFromUser(db, restaurant.id);
+
+  await addDeckToUser(db, restaurant);
+
   assert.deepEqual(await loadAddedDeckIds(db), new Set([restaurant.id]));
 });
 

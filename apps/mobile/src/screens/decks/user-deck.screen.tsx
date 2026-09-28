@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { ChevronLeft } from 'lucide-react-native';
+import { ChevronLeft, Trash2 } from 'lucide-react-native';
 
 import { Button } from '../../components/Button';
-import { SwipeToDelete } from '../../components/SwipeToDelete';
+import { SwipeActions } from '../../components/SwipeActions';
 import { WordNew } from '../../components/WordNew';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
@@ -17,8 +17,10 @@ import { useTheme } from '../../providers/theme.provider';
 import {
   addWordToUserDeck,
   createUserDeck,
+  loadUserDeck,
   loadUserDeckWords,
   removeWordFromUserDeck,
+  renameUserDeck,
 } from './user-deck-logic';
 
 // «Создать колоду» — только название, тело как у ProfileName (TextInput +
@@ -104,12 +106,106 @@ export const CreateUserDeckModal = ({
   );
 };
 
+// Вторая иконка свайпа по своей колоде (decks.screen.tsx) — то же тело
+// модалки, что и у создания, но с предзаполненным текущим названием и
+// renameUserDeck вместо createUserDeck. deckId — снаружи (какую колоду
+// переименовываем), не собственное состояние: сам компонент не решает,
+// какая колода открыта.
+export const RenameUserDeckModal = ({
+  visible,
+  deckId,
+  currentTitle,
+  onClose,
+}: {
+  visible: boolean;
+  deckId: string | null;
+  currentTitle: string;
+  onClose: () => void;
+}) => {
+  const { colors, radius, space, type } = useTheme();
+  const { t } = useTranslation('decks');
+  const db = useDb();
+  const [title, setTitle] = useState(currentTitle);
+  const [isSaving, setIsSaving] = useState(false);
+
+  // Модалка не размонтируется между открытиями (одна на экран) — заново
+  // подставляем текущее название колоды при каждом открытии, а не только
+  // при первом монтировании.
+  useEffect(() => {
+    if (visible) setTitle(currentTitle);
+  }, [visible, currentTitle]);
+
+  const handleRename = async () => {
+    const trimmed = title.trim();
+    if (!trimmed || !deckId) return;
+
+    setIsSaving(true);
+    await renameUserDeck(db, deckId, trimmed);
+    setIsSaving(false);
+    onClose();
+  };
+
+  return (
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable
+        onPress={onClose}
+        style={{
+          flex: 1,
+          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+          justifyContent: 'center',
+          padding: space[5],
+        }}
+      >
+        <Pressable onPress={() => {}}>
+          <View
+            style={{
+              backgroundColor: colors.surface,
+              borderRadius: radius.lg,
+              padding: space[5],
+              gap: space[4],
+            }}
+          >
+            <Text style={[type.title, { color: colors.ink }]}>{t('userDecks.renameTitle')}</Text>
+            <TextInput
+              value={title}
+              onChangeText={setTitle}
+              placeholder={t('userDecks.namePlaceholder')}
+              placeholderTextColor={colors.inkMuted}
+              autoFocus
+              returnKeyType="done"
+              onSubmitEditing={() => void handleRename()}
+              style={{
+                height: 52,
+                paddingHorizontal: space[4],
+                borderRadius: radius.md,
+                borderWidth: 1.5,
+                borderColor: colors.lineStrong,
+                backgroundColor: colors.paper,
+                color: colors.ink,
+                fontSize: 16,
+              }}
+            />
+            <Button
+              label={t('userDecks.rename')}
+              size="lg"
+              block
+              disabled={isSaving || title.trim().length === 0}
+              onPress={() => void handleRename()}
+            />
+          </View>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+};
+
 export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () => void }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
   const dictionaryDb = useDictionaryDb();
 
+  const { data: deck } = useQuery((userDb) => loadUserDeck(userDb, deckId), { tables: ['deck'] });
   const { data: deckWords } = useQuery(
     (userDb) => loadUserDeckWords(userDb, dictionaryDb, deckId),
     { tables: ['deck_item', 'card', 'card_content'] }
@@ -118,7 +214,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
 
   const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
   // Один ключ на весь список слов колоды — одновременно открыт максимум один
-  // SwipeToDelete: свайп по другой строке или тап вне уже открытой закрывают
+  // SwipeActions: свайп по другой строке или тап вне уже открытой закрывают
   // предыдущую, а не добавляют вторую открытую поверх.
   const [revealedWordKey, setRevealedWordKey] = useState<string | null>(null);
 
@@ -129,8 +225,15 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
       {/* Тап вне открытой строки (по пустому месту — вложенные Pressable
-          вроде WordRow/кнопок забирают touch себе раньше) закрывает свайп. */}
-      <Pressable style={{ flex: 1 }} onPress={() => setRevealedWordKey(null)}>
+          вроде WordRow/кнопок забирают touch себе раньше) закрывает свайп.
+          disabled, когда нечего закрывать — иначе перехватывает responder
+          везде, где под пальцем нет вложенного Pressable, и блокирует скролл
+          (тот же баг, что был в decks.screen.tsx). */}
+      <Pressable
+        style={{ flex: 1 }}
+        onPress={() => setRevealedWordKey(null)}
+        disabled={revealedWordKey === null}
+      >
         <ScrollView
           keyboardShouldPersistTaps="handled"
           contentContainerStyle={{ padding: space[5], gap: space[4] }}
@@ -150,6 +253,10 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
             <ChevronLeft size={20} color={colors.inkMuted} />
             <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
           </Pressable>
+
+          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+            {deck?.title}
+          </Text>
 
           <WordNew
             onAddWord={async (word) => {
@@ -179,10 +286,17 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
                   const wordKey = `${word.itemType}:${word.itemId}`;
 
                   return (
-                    <SwipeToDelete
+                    <SwipeActions
                       key={wordKey}
-                      deleteLabel={t('userDecks.removeWord')}
-                      onDelete={() => handleRemoveWord(word)}
+                      actions={[
+                        {
+                          key: 'delete',
+                          icon: Trash2,
+                          label: t('userDecks.removeWord'),
+                          color: colors.signalInk,
+                          onPress: () => handleRemoveWord(word),
+                        },
+                      ]}
                       revealed={revealedWordKey === wordKey}
                       onReveal={() => setRevealedWordKey(wordKey)}
                       onHide={() =>
@@ -197,7 +311,7 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
                         last={i === all.length - 1}
                         onPress={() => setSelectedWord(word)}
                       />
-                    </SwipeToDelete>
+                    </SwipeActions>
                   );
                 })}
               </View>
