@@ -161,7 +161,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Ресторан и кафе',
-    goalTags: ['travel', 'self', 'work'],
+    goalTags: ['travel', 'self'],
     type: 'official',
     context: restaurantContext,
     items: [
@@ -669,7 +669,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Такси',
-    goalTags: ['travel', 'work'],
+    goalTags: ['travel', 'self'],
     type: 'official',
     context: taxiContext,
     items: [
@@ -837,7 +837,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Как пройти',
-    goalTags: ['travel', 'move'],
+    goalTags: ['travel', 'self'],
     type: 'official',
     context: directionsContext,
     items: [
@@ -1001,7 +1001,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Знакомство и small talk',
-    goalTags: ['self', 'travel', 'work', 'move'],
+    goalTags: ['self', 'travel', 'work'],
     type: 'official',
     context: smallTalkContext,
     items: [

@@ -137,7 +137,7 @@ const DeckRow = ({
         borderRadius: radius.md,
         borderWidth: 1,
         borderColor: colors.line,
-        padding: space[6],
+        padding: space[4],
         gap: space[1],
       }}
     >
@@ -149,7 +149,7 @@ const DeckRow = ({
           gap: space[2],
         }}
       >
-        <Text style={[type.title, { fontSize: 24, color: colors.ink }]}>{deck.title}</Text>
+        <Text style={[type.title, { fontSize: 20, color: colors.ink }]}>{deck.title}</Text>
         {isAdded ? <Chip label={t('added')} variant="quiet" /> : null}
       </View>
       <Text style={[type.bodyS, { color: colors.inkMuted }]}>
