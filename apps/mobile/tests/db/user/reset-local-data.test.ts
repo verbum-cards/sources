@@ -5,6 +5,7 @@ import { test } from 'node:test';
 import {
   getOrCreateDeviceId,
   getOrCreateLocalUserId,
+  markOnboardingCompleted,
 } from '../../../src/db/entities/user/app-meta';
 import { resetLocalData } from '../../../src/db/entities/user/reset-local-data';
 import {
@@ -30,6 +31,8 @@ async function seedFullState(db: Awaited<ReturnType<typeof setupDb>>) {
   const deviceId = await getOrCreateDeviceId(db);
   const userId = await getOrCreateLocalUserId(db);
   const now = '2026-01-01T00:00:00.000Z';
+
+  await markOnboardingCompleted(db, new Date(now));
 
   await saveUserProfile(db, {
     userId,
@@ -99,6 +102,11 @@ test('resetLocalData: очищает все пользовательские т�
   const userIdLocalRow = await db.get("SELECT value FROM app_meta WHERE key = 'user_id_is_local'");
   assert.equal(userIdRow, undefined);
   assert.equal(userIdLocalRow, undefined);
+
+  const onboardingCompletedAtRow = await db.get(
+    "SELECT value FROM app_meta WHERE key = 'onboarding_completed_at'"
+  );
+  assert.equal(onboardingCompletedAtRow, undefined);
 });
 
 test('resetLocalData: getOrCreateLocalUserId после сброса выдаёт новый userId', async () => {

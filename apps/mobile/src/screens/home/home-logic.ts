@@ -1,4 +1,4 @@
-import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { getOnboardingCompletedAt, getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
 import type { DbExecutor } from '../../db/executor';
 
 // Порог, с которого на главном экране появляются «Цель дня» и плитки
@@ -29,15 +29,25 @@ const RECENT_CARDS_LIMIT = 10;
 export interface RecentCard {
   word: string;
   translation: string;
+  example: string | null;
+  exampleTranslation: string | null;
   createdAt: string;
 }
 
 // Блок «Недавно добавлены» — единственный кусок непустого состояния, который
-// уже переведён на реальные данные (остальное подключаем сейчас же).
+// уже переведён на реальные данные (остальное подключаем сейчас же). example и
+// exampleTranslation нужны для карточки обучения по тапу на слово (см.
+// word-study-card.tsx) — тот же контент, что и в превью при добавлении слова.
 export async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
   const userId = await getOrCreateLocalUserId(db);
-  const rows = await db.all<{ lemma: string; translation: string; created_at: string }>(
-    `SELECT cc.lemma, cc.translation, c.created_at
+  const rows = await db.all<{
+    lemma: string;
+    translation: string;
+    example: string | null;
+    example_translation: string | null;
+    created_at: string;
+  }>(
+    `SELECT cc.lemma, cc.translation, cc.example, cc.example_translation, c.created_at
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
      WHERE c.user_id = ? AND c.deleted_at IS NULL
@@ -49,6 +59,8 @@ export async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
   return rows.map((row) => ({
     word: row.lemma,
     translation: row.translation,
+    example: row.example,
+    exampleTranslation: row.example_translation,
     createdAt: row.created_at,
   }));
 }
@@ -122,4 +134,35 @@ export function computeStreakDays(
   }
 
   return streak;
+}
+
+// Разрешение на напоминания больше не спрашивается в онбординге (docs/decisions.md,
+// docs/flows/f01.md → «После онбординга»): вместо этого — мягкая карточка на
+// главном экране через REMINDER_PROMPT_DELAY_DAYS после его завершения.
+// Единственная точка, где регулируется интервал, — эта константа.
+export const REMINDER_PROMPT_DELAY_DAYS = 1;
+
+export async function loadOnboardingCompletedAt(db: DbExecutor): Promise<string | null> {
+  return getOnboardingCompletedAt(db);
+}
+
+const MS_PER_DAY = 24 * 60 * 60 * 1000;
+
+// Считает полные календарные сутки, а не «прошло ли 24 часа» — онбординг,
+// законченный в 23:50, не должен ждать почти двое суток до показа карточки.
+export function shouldPromptForReminders(
+  onboardingCompletedAt: string | null,
+  now: Date = new Date(),
+  delayDays: number = REMINDER_PROMPT_DELAY_DAYS
+): boolean {
+  if (!onboardingCompletedAt) return false;
+
+  const completedDay = new Date(onboardingCompletedAt);
+  completedDay.setHours(0, 0, 0, 0);
+  const today = new Date(now);
+  today.setHours(0, 0, 0, 0);
+
+  const daysSince = Math.round((today.getTime() - completedDay.getTime()) / MS_PER_DAY);
+
+  return daysSince >= delayDays;
 }

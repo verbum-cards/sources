@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -22,7 +22,10 @@ import {
   loadHomeStats,
   loadRecentCards,
   STREAK_REVEAL_THRESHOLD,
+  type RecentCard,
 } from './home-logic';
+import { ReminderPrompt } from './reminder-prompt';
+import { WordStudyCard } from './word-study-card';
 
 // «Когда» — без точного относительного времени: сегодня/вчера, иначе дата.
 // Не переусложняем — это подпись-подсказка, а не точная метка времени.
@@ -55,6 +58,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
   const { t } = useTranslation('home');
   const db = useDb();
   const now = useMemo(() => new Date(), []);
+  const [selectedCard, setSelectedCard] = useState<RecentCard | null>(null);
 
   const { data: cardCount } = useQuery(countUserCards, { tables: ['card'] });
   const hasCards = (cardCount ?? 0) > 0;
@@ -189,6 +193,7 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
                     translation={card.translation}
                     when={formatRecentWhen(t, card.createdAt)}
                     last={i === all.length - 1}
+                    onPress={() => setSelectedCard(card)}
                   />
                 ))}
               </View>
@@ -209,6 +214,8 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
             <Text style={[type.body, { color: colors.inkMuted }]}>{t('emptyState.subtitle')}</Text>
           </View>
         )}
+
+        <ReminderPrompt />
 
         {onOpenFsrsDebug ? (
           // Временный вход в дебаг-экран T1.7 — не часть финальной структуры табов.
@@ -238,6 +245,8 @@ export const HomeScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => void }
           </Text>
         </Pressable>
       </ScrollView>
+
+      <WordStudyCard card={selectedCard} onClose={() => setSelectedCard(null)} />
     </SafeAreaView>
   );
 };

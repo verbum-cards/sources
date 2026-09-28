@@ -45,15 +45,13 @@
     "skip": "Пропустить",
     "back": "Назад"
   },
-  "notifications": {
+  "dailyMinutes": {
     "title": "Сколько времени в день?",
     "subtitle": "Поможет подобрать дневную норму новых слов",
     "minutes_one": "{{count}} минута",
     "minutes_few": "{{count}} минуты",
     "minutes_many": "{{count}} минут",
     "minutes_other": "{{count}} минуты",
-    "remindersTitle": "Напоминания",
-    "remindersSubtitle": "Одно напоминание в день, в удобное время",
     "done": "Готово"
   }
 }

@@ -27,7 +27,9 @@ export async function resetLocalData(db: DbExecutor): Promise<void> {
   for (const table of TABLES_TO_CLEAR) {
     await db.execRaw(`DELETE FROM ${table}`);
   }
-  await db.execRaw("DELETE FROM app_meta WHERE key IN ('user_id', 'user_id_is_local')");
+  await db.execRaw(
+    "DELETE FROM app_meta WHERE key IN ('user_id', 'user_id_is_local', 'onboarding_completed_at')"
+  );
 
   // Реактивные useQuery (проверка «онбординг пройден» в App.tsx, счётчик
   // карточек на главном экране и т.д.) сами перечитают данные без ручного

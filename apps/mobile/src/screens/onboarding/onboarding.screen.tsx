@@ -3,19 +3,19 @@ import { Animated, View } from 'react-native';
 
 import type { Goal, UserLevel } from '@cards/contracts';
 
-import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { getOrCreateLocalUserId, markOnboardingCompleted } from '../../db/entities/user/app-meta';
 import { saveUserProfile } from '../../db/entities/user/user-profile';
 import { useDb } from '../../hooks/use-db.hook';
 import { useTheme } from '../../providers/theme.provider';
+import { DailyMinutesScreen } from './daily-minutes.screen';
 import { FirstSessionScreen } from './first-session.screen';
 import { GoalScreen } from './goal.screen';
 import { LevelScreen } from './level.screen';
-import { NotificationsScreen } from './notifications.screen';
 import { buildUserProfileDraft, DEFAULT_DAILY_MINUTES, DEFAULT_LEVEL } from './onboarding-logic';
 import { SignInScreen } from './sign-in.screen';
 import { WelcomeScreen } from './welcome.screen';
 
-type Step = 'welcome' | 'goal' | 'level' | 'first-session' | 'sign-in' | 'notifications';
+type Step = 'welcome' | 'goal' | 'level' | 'first-session' | 'sign-in' | 'daily-minutes';
 
 // Порядок для индикатора-точек (OnboardingProgress) — «сколько шагов
 // осталось до появления в приложении». Ветка «Уже есть аккаунт» (welcome ->
@@ -27,7 +27,7 @@ const STEPS: readonly Step[] = [
   'level',
   'first-session',
   'sign-in',
-  'notifications',
+  'daily-minutes',
 ];
 
 // F1 «Первый запуск и онбординг» (docs/flows/f01.md), шаги 1–7 — оркестратор
@@ -66,13 +66,18 @@ export const OnboardingScreen = () => {
 
   const finish = useCallback(
     async (dailyMinutes: 5 | 10 | 15) => {
+      const now = new Date();
       const userId = await getOrCreateLocalUserId(db);
       const profile = buildUserProfileDraft(
         userId,
         { goals, level, dailyMinutes },
-        new Date().toISOString()
+        now.toISOString()
       );
       await saveUserProfile(db, profile);
+      // Точка отсчёта для отложенного запроса на напоминания (см. home-logic.ts
+      // ::shouldPromptForReminders) — не то же самое, что profile.updatedAt,
+      // который потом будет меняться при правках профиля.
+      await markOnboardingCompleted(db, now);
     },
     [db, goals, level]
   );
@@ -128,7 +133,7 @@ export const OnboardingScreen = () => {
           if (skippedToSignIn) {
             void finish(DEFAULT_DAILY_MINUTES);
           } else {
-            setStep('notifications');
+            setStep('daily-minutes');
           }
         };
         const secondaryAction = skippedToSignIn
@@ -149,9 +154,9 @@ export const OnboardingScreen = () => {
           />
         );
       }
-      case 'notifications':
+      case 'daily-minutes':
         return (
-          <NotificationsScreen
+          <DailyMinutesScreen
             progress={progress}
             onDone={(dailyMinutes) => void finish(dailyMinutes)}
           />

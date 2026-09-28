@@ -30,3 +30,27 @@ export async function getOrCreateLocalUserId(db: DbExecutor): Promise<string> {
 
   return userId;
 }
+
+// Момент завершения онбординга (F1, finish() в onboarding.screen.tsx) —
+// точка отсчёта для отложенного запроса на напоминания на главном экране
+// (docs/flows/f01.md, home-logic.ts::shouldPromptForReminders). Не то же
+// самое, что user_profile.updatedAt: тот меняется при каждой правке профиля
+// (уровень, цели, имя), а эта отметка должна остаться неизменной.
+export async function markOnboardingCompleted(
+  db: DbExecutor,
+  now: Date = new Date()
+): Promise<void> {
+  await db.run(
+    `INSERT INTO app_meta (key, value) VALUES ('onboarding_completed_at', ?)
+     ON CONFLICT (key) DO UPDATE SET value = excluded.value`,
+    [now.toISOString()]
+  );
+}
+
+export async function getOnboardingCompletedAt(db: DbExecutor): Promise<string | null> {
+  const row = await db.get<AppMetaRow>(
+    "SELECT value FROM app_meta WHERE key = 'onboarding_completed_at'"
+  );
+
+  return row?.value ?? null;
+}
