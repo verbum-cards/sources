@@ -75,7 +75,7 @@ export default defineConfig([
   },
   // Служебные сборочные скрипты — консоль тут не диагностика, а ожидаемый вывод.
   {
-    files: ['**/build.mjs', '**/scripts/**/*.mjs'],
+    files: ['**/build.mjs', '**/scripts/**/*.mjs', '**/scripts/**/*.ts'],
     rules: {
       'no-console': 'off',
     },

@@ -1,0 +1,13 @@
+{
+  "name": "@cards/api",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@cards/contracts": "*"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p .",
+    "test": "node --import tsx --test scripts/**/*.test.ts",
+    "build-seed": "tsx scripts/dictionary/build-seed.ts"
+  }
+}
