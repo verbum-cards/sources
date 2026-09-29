@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Modal, Pressable, Text, View } from 'react-native';
-import { EqualApproximately, X } from 'lucide-react-native';
+import { EqualApproximately, LayersPlus, ListPlus, X } from 'lucide-react-native';
 
 import { useTheme } from '../providers/theme.provider';
 import { formatPos } from '../utilities/format-pos';
@@ -35,9 +35,13 @@ interface Props {
   // если слово ещё не добавлено; если undefined, кнопка не показывается (как
   // и сама иконка в этом случае).
   onSave?: () => void;
+  // Открывает выбор своей колоды для слова (WordNew.tsx/decks.screen.tsx) —
+  // вызывающий передаёт её, только если у пользователя есть хотя бы одна своя
+  // колода кроме «Мой словарь»; если undefined, кнопка не показывается.
+  onAddToDeck?: () => void;
 }
 
-export const WordPopup = ({ card, onClose, onSave }: Props) => {
+export const WordPopup = ({ card, onClose, onSave, onAddToDeck }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
 
@@ -193,9 +197,34 @@ export const WordPopup = ({ card, onClose, onSave }: Props) => {
                 </View>
               ) : null}
 
-              {onSave ? (
-                <View style={{ paddingHorizontal: space[4], paddingBottom: space[4] }}>
-                  <Button label={t('save', { ns: 'common' })} size="lg" block onPress={onSave} />
+              {onSave || onAddToDeck ? (
+                <View
+                  style={{
+                    gap: space[4],
+                    padding: space[4],
+                  }}
+                >
+                  {onSave ? (
+                    <Button
+                      icon={<ListPlus color={colors.onAction} />}
+                      iconPosition="left"
+                      label={t('save', { ns: 'common' })}
+                      size="lg"
+                      block
+                      onPress={onSave}
+                    />
+                  ) : null}
+                  {onAddToDeck ? (
+                    <Button
+                      icon={<LayersPlus />}
+                      label={t('addToDeck', { ns: 'common' })}
+                      iconPosition="right"
+                      variant="secondary"
+                      size="lg"
+                      block
+                      onPress={onAddToDeck}
+                    />
+                  ) : null}
                 </View>
               ) : null}
             </View>

@@ -12,6 +12,7 @@
   "wordAdded": "«{{word}}» добавлено",
   "goToProgress": "Перейти к тренировкам",
   "recommended": "Рекомендую",
+  "reviewQueue": "Проверка партий",
   "categories": {
     "nouns": "Существительные",
     "verbs": "Глаголы",
@@ -42,6 +43,8 @@
     "moveTitle": "Переместить в колоду",
     "moveEmpty": "Больше колод нет — создайте новую, чтобы перемещать слова",
     "moveSuccess": "«{{word}}» перемещено в «{{deck}}»",
+    "addToDeckTitle": "Добавить в колоду",
+    "addToDeckSuccess": "«{{word}}» добавлено в «{{deck}}»",
     "study": "Учить"
   }
 }

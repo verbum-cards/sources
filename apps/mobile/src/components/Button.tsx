@@ -13,6 +13,7 @@ type Props = {
   block?: boolean;
   disabled?: boolean;
   icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
   style?: ViewStyle;
 };
 
@@ -26,6 +27,7 @@ export function Button({
   block,
   disabled,
   icon,
+  iconPosition = 'right',
   style,
 }: Props) {
   const { colors, radius, space, type } = useTheme();
@@ -60,10 +62,11 @@ export function Button({
       ]}
     >
       <View style={[styles.row, { gap: space[2] }]}>
+        {icon && iconPosition === 'left' ? icon : null}
         <Text style={[type.button, { color: palette.fg, fontSize: size === 'lg' ? 16 : 14 }]}>
           {label}
         </Text>
-        {icon}
+        {icon && iconPosition === 'right' ? icon : null}
       </View>
     </Pressable>
   );

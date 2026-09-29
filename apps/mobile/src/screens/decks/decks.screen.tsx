@@ -15,6 +15,7 @@ import {
   Sparkles,
   Trash2,
   Truck,
+  Wrench,
   type LucideIcon,
 } from 'lucide-react-native';
 
@@ -22,13 +23,20 @@ import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
+import { DeckPickerModal } from '../../components/DeckPickerModal';
 import { SwipeActions } from '../../components/SwipeActions';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useToast } from '../../hooks/use-toast.hook';
-import { DECKS, FIRST_STEPS_DECK_ID, type DeckWord, type MockDeck } from '../../mocks/decks';
+import {
+  DECKS,
+  FIRST_STEPS_DECK_ID,
+  REVIEW_DECK_ID,
+  type DeckWord,
+  type MockDeck,
+} from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
@@ -43,7 +51,12 @@ import {
   loadAddedDeckItemIds,
   removeDeckFromUser,
 } from './decks-logic';
-import { deleteUserDeck, getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
+import {
+  addWordToUserDeck,
+  deleteUserDeck,
+  getOrCreateMyVocabularyDeck,
+  loadUserDecks,
+} from './user-deck-logic';
 import { CreateUserDeckModal, RenameUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
@@ -95,6 +108,11 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
   // группы — не название колоды внутри неё).
   const firstStepsDeck = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
   const showFirstSteps = profile?.level === 'A0' && firstStepsDeck != null;
+  // Служебная колода для проверки партий словаря (generate-senses.ts) —
+  // не для пользователей беты, видна всегда, но только пока в ней есть
+  // слова (после разбора конвейер туда больше ничего не кладёт сам).
+  const reviewDeck = DECKS.find((deck) => deck.id === REVIEW_DECK_ID);
+  const showReviewDeck = reviewDeck != null && reviewDeck.items.length > 0;
   const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
   // Один ключ на весь список «Мои колоды» — одновременно открыт максимум
   // один свайп, тем же приёмом, что и у слов внутри колоды (UserDeckDetail).
@@ -306,6 +324,25 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
             </View>
           ) : null}
 
+          {showReviewDeck && reviewDeck ? (
+            <View style={{ gap: space[3] }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+                <Wrench size={40} color={colors.ink} />
+                <Text
+                  accessibilityRole="header"
+                  style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
+                >
+                  {t('reviewQueue')}
+                </Text>
+              </View>
+              <DeckRow
+                deck={reviewDeck}
+                isAdded={addedDeckIds?.has(reviewDeck.id) ?? false}
+                onPress={() => setSelectedDeck(reviewDeck)}
+              />
+            </View>
+          ) : null}
+
           <View style={{ gap: space[8] }}>
             {deckGroups.map((group) => {
               const Icon = GOAL_ICONS[group.goal];
@@ -457,7 +494,21 @@ const DeckDetail = ({
   const toast = useToast();
   const [isAdding, setIsAdding] = useState(false);
   const [selectedWord, setSelectedWord] = useState<DeckWord | null>(null);
+  const [wordForDeckPick, setWordForDeckPick] = useState<DeckWord | null>(null);
   const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
+
+  // Своя колода, кроме «Мой словарь» — цели для «Добавить в колоду»
+  // (WordPopup.tsx). Колода официальная (mocks/decks.ts), поэтому исключать
+  // саму себя из списка не нужно — среди своих колод её и так не может быть.
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+  useEffect(() => {
+    void (async () => {
+      const id = await getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+      setMyVocabularyDeckId(id);
+    })();
+  }, [db, t]);
+  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
+  const deckTargets = (userDecks ?? []).filter((candidate) => candidate.id !== myVocabularyDeckId);
 
   const handleAdd = async () => {
     setIsAdding(true);
@@ -468,6 +519,16 @@ const DeckDetail = ({
   const handleAddWord = async (word: DeckWord) => {
     await addSingleDeckWord(db, deck, word, t('myVocabularyTitle', { ns: 'common' }));
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
+  };
+
+  const handlePickDeck = async (targetDeckId: string, targetDeckTitle: string) => {
+    if (!wordForDeckPick) return;
+    const word = wordForDeckPick;
+    setWordForDeckPick(null);
+    await addWordToUserDeck(db, targetDeckId, word, t('myVocabularyTitle', { ns: 'common' }));
+    toast.show({
+      message: t('userDecks.addToDeckSuccess', { word: word.lemma, deck: targetDeckTitle }),
+    });
   };
 
   return (
@@ -581,7 +642,24 @@ const DeckDetail = ({
               }
             : undefined
         }
+        onAddToDeck={
+          selectedWord && deckTargets.length > 0
+            ? () => {
+                setWordForDeckPick(selectedWord);
+                setSelectedWord(null);
+              }
+            : undefined
+        }
         onClose={() => setSelectedWord(null)}
+      />
+
+      <DeckPickerModal
+        visible={wordForDeckPick !== null}
+        title={t('userDecks.addToDeckTitle')}
+        emptyMessage={t('userDecks.moveEmpty')}
+        decks={deckTargets}
+        onPick={(deck) => void handlePickDeck(deck.id, deck.title)}
+        onClose={() => setWordForDeckPick(null)}
       />
     </SafeAreaView>
   );
