@@ -13,8 +13,12 @@
 | `translation` | id, target_type (sense/expression), target_id, lang, text, source (dictionary / llm / via_concept), verified |
 | `example` | id, sense_id или expression_id, lang (изучаемый), text, highlight_range, audio_url |
 | `example_translation` | example_id, lang (родной), text |
-| `deck` | id, lang, native_lang, title, goal_tags[], type (official / user / shared), context (см. ниже) |
+| `deck` | id, lang, native_lang, title, categories[], type (official / user / shared), context (см. ниже) |
 | `deck_item` | deck_id, item_type (sense/expression), item_id, cefr, position, importance |
+
+### Категории каталога (ADR-35)
+
+`deck.categories` — тема/ситуация колоды (закрытый список `DeckCategorySchema` — «Основы», «Первые шаги», «Работа и офис», «Бизнес и карьера», «Жизнь за границей», «Здоровье», «Покупки», «Кафе и ресторан», «Отдых и путешествия», «Транспорт и город», «Мнение и обсуждение», «Эмоции и отношения», «IT и технологии», «Спорт и хобби», «Дом и быт», «Кино и книги», «Учёба», «Общение и знакомства»), не цель изучения из онбординга (`user_profile.goals`, отдельная сущность). Колода может быть в нескольких категориях сразу. У каждой категории свой экран каталога (`decks.screen.tsx`). Заменяет `goal_tags`/`Goal` (было ADR-24).
 
 ### Контекст колоды (FR-49)
 

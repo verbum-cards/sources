@@ -20,12 +20,38 @@ export type DeckContext = z.infer<typeof DeckContextSchema>;
 export const DeckTypeSchema = z.enum(['official', 'user', 'shared']);
 export type DeckType = z.infer<typeof DeckTypeSchema>;
 
+// Категории каталога колод (ADR-35) — тема/ситуация, не цель изучения из
+// онбординга (Goal, user.ts): «Первые шаги» — про уровень, остальные — про
+// предметную область. Колода может быть в нескольких категориях сразу.
+// Заменяет группировку по goalTags/Goal (ADR-24).
+export const DeckCategorySchema = z.enum([
+  'basics',
+  'firstSteps',
+  'workOffice',
+  'businessCareer',
+  'abroad',
+  'health',
+  'shopping',
+  'cafeRestaurant',
+  'travelLeisure',
+  'transportCity',
+  'opinion',
+  'emotionsRelationships',
+  'itTech',
+  'sportsHobbies',
+  'homeLife',
+  'moviesBooks',
+  'study',
+  'socializing',
+]);
+export type DeckCategory = z.infer<typeof DeckCategorySchema>;
+
 export const DeckSchema = z.object({
   id: UuidSchema,
   lang: LangSchema,
   nativeLang: LangSchema,
   title: z.string(),
-  goalTags: z.array(z.string()),
+  categories: z.array(DeckCategorySchema),
   type: DeckTypeSchema,
   // Обязателен для type: 'official' (FR-49) — проверяется на этапе публикации, не схемой.
   context: DeckContextSchema.optional(),

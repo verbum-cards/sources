@@ -90,8 +90,11 @@ async function seedDeck(db: DbExecutor, deck: MockDeck): Promise<void> {
       deck.context ? JSON.stringify(deck.context) : null,
     ]
   );
-  for (const tag of deck.goalTags) {
-    await db.run(`INSERT INTO deck_goal_tag (deck_id, tag) VALUES (?, ?)`, [deck.id, tag]);
+  for (const category of deck.categories) {
+    await db.run(`INSERT INTO deck_category (deck_id, category) VALUES (?, ?)`, [
+      deck.id,
+      category,
+    ]);
   }
   for (let position = 0; position < deck.items.length; position += 1) {
     const word = deck.items[position];

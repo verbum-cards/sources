@@ -3,18 +3,18 @@ import { DatabaseSync } from 'node:sqlite';
 import { test } from 'node:test';
 
 import type { Cefr } from '@cards/contracts';
-import { GoalSchema } from '@cards/contracts';
+import { DeckCategorySchema } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { loadUserDeckIds } from '../../src/db/entities/user/user-deck';
 import { migrate } from '../../src/db/migrate';
-import { DECKS, FIRST_STEPS_DECK_ID, REVIEW_DECK_ID } from '../../src/mocks/decks';
+import { DECKS, REVIEW_DECK_ID } from '../../src/mocks/decks';
 import type { DeckWord, MockDeck } from '../../src/mocks/decks';
 import {
   addDeckToUser,
   addSingleDeckWord,
   getDeckLevel,
-  groupDecksByGoal,
+  getDecksByCategory,
   isDeckWordAdded,
   loadAddedDeckIds,
   loadAddedDeckItemIds,
@@ -42,22 +42,34 @@ test('DECKS: id колод и itemId элементов не повторяют�
   assert.equal(new Set(itemIds).size, itemIds.length);
 });
 
-test('DECKS: «Первые шаги» — без goalTags, только слова уровня A1', () => {
-  const firstSteps = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
-  assert.ok(firstSteps, 'FIRST_STEPS_DECK_ID должен указывать на существующую колоду в DECKS');
-  assert.deepEqual(firstSteps.goalTags, []);
+test('DECKS: «Первые шаги» — категория firstSteps, только слова уровня A1', () => {
+  const firstSteps = DECKS.find((deck) => deck.categories.includes('firstSteps'));
+  assert.ok(firstSteps, 'должна быть колода с категорией firstSteps в DECKS');
   assert.ok(firstSteps.items.length > 0);
   for (const word of firstSteps.items) {
     assert.equal(word.cefr, 'A1', `"${word.lemma}" в «Первые шаги» должно быть уровня A1`);
   }
 });
 
-test('DECKS: goalTags — только известные значения Goal (иначе колода молча выпадет из каталога)', () => {
-  const knownGoals = new Set<string>(GoalSchema.options);
+test('DECKS: categories — только известные значения DeckCategory (иначе колода молча выпадет из каталога)', () => {
+  const knownCategories = new Set<string>(DeckCategorySchema.options);
   for (const deck of DECKS) {
-    for (const tag of deck.goalTags) {
-      assert.ok(knownGoals.has(tag), `неизвестный goalTag "${tag}" у колоды "${deck.title}"`);
+    for (const category of deck.categories) {
+      assert.ok(
+        knownCategories.has(category),
+        `неизвестная категория "${category}" у колоды "${deck.title}"`
+      );
     }
+  }
+});
+
+test('DECKS: реальный каталог — каждая колода состоит хотя бы в одной категории, кроме служебной «Проверка партий»', () => {
+  for (const deck of DECKS) {
+    if (deck.id === REVIEW_DECK_ID) continue;
+    assert.ok(
+      deck.categories.length > 0,
+      `колода "${deck.title}" не привязана ни к одной категории`
+    );
   }
 });
 
@@ -67,7 +79,7 @@ function makeDeck(overrides: Partial<MockDeck>): MockDeck {
     lang: 'en',
     nativeLang: 'ru',
     title: 'Тестовая колода',
-    goalTags: ['travel'],
+    categories: ['travelLeisure'],
     type: 'official',
     items: [],
     ...overrides,
@@ -108,45 +120,35 @@ test('getDeckLevel: пустая колода -> undefined', () => {
   assert.equal(getDeckLevel(makeDeck({ items: [] })), undefined);
 });
 
-test('groupDecksByGoal: фиксированный порядок (как GoalSchema), пустые группы отсутствуют', () => {
+test('getDecksByCategory: возвращает только колоды с этой категорией', () => {
   const decks = [
-    makeDeck({ id: '1', goalTags: ['tech'] }),
-    makeDeck({ id: '2', goalTags: ['travel'] }),
+    makeDeck({ id: '1', categories: ['itTech'] }),
+    makeDeck({ id: '2', categories: ['travelLeisure'] }),
   ];
 
-  const groups = groupDecksByGoal(decks);
-
   assert.deepEqual(
-    groups.map((g) => g.goal),
-    ['travel', 'tech']
+    getDecksByCategory(decks, 'travelLeisure').map((d) => d.id),
+    ['2']
   );
 });
 
-test('groupDecksByGoal: колода с несколькими goalTags попадает в несколько групп', () => {
-  const decks = [makeDeck({ id: '1', goalTags: ['travel', 'self'] })];
-
-  const groups = groupDecksByGoal(decks);
+test('getDecksByCategory: колода с несколькими категориями находится по любой из них', () => {
+  const decks = [makeDeck({ id: '1', categories: ['travelLeisure', 'transportCity'] })];
 
   assert.deepEqual(
-    groups.map((g) => g.goal),
-    ['travel', 'self']
+    getDecksByCategory(decks, 'travelLeisure').map((d) => d.id),
+    ['1']
   );
-  assert.equal(groups[0].decks[0]?.id, '1');
-  assert.equal(groups[1].decks[0]?.id, '1');
+  assert.deepEqual(
+    getDecksByCategory(decks, 'transportCity').map((d) => d.id),
+    ['1']
+  );
 });
 
-test('groupDecksByGoal: реальный каталог DECKS — каждая колода попадает хотя бы в одну группу', () => {
-  const groups = groupDecksByGoal(DECKS);
-  const deckIdsInGroups = new Set(groups.flatMap((g) => g.decks.map((d) => d.id)));
+test('getDecksByCategory: категория без колод -> пустой список', () => {
+  const decks = [makeDeck({ id: '1', categories: ['travelLeisure'] })];
 
-  // «Первые шаги» (FIRST_STEPS_DECK_ID) и «Проверка партий» (REVIEW_DECK_ID)
-  // — намеренные исключения: обе не про ситуацию (одна про уровень, другая
-  // техническая), goalTags у них пустой нарочно, decks.screen.tsx показывает
-  // их отдельными блоками вне каталога по целям.
-  for (const deck of DECKS) {
-    if (deck.id === FIRST_STEPS_DECK_ID || deck.id === REVIEW_DECK_ID) continue;
-    assert.ok(deckIdsInGroups.has(deck.id), `колода "${deck.title}" не попала ни в одну группу`);
-  }
+  assert.deepEqual(getDecksByCategory(decks, 'health'), []);
 });
 
 test('addDeckToUser: создаёт card+card_content на каждый элемент колоды с нуля', async () => {

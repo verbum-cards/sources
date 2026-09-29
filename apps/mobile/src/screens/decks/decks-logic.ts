@@ -1,5 +1,5 @@
-import type { Cefr, Goal, ItemType } from '@cards/contracts';
-import { GoalSchema } from '@cards/contracts';
+import type { Cefr, DeckCategory, ItemType } from '@cards/contracts';
+import { DeckCategorySchema } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
 import { insertCardContentExamples } from '../../db/entities/user/card-content';
@@ -16,44 +16,22 @@ export async function loadAddedDeckIds(db: DbExecutor): Promise<Set<string>> {
   return loadUserDeckIds(db, userId);
 }
 
-export interface DeckGoalGroup {
-  goal: Goal;
-  decks: readonly MockDeck[];
-}
+// Порядок пунктов каталога (decks.screen.tsx) — прямо из контракта
+// (DeckCategorySchema.options), а не отдельным списком: расходиться с ним
+// нечему. Список категорий фиксирован и показывается весь, даже если для
+// какой-то пока нет ни одной колоды (стабильное меню, не прыгает по мере
+// наполнения контента) — пустой список decks экран категории покажет сам.
+export const CATEGORY_ORDER: readonly DeckCategory[] = DeckCategorySchema.options;
 
-// Тот же порядок, что и на шаге «Цель» онбординга (goal.screen.tsx) — прямо
-// из контракта (GoalSchema.options), а не отдельным списком: расходиться
-// с ним нечему.
-const GOAL_ORDER: readonly Goal[] = GoalSchema.options;
-const KNOWN_GOALS: readonly string[] = GOAL_ORDER;
-
-function isGoal(tag: string): tag is Goal {
-  return KNOWN_GOALS.includes(tag);
-}
-
-// Каталог колод группируется по целям из онбординга — той же таксономии, без
-// отдельной под колоды. Колода может входить в несколько групп сразу —
-// goalTags это массив (навигация по каталогу стала важна с ростом числа
-// колод). Неизвестные (не из Goal) теги пропускаются — goalTags в контракте
-// это string[], а не закрытый Goal[].
-export function groupDecksByGoal(decks: readonly MockDeck[]): readonly DeckGoalGroup[] {
-  const groups = new Map<Goal, MockDeck[]>();
-  for (const deck of decks) {
-    for (const tag of deck.goalTags) {
-      if (!isGoal(tag)) continue;
-      const bucket = groups.get(tag);
-      if (bucket) {
-        bucket.push(deck);
-      } else {
-        groups.set(tag, [deck]);
-      }
-    }
-  }
-
-  return GOAL_ORDER.filter((goal) => groups.has(goal)).map((goal) => ({
-    goal,
-    decks: groups.get(goal) ?? [],
-  }));
+// Колоды одной категории каталога (ADR-35) — колода может быть в нескольких
+// категориях сразу (categories — массив), у каждой категории свой экран
+// (decks.screen.tsx), поэтому группировка всех категорий разом (как раньше
+// groupDecksByGoal) больше не нужна — только выборка под одну.
+export function getDecksByCategory(
+  decks: readonly MockDeck[],
+  category: DeckCategory
+): readonly MockDeck[] {
+  return decks.filter((deck) => deck.categories.includes(category));
 }
 
 // Порядок для разрешения ничьей в getDeckLevel — при равном числе слов на

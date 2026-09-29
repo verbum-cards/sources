@@ -4,22 +4,32 @@ import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   Briefcase,
+  Bus,
   ChevronLeft,
+  ChevronRight,
+  Coffee,
   Cpu,
+  Dumbbell,
   Film,
-  Gamepad2,
+  Footprints,
   GraduationCap,
   Heart,
+  HeartPulse,
+  Home,
+  MessageCircle,
   Pencil,
   Plane,
+  ShoppingBag,
   Sparkles,
   Trash2,
+  TrendingUp,
   Truck,
+  Users,
   Wrench,
   type LucideIcon,
 } from 'lucide-react-native';
 
-import type { Goal } from '@cards/contracts';
+import type { DeckCategory } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
@@ -30,22 +40,16 @@ import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useToast } from '../../hooks/use-toast.hook';
-import {
-  DECKS,
-  FIRST_STEPS_DECK_ID,
-  REVIEW_DECK_ID,
-  type DeckWord,
-  type MockDeck,
-} from '../../mocks/decks';
+import { DECKS, REVIEW_DECK_ID, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
-import { loadCurrentUserProfile } from '../profile/profile-logic';
 import { SessionScreen } from '../session/session.screen';
 import {
   addDeckToUser,
   addSingleDeckWord,
+  CATEGORY_ORDER,
   getDeckLevel,
-  groupDecksByGoal,
+  getDecksByCategory,
   isDeckWordAdded,
   loadAddedDeckIds,
   loadAddedDeckItemIds,
@@ -59,19 +63,29 @@ import {
 } from './user-deck-logic';
 import { CreateUserDeckModal, RenameUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
-// Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
-// онбординга) — один значок на категорию, а не на колоду: новая колода
-// просто получает существующий тег, без необходимости придумывать под неё
+// Иконка на категорию каталога (ADR-35, замена группировки по goalTags/Goal
+// из ADR-24) — один значок на категорию, а не на колоду: новая колода просто
+// получает существующую категорию, без необходимости придумывать под неё
 // отдельную иконку.
-const GOAL_ICONS: Record<Goal, LucideIcon> = {
-  travel: Plane,
-  work: Briefcase,
-  move: Truck,
-  exam: GraduationCap,
-  media: Film,
-  self: Heart,
-  games: Gamepad2,
-  tech: Cpu,
+const CATEGORY_ICONS: Record<DeckCategory, LucideIcon> = {
+  basics: Sparkles,
+  firstSteps: Footprints,
+  workOffice: Briefcase,
+  businessCareer: TrendingUp,
+  abroad: Truck,
+  health: HeartPulse,
+  shopping: ShoppingBag,
+  cafeRestaurant: Coffee,
+  travelLeisure: Plane,
+  transportCity: Bus,
+  opinion: MessageCircle,
+  emotionsRelationships: Heart,
+  itTech: Cpu,
+  sportsHobbies: Dumbbell,
+  homeLife: Home,
+  moviesBooks: Film,
+  study: GraduationCap,
+  socializing: Users,
 };
 
 // Императивный доступ извне — нужен main-tabs.screen.tsx: повторный тап по
@@ -82,41 +96,31 @@ export interface DecksScreenHandle {
   resetToRoot: () => void;
 }
 
-// Таб «Колоды» — каталог + детали, без библиотеки навигации (тот же приём,
-// что и в OnboardingScreen/FsrsDebugScreen): локальный useState с выбранной
-// колодой вместо экрана. Настоящего каталога официальных колод ещё нет
-// (docs/data-model.md, data/ и apps/api удалены) — список зашит в
-// mocks/decks.ts, тот же временный приём, что и словарь для F6/первой сессии.
+// Таб «Колоды» (ADR-35) — стартовый экран теперь навигационное меню: строка
+// «Мои колоды» (список переехал на свой экран, MyDecksScreen), «Проверка
+// партий» (служебная, без изменений) и список категорий каталога — у каждой
+// свой экран (CategoryDetail), без инлайн-секций, как было раньше. Без
+// библиотеки навигации (тот же приём, что и в OnboardingScreen/
+// FsrsDebugScreen): локальный useState вместо стека экранов. Настоящего
+// каталога официальных колод ещё нет (docs/data-model.md, data/ и apps/api
+// удалены) — список зашит в mocks/decks.ts, тот же временный приём, что и
+// словарь для F6/первой сессии.
 export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('decks');
-  const db = useDb();
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
   const [sessionDeckId, setSessionDeckId] = useState<string | null>(null);
-  const [isCreatingDeck, setIsCreatingDeck] = useState(false);
-  const [renamingDeck, setRenamingDeck] = useState<{ id: string; title: string } | null>(null);
+  const [showMyDecks, setShowMyDecks] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<DeckCategory | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
-  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
-  const { data: profile } = useQuery(loadCurrentUserProfile, { tables: ['user_profile'] });
-  const deckGroups = groupDecksByGoal(DECKS);
-  // Колода «Первые шаги» (ADR-33) — не про ситуацию, а про уровень:
-  // единственная колода без goalTags (не попадает в deckGroups выше). Блок
-  // «Рекомендую» под «Мои колоды» показывает её, но только тем, у кого именно
-  // такой уровень в настройках — заголовок блока не совпадает с названием
-  // самой колоды нарочно, тот же приём, что и у групп по целям (заголовок
-  // группы — не название колоды внутри неё).
-  const firstStepsDeck = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
-  const showFirstSteps = profile?.level === 'A0' && firstStepsDeck != null;
+
   // Служебная колода для проверки партий словаря (generate-senses.ts) —
   // не для пользователей беты, видна всегда, но только пока в ней есть
-  // слова (после разбора конвейер туда больше ничего не кладёт сам).
+  // слова (после разбора конвейер туда больше ничего не кладёт сам). Не
+  // категория — отдельная строка вне списка ниже.
   const reviewDeck = DECKS.find((deck) => deck.id === REVIEW_DECK_ID);
   const showReviewDeck = reviewDeck != null && reviewDeck.items.length > 0;
-  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
-  // Один ключ на весь список «Мои колоды» — одновременно открыт максимум
-  // один свайп, тем же приёмом, что и у слов внутри колоды (UserDeckDetail).
-  const [revealedDeckKey, setRevealedDeckKey] = useState<string | null>(null);
 
   useImperativeHandle(
     ref,
@@ -125,49 +129,12 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
         setSelectedDeck(null);
         setSelectedUserDeckId(null);
         setSessionDeckId(null);
-        setIsCreatingDeck(false);
-        setRenamingDeck(null);
+        setShowMyDecks(false);
+        setSelectedCategory(null);
       },
     }),
     []
   );
-
-  // «Мой словарь» видна в «Мои колоды» сразу, даже пустой — не ждём первого
-  // слова (get-or-create тот же, что и при добавлении слова откуда угодно,
-  // просто вызван раньше; повторный вызов при последующих словах — нет-оп).
-  // Id запоминаем — по нему решаем, показывать ли жест удаления на строке
-  // (её саму удалить нельзя).
-  useEffect(() => {
-    void (async () => {
-      const deckId = await getOrCreateMyVocabularyDeck(
-        db,
-        t('myVocabularyTitle', { ns: 'common' })
-      );
-      setMyVocabularyDeckId(deckId);
-    })();
-  }, [db, t]);
-  // «Добавить колоду» сохраняет официальную колоду в «Мои колоды» — весь
-  // прогресс пользователя (свои колоды + добавленные официальные) виден в
-  // одном месте, а не только по чипу «Добавлена» в каталоге ниже.
-  const officialAddedDecks = DECKS.filter((deck) => addedDeckIds?.has(deck.id));
-
-  // Удаление колоды — с подтверждением (тот же приём, что и у выхода с
-  // удалением данных, profile-logout.tsx): в отличие от удаления одного
-  // слова, тут один свайп+тап может унести из виду сразу всю колоду.
-  const confirmDeleteDeck = (title: string, onConfirm: () => void) => {
-    Alert.alert(t('userDecks.deleteConfirmTitle', { title }), t('userDecks.deleteConfirmMessage'), [
-      { text: t('userDecks.deleteCancelButton'), style: 'cancel' },
-      { text: t('userDecks.deleteConfirmButton'), style: 'destructive', onPress: onConfirm },
-    ]);
-  };
-
-  const handleDeleteUserDeck = (deckId: string, title: string) => {
-    confirmDeleteDeck(title, () => void deleteUserDeck(db, deckId));
-  };
-
-  const handleRemoveOfficialDeck = (deckId: string, title: string) => {
-    confirmDeleteDeck(title, () => void removeDeckFromUser(db, deckId));
-  };
 
   if (sessionDeckId) {
     return <SessionScreen deckId={sessionDeckId} onExit={() => setSessionDeckId(null)} />;
@@ -194,34 +161,198 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
     );
   }
 
+  if (showMyDecks) {
+    return (
+      <MyDecksScreen
+        onBack={() => setShowMyDecks(false)}
+        onOpenUserDeck={setSelectedUserDeckId}
+        onOpenOfficialDeck={setSelectedDeck}
+      />
+    );
+  }
+
+  if (selectedCategory) {
+    return (
+      <CategoryDetail
+        category={selectedCategory}
+        onBack={() => setSelectedCategory(null)}
+        onOpenDeck={setSelectedDeck}
+      />
+    );
+  }
+
+  return (
+    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
+      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[6] }}>
+        <View style={{ gap: space[2] }}>
+          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+            {t('title')}
+          </Text>
+          <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
+        </View>
+
+        <View style={{ gap: space[3] }}>
+          <NavRow
+            icon={Sparkles}
+            label={t('userDecks.title')}
+            onPress={() => setShowMyDecks(true)}
+          />
+          {showReviewDeck && reviewDeck ? (
+            <NavRow
+              icon={Wrench}
+              label={t('reviewQueue')}
+              onPress={() => setSelectedDeck(reviewDeck)}
+            />
+          ) : null}
+        </View>
+
+        <View style={{ gap: space[3] }}>
+          {CATEGORY_ORDER.map((category) => (
+            <NavRow
+              key={category}
+              icon={CATEGORY_ICONS[category]}
+              label={t(`catalogCategories.${category}`)}
+              onPress={() => setSelectedCategory(category)}
+            />
+          ))}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+// Строка навигационного меню корневого экрана «Колоды» — иконка, название,
+// шеврон вправо; сама ничего не показывает про содержимое (число колод и
+// т.п.) — это уже на экране, куда ведёт строка.
+const NavRow = ({
+  icon: Icon,
+  label,
+  onPress,
+}: {
+  icon: LucideIcon;
+  label: string;
+  onPress: () => void;
+}) => {
+  const { colors, radius, space, type } = useTheme();
+
+  return (
+    <Pressable
+      accessibilityRole="button"
+      onPress={onPress}
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: space[3],
+        backgroundColor: colors.surface,
+        borderRadius: radius.md,
+        borderWidth: 1,
+        borderColor: colors.line,
+        padding: space[4],
+      }}
+    >
+      <Icon size={24} color={colors.ink} />
+      <Text style={[type.title, { fontSize: 17, color: colors.ink, flex: 1 }]}>{label}</Text>
+      <ChevronRight size={20} color={colors.inkMuted} />
+    </Pressable>
+  );
+};
+
+// Список своих колод (свои + добавленные официальные) — раньше был инлайн-
+// секцией на корневом экране «Колоды» (ADR-35), теперь отдельный экран за
+// строкой «Мои колоды».
+const MyDecksScreen = ({
+  onBack,
+  onOpenUserDeck,
+  onOpenOfficialDeck,
+}: {
+  onBack: () => void;
+  onOpenUserDeck: (deckId: string) => void;
+  onOpenOfficialDeck: (deck: MockDeck) => void;
+}) => {
+  const { colors, space, type } = useTheme();
+  const { t } = useTranslation('decks');
+  const db = useDb();
+  const [isCreatingDeck, setIsCreatingDeck] = useState(false);
+  const [renamingDeck, setRenamingDeck] = useState<{ id: string; title: string } | null>(null);
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+  // Один ключ на весь список — одновременно открыт максимум один свайп, тем
+  // же приёмом, что и у слов внутри колоды (UserDeckDetail).
+  const [revealedDeckKey, setRevealedDeckKey] = useState<string | null>(null);
+  const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
+  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
+
+  // «Мой словарь» видна сразу, даже пустая — не ждём первого слова (get-or-
+  // create тот же, что и при добавлении слова откуда угодно, просто вызван
+  // раньше; повторный вызов при последующих словах — нет-оп). Id запоминаем
+  // — по нему решаем, показывать ли жест удаления на строке (её саму удалить
+  // нельзя).
+  useEffect(() => {
+    void (async () => {
+      const deckId = await getOrCreateMyVocabularyDeck(
+        db,
+        t('myVocabularyTitle', { ns: 'common' })
+      );
+      setMyVocabularyDeckId(deckId);
+    })();
+  }, [db, t]);
+
+  // «Добавить колоду» сохраняет официальную колоду в «Мои колоды» — весь
+  // прогресс пользователя (свои колоды + добавленные официальные) виден в
+  // одном месте, а не только по чипу «Добавлена» в каталоге.
+  const officialAddedDecks = DECKS.filter((deck) => addedDeckIds?.has(deck.id));
+
+  // Удаление колоды — с подтверждением (тот же приём, что и у выхода с
+  // удалением данных, profile-logout.tsx): в отличие от удаления одного
+  // слова, тут один свайп+тап может унести из виду сразу всю колоду.
+  const confirmDeleteDeck = (title: string, onConfirm: () => void) => {
+    Alert.alert(t('userDecks.deleteConfirmTitle', { title }), t('userDecks.deleteConfirmMessage'), [
+      { text: t('userDecks.deleteCancelButton'), style: 'cancel' },
+      { text: t('userDecks.deleteConfirmButton'), style: 'destructive', onPress: onConfirm },
+    ]);
+  };
+
+  const handleDeleteUserDeck = (deckId: string, title: string) => {
+    confirmDeleteDeck(title, () => void deleteUserDeck(db, deckId));
+  };
+
+  const handleRemoveOfficialDeck = (deckId: string, title: string) => {
+    confirmDeleteDeck(title, () => void removeDeckFromUser(db, deckId));
+  };
+
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
       {/* Тап вне открытой строки закрывает свайп — вложенные Pressable
           (строки колод, кнопки) перехватывают тач раньше и наружу не
           всплывают, но тап по пустому месту сюда доходит. disabled, когда
-          нечего закрывать: иначе этот Pressable перехватывает responder везде,
-          где под пальцем нет своего вложенного Pressable (например, заголовок
-          категории «Путешествия»), и блокирует там скролл. */}
+          нечего закрывать — иначе перехватывает responder везде, где под
+          пальцем нет вложенного Pressable, и блокирует скролл. */}
       <Pressable
         style={{ flex: 1 }}
         onPress={() => setRevealedDeckKey(null)}
         disabled={revealedDeckKey === null}
       >
-        <ScrollView contentContainerStyle={{ padding: space[5], gap: space[8] }}>
-          <View style={{ gap: space[2] }}>
-            <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
-              {t('title')}
-            </Text>
-            <Text style={[type.body, { color: colors.inkMuted }]}>{t('subtitle')}</Text>
-          </View>
+        <ScrollView contentContainerStyle={{ padding: space[5], gap: space[4] }}>
+          <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={t('back')}
+            onPress={onBack}
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: space[1],
+              minHeight: 44,
+              alignSelf: 'flex-start',
+            }}
+          >
+            <ChevronLeft size={20} color={colors.inkMuted} />
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
+          </Pressable>
+
+          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+            {t('userDecks.title')}
+          </Text>
 
           <View style={{ gap: space[3] }}>
-            <Text
-              accessibilityRole="header"
-              style={[type.button, { fontSize: 15, color: colors.ink }]}
-            >
-              {t('userDecks.title')}
-            </Text>
             {(userDecks ?? []).map((deck) => {
               // «Мой словарь» удалить нельзя — жеста на этой строке нет вовсе.
               if (deck.id === myVocabularyDeckId) {
@@ -230,7 +361,7 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
                     key={deck.id}
                     title={deck.title}
                     itemCount={deck.itemCount}
-                    onPress={() => setSelectedUserDeckId(deck.id)}
+                    onPress={() => onOpenUserDeck(deck.id)}
                   />
                 );
               }
@@ -266,7 +397,7 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
                   <MyDeckRow
                     title={deck.title}
                     itemCount={deck.itemCount}
-                    onPress={() => setSelectedUserDeckId(deck.id)}
+                    onPress={() => onOpenUserDeck(deck.id)}
                   />
                 </SwipeActions>
               );
@@ -292,7 +423,7 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
                 <MyDeckRow
                   title={deck.title}
                   itemCount={deck.items.length}
-                  onPress={() => setSelectedDeck(deck)}
+                  onPress={() => onOpenOfficialDeck(deck)}
                 />
               </SwipeActions>
             ))}
@@ -304,74 +435,6 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
               onPress={() => setIsCreatingDeck(true)}
             />
           </View>
-
-          {showFirstSteps && firstStepsDeck ? (
-            <View style={{ gap: space[3] }}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
-                <Sparkles size={40} color={colors.ink} />
-                <Text
-                  accessibilityRole="header"
-                  style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
-                >
-                  {t('recommended')}
-                </Text>
-              </View>
-              <DeckRow
-                deck={firstStepsDeck}
-                isAdded={addedDeckIds?.has(firstStepsDeck.id) ?? false}
-                onPress={() => setSelectedDeck(firstStepsDeck)}
-              />
-            </View>
-          ) : null}
-
-          {showReviewDeck && reviewDeck ? (
-            <View style={{ gap: space[3] }}>
-              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
-                <Wrench size={40} color={colors.ink} />
-                <Text
-                  accessibilityRole="header"
-                  style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
-                >
-                  {t('reviewQueue')}
-                </Text>
-              </View>
-              <DeckRow
-                deck={reviewDeck}
-                isAdded={addedDeckIds?.has(reviewDeck.id) ?? false}
-                onPress={() => setSelectedDeck(reviewDeck)}
-              />
-            </View>
-          ) : null}
-
-          <View style={{ gap: space[8] }}>
-            {deckGroups.map((group) => {
-              const Icon = GOAL_ICONS[group.goal];
-
-              return (
-                <View key={group.goal} style={{ gap: space[4] }}>
-                  <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
-                    <Icon size={40} color={colors.ink} />
-                    <Text
-                      accessibilityRole="header"
-                      style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
-                    >
-                      {t(`goal.options.${group.goal}`, { ns: 'onboarding' })}
-                    </Text>
-                  </View>
-                  <View style={{ gap: space[3] }}>
-                    {group.decks.map((deck) => (
-                      <DeckRow
-                        key={deck.id}
-                        deck={deck}
-                        isAdded={addedDeckIds?.has(deck.id) ?? false}
-                        onPress={() => setSelectedDeck(deck)}
-                      />
-                    ))}
-                  </View>
-                </View>
-              );
-            })}
-          </View>
         </ScrollView>
       </Pressable>
 
@@ -380,7 +443,7 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
         onClose={() => setIsCreatingDeck(false)}
         onCreated={(deckId) => {
           setIsCreatingDeck(false);
-          setSelectedUserDeckId(deckId);
+          onOpenUserDeck(deckId);
         }}
       />
 
@@ -390,6 +453,65 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
         currentTitle={renamingDeck?.title ?? ''}
         onClose={() => setRenamingDeck(null)}
       />
+    </SafeAreaView>
+  );
+};
+
+// Экран одной категории каталога — список официальных колод с этой
+// категорией (getDecksByCategory, ADR-35). Колода может быть в нескольких
+// категориях сразу, поэтому может появиться на нескольких таких экранах.
+const CategoryDetail = ({
+  category,
+  onBack,
+  onOpenDeck,
+}: {
+  category: DeckCategory;
+  onBack: () => void;
+  onOpenDeck: (deck: MockDeck) => void;
+}) => {
+  const { colors, space, type } = useTheme();
+  const { t } = useTranslation('decks');
+  const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
+  const decks = getDecksByCategory(DECKS, category);
+
+  return (
+    <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
+      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[4] }}>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel={t('back')}
+          onPress={onBack}
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: space[1],
+            minHeight: 44,
+            alignSelf: 'flex-start',
+          }}
+        >
+          <ChevronLeft size={20} color={colors.inkMuted} />
+          <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
+        </Pressable>
+
+        <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+          {t(`catalogCategories.${category}`)}
+        </Text>
+
+        {decks.length > 0 ? (
+          <View style={{ gap: space[3] }}>
+            {decks.map((deck) => (
+              <DeckRow
+                key={deck.id}
+                deck={deck}
+                isAdded={addedDeckIds?.has(deck.id) ?? false}
+                onPress={() => onOpenDeck(deck)}
+              />
+            ))}
+          </View>
+        ) : (
+          <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('categoryEmpty')}</Text>
+        )}
+      </ScrollView>
     </SafeAreaView>
   );
 };

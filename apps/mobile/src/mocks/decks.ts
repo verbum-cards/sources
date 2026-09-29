@@ -23,12 +23,10 @@ import { wordByLemma, type MockWord } from './words';
 // фраз. Натягивать то и другое под чек-лист искусственно хуже, чем честно
 // отступить от него.
 //
-// goalTags (ADR-24, decks.screen.tsx группирует каталог по ним) — не только
-// «travel»: у всех ситуационных колод добавлен «work» там, где это реальный
-// сценарий (деловая поездка — тот же ресторан/отель/аэропорт/такси, что и в
-// отпуске), «move» — там, где лексика нужна переехавшему (ориентация в новом
-// городе, знакомство с соседями). Без искусственных тегов ради разнообразия
-// групп — «games»/«tech»/«exam»/«media» этим колодам не подходят.
+// categories (ADR-35, decks.screen.tsx — у каждой категории свой экран
+// каталога, заменяет группировку по goalTags/Goal из ADR-24) — тема/ситуация,
+// не цель изучения из онбординга; колода может быть в нескольких категориях
+// сразу, если тема на стыке (такси — и транспорт, и путешествия).
 export interface DeckWord extends MockWord {
   importance: 1 | 2 | 3;
 }
@@ -183,18 +181,13 @@ const workContext: DeckContext = {
   ],
 };
 
-// decks.screen.tsx показывает эту колоду отдельным блоком только при
-// user_profile.level === 'A0' — id вынесен константой, чтобы не искать её по
-// title/индексу в DECKS.
-export const FIRST_STEPS_DECK_ID = '0195d000-0000-7000-8000-000000000008';
-
 // Служебная колода для проверки партий словаря (apps/api/scripts/dictionary/generate-senses.ts,
 // skill dictionary-pipeline) — не для пользователей беты, только чтобы
 // владелец продукта мог открыть только что сгенерированные слова на телефоне
 // и проверить их, прежде чем разложить по настоящим колодам или отбраковать.
-// goalTags пустой (как у «Первых шагов») — не попадает в каталог по целям;
-// decks.screen.tsx показывает её отдельным блоком, только пока в ней есть
-// слова. generate-senses.ts сам дописывает сюда лемму каждого успешно
+// categories пустой — не категория, decks.screen.tsx показывает её отдельной
+// строкой вне каталога категорий, только пока в ней есть слова.
+// generate-senses.ts сам дописывает сюда лемму каждого успешно
 // сгенерированного слова — руками список не редактируется, кроме удаления
 // уже проверенных слов.
 export const REVIEW_DECK_ID = '0195d000-0000-7000-8000-000000000009';
@@ -205,7 +198,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Ресторан и кафе',
-    goalTags: ['travel', 'self'],
+    categories: ['cafeRestaurant', 'travelLeisure'],
     type: 'official',
     context: restaurantContext,
     items: resolveDeckItems([
@@ -229,7 +222,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Отель',
-    goalTags: ['travel', 'work'],
+    categories: ['travelLeisure'],
     type: 'official',
     context: hotelContext,
     items: resolveDeckItems([
@@ -253,7 +246,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Аэропорт и перелёт',
-    goalTags: ['travel', 'work'],
+    categories: ['travelLeisure'],
     type: 'official',
     context: airportContext,
     items: resolveDeckItems([
@@ -278,7 +271,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Такси',
-    goalTags: ['travel', 'self'],
+    categories: ['transportCity', 'travelLeisure'],
     type: 'official',
     context: taxiContext,
     items: resolveDeckItems([
@@ -302,7 +295,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Как пройти',
-    goalTags: ['travel', 'self'],
+    categories: ['transportCity', 'travelLeisure'],
     type: 'official',
     context: directionsContext,
     items: resolveDeckItems([
@@ -326,7 +319,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Знакомство и small talk',
-    goalTags: ['self', 'travel', 'work'],
+    categories: ['socializing', 'workOffice'],
     type: 'official',
     context: smallTalkContext,
     items: resolveDeckItems([
@@ -350,7 +343,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Работа',
-    goalTags: ['work'],
+    categories: ['businessCareer'],
     type: 'official',
     context: workContext,
     items: resolveDeckItems([
@@ -390,20 +383,19 @@ export const DECKS: readonly MockDeck[] = [
     ]),
   },
   // «Первые шаги» — единственная колода не про ситуацию, а про уровень (A0,
-  // ADR-33): goalTags намеренно пустой, чтобы она не попала в каталог по
-  // целям (groupDecksByGoal пропускает колоды без валидных тегов) — экран
-  // показывает её отдельным блоком только пользователям с уровнем «Первые
-  // шаги» (decks.screen.tsx). Временное наполнение — слова уровня A1 из WORDS
-  // как есть, без ручного отбора по смыслу (владелец продукта подтвердил:
-  // финальный список для A0 будет курироваться позже, вручную) — кроме 7
-  // A1-слов, которые уже заняты другими колодами (itemId должен быть уникален
-  // по всему DECKS, см. комментарий ниже, в списке items).
+  // ADR-33) — своя категория 'firstSteps' (ADR-35), без специального
+  // гейтинга по user_profile.level (был до ADR-35, убран вместе с блоком
+  // «Рекомендую»). Временное наполнение — слова уровня A1 из WORDS как есть,
+  // без ручного отбора по смыслу (владелец продукта подтвердил: финальный
+  // список для A0 будет курироваться позже, вручную) — кроме 7 A1-слов,
+  // которые уже заняты другими колодами (itemId должен быть уникален по
+  // всему DECKS, см. комментарий ниже, в списке items).
   {
-    id: FIRST_STEPS_DECK_ID,
+    id: '0195d000-0000-7000-8000-000000000008',
     lang: 'en',
     nativeLang: 'ru',
     title: 'Первые шаги',
-    goalTags: [],
+    categories: ['firstSteps'],
     type: 'official',
     items: resolveDeckItems([
       { lemma: 'neighbor', importance: 2 },
@@ -430,7 +422,7 @@ export const DECKS: readonly MockDeck[] = [
     lang: 'en',
     nativeLang: 'ru',
     title: 'Проверка партий',
-    goalTags: [],
+    categories: [],
     type: 'official',
     items: resolveDeckItems([
       { lemma: "'m", importance: 2 },

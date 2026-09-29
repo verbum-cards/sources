@@ -6,7 +6,7 @@ import { z } from 'zod';
 
 import { IsoDateSchema, LangSchema } from './content';
 
-export const DICTIONARY_SCHEMA_VERSION = 2;
+export const DICTIONARY_SCHEMA_VERSION = 3;
 
 export const DictionaryPackMetaSchema = z.object({
   schemaVersion: z.number(),
@@ -129,10 +129,12 @@ CREATE TABLE deck (
   context TEXT
 );
 
-CREATE TABLE deck_goal_tag (
+-- Категория каталога (DeckCategorySchema, decks.ts) — версия 3, заменяет
+-- deck_goal_tag (Goal из онбординга, ADR-24): тема/ситуация, не цель изучения.
+CREATE TABLE deck_category (
   deck_id TEXT NOT NULL REFERENCES deck (id),
-  tag TEXT NOT NULL,
-  PRIMARY KEY (deck_id, tag)
+  category TEXT NOT NULL,
+  PRIMARY KEY (deck_id, category)
 );
 
 CREATE TABLE deck_item (

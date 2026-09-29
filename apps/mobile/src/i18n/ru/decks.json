@@ -11,8 +11,8 @@
   "addWord": "Добавить слово",
   "wordAdded": "«{{word}}» добавлено",
   "goToProgress": "Перейти к тренировкам",
-  "recommended": "Рекомендую",
   "reviewQueue": "Проверка партий",
+  "categoryEmpty": "Пока нет колод в этой категории",
   "categories": {
     "nouns": "Существительные",
     "verbs": "Глаголы",
@@ -20,6 +20,26 @@
     "phrases": "Фразы",
     "questions": "Вопросы",
     "other": "Другое"
+  },
+  "catalogCategories": {
+    "basics": "Основы",
+    "firstSteps": "Первые шаги",
+    "workOffice": "Работа и офис",
+    "businessCareer": "Бизнес и карьера",
+    "abroad": "Жизнь за границей",
+    "health": "Здоровье",
+    "shopping": "Покупки",
+    "cafeRestaurant": "Кафе и ресторан",
+    "travelLeisure": "Отдых и путешествия",
+    "transportCity": "Транспорт и город",
+    "opinion": "Мнение и обсуждение",
+    "emotionsRelationships": "Эмоции и отношения",
+    "itTech": "IT и технологии",
+    "sportsHobbies": "Спорт и хобби",
+    "homeLife": "Дом и быт",
+    "moviesBooks": "Кино и книги",
+    "study": "Учёба",
+    "socializing": "Общение и знакомства"
   },
   "userDecks": {
     "title": "Мои колоды",

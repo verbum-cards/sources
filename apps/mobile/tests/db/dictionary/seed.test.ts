@@ -104,7 +104,7 @@ test('seedDictionaryPackage: search_term содержит нормализова
   assert.equal(row?.item_type, 'sense');
 });
 
-test('seedDictionaryPackage: deck/deck_goal_tag/deck_item — по данным DECKS', async () => {
+test('seedDictionaryPackage: deck/deck_category/deck_item — по данным DECKS', async () => {
   const { db } = await setupPack();
   const restaurant = DECKS[0];
 
@@ -115,11 +115,12 @@ test('seedDictionaryPackage: deck/deck_goal_tag/deck_item — по данным 
   assert.equal(deckRow?.title, restaurant.title);
   assert.equal(deckRow?.type, restaurant.type);
 
-  const tags = await db.all<{ tag: string }>('SELECT tag FROM deck_goal_tag WHERE deck_id = ?', [
-    restaurant.id,
-  ]);
-  // deck_goal_tag не хранит порядок (нет position) — сравниваем как множества.
-  assert.deepEqual(new Set(tags.map((t) => t.tag)), new Set(restaurant.goalTags));
+  const categories = await db.all<{ category: string }>(
+    'SELECT category FROM deck_category WHERE deck_id = ?',
+    [restaurant.id]
+  );
+  // deck_category не хранит порядок (нет position) — сравниваем как множества.
+  assert.deepEqual(new Set(categories.map((c) => c.category)), new Set(restaurant.categories));
 
   const items = await db.all<{ item_id: string; position: number; importance: number }>(
     'SELECT item_id, position, importance FROM deck_item WHERE deck_id = ? ORDER BY position',
