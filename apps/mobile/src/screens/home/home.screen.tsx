@@ -27,7 +27,11 @@ import { useQuery } from '../../hooks/use-query.hook';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
 import { loadAddedDeckItemIds } from '../decks/decks-logic';
-import { addWordToUserDeck, getOrCreateMyVocabularyDeck } from '../decks/user-deck-logic';
+import {
+  addWordToUserDeck,
+  getOrCreateMyVocabularyDeck,
+  loadUserDecks,
+} from '../decks/user-deck-logic';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
 import {
   computeStreakDays,
@@ -98,6 +102,27 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks, ref }: Props) => {
     async (word: PackWord) => {
       const myVocabularyTitle = t('myVocabularyTitle', { ns: 'common' });
       const deckId = await getOrCreateMyVocabularyDeck(db, myVocabularyTitle);
+      await addWordToUserDeck(db, deckId, word, myVocabularyTitle);
+    },
+    [db, t]
+  );
+
+  // «Добавить в колоду» в попапе WordNew — та же логика get-or-create, что и
+  // в decks.screen.tsx/user-deck.screen.tsx, здесь нужна только для того,
+  // чтобы исключить «Мой словарь» из списка целей (она и так уже содержит
+  // любое добавленное слово).
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+  useEffect(() => {
+    void (async () => {
+      const id = await getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+      setMyVocabularyDeckId(id);
+    })();
+  }, [db, t]);
+  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
+  const deckTargets = (userDecks ?? []).filter((deck) => deck.id !== myVocabularyDeckId);
+  const handleAddWordToDeck = useCallback(
+    async (word: PackWord, deckId: string) => {
+      const myVocabularyTitle = t('myVocabularyTitle', { ns: 'common' });
       await addWordToUserDeck(db, deckId, word, myVocabularyTitle);
     },
     [db, t]
@@ -213,6 +238,8 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks, ref }: Props) => {
           onFocus={dismissEmptyState}
           onAddWord={handleAddWord}
           addedRefs={addedItemIds ?? new Set()}
+          decks={deckTargets}
+          onAddWordToDeck={handleAddWordToDeck}
         />
 
         {hasCards ? (

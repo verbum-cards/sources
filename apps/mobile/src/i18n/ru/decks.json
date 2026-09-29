@@ -43,6 +43,8 @@
     "moveTitle": "Переместить в колоду",
     "moveEmpty": "Больше колод нет — создайте новую, чтобы перемещать слова",
     "moveSuccess": "«{{word}}» перемещено в «{{deck}}»",
+    "addToDeckTitle": "Добавить в колоду",
+    "addToDeckSuccess": "«{{word}}» добавлено в «{{deck}}»",
     "study": "Учить"
   }
 }

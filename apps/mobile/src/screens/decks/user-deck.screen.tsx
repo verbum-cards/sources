@@ -392,6 +392,15 @@ export const UserDeckDetail = ({
               await addWordToUserDeck(db, deckId, word, t('myVocabularyTitle', { ns: 'common' }));
             }}
             addedRefs={addedRefs}
+            decks={moveTargetDecks}
+            onAddWordToDeck={async (word, targetDeckId) => {
+              await addWordToUserDeck(
+                db,
+                targetDeckId,
+                word,
+                t('myVocabularyTitle', { ns: 'common' })
+              );
+            }}
           />
 
           <View style={{ gap: space[2] }}>

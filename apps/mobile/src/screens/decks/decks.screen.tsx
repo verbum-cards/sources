@@ -23,6 +23,7 @@ import type { Goal } from '@cards/contracts';
 
 import { Button } from '../../components/Button';
 import { Chip } from '../../components/Chip';
+import { DeckPickerModal } from '../../components/DeckPickerModal';
 import { SwipeActions } from '../../components/SwipeActions';
 import { WordPopup } from '../../components/WordPopup';
 import { WordRow } from '../../components/WordRow';
@@ -50,7 +51,12 @@ import {
   loadAddedDeckItemIds,
   removeDeckFromUser,
 } from './decks-logic';
-import { deleteUserDeck, getOrCreateMyVocabularyDeck, loadUserDecks } from './user-deck-logic';
+import {
+  addWordToUserDeck,
+  deleteUserDeck,
+  getOrCreateMyVocabularyDeck,
+  loadUserDecks,
+} from './user-deck-logic';
 import { CreateUserDeckModal, RenameUserDeckModal, UserDeckDetail } from './user-deck.screen';
 
 // Иконки категорий (goalTags, тот же набор, что и на шаге «Цель»
@@ -488,7 +494,21 @@ const DeckDetail = ({
   const toast = useToast();
   const [isAdding, setIsAdding] = useState(false);
   const [selectedWord, setSelectedWord] = useState<DeckWord | null>(null);
+  const [wordForDeckPick, setWordForDeckPick] = useState<DeckWord | null>(null);
   const { data: addedItemIds } = useQuery(loadAddedDeckItemIds, { tables: ['card'] });
+
+  // Своя колода, кроме «Мой словарь» — цели для «Добавить в колоду»
+  // (WordPopup.tsx). Колода официальная (mocks/decks.ts), поэтому исключать
+  // саму себя из списка не нужно — среди своих колод её и так не может быть.
+  const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
+  useEffect(() => {
+    void (async () => {
+      const id = await getOrCreateMyVocabularyDeck(db, t('myVocabularyTitle', { ns: 'common' }));
+      setMyVocabularyDeckId(id);
+    })();
+  }, [db, t]);
+  const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
+  const deckTargets = (userDecks ?? []).filter((candidate) => candidate.id !== myVocabularyDeckId);
 
   const handleAdd = async () => {
     setIsAdding(true);
@@ -499,6 +519,16 @@ const DeckDetail = ({
   const handleAddWord = async (word: DeckWord) => {
     await addSingleDeckWord(db, deck, word, t('myVocabularyTitle', { ns: 'common' }));
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
+  };
+
+  const handlePickDeck = async (targetDeckId: string, targetDeckTitle: string) => {
+    if (!wordForDeckPick) return;
+    const word = wordForDeckPick;
+    setWordForDeckPick(null);
+    await addWordToUserDeck(db, targetDeckId, word, t('myVocabularyTitle', { ns: 'common' }));
+    toast.show({
+      message: t('userDecks.addToDeckSuccess', { word: word.lemma, deck: targetDeckTitle }),
+    });
   };
 
   return (
@@ -612,7 +642,24 @@ const DeckDetail = ({
               }
             : undefined
         }
+        onAddToDeck={
+          selectedWord && deckTargets.length > 0
+            ? () => {
+                setWordForDeckPick(selectedWord);
+                setSelectedWord(null);
+              }
+            : undefined
+        }
         onClose={() => setSelectedWord(null)}
+      />
+
+      <DeckPickerModal
+        visible={wordForDeckPick !== null}
+        title={t('userDecks.addToDeckTitle')}
+        emptyMessage={t('userDecks.moveEmpty')}
+        decks={deckTargets}
+        onPick={(deck) => void handlePickDeck(deck.id, deck.title)}
+        onClose={() => setWordForDeckPick(null)}
       />
     </SafeAreaView>
   );

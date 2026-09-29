@@ -10,6 +10,7 @@ import {
 import { useDictionaryDb } from '../hooks/use-dictionary-db.hook';
 import { useToast } from '../hooks/use-toast.hook';
 import { useTheme } from '../providers/theme.provider';
+import { DeckPickerModal, type DeckPickerOption } from './DeckPickerModal';
 import { WordPopup } from './WordPopup';
 import { WordRow } from './WordRow';
 
@@ -29,6 +30,14 @@ interface Props {
   // itemType:itemId уже добавленных слов — не создавать вторую карточку и
   // показывать их в подсказках последними.
   addedRefs: ReadonlySet<string>;
+  // Свои колоды кроме «Мой словарь» — кнопка «Добавить в колоду» в попапе
+  // показывается, только если тут есть хотя бы одна (WordPopup.tsx). Пустой
+  // массив по умолчанию, чтобы вызывающий мог не думать о ней, если колод
+  // ему передавать не нужно (пока нет экрана, где это неприменимо).
+  decks?: readonly DeckPickerOption[];
+  // То же действие, что и onAddWord, но в конкретную (выбранную в попапе)
+  // колоду, а не в ту, что зашита в onAddWord.
+  onAddWordToDeck?: (word: PackWord, deckId: string) => Promise<void>;
   // Прячет пустое состояние главного экрана, если тапнули прямо в поле
   // (home.screen.tsx) — decks его не передают.
   onFocus?: () => void;
@@ -43,7 +52,14 @@ interface Props {
 // «Сохранить» в попапе. Слово, которого нет в пакете (Enter/сабмит без
 // точного совпадения) — пока без ручного ввода перевода: раньше был на
 // главном экране, временно убран.
-export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
+export const WordNew = ({
+  onAddWord,
+  addedRefs,
+  decks = [],
+  onAddWordToDeck,
+  onFocus,
+  ref,
+}: Props) => {
   const { colors, radius, space } = useTheme();
   const { t } = useTranslation('decks');
   const dictionaryDb = useDictionaryDb();
@@ -53,6 +69,7 @@ export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<readonly PackWord[]>([]);
   const [selectedWord, setSelectedWord] = useState<PackWord | null>(null);
+  const [wordForDeckPick, setWordForDeckPick] = useState<PackWord | null>(null);
 
   useImperativeHandle(
     ref,
@@ -87,6 +104,16 @@ export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
     await onAddWord(word);
     setQuery('');
     toast.show({ message: t('wordAdded', { word: word.lemma }) });
+  };
+
+  const handlePickDeck = async (deck: DeckPickerOption) => {
+    if (!wordForDeckPick || !onAddWordToDeck) return;
+    const word = wordForDeckPick;
+    setWordForDeckPick(null);
+    await onAddWordToDeck(word, deck.id);
+    toast.show({
+      message: t('userDecks.addToDeckSuccess', { word: word.lemma, deck: deck.title }),
+    });
   };
 
   // Enter/сабмит: точное совпадение — превью (как тап по строке); слова нет
@@ -179,7 +206,24 @@ export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
               }
             : undefined
         }
+        onAddToDeck={
+          selectedWord && decks.length > 0 && onAddWordToDeck
+            ? () => {
+                setWordForDeckPick(selectedWord);
+                setSelectedWord(null);
+              }
+            : undefined
+        }
         onClose={() => setSelectedWord(null)}
+      />
+
+      <DeckPickerModal
+        visible={wordForDeckPick !== null}
+        title={t('userDecks.addToDeckTitle')}
+        emptyMessage={t('userDecks.moveEmpty')}
+        decks={decks}
+        onPick={(deck) => void handlePickDeck(deck)}
+        onClose={() => setWordForDeckPick(null)}
       />
     </View>
   );
