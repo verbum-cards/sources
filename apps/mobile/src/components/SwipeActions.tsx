@@ -56,7 +56,7 @@ export const SwipeActions = ({
   onHide,
   onSwipeRight,
 }: Props) => {
-  const { colors, space } = useTheme();
+  const { colors, space, radius } = useTheme();
   // useState с ленивым инициализатором, а не useRef(...).current — читаются
   // прямо в рендере (opacity/transform), а useRef здесь нарушил бы
   // react-hooks/refs (React Compiler) — тот же приём, что и в MainTabsScreen.
@@ -70,7 +70,7 @@ export const SwipeActions = ({
   useEffect(() => {
     Animated.parallel([
       Animated.timing(overlayOpacity, {
-        toValue: revealed ? 0.5 : 0,
+        toValue: revealed ? 0.1 : 0,
         duration: ANIMATION_MS,
         useNativeDriver: true,
       }),
@@ -110,7 +110,11 @@ export const SwipeActions = ({
           <Animated.View
             style={[
               StyleSheet.absoluteFill,
-              { backgroundColor: colors.onSignal, opacity: overlayOpacity },
+              {
+                backgroundColor: colors.onSignal,
+                opacity: overlayOpacity,
+                borderRadius: radius.md,
+              },
             ]}
           />
         </Pressable>

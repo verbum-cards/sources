@@ -11,6 +11,7 @@
   "addWord": "Добавить слово",
   "wordAdded": "«{{word}}» добавлено",
   "goToProgress": "Перейти к тренировкам",
+  "recommended": "Рекомендую",
   "categories": {
     "nouns": "Существительные",
     "verbs": "Глаголы",

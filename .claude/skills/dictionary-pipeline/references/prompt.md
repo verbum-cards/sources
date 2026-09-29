@@ -30,10 +30,10 @@
   "pos": "string",
   "ipa": "string",
   "senses": [
-    { "level": "A1|A2|B1|B2|C1|C2", "tags": ["string"], "ru": "string", "example": "string", "example_ru": "string" }
+    { "level": "A0|A1|A2|B1|B2|C1|C2", "tags": ["string"], "ru": "string", "example": "string", "example_ru": "string" }
   ],
   "expressions": [
-    { "text": "string", "level": "A1|A2|B1|B2|C1|C2", "tags": ["string"], "ru": "string" }
+    { "text": "string", "level": "A0|A1|A2|B1|B2|C1|C2", "tags": ["string"], "ru": "string" }
   ]
 }
 ```

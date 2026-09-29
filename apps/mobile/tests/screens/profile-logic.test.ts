@@ -76,6 +76,15 @@ test('updateProfileLevel: "не знаю" — валидный UserLevel', async
   assert.equal(profile?.level, 'unknown');
 });
 
+test('updateProfileLevel: "A0" (Первые шаги, ниже A1) — валидный UserLevel', async () => {
+  const { db } = await setupDbWithProfile();
+
+  await updateProfileLevel(db, 'A0');
+
+  const profile = await loadCurrentUserProfile(db);
+  assert.equal(profile?.level, 'A0');
+});
+
 test('updateProfileGoals: меняет только goals, остальные поля не трогает', async () => {
   const { db } = await setupDbWithProfile();
 

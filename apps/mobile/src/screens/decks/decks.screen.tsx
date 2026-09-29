@@ -12,6 +12,7 @@ import {
   Heart,
   Pencil,
   Plane,
+  Sparkles,
   Trash2,
   Truck,
   type LucideIcon,
@@ -27,13 +28,15 @@ import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useToast } from '../../hooks/use-toast.hook';
-import { DECKS, type DeckWord, type MockDeck } from '../../mocks/decks';
+import { DECKS, FIRST_STEPS_DECK_ID, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
+import { loadCurrentUserProfile } from '../profile/profile-logic';
 import { SessionScreen } from '../session/session.screen';
 import {
   addDeckToUser,
   addSingleDeckWord,
+  getDeckLevel,
   groupDecksByGoal,
   isDeckWordAdded,
   loadAddedDeckIds,
@@ -82,7 +85,16 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
   const [renamingDeck, setRenamingDeck] = useState<{ id: string; title: string } | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
   const { data: userDecks } = useQuery(loadUserDecks, { tables: ['deck', 'deck_item'] });
+  const { data: profile } = useQuery(loadCurrentUserProfile, { tables: ['user_profile'] });
   const deckGroups = groupDecksByGoal(DECKS);
+  // Колода «Первые шаги» (ADR-33) — не про ситуацию, а про уровень:
+  // единственная колода без goalTags (не попадает в deckGroups выше). Блок
+  // «Рекомендую» под «Мои колоды» показывает её, но только тем, у кого именно
+  // такой уровень в настройках — заголовок блока не совпадает с названием
+  // самой колоды нарочно, тот же приём, что и у групп по целям (заголовок
+  // группы — не название колоды внутри неё).
+  const firstStepsDeck = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
+  const showFirstSteps = profile?.level === 'A0' && firstStepsDeck != null;
   const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
   // Один ключ на весь список «Мои колоды» — одновременно открыт максимум
   // один свайп, тем же приёмом, что и у слов внутри колоды (UserDeckDetail).
@@ -275,6 +287,25 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
             />
           </View>
 
+          {showFirstSteps && firstStepsDeck ? (
+            <View style={{ gap: space[3] }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+                <Sparkles size={40} color={colors.ink} />
+                <Text
+                  accessibilityRole="header"
+                  style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
+                >
+                  {t('recommended')}
+                </Text>
+              </View>
+              <DeckRow
+                deck={firstStepsDeck}
+                isAdded={addedDeckIds?.has(firstStepsDeck.id) ?? false}
+                onPress={() => setSelectedDeck(firstStepsDeck)}
+              />
+            </View>
+          ) : null}
+
           <View style={{ gap: space[8] }}>
             {deckGroups.map((group) => {
               const Icon = GOAL_ICONS[group.goal];
@@ -373,6 +404,7 @@ const DeckRow = ({
 }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
+  const level = getDeckLevel(deck);
 
   return (
     <Pressable
@@ -396,11 +428,14 @@ const DeckRow = ({
         }}
       >
         <Text style={[type.title, { fontSize: 20, color: colors.ink }]}>{deck.title}</Text>
-        {isAdded ? <Chip label={t('added')} variant="quiet" /> : null}
+        {level ? <Chip label={level} variant="quiet" /> : null}
       </View>
-      <Text style={[type.bodyS, { color: colors.inkMuted }]}>
-        {t('wordsCount', { count: deck.items.length })}
-      </Text>
+      <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+        <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+          {t('wordsCount', { count: deck.items.length })}
+        </Text>
+        {isAdded ? <Chip label={t('added')} variant="streak" /> : null}
+      </View>
     </Pressable>
   );
 };

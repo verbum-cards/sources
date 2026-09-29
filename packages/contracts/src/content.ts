@@ -5,7 +5,11 @@ import { z } from 'zod';
 export const LangSchema = z.enum(['en', 'ru', 'tr']);
 export type Lang = z.infer<typeof LangSchema>;
 
-export const CefrSchema = z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+// A0 — неофициальное расширение шкалы вниз (сама CEFR начинается с A1):
+// уровень «Первые шаги» для контента и для пользователя (ADR-33) — абсолютный
+// новичок, содержимого для него в стандартных источниках нет (CEFR-J/Octanove
+// начинаются с A1), авторится/размечается отдельно.
+export const CefrSchema = z.enum(['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
 export type Cefr = z.infer<typeof CefrSchema>;
 
 // UUID (v7, создаётся клиентом) и ISO-дата — с проверкой формата. По умолчанию

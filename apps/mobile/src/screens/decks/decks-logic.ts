@@ -1,4 +1,4 @@
-import type { Goal, ItemType } from '@cards/contracts';
+import type { Cefr, Goal, ItemType } from '@cards/contracts';
 import { GoalSchema } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
@@ -54,6 +54,36 @@ export function groupDecksByGoal(decks: readonly MockDeck[]): readonly DeckGoalG
     goal,
     decks: groups.get(goal) ?? [],
   }));
+}
+
+// Порядок для разрешения ничьей в getDeckLevel — при равном числе слов на
+// нескольких уровнях побеждает более сложный: значок уровня — это сигнал
+// «на что рассчитывать», занизить сложность хуже, чем завысить (новичок,
+// открывший колоду сложнее, чем ждал, просто выйдет — а не растеряется
+// посреди неё, ожидая лёгкого).
+const CEFR_ORDER: readonly Cefr[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+
+// Уровень колоды не хранится отдельным полем (DeckSchema его не знает,
+// уровень есть только у каждого слова) — самый частый cefr среди её items,
+// то же «ядро» уровня, что в skill deck-authoring («ядро A2 (~50%)» и т.п.).
+// undefined только для пустой колоды (в реальном DECKS такой не бывает).
+export function getDeckLevel(deck: MockDeck): Cefr | undefined {
+  const counts = new Map<Cefr, number>();
+  for (const item of deck.items) {
+    counts.set(item.cefr, (counts.get(item.cefr) ?? 0) + 1);
+  }
+
+  let best: Cefr | undefined;
+  let bestCount = 0;
+  for (const cefr of CEFR_ORDER) {
+    const count = counts.get(cefr) ?? 0;
+    if (count > 0 && count >= bestCount) {
+      best = cefr;
+      bestCount = count;
+    }
+  }
+
+  return best;
 }
 
 // itemId один на всю моковую библиотеку не гарантированно уникален между

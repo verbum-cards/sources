@@ -2,16 +2,18 @@ import assert from 'node:assert/strict';
 import { DatabaseSync } from 'node:sqlite';
 import { test } from 'node:test';
 
+import type { Cefr } from '@cards/contracts';
 import { GoalSchema } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { loadUserDeckIds } from '../../src/db/entities/user/user-deck';
 import { migrate } from '../../src/db/migrate';
-import { DECKS } from '../../src/mocks/decks';
-import type { MockDeck } from '../../src/mocks/decks';
+import { DECKS, FIRST_STEPS_DECK_ID } from '../../src/mocks/decks';
+import type { DeckWord, MockDeck } from '../../src/mocks/decks';
 import {
   addDeckToUser,
   addSingleDeckWord,
+  getDeckLevel,
   groupDecksByGoal,
   isDeckWordAdded,
   loadAddedDeckIds,
@@ -40,6 +42,16 @@ test('DECKS: id колод и itemId элементов не повторяют�
   assert.equal(new Set(itemIds).size, itemIds.length);
 });
 
+test('DECKS: «Первые шаги» — без goalTags, только слова уровня A1', () => {
+  const firstSteps = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
+  assert.ok(firstSteps, 'FIRST_STEPS_DECK_ID должен указывать на существующую колоду в DECKS');
+  assert.deepEqual(firstSteps.goalTags, []);
+  assert.ok(firstSteps.items.length > 0);
+  for (const word of firstSteps.items) {
+    assert.equal(word.cefr, 'A1', `"${word.lemma}" в «Первые шаги» должно быть уровня A1`);
+  }
+});
+
 test('DECKS: goalTags — только известные значения Goal (иначе колода молча выпадет из каталога)', () => {
   const knownGoals = new Set<string>(GoalSchema.options);
   for (const deck of DECKS) {
@@ -61,6 +73,40 @@ function makeDeck(overrides: Partial<MockDeck>): MockDeck {
     ...overrides,
   };
 }
+
+function makeWord(cefr: Cefr, overrides: Partial<DeckWord> = {}): DeckWord {
+  return {
+    itemId: `item-${cefr}-${Math.random()}`,
+    itemType: 'sense',
+    lemma: 'word',
+    translation: 'слово',
+    examples: [],
+    definition: '',
+    cefr,
+    importance: 2,
+    ...overrides,
+  };
+}
+
+test('getDeckLevel: самый частый уровень среди слов колоды', () => {
+  const deck = makeDeck({
+    items: [makeWord('A2'), makeWord('A2'), makeWord('B1')],
+  });
+
+  assert.equal(getDeckLevel(deck), 'A2');
+});
+
+test('getDeckLevel: при ничьей побеждает более сложный уровень', () => {
+  const deck = makeDeck({
+    items: [makeWord('A2'), makeWord('B1')],
+  });
+
+  assert.equal(getDeckLevel(deck), 'B1');
+});
+
+test('getDeckLevel: пустая колода -> undefined', () => {
+  assert.equal(getDeckLevel(makeDeck({ items: [] })), undefined);
+});
 
 test('groupDecksByGoal: фиксированный порядок (как GoalSchema), пустые группы отсутствуют', () => {
   const decks = [
@@ -93,7 +139,11 @@ test('groupDecksByGoal: реальный каталог DECKS — каждая �
   const groups = groupDecksByGoal(DECKS);
   const deckIdsInGroups = new Set(groups.flatMap((g) => g.decks.map((d) => d.id)));
 
+  // «Первые шаги» (FIRST_STEPS_DECK_ID) — единственное намеренное исключение:
+  // это колода про уровень, не про ситуацию, goalTags у неё пустой нарочно
+  // (decks.screen.tsx показывает её отдельным блоком по user_profile.level).
   for (const deck of DECKS) {
+    if (deck.id === FIRST_STEPS_DECK_ID) continue;
     assert.ok(deckIdsInGroups.has(deck.id), `колода "${deck.title}" не попала ни в одну группу`);
   }
 });

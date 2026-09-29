@@ -183,6 +183,11 @@ const workContext: DeckContext = {
   ],
 };
 
+// decks.screen.tsx показывает эту колоду отдельным блоком только при
+// user_profile.level === 'A0' — id вынесен константой, чтобы не искать её по
+// title/индексу в DECKS.
+export const FIRST_STEPS_DECK_ID = '0195d000-0000-7000-8000-000000000008';
+
 export const DECKS: readonly MockDeck[] = [
   {
     id: '0195d000-0000-7000-8000-000000000001',
@@ -371,6 +376,42 @@ export const DECKS: readonly MockDeck[] = [
       { lemma: 'resilient', importance: 1 },
       { lemma: 'incentive', importance: 2 },
       { lemma: 'discrepancy', importance: 1 },
+    ]),
+  },
+  // «Первые шаги» — единственная колода не про ситуацию, а про уровень (A0,
+  // ADR-33): goalTags намеренно пустой, чтобы она не попала в каталог по
+  // целям (groupDecksByGoal пропускает колоды без валидных тегов) — экран
+  // показывает её отдельным блоком только пользователям с уровнем «Первые
+  // шаги» (decks.screen.tsx). Временное наполнение — слова уровня A1 из WORDS
+  // как есть, без ручного отбора по смыслу (владелец продукта подтвердил:
+  // финальный список для A0 будет курироваться позже, вручную) — кроме 7
+  // A1-слов, которые уже заняты другими колодами (itemId должен быть уникален
+  // по всему DECKS, см. комментарий ниже, в списке items).
+  {
+    id: FIRST_STEPS_DECK_ID,
+    lang: 'en',
+    nativeLang: 'ru',
+    title: 'Первые шаги',
+    goalTags: [],
+    type: 'official',
+    items: resolveDeckItems([
+      { lemma: 'neighbor', importance: 2 },
+      { lemma: 'player', importance: 1 },
+      { lemma: 'team', importance: 2 },
+      { lemma: 'win', importance: 2 },
+      { lemma: 'lose', importance: 2 },
+      { lemma: 'rule', importance: 1 },
+      { lemma: 'turn', importance: 1 },
+      { lemma: 'password', importance: 2 },
+      { lemma: 'screen', importance: 1 },
+      { lemma: 'battery', importance: 1 },
+      { lemma: 'click', importance: 1 },
+      { lemma: 'file', importance: 1 },
+      // Ещё 7 A1-слов (to pay by card, address, street, Nice to meet you,
+      // Where are you from?, weather, How's it going?) сюда не включены — они
+      // уже входят в другие колоды («Аэропорт», «Знакомство и small talk»),
+      // а itemId элементов обязан быть уникален по всему DECKS
+      // (decks-logic.test.ts: «защита от копипасты вручную»).
     ]),
   },
 ];

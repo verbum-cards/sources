@@ -12,7 +12,9 @@ import { updateProfileLevel } from '../profile-logic';
 // C2 не предлагаем — тот же набор, что и на шаге «Уровень» онбординга
 // (level.screen.tsx), намеренно не вынесенный в общий компонент: экраны не
 // делят между собой ни состояние, ни колбэки, только одинаковый список опций.
-const CEFR_OPTIONS: readonly Cefr[] = ['A1', 'A2', 'B1', 'B2', 'C1'];
+// A0 («Первые шаги», ADR-33) — единственный код, у которого подпись не сам
+// код, а текст интерфейса (см. levelOptions).
+const CEFR_OPTIONS: readonly Cefr[] = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1'];
 
 interface Props {
   profile: UserProfileStored;
@@ -23,6 +25,11 @@ export const ProfileLevel = ({ profile, db }: Props) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('profile');
 
+  const levelOptions: readonly { value: Cefr; label: string }[] = CEFR_OPTIONS.map((cefr) => ({
+    value: cefr,
+    label: cefr === 'A0' ? t('level.firstSteps') : cefr,
+  }));
+
   return (
     <View style={{ gap: space[4] }}>
       <View style={{ gap: space[2] }}>
@@ -30,12 +37,12 @@ export const ProfileLevel = ({ profile, db }: Props) => {
         <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('level.description')}</Text>
       </View>
       <View style={{ gap: space[4] }}>
-        {CEFR_OPTIONS.map((cefr) => (
+        {levelOptions.map((option) => (
           <OptionPill
-            key={cefr}
-            label={cefr}
-            selected={profile.level === cefr}
-            onPress={() => void updateProfileLevel(db, cefr)}
+            key={option.value}
+            label={option.label}
+            selected={profile.level === option.value}
+            onPress={() => void updateProfileLevel(db, option.value)}
           />
         ))}
         <OptionPill
