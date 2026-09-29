@@ -98,8 +98,12 @@ export const FirstSessionScreen = ({
               /{word.ipa}/ · {formatPos(word.pos)} · {word.cefr}
             </Text>
             <Text style={[type.body, { color: colors.inkMuted }]}>{word.translation}</Text>
-            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{word.example}</Text>
-            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{word.exampleTranslation}</Text>
+            {/* Только первый пример — первая сессия онбординга уже упрощённый
+                формат (см. комментарий выше компонента), два примера тут не нужны. */}
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>{word.examples[0]?.text}</Text>
+            <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+              {word.examples[0]?.translation}
+            </Text>
           </View>
         )}
       </View>

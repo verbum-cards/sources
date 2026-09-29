@@ -28,7 +28,6 @@ export function computeSeedSourceHash(): string {
 
 async function seedWord(db: DbExecutor, word: MockWord): Promise<void> {
   const translationId = `tr-${word.itemId}`;
-  const exampleId = `ex-${word.itemId}`;
 
   if (word.itemType === 'sense') {
     const lexemeId = `lex-${word.itemId}`;
@@ -56,15 +55,20 @@ async function seedWord(db: DbExecutor, word: MockWord): Promise<void> {
     `INSERT INTO translation (id, target_type, target_id, lang, text, source, verified) VALUES (?, ?, ?, ?, ?, ?, ?)`,
     [translationId, word.itemType, word.itemId, 'ru', word.translation, 'seed', 1]
   );
-  await db.run(
-    `INSERT INTO example (id, target_type, target_id, lang, text) VALUES (?, ?, ?, ?, ?)`,
-    [exampleId, word.itemType, word.itemId, 'en', word.example]
-  );
-  await db.run(`INSERT INTO example_translation (example_id, lang, text) VALUES (?, ?, ?)`, [
-    exampleId,
-    'ru',
-    word.exampleTranslation,
-  ]);
+  // Порядок примеров — порядок вставки: пакет читает их обратно по rowid
+  // (lookup.ts), явной колонки-позиции у example нет.
+  for (const [index, example] of word.examples.entries()) {
+    const exampleId = `ex-${word.itemId}-${index}`;
+    await db.run(
+      `INSERT INTO example (id, target_type, target_id, lang, text) VALUES (?, ?, ?, ?, ?)`,
+      [exampleId, word.itemType, word.itemId, 'en', example.text]
+    );
+    await db.run(`INSERT INTO example_translation (example_id, lang, text) VALUES (?, ?, ?)`, [
+      exampleId,
+      'ru',
+      example.translation,
+    ]);
+  }
   // kind: 'lemma' — единственный вид поискового термина, который сид умеет
   // строить сейчас (лемма/текст фразы на изучаемом языке); поиск по переводу
   // или по словоформам (word_form) сюда пока не входит.

@@ -167,8 +167,7 @@ export const WordNew = ({ onAddWord, addedRefs, onFocus, ref }: Props) => {
             pos: selectedWord.pos,
             cefr: selectedWord.cefr,
             translation: selectedWord.translation,
-            example: selectedWord.example,
-            exampleTranslation: selectedWord.exampleTranslation,
+            examples: selectedWord.examples,
             definition: selectedWord.definition,
           }
         }

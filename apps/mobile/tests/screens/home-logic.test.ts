@@ -54,15 +54,14 @@ async function addWordFixture(db: DbExecutor, word: PackWord): Promise<string> {
 
 async function addManualWordFixture(
   db: DbExecutor,
-  { lemma, translation, example = '' }: { lemma: string; translation: string; example?: string }
+  { lemma, translation }: { lemma: string; translation: string }
 ): Promise<string> {
   return addWordFixture(db, {
     itemId: uuidv7(),
     itemType: 'sense',
     lemma,
     translation,
-    example,
-    exampleTranslation: '',
+    examples: [],
     definition: '',
     cefr: 'A2',
   });
@@ -99,33 +98,34 @@ test('loadRecentCards: отдаёт ipa, pos, cefr и definition из слова
   assert.equal(card?.itemType, 'sense');
 });
 
-test('loadRecentCards: отдаёт example/exampleTranslation, null для отсутствующего example_translation', async () => {
+test('loadRecentCards: отдаёт examples из card_content_example, пусто — если строк нет', async () => {
   const { db, userId } = await setupDb();
   const now = new Date().toISOString();
 
-  // Раньше это писал word-add-logic.ts::addManualWord, оставляя
-  // example_translation NULL (колонку не заполнял вовсе) — тот же случай,
-  // но напрямую SQL, раз готовой функции под это больше нет.
+  // Раньше это писал word-add-logic.ts::addManualWord — тот же случай, но
+  // напрямую SQL, раз готовой функции под это больше нет.
   await db.run(
     'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
     ['manual-card', userId, 'sense', 'manual-item', 'active', now, now]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, translation, example, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-    [
-      'manual-card',
-      'serendipity',
-      'счастливая случайность',
-      'It was pure serendipity.',
-      'manual',
-      now,
-    ]
+    `INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?)`,
+    ['manual-card', 'serendipity', 'счастливая случайность', 'manual', now]
+  );
+
+  const [emptyCard] = await loadRecentCards(db);
+  assert.deepEqual(emptyCard?.examples, []);
+
+  await db.run(
+    'INSERT INTO card_content_example (card_id, position, text, translation) VALUES (?, ?, ?, ?)',
+    ['manual-card', 0, 'It was pure serendipity.', 'Это была чистая случайность.']
   );
 
   const [card] = await loadRecentCards(db);
-  assert.equal(card?.example, 'It was pure serendipity.');
-  assert.equal(card?.exampleTranslation, null);
+  assert.deepEqual(card?.examples, [
+    { text: 'It was pure serendipity.', translation: 'Это была чистая случайность.' },
+  ]);
 });
 
 test('loadHomeStats: known -> learned, активная без ревью -> queued, после applyRating выходит из queued', async () => {

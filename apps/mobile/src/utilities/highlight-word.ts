@@ -5,10 +5,11 @@ export interface HighlightedText {
 }
 
 // F6, шаг «Превью»: выделение слова в примере — приблизительное (первое
-// вхождение без учёта регистра), а не по точным индексам: в моке нет поля
-// highlight (card_content.example_highlight появится с настоящим словарём,
-// T1.6). match === '' -> слово не встретилось в примере дословно, весь текст
-// уходит в before без выделения.
+// вхождение без учёта регистра), а не по точным индексам: card_content не
+// хранит координаты подсветки (миграция 006 убрала неиспользовавшуюся
+// example_highlight), подсветка всегда считается на клиенте. match === '' ->
+// слово не встретилось в примере дословно, весь текст уходит в before без
+// выделения.
 export function splitAroundWord(text: string, word: string): HighlightedText {
   const index = text.toLowerCase().indexOf(word.toLowerCase());
   if (index === -1) {

@@ -2,6 +2,7 @@ import type { Goal, ItemType } from '@cards/contracts';
 import { GoalSchema } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import { insertCardContentExamples } from '../../db/entities/user/card-content';
 import { loadUserDeckIds, saveUserDeck } from '../../db/entities/user/user-deck';
 import type { DbExecutor } from '../../db/executor';
 import type { DeckWord, MockDeck } from '../../mocks/decks';
@@ -118,8 +119,8 @@ async function addDeckWordCard(
     [cardId, userId, word.itemType, word.itemId, deckId, 'active', nowIso, nowIso]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, definition, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       cardId,
       word.lemma,
@@ -127,13 +128,12 @@ async function addDeckWordCard(
       word.ipa ?? null,
       word.cefr,
       word.translation,
-      word.example,
-      word.exampleTranslation,
       word.definition,
       'pack',
       nowIso,
     ]
   );
+  await insertCardContentExamples(db, cardId, word.examples);
 }
 
 export interface AddDeckResult {

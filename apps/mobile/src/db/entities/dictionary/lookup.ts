@@ -6,6 +6,11 @@ import type { DbExecutor } from '../../executor';
 // форма (пакет читается и без моков, когда появится настоящий конвейер).
 // cefr необязателен: эта же форма используется и для слов, у которых его
 // нет (введённые вручную на главном экране, см. user-deck-logic.ts).
+export interface PackWordExample {
+  text: string;
+  translation: string;
+}
+
 export interface PackWord {
   itemId: string;
   itemType: ItemType;
@@ -13,8 +18,7 @@ export interface PackWord {
   pos?: string;
   ipa?: string;
   translation: string;
-  example: string;
-  exampleTranslation: string;
+  examples: readonly PackWordExample[];
   definition: string;
   cefr?: Cefr;
 }
@@ -35,30 +39,59 @@ function prefixRange(prefix: string): [string, string] {
   return [prefix, upper];
 }
 
+// Примеры — отдельным запросом, а не JOIN'ом в loadSenseWords/loadExpressionWords:
+// у значения их теперь несколько (example — один-ко-многим на target_id), и
+// плоский JOIN размножил бы строки самого слова на каждый пример. Порядок —
+// по rowid (порядок вставки в seed.ts), у example нет своей колонки-позиции.
+async function loadExamplesByTargets(
+  db: DbExecutor,
+  targetType: ItemType,
+  targetIds: readonly string[]
+): Promise<Map<string, PackWordExample[]>> {
+  if (targetIds.length === 0) return new Map();
+  const placeholders = targetIds.map(() => '?').join(', ');
+  const rows = await db.all<{ target_id: string; text: string; translation: string | null }>(
+    `SELECT ex.target_id, ex.text, et.text as translation
+     FROM example ex
+     LEFT JOIN example_translation et ON et.example_id = ex.id AND et.lang = 'ru'
+     WHERE ex.target_type = ? AND ex.target_id IN (${placeholders})
+     ORDER BY ex.rowid`,
+    [targetType, ...targetIds]
+  );
+
+  const byTarget = new Map<string, PackWordExample[]>();
+  for (const row of rows) {
+    const list = byTarget.get(row.target_id) ?? [];
+    list.push({ text: row.text, translation: row.translation ?? '' });
+    byTarget.set(row.target_id, list);
+  }
+
+  return byTarget;
+}
+
 async function loadSenseWords(db: DbExecutor, ids: readonly string[]): Promise<PackWord[]> {
   if (ids.length === 0) return [];
   const placeholders = ids.map(() => '?').join(', ');
-  const rows = await db.all<{
-    item_id: string;
-    lemma: string;
-    pos: string | null;
-    ipa: string | null;
-    cefr: Cefr;
-    definition: string | null;
-    translation: string | null;
-    example: string | null;
-    example_translation: string | null;
-  }>(
-    `SELECT s.id as item_id, l.lemma, l.pos, l.ipa, s.cefr, s.definition,
-            tr.text as translation, ex.text as example, et.text as example_translation
-     FROM sense s
-     JOIN lexeme l ON l.id = s.lexeme_id
-     LEFT JOIN translation tr ON tr.target_type = 'sense' AND tr.target_id = s.id AND tr.lang = 'ru'
-     LEFT JOIN example ex ON ex.target_type = 'sense' AND ex.target_id = s.id
-     LEFT JOIN example_translation et ON et.example_id = ex.id AND et.lang = 'ru'
-     WHERE s.id IN (${placeholders})`,
-    [...ids]
-  );
+  const [rows, examplesByTarget] = await Promise.all([
+    db.all<{
+      item_id: string;
+      lemma: string;
+      pos: string | null;
+      ipa: string | null;
+      cefr: Cefr;
+      definition: string | null;
+      translation: string | null;
+    }>(
+      `SELECT s.id as item_id, l.lemma, l.pos, l.ipa, s.cefr, s.definition,
+              tr.text as translation
+       FROM sense s
+       JOIN lexeme l ON l.id = s.lexeme_id
+       LEFT JOIN translation tr ON tr.target_type = 'sense' AND tr.target_id = s.id AND tr.lang = 'ru'
+       WHERE s.id IN (${placeholders})`,
+      [...ids]
+    ),
+    loadExamplesByTargets(db, 'sense', ids),
+  ]);
 
   return rows.map((row) => ({
     itemId: row.item_id,
@@ -67,8 +100,7 @@ async function loadSenseWords(db: DbExecutor, ids: readonly string[]): Promise<P
     pos: row.pos ?? undefined,
     ipa: row.ipa ?? undefined,
     translation: row.translation ?? '',
-    example: row.example ?? '',
-    exampleTranslation: row.example_translation ?? '',
+    examples: examplesByTarget.get(row.item_id) ?? [],
     definition: row.definition ?? '',
     cefr: row.cefr,
   }));
@@ -77,32 +109,30 @@ async function loadSenseWords(db: DbExecutor, ids: readonly string[]): Promise<P
 async function loadExpressionWords(db: DbExecutor, ids: readonly string[]): Promise<PackWord[]> {
   if (ids.length === 0) return [];
   const placeholders = ids.map(() => '?').join(', ');
-  const rows = await db.all<{
-    item_id: string;
-    text: string;
-    cefr: Cefr;
-    definition: string | null;
-    translation: string | null;
-    example: string | null;
-    example_translation: string | null;
-  }>(
-    `SELECT e.id as item_id, e.text, e.cefr, e.definition,
-            tr.text as translation, ex.text as example, et.text as example_translation
-     FROM expression e
-     LEFT JOIN translation tr ON tr.target_type = 'expression' AND tr.target_id = e.id AND tr.lang = 'ru'
-     LEFT JOIN example ex ON ex.target_type = 'expression' AND ex.target_id = e.id
-     LEFT JOIN example_translation et ON et.example_id = ex.id AND et.lang = 'ru'
-     WHERE e.id IN (${placeholders})`,
-    [...ids]
-  );
+  const [rows, examplesByTarget] = await Promise.all([
+    db.all<{
+      item_id: string;
+      text: string;
+      cefr: Cefr;
+      definition: string | null;
+      translation: string | null;
+    }>(
+      `SELECT e.id as item_id, e.text, e.cefr, e.definition,
+              tr.text as translation
+       FROM expression e
+       LEFT JOIN translation tr ON tr.target_type = 'expression' AND tr.target_id = e.id AND tr.lang = 'ru'
+       WHERE e.id IN (${placeholders})`,
+      [...ids]
+    ),
+    loadExamplesByTargets(db, 'expression', ids),
+  ]);
 
   return rows.map((row) => ({
     itemId: row.item_id,
     itemType: 'expression' as const,
     lemma: row.text,
     translation: row.translation ?? '',
-    example: row.example ?? '',
-    exampleTranslation: row.example_translation ?? '',
+    examples: examplesByTarget.get(row.item_id) ?? [],
     definition: row.definition ?? '',
     cefr: row.cefr,
   }));

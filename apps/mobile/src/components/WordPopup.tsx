@@ -8,6 +8,11 @@ import { formatPos } from '../utilities/format-pos';
 import { splitAroundWord } from '../utilities/highlight-word';
 import { Button } from './Button';
 
+export interface WordPopupExample {
+  text: string;
+  translation: string;
+}
+
 // Минимальная форма слова, которая нужна попапу — не завязана на RecentCard
 // (Home), чтобы им же можно было показывать слова из колод (DeckWord,
 // PackWord — там лемма называется lemma, а не word, поэтому конкретный тип
@@ -18,8 +23,7 @@ export interface WordPopupCard {
   pos?: string | null;
   cefr?: string | null;
   translation: string;
-  example?: string | null;
-  exampleTranslation?: string | null;
+  examples: readonly WordPopupExample[];
   definition?: string | null;
 }
 
@@ -36,7 +40,6 @@ interface Props {
 export const WordPopup = ({ card, onClose, onSave }: Props) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('home');
-  const example = card?.example ? splitAroundWord(card.example, card.word) : null;
 
   return (
     <Modal visible={card != null} transparent animationType="fade" onRequestClose={onClose}>
@@ -150,10 +153,10 @@ export const WordPopup = ({ card, onClose, onSave }: Props) => {
                 </View>
               ) : null}
 
-              {example ? (
+              {card.examples.length > 0 ? (
                 <View
                   style={{
-                    gap: space[2],
+                    gap: space[4],
                     paddingTop: space[6],
                     paddingBottom: space[4],
                     paddingHorizontal: space[4],
@@ -161,26 +164,32 @@ export const WordPopup = ({ card, onClose, onSave }: Props) => {
                     borderTopColor: colors.line,
                   }}
                 >
-                  <Text style={[type.body, { color: colors.ink }]}>
-                    {example.before}
-                    {example.match ? (
-                      <Text
-                        style={{
-                          backgroundColor: colors.highlightSoft,
-                          color: colors.ink,
-                          borderRadius: radius.sm,
-                        }}
-                      >
-                        {example.match}
-                      </Text>
-                    ) : null}
-                    {example.after}
-                  </Text>
-                  {card.exampleTranslation ? (
-                    <Text style={[type.bodyS, { color: colors.inkMuted }]}>
-                      {card.exampleTranslation}
-                    </Text>
-                  ) : null}
+                  {card.examples.map((example) => {
+                    const highlighted = splitAroundWord(example.text, card.word);
+
+                    return (
+                      <View key={example.text} style={{ gap: space[2] }}>
+                        <Text style={[type.body, { color: colors.ink }]}>
+                          {highlighted.before}
+                          {highlighted.match ? (
+                            <Text
+                              style={{
+                                backgroundColor: colors.highlightSoft,
+                                color: colors.ink,
+                                borderRadius: radius.sm,
+                              }}
+                            >
+                              {highlighted.match}
+                            </Text>
+                          ) : null}
+                          {highlighted.after}
+                        </Text>
+                        <Text style={[type.bodyS, { color: colors.inkMuted }]}>
+                          {example.translation}
+                        </Text>
+                      </View>
+                    );
+                  })}
                 </View>
               ) : null}
 

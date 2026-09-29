@@ -4,7 +4,10 @@ import type { CardContentRow, CardRow } from '../db/entities/user/types';
 import type { DebugWord } from '../mocks/fsrs-debug-words';
 
 export type DebugCardRow = Pick<CardRow, 'id' | 'item_id'> &
-  Pick<CardContentRow, 'lemma' | 'translation' | 'example'>;
+  Pick<CardContentRow, 'lemma' | 'translation'> & {
+    // Только первый пример (position = 0) — см. fsrs-debug.screen.tsx::loadDebugCards.
+    example: string | null;
+  };
 
 export interface DebugCard {
   id: Uuid;

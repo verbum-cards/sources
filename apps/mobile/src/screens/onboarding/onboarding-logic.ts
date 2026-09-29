@@ -1,5 +1,6 @@
 import type { Goal, UserLevel, UserProfileStored } from '@cards/contracts';
 
+import { insertCardContentExamples } from '../../db/entities/user/card-content';
 import type { DbExecutor } from '../../db/executor';
 import { DEBUG_ITEM_TYPE, DEBUG_WORDS, type DebugWord } from '../../mocks/fsrs-debug-words';
 import { applyRating } from '../../scheduler/scheduler';
@@ -81,8 +82,8 @@ export async function answerFirstSessionWord({
     [cardId, userId, DEBUG_ITEM_TYPE, word.itemId, knowsWord ? 'known' : 'active', nowIso, nowIso]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, definition, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       cardId,
       word.lemma,
@@ -90,13 +91,12 @@ export async function answerFirstSessionWord({
       word.ipa,
       word.cefr,
       word.translation,
-      word.example,
-      word.exampleTranslation,
       word.definition,
       'manual',
       nowIso,
     ]
   );
+  await insertCardContentExamples(db, cardId, word.examples);
   notifyChange(['card', 'card_content']);
   await addToMyVocabulary(db, DEBUG_ITEM_TYPE, word.itemId, myVocabularyTitle, now);
 

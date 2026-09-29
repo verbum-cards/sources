@@ -6,6 +6,7 @@ import type { TFunction } from 'i18next';
 
 import { Button } from '../components/Button';
 import { getOrCreateDeviceId } from '../db/entities/user/app-meta';
+import { insertCardContentExamples } from '../db/entities/user/card-content';
 import type { CardScheduleRow } from '../db/entities/user/types';
 import type { DbExecutor } from '../db/executor';
 import { useDb } from '../hooks/use-db.hook';
@@ -45,13 +46,16 @@ function formatDue(t: TFunction<'fsrsDebug'>, dueIso: string): string {
   return t('dueInDays', { count: days });
 }
 
+// Дебаг-экран показывает только первый пример — он не про экран слова
+// (WordPopup), а про проверку интервалов FSRS, второй пример тут не нужен.
 async function loadDebugCards(db: DbExecutor): Promise<DebugCard[]> {
   const itemIds = DEBUG_WORDS.map((word) => word.itemId);
   const placeholders = itemIds.map(() => '?').join(', ');
   const rows = await db.all<DebugCardRow>(
-    `SELECT c.id, c.item_id, cc.lemma, cc.translation, cc.example
+    `SELECT c.id, c.item_id, cc.lemma, cc.translation, cce.text as example
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
+     LEFT JOIN card_content_example cce ON cce.card_id = c.id AND cce.position = 0
      WHERE c.user_id = ? AND c.item_type = ? AND c.deleted_at IS NULL AND c.item_id IN (${placeholders})`,
     [DEBUG_USER_ID, DEBUG_ITEM_TYPE, ...itemIds]
   );
@@ -116,19 +120,11 @@ export const FsrsDebugScreen = ({ onBack }: { onBack: () => void }) => {
         [id, DEBUG_USER_ID, DEBUG_ITEM_TYPE, word.itemId, 'active', now, now]
       );
       await db.run(
-        `INSERT INTO card_content (card_id, lemma, pos, translation, example, example_translation, source, refreshed_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-        [
-          id,
-          word.lemma,
-          word.pos,
-          word.translation,
-          word.example,
-          word.exampleTranslation,
-          'manual',
-          now,
-        ]
+        `INSERT INTO card_content (card_id, lemma, pos, translation, source, refreshed_at)
+         VALUES (?, ?, ?, ?, ?, ?)`,
+        [id, word.lemma, word.pos, word.translation, 'manual', now]
       );
+      await insertCardContentExamples(db, id, word.examples);
     }
 
     if (toInsert.length > 0) {

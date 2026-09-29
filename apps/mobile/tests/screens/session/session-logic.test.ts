@@ -92,6 +92,7 @@ test('buildDeckSessionQueue: просроченная карточка идёт 
   assert.equal(queue.length, 2);
   assert.equal(queue[0]?.itemId, wander.itemId);
   assert.equal(queue[0]?.needsIntro, false);
+  assert.deepEqual(queue[0]?.examples, wander.examples);
   assert.equal(queue[1]?.itemId, fierce.itemId);
   assert.equal(queue[1]?.needsIntro, true);
 });
@@ -333,8 +334,7 @@ function makeCard(overrides: Partial<SessionCard>): SessionCard {
     lemma: 'word',
     ipa: null,
     translation: 'перевод',
-    example: null,
-    exampleTranslation: null,
+    examples: [],
     needsIntro: false,
     ...overrides,
   };

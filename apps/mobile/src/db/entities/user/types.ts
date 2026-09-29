@@ -66,13 +66,19 @@ export interface CardContentRow {
   audio_url: string | null;
   cefr: string | null;
   translation: string;
-  example: string | null;
-  example_highlight: string | null; // JSON [start, end]
-  example_translation: string | null;
   definition: string | null;
   source: CardContentSource;
   content_version: number | null;
   refreshed_at: string;
+}
+
+// ---------- card_content_example (один-ко-многим, миграция 006) ----------
+
+export interface CardContentExampleRow {
+  card_id: string;
+  position: number;
+  text: string;
+  translation: string;
 }
 
 // ---------- card_schedule (кеш FSRS, производное от review_log) ----------

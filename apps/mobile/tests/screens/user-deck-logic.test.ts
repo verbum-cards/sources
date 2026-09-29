@@ -307,9 +307,13 @@ test('loadUserDeckWords: слово, которого нет в пакете (в
     [cardId, userId, 'sense', itemId, 'active', now, now]
   );
   await db.run(
-    `INSERT INTO card_content (card_id, lemma, translation, example, source, refreshed_at)
-     VALUES (?, ?, ?, ?, ?, ?)`,
-    [cardId, 'serendipity', 'счастливая случайность', 'It was pure serendipity.', 'manual', now]
+    `INSERT INTO card_content (card_id, lemma, translation, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?)`,
+    [cardId, 'serendipity', 'счастливая случайность', 'manual', now]
+  );
+  await db.run(
+    'INSERT INTO card_content_example (card_id, position, text, translation) VALUES (?, ?, ?, ?)',
+    [cardId, 0, 'It was pure serendipity.', 'Это была чистая случайность.']
   );
   await addExistingCardToDeck(db, deckId, 'sense', itemId, new Date(now));
 
@@ -319,6 +323,9 @@ test('loadUserDeckWords: слово, которого нет в пакете (в
   assert.equal(words[0]?.lemma, 'serendipity');
   assert.equal(words[0]?.translation, 'счастливая случайность');
   assert.equal(words[0]?.cefr, undefined);
+  assert.deepEqual(words[0]?.examples, [
+    { text: 'It was pure serendipity.', translation: 'Это была чистая случайность.' },
+  ]);
 });
 
 test('removeWordFromUserDeck: убирает слово из колоды (deck_item), карточку не трогает', async () => {

@@ -6,6 +6,10 @@ import {
   type PackWordRef,
 } from '../../db/entities/dictionary/lookup';
 import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import {
+  insertCardContentExamples,
+  loadCardContentExamplesByCardIds,
+} from '../../db/entities/user/card-content';
 import type { DbExecutor } from '../../db/executor';
 import { notifyChange } from '../../utilities/event-bus';
 import { uuidv7 } from '../../utilities/id';
@@ -184,6 +188,7 @@ async function loadLocalWordsByRefs(
   const ids = refs.map((ref) => ref.itemId);
   const placeholders = ids.map(() => '?').join(', ');
   const rows = await db.all<{
+    card_id: string;
     item_type: ItemType;
     item_id: string;
     lemma: string;
@@ -191,12 +196,10 @@ async function loadLocalWordsByRefs(
     ipa: string | null;
     cefr: string | null;
     translation: string;
-    example: string | null;
-    example_translation: string | null;
     definition: string | null;
   }>(
-    `SELECT c.item_type, c.item_id, cc.lemma, cc.pos, cc.ipa, cc.cefr, cc.translation,
-            cc.example, cc.example_translation, cc.definition
+    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.pos, cc.ipa, cc.cefr,
+            cc.translation, cc.definition
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
      WHERE c.user_id = ? AND c.deleted_at IS NULL AND c.item_id IN (${placeholders})`,
@@ -204,21 +207,23 @@ async function loadLocalWordsByRefs(
   );
 
   const refKeys = new Set(refs.map((ref) => `${ref.itemType}:${ref.itemId}`));
+  const filteredRows = rows.filter((row) => refKeys.has(`${row.item_type}:${row.item_id}`));
+  const examplesByCard = await loadCardContentExamplesByCardIds(
+    db,
+    filteredRows.map((row) => row.card_id)
+  );
 
-  return rows
-    .filter((row) => refKeys.has(`${row.item_type}:${row.item_id}`))
-    .map((row) => ({
-      itemId: row.item_id,
-      itemType: row.item_type,
-      lemma: row.lemma,
-      pos: row.pos ?? undefined,
-      ipa: row.ipa ?? undefined,
-      translation: row.translation,
-      example: row.example ?? '',
-      exampleTranslation: row.example_translation ?? '',
-      definition: row.definition ?? '',
-      cefr: (row.cefr ?? undefined) as Cefr | undefined,
-    }));
+  return filteredRows.map((row) => ({
+    itemId: row.item_id,
+    itemType: row.item_type,
+    lemma: row.lemma,
+    pos: row.pos ?? undefined,
+    ipa: row.ipa ?? undefined,
+    translation: row.translation,
+    examples: examplesByCard.get(row.card_id) ?? [],
+    definition: row.definition ?? '',
+    cefr: (row.cefr ?? undefined) as Cefr | undefined,
+  }));
 }
 
 // Слова своей колоды в порядке добавления, с полными данными — сперва из
@@ -373,8 +378,8 @@ export async function addWordToUserDeck(
       [cardId, userId, word.itemType, word.itemId, deckId, 'active', nowIso, nowIso]
     );
     await db.run(
-      `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, example, example_translation, definition, source, refreshed_at)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      `INSERT INTO card_content (card_id, lemma, pos, ipa, cefr, translation, definition, source, refreshed_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         cardId,
         word.lemma,
@@ -382,13 +387,12 @@ export async function addWordToUserDeck(
         word.ipa ?? null,
         word.cefr,
         word.translation,
-        word.example,
-        word.exampleTranslation,
         word.definition,
         'pack',
         nowIso,
       ]
     );
+    await insertCardContentExamples(db, cardId, word.examples);
     notifyChange(['card', 'card_content']);
   }
 

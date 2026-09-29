@@ -13,7 +13,7 @@ import { createNodeSqliteExecutor } from '../support/node-sqlite-executor';
 import { dumpSchema, formatSchemaDump } from '../support/schema-dump';
 import { tempDbPath } from '../support/tmp-db';
 
-const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v5.txt');
+const SNAPSHOT_PATH = join(__dirname, '..', '__snapshots__', 'user-db-v6.txt');
 
 test('чистая установка: user_version 0 -> LATEST, схема совпадает со снимком', async () => {
   const db = new DatabaseSync(':memory:');
@@ -142,6 +142,79 @@ test('обновление 001 -> 002: state -> status, merged_into_card_id, FK-
     assert.match(child.sql, /REFERENCES card \(id\)/);
     assert.doesNotMatch(child.sql, /card_new/);
   }
+});
+
+test('обновление 005 -> 006: единственный пример переносится в card_content_example позицией 0', async () => {
+  const db = new DatabaseSync(':memory:');
+  const executor = createNodeSqliteExecutor(db);
+
+  await migrate(
+    executor,
+    migrations.filter((m) => m.version <= 5)
+  );
+  await executor.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c1', 'u1', 'sense', 'i1', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
+  );
+  await executor.run(
+    `INSERT INTO card_content (card_id, lemma, translation, example, example_translation, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    [
+      'c1',
+      'wander',
+      'бродить',
+      'She loves to wander.',
+      'Она любит бродить.',
+      'pack',
+      '2026-01-01T00:00:00.000Z',
+    ]
+  );
+  // Карточка без примера (введена вручную без него) — не должна породить строку
+  // с пустым текстом в card_content_example.
+  await executor.run(
+    'INSERT INTO card (id, user_id, item_type, item_id, status, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)',
+    ['c2', 'u1', 'sense', 'i2', 'active', '2026-01-01T00:00:00.000Z', '2026-01-01T00:00:00.000Z']
+  );
+  await executor.run(
+    `INSERT INTO card_content (card_id, lemma, translation, example, example_translation, source, refreshed_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?)`,
+    ['c2', 'manual', 'ручное', null, null, 'manual', '2026-01-01T00:00:00.000Z']
+  );
+
+  await migrate(executor, migrations);
+
+  assert.equal(await getUserVersion(executor), LATEST_VERSION);
+
+  const examples = await executor.all<{
+    card_id: string;
+    position: number;
+    text: string;
+    translation: string;
+  }>('SELECT card_id, position, text, translation FROM card_content_example ORDER BY card_id');
+  assert.deepEqual(
+    examples.map((e) => ({ ...e })),
+    [
+      {
+        card_id: 'c1',
+        position: 0,
+        text: 'She loves to wander.',
+        translation: 'Она любит бродить.',
+      },
+    ]
+  );
+
+  const content = await executor.all<{ card_id: string; lemma: string }>(
+    'SELECT card_id, lemma FROM card_content ORDER BY card_id'
+  );
+  assert.deepEqual(
+    content.map((c) => ({ ...c })),
+    [
+      { card_id: 'c1', lemma: 'wander' },
+      { card_id: 'c2', lemma: 'manual' },
+    ]
+  );
+
+  await assert.rejects(() => executor.get('SELECT example FROM card_content LIMIT 1'));
 });
 
 test('ошибка миграции: rollback, user_version не меняется, частичных таблиц нет', async () => {

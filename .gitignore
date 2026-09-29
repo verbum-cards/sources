@@ -5,6 +5,8 @@ node_modules/
 
 /packages/tokens/dist/
 
+**/*/__snapshots__/
+
 # Expo (apps/mobile)
 apps/mobile/.expo/
 apps/mobile/ios/

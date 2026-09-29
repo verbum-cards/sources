@@ -1,6 +1,10 @@
 import type { ItemType } from '@cards/contracts';
 
 import { getOnboardingCompletedAt, getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import {
+  loadCardContentExamplesByCardIds,
+  type CardContentExampleInput,
+} from '../../db/entities/user/card-content';
 import type { DbExecutor } from '../../db/executor';
 
 // Порог, с которого на главном экране появляются «Цель дня» и плитки
@@ -35,39 +39,42 @@ export interface RecentCard {
   pos: string | null;
   cefr: string | null;
   translation: string;
-  example: string | null;
-  exampleTranslation: string | null;
+  examples: readonly CardContentExampleInput[];
   definition: string | null;
   createdAt: string;
 }
 
 // Блок «Недавно добавлены» — единственный кусок непустого состояния, который
-// уже переведён на реальные данные (остальное подключаем сейчас же). example,
-// exampleTranslation, ipa, pos, cefr и definition нужны карточке обучения по
-// тапу на слово (см. word-study-card.tsx) — тот же контент, что и в превью
-// при добавлении слова. itemType нужен для подгрупп (существительные/глаголы/
-// фразы/вопросы), тем же приёмом, что и в колодах (utilities/word-category.ts).
+// уже переведён на реальные данные (остальное подключаем сейчас же). examples,
+// ipa, pos, cefr и definition нужны карточке обучения по тапу на слово (см.
+// word-study-card.tsx) — тот же контент, что и в превью при добавлении слова.
+// itemType нужен для подгрупп (существительные/глаголы/фразы/вопросы), тем же
+// приёмом, что и в колодах (utilities/word-category.ts).
 export async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
   const userId = await getOrCreateLocalUserId(db);
   const rows = await db.all<{
+    card_id: string;
     lemma: string;
     item_type: ItemType;
     ipa: string | null;
     pos: string | null;
     cefr: string | null;
     translation: string;
-    example: string | null;
-    example_translation: string | null;
     definition: string | null;
     created_at: string;
   }>(
-    `SELECT cc.lemma, c.item_type, cc.ipa, cc.pos, cc.cefr, cc.translation, cc.example, cc.example_translation, cc.definition, c.created_at
+    `SELECT c.id as card_id, cc.lemma, c.item_type, cc.ipa, cc.pos, cc.cefr, cc.translation, cc.definition, c.created_at
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
      WHERE c.user_id = ? AND c.deleted_at IS NULL
      ORDER BY c.created_at DESC
      LIMIT ?`,
     [userId, RECENT_CARDS_LIMIT]
+  );
+
+  const examplesByCard = await loadCardContentExamplesByCardIds(
+    db,
+    rows.map((row) => row.card_id)
   );
 
   return rows.map((row) => ({
@@ -77,8 +84,7 @@ export async function loadRecentCards(db: DbExecutor): Promise<RecentCard[]> {
     pos: row.pos,
     cefr: row.cefr,
     translation: row.translation,
-    example: row.example,
-    exampleTranslation: row.example_translation,
+    examples: examplesByCard.get(row.card_id) ?? [],
     definition: row.definition,
     createdAt: row.created_at,
   }));

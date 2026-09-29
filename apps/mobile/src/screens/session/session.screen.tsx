@@ -169,10 +169,18 @@ const IntroCardView = ({
           <Text style={[type.body, { color: colors.inkMuted }]}>/{card.ipa}/</Text>
         ) : null}
         <Text style={[type.body, { color: colors.ink }]}>{card.translation}</Text>
-        {card.example ? (
-          <Text style={[type.bodyS, { color: colors.inkMuted }]}>{card.example}</Text>
-        ) : null}
       </View>
+
+      {card.examples.length > 0 ? (
+        <View style={{ gap: space[3] }}>
+          {card.examples.map((example) => (
+            <View key={example.text} style={{ gap: space[1] }}>
+              <Text style={[type.bodyS, { color: colors.ink }]}>{example.text}</Text>
+              <Text style={[type.caption, { color: colors.inkMuted }]}>{example.translation}</Text>
+            </View>
+          ))}
+        </View>
+      ) : null}
 
       <View style={{ flexDirection: 'row', gap: space[3] }}>
         <Button
@@ -214,14 +222,20 @@ const QuizCardView = ({
           <Text style={[type.body, { color: colors.inkMuted }]}>/{card.ipa}/</Text>
         ) : null}
         {revealed ? (
-          <>
-            <Text style={[type.body, { color: colors.ink }]}>{card.translation}</Text>
-            {card.example ? (
-              <Text style={[type.bodyS, { color: colors.inkMuted }]}>{card.example}</Text>
-            ) : null}
-          </>
+          <Text style={[type.body, { color: colors.ink }]}>{card.translation}</Text>
         ) : null}
       </View>
+
+      {revealed && card.examples.length > 0 ? (
+        <View style={{ gap: space[3] }}>
+          {card.examples.map((example) => (
+            <View key={example.text} style={{ gap: space[1] }}>
+              <Text style={[type.bodyS, { color: colors.ink }]}>{example.text}</Text>
+              <Text style={[type.caption, { color: colors.inkMuted }]}>{example.translation}</Text>
+            </View>
+          ))}
+        </View>
+      ) : null}
 
       {revealed ? (
         <View style={{ flexDirection: 'row', gap: space[3] }}>

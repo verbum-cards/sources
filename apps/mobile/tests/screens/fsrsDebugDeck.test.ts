@@ -24,9 +24,14 @@ test('DEBUG_WORDS: от 20 до 60 слов, уникальные itemId и ле
     'лемма должна быть уникальна'
   );
   for (const word of DEBUG_WORDS) {
+    assert.ok(word.examples.length > 0, `у "${word.lemma}" должен быть хотя бы один пример`);
+    // Строго — только первый пример: он содержит лемму в исходной форме по
+    // построению (не менялся этой задачей). Второй пример может законно
+    // использовать словоформу («rely» -> «relies») — естественное предложение
+    // важнее буквального вхождения леммы.
     assert.ok(
-      word.example.toLowerCase().includes(word.lemma.toLowerCase()),
-      `пример для "${word.lemma}" должен содержать само слово`
+      word.examples[0].text.toLowerCase().includes(word.lemma.toLowerCase()),
+      `первый пример для "${word.lemma}" должен содержать само слово: "${word.examples[0].text}"`
     );
   }
 });
@@ -39,14 +44,14 @@ test('orderCardsByWordList: восстанавливает порядок DEBUG_
       item_id: w3.itemId,
       lemma: w3.lemma,
       translation: w3.translation,
-      example: w3.example,
+      example: w3.examples[0]?.text ?? null,
     },
     {
       id: 'card-1',
       item_id: w1.itemId,
       lemma: w1.lemma,
       translation: w1.translation,
-      example: w1.example,
+      example: w1.examples[0]?.text ?? null,
     },
   ];
 

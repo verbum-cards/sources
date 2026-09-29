@@ -1,6 +1,10 @@
 import type { ItemType } from '@cards/contracts';
 
 import { getOrCreateLocalUserId } from '../../db/entities/user/app-meta';
+import {
+  loadCardContentExamplesByCardIds,
+  type CardContentExampleInput,
+} from '../../db/entities/user/card-content';
 import { getUserProfile } from '../../db/entities/user/user-profile';
 import type { DbExecutor } from '../../db/executor';
 import { notifyChange } from '../../utilities/event-bus';
@@ -20,13 +24,17 @@ export interface SessionCard {
   lemma: string;
   ipa: string | null;
   translation: string;
-  example: string | null;
-  exampleTranslation: string | null;
+  examples: readonly CardContentExampleInput[];
   // Карточка ещё ни разу не показывалась — первый показ - «знакомство»
   // (слово сразу с переводом, «Знаю это слово» / «Дальше»), не квиз, и не
   // пишется как оценка FSRS (FR-36).
   needsIntro: boolean;
 }
+
+// Без examples — их проставляют одним батч-запросом (loadCardContentExamplesByCardIds)
+// после того, как buildDeckSessionQueue соберёт финальный список карточек, а
+// не в каждой из четырёх load*-функций по отдельности.
+type SessionCardBase = Omit<SessionCard, 'examples'>;
 
 // Сутки — по местному времени устройства, граница — местная полночь (skill
 // fsrs-scheduler). Date уже хранит компоненты года/месяца/дня в локальном
@@ -65,11 +73,9 @@ interface CardContentRow {
   lemma: string;
   ipa: string | null;
   translation: string;
-  example: string | null;
-  example_translation: string | null;
 }
 
-function toSessionCard(row: CardContentRow, needsIntro: boolean): SessionCard {
+function toSessionCard(row: CardContentRow, needsIntro: boolean): SessionCardBase {
   return {
     cardId: row.card_id,
     itemType: row.item_type,
@@ -77,8 +83,6 @@ function toSessionCard(row: CardContentRow, needsIntro: boolean): SessionCard {
     lemma: row.lemma,
     ipa: row.ipa,
     translation: row.translation,
-    example: row.example,
-    exampleTranslation: row.example_translation,
     needsIntro,
   };
 }
@@ -94,10 +98,9 @@ async function loadDueCards(
   userId: string,
   deckId: string,
   now: Date
-): Promise<SessionCard[]> {
+): Promise<SessionCardBase[]> {
   const rows = await db.all<CardContentRow>(
-    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation,
-            cc.example, cc.example_translation
+    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation
      FROM deck_item di
      JOIN card c ON c.item_type = di.item_type AND c.item_id = di.item_id AND c.user_id = ?
      JOIN card_content cc ON cc.card_id = c.id
@@ -121,12 +124,11 @@ async function loadNewCards(
   userId: string,
   deckId: string,
   limit: number
-): Promise<SessionCard[]> {
+): Promise<SessionCardBase[]> {
   if (limit <= 0) return [];
 
   const rows = await db.all<CardContentRow>(
-    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation,
-            cc.example, cc.example_translation
+    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation
      FROM deck_item di
      JOIN card c ON c.item_type = di.item_type AND c.item_id = di.item_id AND c.user_id = ?
      JOIN card_content cc ON cc.card_id = c.id
@@ -162,10 +164,9 @@ async function loadDueCardsForOfficialDeck(
   userId: string,
   deckId: string,
   now: Date
-): Promise<SessionCard[]> {
+): Promise<SessionCardBase[]> {
   const rows = await db.all<CardContentRow>(
-    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation,
-            cc.example, cc.example_translation
+    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
      JOIN card_schedule cs ON cs.card_id = c.id
@@ -186,12 +187,11 @@ async function loadNewCardsForOfficialDeck(
   userId: string,
   deckId: string,
   limit: number
-): Promise<SessionCard[]> {
+): Promise<SessionCardBase[]> {
   if (limit <= 0) return [];
 
   const rows = await db.all<CardContentRow>(
-    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation,
-            cc.example, cc.example_translation
+    `SELECT c.id as card_id, c.item_type, c.item_id, cc.lemma, cc.ipa, cc.translation
      FROM card c
      JOIN card_content cc ON cc.card_id = c.id
      LEFT JOIN card_schedule cs ON cs.card_id = c.id
@@ -232,7 +232,16 @@ export async function buildDeckSessionQueue(
     ? await loadNewCards(db, userId, deckId, remainingNewBudget)
     : await loadNewCardsForOfficialDeck(db, userId, deckId, remainingNewBudget);
 
-  return [...dueCards, ...newCards];
+  const combined = [...dueCards, ...newCards];
+  const examplesByCard = await loadCardContentExamplesByCardIds(
+    db,
+    combined.map((card) => card.cardId)
+  );
+
+  return combined.map((card) => ({
+    ...card,
+    examples: examplesByCard.get(card.cardId) ?? [],
+  }));
 }
 
 // «Знаю это слово» (FR-22) — убирает карточку из повторений насовсем, вне

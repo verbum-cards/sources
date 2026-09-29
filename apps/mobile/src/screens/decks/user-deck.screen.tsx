@@ -474,8 +474,7 @@ export const UserDeckDetail = ({
             pos: selectedWord.pos,
             cefr: selectedWord.cefr,
             translation: selectedWord.translation,
-            example: selectedWord.example,
-            exampleTranslation: selectedWord.exampleTranslation,
+            examples: selectedWord.examples,
             definition: selectedWord.definition,
           }
         }

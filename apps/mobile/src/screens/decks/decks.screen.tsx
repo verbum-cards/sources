@@ -534,8 +534,7 @@ const DeckDetail = ({
             pos: selectedWord.pos,
             cefr: selectedWord.cefr,
             translation: selectedWord.translation,
-            example: selectedWord.example,
-            exampleTranslation: selectedWord.exampleTranslation,
+            examples: selectedWord.examples,
             definition: selectedWord.definition,
           }
         }

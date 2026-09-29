@@ -148,7 +148,9 @@ export const HomeScreen = ({ onOpenFsrsDebug, onOpenDecks, ref }: Props) => {
   const hasCards = (cardCount ?? 0) > 0;
   const showWidgets = (cardCount ?? 0) >= HOME_WIDGETS_REVEAL_THRESHOLD;
 
-  const { data: recentCards } = useQuery(loadRecentCards, { tables: ['card', 'card_content'] });
+  const { data: recentCards } = useQuery(loadRecentCards, {
+    tables: ['card', 'card_content', 'card_content_example'],
+  });
   // Те же подгруппы, что и внутри колоды (существительные/глаголы/прилагательные/
   // фразы/вопросы), тем же приёмом — utilities/word-category.ts. lemma
   // добавляется прямо тут: у RecentCard слово называется word, а не lemma.

@@ -59,11 +59,26 @@ test('seedDictionaryPackage: перевод, пример и определен�
   );
   assert.equal(translation?.text, word.translation);
 
-  const example = await db.get<{ text: string }>(
-    "SELECT text FROM example WHERE target_type = 'sense' AND target_id = ?",
+  const examples = await db.all<{ id: string; text: string }>(
+    "SELECT id, text FROM example WHERE target_type = 'sense' AND target_id = ? ORDER BY rowid",
     [word.itemId]
   );
-  assert.equal(example?.text, word.example);
+  assert.deepEqual(
+    examples.map((e) => e.text),
+    word.examples.map((e) => e.text)
+  );
+
+  const translations = await db.all<{ text: string }>(
+    `SELECT et.text FROM example_translation et
+     JOIN example ex ON ex.id = et.example_id
+     WHERE ex.target_type = 'sense' AND ex.target_id = ? AND et.lang = 'ru'
+     ORDER BY ex.rowid`,
+    [word.itemId]
+  );
+  assert.deepEqual(
+    translations.map((t) => t.text),
+    word.examples.map((e) => e.translation)
+  );
 });
 
 test('seedDictionaryPackage: goals слова становятся sense_tag', async () => {
