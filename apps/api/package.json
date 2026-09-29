@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@cards/contracts": "*"
+    "@cards/contracts": "*",
+    "zod": "^4.6.5"
   },
   "scripts": {
     "typecheck": "tsc --noEmit -p .",
     "test": "node --import tsx --test scripts/**/*.test.ts",
-    "build-seed": "tsx scripts/dictionary/build-seed.ts"
+    "build-seed": "tsx scripts/dictionary/build-seed.ts",
+    "prepare-llm-inputs": "tsx scripts/dictionary/prepare-llm-inputs.ts",
+    "generate-senses": "tsx scripts/dictionary/generate-senses.ts"
   }
 }

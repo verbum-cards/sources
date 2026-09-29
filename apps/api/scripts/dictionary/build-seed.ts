@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 import type { Cefr } from '@cards/contracts';
 
-import { fetchCmudict, lookupIpa } from './cmudict';
+import { fetchIpaDict, lookupPhraseIpa } from './ipa-dict';
 import { formatSeedCsv, splitCsvLine, type SeedWord } from './seed-format';
 import { canonicalLemma, CEFR_ORDER, dedupeWords, sortWords } from './seed-normalize';
 
@@ -74,7 +74,8 @@ async function fetchSourceWords(config: SourceConfig): Promise<SeedWord[]> {
     words.push({
       lemma,
       pos,
-      ipa: undefined,
+      ipaUs: undefined,
+      ipaUk: undefined,
       cefr,
       source: config.source,
       license: config.license,
@@ -94,10 +95,15 @@ async function main(): Promise<void> {
 
   const withoutIpa = sortWords(dedupeWords(bySource.flat()));
 
-  console.log(`\nCMUdict: скачивание...`);
-  const cmudict = await fetchCmudict();
-  const words = withoutIpa.map((word) => ({ ...word, ipa: lookupIpa(word.lemma, cmudict) }));
-  const withIpaCount = words.filter((word) => word.ipa).length;
+  console.log(`\nipa-dict: скачивание US и UK...`);
+  const [usDict, ukDict] = await Promise.all([fetchIpaDict('us'), fetchIpaDict('uk')]);
+  const words = withoutIpa.map((word) => ({
+    ...word,
+    ipaUs: lookupPhraseIpa(word.lemma, usDict),
+    ipaUk: lookupPhraseIpa(word.lemma, ukDict),
+  }));
+  const withUsCount = words.filter((word) => word.ipaUs).length;
+  const withUkCount = words.filter((word) => word.ipaUk).length;
 
   const scriptDir = dirname(fileURLToPath(import.meta.url));
   const outPath = join(scriptDir, '..', '..', '..', '..', 'data', 'cefr_seed.csv');
@@ -110,7 +116,10 @@ async function main(): Promise<void> {
 
   console.log(`\nИтого: ${words.length} слов -> ${outPath}`);
   console.log(
-    `IPA (CMUdict, американское произношение): ${withIpaCount} из ${words.length} (${Math.round((withIpaCount / words.length) * 100)}%)`
+    `IPA US: ${withUsCount} из ${words.length} (${Math.round((withUsCount / words.length) * 100)}%)`
+  );
+  console.log(
+    `IPA UK: ${withUkCount} из ${words.length} (${Math.round((withUkCount / words.length) * 100)}%)`
   );
   for (const cefr of CEFR_ORDER) {
     const count = countsByLevel.get(cefr);

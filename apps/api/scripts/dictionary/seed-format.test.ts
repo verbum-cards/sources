@@ -19,7 +19,8 @@ const sample: readonly SeedWord[] = [
   {
     lemma: 'menu',
     pos: 'noun',
-    ipa: 'mˈɛnju',
+    ipaUs: 'ˈmɛnju',
+    ipaUk: 'ˈmɛnjuː',
     cefr: 'A2',
     source: 'cefr-j',
     license: 'CEFR-J custom',
@@ -27,7 +28,8 @@ const sample: readonly SeedWord[] = [
   {
     lemma: 'abandon',
     pos: 'verb',
-    ipa: undefined,
+    ipaUs: undefined,
+    ipaUk: undefined,
     cefr: 'C1',
     source: 'octanove',
     license: 'CC BY-SA 4.0, with, comma',
@@ -53,7 +55,7 @@ test('parseSeedCsv: неверный заголовок -> ошибка', () => 
 });
 
 test('parseSeedCsv: неизвестный source -> ошибка', () => {
-  const badCsv = 'lemma,pos,ipa,cefr,source,license\nword,noun,,A1,unknown-source,license';
+  const badCsv = 'lemma,pos,ipaUs,ipaUk,cefr,source,license\nword,noun,,,A1,unknown-source,license';
 
   assert.throws(() => parseSeedCsv(badCsv));
 });

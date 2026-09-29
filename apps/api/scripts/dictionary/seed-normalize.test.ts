@@ -16,7 +16,8 @@ function makeWord(overrides: Partial<SeedWord>): SeedWord {
   return {
     lemma: 'word',
     pos: 'noun',
-    ipa: undefined,
+    ipaUs: undefined,
+    ipaUk: undefined,
     cefr: 'A1',
     source: 'cefr-j',
     license: 'CEFR-J custom',

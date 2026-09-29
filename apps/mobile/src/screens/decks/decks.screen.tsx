@@ -15,6 +15,7 @@ import {
   Sparkles,
   Trash2,
   Truck,
+  Wrench,
   type LucideIcon,
 } from 'lucide-react-native';
 
@@ -28,7 +29,13 @@ import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useToast } from '../../hooks/use-toast.hook';
-import { DECKS, FIRST_STEPS_DECK_ID, type DeckWord, type MockDeck } from '../../mocks/decks';
+import {
+  DECKS,
+  FIRST_STEPS_DECK_ID,
+  REVIEW_DECK_ID,
+  type DeckWord,
+  type MockDeck,
+} from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
 import { loadCurrentUserProfile } from '../profile/profile-logic';
@@ -95,6 +102,11 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
   // группы — не название колоды внутри неё).
   const firstStepsDeck = DECKS.find((deck) => deck.id === FIRST_STEPS_DECK_ID);
   const showFirstSteps = profile?.level === 'A0' && firstStepsDeck != null;
+  // Служебная колода для проверки партий словаря (generate-senses.ts) —
+  // не для пользователей беты, видна всегда, но только пока в ней есть
+  // слова (после разбора конвейер туда больше ничего не кладёт сам).
+  const reviewDeck = DECKS.find((deck) => deck.id === REVIEW_DECK_ID);
+  const showReviewDeck = reviewDeck != null && reviewDeck.items.length > 0;
   const [myVocabularyDeckId, setMyVocabularyDeckId] = useState<string | null>(null);
   // Один ключ на весь список «Мои колоды» — одновременно открыт максимум
   // один свайп, тем же приёмом, что и у слов внутри колоды (UserDeckDetail).
@@ -302,6 +314,25 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
                 deck={firstStepsDeck}
                 isAdded={addedDeckIds?.has(firstStepsDeck.id) ?? false}
                 onPress={() => setSelectedDeck(firstStepsDeck)}
+              />
+            </View>
+          ) : null}
+
+          {showReviewDeck && reviewDeck ? (
+            <View style={{ gap: space[3] }}>
+              <View style={{ flexDirection: 'row', alignItems: 'center', gap: space[2] }}>
+                <Wrench size={40} color={colors.ink} />
+                <Text
+                  accessibilityRole="header"
+                  style={[type.displayWord, { fontSize: 28, color: colors.ink }]}
+                >
+                  {t('reviewQueue')}
+                </Text>
+              </View>
+              <DeckRow
+                deck={reviewDeck}
+                isAdded={addedDeckIds?.has(reviewDeck.id) ?? false}
+                onPress={() => setSelectedDeck(reviewDeck)}
               />
             </View>
           ) : null}

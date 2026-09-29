@@ -8,7 +8,7 @@ import { GoalSchema } from '@cards/contracts';
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { loadUserDeckIds } from '../../src/db/entities/user/user-deck';
 import { migrate } from '../../src/db/migrate';
-import { DECKS, FIRST_STEPS_DECK_ID } from '../../src/mocks/decks';
+import { DECKS, FIRST_STEPS_DECK_ID, REVIEW_DECK_ID } from '../../src/mocks/decks';
 import type { DeckWord, MockDeck } from '../../src/mocks/decks';
 import {
   addDeckToUser,
@@ -139,11 +139,12 @@ test('groupDecksByGoal: реальный каталог DECKS — каждая �
   const groups = groupDecksByGoal(DECKS);
   const deckIdsInGroups = new Set(groups.flatMap((g) => g.decks.map((d) => d.id)));
 
-  // «Первые шаги» (FIRST_STEPS_DECK_ID) — единственное намеренное исключение:
-  // это колода про уровень, не про ситуацию, goalTags у неё пустой нарочно
-  // (decks.screen.tsx показывает её отдельным блоком по user_profile.level).
+  // «Первые шаги» (FIRST_STEPS_DECK_ID) и «Проверка партий» (REVIEW_DECK_ID)
+  // — намеренные исключения: обе не про ситуацию (одна про уровень, другая
+  // техническая), goalTags у них пустой нарочно, decks.screen.tsx показывает
+  // их отдельными блоками вне каталога по целям.
   for (const deck of DECKS) {
-    if (deck.id === FIRST_STEPS_DECK_ID) continue;
+    if (deck.id === FIRST_STEPS_DECK_ID || deck.id === REVIEW_DECK_ID) continue;
     assert.ok(deckIdsInGroups.has(deck.id), `колода "${deck.title}" не попала ни в одну группу`);
   }
 });
