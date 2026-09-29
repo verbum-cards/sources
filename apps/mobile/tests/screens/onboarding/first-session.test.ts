@@ -8,8 +8,11 @@ import {
 } from '../../../src/db/entities/user/app-meta';
 import { migrate } from '../../../src/db/migrate';
 import { DEBUG_WORDS } from '../../../src/mocks/fsrs-debug-words';
+import { loadUserDecks } from '../../../src/screens/decks/user-deck-logic';
 import { answerFirstSessionWord } from '../../../src/screens/onboarding/onboarding-logic';
 import { createNodeSqliteExecutor } from '../../support/node-sqlite-executor';
+
+const MY_VOCABULARY_TITLE = 'Мой словарь';
 
 async function setupDb() {
   const db = new DatabaseSync(':memory:');
@@ -25,7 +28,14 @@ test('answerFirstSessionWord: «Знаю это слово» -> card.status=know
   const { db, userId, deviceId } = await setupDb();
   const word = DEBUG_WORDS[0];
 
-  const cardId = await answerFirstSessionWord({ db, userId, deviceId, word, knowsWord: true });
+  const cardId = await answerFirstSessionWord({
+    db,
+    userId,
+    deviceId,
+    word,
+    knowsWord: true,
+    myVocabularyTitle: MY_VOCABULARY_TITLE,
+  });
 
   const card = await db.get<{ status: string; item_type: string; item_id: string }>(
     'SELECT status, item_type, item_id FROM card WHERE id = ?',
@@ -57,13 +67,24 @@ test('answerFirstSessionWord: «Знаю это слово» -> card.status=know
   const schedules = await db.all('SELECT * FROM card_schedule WHERE card_id = ?', [cardId]);
   assert.equal(reviewLogs.length, 0, 'известные слова не должны заводить review_log');
   assert.equal(schedules.length, 0, 'известные слова не должны заводить card_schedule');
+
+  const [myVocabulary] = await loadUserDecks(db);
+  assert.equal(myVocabulary?.title, MY_VOCABULARY_TITLE);
+  assert.equal(myVocabulary?.itemCount, 1, '«Знаю это слово» тоже попадает в «Мой словарь»');
 });
 
 test('answerFirstSessionWord: «Не знаю» -> card.status=active + review_log/card_schedule с оценкой again', async () => {
   const { db, userId, deviceId } = await setupDb();
   const word = DEBUG_WORDS[1];
 
-  const cardId = await answerFirstSessionWord({ db, userId, deviceId, word, knowsWord: false });
+  const cardId = await answerFirstSessionWord({
+    db,
+    userId,
+    deviceId,
+    word,
+    knowsWord: false,
+    myVocabularyTitle: MY_VOCABULARY_TITLE,
+  });
 
   const card = await db.get<{ status: string }>('SELECT status FROM card WHERE id = ?', [cardId]);
   assert.equal(card?.status, 'active');
@@ -80,6 +101,9 @@ test('answerFirstSessionWord: «Не знаю» -> card.status=active + review_l
     [cardId]
   );
   assert.ok(schedule, 'card_schedule должен появиться после applyRating');
+
+  const [myVocabulary] = await loadUserDecks(db);
+  assert.equal(myVocabulary?.itemCount, 1);
 });
 
 test('answerFirstSessionWord: разные слова первой сессии создают разные карточки', async () => {
@@ -91,6 +115,7 @@ test('answerFirstSessionWord: разные слова первой сессии 
     deviceId,
     word: DEBUG_WORDS[0],
     knowsWord: true,
+    myVocabularyTitle: MY_VOCABULARY_TITLE,
   });
   const activeCardId = await answerFirstSessionWord({
     db,
@@ -98,9 +123,13 @@ test('answerFirstSessionWord: разные слова первой сессии 
     deviceId,
     word: DEBUG_WORDS[1],
     knowsWord: false,
+    myVocabularyTitle: MY_VOCABULARY_TITLE,
   });
 
   assert.notEqual(knownCardId, activeCardId);
   const cards = await db.all('SELECT id FROM card WHERE user_id = ?', [userId]);
   assert.equal(cards.length, 2);
+
+  const [myVocabulary] = await loadUserDecks(db);
+  assert.equal(myVocabulary?.itemCount, 2, 'оба слова первой сессии — в «Мой словарь»');
 });

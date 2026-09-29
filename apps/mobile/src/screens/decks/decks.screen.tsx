@@ -30,6 +30,7 @@ import { useToast } from '../../hooks/use-toast.hook';
 import { DECKS, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
+import { SessionScreen } from '../session/session.screen';
 import {
   addDeckToUser,
   addSingleDeckWord,
@@ -70,18 +71,13 @@ export interface DecksScreenHandle {
 // колодой вместо экрана. Настоящего каталога официальных колод ещё нет
 // (docs/data-model.md, data/ и apps/api удалены) — список зашит в
 // mocks/decks.ts, тот же временный приём, что и словарь для F6/первой сессии.
-export const DecksScreen = ({
-  onOpenProgress,
-  ref,
-}: {
-  onOpenProgress?: () => void;
-  ref?: React.Ref<DecksScreenHandle>;
-}) => {
+export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => {
   const { colors, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
   const [selectedDeck, setSelectedDeck] = useState<MockDeck | null>(null);
   const [selectedUserDeckId, setSelectedUserDeckId] = useState<string | null>(null);
+  const [sessionDeckId, setSessionDeckId] = useState<string | null>(null);
   const [isCreatingDeck, setIsCreatingDeck] = useState(false);
   const [renamingDeck, setRenamingDeck] = useState<{ id: string; title: string } | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
@@ -98,6 +94,7 @@ export const DecksScreen = ({
       resetToRoot: () => {
         setSelectedDeck(null);
         setSelectedUserDeckId(null);
+        setSessionDeckId(null);
         setIsCreatingDeck(false);
         setRenamingDeck(null);
       },
@@ -142,20 +139,28 @@ export const DecksScreen = ({
     confirmDeleteDeck(title, () => void removeDeckFromUser(db, deckId));
   };
 
+  if (sessionDeckId) {
+    return <SessionScreen deckId={sessionDeckId} onExit={() => setSessionDeckId(null)} />;
+  }
+
   if (selectedDeck) {
     return (
       <DeckDetail
         deck={selectedDeck}
         isAdded={addedDeckIds?.has(selectedDeck.id) ?? false}
         onBack={() => setSelectedDeck(null)}
-        onOpenProgress={onOpenProgress}
+        onStartSession={() => setSessionDeckId(selectedDeck.id)}
       />
     );
   }
 
   if (selectedUserDeckId) {
     return (
-      <UserDeckDetail deckId={selectedUserDeckId} onBack={() => setSelectedUserDeckId(null)} />
+      <UserDeckDetail
+        deckId={selectedUserDeckId}
+        onBack={() => setSelectedUserDeckId(null)}
+        onStartSession={() => setSessionDeckId(selectedUserDeckId)}
+      />
     );
   }
 
@@ -404,12 +409,12 @@ const DeckDetail = ({
   deck,
   isAdded,
   onBack,
-  onOpenProgress,
+  onStartSession,
 }: {
   deck: MockDeck;
   isAdded: boolean;
   onBack: () => void;
-  onOpenProgress?: () => void;
+  onStartSession: () => void;
 }) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
@@ -509,7 +514,7 @@ const DeckDetail = ({
         }}
       >
         {isAdded ? (
-          <Button label={t('goToProgress')} size="lg" block onPress={() => onOpenProgress?.()} />
+          <Button label={t('goToProgress')} size="lg" block onPress={onStartSession} />
         ) : (
           <Button
             label={t('addDeck')}

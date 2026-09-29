@@ -61,9 +61,7 @@ export const MainTabsScreen = ({ onOpenFsrsDebug }: { onOpenFsrsDebug?: () => vo
             onOpenDecks={() => setTab('decks')}
           />
         ) : null}
-        {tab === 'decks' ? (
-          <DecksScreen ref={decksRef} onOpenProgress={() => setTab('progress')} />
-        ) : null}
+        {tab === 'decks' ? <DecksScreen ref={decksRef} /> : null}
         {tab === 'progress' ? <ProgressScreen /> : null}
         {tab === 'profile' ? <ProfileScreen /> : null}
       </Animated.View>

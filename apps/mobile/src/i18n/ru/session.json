@@ -1,0 +1,40 @@
+{
+  "exit": "Выйти",
+  "progressRemaining_one": "Осталось {{count}}",
+  "progressRemaining_few": "Осталось {{count}}",
+  "progressRemaining_many": "Осталось {{count}}",
+  "progressRemaining_other": "Осталось {{count}}",
+  "intro": {
+    "knowLabel": "Знаю это слово",
+    "nextLabel": "Дальше"
+  },
+  "quiz": {
+    "showTranslation": "Показать перевод",
+    "dontRemember": "Не помню",
+    "remember": "Помню"
+  },
+  "summary": {
+    "title": "Сессия завершена",
+    "emptyTitle": "Пока нечего повторять",
+    "emptySubtitle": "Новые слова появятся здесь по дневному лимиту, а карточки — когда подойдёт срок повторения",
+    "cardsReviewed_one": "{{count}} карточка",
+    "cardsReviewed_few": "{{count}} карточки",
+    "cardsReviewed_many": "{{count}} карточек",
+    "cardsReviewed_other": "{{count}} карточки",
+    "correctRatio": "{{percent}}% верно",
+    "streakDays_one": "Серия — {{count}} день подряд",
+    "streakDays_few": "Серия — {{count}} дня подряд",
+    "streakDays_many": "Серия — {{count}} дней подряд",
+    "streakDays_other": "Серия — {{count}} дня подряд",
+    "dueToday_one": "Сегодня вернётся ещё {{count}} карточка",
+    "dueToday_few": "Сегодня вернётся ещё {{count}} карточки",
+    "dueToday_many": "Сегодня вернётся ещё {{count}} карточек",
+    "dueToday_other": "Сегодня вернётся ещё {{count}} карточки",
+    "dueTodayNone": "На сегодня всё",
+    "dueTomorrow_one": "Завтра — {{count}} карточка",
+    "dueTomorrow_few": "Завтра — {{count}} карточки",
+    "dueTomorrow_many": "Завтра — {{count}} карточек",
+    "dueTomorrow_other": "Завтра — {{count}} карточки",
+    "done": "Готово"
+  }
+}

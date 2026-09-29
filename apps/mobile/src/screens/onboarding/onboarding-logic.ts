@@ -5,6 +5,7 @@ import { DEBUG_ITEM_TYPE, DEBUG_WORDS, type DebugWord } from '../../mocks/fsrs-d
 import { applyRating } from '../../scheduler/scheduler';
 import { notifyChange } from '../../utilities/event-bus';
 import { uuidv7 } from '../../utilities/id';
+import { addToMyVocabulary } from '../decks/user-deck-logic';
 
 // F1, шаг «Первая сессия»: настоящего словаря по уровню/цели ещё нет (T1.6),
 // поэтому набор — временный мок (см. mocks/fsrs-debug-words.ts), но подобранный
@@ -45,6 +46,9 @@ export interface AnswerFirstSessionWordParams {
   word: DebugWord;
   // true — «Знаю это слово», false — «Не знаю» (см. ниже).
   knowsWord: boolean;
+  // Как и в decks-logic.ts/user-deck-logic.ts — заголовок передаёт вызывающий
+  // экран (доступ к i18n), сама эта функция не UI-слой.
+  myVocabularyTitle: string;
   now?: Date;
 }
 
@@ -56,6 +60,9 @@ export interface AnswerFirstSessionWordParams {
 //                        по-настоящему заводит review_log/card_schedule тем же
 //                        планировщиком, что и весь остальной продукт; никакой
 //                        новой логики планирования здесь не изобретаем.
+// Любое слово, которое пользователь у себя видит впервые, попадает и в «Мой
+// словарь» (addToMyVocabulary) — тот же принцип, что и для колод
+// (decks-logic.ts::addSingleDeckWord), просто источник слова другой.
 // Возвращает id созданной карточки.
 export async function answerFirstSessionWord({
   db,
@@ -63,6 +70,7 @@ export async function answerFirstSessionWord({
   deviceId,
   word,
   knowsWord,
+  myVocabularyTitle,
   now = new Date(),
 }: AnswerFirstSessionWordParams): Promise<string> {
   const nowIso = now.toISOString();
@@ -90,6 +98,7 @@ export async function answerFirstSessionWord({
     ]
   );
   notifyChange(['card', 'card_content']);
+  await addToMyVocabulary(db, DEBUG_ITEM_TYPE, word.itemId, myVocabularyTitle, now);
 
   if (!knowsWord) {
     await applyRating({ db, cardId, userId, deviceId, rating: 'again', now });

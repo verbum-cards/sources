@@ -301,7 +301,15 @@ export const MoveWordModal = ({
   );
 };
 
-export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () => void }) => {
+export const UserDeckDetail = ({
+  deckId,
+  onBack,
+  onStartSession,
+}: {
+  deckId: string;
+  onBack: () => void;
+  onStartSession: () => void;
+}) => {
   const { colors, radius, space, type } = useTheme();
   const { t } = useTranslation('decks');
   const db = useDb();
@@ -443,6 +451,20 @@ export const UserDeckDetail = ({ deckId, onBack }: { deckId: string; onBack: () 
           </View>
         </ScrollView>
       </Pressable>
+
+      {deckWords && deckWords.length > 0 ? (
+        <View
+          style={{
+            padding: space[5],
+            gap: space[2],
+            borderTopLeftRadius: radius.md,
+            borderTopRightRadius: radius.md,
+            backgroundColor: colors.surface,
+          }}
+        >
+          <Button label={t('userDecks.study')} size="lg" block onPress={onStartSession} />
+        </View>
+      ) : null}
 
       <WordPopup
         card={

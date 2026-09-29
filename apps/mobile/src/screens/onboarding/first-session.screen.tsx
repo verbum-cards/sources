@@ -53,11 +53,18 @@ export const FirstSessionScreen = ({
 
       const userId = await getOrCreateLocalUserId(db);
       const deviceId = await getOrCreateDeviceId(db);
-      await answerFirstSessionWord({ db, userId, deviceId, word, knowsWord });
+      await answerFirstSessionWord({
+        db,
+        userId,
+        deviceId,
+        word,
+        knowsWord,
+        myVocabularyTitle: t('myVocabularyTitle', { ns: 'common' }),
+      });
 
       setIndex((i) => i + 1);
     },
-    [db, word]
+    [db, word, t]
   );
 
   // «Пропустить» пропускает всю первую сессию целиком, а не одно слово: сразу

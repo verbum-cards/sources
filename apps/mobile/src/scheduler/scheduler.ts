@@ -69,6 +69,30 @@ async function upsertScheduleRow(db: DbExecutor, row: CardScheduleRow): Promise<
   );
 }
 
+// «Знакомство» с новой карточкой (FR-36) — первый показ без оценки FSRS: в
+// кеш пишется только first_review_at, остальные поля пустые. scheduleRowToFsrsInput
+// проверяет fsrs_state, а не first_review_at, поэтому applyRating всё равно
+// увидит эту карточку как «новую» для расчёта FSRS — first_review_at здесь
+// нужен только дневному лимиту новых (skill fsrs-scheduler: «лимит считается
+// по числу... впервые показанных... знакомство считается показом»), не
+// самому планировщику. Нет-оп, если кеш уже существует (карточка уже была
+// показана — не перезатираем первый момент показа).
+export async function markCardIntroduced(
+  db: DbExecutor,
+  cardId: string,
+  now: Date = new Date()
+): Promise<void> {
+  const existing = await getCardSchedule(db, cardId);
+  if (existing) return;
+
+  await db.run(
+    `INSERT INTO card_schedule (card_id, due, stability, difficulty, elapsed_days, scheduled_days, reps, lapses, fsrs_state, last_review, first_review_at)
+     VALUES (?, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ?)`,
+    [cardId, now.toISOString()]
+  );
+  notifyChange(['card_schedule']);
+}
+
 export interface ApplyRatingParams {
   db: DbExecutor;
   cardId: string;
