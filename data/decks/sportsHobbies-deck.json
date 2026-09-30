@@ -402,6 +402,34 @@
       {
         "lemma": "broadcaster",
         "importance": 2
+      },
+      {
+        "lemma": "baseball",
+        "importance": 2
+      },
+      {
+        "lemma": "basketball",
+        "importance": 2
+      },
+      {
+        "lemma": "football",
+        "importance": 2
+      },
+      {
+        "lemma": "soccer",
+        "importance": 2
+      },
+      {
+        "lemma": "tennis",
+        "importance": 2
+      },
+      {
+        "lemma": "volleyball",
+        "importance": 2
+      },
+      {
+        "lemma": "Olympics",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -660,6 +688,18 @@
       },
       {
         "lemma": "concerto",
+        "importance": 2
+      },
+      {
+        "lemma": "album",
+        "importance": 2
+      },
+      {
+        "lemma": "opera",
+        "importance": 2
+      },
+      {
+        "lemma": "pop",
         "importance": 2
       }
     ],

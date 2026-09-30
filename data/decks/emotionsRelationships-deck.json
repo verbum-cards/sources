@@ -744,6 +744,26 @@
       {
         "lemma": "patiently",
         "importance": 2
+      },
+      {
+        "lemma": "clever",
+        "importance": 2
+      },
+      {
+        "lemma": "careful",
+        "importance": 2
+      },
+      {
+        "lemma": "carefully",
+        "importance": 2
+      },
+      {
+        "lemma": "lazy",
+        "importance": 2
+      },
+      {
+        "lemma": "strict",
+        "importance": 2
       }
     ],
     "importance": 2

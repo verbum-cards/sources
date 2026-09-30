@@ -618,6 +618,50 @@
       {
         "lemma": "mountaineer",
         "importance": 2
+      },
+      {
+        "lemma": "farm",
+        "importance": 2
+      },
+      {
+        "lemma": "island",
+        "importance": 2
+      },
+      {
+        "lemma": "river",
+        "importance": 2
+      },
+      {
+        "lemma": "hill",
+        "importance": 2
+      },
+      {
+        "lemma": "field",
+        "importance": 2
+      },
+      {
+        "lemma": "ground",
+        "importance": 2
+      },
+      {
+        "lemma": "picnic",
+        "importance": 2
+      },
+      {
+        "lemma": "autumn",
+        "importance": 2
+      },
+      {
+        "lemma": "spring",
+        "importance": 2
+      },
+      {
+        "lemma": "summer",
+        "importance": 2
+      },
+      {
+        "lemma": "winter",
+        "importance": 2
       }
     ],
     "importance": 2

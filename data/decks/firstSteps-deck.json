@@ -589,6 +589,38 @@
       {
         "lemma": "family",
         "importance": 2
+      },
+      {
+        "lemma": "dad",
+        "importance": 2
+      },
+      {
+        "lemma": "daddy",
+        "importance": 2
+      },
+      {
+        "lemma": "mom",
+        "importance": 2
+      },
+      {
+        "lemma": "mommy",
+        "importance": 2
+      },
+      {
+        "lemma": "mum",
+        "importance": 2
+      },
+      {
+        "lemma": "grandma",
+        "importance": 2
+      },
+      {
+        "lemma": "grandpa",
+        "importance": 2
+      },
+      {
+        "lemma": "grandparent",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -909,6 +941,62 @@
       },
       {
         "lemma": "umbrella",
+        "importance": 2
+      },
+      {
+        "lemma": "apron",
+        "importance": 2
+      },
+      {
+        "lemma": "bucket",
+        "importance": 2
+      },
+      {
+        "lemma": "board",
+        "importance": 2
+      },
+      {
+        "lemma": "boat",
+        "importance": 2
+      },
+      {
+        "lemma": "couch",
+        "importance": 2
+      },
+      {
+        "lemma": "cover",
+        "importance": 2
+      },
+      {
+        "lemma": "dictionary",
+        "importance": 2
+      },
+      {
+        "lemma": "doll",
+        "importance": 2
+      },
+      {
+        "lemma": "drum",
+        "importance": 2
+      },
+      {
+        "lemma": "glass",
+        "importance": 2
+      },
+      {
+        "lemma": "kite",
+        "importance": 2
+      },
+      {
+        "lemma": "poster",
+        "importance": 2
+      },
+      {
+        "lemma": "ruler",
+        "importance": 2
+      },
+      {
+        "lemma": "vase",
         "importance": 2
       }
     ],
@@ -1554,6 +1642,30 @@
       },
       {
         "lemma": "theater",
+        "importance": 2
+      },
+      {
+        "lemma": "city",
+        "importance": 2
+      },
+      {
+        "lemma": "town",
+        "importance": 2
+      },
+      {
+        "lemma": "factory",
+        "importance": 2
+      },
+      {
+        "lemma": "palace",
+        "importance": 2
+      },
+      {
+        "lemma": "temple",
+        "importance": 2
+      },
+      {
+        "lemma": "zoo",
         "importance": 2
       }
     ],

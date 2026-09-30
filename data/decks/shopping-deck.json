@@ -384,6 +384,74 @@
       {
         "lemma": "grapefruit",
         "importance": 2
+      },
+      {
+        "lemma": "bean",
+        "importance": 2
+      },
+      {
+        "lemma": "beef",
+        "importance": 2
+      },
+      {
+        "lemma": "biscuit",
+        "importance": 2
+      },
+      {
+        "lemma": "butter",
+        "importance": 2
+      },
+      {
+        "lemma": "candy",
+        "importance": 2
+      },
+      {
+        "lemma": "chocolate",
+        "importance": 2
+      },
+      {
+        "lemma": "coke",
+        "importance": 2
+      },
+      {
+        "lemma": "cookie",
+        "importance": 2
+      },
+      {
+        "lemma": "corn",
+        "importance": 2
+      },
+      {
+        "lemma": "ice cream",
+        "importance": 2
+      },
+      {
+        "lemma": "meal",
+        "importance": 2
+      },
+      {
+        "lemma": "potato",
+        "importance": 2
+      },
+      {
+        "lemma": "salad",
+        "importance": 2
+      },
+      {
+        "lemma": "soup",
+        "importance": 2
+      },
+      {
+        "lemma": "tomato",
+        "importance": 2
+      },
+      {
+        "lemma": "turkey",
+        "importance": 2
+      },
+      {
+        "lemma": "yogurt",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -591,6 +659,30 @@
       },
       {
         "lemma": "gadget",
+        "importance": 2
+      },
+      {
+        "lemma": "CD",
+        "importance": 2
+      },
+      {
+        "lemma": "CD player",
+        "importance": 2
+      },
+      {
+        "lemma": "DVD",
+        "importance": 2
+      },
+      {
+        "lemma": "radio",
+        "importance": 2
+      },
+      {
+        "lemma": "TV",
+        "importance": 2
+      },
+      {
+        "lemma": "video",
         "importance": 2
       }
     ],
