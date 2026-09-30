@@ -1476,7 +1476,8 @@
     "nativeLang": "ru",
     "title": "Места в городе",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "transportCity"
     ],
     "type": "official",
     "items": [

@@ -1133,6 +1133,812 @@
     ]
   },
   {
+    "id": "01a0f1ce-b18d-7b12-97a1-6f45be587b0c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Столик и бронирование",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "booking",
+        "importance": 2
+      },
+      {
+        "lemma": "reservation",
+        "importance": 2
+      },
+      {
+        "lemma": "seat",
+        "importance": 2
+      },
+      {
+        "lemma": "table",
+        "importance": 2
+      },
+      {
+        "lemma": "terrace",
+        "importance": 2
+      },
+      {
+        "lemma": "waiter",
+        "importance": 2
+      },
+      {
+        "lemma": "waitress",
+        "importance": 2
+      },
+      {
+        "lemma": "wait",
+        "importance": 2
+      },
+      {
+        "lemma": "Could I have a window seat?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-71e1-9306-65028d7430e4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Меню",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "appetizer",
+        "importance": 2
+      },
+      {
+        "lemma": "course",
+        "importance": 2
+      },
+      {
+        "lemma": "dessert",
+        "importance": 2
+      },
+      {
+        "lemma": "dish",
+        "importance": 2
+      },
+      {
+        "lemma": "main course",
+        "importance": 2
+      },
+      {
+        "lemma": "menu",
+        "importance": 2
+      },
+      {
+        "lemma": "price",
+        "importance": 2
+      },
+      {
+        "lemma": "special",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-74a0-b26d-f9a18a5471b5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Заказ",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "waiter",
+        "importance": 2
+      },
+      {
+        "lemma": "waitress",
+        "importance": 2
+      },
+      {
+        "lemma": "bring",
+        "importance": 2
+      },
+      {
+        "lemma": "recommend",
+        "importance": 2
+      },
+      {
+        "lemma": "serve",
+        "importance": 2
+      },
+      {
+        "lemma": "ready",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-709f-af05-f98186fe390a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как приготовить",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "fry",
+        "importance": 2
+      },
+      {
+        "lemma": "grill",
+        "importance": 2
+      },
+      {
+        "lemma": "steam",
+        "importance": 2
+      },
+      {
+        "lemma": "bake",
+        "importance": 2
+      },
+      {
+        "lemma": "boil",
+        "importance": 2
+      },
+      {
+        "lemma": "roast",
+        "importance": 2
+      },
+      {
+        "lemma": "boiled",
+        "importance": 2
+      },
+      {
+        "lemma": "fried",
+        "importance": 2
+      },
+      {
+        "lemma": "grilled",
+        "importance": 2
+      },
+      {
+        "lemma": "medium",
+        "importance": 2
+      },
+      {
+        "lemma": "rare",
+        "importance": 2
+      },
+      {
+        "lemma": "raw",
+        "importance": 2
+      },
+      {
+        "lemma": "spicy",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7d68-aef5-1d66cc7b4f17",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кофейня",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "coffee",
+        "importance": 2
+      },
+      {
+        "lemma": "cup",
+        "importance": 2
+      },
+      {
+        "lemma": "mug",
+        "importance": 2
+      },
+      {
+        "lemma": "takeaway",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-737b-9d3c-66f52f2b7072",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Напитки",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "beer",
+        "importance": 2
+      },
+      {
+        "lemma": "cocktail",
+        "importance": 2
+      },
+      {
+        "lemma": "drink",
+        "importance": 2
+      },
+      {
+        "lemma": "juice",
+        "importance": 2
+      },
+      {
+        "lemma": "lemonade",
+        "importance": 2
+      },
+      {
+        "lemma": "mineral water",
+        "importance": 2
+      },
+      {
+        "lemma": "soda",
+        "importance": 2
+      },
+      {
+        "lemma": "soft drink",
+        "importance": 2
+      },
+      {
+        "lemma": "tea",
+        "importance": 2
+      },
+      {
+        "lemma": "water",
+        "importance": 2
+      },
+      {
+        "lemma": "wine",
+        "importance": 2
+      },
+      {
+        "lemma": "drinkable",
+        "importance": 2
+      },
+      {
+        "lemma": "sparkling",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7a00-8a86-6a9aed60a776",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Бар",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "alcohol",
+        "importance": 2
+      },
+      {
+        "lemma": "bar",
+        "importance": 2
+      },
+      {
+        "lemma": "barman",
+        "importance": 2
+      },
+      {
+        "lemma": "bartender",
+        "importance": 2
+      },
+      {
+        "lemma": "beer",
+        "importance": 2
+      },
+      {
+        "lemma": "cocktail",
+        "importance": 2
+      },
+      {
+        "lemma": "pub",
+        "importance": 2
+      },
+      {
+        "lemma": "wine",
+        "importance": 2
+      },
+      {
+        "lemma": "alcoholic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-73f5-a0d4-3c891c545af0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Счёт и чаевые",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bill",
+        "importance": 2
+      },
+      {
+        "lemma": "card",
+        "importance": 2
+      },
+      {
+        "lemma": "cash",
+        "importance": 2
+      },
+      {
+        "lemma": "cashpoint",
+        "importance": 2
+      },
+      {
+        "lemma": "check",
+        "importance": 2
+      },
+      {
+        "lemma": "credit card",
+        "importance": 2
+      },
+      {
+        "lemma": "debit card",
+        "importance": 2
+      },
+      {
+        "lemma": "pay",
+        "importance": 2
+      },
+      {
+        "lemma": "payment",
+        "importance": 2
+      },
+      {
+        "lemma": "receipt",
+        "importance": 2
+      },
+      {
+        "lemma": "tip",
+        "importance": 2
+      },
+      {
+        "lemma": "split",
+        "importance": 2
+      },
+      {
+        "lemma": "to pay by card",
+        "importance": 2
+      },
+      {
+        "lemma": "to split the bill",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7203-bba3-167c22fc886b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жалобы и проблемы",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "apology",
+        "importance": 2
+      },
+      {
+        "lemma": "complaint",
+        "importance": 2
+      },
+      {
+        "lemma": "mistake",
+        "importance": 2
+      },
+      {
+        "lemma": "refund",
+        "importance": 2
+      },
+      {
+        "lemma": "replacement",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "complain",
+        "importance": 2
+      },
+      {
+        "lemma": "replace",
+        "importance": 2
+      },
+      {
+        "lemma": "scold",
+        "importance": 2
+      },
+      {
+        "lemma": "cold",
+        "importance": 2
+      },
+      {
+        "lemma": "wrong",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-78d3-b1c0-de5dc8994695",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аллергии и диеты",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "diet",
+        "importance": 2
+      },
+      {
+        "lemma": "allergic",
+        "importance": 2
+      },
+      {
+        "lemma": "vegetarian",
+        "importance": 2
+      },
+      {
+        "lemma": "I'm allergic to...",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7f66-9062-26e675faa1fe",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Фастфуд",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "burger",
+        "importance": 2
+      },
+      {
+        "lemma": "fast food",
+        "importance": 2
+      },
+      {
+        "lemma": "hamburger",
+        "importance": 2
+      },
+      {
+        "lemma": "pizza",
+        "importance": 2
+      },
+      {
+        "lemma": "sandwich",
+        "importance": 2
+      },
+      {
+        "lemma": "takeaway",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-702f-a23f-50ea4c77a655",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Доставка еды",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "delivery",
+        "importance": 2
+      },
+      {
+        "lemma": "deliver",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-77d4-9251-9f0eb8a1c17e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Завтрак и бранч",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bacon",
+        "importance": 2
+      },
+      {
+        "lemma": "breakfast",
+        "importance": 2
+      },
+      {
+        "lemma": "cereal",
+        "importance": 2
+      },
+      {
+        "lemma": "egg",
+        "importance": 2
+      },
+      {
+        "lemma": "omelet",
+        "importance": 2
+      },
+      {
+        "lemma": "pancake",
+        "importance": 2
+      },
+      {
+        "lemma": "toast",
+        "importance": 2
+      },
+      {
+        "lemma": "Is breakfast included?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7f71-b094-1249a94bd466",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вкус и впечатления",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "flavor",
+        "importance": 2
+      },
+      {
+        "lemma": "taste",
+        "importance": 2
+      },
+      {
+        "lemma": "bitter",
+        "importance": 2
+      },
+      {
+        "lemma": "delicious",
+        "importance": 2
+      },
+      {
+        "lemma": "fresh",
+        "importance": 2
+      },
+      {
+        "lemma": "refreshing",
+        "importance": 2
+      },
+      {
+        "lemma": "salty",
+        "importance": 2
+      },
+      {
+        "lemma": "sour",
+        "importance": 2
+      },
+      {
+        "lemma": "spicy",
+        "importance": 2
+      },
+      {
+        "lemma": "sweet",
+        "importance": 2
+      },
+      {
+        "lemma": "tasteless",
+        "importance": 2
+      },
+      {
+        "lemma": "tasty",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this dish spicy?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7cee-b0a5-da315fb47a04",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уличная еда и рынок",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "market",
+        "importance": 2
+      },
+      {
+        "lemma": "snack",
+        "importance": 2
+      },
+      {
+        "lemma": "stall",
+        "importance": 2
+      },
+      {
+        "lemma": "stand",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-780e-a122-90b57e143075",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кухни мира",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "ethnic",
+        "importance": 2
+      },
+      {
+        "lemma": "local",
+        "importance": 2
+      },
+      {
+        "lemma": "traditional",
+        "importance": 2
+      },
+      {
+        "lemma": "traditionally",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-78c6-9601-700fe634216a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Деловой обед",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "client",
+        "importance": 2
+      },
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "formality",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "formal",
+        "importance": 2
+      },
+      {
+        "lemma": "informal",
+        "importance": 2
+      },
+      {
+        "lemma": "formally",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ce-b18d-7f99-9c1f-4048aa06eeea",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Свидание в ресторане",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "anniversary",
+        "importance": 2
+      },
+      {
+        "lemma": "candle",
+        "importance": 2
+      },
+      {
+        "lemma": "date",
+        "importance": 2
+      },
+      {
+        "lemma": "celebrate",
+        "importance": 2
+      },
+      {
+        "lemma": "propose",
+        "importance": 2
+      },
+      {
+        "lemma": "romantic",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "01a0f0d1-0fb3-7cc1-a6e1-5d7d3796bdea",
     "lang": "en",
     "nativeLang": "ru",
@@ -2609,7 +3415,8 @@
     "nativeLang": "ru",
     "title": "Места в городе",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "transportCity"
     ],
     "type": "official",
     "importance": 1,
@@ -3866,10 +4673,6 @@
         "importance": 2
       },
       {
-        "lemma": "accessibility",
-        "importance": 2
-      },
-      {
         "lemma": "accessory",
         "importance": 2
       },
@@ -4118,10 +4921,6 @@
         "importance": 2
       },
       {
-        "lemma": "alcohol",
-        "importance": 2
-      },
-      {
         "lemma": "alcoholism",
         "importance": 2
       },
@@ -4274,10 +5073,6 @@
         "importance": 2
       },
       {
-        "lemma": "anniversary",
-        "importance": 2
-      },
-      {
         "lemma": "annoyance",
         "importance": 2
       },
@@ -4347,10 +5142,6 @@
       },
       {
         "lemma": "ape",
-        "importance": 2
-      },
-      {
-        "lemma": "apology",
         "importance": 2
       },
       {
@@ -4758,10 +5549,6 @@
         "importance": 2
       },
       {
-        "lemma": "bacon",
-        "importance": 2
-      },
-      {
         "lemma": "badge",
         "importance": 2
       },
@@ -4834,10 +5621,6 @@
         "importance": 2
       },
       {
-        "lemma": "bar",
-        "importance": 2
-      },
-      {
         "lemma": "barbecue",
         "importance": 2
       },
@@ -4862,10 +5645,6 @@
         "importance": 2
       },
       {
-        "lemma": "barman",
-        "importance": 2
-      },
-      {
         "lemma": "barn",
         "importance": 2
       },
@@ -4879,10 +5658,6 @@
       },
       {
         "lemma": "barrier",
-        "importance": 2
-      },
-      {
-        "lemma": "bartender",
         "importance": 2
       },
       {
@@ -4998,10 +5773,6 @@
         "importance": 2
       },
       {
-        "lemma": "beer",
-        "importance": 2
-      },
-      {
         "lemma": "beginner",
         "importance": 2
       },
@@ -5078,15 +5849,7 @@
         "importance": 2
       },
       {
-        "lemma": "bicycle",
-        "importance": 2
-      },
-      {
         "lemma": "bidding",
-        "importance": 2
-      },
-      {
-        "lemma": "bike",
         "importance": 2
       },
       {
@@ -5410,10 +6173,6 @@
         "importance": 2
       },
       {
-        "lemma": "breakdown",
-        "importance": 2
-      },
-      {
         "lemma": "breakthrough",
         "importance": 2
       },
@@ -5455,10 +6214,6 @@
       },
       {
         "lemma": "bride",
-        "importance": 2
-      },
-      {
-        "lemma": "bridge",
         "importance": 2
       },
       {
@@ -5610,10 +6365,6 @@
         "importance": 2
       },
       {
-        "lemma": "burger",
-        "importance": 2
-      },
-      {
         "lemma": "burglar",
         "importance": 2
       },
@@ -5623,14 +6374,6 @@
       },
       {
         "lemma": "burial",
-        "importance": 2
-      },
-      {
-        "lemma": "bus station",
-        "importance": 2
-      },
-      {
-        "lemma": "bus stop",
         "importance": 2
       },
       {
@@ -5675,10 +6418,6 @@
       },
       {
         "lemma": "buzzer",
-        "importance": 2
-      },
-      {
-        "lemma": "cab",
         "importance": 2
       },
       {
@@ -5770,10 +6509,6 @@
         "importance": 2
       },
       {
-        "lemma": "candle",
-        "importance": 2
-      },
-      {
         "lemma": "candy",
         "importance": 2
       },
@@ -5823,10 +6558,6 @@
       },
       {
         "lemma": "capture",
-        "importance": 2
-      },
-      {
-        "lemma": "car park",
         "importance": 2
       },
       {
@@ -5883,10 +6614,6 @@
       },
       {
         "lemma": "carpool",
-        "importance": 2
-      },
-      {
-        "lemma": "carriage",
         "importance": 2
       },
       {
@@ -6030,10 +6757,6 @@
         "importance": 2
       },
       {
-        "lemma": "cereal",
-        "importance": 2
-      },
-      {
         "lemma": "ceremony",
         "importance": 2
       },
@@ -6139,10 +6862,6 @@
       },
       {
         "lemma": "chauffer",
-        "importance": 2
-      },
-      {
-        "lemma": "check",
         "importance": 2
       },
       {
@@ -6366,10 +7085,6 @@
         "importance": 2
       },
       {
-        "lemma": "client",
-        "importance": 2
-      },
-      {
         "lemma": "cliff",
         "importance": 2
       },
@@ -6430,10 +7145,6 @@
         "importance": 2
       },
       {
-        "lemma": "club",
-        "importance": 2
-      },
-      {
         "lemma": "clue",
         "importance": 2
       },
@@ -6467,10 +7178,6 @@
       },
       {
         "lemma": "coastline",
-        "importance": 2
-      },
-      {
-        "lemma": "cocktail",
         "importance": 2
       },
       {
@@ -7194,10 +7901,6 @@
         "importance": 2
       },
       {
-        "lemma": "course",
-        "importance": 2
-      },
-      {
         "lemma": "court",
         "importance": 2
       },
@@ -7327,14 +8030,6 @@
       },
       {
         "lemma": "cross",
-        "importance": 2
-      },
-      {
-        "lemma": "crossing",
-        "importance": 2
-      },
-      {
-        "lemma": "crossroads",
         "importance": 2
       },
       {
@@ -7474,10 +8169,6 @@
         "importance": 2
       },
       {
-        "lemma": "cycle",
-        "importance": 2
-      },
-      {
         "lemma": "cycling",
         "importance": 2
       },
@@ -7526,10 +8217,6 @@
         "importance": 2
       },
       {
-        "lemma": "darkness",
-        "importance": 2
-      },
-      {
         "lemma": "darkroom",
         "importance": 2
       },
@@ -7543,10 +8230,6 @@
       },
       {
         "lemma": "database",
-        "importance": 2
-      },
-      {
-        "lemma": "date",
         "importance": 2
       },
       {
@@ -7706,10 +8389,6 @@
         "importance": 2
       },
       {
-        "lemma": "delay",
-        "importance": 2
-      },
-      {
         "lemma": "delegate",
         "importance": 2
       },
@@ -7786,10 +8465,6 @@
         "importance": 2
       },
       {
-        "lemma": "deposit",
-        "importance": 2
-      },
-      {
         "lemma": "depravity",
         "importance": 2
       },
@@ -7855,10 +8530,6 @@
       },
       {
         "lemma": "desperation",
-        "importance": 2
-      },
-      {
-        "lemma": "dessert",
         "importance": 2
       },
       {
@@ -8026,19 +8697,11 @@
         "importance": 2
       },
       {
-        "lemma": "direction",
-        "importance": 2
-      },
-      {
         "lemma": "director",
         "importance": 2
       },
       {
         "lemma": "dirt",
-        "importance": 2
-      },
-      {
-        "lemma": "disability",
         "importance": 2
       },
       {
@@ -8115,10 +8778,6 @@
       },
       {
         "lemma": "disguise",
-        "importance": 2
-      },
-      {
-        "lemma": "dish",
         "importance": 2
       },
       {
@@ -8418,10 +9077,6 @@
         "importance": 2
       },
       {
-        "lemma": "drink",
-        "importance": 2
-      },
-      {
         "lemma": "droop",
         "importance": 2
       },
@@ -8714,10 +9369,6 @@
         "importance": 2
       },
       {
-        "lemma": "emergency",
-        "importance": 2
-      },
-      {
         "lemma": "eminence",
         "importance": 2
       },
@@ -8850,10 +9501,6 @@
         "importance": 2
       },
       {
-        "lemma": "entrance",
-        "importance": 2
-      },
-      {
         "lemma": "entrepreneur",
         "importance": 2
       },
@@ -8919,10 +9566,6 @@
       },
       {
         "lemma": "eruption",
-        "importance": 2
-      },
-      {
-        "lemma": "escalator",
         "importance": 2
       },
       {
@@ -9090,10 +9733,6 @@
         "importance": 2
       },
       {
-        "lemma": "exit",
-        "importance": 2
-      },
-      {
         "lemma": "exodus",
         "importance": 2
       },
@@ -9155,10 +9794,6 @@
       },
       {
         "lemma": "export",
-        "importance": 2
-      },
-      {
-        "lemma": "express",
         "importance": 2
       },
       {
@@ -9299,10 +9934,6 @@
       },
       {
         "lemma": "fashion",
-        "importance": 2
-      },
-      {
-        "lemma": "fast food",
         "importance": 2
       },
       {
@@ -9530,10 +10161,6 @@
         "importance": 2
       },
       {
-        "lemma": "flavor",
-        "importance": 2
-      },
-      {
         "lemma": "flaw",
         "importance": 2
       },
@@ -9718,10 +10345,6 @@
         "importance": 2
       },
       {
-        "lemma": "formality",
-        "importance": 2
-      },
-      {
         "lemma": "format",
         "importance": 2
       },
@@ -9747,10 +10370,6 @@
       },
       {
         "lemma": "foundation",
-        "importance": 2
-      },
-      {
-        "lemma": "fountain",
         "importance": 2
       },
       {
@@ -9835,10 +10454,6 @@
       },
       {
         "lemma": "frustration",
-        "importance": 2
-      },
-      {
-        "lemma": "fry",
         "importance": 2
       },
       {
@@ -10330,10 +10945,6 @@
         "importance": 2
       },
       {
-        "lemma": "grill",
-        "importance": 2
-      },
-      {
         "lemma": "grin",
         "importance": 2
       },
@@ -10479,10 +11090,6 @@
       },
       {
         "lemma": "ham",
-        "importance": 2
-      },
-      {
-        "lemma": "hamburger",
         "importance": 2
       },
       {
@@ -10671,10 +11278,6 @@
       },
       {
         "lemma": "helm",
-        "importance": 2
-      },
-      {
-        "lemma": "helmet",
         "importance": 2
       },
       {
@@ -11874,10 +12477,6 @@
         "importance": 2
       },
       {
-        "lemma": "latecomer",
-        "importance": 2
-      },
-      {
         "lemma": "laughter",
         "importance": 2
       },
@@ -12002,10 +12601,6 @@
         "importance": 2
       },
       {
-        "lemma": "lemonade",
-        "importance": 2
-      },
-      {
         "lemma": "length",
         "importance": 2
       },
@@ -12098,10 +12693,6 @@
         "importance": 2
       },
       {
-        "lemma": "line",
-        "importance": 2
-      },
-      {
         "lemma": "linen",
         "importance": 2
       },
@@ -12151,10 +12742,6 @@
       },
       {
         "lemma": "lobby",
-        "importance": 2
-      },
-      {
-        "lemma": "location",
         "importance": 2
       },
       {
@@ -12302,10 +12889,6 @@
         "importance": 2
       },
       {
-        "lemma": "main course",
-        "importance": 2
-      },
-      {
         "lemma": "maintenance",
         "importance": 2
       },
@@ -12402,10 +12985,6 @@
         "importance": 2
       },
       {
-        "lemma": "map",
-        "importance": 2
-      },
-      {
         "lemma": "maple",
         "importance": 2
       },
@@ -12435,10 +13014,6 @@
       },
       {
         "lemma": "mark-up",
-        "importance": 2
-      },
-      {
-        "lemma": "market",
         "importance": 2
       },
       {
@@ -12582,10 +13157,6 @@
         "importance": 2
       },
       {
-        "lemma": "meeting",
-        "importance": 2
-      },
-      {
         "lemma": "melody",
         "importance": 2
       },
@@ -12714,10 +13285,6 @@
         "importance": 2
       },
       {
-        "lemma": "midnight",
-        "importance": 2
-      },
-      {
         "lemma": "midst",
         "importance": 2
       },
@@ -12763,10 +13330,6 @@
       },
       {
         "lemma": "mineral",
-        "importance": 2
-      },
-      {
-        "lemma": "mineral water",
         "importance": 2
       },
       {
@@ -12823,10 +13386,6 @@
       },
       {
         "lemma": "mist",
-        "importance": 2
-      },
-      {
-        "lemma": "mistake",
         "importance": 2
       },
       {
@@ -12926,10 +13485,6 @@
         "importance": 2
       },
       {
-        "lemma": "monument",
-        "importance": 2
-      },
-      {
         "lemma": "moon",
         "importance": 2
       },
@@ -12998,14 +13553,6 @@
         "importance": 2
       },
       {
-        "lemma": "motorbike",
-        "importance": 2
-      },
-      {
-        "lemma": "motorcycle",
-        "importance": 2
-      },
-      {
         "lemma": "motorway",
         "importance": 2
       },
@@ -13051,10 +13598,6 @@
       },
       {
         "lemma": "mud",
-        "importance": 2
-      },
-      {
-        "lemma": "mug",
         "importance": 2
       },
       {
@@ -13178,10 +13721,6 @@
         "importance": 2
       },
       {
-        "lemma": "navigation",
-        "importance": 2
-      },
-      {
         "lemma": "navy",
         "importance": 2
       },
@@ -13267,14 +13806,6 @@
       },
       {
         "lemma": "niece",
-        "importance": 2
-      },
-      {
-        "lemma": "nightclub",
-        "importance": 2
-      },
-      {
-        "lemma": "nightlife",
         "importance": 2
       },
       {
@@ -13495,10 +14026,6 @@
       },
       {
         "lemma": "Olympics",
-        "importance": 2
-      },
-      {
-        "lemma": "omelet",
         "importance": 2
       },
       {
@@ -13798,10 +14325,6 @@
         "importance": 2
       },
       {
-        "lemma": "pancake",
-        "importance": 2
-      },
-      {
         "lemma": "panel",
         "importance": 2
       },
@@ -13898,15 +14421,7 @@
         "importance": 2
       },
       {
-        "lemma": "pass",
-        "importance": 2
-      },
-      {
         "lemma": "passage",
-        "importance": 2
-      },
-      {
-        "lemma": "passenger",
         "importance": 2
       },
       {
@@ -13974,10 +14489,6 @@
         "importance": 2
       },
       {
-        "lemma": "pay",
-        "importance": 2
-      },
-      {
         "lemma": "paywall",
         "importance": 2
       },
@@ -14022,15 +14533,7 @@
         "importance": 2
       },
       {
-        "lemma": "pedal",
-        "importance": 2
-      },
-      {
         "lemma": "pedestal",
-        "importance": 2
-      },
-      {
-        "lemma": "pedestrian",
         "importance": 2
       },
       {
@@ -14187,10 +14690,6 @@
       },
       {
         "lemma": "pessimist",
-        "importance": 2
-      },
-      {
-        "lemma": "petrol station",
         "importance": 2
       },
       {
@@ -14354,10 +14853,6 @@
         "importance": 2
       },
       {
-        "lemma": "pizza",
-        "importance": 2
-      },
-      {
         "lemma": "place",
         "importance": 2
       },
@@ -14395,10 +14890,6 @@
       },
       {
         "lemma": "plate",
-        "importance": 2
-      },
-      {
-        "lemma": "platform",
         "importance": 2
       },
       {
@@ -14838,10 +15329,6 @@
         "importance": 2
       },
       {
-        "lemma": "price",
-        "importance": 2
-      },
-      {
         "lemma": "prick",
         "importance": 2
       },
@@ -14911,10 +15398,6 @@
       },
       {
         "lemma": "probe",
-        "importance": 2
-      },
-      {
-        "lemma": "problem",
         "importance": 2
       },
       {
@@ -15119,10 +15602,6 @@
       },
       {
         "lemma": "psychology",
-        "importance": 2
-      },
-      {
-        "lemma": "pub",
         "importance": 2
       },
       {
@@ -15366,10 +15845,6 @@
         "importance": 2
       },
       {
-        "lemma": "railway",
-        "importance": 2
-      },
-      {
         "lemma": "rainbow",
         "importance": 2
       },
@@ -15395,10 +15870,6 @@
       },
       {
         "lemma": "ram",
-        "importance": 2
-      },
-      {
-        "lemma": "ramp",
         "importance": 2
       },
       {
@@ -15443,10 +15914,6 @@
       },
       {
         "lemma": "rate",
-        "importance": 2
-      },
-      {
-        "lemma": "rating",
         "importance": 2
       },
       {
@@ -15774,10 +16241,6 @@
         "importance": 2
       },
       {
-        "lemma": "rental",
-        "importance": 2
-      },
-      {
         "lemma": "repaint",
         "importance": 2
       },
@@ -15787,10 +16250,6 @@
       },
       {
         "lemma": "repetition",
-        "importance": 2
-      },
-      {
-        "lemma": "replacement",
         "importance": 2
       },
       {
@@ -16006,10 +16465,6 @@
         "importance": 2
       },
       {
-        "lemma": "ride",
-        "importance": 2
-      },
-      {
         "lemma": "rider",
         "importance": 2
       },
@@ -16114,15 +16569,7 @@
         "importance": 2
       },
       {
-        "lemma": "roundabout",
-        "importance": 2
-      },
-      {
         "lemma": "roundup",
-        "importance": 2
-      },
-      {
-        "lemma": "route",
         "importance": 2
       },
       {
@@ -16310,10 +16757,6 @@
         "importance": 2
       },
       {
-        "lemma": "sandwich",
-        "importance": 2
-      },
-      {
         "lemma": "sanitation",
         "importance": 2
       },
@@ -16450,10 +16893,6 @@
         "importance": 2
       },
       {
-        "lemma": "scooter",
-        "importance": 2
-      },
-      {
         "lemma": "scope",
         "importance": 2
       },
@@ -16531,10 +16970,6 @@
       },
       {
         "lemma": "season",
-        "importance": 2
-      },
-      {
-        "lemma": "seat",
         "importance": 2
       },
       {
@@ -16854,19 +17289,7 @@
         "importance": 2
       },
       {
-        "lemma": "sidewalk",
-        "importance": 2
-      },
-      {
         "lemma": "sigh",
-        "importance": 2
-      },
-      {
-        "lemma": "sightseeing",
-        "importance": 2
-      },
-      {
-        "lemma": "signal",
         "importance": 2
       },
       {
@@ -17082,10 +17505,6 @@
         "importance": 2
       },
       {
-        "lemma": "snack",
-        "importance": 2
-      },
-      {
         "lemma": "snail",
         "importance": 2
       },
@@ -17146,15 +17565,7 @@
         "importance": 2
       },
       {
-        "lemma": "soda",
-        "importance": 2
-      },
-      {
         "lemma": "sofa",
-        "importance": 2
-      },
-      {
-        "lemma": "soft drink",
         "importance": 2
       },
       {
@@ -17326,10 +17737,6 @@
         "importance": 2
       },
       {
-        "lemma": "speed",
-        "importance": 2
-      },
-      {
         "lemma": "speeder",
         "importance": 2
       },
@@ -17490,15 +17897,7 @@
         "importance": 2
       },
       {
-        "lemma": "stall",
-        "importance": 2
-      },
-      {
         "lemma": "stamina",
-        "importance": 2
-      },
-      {
-        "lemma": "stand",
         "importance": 2
       },
       {
@@ -17550,19 +17949,11 @@
         "importance": 2
       },
       {
-        "lemma": "statue",
-        "importance": 2
-      },
-      {
         "lemma": "status",
         "importance": 2
       },
       {
         "lemma": "steak",
-        "importance": 2
-      },
-      {
-        "lemma": "steam",
         "importance": 2
       },
       {
@@ -17639,10 +18030,6 @@
       },
       {
         "lemma": "stool",
-        "importance": 2
-      },
-      {
-        "lemma": "stop",
         "importance": 2
       },
       {
@@ -18162,10 +18549,6 @@
         "importance": 2
       },
       {
-        "lemma": "takeaway",
-        "importance": 2
-      },
-      {
         "lemma": "takeoff",
         "importance": 2
       },
@@ -18210,10 +18593,6 @@
         "importance": 2
       },
       {
-        "lemma": "taste",
-        "importance": 2
-      },
-      {
         "lemma": "taste-maker",
         "importance": 2
       },
@@ -18231,10 +18610,6 @@
       },
       {
         "lemma": "taunt",
-        "importance": 2
-      },
-      {
-        "lemma": "taxi",
         "importance": 2
       },
       {
@@ -18346,10 +18721,6 @@
         "importance": 2
       },
       {
-        "lemma": "terrace",
-        "importance": 2
-      },
-      {
         "lemma": "terrain",
         "importance": 2
       },
@@ -18383,10 +18754,6 @@
       },
       {
         "lemma": "textbook",
-        "importance": 2
-      },
-      {
-        "lemma": "theft",
         "importance": 2
       },
       {
@@ -18482,10 +18849,6 @@
         "importance": 2
       },
       {
-        "lemma": "ticket",
-        "importance": 2
-      },
-      {
         "lemma": "tide",
         "importance": 2
       },
@@ -18507,10 +18870,6 @@
       },
       {
         "lemma": "timeliness",
-        "importance": 2
-      },
-      {
-        "lemma": "timetable",
         "importance": 2
       },
       {
@@ -18638,10 +18997,6 @@
         "importance": 2
       },
       {
-        "lemma": "tower",
-        "importance": 2
-      },
-      {
         "lemma": "town",
         "importance": 2
       },
@@ -18670,10 +19025,6 @@
         "importance": 2
       },
       {
-        "lemma": "traffic jam",
-        "importance": 2
-      },
-      {
         "lemma": "tragedy",
         "importance": 2
       },
@@ -18683,10 +19034,6 @@
       },
       {
         "lemma": "trailer",
-        "importance": 2
-      },
-      {
-        "lemma": "train",
         "importance": 2
       },
       {
@@ -18707,10 +19054,6 @@
       },
       {
         "lemma": "traitor",
-        "importance": 2
-      },
-      {
-        "lemma": "tram",
         "importance": 2
       },
       {
@@ -18915,10 +19258,6 @@
       },
       {
         "lemma": "tub",
-        "importance": 2
-      },
-      {
-        "lemma": "tube",
         "importance": 2
       },
       {
@@ -19410,19 +19749,7 @@
         "importance": 2
       },
       {
-        "lemma": "walk",
-        "importance": 2
-      },
-      {
         "lemma": "walkabout",
-        "importance": 2
-      },
-      {
-        "lemma": "walker",
-        "importance": 2
-      },
-      {
-        "lemma": "walking",
         "importance": 2
       },
       {
@@ -19506,10 +19833,6 @@
         "importance": 2
       },
       {
-        "lemma": "way",
-        "importance": 2
-      },
-      {
         "lemma": "wayside",
         "importance": 2
       },
@@ -19590,10 +19913,6 @@
         "importance": 2
       },
       {
-        "lemma": "wheelchair",
-        "importance": 2
-      },
-      {
         "lemma": "whirlwind",
         "importance": 2
       },
@@ -19635,10 +19954,6 @@
       },
       {
         "lemma": "windsurfing",
-        "importance": 2
-      },
-      {
-        "lemma": "wine",
         "importance": 2
       },
       {
@@ -20030,10 +20345,6 @@
         "importance": 2
       },
       {
-        "lemma": "apologize",
-        "importance": 2
-      },
-      {
         "lemma": "appall",
         "importance": 2
       },
@@ -20170,10 +20481,6 @@
         "importance": 2
       },
       {
-        "lemma": "bake",
-        "importance": 2
-      },
-      {
         "lemma": "banish",
         "importance": 2
       },
@@ -20286,10 +20593,6 @@
         "importance": 2
       },
       {
-        "lemma": "boil",
-        "importance": 2
-      },
-      {
         "lemma": "bore",
         "importance": 2
       },
@@ -20319,10 +20622,6 @@
       },
       {
         "lemma": "brim",
-        "importance": 2
-      },
-      {
-        "lemma": "bring",
         "importance": 2
       },
       {
@@ -20383,10 +20682,6 @@
       },
       {
         "lemma": "calculate",
-        "importance": 2
-      },
-      {
-        "lemma": "cancel",
         "importance": 2
       },
       {
@@ -20559,10 +20854,6 @@
       },
       {
         "lemma": "compile",
-        "importance": 2
-      },
-      {
-        "lemma": "complain",
         "importance": 2
       },
       {
@@ -21362,10 +21653,6 @@
         "importance": 2
       },
       {
-        "lemma": "estimate",
-        "importance": 2
-      },
-      {
         "lemma": "etch",
         "importance": 2
       },
@@ -21447,10 +21734,6 @@
       },
       {
         "lemma": "exploit",
-        "importance": 2
-      },
-      {
-        "lemma": "explore",
         "importance": 2
       },
       {
@@ -22358,10 +22641,6 @@
         "importance": 2
       },
       {
-        "lemma": "navigate",
-        "importance": 2
-      },
-      {
         "lemma": "neutralize",
         "importance": 2
       },
@@ -22750,10 +23029,6 @@
         "importance": 2
       },
       {
-        "lemma": "propose",
-        "importance": 2
-      },
-      {
         "lemma": "proscribe",
         "importance": 2
       },
@@ -22903,10 +23178,6 @@
       },
       {
         "lemma": "recollect",
-        "importance": 2
-      },
-      {
-        "lemma": "recommend",
         "importance": 2
       },
       {
@@ -23067,10 +23338,6 @@
       },
       {
         "lemma": "repel",
-        "importance": 2
-      },
-      {
-        "lemma": "replace",
         "importance": 2
       },
       {
@@ -23238,10 +23505,6 @@
         "importance": 2
       },
       {
-        "lemma": "roast",
-        "importance": 2
-      },
-      {
         "lemma": "rob",
         "importance": 2
       },
@@ -23302,10 +23565,6 @@
         "importance": 2
       },
       {
-        "lemma": "scold",
-        "importance": 2
-      },
-      {
         "lemma": "scramble",
         "importance": 2
       },
@@ -23327,10 +23586,6 @@
       },
       {
         "lemma": "sell",
-        "importance": 2
-      },
-      {
-        "lemma": "serve",
         "importance": 2
       },
       {
@@ -23579,10 +23834,6 @@
       },
       {
         "lemma": "stay",
-        "importance": 2
-      },
-      {
-        "lemma": "steal",
         "importance": 2
       },
       {
@@ -24042,10 +24293,6 @@
         "importance": 2
       },
       {
-        "lemma": "wait",
-        "importance": 2
-      },
-      {
         "lemma": "wallow",
         "importance": 2
       },
@@ -24183,10 +24430,6 @@
       },
       {
         "lemma": "acceptable",
-        "importance": 2
-      },
-      {
-        "lemma": "accessible",
         "importance": 2
       },
       {
@@ -24347,10 +24590,6 @@
       },
       {
         "lemma": "aimless",
-        "importance": 2
-      },
-      {
-        "lemma": "alcoholic",
         "importance": 2
       },
       {
@@ -24778,10 +25017,6 @@
         "importance": 2
       },
       {
-        "lemma": "bitter",
-        "importance": 2
-      },
-      {
         "lemma": "bizarre",
         "importance": 2
       },
@@ -24807,10 +25042,6 @@
       },
       {
         "lemma": "bogus",
-        "importance": 2
-      },
-      {
-        "lemma": "boiled",
         "importance": 2
       },
       {
@@ -25486,10 +25717,6 @@
         "importance": 2
       },
       {
-        "lemma": "dangerous",
-        "importance": 2
-      },
-      {
         "lemma": "darling",
         "importance": 2
       },
@@ -25682,10 +25909,6 @@
         "importance": 2
       },
       {
-        "lemma": "disabled",
-        "importance": 2
-      },
-      {
         "lemma": "disappointed",
         "importance": 2
       },
@@ -25807,10 +26030,6 @@
       },
       {
         "lemma": "dressed",
-        "importance": 2
-      },
-      {
-        "lemma": "drinkable",
         "importance": 2
       },
       {
@@ -26078,19 +26297,11 @@
         "importance": 2
       },
       {
-        "lemma": "estimated",
-        "importance": 2
-      },
-      {
         "lemma": "eternal",
         "importance": 2
       },
       {
         "lemma": "ethical",
-        "importance": 2
-      },
-      {
-        "lemma": "ethnic",
         "importance": 2
       },
       {
@@ -26486,14 +26697,6 @@
         "importance": 2
       },
       {
-        "lemma": "fresh",
-        "importance": 2
-      },
-      {
-        "lemma": "fried",
-        "importance": 2
-      },
-      {
         "lemma": "frightened",
         "importance": 2
       },
@@ -26695,10 +26898,6 @@
       },
       {
         "lemma": "greedy",
-        "importance": 2
-      },
-      {
-        "lemma": "grilled",
         "importance": 2
       },
       {
@@ -27278,10 +27477,6 @@
         "importance": 2
       },
       {
-        "lemma": "informal",
-        "importance": 2
-      },
-      {
         "lemma": "informative",
         "importance": 2
       },
@@ -27678,10 +27873,6 @@
         "importance": 2
       },
       {
-        "lemma": "local",
-        "importance": 2
-      },
-      {
         "lemma": "logical",
         "importance": 2
       },
@@ -27691,10 +27882,6 @@
       },
       {
         "lemma": "loose",
-        "importance": 2
-      },
-      {
-        "lemma": "lost",
         "importance": 2
       },
       {
@@ -27871,10 +28058,6 @@
       },
       {
         "lemma": "mediocre",
-        "importance": 2
-      },
-      {
-        "lemma": "medium",
         "importance": 2
       },
       {
@@ -28166,10 +28349,6 @@
         "importance": 2
       },
       {
-        "lemma": "nearby",
-        "importance": 2
-      },
-      {
         "lemma": "neat",
         "importance": 2
       },
@@ -28382,10 +28561,6 @@
         "importance": 2
       },
       {
-        "lemma": "opposite",
-        "importance": 2
-      },
-      {
         "lemma": "optimistic",
         "importance": 2
       },
@@ -28475,10 +28650,6 @@
       },
       {
         "lemma": "overjoyed",
-        "importance": 2
-      },
-      {
-        "lemma": "overnight",
         "importance": 2
       },
       {
@@ -29122,10 +29293,6 @@
         "importance": 2
       },
       {
-        "lemma": "rare",
-        "importance": 2
-      },
-      {
         "lemma": "rash",
         "importance": 2
       },
@@ -29138,15 +29305,7 @@
         "importance": 2
       },
       {
-        "lemma": "raw",
-        "importance": 2
-      },
-      {
         "lemma": "readable",
-        "importance": 2
-      },
-      {
-        "lemma": "ready",
         "importance": 2
       },
       {
@@ -29211,10 +29370,6 @@
       },
       {
         "lemma": "reflective",
-        "importance": 2
-      },
-      {
-        "lemma": "refreshing",
         "importance": 2
       },
       {
@@ -29406,10 +29561,6 @@
         "importance": 2
       },
       {
-        "lemma": "romantic",
-        "importance": 2
-      },
-      {
         "lemma": "rosy",
         "importance": 2
       },
@@ -29462,15 +29613,7 @@
         "importance": 2
       },
       {
-        "lemma": "safe",
-        "importance": 2
-      },
-      {
         "lemma": "salivary",
-        "importance": 2
-      },
-      {
-        "lemma": "salty",
         "importance": 2
       },
       {
@@ -29730,10 +29873,6 @@
         "importance": 2
       },
       {
-        "lemma": "single",
-        "importance": 2
-      },
-      {
         "lemma": "singular",
         "importance": 2
       },
@@ -29814,10 +29953,6 @@
         "importance": 2
       },
       {
-        "lemma": "sour",
-        "importance": 2
-      },
-      {
         "lemma": "south",
         "importance": 2
       },
@@ -29842,19 +29977,11 @@
         "importance": 2
       },
       {
-        "lemma": "sparkling",
-        "importance": 2
-      },
-      {
         "lemma": "spartan",
         "importance": 2
       },
       {
         "lemma": "spatial",
-        "importance": 2
-      },
-      {
-        "lemma": "special",
         "importance": 2
       },
       {
@@ -29874,19 +30001,11 @@
         "importance": 2
       },
       {
-        "lemma": "spicy",
-        "importance": 2
-      },
-      {
         "lemma": "spiral",
         "importance": 2
       },
       {
         "lemma": "spiritual",
-        "importance": 2
-      },
-      {
-        "lemma": "split",
         "importance": 2
       },
       {
@@ -30011,10 +30130,6 @@
       },
       {
         "lemma": "structural",
-        "importance": 2
-      },
-      {
-        "lemma": "stuck",
         "importance": 2
       },
       {
@@ -30146,10 +30261,6 @@
         "importance": 2
       },
       {
-        "lemma": "sweet",
-        "importance": 2
-      },
-      {
         "lemma": "swift",
         "importance": 2
       },
@@ -30227,14 +30338,6 @@
       },
       {
         "lemma": "tantamount",
-        "importance": 2
-      },
-      {
-        "lemma": "tasteless",
-        "importance": 2
-      },
-      {
-        "lemma": "tasty",
         "importance": 2
       },
       {
@@ -30630,10 +30733,6 @@
         "importance": 2
       },
       {
-        "lemma": "underground",
-        "importance": 2
-      },
-      {
         "lemma": "undersea",
         "importance": 2
       },
@@ -30894,10 +30993,6 @@
         "importance": 2
       },
       {
-        "lemma": "unsafe",
-        "importance": 2
-      },
-      {
         "lemma": "unsatisfactory",
         "importance": 2
       },
@@ -31071,10 +31166,6 @@
       },
       {
         "lemma": "vast",
-        "importance": 2
-      },
-      {
-        "lemma": "vegetarian",
         "importance": 2
       },
       {
@@ -31367,10 +31458,6 @@
       },
       {
         "lemma": "written",
-        "importance": 2
-      },
-      {
-        "lemma": "wrong",
         "importance": 2
       },
       {
@@ -32118,10 +32205,6 @@
         "importance": 2
       },
       {
-        "lemma": "dangerously",
-        "importance": 2
-      },
-      {
         "lemma": "dearly",
         "importance": 2
       },
@@ -32511,10 +32594,6 @@
       },
       {
         "lemma": "fantastically",
-        "importance": 2
-      },
-      {
-        "lemma": "far",
         "importance": 2
       },
       {
@@ -33422,10 +33501,6 @@
         "importance": 2
       },
       {
-        "lemma": "next to",
-        "importance": 2
-      },
-      {
         "lemma": "nicely",
         "importance": 2
       },
@@ -33990,10 +34065,6 @@
         "importance": 2
       },
       {
-        "lemma": "safely",
-        "importance": 2
-      },
-      {
         "lemma": "sarcastically",
         "importance": 2
       },
@@ -34487,10 +34558,6 @@
       },
       {
         "lemma": "together",
-        "importance": 2
-      },
-      {
-        "lemma": "tonight",
         "importance": 2
       },
       {
@@ -35516,197 +35583,832 @@
     "items": []
   },
   {
-    "id": "0195d000-0000-7000-8000-000000000001",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Ресторан и кафе",
-    "categories": [
-      "cafeRestaurant",
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Ужин в ресторане среднего уровня, вечер",
-      "roles": {
-        "learner": "гость",
-        "partner": "официант",
-        "learnerGoal": "заказать, уточнить про аллергию, расплатиться",
-        "partnerGoal": "обслужить и предложить блюда"
-      },
-      "register": "polite",
-      "branches": [
-        "заказ",
-        "аллергия",
-        "ошибка в счёте",
-        "разделить счёт"
-      ],
-      "cultureNotes": [
-        "В США чаевые 15–20% ожидаются, в Великобритании часто уже включены в счёт как service charge"
-      ]
-    },
-    "importance": 2,
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000002",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Отель",
-    "categories": [
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Заселение и проживание в отеле, стандартный номер",
-      "roles": {
-        "learner": "гость",
-        "partner": "администратор",
-        "learnerGoal": "заселиться, решить вопрос с номером, продлить или вовремя выехать",
-        "partnerGoal": "заселить гостя и решить его вопросы"
-      },
-      "register": "polite",
-      "branches": [
-        "заселение",
-        "проблема с номером",
-        "просьба о позднем выезде",
-        "дополнительные услуги"
-      ],
-      "cultureNotes": [
-        "В США чаевые горничной — обычно $1–2 за ночь, оставляют наличными в номере",
-        "В Великобритании завтрак часто указывается отдельно от стоимости номера («room only» vs «bed and breakfast»)"
-      ]
-    },
-    "importance": 2,
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000003",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Аэропорт и перелёт",
-    "categories": [
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Регистрация на рейс, посадка и перелёт",
-      "roles": {
-        "learner": "пассажир",
-        "partner": "сотрудник авиакомпании",
-        "learnerGoal": "пройти регистрацию, найти выход на посадку, решить проблему с багажом",
-        "partnerGoal": "оформить пассажира и обеспечить посадку по расписанию"
-      },
-      "register": "polite",
-      "branches": [
-        "регистрация и посадочный талон",
-        "багаж потерян или повреждён",
-        "задержка или отмена рейса",
-        "просьба о другом месте"
-      ],
-      "cultureNotes": [
-        "На международный рейс на регистрацию обычно приходят за 2–3 часа до вылета",
-        "При пересадке с международного рейса в США часто нужно заново пройти паспортный контроль и сдать багаж"
-      ]
-    },
-    "importance": 2,
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000004",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Такси",
-    "categories": [
-      "transportCity",
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Поездка на такси — заказ, объяснение маршрута, оплата",
-      "roles": {
-        "learner": "пассажир",
-        "partner": "водитель такси",
-        "learnerGoal": "заказать такси, назвать адрес, уточнить цену, расплатиться",
-        "partnerGoal": "довезти до места и получить оплату"
-      },
-      "register": "polite",
-      "branches": [
-        "заказ такси",
-        "объяснение маршрута или адреса",
-        "обсуждение цены",
-        "оплата и чаевые"
-      ],
-      "cultureNotes": [
-        "В США принято округлять оплату такси в большую сторону и добавлять чаевые 10–15%",
-        "В Великобритании чёрные такси (black cabs) можно останавливать прямо на улице, а не только заказывать заранее"
-      ]
-    },
-    "importance": 2,
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000005",
+    "id": "01a0f1d6-38ba-7bfb-8ca4-c5b501b4d5d7",
     "lang": "en",
     "nativeLang": "ru",
     "title": "Как пройти",
     "categories": [
-      "transportCity",
-      "travelLeisure"
+      "transportCity"
     ],
     "type": "official",
-    "context": {
-      "situation": "Спросить дорогу на улице у прохожего и понять объяснение маршрута пешком",
-      "roles": {
-        "learner": "прохожий, который спрашивает дорогу",
-        "partner": "местный житель",
-        "learnerGoal": "узнать, как дойти до места, понять объяснение и переспросить, если не понял",
-        "partnerGoal": "объяснить маршрут понятно"
-      },
-      "register": "polite",
-      "branches": [
-        "спросить дорогу",
-        "не понял объяснение, переспросить",
-        "ориентиры (памятники, магазины)",
-        "пешком или на транспорте"
-      ],
-      "cultureNotes": [
-        "В англоязычных странах расстояние часто объясняют в минутах ходьбы, а не в километрах",
-        "Попросить повторить объяснение («Could you repeat that?») — это нормально, а не невежливо"
-      ]
-    },
     "importance": 2,
-    "items": []
+    "items": [
+      {
+        "lemma": "corner",
+        "importance": 2
+      },
+      {
+        "lemma": "crossing",
+        "importance": 2
+      },
+      {
+        "lemma": "crossroads",
+        "importance": 2
+      },
+      {
+        "lemma": "direction",
+        "importance": 2
+      },
+      {
+        "lemma": "way",
+        "importance": 2
+      },
+      {
+        "lemma": "nearby",
+        "importance": 2
+      },
+      {
+        "lemma": "opposite",
+        "importance": 2
+      },
+      {
+        "lemma": "to go straight",
+        "importance": 2
+      },
+      {
+        "lemma": "to turn left / right",
+        "importance": 2
+      },
+      {
+        "lemma": "Is it far from here?",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this the shortest way?",
+        "importance": 2
+      },
+      {
+        "lemma": "Which way is...?",
+        "importance": 2
+      },
+      {
+        "lemma": "between",
+        "importance": 2
+      },
+      {
+        "lemma": "far",
+        "importance": 2
+      },
+      {
+        "lemma": "near",
+        "importance": 2
+      },
+      {
+        "lemma": "next to",
+        "importance": 2
+      },
+      {
+        "lemma": "straight",
+        "importance": 2
+      }
+    ]
   },
   {
-    "id": "0195d000-0000-7000-8000-000000000007",
+    "id": "01a0f1d6-38ba-7bfe-a6b4-dc8a0f4b695d",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Работа",
+    "title": "Метро",
     "categories": [
-      "businessCareer"
+      "transportCity"
     ],
     "type": "official",
-    "context": {
-      "situation": "Разговор о работе: сокращения, реорганизация компании и переговоры об условиях",
-      "roles": {
-        "learner": "сотрудник",
-        "partner": "коллега",
-        "learnerGoal": "обсудить ситуацию в компании, выразить мнение, спросить про условия и требования",
-        "partnerGoal": "поделиться новостями и своим мнением о происходящем"
-      },
-      "register": "neutral",
-      "branches": [
-        "новости о сокращениях",
-        "переговоры об условиях",
-        "обсуждение новых требований",
-        "реакция на изменения в компании"
-      ],
-      "cultureNotes": [
-        "В США и Великобритании после увольнений (layoffs) часто предлагают выходное пособие (severance package) и продление медицинской страховки на несколько месяцев",
-        "Открыто обсуждать зарплату и условия с коллегами более принято в США, чем во многих других культурах"
-      ]
-    },
     "importance": 2,
-    "items": []
+    "items": [
+      {
+        "lemma": "entrance",
+        "importance": 2
+      },
+      {
+        "lemma": "escalator",
+        "importance": 2
+      },
+      {
+        "lemma": "exit",
+        "importance": 2
+      },
+      {
+        "lemma": "line",
+        "importance": 2
+      },
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "station",
+        "importance": 2
+      },
+      {
+        "lemma": "subway",
+        "importance": 2
+      },
+      {
+        "lemma": "tube",
+        "importance": 2
+      },
+      {
+        "lemma": "underground",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7ed2-984d-ff5fc0333ad3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Автобус и трамвай",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bus",
+        "importance": 2
+      },
+      {
+        "lemma": "bus station",
+        "importance": 2
+      },
+      {
+        "lemma": "bus stop",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      },
+      {
+        "lemma": "stop",
+        "importance": 2
+      },
+      {
+        "lemma": "tram",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-75d7-9a00-a56ef6f6a751",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Билеты и проездные",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "boarding pass",
+        "importance": 2
+      },
+      {
+        "lemma": "fare",
+        "importance": 2
+      },
+      {
+        "lemma": "pass",
+        "importance": 2
+      },
+      {
+        "lemma": "passenger",
+        "importance": 2
+      },
+      {
+        "lemma": "ticket",
+        "importance": 2
+      },
+      {
+        "lemma": "single",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-707c-b8b9-57af9bed004f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Такси",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cab",
+        "importance": 2
+      },
+      {
+        "lemma": "driver",
+        "importance": 2
+      },
+      {
+        "lemma": "fare",
+        "importance": 2
+      },
+      {
+        "lemma": "meter",
+        "importance": 2
+      },
+      {
+        "lemma": "ride",
+        "importance": 2
+      },
+      {
+        "lemma": "taxi",
+        "importance": 2
+      },
+      {
+        "lemma": "taxi rank",
+        "importance": 2
+      },
+      {
+        "lemma": "to book a taxi",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-77bb-863b-a78cacfbcd2d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Приложения для поездок",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "rating",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      },
+      {
+        "lemma": "timetable",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "estimate",
+        "importance": 2
+      },
+      {
+        "lemma": "estimated",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7d8c-9443-0845f47ef314",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поезд",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "carriage",
+        "importance": 2
+      },
+      {
+        "lemma": "express",
+        "importance": 2
+      },
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "railway",
+        "importance": 2
+      },
+      {
+        "lemma": "station",
+        "importance": 2
+      },
+      {
+        "lemma": "train",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7e65-87a2-58a567d45055",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аренда машины",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "deposit",
+        "importance": 2
+      },
+      {
+        "lemma": "insurance",
+        "importance": 2
+      },
+      {
+        "lemma": "rent",
+        "importance": 2
+      },
+      {
+        "lemma": "rental",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-79e4-9a8f-3f764f057cf1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "За рулём",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "car park",
+        "importance": 2
+      },
+      {
+        "lemma": "drive",
+        "importance": 2
+      },
+      {
+        "lemma": "driver",
+        "importance": 2
+      },
+      {
+        "lemma": "driver's license",
+        "importance": 2
+      },
+      {
+        "lemma": "fuel",
+        "importance": 2
+      },
+      {
+        "lemma": "lane",
+        "importance": 2
+      },
+      {
+        "lemma": "parking",
+        "importance": 2
+      },
+      {
+        "lemma": "petrol",
+        "importance": 2
+      },
+      {
+        "lemma": "petrol station",
+        "importance": 2
+      },
+      {
+        "lemma": "signal",
+        "importance": 2
+      },
+      {
+        "lemma": "speed",
+        "importance": 2
+      },
+      {
+        "lemma": "steering wheel",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic jam",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic light",
+        "importance": 2
+      },
+      {
+        "lemma": "to be stuck in traffic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7f2e-8b20-30b2360f5701",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Велосипед и самокат",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bicycle",
+        "importance": 2
+      },
+      {
+        "lemma": "bike",
+        "importance": 2
+      },
+      {
+        "lemma": "cycle",
+        "importance": 2
+      },
+      {
+        "lemma": "helmet",
+        "importance": 2
+      },
+      {
+        "lemma": "motorbike",
+        "importance": 2
+      },
+      {
+        "lemma": "motorcycle",
+        "importance": 2
+      },
+      {
+        "lemma": "pedal",
+        "importance": 2
+      },
+      {
+        "lemma": "scooter",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-742a-bf40-65efa136cbda",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Задержки и проблемы",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "breakdown",
+        "importance": 2
+      },
+      {
+        "lemma": "delay",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      },
+      {
+        "lemma": "latecomer",
+        "importance": 2
+      },
+      {
+        "lemma": "problem",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic jam",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "late",
+        "importance": 2
+      },
+      {
+        "lemma": "stuck",
+        "importance": 2
+      },
+      {
+        "lemma": "to be stuck in traffic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-77b8-a15a-8db06c179deb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ориентиры в городе",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bridge",
+        "importance": 2
+      },
+      {
+        "lemma": "crossing",
+        "importance": 2
+      },
+      {
+        "lemma": "fountain",
+        "importance": 2
+      },
+      {
+        "lemma": "landmark",
+        "importance": 2
+      },
+      {
+        "lemma": "monument",
+        "importance": 2
+      },
+      {
+        "lemma": "roundabout",
+        "importance": 2
+      },
+      {
+        "lemma": "statue",
+        "importance": 2
+      },
+      {
+        "lemma": "tower",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7226-9366-d8898cfda328",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Карта и навигация",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "direction",
+        "importance": 2
+      },
+      {
+        "lemma": "location",
+        "importance": 2
+      },
+      {
+        "lemma": "map",
+        "importance": 2
+      },
+      {
+        "lemma": "navigation",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      },
+      {
+        "lemma": "navigate",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7439-92b9-57363cdd5f2f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Прогулка по городу",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "pedestrian",
+        "importance": 2
+      },
+      {
+        "lemma": "sidewalk",
+        "importance": 2
+      },
+      {
+        "lemma": "sightseeing",
+        "importance": 2
+      },
+      {
+        "lemma": "walk",
+        "importance": 2
+      },
+      {
+        "lemma": "walker",
+        "importance": 2
+      },
+      {
+        "lemma": "walking",
+        "importance": 2
+      },
+      {
+        "lemma": "explore",
+        "importance": 2
+      },
+      {
+        "lemma": "wander",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7167-8008-e4f3091fe3bd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Безопасность в городе",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "crime",
+        "importance": 2
+      },
+      {
+        "lemma": "danger",
+        "importance": 2
+      },
+      {
+        "lemma": "emergency",
+        "importance": 2
+      },
+      {
+        "lemma": "safety",
+        "importance": 2
+      },
+      {
+        "lemma": "theft",
+        "importance": 2
+      },
+      {
+        "lemma": "endanger",
+        "importance": 2
+      },
+      {
+        "lemma": "steal",
+        "importance": 2
+      },
+      {
+        "lemma": "dangerous",
+        "importance": 2
+      },
+      {
+        "lemma": "lost",
+        "importance": 2
+      },
+      {
+        "lemma": "safe",
+        "importance": 2
+      },
+      {
+        "lemma": "unsafe",
+        "importance": 2
+      },
+      {
+        "lemma": "to be lost",
+        "importance": 2
+      },
+      {
+        "lemma": "dangerously",
+        "importance": 2
+      },
+      {
+        "lemma": "safely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7945-92f3-3b831b61edc6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Доступная среда",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "accessibility",
+        "importance": 2
+      },
+      {
+        "lemma": "disability",
+        "importance": 2
+      },
+      {
+        "lemma": "elevator",
+        "importance": 2
+      },
+      {
+        "lemma": "lift",
+        "importance": 2
+      },
+      {
+        "lemma": "ramp",
+        "importance": 2
+      },
+      {
+        "lemma": "wheelchair",
+        "importance": 2
+      },
+      {
+        "lemma": "accessible",
+        "importance": 2
+      },
+      {
+        "lemma": "disabled",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1d6-38ba-7d3a-9334-ddcfd0dec8bc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ночной город",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "club",
+        "importance": 2
+      },
+      {
+        "lemma": "darkness",
+        "importance": 2
+      },
+      {
+        "lemma": "midnight",
+        "importance": 2
+      },
+      {
+        "lemma": "night",
+        "importance": 2
+      },
+      {
+        "lemma": "nightclub",
+        "importance": 2
+      },
+      {
+        "lemma": "nightlife",
+        "importance": 2
+      },
+      {
+        "lemma": "dark",
+        "importance": 2
+      },
+      {
+        "lemma": "overnight",
+        "importance": 2
+      },
+      {
+        "lemma": "good night",
+        "importance": 2
+      },
+      {
+        "lemma": "tonight",
+        "importance": 2
+      }
+    ]
   }
 ]

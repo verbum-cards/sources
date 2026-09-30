@@ -348,7 +348,10 @@ const MyDecksScreen = ({
             <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
           </Pressable>
 
-          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+          <Text
+            accessibilityRole="header"
+            style={[type.displayL, { fontSize: 32, color: colors.ink }]}
+          >
             {t('userDecks.title')}
           </Text>
 
@@ -493,7 +496,10 @@ const CategoryDetail = ({
           <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
         </Pressable>
 
-        <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+        <Text
+          accessibilityRole="header"
+          style={[type.displayL, { fontSize: 32, color: colors.ink }]}
+        >
           {t(`catalogCategories.${category}`)}
         </Text>
 
@@ -673,7 +679,10 @@ const DeckDetail = ({
         </Pressable>
 
         <View style={{ gap: space[2] }}>
-          <Text accessibilityRole="header" style={[type.displayL, { color: colors.ink }]}>
+          <Text
+            accessibilityRole="header"
+            style={[type.displayL, { fontSize: 32, color: colors.ink }]}
+          >
             {deck.title}
           </Text>
           {deck.context ? (

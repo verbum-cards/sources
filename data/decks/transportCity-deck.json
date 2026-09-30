@@ -1,0 +1,831 @@
+[
+  {
+    "id": "01a0f1d6-38ba-7bfb-8ca4-c5b501b4d5d7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как пройти",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "direction",
+        "importance": 2
+      },
+      {
+        "lemma": "corner",
+        "importance": 2
+      },
+      {
+        "lemma": "far",
+        "importance": 2
+      },
+      {
+        "lemma": "near",
+        "importance": 2
+      },
+      {
+        "lemma": "way",
+        "importance": 2
+      },
+      {
+        "lemma": "opposite",
+        "importance": 2
+      },
+      {
+        "lemma": "next to",
+        "importance": 2
+      },
+      {
+        "lemma": "between",
+        "importance": 2
+      },
+      {
+        "lemma": "crossing",
+        "importance": 2
+      },
+      {
+        "lemma": "crossroads",
+        "importance": 2
+      },
+      {
+        "lemma": "nearby",
+        "importance": 2
+      },
+      {
+        "lemma": "straight",
+        "importance": 2
+      },
+      {
+        "lemma": "Is it far from here?",
+        "importance": 2
+      },
+      {
+        "lemma": "Which way is...?",
+        "importance": 2
+      },
+      {
+        "lemma": "to go straight",
+        "importance": 2
+      },
+      {
+        "lemma": "to turn left / right",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this the shortest way?",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7bfe-a6b4-dc8a0f4b695d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Метро",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "subway",
+        "importance": 2
+      },
+      {
+        "lemma": "line",
+        "importance": 2
+      },
+      {
+        "lemma": "station",
+        "importance": 2
+      },
+      {
+        "lemma": "tube",
+        "importance": 2
+      },
+      {
+        "lemma": "entrance",
+        "importance": 2
+      },
+      {
+        "lemma": "escalator",
+        "importance": 2
+      },
+      {
+        "lemma": "exit",
+        "importance": 2
+      },
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "underground",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7ed2-984d-ff5fc0333ad3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Автобус и трамвай",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bus",
+        "importance": 2
+      },
+      {
+        "lemma": "stop",
+        "importance": 2
+      },
+      {
+        "lemma": "bus station",
+        "importance": 2
+      },
+      {
+        "lemma": "bus stop",
+        "importance": 2
+      },
+      {
+        "lemma": "tram",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-75d7-9a00-a56ef6f6a751",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Билеты и проездные",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "ticket",
+        "importance": 2
+      },
+      {
+        "lemma": "fare",
+        "importance": 2
+      },
+      {
+        "lemma": "pass",
+        "importance": 2
+      },
+      {
+        "lemma": "passenger",
+        "importance": 2
+      },
+      {
+        "lemma": "single",
+        "importance": 2
+      },
+      {
+        "lemma": "boarding pass",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-707c-b8b9-57af9bed004f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Такси",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "taxi",
+        "importance": 2
+      },
+      {
+        "lemma": "cab",
+        "importance": 2
+      },
+      {
+        "lemma": "driver",
+        "importance": 2
+      },
+      {
+        "lemma": "fare",
+        "importance": 2
+      },
+      {
+        "lemma": "ride",
+        "importance": 2
+      },
+      {
+        "lemma": "meter",
+        "importance": 2
+      },
+      {
+        "lemma": "taxi rank",
+        "importance": 2
+      },
+      {
+        "lemma": "to book a taxi",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-77bb-863b-a78cacfbcd2d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Приложения для поездок",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "rating",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "estimate",
+        "importance": 2
+      },
+      {
+        "lemma": "estimated",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      },
+      {
+        "lemma": "timetable",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7d8c-9443-0845f47ef314",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поезд",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "train",
+        "importance": 2
+      },
+      {
+        "lemma": "station",
+        "importance": 2
+      },
+      {
+        "lemma": "express",
+        "importance": 2
+      },
+      {
+        "lemma": "carriage",
+        "importance": 2
+      },
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "railway",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7e65-87a2-58a567d45055",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аренда машины",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "rent",
+        "importance": 2
+      },
+      {
+        "lemma": "rental",
+        "importance": 2
+      },
+      {
+        "lemma": "deposit",
+        "importance": 2
+      },
+      {
+        "lemma": "insurance",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-79e4-9a8f-3f764f057cf1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "За рулём",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "driver",
+        "importance": 2
+      },
+      {
+        "lemma": "drive",
+        "importance": 2
+      },
+      {
+        "lemma": "car park",
+        "importance": 2
+      },
+      {
+        "lemma": "driver's license",
+        "importance": 2
+      },
+      {
+        "lemma": "lane",
+        "importance": 2
+      },
+      {
+        "lemma": "petrol",
+        "importance": 2
+      },
+      {
+        "lemma": "petrol station",
+        "importance": 2
+      },
+      {
+        "lemma": "speed",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic light",
+        "importance": 2
+      },
+      {
+        "lemma": "fuel",
+        "importance": 2
+      },
+      {
+        "lemma": "parking",
+        "importance": 2
+      },
+      {
+        "lemma": "signal",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic jam",
+        "importance": 2
+      },
+      {
+        "lemma": "steering wheel",
+        "importance": 2
+      },
+      {
+        "lemma": "to be stuck in traffic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7f2e-8b20-30b2360f5701",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Велосипед и самокат",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bicycle",
+        "importance": 2
+      },
+      {
+        "lemma": "bike",
+        "importance": 2
+      },
+      {
+        "lemma": "cycle",
+        "importance": 2
+      },
+      {
+        "lemma": "helmet",
+        "importance": 2
+      },
+      {
+        "lemma": "motorcycle",
+        "importance": 2
+      },
+      {
+        "lemma": "motorbike",
+        "importance": 2
+      },
+      {
+        "lemma": "pedal",
+        "importance": 2
+      },
+      {
+        "lemma": "scooter",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-742a-bf40-65efa136cbda",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Задержки и проблемы",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "late",
+        "importance": 2
+      },
+      {
+        "lemma": "problem",
+        "importance": 2
+      },
+      {
+        "lemma": "delay",
+        "importance": 2
+      },
+      {
+        "lemma": "stuck",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      },
+      {
+        "lemma": "to be stuck in traffic",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic jam",
+        "importance": 2
+      },
+      {
+        "lemma": "latecomer",
+        "importance": 2
+      },
+      {
+        "lemma": "breakdown",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-77b8-a15a-8db06c179deb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ориентиры в городе",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "landmark",
+        "importance": 2
+      },
+      {
+        "lemma": "bridge",
+        "importance": 2
+      },
+      {
+        "lemma": "tower",
+        "importance": 2
+      },
+      {
+        "lemma": "roundabout",
+        "importance": 2
+      },
+      {
+        "lemma": "statue",
+        "importance": 2
+      },
+      {
+        "lemma": "crossing",
+        "importance": 2
+      },
+      {
+        "lemma": "fountain",
+        "importance": 2
+      },
+      {
+        "lemma": "monument",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7226-9366-d8898cfda328",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Карта и навигация",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "map",
+        "importance": 2
+      },
+      {
+        "lemma": "direction",
+        "importance": 2
+      },
+      {
+        "lemma": "location",
+        "importance": 2
+      },
+      {
+        "lemma": "navigate",
+        "importance": 2
+      },
+      {
+        "lemma": "navigation",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7439-92b9-57363cdd5f2f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Прогулка по городу",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "wander",
+        "importance": 2
+      },
+      {
+        "lemma": "walk",
+        "importance": 2
+      },
+      {
+        "lemma": "explore",
+        "importance": 2
+      },
+      {
+        "lemma": "sightseeing",
+        "importance": 2
+      },
+      {
+        "lemma": "walking",
+        "importance": 2
+      },
+      {
+        "lemma": "sidewalk",
+        "importance": 2
+      },
+      {
+        "lemma": "pedestrian",
+        "importance": 2
+      },
+      {
+        "lemma": "walker",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7167-8008-e4f3091fe3bd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Безопасность в городе",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "to be lost",
+        "importance": 2
+      },
+      {
+        "lemma": "crime",
+        "importance": 2
+      },
+      {
+        "lemma": "danger",
+        "importance": 2
+      },
+      {
+        "lemma": "dangerous",
+        "importance": 2
+      },
+      {
+        "lemma": "emergency",
+        "importance": 2
+      },
+      {
+        "lemma": "lost",
+        "importance": 2
+      },
+      {
+        "lemma": "safe",
+        "importance": 2
+      },
+      {
+        "lemma": "steal",
+        "importance": 2
+      },
+      {
+        "lemma": "endanger",
+        "importance": 2
+      },
+      {
+        "lemma": "safety",
+        "importance": 2
+      },
+      {
+        "lemma": "theft",
+        "importance": 2
+      },
+      {
+        "lemma": "unsafe",
+        "importance": 2
+      },
+      {
+        "lemma": "safely",
+        "importance": 2
+      },
+      {
+        "lemma": "dangerously",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7945-92f3-3b831b61edc6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Доступная среда",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "elevator",
+        "importance": 2
+      },
+      {
+        "lemma": "wheelchair",
+        "importance": 2
+      },
+      {
+        "lemma": "accessible",
+        "importance": 2
+      },
+      {
+        "lemma": "disability",
+        "importance": 2
+      },
+      {
+        "lemma": "disabled",
+        "importance": 2
+      },
+      {
+        "lemma": "lift",
+        "importance": 2
+      },
+      {
+        "lemma": "accessibility",
+        "importance": 2
+      },
+      {
+        "lemma": "ramp",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1d6-38ba-7d3a-9334-ddcfd0dec8bc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ночной город",
+    "categories": [
+      "transportCity"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "club",
+        "importance": 2
+      },
+      {
+        "lemma": "dark",
+        "importance": 2
+      },
+      {
+        "lemma": "good night",
+        "importance": 2
+      },
+      {
+        "lemma": "night",
+        "importance": 2
+      },
+      {
+        "lemma": "tonight",
+        "importance": 2
+      },
+      {
+        "lemma": "midnight",
+        "importance": 2
+      },
+      {
+        "lemma": "nightlife",
+        "importance": 2
+      },
+      {
+        "lemma": "overnight",
+        "importance": 2
+      },
+      {
+        "lemma": "darkness",
+        "importance": 2
+      },
+      {
+        "lemma": "nightclub",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

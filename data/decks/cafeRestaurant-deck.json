@@ -1,0 +1,808 @@
+[
+  {
+    "id": "01a0f1ce-b18d-7b12-97a1-6f45be587b0c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Столик и бронирование",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "waiter",
+        "importance": 2
+      },
+      {
+        "lemma": "waitress",
+        "importance": 2
+      },
+      {
+        "lemma": "reservation",
+        "importance": 2
+      },
+      {
+        "lemma": "booking",
+        "importance": 2
+      },
+      {
+        "lemma": "seat",
+        "importance": 2
+      },
+      {
+        "lemma": "table",
+        "importance": 2
+      },
+      {
+        "lemma": "wait",
+        "importance": 2
+      },
+      {
+        "lemma": "terrace",
+        "importance": 2
+      },
+      {
+        "lemma": "Could I have a window seat?",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-71e1-9306-65028d7430e4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Меню",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "menu",
+        "importance": 2
+      },
+      {
+        "lemma": "appetizer",
+        "importance": 2
+      },
+      {
+        "lemma": "course",
+        "importance": 2
+      },
+      {
+        "lemma": "dish",
+        "importance": 2
+      },
+      {
+        "lemma": "price",
+        "importance": 2
+      },
+      {
+        "lemma": "special",
+        "importance": 2
+      },
+      {
+        "lemma": "dessert",
+        "importance": 2
+      },
+      {
+        "lemma": "main course",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-74a0-b26d-f9a18a5471b5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Заказ",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "waiter",
+        "importance": 2
+      },
+      {
+        "lemma": "waitress",
+        "importance": 2
+      },
+      {
+        "lemma": "recommend",
+        "importance": 2
+      },
+      {
+        "lemma": "bring",
+        "importance": 2
+      },
+      {
+        "lemma": "ready",
+        "importance": 2
+      },
+      {
+        "lemma": "serve",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-709f-af05-f98186fe390a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как приготовить",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bake",
+        "importance": 2
+      },
+      {
+        "lemma": "boil",
+        "importance": 2
+      },
+      {
+        "lemma": "fry",
+        "importance": 2
+      },
+      {
+        "lemma": "roast",
+        "importance": 2
+      },
+      {
+        "lemma": "grill",
+        "importance": 2
+      },
+      {
+        "lemma": "steam",
+        "importance": 2
+      },
+      {
+        "lemma": "boiled",
+        "importance": 2
+      },
+      {
+        "lemma": "fried",
+        "importance": 2
+      },
+      {
+        "lemma": "grilled",
+        "importance": 2
+      },
+      {
+        "lemma": "raw",
+        "importance": 2
+      },
+      {
+        "lemma": "rare",
+        "importance": 2
+      },
+      {
+        "lemma": "medium",
+        "importance": 2
+      },
+      {
+        "lemma": "spicy",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7d68-aef5-1d66cc7b4f17",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кофейня",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "coffee",
+        "importance": 2
+      },
+      {
+        "lemma": "cup",
+        "importance": 2
+      },
+      {
+        "lemma": "mug",
+        "importance": 2
+      },
+      {
+        "lemma": "takeaway",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-737b-9d3c-66f52f2b7072",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Напитки",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "drink",
+        "importance": 2
+      },
+      {
+        "lemma": "juice",
+        "importance": 2
+      },
+      {
+        "lemma": "tea",
+        "importance": 2
+      },
+      {
+        "lemma": "water",
+        "importance": 2
+      },
+      {
+        "lemma": "beer",
+        "importance": 2
+      },
+      {
+        "lemma": "lemonade",
+        "importance": 2
+      },
+      {
+        "lemma": "mineral water",
+        "importance": 2
+      },
+      {
+        "lemma": "soda",
+        "importance": 2
+      },
+      {
+        "lemma": "soft drink",
+        "importance": 2
+      },
+      {
+        "lemma": "wine",
+        "importance": 2
+      },
+      {
+        "lemma": "cocktail",
+        "importance": 2
+      },
+      {
+        "lemma": "sparkling",
+        "importance": 2
+      },
+      {
+        "lemma": "drinkable",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7a00-8a86-6a9aed60a776",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Бар",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bar",
+        "importance": 2
+      },
+      {
+        "lemma": "beer",
+        "importance": 2
+      },
+      {
+        "lemma": "wine",
+        "importance": 2
+      },
+      {
+        "lemma": "alcohol",
+        "importance": 2
+      },
+      {
+        "lemma": "alcoholic",
+        "importance": 2
+      },
+      {
+        "lemma": "barman",
+        "importance": 2
+      },
+      {
+        "lemma": "pub",
+        "importance": 2
+      },
+      {
+        "lemma": "bartender",
+        "importance": 2
+      },
+      {
+        "lemma": "cocktail",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-73f5-a0d4-3c891c545af0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Счёт и чаевые",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bill",
+        "importance": 2
+      },
+      {
+        "lemma": "to split the bill",
+        "importance": 2
+      },
+      {
+        "lemma": "tip",
+        "importance": 2
+      },
+      {
+        "lemma": "to pay by card",
+        "importance": 2
+      },
+      {
+        "lemma": "receipt",
+        "importance": 2
+      },
+      {
+        "lemma": "card",
+        "importance": 2
+      },
+      {
+        "lemma": "check",
+        "importance": 2
+      },
+      {
+        "lemma": "credit card",
+        "importance": 2
+      },
+      {
+        "lemma": "pay",
+        "importance": 2
+      },
+      {
+        "lemma": "cash",
+        "importance": 2
+      },
+      {
+        "lemma": "split",
+        "importance": 2
+      },
+      {
+        "lemma": "cashpoint",
+        "importance": 2
+      },
+      {
+        "lemma": "debit card",
+        "importance": 2
+      },
+      {
+        "lemma": "payment",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7203-bba3-167c22fc886b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жалобы и проблемы",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cold",
+        "importance": 2
+      },
+      {
+        "lemma": "wrong",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "complain",
+        "importance": 2
+      },
+      {
+        "lemma": "complaint",
+        "importance": 2
+      },
+      {
+        "lemma": "mistake",
+        "importance": 2
+      },
+      {
+        "lemma": "replace",
+        "importance": 2
+      },
+      {
+        "lemma": "apology",
+        "importance": 2
+      },
+      {
+        "lemma": "refund",
+        "importance": 2
+      },
+      {
+        "lemma": "scold",
+        "importance": 2
+      },
+      {
+        "lemma": "replacement",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-78d3-b1c0-de5dc8994695",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аллергии и диеты",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "I'm allergic to...",
+        "importance": 2
+      },
+      {
+        "lemma": "diet",
+        "importance": 2
+      },
+      {
+        "lemma": "allergic",
+        "importance": 2
+      },
+      {
+        "lemma": "vegetarian",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7f66-9062-26e675faa1fe",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Фастфуд",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "burger",
+        "importance": 2
+      },
+      {
+        "lemma": "hamburger",
+        "importance": 2
+      },
+      {
+        "lemma": "pizza",
+        "importance": 2
+      },
+      {
+        "lemma": "sandwich",
+        "importance": 2
+      },
+      {
+        "lemma": "fast food",
+        "importance": 2
+      },
+      {
+        "lemma": "takeaway",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-702f-a23f-50ea4c77a655",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Доставка еды",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "deliver",
+        "importance": 2
+      },
+      {
+        "lemma": "delivery",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-77d4-9251-9f0eb8a1c17e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Завтрак и бранч",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "breakfast",
+        "importance": 2
+      },
+      {
+        "lemma": "egg",
+        "importance": 2
+      },
+      {
+        "lemma": "cereal",
+        "importance": 2
+      },
+      {
+        "lemma": "omelet",
+        "importance": 2
+      },
+      {
+        "lemma": "toast",
+        "importance": 2
+      },
+      {
+        "lemma": "bacon",
+        "importance": 2
+      },
+      {
+        "lemma": "pancake",
+        "importance": 2
+      },
+      {
+        "lemma": "Is breakfast included?",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7f71-b094-1249a94bd466",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вкус и впечатления",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "delicious",
+        "importance": 2
+      },
+      {
+        "lemma": "sweet",
+        "importance": 2
+      },
+      {
+        "lemma": "fresh",
+        "importance": 2
+      },
+      {
+        "lemma": "bitter",
+        "importance": 2
+      },
+      {
+        "lemma": "flavor",
+        "importance": 2
+      },
+      {
+        "lemma": "sour",
+        "importance": 2
+      },
+      {
+        "lemma": "spicy",
+        "importance": 2
+      },
+      {
+        "lemma": "taste",
+        "importance": 2
+      },
+      {
+        "lemma": "tasteless",
+        "importance": 2
+      },
+      {
+        "lemma": "tasty",
+        "importance": 2
+      },
+      {
+        "lemma": "salty",
+        "importance": 2
+      },
+      {
+        "lemma": "refreshing",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this dish spicy?",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7cee-b0a5-da315fb47a04",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уличная еда и рынок",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "stand",
+        "importance": 2
+      },
+      {
+        "lemma": "market",
+        "importance": 2
+      },
+      {
+        "lemma": "snack",
+        "importance": 2
+      },
+      {
+        "lemma": "stall",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-780e-a122-90b57e143075",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кухни мира",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "local",
+        "importance": 2
+      },
+      {
+        "lemma": "traditional",
+        "importance": 2
+      },
+      {
+        "lemma": "traditionally",
+        "importance": 2
+      },
+      {
+        "lemma": "ethnic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-78c6-9601-700fe634216a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Деловой обед",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "formal",
+        "importance": 2
+      },
+      {
+        "lemma": "formally",
+        "importance": 2
+      },
+      {
+        "lemma": "client",
+        "importance": 2
+      },
+      {
+        "lemma": "informal",
+        "importance": 2
+      },
+      {
+        "lemma": "formality",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ce-b18d-7f99-9c1f-4048aa06eeea",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Свидание в ресторане",
+    "categories": [
+      "cafeRestaurant"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "celebrate",
+        "importance": 2
+      },
+      {
+        "lemma": "date",
+        "importance": 2
+      },
+      {
+        "lemma": "anniversary",
+        "importance": 2
+      },
+      {
+        "lemma": "romantic",
+        "importance": 2
+      },
+      {
+        "lemma": "candle",
+        "importance": 2
+      },
+      {
+        "lemma": "propose",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]
