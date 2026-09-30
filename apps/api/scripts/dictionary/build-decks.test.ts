@@ -11,6 +11,7 @@ function makeSpec(overrides: Record<string, unknown> = {}) {
     title: 'Тестовая колода',
     categories: ['travelLeisure'],
     type: 'official',
+    importance: 2,
     items: [{ lemma: 'menu', importance: 3 }],
     ...overrides,
   };
@@ -30,10 +31,14 @@ test('DeckSpecSchema: неизвестная категория -> ошибка'
   assert.throws(() => DeckSpecSchema.parse(makeSpec({ categories: ['unknownCategory'] })));
 });
 
-test('DeckSpecSchema: importance вне 1|2|3 -> ошибка', () => {
+test('DeckSpecSchema: importance слова вне 1|2|3 -> ошибка', () => {
   assert.throws(() =>
     DeckSpecSchema.parse(makeSpec({ items: [{ lemma: 'menu', importance: 4 }] }))
   );
+});
+
+test('DeckSpecSchema: importance самой колоды вне 1|2|3 -> ошибка', () => {
+  assert.throws(() => DeckSpecSchema.parse(makeSpec({ importance: 4 })));
 });
 
 test('DeckSpecSchema: пустой title -> ошибка', () => {

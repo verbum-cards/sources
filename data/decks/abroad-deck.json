@@ -1,0 +1,1133 @@
+[
+  {
+    "id": "01a0f122-4ac9-7a5b-a120-87fb00995b6c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Банк",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bank",
+        "importance": 2
+      },
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "bank account",
+        "importance": 2
+      },
+      {
+        "lemma": "card",
+        "importance": 2
+      },
+      {
+        "lemma": "credit card",
+        "importance": 2
+      },
+      {
+        "lemma": "debit card",
+        "importance": 2
+      },
+      {
+        "lemma": "cash",
+        "importance": 2
+      },
+      {
+        "lemma": "money",
+        "importance": 2
+      },
+      {
+        "lemma": "to pay by card",
+        "importance": 2
+      },
+      {
+        "lemma": "balance",
+        "importance": 2
+      },
+      {
+        "lemma": "cashpoint",
+        "importance": 2
+      },
+      {
+        "lemma": "fee",
+        "importance": 2
+      },
+      {
+        "lemma": "payment",
+        "importance": 2
+      },
+      {
+        "lemma": "withdraw",
+        "importance": 2
+      },
+      {
+        "lemma": "withdrawal",
+        "importance": 2
+      },
+      {
+        "lemma": "salary",
+        "importance": 2
+      },
+      {
+        "lemma": "teller",
+        "importance": 2
+      },
+      {
+        "lemma": "overdraft",
+        "importance": 2
+      },
+      {
+        "lemma": "invoice",
+        "importance": 2
+      },
+      {
+        "lemma": "commission",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-74ac-a511-4a6907ff9266",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Коммунальные сервисы",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "water",
+        "importance": 2
+      },
+      {
+        "lemma": "gas",
+        "importance": 2
+      },
+      {
+        "lemma": "electricity",
+        "importance": 2
+      },
+      {
+        "lemma": "heating",
+        "importance": 2
+      },
+      {
+        "lemma": "central heating",
+        "importance": 2
+      },
+      {
+        "lemma": "meter",
+        "importance": 2
+      },
+      {
+        "lemma": "garbage",
+        "importance": 2
+      },
+      {
+        "lemma": "rubbish",
+        "importance": 2
+      },
+      {
+        "lemma": "trash",
+        "importance": 2
+      },
+      {
+        "lemma": "bin",
+        "importance": 2
+      },
+      {
+        "lemma": "dustbin",
+        "importance": 2
+      },
+      {
+        "lemma": "receipt",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7b38-84e3-196dc5e8fe0b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Государственные органы",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "government",
+        "importance": 2
+      },
+      {
+        "lemma": "official",
+        "importance": 2
+      },
+      {
+        "lemma": "officially",
+        "importance": 2
+      },
+      {
+        "lemma": "formal",
+        "importance": 2
+      },
+      {
+        "lemma": "formally",
+        "importance": 2
+      },
+      {
+        "lemma": "law",
+        "importance": 2
+      },
+      {
+        "lemma": "legal",
+        "importance": 2
+      },
+      {
+        "lemma": "legally",
+        "importance": 2
+      },
+      {
+        "lemma": "legislation",
+        "importance": 2
+      },
+      {
+        "lemma": "legislature",
+        "importance": 2
+      },
+      {
+        "lemma": "bureaucracy",
+        "importance": 2
+      },
+      {
+        "lemma": "bureaucratic",
+        "importance": 2
+      },
+      {
+        "lemma": "authorize",
+        "importance": 2
+      },
+      {
+        "lemma": "governmental",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-73d2-8f58-20e6e5991c4b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Полиция",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cop",
+        "importance": 2
+      },
+      {
+        "lemma": "police",
+        "importance": 2
+      },
+      {
+        "lemma": "police officer",
+        "importance": 2
+      },
+      {
+        "lemma": "police station",
+        "importance": 2
+      },
+      {
+        "lemma": "policeman",
+        "importance": 2
+      },
+      {
+        "lemma": "policewoman",
+        "importance": 2
+      },
+      {
+        "lemma": "crime",
+        "importance": 2
+      },
+      {
+        "lemma": "illegal",
+        "importance": 2
+      },
+      {
+        "lemma": "arrest",
+        "importance": 2
+      },
+      {
+        "lemma": "criminal",
+        "importance": 2
+      },
+      {
+        "lemma": "lawful",
+        "importance": 2
+      },
+      {
+        "lemma": "penalty",
+        "importance": 2
+      },
+      {
+        "lemma": "complaint",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7779-87a1-7c3f48a9de5f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Скорая помощь",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "doctor",
+        "importance": 2
+      },
+      {
+        "lemma": "hospital",
+        "importance": 2
+      },
+      {
+        "lemma": "nurse",
+        "importance": 2
+      },
+      {
+        "lemma": "medicine",
+        "importance": 2
+      },
+      {
+        "lemma": "ambulance",
+        "importance": 2
+      },
+      {
+        "lemma": "aid",
+        "importance": 2
+      },
+      {
+        "lemma": "assistance",
+        "importance": 2
+      },
+      {
+        "lemma": "cure",
+        "importance": 2
+      },
+      {
+        "lemma": "injury",
+        "importance": 2
+      },
+      {
+        "lemma": "pain",
+        "importance": 2
+      },
+      {
+        "lemma": "painful",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacy",
+        "importance": 2
+      },
+      {
+        "lemma": "prescription",
+        "importance": 2
+      },
+      {
+        "lemma": "treatment",
+        "importance": 2
+      },
+      {
+        "lemma": "physician",
+        "importance": 2
+      },
+      {
+        "lemma": "injured",
+        "importance": 2
+      },
+      {
+        "lemma": "headache",
+        "importance": 2
+      },
+      {
+        "lemma": "stomachache",
+        "importance": 2
+      },
+      {
+        "lemma": "toothache",
+        "importance": 2
+      },
+      {
+        "lemma": "sick",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-77d3-b4d0-77c5cf02eeff",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аренда жилья",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "flat",
+        "importance": 2
+      },
+      {
+        "lemma": "apartment",
+        "importance": 2
+      },
+      {
+        "lemma": "house",
+        "importance": 2
+      },
+      {
+        "lemma": "home",
+        "importance": 2
+      },
+      {
+        "lemma": "rent",
+        "importance": 2
+      },
+      {
+        "lemma": "tenant",
+        "importance": 2
+      },
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "landlord",
+        "importance": 2
+      },
+      {
+        "lemma": "landlady",
+        "importance": 2
+      },
+      {
+        "lemma": "lease",
+        "importance": 2
+      },
+      {
+        "lemma": "household",
+        "importance": 2
+      },
+      {
+        "lemma": "accommodation",
+        "importance": 2
+      },
+      {
+        "lemma": "cottage",
+        "importance": 2
+      },
+      {
+        "lemma": "residential",
+        "importance": 2
+      },
+      {
+        "lemma": "homeless",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7729-9a7f-0b4bfa2fa80d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Соседи и управляющая компания",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "neighbor",
+        "importance": 2
+      },
+      {
+        "lemma": "elevator",
+        "importance": 2
+      },
+      {
+        "lemma": "lift",
+        "importance": 2
+      },
+      {
+        "lemma": "manage",
+        "importance": 2
+      },
+      {
+        "lemma": "govern",
+        "importance": 2
+      },
+      {
+        "lemma": "next door",
+        "importance": 2
+      },
+      {
+        "lemma": "next-door",
+        "importance": 2
+      },
+      {
+        "lemma": "roommate",
+        "importance": 2
+      },
+      {
+        "lemma": "proximity",
+        "importance": 2
+      },
+      {
+        "lemma": "neighboring",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7f49-bc1f-4d71d72e98b1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Мастер на дом",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "tool",
+        "importance": 2
+      },
+      {
+        "lemma": "repair",
+        "importance": 2
+      },
+      {
+        "lemma": "mend",
+        "importance": 2
+      },
+      {
+        "lemma": "pipe",
+        "importance": 2
+      },
+      {
+        "lemma": "leak",
+        "importance": 2
+      },
+      {
+        "lemma": "master",
+        "importance": 2
+      },
+      {
+        "lemma": "plumber",
+        "importance": 2
+      },
+      {
+        "lemma": "electrician",
+        "importance": 2
+      },
+      {
+        "lemma": "plumbing",
+        "importance": 2
+      },
+      {
+        "lemma": "implement",
+        "importance": 2
+      },
+      {
+        "lemma": "mastery",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7917-ae08-1d2a884570c0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Виза и вид на жительство",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "nationality",
+        "importance": 2
+      },
+      {
+        "lemma": "citizen",
+        "importance": 2
+      },
+      {
+        "lemma": "citizenship",
+        "importance": 2
+      },
+      {
+        "lemma": "document",
+        "importance": 2
+      },
+      {
+        "lemma": "immigrate",
+        "importance": 2
+      },
+      {
+        "lemma": "immigration",
+        "importance": 2
+      },
+      {
+        "lemma": "passport",
+        "importance": 2
+      },
+      {
+        "lemma": "visa",
+        "importance": 2
+      },
+      {
+        "lemma": "immigrant",
+        "importance": 2
+      },
+      {
+        "lemma": "residence",
+        "importance": 2
+      },
+      {
+        "lemma": "passport control",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-799d-9234-daa4f5863d61",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Налоги",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "tax",
+        "importance": 2
+      },
+      {
+        "lemma": "income",
+        "importance": 2
+      },
+      {
+        "lemma": "revenue",
+        "importance": 2
+      },
+      {
+        "lemma": "accountant",
+        "importance": 2
+      },
+      {
+        "lemma": "financial",
+        "importance": 2
+      },
+      {
+        "lemma": "finance",
+        "importance": 2
+      },
+      {
+        "lemma": "fiscal",
+        "importance": 2
+      },
+      {
+        "lemma": "deduction",
+        "importance": 2
+      },
+      {
+        "lemma": "economic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7545-8670-09b1fc06f27f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Медицинская страховка",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "medical",
+        "importance": 2
+      },
+      {
+        "lemma": "insurance",
+        "importance": 2
+      },
+      {
+        "lemma": "health care",
+        "importance": 2
+      },
+      {
+        "lemma": "paramedic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7f9f-9d89-9ef8a2fbefd9",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Мобильная связь и интернет",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "Internet",
+        "importance": 2
+      },
+      {
+        "lemma": "web",
+        "importance": 2
+      },
+      {
+        "lemma": "network",
+        "importance": 2
+      },
+      {
+        "lemma": "broadband",
+        "importance": 2
+      },
+      {
+        "lemma": "contact",
+        "importance": 2
+      },
+      {
+        "lemma": "operator",
+        "importance": 2
+      },
+      {
+        "lemma": "telecommunications",
+        "importance": 2
+      },
+      {
+        "lemma": "fax",
+        "importance": 2
+      },
+      {
+        "lemma": "cybercafe",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7068-915d-221c77c18cf0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Почта и посылки",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "mail",
+        "importance": 2
+      },
+      {
+        "lemma": "post",
+        "importance": 2
+      },
+      {
+        "lemma": "post office",
+        "importance": 2
+      },
+      {
+        "lemma": "envelope",
+        "importance": 2
+      },
+      {
+        "lemma": "stamp",
+        "importance": 2
+      },
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "addressee",
+        "importance": 2
+      },
+      {
+        "lemma": "delivery",
+        "importance": 2
+      },
+      {
+        "lemma": "mailbox",
+        "importance": 2
+      },
+      {
+        "lemma": "package",
+        "importance": 2
+      },
+      {
+        "lemma": "parcel",
+        "importance": 2
+      },
+      {
+        "lemma": "postcard",
+        "importance": 2
+      },
+      {
+        "lemma": "postman",
+        "importance": 2
+      },
+      {
+        "lemma": "postal",
+        "importance": 2
+      },
+      {
+        "lemma": "shipping",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7a64-8c3f-43a98268b025",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Водительские права и машина",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "car",
+        "importance": 2
+      },
+      {
+        "lemma": "drive",
+        "importance": 2
+      },
+      {
+        "lemma": "driver's license",
+        "importance": 2
+      },
+      {
+        "lemma": "parking",
+        "importance": 2
+      },
+      {
+        "lemma": "motorist",
+        "importance": 2
+      },
+      {
+        "lemma": "steering wheel",
+        "importance": 2
+      },
+      {
+        "lemma": "garage",
+        "importance": 2
+      },
+      {
+        "lemma": "petrol",
+        "importance": 2
+      },
+      {
+        "lemma": "road",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic",
+        "importance": 2
+      },
+      {
+        "lemma": "traffic light",
+        "importance": 2
+      },
+      {
+        "lemma": "fuel",
+        "importance": 2
+      },
+      {
+        "lemma": "crash",
+        "importance": 2
+      },
+      {
+        "lemma": "lane",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7075-ba90-3b093252b1d3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жалобы и возвраты",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "complaint",
+        "importance": 2
+      },
+      {
+        "lemma": "exchange",
+        "importance": 2
+      },
+      {
+        "lemma": "return",
+        "importance": 2
+      },
+      {
+        "lemma": "guarantee",
+        "importance": 2
+      },
+      {
+        "lemma": "refund",
+        "importance": 2
+      },
+      {
+        "lemma": "warranty",
+        "importance": 2
+      },
+      {
+        "lemma": "swap",
+        "importance": 2
+      },
+      {
+        "lemma": "grievance",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7173-8c14-754a2f6b7356",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вывески и объявления",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "sign",
+        "importance": 2
+      },
+      {
+        "lemma": "announcement",
+        "importance": 2
+      },
+      {
+        "lemma": "noticeboard",
+        "importance": 2
+      },
+      {
+        "lemma": "signpost",
+        "importance": 2
+      },
+      {
+        "lemma": "warning",
+        "importance": 2
+      },
+      {
+        "lemma": "exclamation mark",
+        "importance": 2
+      },
+      {
+        "lemma": "question mark",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-72be-b229-09c0707db85d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Местные обычаи",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "culture",
+        "importance": 2
+      },
+      {
+        "lemma": "custom",
+        "importance": 2
+      },
+      {
+        "lemma": "tradition",
+        "importance": 2
+      },
+      {
+        "lemma": "traditional",
+        "importance": 2
+      },
+      {
+        "lemma": "polite",
+        "importance": 2
+      },
+      {
+        "lemma": "politely",
+        "importance": 2
+      },
+      {
+        "lemma": "civil",
+        "importance": 2
+      },
+      {
+        "lemma": "cultural",
+        "importance": 2
+      },
+      {
+        "lemma": "courtesy",
+        "importance": 2
+      },
+      {
+        "lemma": "heritage",
+        "importance": 2
+      },
+      {
+        "lemma": "impolite",
+        "importance": 2
+      },
+      {
+        "lemma": "traditionally",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-773f-a17f-5dc45c6f7998",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Экстренные ситуации",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "danger",
+        "importance": 2
+      },
+      {
+        "lemma": "endanger",
+        "importance": 2
+      },
+      {
+        "lemma": "fire station",
+        "importance": 2
+      },
+      {
+        "lemma": "firefighter",
+        "importance": 2
+      },
+      {
+        "lemma": "hazard",
+        "importance": 2
+      },
+      {
+        "lemma": "rescue",
+        "importance": 2
+      },
+      {
+        "lemma": "risk",
+        "importance": 2
+      },
+      {
+        "lemma": "safety",
+        "importance": 2
+      },
+      {
+        "lemma": "security",
+        "importance": 2
+      },
+      {
+        "lemma": "evacuation",
+        "importance": 2
+      },
+      {
+        "lemma": "fire brigade",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f122-4ac9-7017-a230-08438cc7ebf3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ветеринар",
+    "categories": [
+      "abroad"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "animal",
+        "importance": 2
+      },
+      {
+        "lemma": "pet",
+        "importance": 2
+      },
+      {
+        "lemma": "vet",
+        "importance": 2
+      },
+      {
+        "lemma": "breeding",
+        "importance": 2
+      },
+      {
+        "lemma": "vaccine",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

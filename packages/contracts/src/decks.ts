@@ -55,6 +55,11 @@ export const DeckSchema = z.object({
   type: DeckTypeSchema,
   // Обязателен для type: 'official' (FR-49) — проверяется на этапе публикации, не схемой.
   context: DeckContextSchema.optional(),
+  // Порядок показа внутри категории (decks.screen.tsx::CategoryDetail
+  // сортирует по убыванию) — та же шкала 1–3, что и у DeckItem.importance
+  // (слово внутри колоды), просто уровнем выше: не «насколько важно слово в
+  // колоде», а «насколько важна сама колода в категории».
+  importance: z.literal([1, 2, 3]),
 });
 export type Deck = z.infer<typeof DeckSchema>;
 

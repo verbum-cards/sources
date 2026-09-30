@@ -26,108 +26,206 @@ export function computeSeedSourceHash(): string {
   return (hash >>> 0).toString(16);
 }
 
-async function seedWord(db: DbExecutor, word: MockWord): Promise<void> {
+// Вставка батчами по BATCH_SIZE строк одним INSERT (несколько VALUES-групп),
+// не по строке за вызов — на ~8700 слов (~7 инсертов на слово) построчная
+// вставка означает ~60 000 отдельных проходов через мост JS↔нативный SQLite
+// (expo-sqlite), и это заметно на глаз при каждой пересборке пакета, даже в
+// транзакции: транзакция убирает лишний fsync на диск, но не сам мост — это
+// и есть сейчас основная стоимость. 100 строк × макс. 7 колонок = 700
+// параметров на INSERT, с запасом ниже типичного лимита SQLite (999).
+const BATCH_SIZE = 100;
+
+async function batchInsert(
+  db: DbExecutor,
+  table: string,
+  columns: readonly string[],
+  rows: readonly (readonly unknown[])[]
+): Promise<void> {
+  if (rows.length === 0) return;
+
+  const placeholderGroup = `(${columns.map(() => '?').join(', ')})`;
+  for (let i = 0; i < rows.length; i += BATCH_SIZE) {
+    const chunk = rows.slice(i, i + BATCH_SIZE);
+    const sql = `INSERT INTO ${table} (${columns.join(', ')}) VALUES ${chunk.map(() => placeholderGroup).join(', ')}`;
+    await db.run(sql, chunk.flat());
+  }
+}
+
+interface WordRows {
+  lexeme: unknown[][];
+  sense: unknown[][];
+  senseTag: unknown[][];
+  expression: unknown[][];
+  translation: unknown[][];
+  example: unknown[][];
+  exampleTranslation: unknown[][];
+  searchTerm: unknown[][];
+}
+
+function collectWordRows(word: MockWord, rows: WordRows): void {
   const translationId = `tr-${word.itemId}`;
 
   if (word.itemType === 'sense') {
     const lexemeId = `lex-${word.itemId}`;
-    await db.run(
-      `INSERT INTO lexeme (id, lang, lemma, lemma_norm, pos, ipa) VALUES (?, ?, ?, ?, ?, ?)`,
-      [lexemeId, 'en', word.lemma, normalize(word.lemma), word.pos ?? null, word.ipa ?? null]
-    );
-    await db.run(
-      `INSERT INTO sense (id, lexeme_id, concept_id, cefr, definition, status) VALUES (?, ?, ?, ?, ?, ?)`,
-      // concept_id: без межъязыковой модели концептов сид считает каждое
-      // значение своим собственным концептом — id совпадает с id значения.
-      [word.itemId, lexemeId, word.itemId, word.cefr, word.definition, 'verified']
-    );
+    rows.lexeme.push([
+      lexemeId,
+      'en',
+      word.lemma,
+      normalize(word.lemma),
+      word.pos ?? null,
+      word.ipa ?? null,
+    ]);
+    // concept_id: без межъязыковой модели концептов сид считает каждое
+    // значение своим собственным концептом — id совпадает с id значения.
+    rows.sense.push([word.itemId, lexemeId, word.itemId, word.cefr, word.definition, 'verified']);
     for (const goal of word.goals ?? []) {
-      await db.run(`INSERT INTO sense_tag (sense_id, tag) VALUES (?, ?)`, [word.itemId, goal]);
+      rows.senseTag.push([word.itemId, goal]);
     }
   } else {
-    await db.run(
-      `INSERT INTO expression (id, lang, text, text_norm, cefr, definition, status) VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [word.itemId, 'en', word.lemma, normalize(word.lemma), word.cefr, word.definition, 'verified']
-    );
-  }
-
-  await db.run(
-    `INSERT INTO translation (id, target_type, target_id, lang, text, source, verified) VALUES (?, ?, ?, ?, ?, ?, ?)`,
-    [translationId, word.itemType, word.itemId, 'ru', word.translation, 'seed', 1]
-  );
-  // Порядок примеров — порядок вставки: пакет читает их обратно по rowid
-  // (lookup.ts), явной колонки-позиции у example нет.
-  for (const [index, example] of word.examples.entries()) {
-    const exampleId = `ex-${word.itemId}-${index}`;
-    await db.run(
-      `INSERT INTO example (id, target_type, target_id, lang, text) VALUES (?, ?, ?, ?, ?)`,
-      [exampleId, word.itemType, word.itemId, 'en', example.text]
-    );
-    await db.run(`INSERT INTO example_translation (example_id, lang, text) VALUES (?, ?, ?)`, [
-      exampleId,
-      'ru',
-      example.translation,
+    rows.expression.push([
+      word.itemId,
+      'en',
+      word.lemma,
+      normalize(word.lemma),
+      word.cefr,
+      word.definition,
+      'verified',
     ]);
   }
+
+  rows.translation.push([
+    translationId,
+    word.itemType,
+    word.itemId,
+    'ru',
+    word.translation,
+    'seed',
+    1,
+  ]);
+  // Порядок примеров — порядок вставки: пакет читает их обратно по rowid
+  // (lookup.ts), явной колонки-позиции у example нет.
+  word.examples.forEach((example, index) => {
+    const exampleId = `ex-${word.itemId}-${index}`;
+    rows.example.push([exampleId, word.itemType, word.itemId, 'en', example.text]);
+    rows.exampleTranslation.push([exampleId, 'ru', example.translation]);
+  });
   // kind: 'lemma' — единственный вид поискового термина, который сид умеет
   // строить сейчас (лемма/текст фразы на изучаемом языке); поиск по переводу
   // или по словоформам (word_form) сюда пока не входит.
-  await db.run(
-    `INSERT INTO search_term (term_norm, kind, lang, item_type, item_id, rank) VALUES (?, ?, ?, ?, ?, ?)`,
-    [normalize(word.lemma), 'lemma', 'en', word.itemType, word.itemId, 0]
-  );
+  rows.searchTerm.push([normalize(word.lemma), 'lemma', 'en', word.itemType, word.itemId, 0]);
 }
 
-async function seedDeck(db: DbExecutor, deck: MockDeck): Promise<void> {
-  await db.run(
-    `INSERT INTO deck (id, lang, native_lang, title, type, context) VALUES (?, ?, ?, ?, ?, ?)`,
-    [
-      deck.id,
-      deck.lang,
-      deck.nativeLang,
-      deck.title,
-      deck.type,
-      deck.context ? JSON.stringify(deck.context) : null,
-    ]
-  );
-  for (const category of deck.categories) {
-    await db.run(`INSERT INTO deck_category (deck_id, category) VALUES (?, ?)`, [
-      deck.id,
-      category,
-    ]);
-  }
-  for (let position = 0; position < deck.items.length; position += 1) {
-    const word = deck.items[position];
-    await db.run(
-      `INSERT INTO deck_item (deck_id, item_type, item_id, cefr, position, importance) VALUES (?, ?, ?, ?, ?, ?)`,
-      [deck.id, word.itemType, word.itemId, word.cefr, position, word.importance]
-    );
-  }
+interface DeckRows {
+  deck: unknown[][];
+  deckCategory: unknown[][];
+  deckItem: unknown[][];
 }
 
 // Слова из колод уже входят в WORDS (mocks/decks.ts ссылается на них по
-// лемме) — seedWord для них не повторяется в seedDeck, там только сама
+// лемме) — collectWordRows для них не повторяется здесь, тут только сама
 // колода и её ссылки (deck_item) на уже засеянные значения/выражения.
-//
+function collectDeckRows(deck: MockDeck, rows: DeckRows): void {
+  rows.deck.push([
+    deck.id,
+    deck.lang,
+    deck.nativeLang,
+    deck.title,
+    deck.type,
+    deck.context ? JSON.stringify(deck.context) : null,
+  ]);
+  for (const category of deck.categories) {
+    rows.deckCategory.push([deck.id, category]);
+  }
+  deck.items.forEach((word, position) => {
+    rows.deckItem.push([deck.id, word.itemType, word.itemId, word.cefr, position, word.importance]);
+  });
+}
+
 // Одна транзакция на весь сид, а не по инструкции — без неё каждый INSERT
-// (их ~6 на слово: lexeme, sense, translation, 2×example+перевод,
-// search_term) коммитится на диск отдельно; при росте словаря до тысяч слов
-// (skill dictionary-pipeline целится в 5 000–20 000) это разворачивается на
-// устройстве при первом запуске и легко выйдет за бюджет холодного старта
-// (apps/mobile/CLAUDE.md). BEGIN EXCLUSIVE — тот же приём, что и в
+// коммитился бы на диск отдельно. BEGIN EXCLUSIVE — тот же приём, что и в
 // migrate.ts, пакет в этот момент ещё не отдан читателям.
 export async function seedDictionaryPackage(
   db: DbExecutor,
   builtAt: string = new Date().toISOString()
 ): Promise<void> {
+  const wordRows: WordRows = {
+    lexeme: [],
+    sense: [],
+    senseTag: [],
+    expression: [],
+    translation: [],
+    example: [],
+    exampleTranslation: [],
+    searchTerm: [],
+  };
+  for (const word of WORDS) {
+    collectWordRows(word, wordRows);
+  }
+
+  const deckRows: DeckRows = { deck: [], deckCategory: [], deckItem: [] };
+  for (const deck of DECKS) {
+    collectDeckRows(deck, deckRows);
+  }
+
   await db.execRaw('BEGIN EXCLUSIVE');
   try {
-    for (const word of WORDS) {
-      await seedWord(db, word);
-    }
-    for (const deck of DECKS) {
-      await seedDeck(db, deck);
-    }
+    await batchInsert(
+      db,
+      'lexeme',
+      ['id', 'lang', 'lemma', 'lemma_norm', 'pos', 'ipa'],
+      wordRows.lexeme
+    );
+    await batchInsert(
+      db,
+      'sense',
+      ['id', 'lexeme_id', 'concept_id', 'cefr', 'definition', 'status'],
+      wordRows.sense
+    );
+    await batchInsert(db, 'sense_tag', ['sense_id', 'tag'], wordRows.senseTag);
+    await batchInsert(
+      db,
+      'expression',
+      ['id', 'lang', 'text', 'text_norm', 'cefr', 'definition', 'status'],
+      wordRows.expression
+    );
+    await batchInsert(
+      db,
+      'translation',
+      ['id', 'target_type', 'target_id', 'lang', 'text', 'source', 'verified'],
+      wordRows.translation
+    );
+    await batchInsert(
+      db,
+      'example',
+      ['id', 'target_type', 'target_id', 'lang', 'text'],
+      wordRows.example
+    );
+    await batchInsert(
+      db,
+      'example_translation',
+      ['example_id', 'lang', 'text'],
+      wordRows.exampleTranslation
+    );
+    await batchInsert(
+      db,
+      'search_term',
+      ['term_norm', 'kind', 'lang', 'item_type', 'item_id', 'rank'],
+      wordRows.searchTerm
+    );
+
+    await batchInsert(
+      db,
+      'deck',
+      ['id', 'lang', 'native_lang', 'title', 'type', 'context'],
+      deckRows.deck
+    );
+    await batchInsert(db, 'deck_category', ['deck_id', 'category'], deckRows.deckCategory);
+    await batchInsert(
+      db,
+      'deck_item',
+      ['deck_id', 'item_type', 'item_id', 'cefr', 'position', 'importance'],
+      deckRows.deckItem
+    );
 
     const senseCount = WORDS.filter((word) => word.itemType === 'sense').length;
     await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'content_version'`, ['1']);

@@ -26,12 +26,18 @@ export const CATEGORY_ORDER: readonly DeckCategory[] = DeckCategorySchema.option
 // Колоды одной категории каталога (ADR-35) — колода может быть в нескольких
 // категориях сразу (categories — массив), у каждой категории свой экран
 // (decks.screen.tsx), поэтому группировка всех категорий разом (как раньше
-// groupDecksByGoal) больше не нужна — только выборка под одну.
+// groupDecksByGoal) больше не нужна — только выборка под одну. Сортировка по
+// deck.importance (по убыванию, 3 — сначала) — та же логика приоритета, что
+// уже была у слов внутри колоды, просто уровнем выше: какую колоду показать
+// в начале списка категории. При равном importance — порядок как в DECKS
+// (Array.prototype.sort стабильна), не переставляется случайно.
 export function getDecksByCategory(
   decks: readonly MockDeck[],
   category: DeckCategory
 ): readonly MockDeck[] {
-  return decks.filter((deck) => deck.categories.includes(category));
+  return decks
+    .filter((deck) => deck.categories.includes(category))
+    .sort((a, b) => b.importance - a.importance);
 }
 
 // Порядок для разрешения ничьей в getDeckLevel — при равном числе слов на

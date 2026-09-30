@@ -1,0 +1,1712 @@
+[
+  {
+    "id": "01a0f0d1-0fb3-7cc1-a6e1-5d7d3796bdea",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Цвета и оттенки",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "black",
+        "importance": 2
+      },
+      {
+        "lemma": "blue",
+        "importance": 2
+      },
+      {
+        "lemma": "brown",
+        "importance": 2
+      },
+      {
+        "lemma": "gray",
+        "importance": 2
+      },
+      {
+        "lemma": "green",
+        "importance": 2
+      },
+      {
+        "lemma": "orange",
+        "importance": 2
+      },
+      {
+        "lemma": "pink",
+        "importance": 2
+      },
+      {
+        "lemma": "purple",
+        "importance": 2
+      },
+      {
+        "lemma": "red",
+        "importance": 2
+      },
+      {
+        "lemma": "white",
+        "importance": 2
+      },
+      {
+        "lemma": "yellow",
+        "importance": 2
+      },
+      {
+        "lemma": "gold",
+        "importance": 2
+      },
+      {
+        "lemma": "color",
+        "importance": 2
+      },
+      {
+        "lemma": "bright",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7bf8-bac4-d77a1858e7ff",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Направление",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "above",
+        "importance": 2
+      },
+      {
+        "lemma": "around",
+        "importance": 2
+      },
+      {
+        "lemma": "away",
+        "importance": 2
+      },
+      {
+        "lemma": "back",
+        "importance": 2
+      },
+      {
+        "lemma": "behind",
+        "importance": 2
+      },
+      {
+        "lemma": "below",
+        "importance": 2
+      },
+      {
+        "lemma": "between",
+        "importance": 2
+      },
+      {
+        "lemma": "down",
+        "importance": 2
+      },
+      {
+        "lemma": "near",
+        "importance": 2
+      },
+      {
+        "lemma": "out",
+        "importance": 2
+      },
+      {
+        "lemma": "outside",
+        "importance": 2
+      },
+      {
+        "lemma": "over",
+        "importance": 2
+      },
+      {
+        "lemma": "straight",
+        "importance": 2
+      },
+      {
+        "lemma": "through",
+        "importance": 2
+      },
+      {
+        "lemma": "under",
+        "importance": 2
+      },
+      {
+        "lemma": "up",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7d78-a3bc-1435dde6cac6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Еда и напитки",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "apple",
+        "importance": 2
+      },
+      {
+        "lemma": "banana",
+        "importance": 2
+      },
+      {
+        "lemma": "bread",
+        "importance": 2
+      },
+      {
+        "lemma": "breakfast",
+        "importance": 2
+      },
+      {
+        "lemma": "cake",
+        "importance": 2
+      },
+      {
+        "lemma": "cheese",
+        "importance": 2
+      },
+      {
+        "lemma": "chicken",
+        "importance": 2
+      },
+      {
+        "lemma": "coffee",
+        "importance": 2
+      },
+      {
+        "lemma": "dinner",
+        "importance": 2
+      },
+      {
+        "lemma": "egg",
+        "importance": 2
+      },
+      {
+        "lemma": "fish",
+        "importance": 2
+      },
+      {
+        "lemma": "food",
+        "importance": 2
+      },
+      {
+        "lemma": "fruit",
+        "importance": 2
+      },
+      {
+        "lemma": "juice",
+        "importance": 2
+      },
+      {
+        "lemma": "lunch",
+        "importance": 2
+      },
+      {
+        "lemma": "meat",
+        "importance": 2
+      },
+      {
+        "lemma": "milk",
+        "importance": 2
+      },
+      {
+        "lemma": "rice",
+        "importance": 2
+      },
+      {
+        "lemma": "tea",
+        "importance": 2
+      },
+      {
+        "lemma": "vegetable",
+        "importance": 2
+      },
+      {
+        "lemma": "water",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7581-906d-9d89eeadea59",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Приветствия и прощания",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "hello",
+        "importance": 2
+      },
+      {
+        "lemma": "hi",
+        "importance": 2
+      },
+      {
+        "lemma": "good morning",
+        "importance": 2
+      },
+      {
+        "lemma": "good afternoon",
+        "importance": 2
+      },
+      {
+        "lemma": "good night",
+        "importance": 2
+      },
+      {
+        "lemma": "welcome",
+        "importance": 2
+      },
+      {
+        "lemma": "bye",
+        "importance": 2
+      },
+      {
+        "lemma": "greet",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-7626-9192-dd3c0c3b75fe",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вежливые слова",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "please",
+        "importance": 2
+      },
+      {
+        "lemma": "thank",
+        "importance": 2
+      },
+      {
+        "lemma": "thanks",
+        "importance": 2
+      },
+      {
+        "lemma": "sorry",
+        "importance": 2
+      },
+      {
+        "lemma": "pardon",
+        "importance": 2
+      },
+      {
+        "lemma": "excuse",
+        "importance": 2
+      },
+      {
+        "lemma": "sir",
+        "importance": 2
+      },
+      {
+        "lemma": "Mr.",
+        "importance": 2
+      },
+      {
+        "lemma": "Mrs.",
+        "importance": 2
+      },
+      {
+        "lemma": "Miss",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-713a-a117-d6250e4d7fbb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Местоимения",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "I",
+        "importance": 2
+      },
+      {
+        "lemma": "you",
+        "importance": 2
+      },
+      {
+        "lemma": "he",
+        "importance": 2
+      },
+      {
+        "lemma": "she",
+        "importance": 2
+      },
+      {
+        "lemma": "it",
+        "importance": 2
+      },
+      {
+        "lemma": "we",
+        "importance": 2
+      },
+      {
+        "lemma": "they",
+        "importance": 2
+      },
+      {
+        "lemma": "me",
+        "importance": 2
+      },
+      {
+        "lemma": "him",
+        "importance": 2
+      },
+      {
+        "lemma": "her",
+        "importance": 2
+      },
+      {
+        "lemma": "us",
+        "importance": 2
+      },
+      {
+        "lemma": "them",
+        "importance": 2
+      },
+      {
+        "lemma": "mine",
+        "importance": 2
+      },
+      {
+        "lemma": "yours",
+        "importance": 2
+      },
+      {
+        "lemma": "his",
+        "importance": 2
+      },
+      {
+        "lemma": "hers",
+        "importance": 2
+      },
+      {
+        "lemma": "ours",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-74c0-a407-97fd548eb2eb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Числа до 20",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "one",
+        "importance": 2
+      },
+      {
+        "lemma": "two",
+        "importance": 2
+      },
+      {
+        "lemma": "three",
+        "importance": 2
+      },
+      {
+        "lemma": "four",
+        "importance": 2
+      },
+      {
+        "lemma": "five",
+        "importance": 2
+      },
+      {
+        "lemma": "six",
+        "importance": 2
+      },
+      {
+        "lemma": "seven",
+        "importance": 2
+      },
+      {
+        "lemma": "eight",
+        "importance": 2
+      },
+      {
+        "lemma": "nine",
+        "importance": 2
+      },
+      {
+        "lemma": "ten",
+        "importance": 2
+      },
+      {
+        "lemma": "eleven",
+        "importance": 2
+      },
+      {
+        "lemma": "twelve",
+        "importance": 2
+      },
+      {
+        "lemma": "thirteen",
+        "importance": 2
+      },
+      {
+        "lemma": "fourteen",
+        "importance": 2
+      },
+      {
+        "lemma": "fifteen",
+        "importance": 2
+      },
+      {
+        "lemma": "sixteen",
+        "importance": 2
+      },
+      {
+        "lemma": "seventeen",
+        "importance": 2
+      },
+      {
+        "lemma": "eighteen",
+        "importance": 2
+      },
+      {
+        "lemma": "nineteen",
+        "importance": 2
+      },
+      {
+        "lemma": "twenty",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-7b0a-a3a8-6598ad7be533",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Семья",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "mother",
+        "importance": 2
+      },
+      {
+        "lemma": "father",
+        "importance": 2
+      },
+      {
+        "lemma": "brother",
+        "importance": 2
+      },
+      {
+        "lemma": "sister",
+        "importance": 2
+      },
+      {
+        "lemma": "son",
+        "importance": 2
+      },
+      {
+        "lemma": "daughter",
+        "importance": 2
+      },
+      {
+        "lemma": "grandfather",
+        "importance": 2
+      },
+      {
+        "lemma": "grandmother",
+        "importance": 2
+      },
+      {
+        "lemma": "aunt",
+        "importance": 2
+      },
+      {
+        "lemma": "uncle",
+        "importance": 2
+      },
+      {
+        "lemma": "cousin",
+        "importance": 2
+      },
+      {
+        "lemma": "husband",
+        "importance": 2
+      },
+      {
+        "lemma": "wife",
+        "importance": 2
+      },
+      {
+        "lemma": "parent",
+        "importance": 2
+      },
+      {
+        "lemma": "baby",
+        "importance": 2
+      },
+      {
+        "lemma": "family",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7395-be1b-099f4b74659c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Тело",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "arm",
+        "importance": 2
+      },
+      {
+        "lemma": "body",
+        "importance": 2
+      },
+      {
+        "lemma": "bone",
+        "importance": 2
+      },
+      {
+        "lemma": "brain",
+        "importance": 2
+      },
+      {
+        "lemma": "ear",
+        "importance": 2
+      },
+      {
+        "lemma": "eye",
+        "importance": 2
+      },
+      {
+        "lemma": "face",
+        "importance": 2
+      },
+      {
+        "lemma": "hair",
+        "importance": 2
+      },
+      {
+        "lemma": "hand",
+        "importance": 2
+      },
+      {
+        "lemma": "head",
+        "importance": 2
+      },
+      {
+        "lemma": "heart",
+        "importance": 2
+      },
+      {
+        "lemma": "knee",
+        "importance": 2
+      },
+      {
+        "lemma": "leg",
+        "importance": 2
+      },
+      {
+        "lemma": "mouth",
+        "importance": 2
+      },
+      {
+        "lemma": "neck",
+        "importance": 2
+      },
+      {
+        "lemma": "nose",
+        "importance": 2
+      },
+      {
+        "lemma": "shoulder",
+        "importance": 2
+      },
+      {
+        "lemma": "tooth",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-72fd-9145-47fbe282b70a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Одежда",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cap",
+        "importance": 2
+      },
+      {
+        "lemma": "clothes",
+        "importance": 2
+      },
+      {
+        "lemma": "coat",
+        "importance": 2
+      },
+      {
+        "lemma": "dress",
+        "importance": 2
+      },
+      {
+        "lemma": "hat",
+        "importance": 2
+      },
+      {
+        "lemma": "jacket",
+        "importance": 2
+      },
+      {
+        "lemma": "jeans",
+        "importance": 2
+      },
+      {
+        "lemma": "pants",
+        "importance": 2
+      },
+      {
+        "lemma": "shirt",
+        "importance": 2
+      },
+      {
+        "lemma": "shoe",
+        "importance": 2
+      },
+      {
+        "lemma": "skirt",
+        "importance": 2
+      },
+      {
+        "lemma": "trousers",
+        "importance": 2
+      },
+      {
+        "lemma": "T-shirt",
+        "importance": 2
+      },
+      {
+        "lemma": "glasses",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-76fa-9a4b-baf97f67eb26",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дом и комнаты",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bathroom",
+        "importance": 2
+      },
+      {
+        "lemma": "bedroom",
+        "importance": 2
+      },
+      {
+        "lemma": "dining room",
+        "importance": 2
+      },
+      {
+        "lemma": "house",
+        "importance": 2
+      },
+      {
+        "lemma": "home",
+        "importance": 2
+      },
+      {
+        "lemma": "kitchen",
+        "importance": 2
+      },
+      {
+        "lemma": "living room",
+        "importance": 2
+      },
+      {
+        "lemma": "door",
+        "importance": 2
+      },
+      {
+        "lemma": "window",
+        "importance": 2
+      },
+      {
+        "lemma": "floor",
+        "importance": 2
+      },
+      {
+        "lemma": "wall",
+        "importance": 2
+      },
+      {
+        "lemma": "yard",
+        "importance": 2
+      },
+      {
+        "lemma": "garden",
+        "importance": 2
+      },
+      {
+        "lemma": "hall",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7338-a25f-318d742c533b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Предметы вокруг",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bag",
+        "importance": 2
+      },
+      {
+        "lemma": "ball",
+        "importance": 2
+      },
+      {
+        "lemma": "book",
+        "importance": 2
+      },
+      {
+        "lemma": "bottle",
+        "importance": 2
+      },
+      {
+        "lemma": "bowl",
+        "importance": 2
+      },
+      {
+        "lemma": "box",
+        "importance": 2
+      },
+      {
+        "lemma": "chair",
+        "importance": 2
+      },
+      {
+        "lemma": "clock",
+        "importance": 2
+      },
+      {
+        "lemma": "computer",
+        "importance": 2
+      },
+      {
+        "lemma": "cup",
+        "importance": 2
+      },
+      {
+        "lemma": "knife",
+        "importance": 2
+      },
+      {
+        "lemma": "letter",
+        "importance": 2
+      },
+      {
+        "lemma": "notebook",
+        "importance": 2
+      },
+      {
+        "lemma": "paper",
+        "importance": 2
+      },
+      {
+        "lemma": "pen",
+        "importance": 2
+      },
+      {
+        "lemma": "pencil",
+        "importance": 2
+      },
+      {
+        "lemma": "phone",
+        "importance": 2
+      },
+      {
+        "lemma": "picture",
+        "importance": 2
+      },
+      {
+        "lemma": "table",
+        "importance": 2
+      },
+      {
+        "lemma": "toy",
+        "importance": 2
+      },
+      {
+        "lemma": "umbrella",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-78d7-a6e2-ba5b12f6adec",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дни недели и месяцы",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "Monday",
+        "importance": 2
+      },
+      {
+        "lemma": "Tuesday",
+        "importance": 2
+      },
+      {
+        "lemma": "Wednesday",
+        "importance": 2
+      },
+      {
+        "lemma": "Thursday",
+        "importance": 2
+      },
+      {
+        "lemma": "Friday",
+        "importance": 2
+      },
+      {
+        "lemma": "Saturday",
+        "importance": 2
+      },
+      {
+        "lemma": "Sunday",
+        "importance": 2
+      },
+      {
+        "lemma": "January",
+        "importance": 2
+      },
+      {
+        "lemma": "February",
+        "importance": 2
+      },
+      {
+        "lemma": "March",
+        "importance": 2
+      },
+      {
+        "lemma": "April",
+        "importance": 2
+      },
+      {
+        "lemma": "May",
+        "importance": 2
+      },
+      {
+        "lemma": "June",
+        "importance": 2
+      },
+      {
+        "lemma": "July",
+        "importance": 2
+      },
+      {
+        "lemma": "August",
+        "importance": 2
+      },
+      {
+        "lemma": "September",
+        "importance": 2
+      },
+      {
+        "lemma": "October",
+        "importance": 2
+      },
+      {
+        "lemma": "November",
+        "importance": 2
+      },
+      {
+        "lemma": "December",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7f43-8720-973904e2b56d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Время и часы",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "hour",
+        "importance": 2
+      },
+      {
+        "lemma": "minute",
+        "importance": 2
+      },
+      {
+        "lemma": "o'clock",
+        "importance": 2
+      },
+      {
+        "lemma": "morning",
+        "importance": 2
+      },
+      {
+        "lemma": "afternoon",
+        "importance": 2
+      },
+      {
+        "lemma": "evening",
+        "importance": 2
+      },
+      {
+        "lemma": "night",
+        "importance": 2
+      },
+      {
+        "lemma": "today",
+        "importance": 2
+      },
+      {
+        "lemma": "tomorrow",
+        "importance": 2
+      },
+      {
+        "lemma": "yesterday",
+        "importance": 2
+      },
+      {
+        "lemma": "now",
+        "importance": 2
+      },
+      {
+        "lemma": "late",
+        "importance": 2
+      },
+      {
+        "lemma": "early",
+        "importance": 2
+      },
+      {
+        "lemma": "time",
+        "importance": 2
+      },
+      {
+        "lemma": "watch",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-7cd9-b1e2-3bac7a59aeb8",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Погода",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cloud",
+        "importance": 2
+      },
+      {
+        "lemma": "cloudy",
+        "importance": 2
+      },
+      {
+        "lemma": "cold",
+        "importance": 2
+      },
+      {
+        "lemma": "foggy",
+        "importance": 2
+      },
+      {
+        "lemma": "hot",
+        "importance": 2
+      },
+      {
+        "lemma": "rain",
+        "importance": 2
+      },
+      {
+        "lemma": "rainy",
+        "importance": 2
+      },
+      {
+        "lemma": "snow",
+        "importance": 2
+      },
+      {
+        "lemma": "snowy",
+        "importance": 2
+      },
+      {
+        "lemma": "sun",
+        "importance": 2
+      },
+      {
+        "lemma": "sunny",
+        "importance": 2
+      },
+      {
+        "lemma": "warm",
+        "importance": 2
+      },
+      {
+        "lemma": "weather",
+        "importance": 2
+      },
+      {
+        "lemma": "wind",
+        "importance": 2
+      },
+      {
+        "lemma": "sky",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-7ce1-ab02-a8ddd6732e85",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Животные",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "animal",
+        "importance": 2
+      },
+      {
+        "lemma": "bat",
+        "importance": 2
+      },
+      {
+        "lemma": "bear",
+        "importance": 2
+      },
+      {
+        "lemma": "bee",
+        "importance": 2
+      },
+      {
+        "lemma": "bird",
+        "importance": 2
+      },
+      {
+        "lemma": "butterfly",
+        "importance": 2
+      },
+      {
+        "lemma": "cat",
+        "importance": 2
+      },
+      {
+        "lemma": "cow",
+        "importance": 2
+      },
+      {
+        "lemma": "dog",
+        "importance": 2
+      },
+      {
+        "lemma": "fly",
+        "importance": 2
+      },
+      {
+        "lemma": "frog",
+        "importance": 2
+      },
+      {
+        "lemma": "horse",
+        "importance": 2
+      },
+      {
+        "lemma": "lion",
+        "importance": 2
+      },
+      {
+        "lemma": "monkey",
+        "importance": 2
+      },
+      {
+        "lemma": "mouse",
+        "importance": 2
+      },
+      {
+        "lemma": "pig",
+        "importance": 2
+      },
+      {
+        "lemma": "rabbit",
+        "importance": 2
+      },
+      {
+        "lemma": "sheep",
+        "importance": 2
+      },
+      {
+        "lemma": "snake",
+        "importance": 2
+      },
+      {
+        "lemma": "tiger",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-7151-8568-17ddf4ed08a1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Глаголы-действия",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "go",
+        "importance": 2
+      },
+      {
+        "lemma": "come",
+        "importance": 2
+      },
+      {
+        "lemma": "eat",
+        "importance": 2
+      },
+      {
+        "lemma": "give",
+        "importance": 2
+      },
+      {
+        "lemma": "take",
+        "importance": 2
+      },
+      {
+        "lemma": "make",
+        "importance": 2
+      },
+      {
+        "lemma": "do",
+        "importance": 2
+      },
+      {
+        "lemma": "see",
+        "importance": 2
+      },
+      {
+        "lemma": "know",
+        "importance": 2
+      },
+      {
+        "lemma": "want",
+        "importance": 2
+      },
+      {
+        "lemma": "think",
+        "importance": 2
+      },
+      {
+        "lemma": "get",
+        "importance": 2
+      },
+      {
+        "lemma": "have",
+        "importance": 2
+      },
+      {
+        "lemma": "say",
+        "importance": 2
+      },
+      {
+        "lemma": "tell",
+        "importance": 2
+      },
+      {
+        "lemma": "ask",
+        "importance": 2
+      },
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "read",
+        "importance": 2
+      },
+      {
+        "lemma": "write",
+        "importance": 2
+      },
+      {
+        "lemma": "learn",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-7370-b09a-627f00145470",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Противоположности",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "big",
+        "importance": 2
+      },
+      {
+        "lemma": "small",
+        "importance": 2
+      },
+      {
+        "lemma": "good",
+        "importance": 2
+      },
+      {
+        "lemma": "bad",
+        "importance": 2
+      },
+      {
+        "lemma": "fast",
+        "importance": 2
+      },
+      {
+        "lemma": "slow",
+        "importance": 2
+      },
+      {
+        "lemma": "happy",
+        "importance": 2
+      },
+      {
+        "lemma": "sad",
+        "importance": 2
+      },
+      {
+        "lemma": "long",
+        "importance": 2
+      },
+      {
+        "lemma": "short",
+        "importance": 2
+      },
+      {
+        "lemma": "new",
+        "importance": 2
+      },
+      {
+        "lemma": "old",
+        "importance": 2
+      },
+      {
+        "lemma": "easy",
+        "importance": 2
+      },
+      {
+        "lemma": "difficult",
+        "importance": 2
+      },
+      {
+        "lemma": "open",
+        "importance": 2
+      },
+      {
+        "lemma": "closed",
+        "importance": 2
+      },
+      {
+        "lemma": "clean",
+        "importance": 2
+      },
+      {
+        "lemma": "dirty",
+        "importance": 2
+      },
+      {
+        "lemma": "light",
+        "importance": 2
+      },
+      {
+        "lemma": "dark",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f0d1-0fb3-75b0-a8a3-8336b0f2a4e6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вопросительные слова",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "who",
+        "importance": 2
+      },
+      {
+        "lemma": "what",
+        "importance": 2
+      },
+      {
+        "lemma": "when",
+        "importance": 2
+      },
+      {
+        "lemma": "where",
+        "importance": 2
+      },
+      {
+        "lemma": "why",
+        "importance": 2
+      },
+      {
+        "lemma": "how",
+        "importance": 2
+      },
+      {
+        "lemma": "which",
+        "importance": 2
+      },
+      {
+        "lemma": "whose",
+        "importance": 2
+      }
+    ],
+    "importance": 3
+  },
+  {
+    "id": "01a0f0d1-0fb3-7ba5-a43a-67ed9f56c4e8",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Места в городе",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "airport",
+        "importance": 2
+      },
+      {
+        "lemma": "bank",
+        "importance": 2
+      },
+      {
+        "lemma": "cafe",
+        "importance": 2
+      },
+      {
+        "lemma": "church",
+        "importance": 2
+      },
+      {
+        "lemma": "cinema",
+        "importance": 2
+      },
+      {
+        "lemma": "hospital",
+        "importance": 2
+      },
+      {
+        "lemma": "hotel",
+        "importance": 2
+      },
+      {
+        "lemma": "library",
+        "importance": 2
+      },
+      {
+        "lemma": "office",
+        "importance": 2
+      },
+      {
+        "lemma": "park",
+        "importance": 2
+      },
+      {
+        "lemma": "restaurant",
+        "importance": 2
+      },
+      {
+        "lemma": "school",
+        "importance": 2
+      },
+      {
+        "lemma": "shop",
+        "importance": 2
+      },
+      {
+        "lemma": "station",
+        "importance": 2
+      },
+      {
+        "lemma": "store",
+        "importance": 2
+      },
+      {
+        "lemma": "subway",
+        "importance": 2
+      },
+      {
+        "lemma": "supermarket",
+        "importance": 2
+      },
+      {
+        "lemma": "theater",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-7f5c-b5af-66395f31daca",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Профессии",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "actor",
+        "importance": 2
+      },
+      {
+        "lemma": "cook",
+        "importance": 2
+      },
+      {
+        "lemma": "doctor",
+        "importance": 2
+      },
+      {
+        "lemma": "engineer",
+        "importance": 2
+      },
+      {
+        "lemma": "farmer",
+        "importance": 2
+      },
+      {
+        "lemma": "musician",
+        "importance": 2
+      },
+      {
+        "lemma": "nurse",
+        "importance": 2
+      },
+      {
+        "lemma": "officer",
+        "importance": 2
+      },
+      {
+        "lemma": "reporter",
+        "importance": 2
+      },
+      {
+        "lemma": "sailor",
+        "importance": 2
+      },
+      {
+        "lemma": "scientist",
+        "importance": 2
+      },
+      {
+        "lemma": "singer",
+        "importance": 2
+      },
+      {
+        "lemma": "teacher",
+        "importance": 2
+      },
+      {
+        "lemma": "waitress",
+        "importance": 2
+      },
+      {
+        "lemma": "worker",
+        "importance": 2
+      },
+      {
+        "lemma": "writer",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  },
+  {
+    "id": "01a0f0d1-0fb3-7008-86b9-9a26c9e70aec",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Самочувствие",
+    "categories": [
+      "firstSteps"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "afraid",
+        "importance": 2
+      },
+      {
+        "lemma": "angry",
+        "importance": 2
+      },
+      {
+        "lemma": "awake",
+        "importance": 2
+      },
+      {
+        "lemma": "busy",
+        "importance": 2
+      },
+      {
+        "lemma": "excited",
+        "importance": 2
+      },
+      {
+        "lemma": "fine",
+        "importance": 2
+      },
+      {
+        "lemma": "glad",
+        "importance": 2
+      },
+      {
+        "lemma": "healthy",
+        "importance": 2
+      },
+      {
+        "lemma": "hungry",
+        "importance": 2
+      },
+      {
+        "lemma": "lonely",
+        "importance": 2
+      },
+      {
+        "lemma": "OK",
+        "importance": 2
+      },
+      {
+        "lemma": "shy",
+        "importance": 2
+      },
+      {
+        "lemma": "sick",
+        "importance": 2
+      },
+      {
+        "lemma": "strong",
+        "importance": 2
+      },
+      {
+        "lemma": "tired",
+        "importance": 2
+      },
+      {
+        "lemma": "well",
+        "importance": 2
+      }
+    ],
+    "importance": 1
+  }
+]

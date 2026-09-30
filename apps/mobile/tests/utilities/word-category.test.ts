@@ -5,7 +5,9 @@ import { DECKS } from '../../src/mocks/decks';
 import type { CategorizableWord } from '../../src/utilities/word-category';
 import { categorizeWord, groupWords } from '../../src/utilities/word-category';
 
-const restaurant = DECKS[0];
+// Не DECKS[0] — порядок DECKS зависит от алфавитного порядка файлов
+// data/decks/*.json (build-decks.ts), не от смыслового номера колоды.
+const restaurant = DECKS.find((deck) => deck.title === 'Ресторан и кафе')!;
 
 function makeWord(overrides: Partial<CategorizableWord>): CategorizableWord {
   return {

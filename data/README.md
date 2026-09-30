@@ -73,22 +73,36 @@
 
 9895 строк `cefr_seed.csv` → 9777 слов (118 схлопнутых дублей).
 
-## decks.json
+## decks/
 
 Источник правды для официальных колод (ADR-35) — куратор (skill
-deck-authoring) правит этот файл, не `apps/mobile/src/mocks/decks.ts`.
-Формат: массив колод `{ id, lang, nativeLang, title, categories, type,
-context?, items }`, где `items` — ссылки на слова по лемме (`{lemma,
-importance}`), не готовые данные слова — само слово (перевод, примеры, IPA)
-берётся из `WORDS` (`apps/mobile/src/mocks/words.ts`) на этапе сборки.
-`categories` — значения `DeckCategorySchema` (`@cards/contracts`), колода
-может быть в нескольких сразу; пустой массив — не категория (так у служебной
-«Проверки партий», `REVIEW_DECK_ID`).
+deck-authoring) правит файлы здесь, не `apps/mobile/src/mocks/decks.ts`. Один
+json на тему (`decks/firstSteps-deck.json`, `decks/travel.json`,
+`decks/work.json`, ...) — имя файла ни на что не влияет, это только удобство
+куратора: колода с несколькими `categories` может лежать в любом из файлов,
+где её удобнее держать. Формат каждого файла — массив колод `{ id, lang,
+nativeLang, title, categories, type, importance, context?, items }`, где
+`items` — ссылки на слова по лемме (`{lemma, importance}`), не готовые данные
+слова — само слово (перевод, примеры, IPA) берётся из `WORDS`
+(`apps/mobile/src/mocks/words.ts`) на этапе сборки. `categories` — значения
+`DeckCategorySchema` (`@cards/contracts`), колода может быть в нескольких
+сразу; пустой массив — не категория (так у служебной «Проверки партий»,
+`decks/review.json`, `REVIEW_DECK_ID`). `importance` (1–3) — порядок показа
+колоды внутри категории (`decks.screen.tsx::CategoryDetail` сортирует по
+убыванию), та же шкала, что у `items[].importance` (слова внутри колоды),
+просто уровнем выше.
+
+Заводя новую колоду, можно оставить `"id": ""` и `"context": {"situation":
+"", "roles": {}, "register": "", "branches": [], "cultureNotes": []}` —
+сборка сама проставит id (один раз, дальше он стабилен между сборками) и
+уберёт context-заготовку, если он не заполнен (реальный сценарий с
+ролями/register нужен не всем колодам, только диалоговым вроде «Ресторан»,
+FR-49).
 
 Собирается и проверяется `apps/api/scripts/dictionary/build-decks.ts`
 (`npm run build-decks --workspace=@cards/api`) — без сети: схема (zod),
-уникальность `id`, что каждая `lemma` реально есть в `WORDS`, что слово
-(itemId) не встречается в двух колодах сразу. Результат —
+уникальность `id` по всем файлам сразу, что каждая `lemma` реально есть в
+`WORDS`, что слово (itemId) не встречается в двух колодах сразу. Результат —
 `apps/mobile/src/mocks/decks-data.json`, который `mocks/decks.ts` импортирует
 и резолвит в полные `DeckWord` (`wordByLemma`). `apps/mobile` не может
 импортировать `data/` напрямую — Metro резолвит модули только внутри своего
@@ -96,5 +110,5 @@ root, поэтому нужен этот промежуточный, уже пр
 `apps/mobile/src`.
 
 `apps/api/scripts/dictionary/generate-senses.ts` сам дописывает сюда леммы
-успешно сгенерированных слов — в items служебной колоды «Проверка партий» — и
-пересобирает `decks-data.json` тем же `buildDecksData()`.
+успешно сгенерированных слов — в items `decks/review.json` — и пересобирает
+`decks-data.json` тем же `buildDecksData()`.

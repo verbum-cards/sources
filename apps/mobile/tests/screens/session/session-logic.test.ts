@@ -177,7 +177,11 @@ test('buildDeckSessionQueue: «Знаю это слово» (status=known) ис�
 
 test('buildDeckSessionQueue: официальная колода (нет строки в deck/deck_item) — членство по source_deck_id', async () => {
   const { db, userId } = await setupDbs();
-  const restaurant = DECKS[0];
+  // Не DECKS[0] — порядок DECKS зависит от алфавитного порядка файлов
+  // data/decks/*.json, нужна просто любая непустая колода.
+  const restaurant = DECKS.reduce((max, deck) =>
+    deck.items.length > max.items.length ? deck : max
+  );
   await setUserProfile(db, userId, restaurant.items.length);
 
   await addDeckToUser(db, restaurant);

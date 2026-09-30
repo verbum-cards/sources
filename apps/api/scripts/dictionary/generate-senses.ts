@@ -407,7 +407,7 @@ async function main(): Promise<void> {
   const dataDir = join(repoRoot, 'data');
   const preparedPath = join(dataDir, 'cefr_seed_prepared.csv');
   const mocksDataPath = join(repoRoot, 'apps', 'mobile', 'src', 'mocks', 'words-data.json');
-  const decksSpecPath = join(dataDir, 'decks.json');
+  const decksSpecPath = join(dataDir, 'decks', 'review.json');
   const tagsPath = join(
     repoRoot,
     '.claude',

@@ -32,14 +32,28 @@ async function setupDb() {
   return { db: executor, userId };
 }
 
-const restaurant = DECKS[0];
+// Название переменной не про конкретную колоду — эти тесты проверяют логику
+// addDeckToUser/addSingleDeckWord, не содержимое «Ресторана», просто нужна
+// любая реальная непустая колода. DECKS[0] и колода с фиксированным
+// title не годятся — порядок DECKS и то, какие колоды сейчас наполнены,
+// меняется по мере добавления новых data/decks/*.json (build-decks.ts);
+// берём колоду с наибольшим числом слов — она гарантированно не пуста.
+const restaurant = DECKS.reduce((max, deck) => (deck.items.length > max.items.length ? deck : max));
 
-test('DECKS: id колод и itemId элементов не повторяются (защита от копипасты вручную)', () => {
+test('DECKS: id колод не повторяется (защита от копипасты вручную)', () => {
   const deckIds = DECKS.map((deck) => deck.id);
   assert.equal(new Set(deckIds).size, deckIds.length);
+});
 
-  const itemIds = DECKS.flatMap((deck) => deck.items.map((item) => item.itemId));
-  assert.equal(new Set(itemIds).size, itemIds.length);
+test('DECKS: itemId не повторяется внутри одной колоды (между колодами — можно, слово может быть в нескольких)', () => {
+  for (const deck of DECKS) {
+    const itemIds = deck.items.map((item) => item.itemId);
+    assert.equal(
+      new Set(itemIds).size,
+      itemIds.length,
+      `колода "${deck.title}" содержит повторяющееся слово`
+    );
+  }
 });
 
 test('DECKS: «Первые шаги» — категория firstSteps, только слова уровня A1', () => {
@@ -81,6 +95,7 @@ function makeDeck(overrides: Partial<MockDeck>): MockDeck {
     title: 'Тестовая колода',
     categories: ['travelLeisure'],
     type: 'official',
+    importance: 2,
     items: [],
     ...overrides,
   };
@@ -149,6 +164,31 @@ test('getDecksByCategory: категория без колод -> пустой �
   const decks = [makeDeck({ id: '1', categories: ['travelLeisure'] })];
 
   assert.deepEqual(getDecksByCategory(decks, 'health'), []);
+});
+
+test('getDecksByCategory: сортирует по importance колоды, по убыванию', () => {
+  const decks = [
+    makeDeck({ id: 'low', categories: ['travelLeisure'], importance: 1 }),
+    makeDeck({ id: 'high', categories: ['travelLeisure'], importance: 3 }),
+    makeDeck({ id: 'mid', categories: ['travelLeisure'], importance: 2 }),
+  ];
+
+  assert.deepEqual(
+    getDecksByCategory(decks, 'travelLeisure').map((d) => d.id),
+    ['high', 'mid', 'low']
+  );
+});
+
+test('getDecksByCategory: при равном importance порядок как во входном списке', () => {
+  const decks = [
+    makeDeck({ id: 'a', categories: ['travelLeisure'], importance: 2 }),
+    makeDeck({ id: 'b', categories: ['travelLeisure'], importance: 2 }),
+  ];
+
+  assert.deepEqual(
+    getDecksByCategory(decks, 'travelLeisure').map((d) => d.id),
+    ['a', 'b']
+  );
 });
 
 test('addDeckToUser: создаёт card+card_content на каждый элемент колоды с нуля', async () => {

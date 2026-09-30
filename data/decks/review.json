@@ -1,236 +1,5 @@
 [
   {
-    "id": "0195d000-0000-7000-8000-000000000001",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Ресторан и кафе",
-    "categories": [
-      "cafeRestaurant",
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Ужин в ресторане среднего уровня, вечер",
-      "roles": {
-        "learner": "гость",
-        "partner": "официант",
-        "learnerGoal": "заказать, уточнить про аллергию, расплатиться",
-        "partnerGoal": "обслужить и предложить блюда"
-      },
-      "register": "polite",
-      "branches": [
-        "заказ",
-        "аллергия",
-        "ошибка в счёте",
-        "разделить счёт"
-      ],
-      "cultureNotes": [
-        "В США чаевые 15–20% ожидаются, в Великобритании часто уже включены в счёт как service charge"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000002",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Отель",
-    "categories": [
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Заселение и проживание в отеле, стандартный номер",
-      "roles": {
-        "learner": "гость",
-        "partner": "администратор",
-        "learnerGoal": "заселиться, решить вопрос с номером, продлить или вовремя выехать",
-        "partnerGoal": "заселить гостя и решить его вопросы"
-      },
-      "register": "polite",
-      "branches": [
-        "заселение",
-        "проблема с номером",
-        "просьба о позднем выезде",
-        "дополнительные услуги"
-      ],
-      "cultureNotes": [
-        "В США чаевые горничной — обычно $1–2 за ночь, оставляют наличными в номере",
-        "В Великобритании завтрак часто указывается отдельно от стоимости номера («room only» vs «bed and breakfast»)"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000003",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Аэропорт и перелёт",
-    "categories": [
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Регистрация на рейс, посадка и перелёт",
-      "roles": {
-        "learner": "пассажир",
-        "partner": "сотрудник авиакомпании",
-        "learnerGoal": "пройти регистрацию, найти выход на посадку, решить проблему с багажом",
-        "partnerGoal": "оформить пассажира и обеспечить посадку по расписанию"
-      },
-      "register": "polite",
-      "branches": [
-        "регистрация и посадочный талон",
-        "багаж потерян или повреждён",
-        "задержка или отмена рейса",
-        "просьба о другом месте"
-      ],
-      "cultureNotes": [
-        "На международный рейс на регистрацию обычно приходят за 2–3 часа до вылета",
-        "При пересадке с международного рейса в США часто нужно заново пройти паспортный контроль и сдать багаж"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000004",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Такси",
-    "categories": [
-      "transportCity",
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Поездка на такси — заказ, объяснение маршрута, оплата",
-      "roles": {
-        "learner": "пассажир",
-        "partner": "водитель такси",
-        "learnerGoal": "заказать такси, назвать адрес, уточнить цену, расплатиться",
-        "partnerGoal": "довезти до места и получить оплату"
-      },
-      "register": "polite",
-      "branches": [
-        "заказ такси",
-        "объяснение маршрута или адреса",
-        "обсуждение цены",
-        "оплата и чаевые"
-      ],
-      "cultureNotes": [
-        "В США принято округлять оплату такси в большую сторону и добавлять чаевые 10–15%",
-        "В Великобритании чёрные такси (black cabs) можно останавливать прямо на улице, а не только заказывать заранее"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000005",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Как пройти",
-    "categories": [
-      "transportCity",
-      "travelLeisure"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Спросить дорогу на улице у прохожего и понять объяснение маршрута пешком",
-      "roles": {
-        "learner": "прохожий, который спрашивает дорогу",
-        "partner": "местный житель",
-        "learnerGoal": "узнать, как дойти до места, понять объяснение и переспросить, если не понял",
-        "partnerGoal": "объяснить маршрут понятно"
-      },
-      "register": "polite",
-      "branches": [
-        "спросить дорогу",
-        "не понял объяснение, переспросить",
-        "ориентиры (памятники, магазины)",
-        "пешком или на транспорте"
-      ],
-      "cultureNotes": [
-        "В англоязычных странах расстояние часто объясняют в минутах ходьбы, а не в километрах",
-        "Попросить повторить объяснение («Could you repeat that?») — это нормально, а не невежливо"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000006",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Знакомство и small talk",
-    "categories": [
-      "socializing",
-      "workOffice"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Знакомство с новым человеком и лёгкий разговор ни о чём (small talk)",
-      "roles": {
-        "learner": "один из собеседников",
-        "partner": "новый знакомый",
-        "learnerGoal": "представиться, поддержать лёгкий разговор, вежливо завершить беседу",
-        "partnerGoal": "познакомиться и поддержать беседу"
-      },
-      "register": "neutral",
-      "branches": [
-        "представиться",
-        "спросить, откуда собеседник или чем занимается",
-        "разговор о погоде или поездке",
-        "вежливо попрощаться"
-      ],
-      "cultureNotes": [
-        "В англоязычной культуре small talk о погоде — совершенно обычная тема для начала разговора",
-        "Личные вопросы (зарплата, возраст, вес) при первом знакомстве считаются неуместными"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000007",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Работа",
-    "categories": [
-      "businessCareer"
-    ],
-    "type": "official",
-    "context": {
-      "situation": "Разговор о работе: сокращения, реорганизация компании и переговоры об условиях",
-      "roles": {
-        "learner": "сотрудник",
-        "partner": "коллега",
-        "learnerGoal": "обсудить ситуацию в компании, выразить мнение, спросить про условия и требования",
-        "partnerGoal": "поделиться новостями и своим мнением о происходящем"
-      },
-      "register": "neutral",
-      "branches": [
-        "новости о сокращениях",
-        "переговоры об условиях",
-        "обсуждение новых требований",
-        "реакция на изменения в компании"
-      ],
-      "cultureNotes": [
-        "В США и Великобритании после увольнений (layoffs) часто предлагают выходное пособие (severance package) и продление медицинской страховки на несколько месяцев",
-        "Открыто обсуждать зарплату и условия с коллегами более принято в США, чем во многих других культурах"
-      ]
-    },
-    "items": []
-  },
-  {
-    "id": "0195d000-0000-7000-8000-000000000008",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Первые шаги",
-    "categories": [
-      "firstSteps"
-    ],
-    "type": "official",
-    "items": []
-  },
-  {
     "id": "0195d000-0000-7000-8000-000000000009",
     "lang": "en",
     "nativeLang": "ru",
@@ -263,10 +32,6 @@
         "importance": 2
       },
       {
-        "lemma": "above",
-        "importance": 2
-      },
-      {
         "lemma": "action",
         "importance": 2
       },
@@ -275,15 +40,7 @@
         "importance": 2
       },
       {
-        "lemma": "actor",
-        "importance": 2
-      },
-      {
         "lemma": "add",
-        "importance": 2
-      },
-      {
-        "lemma": "afraid",
         "importance": 2
       },
       {
@@ -291,15 +48,7 @@
         "importance": 2
       },
       {
-        "lemma": "afternoon",
-        "importance": 2
-      },
-      {
         "lemma": "again",
-        "importance": 2
-      },
-      {
-        "lemma": "age",
         "importance": 2
       },
       {
@@ -312,10 +61,6 @@
       },
       {
         "lemma": "airplane",
-        "importance": 2
-      },
-      {
-        "lemma": "airport",
         "importance": 2
       },
       {
@@ -367,14 +112,6 @@
         "importance": 2
       },
       {
-        "lemma": "angry",
-        "importance": 2
-      },
-      {
-        "lemma": "animal",
-        "importance": 2
-      },
-      {
         "lemma": "another",
         "importance": 2
       },
@@ -399,23 +136,11 @@
         "importance": 2
       },
       {
-        "lemma": "April",
-        "importance": 2
-      },
-      {
         "lemma": "apron",
         "importance": 2
       },
       {
         "lemma": "are",
-        "importance": 2
-      },
-      {
-        "lemma": "arm",
-        "importance": 2
-      },
-      {
-        "lemma": "around",
         "importance": 2
       },
       {
@@ -435,19 +160,7 @@
         "importance": 2
       },
       {
-        "lemma": "ask",
-        "importance": 2
-      },
-      {
         "lemma": "at",
-        "importance": 2
-      },
-      {
-        "lemma": "August",
-        "importance": 2
-      },
-      {
-        "lemma": "aunt",
         "importance": 2
       },
       {
@@ -455,39 +168,7 @@
         "importance": 2
       },
       {
-        "lemma": "awake",
-        "importance": 2
-      },
-      {
-        "lemma": "away",
-        "importance": 2
-      },
-      {
-        "lemma": "baby",
-        "importance": 2
-      },
-      {
-        "lemma": "back",
-        "importance": 2
-      },
-      {
-        "lemma": "bag",
-        "importance": 2
-      },
-      {
-        "lemma": "ball",
-        "importance": 2
-      },
-      {
-        "lemma": "banana",
-        "importance": 2
-      },
-      {
         "lemma": "band",
-        "importance": 2
-      },
-      {
-        "lemma": "bank",
         "importance": 2
       },
       {
@@ -503,15 +184,7 @@
         "importance": 2
       },
       {
-        "lemma": "bat",
-        "importance": 2
-      },
-      {
         "lemma": "bath",
-        "importance": 2
-      },
-      {
-        "lemma": "bathroom",
         "importance": 2
       },
       {
@@ -524,10 +197,6 @@
       },
       {
         "lemma": "bean",
-        "importance": 2
-      },
-      {
-        "lemma": "bear",
         "importance": 2
       },
       {
@@ -547,14 +216,6 @@
         "importance": 2
       },
       {
-        "lemma": "bedroom",
-        "importance": 2
-      },
-      {
-        "lemma": "bee",
-        "importance": 2
-      },
-      {
         "lemma": "beef",
         "importance": 2
       },
@@ -567,19 +228,11 @@
         "importance": 2
       },
       {
-        "lemma": "behind",
-        "importance": 2
-      },
-      {
         "lemma": "believe",
         "importance": 2
       },
       {
         "lemma": "bell",
-        "importance": 2
-      },
-      {
-        "lemma": "below",
         "importance": 2
       },
       {
@@ -595,19 +248,11 @@
         "importance": 2
       },
       {
-        "lemma": "between",
-        "importance": 2
-      },
-      {
         "lemma": "bicycle",
         "importance": 2
       },
       {
         "lemma": "bike",
-        "importance": 2
-      },
-      {
-        "lemma": "bird",
         "importance": 2
       },
       {
@@ -620,10 +265,6 @@
       },
       {
         "lemma": "biscuit",
-        "importance": 2
-      },
-      {
-        "lemma": "black",
         "importance": 2
       },
       {
@@ -643,14 +284,6 @@
         "importance": 2
       },
       {
-        "lemma": "body",
-        "importance": 2
-      },
-      {
-        "lemma": "bone",
-        "importance": 2
-      },
-      {
         "lemma": "bookstore",
         "importance": 2
       },
@@ -663,27 +296,11 @@
         "importance": 2
       },
       {
-        "lemma": "bottle",
-        "importance": 2
-      },
-      {
         "lemma": "bottom",
         "importance": 2
       },
       {
-        "lemma": "bowl",
-        "importance": 2
-      },
-      {
-        "lemma": "box",
-        "importance": 2
-      },
-      {
         "lemma": "boyfriend",
-        "importance": 2
-      },
-      {
-        "lemma": "brain",
         "importance": 2
       },
       {
@@ -699,19 +316,7 @@
         "importance": 2
       },
       {
-        "lemma": "bright",
-        "importance": 2
-      },
-      {
         "lemma": "bring",
-        "importance": 2
-      },
-      {
-        "lemma": "broken",
-        "importance": 2
-      },
-      {
-        "lemma": "brown",
         "importance": 2
       },
       {
@@ -739,19 +344,11 @@
         "importance": 2
       },
       {
-        "lemma": "busy",
-        "importance": 2
-      },
-      {
         "lemma": "but",
         "importance": 2
       },
       {
         "lemma": "butter",
-        "importance": 2
-      },
-      {
-        "lemma": "butterfly",
         "importance": 2
       },
       {
@@ -767,26 +364,6 @@
         "importance": 2
       },
       {
-        "lemma": "bye",
-        "importance": 2
-      },
-      {
-        "lemma": "cafe",
-        "importance": 2
-      },
-      {
-        "lemma": "cake",
-        "importance": 2
-      },
-      {
-        "lemma": "call",
-        "importance": 2
-      },
-      {
-        "lemma": "camera",
-        "importance": 2
-      },
-      {
         "lemma": "camp",
         "importance": 2
       },
@@ -796,14 +373,6 @@
       },
       {
         "lemma": "candy",
-        "importance": 2
-      },
-      {
-        "lemma": "cap",
-        "importance": 2
-      },
-      {
-        "lemma": "card",
         "importance": 2
       },
       {
@@ -843,18 +412,6 @@
         "importance": 2
       },
       {
-        "lemma": "celebrate",
-        "importance": 2
-      },
-      {
-        "lemma": "celebration",
-        "importance": 2
-      },
-      {
-        "lemma": "chair",
-        "importance": 2
-      },
-      {
         "lemma": "character",
         "importance": 2
       },
@@ -863,23 +420,11 @@
         "importance": 2
       },
       {
-        "lemma": "cheese",
-        "importance": 2
-      },
-      {
         "lemma": "chocolate",
         "importance": 2
       },
       {
         "lemma": "choose",
-        "importance": 2
-      },
-      {
-        "lemma": "church",
-        "importance": 2
-      },
-      {
-        "lemma": "cinema",
         "importance": 2
       },
       {
@@ -911,31 +456,11 @@
         "importance": 2
       },
       {
-        "lemma": "clock",
-        "importance": 2
-      },
-      {
         "lemma": "close",
         "importance": 2
       },
       {
-        "lemma": "closed",
-        "importance": 2
-      },
-      {
         "lemma": "cloth",
-        "importance": 2
-      },
-      {
-        "lemma": "clothes",
-        "importance": 2
-      },
-      {
-        "lemma": "cloud",
-        "importance": 2
-      },
-      {
-        "lemma": "cloudy",
         "importance": 2
       },
       {
@@ -947,27 +472,11 @@
         "importance": 2
       },
       {
-        "lemma": "coat",
-        "importance": 2
-      },
-      {
         "lemma": "code",
         "importance": 2
       },
       {
-        "lemma": "coffee",
-        "importance": 2
-      },
-      {
         "lemma": "coke",
-        "importance": 2
-      },
-      {
-        "lemma": "cold",
-        "importance": 2
-      },
-      {
-        "lemma": "collect",
         "importance": 2
       },
       {
@@ -976,18 +485,6 @@
       },
       {
         "lemma": "college",
-        "importance": 2
-      },
-      {
-        "lemma": "color",
-        "importance": 2
-      },
-      {
-        "lemma": "come",
-        "importance": 2
-      },
-      {
-        "lemma": "computer",
         "importance": 2
       },
       {
@@ -1003,19 +500,11 @@
         "importance": 2
       },
       {
-        "lemma": "cook",
-        "importance": 2
-      },
-      {
         "lemma": "cookie",
         "importance": 2
       },
       {
         "lemma": "cool",
-        "importance": 2
-      },
-      {
-        "lemma": "cop",
         "importance": 2
       },
       {
@@ -1043,15 +532,7 @@
         "importance": 2
       },
       {
-        "lemma": "cousin",
-        "importance": 2
-      },
-      {
         "lemma": "cover",
-        "importance": 2
-      },
-      {
-        "lemma": "cow",
         "importance": 2
       },
       {
@@ -1059,19 +540,7 @@
         "importance": 2
       },
       {
-        "lemma": "credit card",
-        "importance": 2
-      },
-      {
         "lemma": "cry",
-        "importance": 2
-      },
-      {
-        "lemma": "culture",
-        "importance": 2
-      },
-      {
-        "lemma": "cup",
         "importance": 2
       },
       {
@@ -1095,19 +564,7 @@
         "importance": 2
       },
       {
-        "lemma": "dancing",
-        "importance": 2
-      },
-      {
-        "lemma": "dark",
-        "importance": 2
-      },
-      {
         "lemma": "date",
-        "importance": 2
-      },
-      {
-        "lemma": "daughter",
         "importance": 2
       },
       {
@@ -1116,10 +573,6 @@
       },
       {
         "lemma": "dear",
-        "importance": 2
-      },
-      {
-        "lemma": "December",
         "importance": 2
       },
       {
@@ -1151,23 +604,7 @@
         "importance": 2
       },
       {
-        "lemma": "difficult",
-        "importance": 2
-      },
-      {
         "lemma": "dig",
-        "importance": 2
-      },
-      {
-        "lemma": "dining room",
-        "importance": 2
-      },
-      {
-        "lemma": "dinner",
-        "importance": 2
-      },
-      {
-        "lemma": "dirty",
         "importance": 2
       },
       {
@@ -1179,19 +616,7 @@
         "importance": 2
       },
       {
-        "lemma": "do",
-        "importance": 2
-      },
-      {
-        "lemma": "doctor",
-        "importance": 2
-      },
-      {
         "lemma": "does",
-        "importance": 2
-      },
-      {
-        "lemma": "dog",
         "importance": 2
       },
       {
@@ -1207,19 +632,7 @@
         "importance": 2
       },
       {
-        "lemma": "door",
-        "importance": 2
-      },
-      {
-        "lemma": "down",
-        "importance": 2
-      },
-      {
         "lemma": "drama",
-        "importance": 2
-      },
-      {
-        "lemma": "draw",
         "importance": 2
       },
       {
@@ -1227,15 +640,7 @@
         "importance": 2
       },
       {
-        "lemma": "dress",
-        "importance": 2
-      },
-      {
         "lemma": "drink",
-        "importance": 2
-      },
-      {
-        "lemma": "drive",
         "importance": 2
       },
       {
@@ -1267,34 +672,6 @@
         "importance": 2
       },
       {
-        "lemma": "ear",
-        "importance": 2
-      },
-      {
-        "lemma": "early",
-        "importance": 2
-      },
-      {
-        "lemma": "easy",
-        "importance": 2
-      },
-      {
-        "lemma": "eat",
-        "importance": 2
-      },
-      {
-        "lemma": "egg",
-        "importance": 2
-      },
-      {
-        "lemma": "eight",
-        "importance": 2
-      },
-      {
-        "lemma": "eighteen",
-        "importance": 2
-      },
-      {
         "lemma": "eighty",
         "importance": 2
       },
@@ -1304,10 +681,6 @@
       },
       {
         "lemma": "elementary",
-        "importance": 2
-      },
-      {
-        "lemma": "eleven",
         "importance": 2
       },
       {
@@ -1323,15 +696,7 @@
         "importance": 2
       },
       {
-        "lemma": "engineer",
-        "importance": 2
-      },
-      {
         "lemma": "enjoy",
-        "importance": 2
-      },
-      {
-        "lemma": "evening",
         "importance": 2
       },
       {
@@ -1371,15 +736,7 @@
         "importance": 2
       },
       {
-        "lemma": "excited",
-        "importance": 2
-      },
-      {
         "lemma": "exciting",
-        "importance": 2
-      },
-      {
-        "lemma": "excuse",
         "importance": 2
       },
       {
@@ -1388,14 +745,6 @@
       },
       {
         "lemma": "expensive",
-        "importance": 2
-      },
-      {
-        "lemma": "eye",
-        "importance": 2
-      },
-      {
-        "lemma": "face",
         "importance": 2
       },
       {
@@ -1415,10 +764,6 @@
         "importance": 2
       },
       {
-        "lemma": "family",
-        "importance": 2
-      },
-      {
         "lemma": "famous",
         "importance": 2
       },
@@ -1431,27 +776,11 @@
         "importance": 2
       },
       {
-        "lemma": "farmer",
-        "importance": 2
-      },
-      {
-        "lemma": "fast",
-        "importance": 2
-      },
-      {
         "lemma": "fat",
         "importance": 2
       },
       {
-        "lemma": "father",
-        "importance": 2
-      },
-      {
         "lemma": "favorite",
-        "importance": 2
-      },
-      {
-        "lemma": "February",
         "importance": 2
       },
       {
@@ -1467,19 +796,11 @@
         "importance": 2
       },
       {
-        "lemma": "festival",
-        "importance": 2
-      },
-      {
         "lemma": "fever",
         "importance": 2
       },
       {
         "lemma": "field",
-        "importance": 2
-      },
-      {
-        "lemma": "fifteen",
         "importance": 2
       },
       {
@@ -1499,10 +820,6 @@
         "importance": 2
       },
       {
-        "lemma": "fine",
-        "importance": 2
-      },
-      {
         "lemma": "finish",
         "importance": 2
       },
@@ -1515,15 +832,7 @@
         "importance": 2
       },
       {
-        "lemma": "fish",
-        "importance": 2
-      },
-      {
         "lemma": "fishing",
-        "importance": 2
-      },
-      {
-        "lemma": "five",
         "importance": 2
       },
       {
@@ -1531,19 +840,7 @@
         "importance": 2
       },
       {
-        "lemma": "flat",
-        "importance": 2
-      },
-      {
-        "lemma": "floor",
-        "importance": 2
-      },
-      {
         "lemma": "flower",
-        "importance": 2
-      },
-      {
-        "lemma": "fly",
         "importance": 2
       },
       {
@@ -1551,15 +848,7 @@
         "importance": 2
       },
       {
-        "lemma": "foggy",
-        "importance": 2
-      },
-      {
         "lemma": "following",
-        "importance": 2
-      },
-      {
-        "lemma": "food",
         "importance": 2
       },
       {
@@ -1591,27 +880,11 @@
         "importance": 2
       },
       {
-        "lemma": "four",
-        "importance": 2
-      },
-      {
-        "lemma": "fourteen",
-        "importance": 2
-      },
-      {
         "lemma": "free",
         "importance": 2
       },
       {
-        "lemma": "Friday",
-        "importance": 2
-      },
-      {
         "lemma": "friend",
-        "importance": 2
-      },
-      {
-        "lemma": "frog",
         "importance": 2
       },
       {
@@ -1620,10 +893,6 @@
       },
       {
         "lemma": "front",
-        "importance": 2
-      },
-      {
-        "lemma": "fruit",
         "importance": 2
       },
       {
@@ -1643,22 +912,6 @@
         "importance": 2
       },
       {
-        "lemma": "game",
-        "importance": 2
-      },
-      {
-        "lemma": "garbage",
-        "importance": 2
-      },
-      {
-        "lemma": "garden",
-        "importance": 2
-      },
-      {
-        "lemma": "get",
-        "importance": 2
-      },
-      {
         "lemma": "ghost",
         "importance": 2
       },
@@ -1675,47 +928,11 @@
         "importance": 2
       },
       {
-        "lemma": "give",
-        "importance": 2
-      },
-      {
-        "lemma": "glad",
-        "importance": 2
-      },
-      {
         "lemma": "glass",
         "importance": 2
       },
       {
-        "lemma": "glasses",
-        "importance": 2
-      },
-      {
-        "lemma": "go",
-        "importance": 2
-      },
-      {
         "lemma": "goal",
-        "importance": 2
-      },
-      {
-        "lemma": "gold",
-        "importance": 2
-      },
-      {
-        "lemma": "good",
-        "importance": 2
-      },
-      {
-        "lemma": "good afternoon",
-        "importance": 2
-      },
-      {
-        "lemma": "good morning",
-        "importance": 2
-      },
-      {
-        "lemma": "good night",
         "importance": 2
       },
       {
@@ -1727,15 +944,7 @@
         "importance": 2
       },
       {
-        "lemma": "grandfather",
-        "importance": 2
-      },
-      {
         "lemma": "grandma",
-        "importance": 2
-      },
-      {
-        "lemma": "grandmother",
         "importance": 2
       },
       {
@@ -1755,27 +964,11 @@
         "importance": 2
       },
       {
-        "lemma": "gray",
-        "importance": 2
-      },
-      {
         "lemma": "great",
         "importance": 2
       },
       {
-        "lemma": "green",
-        "importance": 2
-      },
-      {
-        "lemma": "greet",
-        "importance": 2
-      },
-      {
         "lemma": "ground",
-        "importance": 2
-      },
-      {
-        "lemma": "group",
         "importance": 2
       },
       {
@@ -1784,14 +977,6 @@
       },
       {
         "lemma": "guess",
-        "importance": 2
-      },
-      {
-        "lemma": "guest",
-        "importance": 2
-      },
-      {
-        "lemma": "guitar",
         "importance": 2
       },
       {
@@ -1807,10 +992,6 @@
         "importance": 2
       },
       {
-        "lemma": "hair",
-        "importance": 2
-      },
-      {
         "lemma": "haircut",
         "importance": 2
       },
@@ -1819,15 +1000,7 @@
         "importance": 2
       },
       {
-        "lemma": "hall",
-        "importance": 2
-      },
-      {
         "lemma": "hamburger",
-        "importance": 2
-      },
-      {
-        "lemma": "hand",
         "importance": 2
       },
       {
@@ -1839,10 +1012,6 @@
         "importance": 2
       },
       {
-        "lemma": "happy",
-        "importance": 2
-      },
-      {
         "lemma": "hard",
         "importance": 2
       },
@@ -1851,23 +1020,7 @@
         "importance": 2
       },
       {
-        "lemma": "hat",
-        "importance": 2
-      },
-      {
-        "lemma": "have",
-        "importance": 2
-      },
-      {
         "lemma": "have to",
-        "importance": 2
-      },
-      {
-        "lemma": "he",
-        "importance": 2
-      },
-      {
-        "lemma": "headache",
         "importance": 2
       },
       {
@@ -1875,27 +1028,7 @@
         "importance": 2
       },
       {
-        "lemma": "hello",
-        "importance": 2
-      },
-      {
-        "lemma": "help",
-        "importance": 2
-      },
-      {
-        "lemma": "her",
-        "importance": 2
-      },
-      {
         "lemma": "here",
-        "importance": 2
-      },
-      {
-        "lemma": "hers",
-        "importance": 2
-      },
-      {
-        "lemma": "hi",
         "importance": 2
       },
       {
@@ -1911,14 +1044,6 @@
         "importance": 2
       },
       {
-        "lemma": "him",
-        "importance": 2
-      },
-      {
-        "lemma": "his",
-        "importance": 2
-      },
-      {
         "lemma": "history",
         "importance": 2
       },
@@ -1931,18 +1056,6 @@
         "importance": 2
       },
       {
-        "lemma": "holiday",
-        "importance": 2
-      },
-      {
-        "lemma": "home",
-        "importance": 2
-      },
-      {
-        "lemma": "hometown",
-        "importance": 2
-      },
-      {
         "lemma": "homework",
         "importance": 2
       },
@@ -1951,51 +1064,11 @@
         "importance": 2
       },
       {
-        "lemma": "horse",
-        "importance": 2
-      },
-      {
-        "lemma": "hospital",
-        "importance": 2
-      },
-      {
-        "lemma": "hot",
-        "importance": 2
-      },
-      {
-        "lemma": "hotel",
-        "importance": 2
-      },
-      {
-        "lemma": "hour",
-        "importance": 2
-      },
-      {
-        "lemma": "house",
-        "importance": 2
-      },
-      {
-        "lemma": "how",
-        "importance": 2
-      },
-      {
-        "lemma": "hungry",
-        "importance": 2
-      },
-      {
         "lemma": "hurry",
         "importance": 2
       },
       {
         "lemma": "hurt",
-        "importance": 2
-      },
-      {
-        "lemma": "husband",
-        "importance": 2
-      },
-      {
-        "lemma": "I",
         "importance": 2
       },
       {
@@ -2043,14 +1116,6 @@
         "importance": 2
       },
       {
-        "lemma": "interesting",
-        "importance": 2
-      },
-      {
-        "lemma": "Internet",
-        "importance": 2
-      },
-      {
         "lemma": "interview",
         "importance": 2
       },
@@ -2063,19 +1128,11 @@
         "importance": 2
       },
       {
-        "lemma": "introduce",
-        "importance": 2
-      },
-      {
         "lemma": "is",
         "importance": 2
       },
       {
         "lemma": "island",
-        "importance": 2
-      },
-      {
-        "lemma": "it",
         "importance": 2
       },
       {
@@ -2087,27 +1144,11 @@
         "importance": 2
       },
       {
-        "lemma": "jacket",
-        "importance": 2
-      },
-      {
-        "lemma": "January",
-        "importance": 2
-      },
-      {
-        "lemma": "jeans",
-        "importance": 2
-      },
-      {
         "lemma": "jet",
         "importance": 2
       },
       {
         "lemma": "jewelry",
-        "importance": 2
-      },
-      {
-        "lemma": "job",
         "importance": 2
       },
       {
@@ -2119,19 +1160,7 @@
         "importance": 2
       },
       {
-        "lemma": "juice",
-        "importance": 2
-      },
-      {
-        "lemma": "July",
-        "importance": 2
-      },
-      {
         "lemma": "jump",
-        "importance": 2
-      },
-      {
-        "lemma": "June",
         "importance": 2
       },
       {
@@ -2171,23 +1200,7 @@
         "importance": 2
       },
       {
-        "lemma": "kitchen",
-        "importance": 2
-      },
-      {
         "lemma": "kite",
-        "importance": 2
-      },
-      {
-        "lemma": "knee",
-        "importance": 2
-      },
-      {
-        "lemma": "knife",
-        "importance": 2
-      },
-      {
-        "lemma": "know",
         "importance": 2
       },
       {
@@ -2200,14 +1213,6 @@
       },
       {
         "lemma": "large",
-        "importance": 2
-      },
-      {
-        "lemma": "last name",
-        "importance": 2
-      },
-      {
-        "lemma": "late",
         "importance": 2
       },
       {
@@ -2231,19 +1236,11 @@
         "importance": 2
       },
       {
-        "lemma": "learn",
-        "importance": 2
-      },
-      {
         "lemma": "leave",
         "importance": 2
       },
       {
         "lemma": "left",
-        "importance": 2
-      },
-      {
-        "lemma": "leg",
         "importance": 2
       },
       {
@@ -2255,19 +1252,7 @@
         "importance": 2
       },
       {
-        "lemma": "letter",
-        "importance": 2
-      },
-      {
-        "lemma": "library",
-        "importance": 2
-      },
-      {
         "lemma": "life",
-        "importance": 2
-      },
-      {
-        "lemma": "light",
         "importance": 2
       },
       {
@@ -2280,10 +1265,6 @@
       },
       {
         "lemma": "line",
-        "importance": 2
-      },
-      {
-        "lemma": "lion",
         "importance": 2
       },
       {
@@ -2304,18 +1285,6 @@
       },
       {
         "lemma": "living",
-        "importance": 2
-      },
-      {
-        "lemma": "living room",
-        "importance": 2
-      },
-      {
-        "lemma": "lonely",
-        "importance": 2
-      },
-      {
-        "lemma": "long",
         "importance": 2
       },
       {
@@ -2343,23 +1312,11 @@
         "importance": 2
       },
       {
-        "lemma": "lunch",
-        "importance": 2
-      },
-      {
         "lemma": "machine",
         "importance": 2
       },
       {
         "lemma": "magazine",
-        "importance": 2
-      },
-      {
-        "lemma": "mail",
-        "importance": 2
-      },
-      {
-        "lemma": "make",
         "importance": 2
       },
       {
@@ -2372,10 +1329,6 @@
       },
       {
         "lemma": "map",
-        "importance": 2
-      },
-      {
-        "lemma": "March",
         "importance": 2
       },
       {
@@ -2395,15 +1348,7 @@
         "importance": 2
       },
       {
-        "lemma": "May",
-        "importance": 2
-      },
-      {
         "lemma": "maybe",
-        "importance": 2
-      },
-      {
-        "lemma": "me",
         "importance": 2
       },
       {
@@ -2412,18 +1357,6 @@
       },
       {
         "lemma": "mean",
-        "importance": 2
-      },
-      {
-        "lemma": "meat",
-        "importance": 2
-      },
-      {
-        "lemma": "medicine",
-        "importance": 2
-      },
-      {
-        "lemma": "meet",
         "importance": 2
       },
       {
@@ -2439,15 +1372,7 @@
         "importance": 2
       },
       {
-        "lemma": "message",
-        "importance": 2
-      },
-      {
         "lemma": "middle",
-        "importance": 2
-      },
-      {
-        "lemma": "milk",
         "importance": 2
       },
       {
@@ -2455,27 +1380,11 @@
         "importance": 2
       },
       {
-        "lemma": "mine",
-        "importance": 2
-      },
-      {
-        "lemma": "minute",
-        "importance": 2
-      },
-      {
         "lemma": "miss",
         "importance": 2
       },
       {
-        "lemma": "Miss",
-        "importance": 2
-      },
-      {
         "lemma": "mobile",
-        "importance": 2
-      },
-      {
-        "lemma": "mobile phone",
         "importance": 2
       },
       {
@@ -2491,18 +1400,6 @@
         "importance": 2
       },
       {
-        "lemma": "Monday",
-        "importance": 2
-      },
-      {
-        "lemma": "money",
-        "importance": 2
-      },
-      {
-        "lemma": "monkey",
-        "importance": 2
-      },
-      {
         "lemma": "month",
         "importance": 2
       },
@@ -2515,15 +1412,7 @@
         "importance": 2
       },
       {
-        "lemma": "morning",
-        "importance": 2
-      },
-      {
         "lemma": "most",
-        "importance": 2
-      },
-      {
-        "lemma": "mother",
         "importance": 2
       },
       {
@@ -2531,27 +1420,7 @@
         "importance": 2
       },
       {
-        "lemma": "mouse",
-        "importance": 2
-      },
-      {
-        "lemma": "mouth",
-        "importance": 2
-      },
-      {
         "lemma": "move",
-        "importance": 2
-      },
-      {
-        "lemma": "movie",
-        "importance": 2
-      },
-      {
-        "lemma": "Mr.",
-        "importance": 2
-      },
-      {
-        "lemma": "Mrs.",
         "importance": 2
       },
       {
@@ -2563,14 +1432,6 @@
         "importance": 2
       },
       {
-        "lemma": "music",
-        "importance": 2
-      },
-      {
-        "lemma": "musician",
-        "importance": 2
-      },
-      {
         "lemma": "must",
         "importance": 2
       },
@@ -2579,31 +1440,11 @@
         "importance": 2
       },
       {
-        "lemma": "name",
-        "importance": 2
-      },
-      {
-        "lemma": "nationality",
-        "importance": 2
-      },
-      {
-        "lemma": "near",
-        "importance": 2
-      },
-      {
-        "lemma": "neck",
-        "importance": 2
-      },
-      {
         "lemma": "need",
         "importance": 2
       },
       {
         "lemma": "never",
-        "importance": 2
-      },
-      {
-        "lemma": "new",
         "importance": 2
       },
       {
@@ -2619,18 +1460,6 @@
         "importance": 2
       },
       {
-        "lemma": "night",
-        "importance": 2
-      },
-      {
-        "lemma": "nine",
-        "importance": 2
-      },
-      {
-        "lemma": "nineteen",
-        "importance": 2
-      },
-      {
         "lemma": "ninety",
         "importance": 2
       },
@@ -2643,10 +1472,6 @@
         "importance": 2
       },
       {
-        "lemma": "nose",
-        "importance": 2
-      },
-      {
         "lemma": "not",
         "importance": 2
       },
@@ -2655,35 +1480,11 @@
         "importance": 2
       },
       {
-        "lemma": "notebook",
-        "importance": 2
-      },
-      {
         "lemma": "nothing",
         "importance": 2
       },
       {
-        "lemma": "November",
-        "importance": 2
-      },
-      {
-        "lemma": "now",
-        "importance": 2
-      },
-      {
         "lemma": "number",
-        "importance": 2
-      },
-      {
-        "lemma": "nurse",
-        "importance": 2
-      },
-      {
-        "lemma": "o'clock",
-        "importance": 2
-      },
-      {
-        "lemma": "October",
         "importance": 2
       },
       {
@@ -2695,23 +1496,7 @@
         "importance": 2
       },
       {
-        "lemma": "office",
-        "importance": 2
-      },
-      {
-        "lemma": "officer",
-        "importance": 2
-      },
-      {
         "lemma": "often",
-        "importance": 2
-      },
-      {
-        "lemma": "OK",
-        "importance": 2
-      },
-      {
-        "lemma": "old",
         "importance": 2
       },
       {
@@ -2727,15 +1512,7 @@
         "importance": 2
       },
       {
-        "lemma": "one",
-        "importance": 2
-      },
-      {
         "lemma": "only",
-        "importance": 2
-      },
-      {
-        "lemma": "open",
         "importance": 2
       },
       {
@@ -2744,10 +1521,6 @@
       },
       {
         "lemma": "or",
-        "importance": 2
-      },
-      {
-        "lemma": "orange",
         "importance": 2
       },
       {
@@ -2760,22 +1533,6 @@
       },
       {
         "lemma": "our",
-        "importance": 2
-      },
-      {
-        "lemma": "ours",
-        "importance": 2
-      },
-      {
-        "lemma": "out",
-        "importance": 2
-      },
-      {
-        "lemma": "outside",
-        "importance": 2
-      },
-      {
-        "lemma": "over",
         "importance": 2
       },
       {
@@ -2811,35 +1568,7 @@
         "importance": 2
       },
       {
-        "lemma": "pants",
-        "importance": 2
-      },
-      {
-        "lemma": "paper",
-        "importance": 2
-      },
-      {
         "lemma": "paragraph",
-        "importance": 2
-      },
-      {
-        "lemma": "pardon",
-        "importance": 2
-      },
-      {
-        "lemma": "parent",
-        "importance": 2
-      },
-      {
-        "lemma": "park",
-        "importance": 2
-      },
-      {
-        "lemma": "partner",
-        "importance": 2
-      },
-      {
-        "lemma": "party",
         "importance": 2
       },
       {
@@ -2852,14 +1581,6 @@
       },
       {
         "lemma": "peace",
-        "importance": 2
-      },
-      {
-        "lemma": "pen",
-        "importance": 2
-      },
-      {
-        "lemma": "pencil",
         "importance": 2
       },
       {
@@ -2879,22 +1600,6 @@
         "importance": 2
       },
       {
-        "lemma": "pet",
-        "importance": 2
-      },
-      {
-        "lemma": "phone",
-        "importance": 2
-      },
-      {
-        "lemma": "photo",
-        "importance": 2
-      },
-      {
-        "lemma": "piano",
-        "importance": 2
-      },
-      {
         "lemma": "pick",
         "importance": 2
       },
@@ -2903,19 +1608,7 @@
         "importance": 2
       },
       {
-        "lemma": "picture",
-        "importance": 2
-      },
-      {
         "lemma": "piece",
-        "importance": 2
-      },
-      {
-        "lemma": "pig",
-        "importance": 2
-      },
-      {
-        "lemma": "pink",
         "importance": 2
       },
       {
@@ -2936,10 +1629,6 @@
       },
       {
         "lemma": "play",
-        "importance": 2
-      },
-      {
-        "lemma": "please",
         "importance": 2
       },
       {
@@ -2972,10 +1661,6 @@
       },
       {
         "lemma": "pop",
-        "importance": 2
-      },
-      {
-        "lemma": "post",
         "importance": 2
       },
       {
@@ -3023,10 +1708,6 @@
         "importance": 2
       },
       {
-        "lemma": "purple",
-        "importance": 2
-      },
-      {
         "lemma": "push",
         "importance": 2
       },
@@ -3051,27 +1732,11 @@
         "importance": 2
       },
       {
-        "lemma": "rabbit",
-        "importance": 2
-      },
-      {
         "lemma": "radio",
         "importance": 2
       },
       {
-        "lemma": "rain",
-        "importance": 2
-      },
-      {
-        "lemma": "rainy",
-        "importance": 2
-      },
-      {
         "lemma": "rat",
-        "importance": 2
-      },
-      {
-        "lemma": "read",
         "importance": 2
       },
       {
@@ -3099,23 +1764,11 @@
         "importance": 2
       },
       {
-        "lemma": "red",
-        "importance": 2
-      },
-      {
         "lemma": "remember",
         "importance": 2
       },
       {
         "lemma": "repeat",
-        "importance": 2
-      },
-      {
-        "lemma": "reporter",
-        "importance": 2
-      },
-      {
-        "lemma": "restaurant",
         "importance": 2
       },
       {
@@ -3128,10 +1781,6 @@
       },
       {
         "lemma": "ribbon",
-        "importance": 2
-      },
-      {
-        "lemma": "rice",
         "importance": 2
       },
       {
@@ -3183,14 +1832,6 @@
         "importance": 2
       },
       {
-        "lemma": "sad",
-        "importance": 2
-      },
-      {
-        "lemma": "sailor",
-        "importance": 2
-      },
-      {
         "lemma": "salad",
         "importance": 2
       },
@@ -3207,10 +1848,6 @@
         "importance": 2
       },
       {
-        "lemma": "Saturday",
-        "importance": 2
-      },
-      {
         "lemma": "save",
         "importance": 2
       },
@@ -3219,19 +1856,7 @@
         "importance": 2
       },
       {
-        "lemma": "say",
-        "importance": 2
-      },
-      {
-        "lemma": "school",
-        "importance": 2
-      },
-      {
         "lemma": "science",
-        "importance": 2
-      },
-      {
-        "lemma": "scientist",
         "importance": 2
       },
       {
@@ -3251,10 +1876,6 @@
         "importance": 2
       },
       {
-        "lemma": "see",
-        "importance": 2
-      },
-      {
         "lemma": "self",
         "importance": 2
       },
@@ -3267,19 +1888,7 @@
         "importance": 2
       },
       {
-        "lemma": "September",
-        "importance": 2
-      },
-      {
         "lemma": "set",
-        "importance": 2
-      },
-      {
-        "lemma": "seven",
-        "importance": 2
-      },
-      {
-        "lemma": "seventeen",
         "importance": 2
       },
       {
@@ -3295,14 +1904,6 @@
         "importance": 2
       },
       {
-        "lemma": "she",
-        "importance": 2
-      },
-      {
-        "lemma": "sheep",
-        "importance": 2
-      },
-      {
         "lemma": "shelf",
         "importance": 2
       },
@@ -3311,31 +1912,11 @@
         "importance": 2
       },
       {
-        "lemma": "shirt",
-        "importance": 2
-      },
-      {
-        "lemma": "shoe",
-        "importance": 2
-      },
-      {
-        "lemma": "shop",
-        "importance": 2
-      },
-      {
         "lemma": "shopping",
         "importance": 2
       },
       {
-        "lemma": "short",
-        "importance": 2
-      },
-      {
         "lemma": "should",
-        "importance": 2
-      },
-      {
-        "lemma": "shoulder",
         "importance": 2
       },
       {
@@ -3347,14 +1928,6 @@
         "importance": 2
       },
       {
-        "lemma": "shy",
-        "importance": 2
-      },
-      {
-        "lemma": "sick",
-        "importance": 2
-      },
-      {
         "lemma": "side",
         "importance": 2
       },
@@ -3363,23 +1936,7 @@
         "importance": 2
       },
       {
-        "lemma": "sign",
-        "importance": 2
-      },
-      {
         "lemma": "sing",
-        "importance": 2
-      },
-      {
-        "lemma": "singer",
-        "importance": 2
-      },
-      {
-        "lemma": "sir",
-        "importance": 2
-      },
-      {
-        "lemma": "sister",
         "importance": 2
       },
       {
@@ -3388,14 +1945,6 @@
       },
       {
         "lemma": "site",
-        "importance": 2
-      },
-      {
-        "lemma": "six",
-        "importance": 2
-      },
-      {
-        "lemma": "sixteen",
         "importance": 2
       },
       {
@@ -3411,23 +1960,7 @@
         "importance": 2
       },
       {
-        "lemma": "skirt",
-        "importance": 2
-      },
-      {
-        "lemma": "sky",
-        "importance": 2
-      },
-      {
         "lemma": "sleep",
-        "importance": 2
-      },
-      {
-        "lemma": "slow",
-        "importance": 2
-      },
-      {
-        "lemma": "small",
         "importance": 2
       },
       {
@@ -3455,27 +1988,11 @@
         "importance": 2
       },
       {
-        "lemma": "snake",
-        "importance": 2
-      },
-      {
-        "lemma": "snow",
-        "importance": 2
-      },
-      {
-        "lemma": "snowy",
-        "importance": 2
-      },
-      {
         "lemma": "so",
         "importance": 2
       },
       {
         "lemma": "soccer",
-        "importance": 2
-      },
-      {
-        "lemma": "social",
         "importance": 2
       },
       {
@@ -3499,19 +2016,7 @@
         "importance": 2
       },
       {
-        "lemma": "son",
-        "importance": 2
-      },
-      {
-        "lemma": "song",
-        "importance": 2
-      },
-      {
         "lemma": "soon",
-        "importance": 2
-      },
-      {
-        "lemma": "sorry",
         "importance": 2
       },
       {
@@ -3536,10 +2041,6 @@
       },
       {
         "lemma": "spend",
-        "importance": 2
-      },
-      {
-        "lemma": "sport",
         "importance": 2
       },
       {
@@ -3571,10 +2072,6 @@
         "importance": 2
       },
       {
-        "lemma": "station",
-        "importance": 2
-      },
-      {
         "lemma": "stay",
         "importance": 2
       },
@@ -3595,15 +2092,7 @@
         "importance": 2
       },
       {
-        "lemma": "store",
-        "importance": 2
-      },
-      {
         "lemma": "story",
-        "importance": 2
-      },
-      {
-        "lemma": "straight",
         "importance": 2
       },
       {
@@ -3612,10 +2101,6 @@
       },
       {
         "lemma": "strict",
-        "importance": 2
-      },
-      {
-        "lemma": "strong",
         "importance": 2
       },
       {
@@ -3628,10 +2113,6 @@
       },
       {
         "lemma": "subject",
-        "importance": 2
-      },
-      {
-        "lemma": "subway",
         "importance": 2
       },
       {
@@ -3655,27 +2136,11 @@
         "importance": 2
       },
       {
-        "lemma": "sun",
-        "importance": 2
-      },
-      {
-        "lemma": "Sunday",
-        "importance": 2
-      },
-      {
-        "lemma": "sunny",
-        "importance": 2
-      },
-      {
         "lemma": "sunshine",
         "importance": 2
       },
       {
         "lemma": "super",
-        "importance": 2
-      },
-      {
-        "lemma": "supermarket",
         "importance": 2
       },
       {
@@ -3699,27 +2164,11 @@
         "importance": 2
       },
       {
-        "lemma": "swim",
-        "importance": 2
-      },
-      {
         "lemma": "swimming",
         "importance": 2
       },
       {
         "lemma": "swimming pool",
-        "importance": 2
-      },
-      {
-        "lemma": "T-shirt",
-        "importance": 2
-      },
-      {
-        "lemma": "table",
-        "importance": 2
-      },
-      {
-        "lemma": "take",
         "importance": 2
       },
       {
@@ -3735,15 +2184,7 @@
         "importance": 2
       },
       {
-        "lemma": "tea",
-        "importance": 2
-      },
-      {
         "lemma": "teach",
-        "importance": 2
-      },
-      {
-        "lemma": "teacher",
         "importance": 2
       },
       {
@@ -3759,15 +2200,7 @@
         "importance": 2
       },
       {
-        "lemma": "tell",
-        "importance": 2
-      },
-      {
         "lemma": "temple",
-        "importance": 2
-      },
-      {
-        "lemma": "ten",
         "importance": 2
       },
       {
@@ -3787,14 +2220,6 @@
         "importance": 2
       },
       {
-        "lemma": "thank",
-        "importance": 2
-      },
-      {
-        "lemma": "thanks",
-        "importance": 2
-      },
-      {
         "lemma": "that",
         "importance": 2
       },
@@ -3803,15 +2228,7 @@
         "importance": 2
       },
       {
-        "lemma": "theater",
-        "importance": 2
-      },
-      {
         "lemma": "their",
-        "importance": 2
-      },
-      {
-        "lemma": "them",
         "importance": 2
       },
       {
@@ -3827,10 +2244,6 @@
         "importance": 2
       },
       {
-        "lemma": "they",
-        "importance": 2
-      },
-      {
         "lemma": "thick",
         "importance": 2
       },
@@ -3840,14 +2253,6 @@
       },
       {
         "lemma": "thing",
-        "importance": 2
-      },
-      {
-        "lemma": "think",
-        "importance": 2
-      },
-      {
-        "lemma": "thirteen",
         "importance": 2
       },
       {
@@ -3863,19 +2268,7 @@
         "importance": 2
       },
       {
-        "lemma": "three",
-        "importance": 2
-      },
-      {
-        "lemma": "through",
-        "importance": 2
-      },
-      {
         "lemma": "throw",
-        "importance": 2
-      },
-      {
-        "lemma": "Thursday",
         "importance": 2
       },
       {
@@ -3883,27 +2276,11 @@
         "importance": 2
       },
       {
-        "lemma": "tiger",
-        "importance": 2
-      },
-      {
         "lemma": "tight",
         "importance": 2
       },
       {
-        "lemma": "time",
-        "importance": 2
-      },
-      {
-        "lemma": "tired",
-        "importance": 2
-      },
-      {
         "lemma": "to",
-        "importance": 2
-      },
-      {
-        "lemma": "today",
         "importance": 2
       },
       {
@@ -3919,23 +2296,11 @@
         "importance": 2
       },
       {
-        "lemma": "tomorrow",
-        "importance": 2
-      },
-      {
         "lemma": "tonight",
         "importance": 2
       },
       {
         "lemma": "too",
-        "importance": 2
-      },
-      {
-        "lemma": "tool",
-        "importance": 2
-      },
-      {
-        "lemma": "tooth",
         "importance": 2
       },
       {
@@ -3963,15 +2328,7 @@
         "importance": 2
       },
       {
-        "lemma": "toy",
-        "importance": 2
-      },
-      {
         "lemma": "train",
-        "importance": 2
-      },
-      {
-        "lemma": "travel",
         "importance": 2
       },
       {
@@ -3980,10 +2337,6 @@
       },
       {
         "lemma": "trip",
-        "importance": 2
-      },
-      {
-        "lemma": "trousers",
         "importance": 2
       },
       {
@@ -4003,27 +2356,11 @@
         "importance": 2
       },
       {
-        "lemma": "Tuesday",
-        "importance": 2
-      },
-      {
         "lemma": "turkey",
         "importance": 2
       },
       {
         "lemma": "TV",
-        "importance": 2
-      },
-      {
-        "lemma": "twelve",
-        "importance": 2
-      },
-      {
-        "lemma": "twenty",
-        "importance": 2
-      },
-      {
-        "lemma": "two",
         "importance": 2
       },
       {
@@ -4035,31 +2372,11 @@
         "importance": 2
       },
       {
-        "lemma": "umbrella",
-        "importance": 2
-      },
-      {
-        "lemma": "uncle",
-        "importance": 2
-      },
-      {
-        "lemma": "under",
-        "importance": 2
-      },
-      {
         "lemma": "underline",
         "importance": 2
       },
       {
         "lemma": "until",
-        "importance": 2
-      },
-      {
-        "lemma": "up",
-        "importance": 2
-      },
-      {
-        "lemma": "us",
         "importance": 2
       },
       {
@@ -4076,10 +2393,6 @@
       },
       {
         "lemma": "vase",
-        "importance": 2
-      },
-      {
-        "lemma": "vegetable",
         "importance": 2
       },
       {
@@ -4107,10 +2420,6 @@
         "importance": 2
       },
       {
-        "lemma": "waitress",
-        "importance": 2
-      },
-      {
         "lemma": "wake",
         "importance": 2
       },
@@ -4119,19 +2428,7 @@
         "importance": 2
       },
       {
-        "lemma": "wall",
-        "importance": 2
-      },
-      {
-        "lemma": "want",
-        "importance": 2
-      },
-      {
         "lemma": "war",
-        "importance": 2
-      },
-      {
-        "lemma": "warm",
         "importance": 2
       },
       {
@@ -4143,27 +2440,11 @@
         "importance": 2
       },
       {
-        "lemma": "watch",
-        "importance": 2
-      },
-      {
-        "lemma": "water",
-        "importance": 2
-      },
-      {
         "lemma": "way",
         "importance": 2
       },
       {
-        "lemma": "we",
-        "importance": 2
-      },
-      {
         "lemma": "wear",
-        "importance": 2
-      },
-      {
-        "lemma": "Wednesday",
         "importance": 2
       },
       {
@@ -4175,19 +2456,7 @@
         "importance": 2
       },
       {
-        "lemma": "welcome",
-        "importance": 2
-      },
-      {
-        "lemma": "well",
-        "importance": 2
-      },
-      {
         "lemma": "were",
-        "importance": 2
-      },
-      {
-        "lemma": "what",
         "importance": 2
       },
       {
@@ -4195,47 +2464,7 @@
         "importance": 2
       },
       {
-        "lemma": "when",
-        "importance": 2
-      },
-      {
-        "lemma": "where",
-        "importance": 2
-      },
-      {
-        "lemma": "which",
-        "importance": 2
-      },
-      {
-        "lemma": "white",
-        "importance": 2
-      },
-      {
-        "lemma": "who",
-        "importance": 2
-      },
-      {
-        "lemma": "whose",
-        "importance": 2
-      },
-      {
-        "lemma": "why",
-        "importance": 2
-      },
-      {
-        "lemma": "wife",
-        "importance": 2
-      },
-      {
         "lemma": "will",
-        "importance": 2
-      },
-      {
-        "lemma": "wind",
-        "importance": 2
-      },
-      {
-        "lemma": "window",
         "importance": 2
       },
       {
@@ -4267,10 +2496,6 @@
         "importance": 2
       },
       {
-        "lemma": "worker",
-        "importance": 2
-      },
-      {
         "lemma": "world",
         "importance": 2
       },
@@ -4283,19 +2508,7 @@
         "importance": 2
       },
       {
-        "lemma": "write",
-        "importance": 2
-      },
-      {
-        "lemma": "writer",
-        "importance": 2
-      },
-      {
         "lemma": "wrong",
-        "importance": 2
-      },
-      {
-        "lemma": "yard",
         "importance": 2
       },
       {
@@ -4303,15 +2516,7 @@
         "importance": 2
       },
       {
-        "lemma": "yellow",
-        "importance": 2
-      },
-      {
         "lemma": "yes",
-        "importance": 2
-      },
-      {
-        "lemma": "yesterday",
         "importance": 2
       },
       {
@@ -4323,19 +2528,11 @@
         "importance": 2
       },
       {
-        "lemma": "you",
-        "importance": 2
-      },
-      {
         "lemma": "young",
         "importance": 2
       },
       {
         "lemma": "your",
-        "importance": 2
-      },
-      {
-        "lemma": "yours",
         "importance": 2
       },
       {
@@ -4364,10 +2561,6 @@
       },
       {
         "lemma": "accident",
-        "importance": 2
-      },
-      {
-        "lemma": "account",
         "importance": 2
       },
       {
@@ -4563,14 +2756,6 @@
         "importance": 2
       },
       {
-        "lemma": "apartment",
-        "importance": 2
-      },
-      {
-        "lemma": "apologize",
-        "importance": 2
-      },
-      {
         "lemma": "apparently",
         "importance": 2
       },
@@ -4588,10 +2773,6 @@
       },
       {
         "lemma": "appointment",
-        "importance": 2
-      },
-      {
-        "lemma": "appreciate",
         "importance": 2
       },
       {
@@ -4919,23 +3100,11 @@
         "importance": 2
       },
       {
-        "lemma": "head",
-        "importance": 2
-      },
-      {
         "lemma": "health",
         "importance": 2
       },
       {
-        "lemma": "healthy",
-        "importance": 2
-      },
-      {
         "lemma": "hear",
-        "importance": 2
-      },
-      {
-        "lemma": "heart",
         "importance": 2
       },
       {
@@ -5031,10 +3200,6 @@
         "importance": 2
       },
       {
-        "lemma": "cash",
-        "importance": 2
-      },
-      {
         "lemma": "cassette",
         "importance": 2
       },
@@ -5107,10 +3272,6 @@
         "importance": 2
       },
       {
-        "lemma": "chat",
-        "importance": 2
-      },
-      {
         "lemma": "cheap",
         "importance": 2
       },
@@ -5171,10 +3332,6 @@
         "importance": 2
       },
       {
-        "lemma": "citizen",
-        "importance": 2
-      },
-      {
         "lemma": "claim",
         "importance": 2
       },
@@ -5231,10 +3388,6 @@
         "importance": 2
       },
       {
-        "lemma": "colorful",
-        "importance": 2
-      },
-      {
         "lemma": "column",
         "importance": 2
       },
@@ -5263,18 +3416,6 @@
         "importance": 2
       },
       {
-        "lemma": "communicate",
-        "importance": 2
-      },
-      {
-        "lemma": "communication",
-        "importance": 2
-      },
-      {
-        "lemma": "company",
-        "importance": 2
-      },
-      {
         "lemma": "comparative",
         "importance": 2
       },
@@ -5288,10 +3429,6 @@
       },
       {
         "lemma": "complain",
-        "importance": 2
-      },
-      {
-        "lemma": "complaint",
         "importance": 2
       },
       {
@@ -5336,10 +3473,6 @@
       },
       {
         "lemma": "consist",
-        "importance": 2
-      },
-      {
-        "lemma": "contact",
         "importance": 2
       },
       {
@@ -5443,10 +3576,6 @@
         "importance": 2
       },
       {
-        "lemma": "crime",
-        "importance": 2
-      },
-      {
         "lemma": "crisp",
         "importance": 2
       },
@@ -5483,10 +3612,6 @@
         "importance": 2
       },
       {
-        "lemma": "custom",
-        "importance": 2
-      },
-      {
         "lemma": "customer",
         "importance": 2
       },
@@ -5504,10 +3629,6 @@
       },
       {
         "lemma": "dancer",
-        "importance": 2
-      },
-      {
-        "lemma": "danger",
         "importance": 2
       },
       {
@@ -5735,10 +3856,6 @@
         "importance": 2
       },
       {
-        "lemma": "driver's license",
-        "importance": 2
-      },
-      {
         "lemma": "drug",
         "importance": 2
       },
@@ -5815,10 +3932,6 @@
         "importance": 2
       },
       {
-        "lemma": "elevator",
-        "importance": 2
-      },
-      {
         "lemma": "elsewhere",
         "importance": 2
       },
@@ -5868,10 +3981,6 @@
       },
       {
         "lemma": "entrance",
-        "importance": 2
-      },
-      {
-        "lemma": "envelope",
         "importance": 2
       },
       {
@@ -5932,10 +4041,6 @@
       },
       {
         "lemma": "except",
-        "importance": 2
-      },
-      {
-        "lemma": "exchange",
         "importance": 2
       },
       {
@@ -6003,10 +4108,6 @@
         "importance": 2
       },
       {
-        "lemma": "familiar",
-        "importance": 2
-      },
-      {
         "lemma": "fancy",
         "importance": 2
       },
@@ -6051,10 +4152,6 @@
         "importance": 2
       },
       {
-        "lemma": "fee",
-        "importance": 2
-      },
-      {
         "lemma": "female",
         "importance": 2
       },
@@ -6088,10 +4185,6 @@
       },
       {
         "lemma": "finally",
-        "importance": 2
-      },
-      {
-        "lemma": "first name",
         "importance": 2
       },
       {
@@ -6247,15 +4340,7 @@
         "importance": 2
       },
       {
-        "lemma": "garage",
-        "importance": 2
-      },
-      {
         "lemma": "garlic",
-        "importance": 2
-      },
-      {
-        "lemma": "gas",
         "importance": 2
       },
       {
@@ -6283,19 +4368,11 @@
         "importance": 2
       },
       {
-        "lemma": "golden",
-        "importance": 2
-      },
-      {
         "lemma": "golf",
         "importance": 2
       },
       {
         "lemma": "good-looking",
-        "importance": 2
-      },
-      {
-        "lemma": "government",
         "importance": 2
       },
       {
@@ -6332,10 +4409,6 @@
       },
       {
         "lemma": "granny",
-        "importance": 2
-      },
-      {
-        "lemma": "grateful",
         "importance": 2
       },
       {
@@ -6427,10 +4500,6 @@
         "importance": 2
       },
       {
-        "lemma": "heating",
-        "importance": 2
-      },
-      {
         "lemma": "heavily",
         "importance": 2
       },
@@ -6444,10 +4513,6 @@
       },
       {
         "lemma": "herself",
-        "importance": 2
-      },
-      {
-        "lemma": "hey",
         "importance": 2
       },
       {
@@ -6528,10 +4593,6 @@
       },
       {
         "lemma": "ill",
-        "importance": 2
-      },
-      {
-        "lemma": "illegal",
         "importance": 2
       },
       {
@@ -6759,10 +4820,6 @@
         "importance": 2
       },
       {
-        "lemma": "lane",
-        "importance": 2
-      },
-      {
         "lemma": "last",
         "importance": 2
       },
@@ -6772,10 +4829,6 @@
       },
       {
         "lemma": "latter",
-        "importance": 2
-      },
-      {
-        "lemma": "law",
         "importance": 2
       },
       {
@@ -6943,10 +4996,6 @@
         "importance": 2
       },
       {
-        "lemma": "manage",
-        "importance": 2
-      },
-      {
         "lemma": "manager",
         "importance": 2
       },
@@ -6988,10 +5037,6 @@
       },
       {
         "lemma": "medal",
-        "importance": 2
-      },
-      {
-        "lemma": "medical",
         "importance": 2
       },
       {
@@ -7215,15 +5260,7 @@
         "importance": 2
       },
       {
-        "lemma": "occupation",
-        "importance": 2
-      },
-      {
         "lemma": "offer",
-        "importance": 2
-      },
-      {
-        "lemma": "official",
         "importance": 2
       },
       {
@@ -7244,10 +5281,6 @@
       },
       {
         "lemma": "onion",
-        "importance": 2
-      },
-      {
-        "lemma": "online",
         "importance": 2
       },
       {
@@ -7383,10 +5416,6 @@
         "importance": 2
       },
       {
-        "lemma": "penfriend",
-        "importance": 2
-      },
-      {
         "lemma": "pepper",
         "importance": 2
       },
@@ -7420,10 +5449,6 @@
       },
       {
         "lemma": "personality",
-        "importance": 2
-      },
-      {
-        "lemma": "petrol",
         "importance": 2
       },
       {
@@ -7519,30 +5544,6 @@
         "importance": 2
       },
       {
-        "lemma": "police",
-        "importance": 2
-      },
-      {
-        "lemma": "police officer",
-        "importance": 2
-      },
-      {
-        "lemma": "police station",
-        "importance": 2
-      },
-      {
-        "lemma": "policeman",
-        "importance": 2
-      },
-      {
-        "lemma": "policewoman",
-        "importance": 2
-      },
-      {
-        "lemma": "polite",
-        "importance": 2
-      },
-      {
         "lemma": "political",
         "importance": 2
       },
@@ -7572,10 +5573,6 @@
       },
       {
         "lemma": "possibly",
-        "importance": 2
-      },
-      {
-        "lemma": "post office",
         "importance": 2
       },
       {
@@ -7863,19 +5860,7 @@
         "importance": 2
       },
       {
-        "lemma": "rent",
-        "importance": 2
-      },
-      {
-        "lemma": "repair",
-        "importance": 2
-      },
-      {
         "lemma": "replace",
-        "importance": 2
-      },
-      {
-        "lemma": "reply",
         "importance": 2
       },
       {
@@ -7907,10 +5892,6 @@
         "importance": 2
       },
       {
-        "lemma": "return",
-        "importance": 2
-      },
-      {
         "lemma": "reunion",
         "importance": 2
       },
@@ -7924,10 +5905,6 @@
       },
       {
         "lemma": "right-hand",
-        "importance": 2
-      },
-      {
-        "lemma": "road",
         "importance": 2
       },
       {
@@ -8139,10 +6116,6 @@
         "importance": 2
       },
       {
-        "lemma": "send",
-        "importance": 2
-      },
-      {
         "lemma": "senior",
         "importance": 2
       },
@@ -8244,10 +6217,6 @@
       },
       {
         "lemma": "silly",
-        "importance": 2
-      },
-      {
-        "lemma": "silver",
         "importance": 2
       },
       {
@@ -8356,10 +6325,6 @@
       },
       {
         "lemma": "soap",
-        "importance": 2
-      },
-      {
-        "lemma": "society",
         "importance": 2
       },
       {
@@ -8483,10 +6448,6 @@
         "importance": 2
       },
       {
-        "lemma": "stamp",
-        "importance": 2
-      },
-      {
         "lemma": "state",
         "importance": 2
       },
@@ -8511,19 +6472,11 @@
         "importance": 2
       },
       {
-        "lemma": "stomachache",
-        "importance": 2
-      },
-      {
         "lemma": "storm",
         "importance": 2
       },
       {
         "lemma": "stove",
-        "importance": 2
-      },
-      {
-        "lemma": "stranger",
         "importance": 2
       },
       {
@@ -8631,10 +6584,6 @@
         "importance": 2
       },
       {
-        "lemma": "surname",
-        "importance": 2
-      },
-      {
         "lemma": "surprised",
         "importance": 2
       },
@@ -8735,14 +6684,6 @@
         "importance": 2
       },
       {
-        "lemma": "text",
-        "importance": 2
-      },
-      {
-        "lemma": "text message",
-        "importance": 2
-      },
-      {
         "lemma": "textbook",
         "importance": 2
       },
@@ -8811,19 +6752,11 @@
         "importance": 2
       },
       {
-        "lemma": "toast",
-        "importance": 2
-      },
-      {
         "lemma": "toe",
         "importance": 2
       },
       {
         "lemma": "tone",
-        "importance": 2
-      },
-      {
-        "lemma": "toothache",
         "importance": 2
       },
       {
@@ -8852,22 +6785,6 @@
       },
       {
         "lemma": "trade",
-        "importance": 2
-      },
-      {
-        "lemma": "tradition",
-        "importance": 2
-      },
-      {
-        "lemma": "traditional",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic light",
         "importance": 2
       },
       {
@@ -9051,10 +6968,6 @@
         "importance": 2
       },
       {
-        "lemma": "visitor",
-        "importance": 2
-      },
-      {
         "lemma": "vocabulary",
         "importance": 2
       },
@@ -9088,10 +7001,6 @@
       },
       {
         "lemma": "wealth",
-        "importance": 2
-      },
-      {
-        "lemma": "web",
         "importance": 2
       },
       {
@@ -9347,10 +7256,6 @@
         "importance": 2
       },
       {
-        "lemma": "accountant",
-        "importance": 2
-      },
-      {
         "lemma": "accuracy",
         "importance": 2
       },
@@ -9404,10 +7309,6 @@
       },
       {
         "lemma": "adapt",
-        "importance": 2
-      },
-      {
-        "lemma": "addressee",
         "importance": 2
       },
       {
@@ -9487,19 +7388,11 @@
         "importance": 2
       },
       {
-        "lemma": "agreement",
-        "importance": 2
-      },
-      {
         "lemma": "agricultural",
         "importance": 2
       },
       {
         "lemma": "agriculture",
-        "importance": 2
-      },
-      {
-        "lemma": "aid",
         "importance": 2
       },
       {
@@ -9567,10 +7460,6 @@
         "importance": 2
       },
       {
-        "lemma": "ambulance",
-        "importance": 2
-      },
-      {
         "lemma": "amount",
         "importance": 2
       },
@@ -9604,10 +7493,6 @@
       },
       {
         "lemma": "announce",
-        "importance": 2
-      },
-      {
-        "lemma": "announcement",
         "importance": 2
       },
       {
@@ -9659,10 +7544,6 @@
         "importance": 2
       },
       {
-        "lemma": "apology",
-        "importance": 2
-      },
-      {
         "lemma": "apparent",
         "importance": 2
       },
@@ -9688,10 +7569,6 @@
       },
       {
         "lemma": "appoint",
-        "importance": 2
-      },
-      {
-        "lemma": "appreciation",
         "importance": 2
       },
       {
@@ -9735,10 +7612,6 @@
         "importance": 2
       },
       {
-        "lemma": "arrest",
-        "importance": 2
-      },
-      {
         "lemma": "arrival",
         "importance": 2
       },
@@ -9748,10 +7621,6 @@
       },
       {
         "lemma": "artist",
-        "importance": 2
-      },
-      {
-        "lemma": "artistic",
         "importance": 2
       },
       {
@@ -9783,10 +7652,6 @@
         "importance": 2
       },
       {
-        "lemma": "assistance",
-        "importance": 2
-      },
-      {
         "lemma": "associate",
         "importance": 2
       },
@@ -9796,10 +7661,6 @@
       },
       {
         "lemma": "astronomer",
-        "importance": 2
-      },
-      {
-        "lemma": "athletic",
         "importance": 2
       },
       {
@@ -9911,10 +7772,6 @@
         "importance": 2
       },
       {
-        "lemma": "balance",
-        "importance": 2
-      },
-      {
         "lemma": "bald",
         "importance": 2
       },
@@ -9924,10 +7781,6 @@
       },
       {
         "lemma": "bang",
-        "importance": 2
-      },
-      {
-        "lemma": "bank account",
         "importance": 2
       },
       {
@@ -10032,10 +7885,6 @@
       },
       {
         "lemma": "bilingual",
-        "importance": 2
-      },
-      {
-        "lemma": "bin",
         "importance": 2
       },
       {
@@ -10184,10 +8033,6 @@
       },
       {
         "lemma": "breed",
-        "importance": 2
-      },
-      {
-        "lemma": "breeding",
         "importance": 2
       },
       {
@@ -10403,10 +8248,6 @@
         "importance": 2
       },
       {
-        "lemma": "cashpoint",
-        "importance": 2
-      },
-      {
         "lemma": "casual",
         "importance": 2
       },
@@ -10439,19 +8280,11 @@
         "importance": 2
       },
       {
-        "lemma": "celebrity",
-        "importance": 2
-      },
-      {
         "lemma": "cell",
         "importance": 2
       },
       {
         "lemma": "central",
-        "importance": 2
-      },
-      {
-        "lemma": "central heating",
         "importance": 2
       },
       {
@@ -10572,14 +8405,6 @@
       },
       {
         "lemma": "circus",
-        "importance": 2
-      },
-      {
-        "lemma": "citizenship",
-        "importance": 2
-      },
-      {
-        "lemma": "civil",
         "importance": 2
       },
       {
@@ -10979,15 +8804,7 @@
         "importance": 2
       },
       {
-        "lemma": "crash",
-        "importance": 2
-      },
-      {
         "lemma": "creator",
-        "importance": 2
-      },
-      {
-        "lemma": "criminal",
         "importance": 2
       },
       {
@@ -11032,14 +8849,6 @@
       },
       {
         "lemma": "cultivate",
-        "importance": 2
-      },
-      {
-        "lemma": "cultural",
-        "importance": 2
-      },
-      {
-        "lemma": "cure",
         "importance": 2
       },
       {
@@ -11244,10 +9053,6 @@
       },
       {
         "lemma": "deliver",
-        "importance": 2
-      },
-      {
-        "lemma": "delivery",
         "importance": 2
       },
       {
@@ -11575,10 +9380,6 @@
         "importance": 2
       },
       {
-        "lemma": "document",
-        "importance": 2
-      },
-      {
         "lemma": "documentary",
         "importance": 2
       },
@@ -11628,10 +9429,6 @@
       },
       {
         "lemma": "dump",
-        "importance": 2
-      },
-      {
-        "lemma": "dustbin",
         "importance": 2
       },
       {
@@ -11691,10 +9488,6 @@
         "importance": 2
       },
       {
-        "lemma": "economic",
-        "importance": 2
-      },
-      {
         "lemma": "economics",
         "importance": 2
       },
@@ -11744,10 +9537,6 @@
       },
       {
         "lemma": "electrical",
-        "importance": 2
-      },
-      {
-        "lemma": "electricity",
         "importance": 2
       },
       {
@@ -11839,10 +9628,6 @@
         "importance": 2
       },
       {
-        "lemma": "endanger",
-        "importance": 2
-      },
-      {
         "lemma": "endless",
         "importance": 2
       },
@@ -11896,10 +9681,6 @@
       },
       {
         "lemma": "entertainer",
-        "importance": 2
-      },
-      {
-        "lemma": "enthusiasm",
         "importance": 2
       },
       {
@@ -12091,10 +9872,6 @@
         "importance": 2
       },
       {
-        "lemma": "extreme sports",
-        "importance": 2
-      },
-      {
         "lemma": "eyesight",
         "importance": 2
       },
@@ -12143,10 +9920,6 @@
         "importance": 2
       },
       {
-        "lemma": "farewell",
-        "importance": 2
-      },
-      {
         "lemma": "farming",
         "importance": 2
       },
@@ -12179,23 +9952,11 @@
         "importance": 2
       },
       {
-        "lemma": "fax",
-        "importance": 2
-      },
-      {
-        "lemma": "feast",
-        "importance": 2
-      },
-      {
         "lemma": "fellow",
         "importance": 2
       },
       {
         "lemma": "ferry",
-        "importance": 2
-      },
-      {
-        "lemma": "festive",
         "importance": 2
       },
       {
@@ -12223,27 +9984,11 @@
         "importance": 2
       },
       {
-        "lemma": "finance",
-        "importance": 2
-      },
-      {
-        "lemma": "financial",
-        "importance": 2
-      },
-      {
         "lemma": "finding",
         "importance": 2
       },
       {
         "lemma": "finger",
-        "importance": 2
-      },
-      {
-        "lemma": "fire station",
-        "importance": 2
-      },
-      {
-        "lemma": "firefighter",
         "importance": 2
       },
       {
@@ -12351,14 +10096,6 @@
         "importance": 2
       },
       {
-        "lemma": "formal",
-        "importance": 2
-      },
-      {
-        "lemma": "formally",
-        "importance": 2
-      },
-      {
         "lemma": "format",
         "importance": 2
       },
@@ -12448,10 +10185,6 @@
       },
       {
         "lemma": "frying pan",
-        "importance": 2
-      },
-      {
-        "lemma": "fuel",
         "importance": 2
       },
       {
@@ -12651,10 +10384,6 @@
         "importance": 2
       },
       {
-        "lemma": "govern",
-        "importance": 2
-      },
-      {
         "lemma": "governor",
         "importance": 2
       },
@@ -12691,10 +10420,6 @@
         "importance": 2
       },
       {
-        "lemma": "gratitude",
-        "importance": 2
-      },
-      {
         "lemma": "grave",
         "importance": 2
       },
@@ -12704,10 +10429,6 @@
       },
       {
         "lemma": "greenhouse",
-        "importance": 2
-      },
-      {
-        "lemma": "greeting",
         "importance": 2
       },
       {
@@ -12728,10 +10449,6 @@
       },
       {
         "lemma": "growth",
-        "importance": 2
-      },
-      {
-        "lemma": "guarantee",
         "importance": 2
       },
       {
@@ -12847,10 +10564,6 @@
         "importance": 2
       },
       {
-        "lemma": "hazard",
-        "importance": 2
-      },
-      {
         "lemma": "headline",
         "importance": 2
       },
@@ -12955,10 +10668,6 @@
         "importance": 2
       },
       {
-        "lemma": "homeless",
-        "importance": 2
-      },
-      {
         "lemma": "honest",
         "importance": 2
       },
@@ -13008,10 +10717,6 @@
       },
       {
         "lemma": "hostel",
-        "importance": 2
-      },
-      {
-        "lemma": "household",
         "importance": 2
       },
       {
@@ -13111,14 +10816,6 @@
         "importance": 2
       },
       {
-        "lemma": "immigrate",
-        "importance": 2
-      },
-      {
-        "lemma": "immigration",
-        "importance": 2
-      },
-      {
         "lemma": "impair",
         "importance": 2
       },
@@ -13144,10 +10841,6 @@
       },
       {
         "lemma": "including",
-        "importance": 2
-      },
-      {
-        "lemma": "income",
         "importance": 2
       },
       {
@@ -13215,10 +10908,6 @@
         "importance": 2
       },
       {
-        "lemma": "inform",
-        "importance": 2
-      },
-      {
         "lemma": "informative",
         "importance": 2
       },
@@ -13244,10 +10933,6 @@
       },
       {
         "lemma": "inject",
-        "importance": 2
-      },
-      {
-        "lemma": "injury",
         "importance": 2
       },
       {
@@ -13319,10 +11004,6 @@
         "importance": 2
       },
       {
-        "lemma": "insurance",
-        "importance": 2
-      },
-      {
         "lemma": "intend",
         "importance": 2
       },
@@ -13376,10 +11057,6 @@
       },
       {
         "lemma": "interviewee",
-        "importance": 2
-      },
-      {
-        "lemma": "introduction",
         "importance": 2
       },
       {
@@ -13547,10 +11224,6 @@
         "importance": 2
       },
       {
-        "lemma": "landlord",
-        "importance": 2
-      },
-      {
         "lemma": "largely",
         "importance": 2
       },
@@ -13572,10 +11245,6 @@
       },
       {
         "lemma": "launch",
-        "importance": 2
-      },
-      {
-        "lemma": "lawful",
         "importance": 2
       },
       {
@@ -13608,14 +11277,6 @@
       },
       {
         "lemma": "lecture",
-        "importance": 2
-      },
-      {
-        "lemma": "legal",
-        "importance": 2
-      },
-      {
-        "lemma": "legally",
         "importance": 2
       },
       {
@@ -13652,10 +11313,6 @@
       },
       {
         "lemma": "lifelong",
-        "importance": 2
-      },
-      {
-        "lemma": "lift",
         "importance": 2
       },
       {
@@ -13791,10 +11448,6 @@
         "importance": 2
       },
       {
-        "lemma": "mailbox",
-        "importance": 2
-      },
-      {
         "lemma": "main",
         "importance": 2
       },
@@ -13927,10 +11580,6 @@
         "importance": 2
       },
       {
-        "lemma": "mend",
-        "importance": 2
-      },
-      {
         "lemma": "mental",
         "importance": 2
       },
@@ -13952,10 +11601,6 @@
       },
       {
         "lemma": "mess",
-        "importance": 2
-      },
-      {
-        "lemma": "message board",
         "importance": 2
       },
       {
@@ -14243,10 +11888,6 @@
         "importance": 2
       },
       {
-        "lemma": "network",
-        "importance": 2
-      },
-      {
         "lemma": "neutral",
         "importance": 2
       },
@@ -14264,14 +11905,6 @@
       },
       {
         "lemma": "newly",
-        "importance": 2
-      },
-      {
-        "lemma": "next door",
-        "importance": 2
-      },
-      {
-        "lemma": "next-door",
         "importance": 2
       },
       {
@@ -14336,10 +11969,6 @@
       },
       {
         "lemma": "noticeable",
-        "importance": 2
-      },
-      {
-        "lemma": "noticeboard",
         "importance": 2
       },
       {
@@ -14447,10 +12076,6 @@
         "importance": 2
       },
       {
-        "lemma": "officially",
-        "importance": 2
-      },
-      {
         "lemma": "oily",
         "importance": 2
       },
@@ -14528,10 +12153,6 @@
       },
       {
         "lemma": "organization",
-        "importance": 2
-      },
-      {
-        "lemma": "origin",
         "importance": 2
       },
       {
@@ -14619,10 +12240,6 @@
         "importance": 2
       },
       {
-        "lemma": "package",
-        "importance": 2
-      },
-      {
         "lemma": "packing",
         "importance": 2
       },
@@ -14632,14 +12249,6 @@
       },
       {
         "lemma": "paid",
-        "importance": 2
-      },
-      {
-        "lemma": "pain",
-        "importance": 2
-      },
-      {
-        "lemma": "painful",
         "importance": 2
       },
       {
@@ -14663,15 +12272,7 @@
         "importance": 2
       },
       {
-        "lemma": "parcel",
-        "importance": 2
-      },
-      {
         "lemma": "parental",
-        "importance": 2
-      },
-      {
-        "lemma": "parking",
         "importance": 2
       },
       {
@@ -14703,15 +12304,7 @@
         "importance": 2
       },
       {
-        "lemma": "passion",
-        "importance": 2
-      },
-      {
         "lemma": "passive",
-        "importance": 2
-      },
-      {
-        "lemma": "passport",
         "importance": 2
       },
       {
@@ -14787,10 +12380,6 @@
         "importance": 2
       },
       {
-        "lemma": "pharmacy",
-        "importance": 2
-      },
-      {
         "lemma": "phenomenon",
         "importance": 2
       },
@@ -14843,10 +12432,6 @@
         "importance": 2
       },
       {
-        "lemma": "pipe",
-        "importance": 2
-      },
-      {
         "lemma": "pit",
         "importance": 2
       },
@@ -14892,10 +12477,6 @@
       },
       {
         "lemma": "policy",
-        "importance": 2
-      },
-      {
-        "lemma": "politely",
         "importance": 2
       },
       {
@@ -14948,14 +12529,6 @@
       },
       {
         "lemma": "possibility",
-        "importance": 2
-      },
-      {
-        "lemma": "postcard",
-        "importance": 2
-      },
-      {
-        "lemma": "postman",
         "importance": 2
       },
       {
@@ -15028,10 +12601,6 @@
       },
       {
         "lemma": "preschool",
-        "importance": 2
-      },
-      {
-        "lemma": "prescription",
         "importance": 2
       },
       {
@@ -15124,10 +12693,6 @@
       },
       {
         "lemma": "productive",
-        "importance": 2
-      },
-      {
-        "lemma": "profession",
         "importance": 2
       },
       {
@@ -15296,10 +12861,6 @@
       },
       {
         "lemma": "quantity",
-        "importance": 2
-      },
-      {
-        "lemma": "question mark",
         "importance": 2
       },
       {
@@ -15475,10 +13036,6 @@
         "importance": 2
       },
       {
-        "lemma": "refund",
-        "importance": 2
-      },
-      {
         "lemma": "refusal",
         "importance": 2
       },
@@ -15599,10 +13156,6 @@
         "importance": 2
       },
       {
-        "lemma": "representative",
-        "importance": 2
-      },
-      {
         "lemma": "reproduce",
         "importance": 2
       },
@@ -15619,10 +13172,6 @@
         "importance": 2
       },
       {
-        "lemma": "rescue",
-        "importance": 2
-      },
-      {
         "lemma": "researcher",
         "importance": 2
       },
@@ -15636,10 +13185,6 @@
       },
       {
         "lemma": "resident",
-        "importance": 2
-      },
-      {
-        "lemma": "residential",
         "importance": 2
       },
       {
@@ -15664,10 +13209,6 @@
       },
       {
         "lemma": "respectable",
-        "importance": 2
-      },
-      {
-        "lemma": "respond",
         "importance": 2
       },
       {
@@ -15751,10 +13292,6 @@
         "importance": 2
       },
       {
-        "lemma": "risk",
-        "importance": 2
-      },
-      {
         "lemma": "roadside",
         "importance": 2
       },
@@ -15780,10 +13317,6 @@
       },
       {
         "lemma": "rubber",
-        "importance": 2
-      },
-      {
-        "lemma": "rubbish",
         "importance": 2
       },
       {
@@ -15816,10 +13349,6 @@
       },
       {
         "lemma": "safely",
-        "importance": 2
-      },
-      {
-        "lemma": "safety",
         "importance": 2
       },
       {
@@ -15947,10 +13476,6 @@
         "importance": 2
       },
       {
-        "lemma": "security",
-        "importance": 2
-      },
-      {
         "lemma": "seize",
         "importance": 2
       },
@@ -15996,10 +13521,6 @@
       },
       {
         "lemma": "service",
-        "importance": 2
-      },
-      {
-        "lemma": "session",
         "importance": 2
       },
       {
@@ -16123,15 +13644,7 @@
         "importance": 2
       },
       {
-        "lemma": "signature",
-        "importance": 2
-      },
-      {
         "lemma": "significance",
-        "importance": 2
-      },
-      {
-        "lemma": "signpost",
         "importance": 2
       },
       {
@@ -16220,14 +13733,6 @@
       },
       {
         "lemma": "soap opera",
-        "importance": 2
-      },
-      {
-        "lemma": "social networking",
-        "importance": 2
-      },
-      {
-        "lemma": "socially",
         "importance": 2
       },
       {
@@ -16372,10 +13877,6 @@
       },
       {
         "lemma": "sports",
-        "importance": 2
-      },
-      {
-        "lemma": "sportsmanship",
         "importance": 2
       },
       {
@@ -16759,10 +14260,6 @@
         "importance": 2
       },
       {
-        "lemma": "tax",
-        "importance": 2
-      },
-      {
         "lemma": "teaching",
         "importance": 2
       },
@@ -16791,15 +14288,7 @@
         "importance": 2
       },
       {
-        "lemma": "telecommunications",
-        "importance": 2
-      },
-      {
         "lemma": "telegram",
-        "importance": 2
-      },
-      {
-        "lemma": "teller",
         "importance": 2
       },
       {
@@ -17003,10 +14492,6 @@
         "importance": 2
       },
       {
-        "lemma": "traditionally",
-        "importance": 2
-      },
-      {
         "lemma": "traffic jam",
         "importance": 2
       },
@@ -17051,19 +14536,7 @@
         "importance": 2
       },
       {
-        "lemma": "trash",
-        "importance": 2
-      },
-      {
         "lemma": "travel agent",
-        "importance": 2
-      },
-      {
-        "lemma": "treat",
-        "importance": 2
-      },
-      {
-        "lemma": "treatment",
         "importance": 2
       },
       {
@@ -17387,10 +14860,6 @@
         "importance": 2
       },
       {
-        "lemma": "vet",
-        "importance": 2
-      },
-      {
         "lemma": "via",
         "importance": 2
       },
@@ -17432,10 +14901,6 @@
       },
       {
         "lemma": "virus",
-        "importance": 2
-      },
-      {
-        "lemma": "visa",
         "importance": 2
       },
       {
@@ -17504,14 +14969,6 @@
       },
       {
         "lemma": "warn",
-        "importance": 2
-      },
-      {
-        "lemma": "warning",
-        "importance": 2
-      },
-      {
-        "lemma": "warranty",
         "importance": 2
       },
       {
@@ -17740,10 +15197,6 @@
       },
       {
         "lemma": "accessibility",
-        "importance": 2
-      },
-      {
-        "lemma": "accommodation",
         "importance": 2
       },
       {
@@ -18263,10 +15716,6 @@
         "importance": 2
       },
       {
-        "lemma": "authorize",
-        "importance": 2
-      },
-      {
         "lemma": "availability",
         "importance": 2
       },
@@ -18647,10 +16096,6 @@
         "importance": 2
       },
       {
-        "lemma": "broadband",
-        "importance": 2
-      },
-      {
         "lemma": "broadcaster",
         "importance": 2
       },
@@ -18708,10 +16153,6 @@
       },
       {
         "lemma": "burdensome",
-        "importance": 2
-      },
-      {
-        "lemma": "bureaucracy",
         "importance": 2
       },
       {
@@ -18775,10 +16216,6 @@
         "importance": 2
       },
       {
-        "lemma": "caption",
-        "importance": 2
-      },
-      {
         "lemma": "captive",
         "importance": 2
       },
@@ -18816,10 +16253,6 @@
       },
       {
         "lemma": "caring",
-        "importance": 2
-      },
-      {
-        "lemma": "carnival",
         "importance": 2
       },
       {
@@ -19095,10 +16528,6 @@
         "importance": 2
       },
       {
-        "lemma": "collector",
-        "importance": 2
-      },
-      {
         "lemma": "collocation",
         "importance": 2
       },
@@ -19131,19 +16560,11 @@
         "importance": 2
       },
       {
-        "lemma": "commission",
-        "importance": 2
-      },
-      {
         "lemma": "commonwealth",
         "importance": 2
       },
       {
         "lemma": "communicative",
-        "importance": 2
-      },
-      {
-        "lemma": "community",
         "importance": 2
       },
       {
@@ -19475,10 +16896,6 @@
         "importance": 2
       },
       {
-        "lemma": "correspondence",
-        "importance": 2
-      },
-      {
         "lemma": "correspondent",
         "importance": 2
       },
@@ -19507,19 +16924,11 @@
         "importance": 2
       },
       {
-        "lemma": "cottage",
-        "importance": 2
-      },
-      {
         "lemma": "countryman",
         "importance": 2
       },
       {
         "lemma": "countrywide",
-        "importance": 2
-      },
-      {
-        "lemma": "courtesy",
         "importance": 2
       },
       {
@@ -19560,10 +16969,6 @@
       },
       {
         "lemma": "creation",
-        "importance": 2
-      },
-      {
-        "lemma": "creatively",
         "importance": 2
       },
       {
@@ -19647,10 +17052,6 @@
         "importance": 2
       },
       {
-        "lemma": "cybercafe",
-        "importance": 2
-      },
-      {
         "lemma": "cybercrime",
         "importance": 2
       },
@@ -19727,10 +17128,6 @@
         "importance": 2
       },
       {
-        "lemma": "debit card",
-        "importance": 2
-      },
-      {
         "lemma": "decade",
         "importance": 2
       },
@@ -19780,10 +17177,6 @@
       },
       {
         "lemma": "deduce",
-        "importance": 2
-      },
-      {
-        "lemma": "deduction",
         "importance": 2
       },
       {
@@ -20012,10 +17405,6 @@
       },
       {
         "lemma": "discipline",
-        "importance": 2
-      },
-      {
-        "lemma": "disconnect",
         "importance": 2
       },
       {
@@ -20367,10 +17756,6 @@
         "importance": 2
       },
       {
-        "lemma": "electrician",
-        "importance": 2
-      },
-      {
         "lemma": "electronically",
         "importance": 2
       },
@@ -20571,10 +17956,6 @@
         "importance": 2
       },
       {
-        "lemma": "evacuation",
-        "importance": 2
-      },
-      {
         "lemma": "evaluate",
         "importance": 2
       },
@@ -20648,10 +18029,6 @@
       },
       {
         "lemma": "exclaim",
-        "importance": 2
-      },
-      {
-        "lemma": "exclamation mark",
         "importance": 2
       },
       {
@@ -20835,10 +18212,6 @@
         "importance": 2
       },
       {
-        "lemma": "fascinated",
-        "importance": 2
-      },
-      {
         "lemma": "fascination",
         "importance": 2
       },
@@ -20915,10 +18288,6 @@
         "importance": 2
       },
       {
-        "lemma": "fire brigade",
-        "importance": 2
-      },
-      {
         "lemma": "firearm",
         "importance": 2
       },
@@ -20940,10 +18309,6 @@
       },
       {
         "lemma": "firstly",
-        "importance": 2
-      },
-      {
-        "lemma": "fiscal",
         "importance": 2
       },
       {
@@ -21311,10 +18676,6 @@
         "importance": 2
       },
       {
-        "lemma": "governmental",
-        "importance": 2
-      },
-      {
         "lemma": "gracefulness",
         "importance": 2
       },
@@ -21483,10 +18844,6 @@
         "importance": 2
       },
       {
-        "lemma": "health care",
-        "importance": 2
-      },
-      {
         "lemma": "heap",
         "importance": 2
       },
@@ -21520,10 +18877,6 @@
       },
       {
         "lemma": "herb",
-        "importance": 2
-      },
-      {
-        "lemma": "heritage",
         "importance": 2
       },
       {
@@ -21580,14 +18933,6 @@
       },
       {
         "lemma": "hospice",
-        "importance": 2
-      },
-      {
-        "lemma": "hospitable",
-        "importance": 2
-      },
-      {
-        "lemma": "hospitality",
         "importance": 2
       },
       {
@@ -21751,10 +19096,6 @@
         "importance": 2
       },
       {
-        "lemma": "immigrant",
-        "importance": 2
-      },
-      {
         "lemma": "immoral",
         "importance": 2
       },
@@ -21783,19 +19124,11 @@
         "importance": 2
       },
       {
-        "lemma": "implement",
-        "importance": 2
-      },
-      {
         "lemma": "implication",
         "importance": 2
       },
       {
         "lemma": "imply",
-        "importance": 2
-      },
-      {
-        "lemma": "impolite",
         "importance": 2
       },
       {
@@ -22016,10 +19349,6 @@
       },
       {
         "lemma": "injection",
-        "importance": 2
-      },
-      {
-        "lemma": "injured",
         "importance": 2
       },
       {
@@ -22351,10 +19680,6 @@
         "importance": 2
       },
       {
-        "lemma": "landlady",
-        "importance": 2
-      },
-      {
         "lemma": "landslide",
         "importance": 2
       },
@@ -22415,15 +19740,7 @@
         "importance": 2
       },
       {
-        "lemma": "leak",
-        "importance": 2
-      },
-      {
         "lemma": "learning",
-        "importance": 2
-      },
-      {
-        "lemma": "lease",
         "importance": 2
       },
       {
@@ -22451,19 +19768,11 @@
         "importance": 2
       },
       {
-        "lemma": "legislation",
-        "importance": 2
-      },
-      {
         "lemma": "legislative",
         "importance": 2
       },
       {
         "lemma": "legislator",
-        "importance": 2
-      },
-      {
-        "lemma": "legislature",
         "importance": 2
       },
       {
@@ -22703,15 +20012,7 @@
         "importance": 2
       },
       {
-        "lemma": "master",
-        "importance": 2
-      },
-      {
         "lemma": "masterpiece",
-        "importance": 2
-      },
-      {
-        "lemma": "mastery",
         "importance": 2
       },
       {
@@ -23007,10 +20308,6 @@
         "importance": 2
       },
       {
-        "lemma": "motorist",
-        "importance": 2
-      },
-      {
         "lemma": "mournful",
         "importance": 2
       },
@@ -23140,10 +20437,6 @@
       },
       {
         "lemma": "neglect",
-        "importance": 2
-      },
-      {
-        "lemma": "neighboring",
         "importance": 2
       },
       {
@@ -23348,10 +20641,6 @@
       },
       {
         "lemma": "openly",
-        "importance": 2
-      },
-      {
-        "lemma": "operator",
         "importance": 2
       },
       {
@@ -23639,10 +20928,6 @@
         "importance": 2
       },
       {
-        "lemma": "paramedic",
-        "importance": 2
-      },
-      {
         "lemma": "paratrooper",
         "importance": 2
       },
@@ -23731,10 +21016,6 @@
         "importance": 2
       },
       {
-        "lemma": "payment",
-        "importance": 2
-      },
-      {
         "lemma": "peacefully",
         "importance": 2
       },
@@ -23788,10 +21069,6 @@
       },
       {
         "lemma": "penalize",
-        "importance": 2
-      },
-      {
-        "lemma": "penalty",
         "importance": 2
       },
       {
@@ -23907,10 +21184,6 @@
         "importance": 2
       },
       {
-        "lemma": "physician",
-        "importance": 2
-      },
-      {
         "lemma": "pi",
         "importance": 2
       },
@@ -23983,10 +21256,6 @@
         "importance": 2
       },
       {
-        "lemma": "plumber",
-        "importance": 2
-      },
-      {
         "lemma": "pneumonia",
         "importance": 2
       },
@@ -24056,10 +21325,6 @@
       },
       {
         "lemma": "possessed",
-        "importance": 2
-      },
-      {
-        "lemma": "postal",
         "importance": 2
       },
       {
@@ -24255,10 +21520,6 @@
         "importance": 2
       },
       {
-        "lemma": "profile",
-        "importance": 2
-      },
-      {
         "lemma": "profit",
         "importance": 2
       },
@@ -24340,10 +21601,6 @@
       },
       {
         "lemma": "provision",
-        "importance": 2
-      },
-      {
-        "lemma": "proximity",
         "importance": 2
       },
       {
@@ -24759,10 +22016,6 @@
         "importance": 2
       },
       {
-        "lemma": "repertoire",
-        "importance": 2
-      },
-      {
         "lemma": "repetition",
         "importance": 2
       },
@@ -24788,10 +22041,6 @@
       },
       {
         "lemma": "reprove",
-        "importance": 2
-      },
-      {
-        "lemma": "residence",
         "importance": 2
       },
       {
@@ -24868,10 +22117,6 @@
       },
       {
         "lemma": "revenge",
-        "importance": 2
-      },
-      {
-        "lemma": "revenue",
         "importance": 2
       },
       {
@@ -24979,10 +22224,6 @@
         "importance": 2
       },
       {
-        "lemma": "roommate",
-        "importance": 2
-      },
-      {
         "lemma": "rosy",
         "importance": 2
       },
@@ -25039,10 +22280,6 @@
         "importance": 2
       },
       {
-        "lemma": "salary",
-        "importance": 2
-      },
-      {
         "lemma": "salesmanship",
         "importance": 2
       },
@@ -25096,10 +22333,6 @@
       },
       {
         "lemma": "scarcely",
-        "importance": 2
-      },
-      {
-        "lemma": "scarlet",
         "importance": 2
       },
       {
@@ -25288,10 +22521,6 @@
       },
       {
         "lemma": "shield",
-        "importance": 2
-      },
-      {
-        "lemma": "shipping",
         "importance": 2
       },
       {
@@ -25492,14 +22721,6 @@
       },
       {
         "lemma": "sob",
-        "importance": 2
-      },
-      {
-        "lemma": "sociable",
-        "importance": 2
-      },
-      {
-        "lemma": "socialize",
         "importance": 2
       },
       {
@@ -25739,10 +22960,6 @@
         "importance": 2
       },
       {
-        "lemma": "steering wheel",
-        "importance": 2
-      },
-      {
         "lemma": "stepfather",
         "importance": 2
       },
@@ -25880,10 +23097,6 @@
       },
       {
         "lemma": "subjunctive",
-        "importance": 2
-      },
-      {
-        "lemma": "submit",
         "importance": 2
       },
       {
@@ -26679,10 +23892,6 @@
         "importance": 2
       },
       {
-        "lemma": "unfamiliar",
-        "importance": 2
-      },
-      {
         "lemma": "unfashionable",
         "importance": 2
       },
@@ -26892,10 +24101,6 @@
       },
       {
         "lemma": "vacant",
-        "importance": 2
-      },
-      {
-        "lemma": "vaccine",
         "importance": 2
       },
       {
@@ -27188,14 +24393,6 @@
       },
       {
         "lemma": "wit",
-        "importance": 2
-      },
-      {
-        "lemma": "withdraw",
-        "importance": 2
-      },
-      {
-        "lemma": "withdrawal",
         "importance": 2
       },
       {
@@ -27684,10 +24881,6 @@
       },
       {
         "lemma": "bulk up",
-        "importance": 2
-      },
-      {
-        "lemma": "bureaucratic",
         "importance": 2
       },
       {
@@ -28987,10 +26180,6 @@
         "importance": 2
       },
       {
-        "lemma": "invoice",
-        "importance": 2
-      },
-      {
         "lemma": "irate",
         "importance": 2
       },
@@ -29155,10 +26344,6 @@
         "importance": 2
       },
       {
-        "lemma": "mingle",
-        "importance": 2
-      },
-      {
         "lemma": "misplace",
         "importance": 2
       },
@@ -29303,10 +26488,6 @@
         "importance": 2
       },
       {
-        "lemma": "overdraft",
-        "importance": 2
-      },
-      {
         "lemma": "oversee",
         "importance": 2
       },
@@ -29448,10 +26629,6 @@
       },
       {
         "lemma": "ploy",
-        "importance": 2
-      },
-      {
-        "lemma": "plumbing",
         "importance": 2
       },
       {
@@ -30252,10 +27429,6 @@
       },
       {
         "lemma": "sustainably",
-        "importance": 2
-      },
-      {
-        "lemma": "swap",
         "importance": 2
       },
       {
@@ -32344,10 +29517,6 @@
       },
       {
         "lemma": "gravitationally",
-        "importance": 2
-      },
-      {
-        "lemma": "grievance",
         "importance": 2
       },
       {
@@ -34457,7 +31626,60 @@
       {
         "lemma": "zoology",
         "importance": 2
+      },
+      {
+        "lemma": "hey",
+        "importance": 2
+      },
+      {
+        "lemma": "greeting",
+        "importance": 2
+      },
+      {
+        "lemma": "farewell",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "apology",
+        "importance": 2
+      },
+      {
+        "lemma": "grateful",
+        "importance": 2
+      },
+      {
+        "lemma": "gratitude",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciate",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciation",
+        "importance": 2
+      },
+      {
+        "lemma": "golden",
+        "importance": 2
+      },
+      {
+        "lemma": "silver",
+        "importance": 2
+      },
+      {
+        "lemma": "colorful",
+        "importance": 2
+      },
+      {
+        "lemma": "scarlet",
+        "importance": 2
       }
-    ]
+    ],
+    "importance": 2
   }
 ]

@@ -13,7 +13,7 @@
 | `translation` | id, target_type (sense/expression), target_id, lang, text, source (dictionary / llm / via_concept), verified |
 | `example` | id, sense_id или expression_id, lang (изучаемый), text, highlight_range, audio_url |
 | `example_translation` | example_id, lang (родной), text |
-| `deck` | id, lang, native_lang, title, categories[], type (official / user / shared), context (см. ниже) |
+| `deck` | id, lang, native_lang, title, categories[], type (official / user / shared), importance (1–3, порядок показа колоды внутри категории), context (см. ниже) |
 | `deck_item` | deck_id, item_type (sense/expression), item_id, cefr, position, importance |
 
 ### Категории каталога (ADR-35)

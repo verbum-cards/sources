@@ -1,0 +1,634 @@
+[
+  {
+    "id": "01a0f10e-1771-7c5f-8a3e-b37842f14295",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Приветствие. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7ff3-9989-46e8cdc3f08b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Приветствие. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7c5b-a329-43ee8ce8b018",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Знакомство. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "Nice to meet you",
+        "importance": 2
+      },
+      {
+        "lemma": "Where are you from?",
+        "importance": 2
+      },
+      {
+        "lemma": "name",
+        "importance": 2
+      },
+      {
+        "lemma": "age",
+        "importance": 2
+      },
+      {
+        "lemma": "job",
+        "importance": 2
+      },
+      {
+        "lemma": "hometown",
+        "importance": 2
+      },
+      {
+        "lemma": "first name",
+        "importance": 2
+      },
+      {
+        "lemma": "last name",
+        "importance": 2
+      },
+      {
+        "lemma": "surname",
+        "importance": 2
+      },
+      {
+        "lemma": "introduce",
+        "importance": 2
+      },
+      {
+        "lemma": "meet",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-70ec-8b8d-cbe76c94204c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Знакомство. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "What do you do?",
+        "importance": 2
+      },
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "acquaintance",
+        "importance": 2
+      },
+      {
+        "lemma": "to have something in common",
+        "importance": 2
+      },
+      {
+        "lemma": "nationality",
+        "importance": 2
+      },
+      {
+        "lemma": "partner",
+        "importance": 2
+      },
+      {
+        "lemma": "occupation",
+        "importance": 2
+      },
+      {
+        "lemma": "profession",
+        "importance": 2
+      },
+      {
+        "lemma": "origin",
+        "importance": 2
+      },
+      {
+        "lemma": "introduction",
+        "importance": 2
+      },
+      {
+        "lemma": "stranger",
+        "importance": 2
+      },
+      {
+        "lemma": "familiar",
+        "importance": 2
+      },
+      {
+        "lemma": "unfamiliar",
+        "importance": 2
+      },
+      {
+        "lemma": "representative",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7756-a8a6-e5de4b8cc5df",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Реакции в разговоре. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7c4c-a5b4-7e451bdcfabf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Реакции в разговоре. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-750e-98d1-24f5234d99b1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Планы и приглашения. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7a06-a3fd-bd6956a5bb08",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Планы и приглашения. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-7ae6-a7e2-ed5e77afd61b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Просьбы. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1771-79ce-93cd-5275fff33d7b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Просьбы. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-7476-a969-d338be1e0e62",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Хобби и интересы. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "hobby",
+        "importance": 2
+      },
+      {
+        "lemma": "sport",
+        "importance": 2
+      },
+      {
+        "lemma": "game",
+        "importance": 2
+      },
+      {
+        "lemma": "music",
+        "importance": 2
+      },
+      {
+        "lemma": "guitar",
+        "importance": 2
+      },
+      {
+        "lemma": "piano",
+        "importance": 2
+      },
+      {
+        "lemma": "photo",
+        "importance": 2
+      },
+      {
+        "lemma": "song",
+        "importance": 2
+      },
+      {
+        "lemma": "swim",
+        "importance": 2
+      },
+      {
+        "lemma": "draw",
+        "importance": 2
+      },
+      {
+        "lemma": "dancing",
+        "importance": 2
+      },
+      {
+        "lemma": "travel",
+        "importance": 2
+      },
+      {
+        "lemma": "collect",
+        "importance": 2
+      },
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "movie",
+        "importance": 2
+      },
+      {
+        "lemma": "interesting",
+        "importance": 2
+      },
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "player",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-72f5-9125-74185456bbc8",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Хобби и интересы. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "artistic",
+        "importance": 2
+      },
+      {
+        "lemma": "athletic",
+        "importance": 2
+      },
+      {
+        "lemma": "enthusiasm",
+        "importance": 2
+      },
+      {
+        "lemma": "passion",
+        "importance": 2
+      },
+      {
+        "lemma": "session",
+        "importance": 2
+      },
+      {
+        "lemma": "extreme sports",
+        "importance": 2
+      },
+      {
+        "lemma": "sportsmanship",
+        "importance": 2
+      },
+      {
+        "lemma": "collector",
+        "importance": 2
+      },
+      {
+        "lemma": "fascinated",
+        "importance": 2
+      },
+      {
+        "lemma": "repertoire",
+        "importance": 2
+      },
+      {
+        "lemma": "creatively",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-7c38-9084-00b0a220f9dd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Переписка в мессенджерах. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "message",
+        "importance": 2
+      },
+      {
+        "lemma": "mobile phone",
+        "importance": 2
+      },
+      {
+        "lemma": "call",
+        "importance": 2
+      },
+      {
+        "lemma": "text",
+        "importance": 2
+      },
+      {
+        "lemma": "text message",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      },
+      {
+        "lemma": "chat",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "send",
+        "importance": 2
+      },
+      {
+        "lemma": "communicate",
+        "importance": 2
+      },
+      {
+        "lemma": "communication",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-7396-9104-3dcf21fbe141",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Переписка в мессенджерах. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "penfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "correspondence",
+        "importance": 2
+      },
+      {
+        "lemma": "network",
+        "importance": 2
+      },
+      {
+        "lemma": "inform",
+        "importance": 2
+      },
+      {
+        "lemma": "respond",
+        "importance": 2
+      },
+      {
+        "lemma": "message board",
+        "importance": 2
+      },
+      {
+        "lemma": "disconnect",
+        "importance": 2
+      },
+      {
+        "lemma": "submit",
+        "importance": 2
+      },
+      {
+        "lemma": "signature",
+        "importance": 2
+      },
+      {
+        "lemma": "profile",
+        "importance": 2
+      },
+      {
+        "lemma": "caption",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-725b-9b9d-a871101e3feb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Компания и вечеринка. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "party",
+        "importance": 2
+      },
+      {
+        "lemma": "celebrate",
+        "importance": 2
+      },
+      {
+        "lemma": "celebration",
+        "importance": 2
+      },
+      {
+        "lemma": "festival",
+        "importance": 2
+      },
+      {
+        "lemma": "group",
+        "importance": 2
+      },
+      {
+        "lemma": "guest",
+        "importance": 2
+      },
+      {
+        "lemma": "holiday",
+        "importance": 2
+      },
+      {
+        "lemma": "social",
+        "importance": 2
+      },
+      {
+        "lemma": "company",
+        "importance": 2
+      },
+      {
+        "lemma": "society",
+        "importance": 2
+      },
+      {
+        "lemma": "toast",
+        "importance": 2
+      },
+      {
+        "lemma": "visitor",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-77fc-a6fc-bbe359222e02",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Компания и вечеринка. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "celebrity",
+        "importance": 2
+      },
+      {
+        "lemma": "feast",
+        "importance": 2
+      },
+      {
+        "lemma": "festive",
+        "importance": 2
+      },
+      {
+        "lemma": "social networking",
+        "importance": 2
+      },
+      {
+        "lemma": "socially",
+        "importance": 2
+      },
+      {
+        "lemma": "treat",
+        "importance": 2
+      },
+      {
+        "lemma": "carnival",
+        "importance": 2
+      },
+      {
+        "lemma": "community",
+        "importance": 2
+      },
+      {
+        "lemma": "hospitable",
+        "importance": 2
+      },
+      {
+        "lemma": "hospitality",
+        "importance": 2
+      },
+      {
+        "lemma": "sociable",
+        "importance": 2
+      },
+      {
+        "lemma": "socialize",
+        "importance": 2
+      },
+      {
+        "lemma": "mingle",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-7ac9-a11b-42a8553a899d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как закончить разговор. Базовый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f10e-1772-79db-80a5-5081ce1f2e37",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как закончить разговор. Продвинутый",
+    "categories": [
+      "socializing"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  }
+]

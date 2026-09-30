@@ -25,7 +25,13 @@ async function setupDb() {
   return { db: executor };
 }
 
-const restaurant = DECKS[0];
+// Не DECKS[0]/DECKS[1] — порядок и то, какие колоды сейчас наполнены,
+// меняется по мере добавления новых data/decks/*.json (build-decks.ts).
+// Двум переменным ниже нужны только любые две разные непустые колоды, не
+// конкретный контент — берём две самые большие.
+const [restaurant, otherDeck] = [...DECKS]
+  .sort((a, b) => b.items.length - a.items.length)
+  .slice(0, 2);
 
 test('computeDailyActivity: 7 дней по умолчанию, все нули на пустом списке', () => {
   const now = new Date(2026, 2, 10, 12);
@@ -71,7 +77,6 @@ test('loadDeckProgress: пусто, пока ни одно слово ни од�
 
 test('loadDeckProgress: колода без единого добавленного слова не попадает в список', async () => {
   const { db } = await setupDb();
-  const otherDeck = DECKS[1];
 
   await addSingleDeckWord(db, otherDeck, otherDeck.items[0], 'Мой словарь');
 

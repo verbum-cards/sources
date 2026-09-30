@@ -106,7 +106,12 @@ test('seedDictionaryPackage: search_term содержит нормализова
 
 test('seedDictionaryPackage: deck/deck_category/deck_item — по данным DECKS', async () => {
   const { db } = await setupPack();
-  const restaurant = DECKS[0];
+  // Не DECKS[0] — порядок DECKS зависит от алфавитного порядка файлов
+  // data/decks/*.json, нужна просто любая непустая колода (иначе
+  // items[0]?.itemId ниже сравнивал бы undefined с undefined вхолостую).
+  const restaurant = DECKS.reduce((max, deck) =>
+    deck.items.length > max.items.length ? deck : max
+  );
 
   const deckRow = await db.get<{ title: string; type: string }>(
     'SELECT title, type FROM deck WHERE id = ?',
