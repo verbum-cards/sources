@@ -231,7 +231,8 @@
     "nativeLang": "ru",
     "title": "Хобби и интересы. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "sportsHobbies"
     ],
     "type": "official",
     "items": [
@@ -316,7 +317,8 @@
     "nativeLang": "ru",
     "title": "Хобби и интересы. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "sportsHobbies"
     ],
     "type": "official",
     "items": [

@@ -5285,10 +5285,6 @@
         "importance": 2
       },
       {
-        "lemma": "art",
-        "importance": 2
-      },
-      {
         "lemma": "article",
         "importance": 2
       },
@@ -5302,14 +5298,6 @@
       },
       {
         "lemma": "artifice",
-        "importance": 2
-      },
-      {
-        "lemma": "artist",
-        "importance": 2
-      },
-      {
-        "lemma": "artistry",
         "importance": 2
       },
       {
@@ -5453,10 +5441,6 @@
         "importance": 2
       },
       {
-        "lemma": "audience",
-        "importance": 2
-      },
-      {
         "lemma": "audit",
         "importance": 2
       },
@@ -5470,10 +5454,6 @@
       },
       {
         "lemma": "authenticity",
-        "importance": 2
-      },
-      {
-        "lemma": "author",
         "importance": 2
       },
       {
@@ -5529,18 +5509,6 @@
         "importance": 2
       },
       {
-        "lemma": "backpack",
-        "importance": 2
-      },
-      {
-        "lemma": "backpacker",
-        "importance": 2
-      },
-      {
-        "lemma": "backpacking",
-        "importance": 2
-      },
-      {
         "lemma": "backup",
         "importance": 2
       },
@@ -5561,23 +5529,11 @@
         "importance": 2
       },
       {
-        "lemma": "baker",
-        "importance": 2
-      },
-      {
-        "lemma": "bakery",
-        "importance": 2
-      },
-      {
         "lemma": "balcony",
         "importance": 2
       },
       {
         "lemma": "ballad",
-        "importance": 2
-      },
-      {
-        "lemma": "ballet",
         "importance": 2
       },
       {
@@ -5590,10 +5546,6 @@
       },
       {
         "lemma": "ban",
-        "importance": 2
-      },
-      {
-        "lemma": "band",
         "importance": 2
       },
       {
@@ -5770,10 +5722,6 @@
       },
       {
         "lemma": "beef",
-        "importance": 2
-      },
-      {
-        "lemma": "beginner",
         "importance": 2
       },
       {
@@ -5997,10 +5945,6 @@
         "importance": 2
       },
       {
-        "lemma": "board game",
-        "importance": 2
-      },
-      {
         "lemma": "boat",
         "importance": 2
       },
@@ -6033,27 +5977,11 @@
         "importance": 2
       },
       {
-        "lemma": "bookcase",
-        "importance": 2
-      },
-      {
         "lemma": "booklet",
         "importance": 2
       },
       {
         "lemma": "bookmark",
-        "importance": 2
-      },
-      {
-        "lemma": "bookshelf",
-        "importance": 2
-      },
-      {
-        "lemma": "bookshop",
-        "importance": 2
-      },
-      {
-        "lemma": "bookstore",
         "importance": 2
       },
       {
@@ -6185,10 +6113,6 @@
         "importance": 2
       },
       {
-        "lemma": "breath",
-        "importance": 2
-      },
-      {
         "lemma": "breeze",
         "importance": 2
       },
@@ -6225,14 +6149,6 @@
         "importance": 2
       },
       {
-        "lemma": "broadcast",
-        "importance": 2
-      },
-      {
-        "lemma": "broadcaster",
-        "importance": 2
-      },
-      {
         "lemma": "broccoli",
         "importance": 2
       },
@@ -6262,10 +6178,6 @@
       },
       {
         "lemma": "browser",
-        "importance": 2
-      },
-      {
-        "lemma": "brush",
         "importance": 2
       },
       {
@@ -6481,19 +6393,7 @@
         "importance": 2
       },
       {
-        "lemma": "camp",
-        "importance": 2
-      },
-      {
         "lemma": "campaign",
-        "importance": 2
-      },
-      {
-        "lemma": "camping",
-        "importance": 2
-      },
-      {
-        "lemma": "campsite",
         "importance": 2
       },
       {
@@ -6626,10 +6526,6 @@
       },
       {
         "lemma": "carton",
-        "importance": 2
-      },
-      {
-        "lemma": "cartoon",
         "importance": 2
       },
       {
@@ -6793,10 +6689,6 @@
         "importance": 2
       },
       {
-        "lemma": "championship",
-        "importance": 2
-      },
-      {
         "lemma": "chance",
         "importance": 2
       },
@@ -6810,10 +6702,6 @@
       },
       {
         "lemma": "chaos",
-        "importance": 2
-      },
-      {
-        "lemma": "chapter",
         "importance": 2
       },
       {
@@ -6881,14 +6769,6 @@
         "importance": 2
       },
       {
-        "lemma": "cheerfulness",
-        "importance": 2
-      },
-      {
-        "lemma": "chef",
-        "importance": 2
-      },
-      {
         "lemma": "chemist",
         "importance": 2
       },
@@ -6906,10 +6786,6 @@
       },
       {
         "lemma": "cherry",
-        "importance": 2
-      },
-      {
-        "lemma": "chess",
         "importance": 2
       },
       {
@@ -7041,23 +6917,7 @@
         "importance": 2
       },
       {
-        "lemma": "class",
-        "importance": 2
-      },
-      {
-        "lemma": "classical music",
-        "importance": 2
-      },
-      {
         "lemma": "classification",
-        "importance": 2
-      },
-      {
-        "lemma": "classmate",
-        "importance": 2
-      },
-      {
-        "lemma": "classroom",
         "importance": 2
       },
       {
@@ -7161,10 +7021,6 @@
         "importance": 2
       },
       {
-        "lemma": "coaching",
-        "importance": 2
-      },
-      {
         "lemma": "coal",
         "importance": 2
       },
@@ -7205,10 +7061,6 @@
         "importance": 2
       },
       {
-        "lemma": "coin",
-        "importance": 2
-      },
-      {
         "lemma": "coincidence",
         "importance": 2
       },
@@ -7234,10 +7086,6 @@
       },
       {
         "lemma": "collar",
-        "importance": 2
-      },
-      {
-        "lemma": "collection",
         "importance": 2
       },
       {
@@ -7458,14 +7306,6 @@
       },
       {
         "lemma": "concern",
-        "importance": 2
-      },
-      {
-        "lemma": "concert",
-        "importance": 2
-      },
-      {
-        "lemma": "concerto",
         "importance": 2
       },
       {
@@ -7745,15 +7585,7 @@
         "importance": 2
       },
       {
-        "lemma": "cooker",
-        "importance": 2
-      },
-      {
         "lemma": "cookie",
-        "importance": 2
-      },
-      {
-        "lemma": "cooking",
         "importance": 2
       },
       {
@@ -7926,14 +7758,6 @@
       },
       {
         "lemma": "crack",
-        "importance": 2
-      },
-      {
-        "lemma": "craft",
-        "importance": 2
-      },
-      {
-        "lemma": "craftsman",
         "importance": 2
       },
       {
@@ -8202,14 +8026,6 @@
       },
       {
         "lemma": "damage",
-        "importance": 2
-      },
-      {
-        "lemma": "dance",
-        "importance": 2
-      },
-      {
-        "lemma": "dancer",
         "importance": 2
       },
       {
@@ -8649,10 +8465,6 @@
         "importance": 2
       },
       {
-        "lemma": "digital camera",
-        "importance": 2
-      },
-      {
         "lemma": "digitalization",
         "importance": 2
       },
@@ -8897,14 +8709,6 @@
         "importance": 2
       },
       {
-        "lemma": "dive",
-        "importance": 2
-      },
-      {
-        "lemma": "diver",
-        "importance": 2
-      },
-      {
         "lemma": "divergence",
         "importance": 2
       },
@@ -9058,10 +8862,6 @@
       },
       {
         "lemma": "drawer",
-        "importance": 2
-      },
-      {
-        "lemma": "drawing",
         "importance": 2
       },
       {
@@ -10181,10 +9981,6 @@
         "importance": 2
       },
       {
-        "lemma": "flexibility",
-        "importance": 2
-      },
-      {
         "lemma": "flicker",
         "importance": 2
       },
@@ -10194,10 +9990,6 @@
       },
       {
         "lemma": "flightiness",
-        "importance": 2
-      },
-      {
-        "lemma": "float",
         "importance": 2
       },
       {
@@ -10226,10 +10018,6 @@
       },
       {
         "lemma": "flow",
-        "importance": 2
-      },
-      {
-        "lemma": "flower",
         "importance": 2
       },
       {
@@ -10557,14 +10345,6 @@
         "importance": 2
       },
       {
-        "lemma": "gardener",
-        "importance": 2
-      },
-      {
-        "lemma": "gardening",
-        "importance": 2
-      },
-      {
         "lemma": "garlic",
         "importance": 2
       },
@@ -10750,14 +10530,6 @@
       },
       {
         "lemma": "glow",
-        "importance": 2
-      },
-      {
-        "lemma": "goal",
-        "importance": 2
-      },
-      {
-        "lemma": "goalkeeper",
         "importance": 2
       },
       {
@@ -11005,10 +10777,6 @@
         "importance": 2
       },
       {
-        "lemma": "guitarist",
-        "importance": 2
-      },
-      {
         "lemma": "gulp",
         "importance": 2
       },
@@ -11038,14 +10806,6 @@
       },
       {
         "lemma": "guy",
-        "importance": 2
-      },
-      {
-        "lemma": "gym",
-        "importance": 2
-      },
-      {
-        "lemma": "gymnastics",
         "importance": 2
       },
       {
@@ -11106,10 +10866,6 @@
       },
       {
         "lemma": "handicap",
-        "importance": 2
-      },
-      {
-        "lemma": "handicraft",
         "importance": 2
       },
       {
@@ -11330,14 +11086,6 @@
       },
       {
         "lemma": "hijack",
-        "importance": 2
-      },
-      {
-        "lemma": "hike",
-        "importance": 2
-      },
-      {
-        "lemma": "hiking",
         "importance": 2
       },
       {
@@ -11585,19 +11333,7 @@
         "importance": 2
       },
       {
-        "lemma": "ice",
-        "importance": 2
-      },
-      {
         "lemma": "ice cream",
-        "importance": 2
-      },
-      {
-        "lemma": "ice hockey",
-        "importance": 2
-      },
-      {
-        "lemma": "ice skating",
         "importance": 2
       },
       {
@@ -11658,14 +11394,6 @@
       },
       {
         "lemma": "illustration",
-        "importance": 2
-      },
-      {
-        "lemma": "image",
-        "importance": 2
-      },
-      {
-        "lemma": "imagery",
         "importance": 2
       },
       {
@@ -11881,10 +11609,6 @@
         "importance": 2
       },
       {
-        "lemma": "ingredient",
-        "importance": 2
-      },
-      {
         "lemma": "inhabitant",
         "importance": 2
       },
@@ -11966,14 +11690,6 @@
       },
       {
         "lemma": "institution",
-        "importance": 2
-      },
-      {
-        "lemma": "instructor",
-        "importance": 2
-      },
-      {
-        "lemma": "instrument",
         "importance": 2
       },
       {
@@ -12157,10 +11873,6 @@
         "importance": 2
       },
       {
-        "lemma": "item",
-        "importance": 2
-      },
-      {
         "lemma": "itinerary",
         "importance": 2
       },
@@ -12214,10 +11926,6 @@
       },
       {
         "lemma": "jewelry",
-        "importance": 2
-      },
-      {
-        "lemma": "jogging",
         "importance": 2
       },
       {
@@ -12533,15 +12241,7 @@
         "importance": 2
       },
       {
-        "lemma": "leaf",
-        "importance": 2
-      },
-      {
         "lemma": "leaflet",
-        "importance": 2
-      },
-      {
-        "lemma": "league",
         "importance": 2
       },
       {
@@ -12606,10 +12306,6 @@
       },
       {
         "lemma": "leopard",
-        "importance": 2
-      },
-      {
-        "lemma": "lesson",
         "importance": 2
       },
       {
@@ -12833,10 +12529,6 @@
         "importance": 2
       },
       {
-        "lemma": "lyrics",
-        "importance": 2
-      },
-      {
         "lemma": "machine",
         "importance": 2
       },
@@ -12858,10 +12550,6 @@
       },
       {
         "lemma": "maestro",
-        "importance": 2
-      },
-      {
-        "lemma": "magazine",
         "importance": 2
       },
       {
@@ -12989,10 +12677,6 @@
         "importance": 2
       },
       {
-        "lemma": "marathon",
-        "importance": 2
-      },
-      {
         "lemma": "marble",
         "importance": 2
       },
@@ -13050,10 +12734,6 @@
       },
       {
         "lemma": "masterpiece",
-        "importance": 2
-      },
-      {
-        "lemma": "match",
         "importance": 2
       },
       {
@@ -13157,19 +12837,11 @@
         "importance": 2
       },
       {
-        "lemma": "melody",
-        "importance": 2
-      },
-      {
         "lemma": "melon",
         "importance": 2
       },
       {
         "lemma": "member",
-        "importance": 2
-      },
-      {
-        "lemma": "membership",
         "importance": 2
       },
       {
@@ -13565,23 +13237,7 @@
         "importance": 2
       },
       {
-        "lemma": "mountain",
-        "importance": 2
-      },
-      {
-        "lemma": "mountaineer",
-        "importance": 2
-      },
-      {
-        "lemma": "mountaintop",
-        "importance": 2
-      },
-      {
         "lemma": "move",
-        "importance": 2
-      },
-      {
-        "lemma": "movement",
         "importance": 2
       },
       {
@@ -13878,14 +13534,6 @@
       },
       {
         "lemma": "nourishment",
-        "importance": 2
-      },
-      {
-        "lemma": "novel",
-        "importance": 2
-      },
-      {
-        "lemma": "novelist",
         "importance": 2
       },
       {
@@ -14249,10 +13897,6 @@
         "importance": 2
       },
       {
-        "lemma": "pace",
-        "importance": 2
-      },
-      {
         "lemma": "pack",
         "importance": 2
       },
@@ -14270,26 +13914,6 @@
       },
       {
         "lemma": "paddle",
-        "importance": 2
-      },
-      {
-        "lemma": "page",
-        "importance": 2
-      },
-      {
-        "lemma": "paint",
-        "importance": 2
-      },
-      {
-        "lemma": "paintbrush",
-        "importance": 2
-      },
-      {
-        "lemma": "painter",
-        "importance": 2
-      },
-      {
-        "lemma": "painting",
         "importance": 2
       },
       {
@@ -14613,10 +14237,6 @@
         "importance": 2
       },
       {
-        "lemma": "performance",
-        "importance": 2
-      },
-      {
         "lemma": "performer",
         "importance": 2
       },
@@ -14730,18 +14350,6 @@
       },
       {
         "lemma": "photocopy",
-        "importance": 2
-      },
-      {
-        "lemma": "photograph",
-        "importance": 2
-      },
-      {
-        "lemma": "photographer",
-        "importance": 2
-      },
-      {
-        "lemma": "photography",
         "importance": 2
       },
       {
@@ -14874,10 +14482,6 @@
       },
       {
         "lemma": "planning",
-        "importance": 2
-      },
-      {
-        "lemma": "plant",
         "importance": 2
       },
       {
@@ -15053,10 +14657,6 @@
         "importance": 2
       },
       {
-        "lemma": "pool",
-        "importance": 2
-      },
-      {
         "lemma": "pop",
         "importance": 2
       },
@@ -15106,10 +14706,6 @@
       },
       {
         "lemma": "portrayal",
-        "importance": 2
-      },
-      {
-        "lemma": "pose",
         "importance": 2
       },
       {
@@ -15453,10 +15049,6 @@
         "importance": 2
       },
       {
-        "lemma": "progress",
-        "importance": 2
-      },
-      {
         "lemma": "prohibition",
         "importance": 2
       },
@@ -15686,10 +15278,6 @@
       },
       {
         "lemma": "pursuit",
-        "importance": 2
-      },
-      {
-        "lemma": "puzzle",
         "importance": 2
       },
       {
@@ -15937,14 +15525,6 @@
         "importance": 2
       },
       {
-        "lemma": "reader",
-        "importance": 2
-      },
-      {
-        "lemma": "reading",
-        "importance": 2
-      },
-      {
         "lemma": "real estate",
         "importance": 2
       },
@@ -15994,10 +15574,6 @@
       },
       {
         "lemma": "recession",
-        "importance": 2
-      },
-      {
-        "lemma": "recipe",
         "importance": 2
       },
       {
@@ -16062,10 +15638,6 @@
       },
       {
         "lemma": "reef",
-        "importance": 2
-      },
-      {
-        "lemma": "referee",
         "importance": 2
       },
       {
@@ -16170,10 +15742,6 @@
       },
       {
         "lemma": "relativity",
-        "importance": 2
-      },
-      {
-        "lemma": "relaxation",
         "importance": 2
       },
       {
@@ -16457,10 +16025,6 @@
         "importance": 2
       },
       {
-        "lemma": "rhythm",
-        "importance": 2
-      },
-      {
         "lemma": "ribbon",
         "importance": 2
       },
@@ -16621,19 +16185,7 @@
         "importance": 2
       },
       {
-        "lemma": "run",
-        "importance": 2
-      },
-      {
         "lemma": "runaway",
-        "importance": 2
-      },
-      {
-        "lemma": "runner",
-        "importance": 2
-      },
-      {
-        "lemma": "running",
         "importance": 2
       },
       {
@@ -17005,14 +16557,6 @@
         "importance": 2
       },
       {
-        "lemma": "seed",
-        "importance": 2
-      },
-      {
-        "lemma": "seedling",
-        "importance": 2
-      },
-      {
         "lemma": "seesaw",
         "importance": 2
       },
@@ -17329,10 +16873,6 @@
         "importance": 2
       },
       {
-        "lemma": "singing",
-        "importance": 2
-      },
-      {
         "lemma": "sink",
         "importance": 2
       },
@@ -17357,39 +16897,11 @@
         "importance": 2
       },
       {
-        "lemma": "skate",
-        "importance": 2
-      },
-      {
-        "lemma": "skateboard",
-        "importance": 2
-      },
-      {
-        "lemma": "skateboarder",
-        "importance": 2
-      },
-      {
-        "lemma": "skateboarding",
-        "importance": 2
-      },
-      {
         "lemma": "skating",
         "importance": 2
       },
       {
         "lemma": "skeleton",
-        "importance": 2
-      },
-      {
-        "lemma": "sketchbook",
-        "importance": 2
-      },
-      {
-        "lemma": "ski",
-        "importance": 2
-      },
-      {
-        "lemma": "skiing",
         "importance": 2
       },
       {
@@ -17465,10 +16977,6 @@
         "importance": 2
       },
       {
-        "lemma": "slope",
-        "importance": 2
-      },
-      {
         "lemma": "slot",
         "importance": 2
       },
@@ -17522,22 +17030,6 @@
       },
       {
         "lemma": "snore",
-        "importance": 2
-      },
-      {
-        "lemma": "snowball",
-        "importance": 2
-      },
-      {
-        "lemma": "snowboard",
-        "importance": 2
-      },
-      {
-        "lemma": "snowboarding",
-        "importance": 2
-      },
-      {
-        "lemma": "snowstorm",
         "importance": 2
       },
       {
@@ -17837,10 +17329,6 @@
         "importance": 2
       },
       {
-        "lemma": "sprint",
-        "importance": 2
-      },
-      {
         "lemma": "sprout",
         "importance": 2
       },
@@ -17866,10 +17354,6 @@
       },
       {
         "lemma": "stack",
-        "importance": 2
-      },
-      {
-        "lemma": "stadium",
         "importance": 2
       },
       {
@@ -18049,14 +17533,6 @@
         "importance": 2
       },
       {
-        "lemma": "story",
-        "importance": 2
-      },
-      {
-        "lemma": "storyteller",
-        "importance": 2
-      },
-      {
         "lemma": "stove",
         "importance": 2
       },
@@ -18098,10 +17574,6 @@
       },
       {
         "lemma": "strength",
-        "importance": 2
-      },
-      {
-        "lemma": "stretching",
         "importance": 2
       },
       {
@@ -18293,10 +17765,6 @@
         "importance": 2
       },
       {
-        "lemma": "sunflower",
-        "importance": 2
-      },
-      {
         "lemma": "sunlight",
         "importance": 2
       },
@@ -18438,26 +17906,6 @@
       },
       {
         "lemma": "sweetheart",
-        "importance": 2
-      },
-      {
-        "lemma": "swimmer",
-        "importance": 2
-      },
-      {
-        "lemma": "swimming",
-        "importance": 2
-      },
-      {
-        "lemma": "swimming costume",
-        "importance": 2
-      },
-      {
-        "lemma": "swimming pool",
-        "importance": 2
-      },
-      {
-        "lemma": "swimsuit",
         "importance": 2
       },
       {
@@ -18617,14 +18065,6 @@
         "importance": 2
       },
       {
-        "lemma": "teammate",
-        "importance": 2
-      },
-      {
-        "lemma": "teamwork",
-        "importance": 2
-      },
-      {
         "lemma": "tear",
         "importance": 2
       },
@@ -18634,10 +18074,6 @@
       },
       {
         "lemma": "teaspoon",
-        "importance": 2
-      },
-      {
-        "lemma": "technique",
         "importance": 2
       },
       {
@@ -18709,10 +18145,6 @@
         "importance": 2
       },
       {
-        "lemma": "tent",
-        "importance": 2
-      },
-      {
         "lemma": "term",
         "importance": 2
       },
@@ -18750,10 +18182,6 @@
       },
       {
         "lemma": "testimony",
-        "importance": 2
-      },
-      {
-        "lemma": "textbook",
         "importance": 2
       },
       {
@@ -18989,10 +18417,6 @@
         "importance": 2
       },
       {
-        "lemma": "tournament",
-        "importance": 2
-      },
-      {
         "lemma": "towel",
         "importance": 2
       },
@@ -19002,14 +18426,6 @@
       },
       {
         "lemma": "trace",
-        "importance": 2
-      },
-      {
-        "lemma": "track",
-        "importance": 2
-      },
-      {
-        "lemma": "tracksuit",
         "importance": 2
       },
       {
@@ -19029,23 +18445,11 @@
         "importance": 2
       },
       {
-        "lemma": "trail",
-        "importance": 2
-      },
-      {
         "lemma": "trailer",
         "importance": 2
       },
       {
         "lemma": "trainee",
-        "importance": 2
-      },
-      {
-        "lemma": "trainer",
-        "importance": 2
-      },
-      {
-        "lemma": "training",
         "importance": 2
       },
       {
@@ -19154,10 +18558,6 @@
       },
       {
         "lemma": "treaty",
-        "importance": 2
-      },
-      {
-        "lemma": "tree",
         "importance": 2
       },
       {
@@ -19605,10 +19005,6 @@
         "importance": 2
       },
       {
-        "lemma": "video game",
-        "importance": 2
-      },
-      {
         "lemma": "view",
         "importance": 2
       },
@@ -19965,10 +19361,6 @@
         "importance": 2
       },
       {
-        "lemma": "winner",
-        "importance": 2
-      },
-      {
         "lemma": "winter",
         "importance": 2
       },
@@ -20037,10 +19429,6 @@
         "importance": 2
       },
       {
-        "lemma": "workshop",
-        "importance": 2
-      },
-      {
         "lemma": "worktable",
         "importance": 2
       },
@@ -20098,10 +19486,6 @@
       },
       {
         "lemma": "yell",
-        "importance": 2
-      },
-      {
-        "lemma": "yoga",
         "importance": 2
       },
       {
@@ -20613,10 +19997,6 @@
         "importance": 2
       },
       {
-        "lemma": "breathe",
-        "importance": 2
-      },
-      {
         "lemma": "breed",
         "importance": 2
       },
@@ -20718,10 +20098,6 @@
       },
       {
         "lemma": "cheat",
-        "importance": 2
-      },
-      {
-        "lemma": "cheer",
         "importance": 2
       },
       {
@@ -21613,10 +20989,6 @@
         "importance": 2
       },
       {
-        "lemma": "enroll",
-        "importance": 2
-      },
-      {
         "lemma": "ensure",
         "importance": 2
       },
@@ -21954,10 +21326,6 @@
       },
       {
         "lemma": "grieve",
-        "importance": 2
-      },
-      {
-        "lemma": "grow",
         "importance": 2
       },
       {
@@ -22353,10 +21721,6 @@
         "importance": 2
       },
       {
-        "lemma": "jog",
-        "importance": 2
-      },
-      {
         "lemma": "join",
         "importance": 2
       },
@@ -22382,10 +21746,6 @@
       },
       {
         "lemma": "kneel",
-        "importance": 2
-      },
-      {
-        "lemma": "knit",
         "importance": 2
       },
       {
@@ -22713,10 +22073,6 @@
         "importance": 2
       },
       {
-        "lemma": "outgrow",
-        "importance": 2
-      },
-      {
         "lemma": "outline",
         "importance": 2
       },
@@ -22822,10 +22178,6 @@
       },
       {
         "lemma": "perceive",
-        "importance": 2
-      },
-      {
-        "lemma": "perform",
         "importance": 2
       },
       {
@@ -23597,10 +22949,6 @@
         "importance": 2
       },
       {
-        "lemma": "sew",
-        "importance": 2
-      },
-      {
         "lemma": "shamble",
         "importance": 2
       },
@@ -23633,10 +22981,6 @@
         "importance": 2
       },
       {
-        "lemma": "shoot",
-        "importance": 2
-      },
-      {
         "lemma": "shoplift",
         "importance": 2
       },
@@ -23665,19 +23009,11 @@
         "importance": 2
       },
       {
-        "lemma": "sing",
-        "importance": 2
-      },
-      {
         "lemma": "singe",
         "importance": 2
       },
       {
         "lemma": "sit",
-        "importance": 2
-      },
-      {
-        "lemma": "sketch",
         "importance": 2
       },
       {
@@ -23886,10 +23222,6 @@
       },
       {
         "lemma": "strengthen",
-        "importance": 2
-      },
-      {
-        "lemma": "stretch",
         "importance": 2
       },
       {
@@ -25101,10 +24433,6 @@
         "importance": 2
       },
       {
-        "lemma": "breathless",
-        "importance": 2
-      },
-      {
         "lemma": "breathtaking",
         "importance": 2
       },
@@ -25245,10 +24573,6 @@
         "importance": 2
       },
       {
-        "lemma": "cheerful",
-        "importance": 2
-      },
-      {
         "lemma": "chemical",
         "importance": 2
       },
@@ -25294,14 +24618,6 @@
       },
       {
         "lemma": "clammy",
-        "importance": 2
-      },
-      {
-        "lemma": "classic",
-        "importance": 2
-      },
-      {
-        "lemma": "classical",
         "importance": 2
       },
       {
@@ -26593,10 +25909,6 @@
         "importance": 2
       },
       {
-        "lemma": "fit",
-        "importance": 2
-      },
-      {
         "lemma": "fixed",
         "importance": 2
       },
@@ -26610,10 +25922,6 @@
       },
       {
         "lemma": "flawless",
-        "importance": 2
-      },
-      {
-        "lemma": "flexible",
         "importance": 2
       },
       {
@@ -26906,10 +26214,6 @@
       },
       {
         "lemma": "gross",
-        "importance": 2
-      },
-      {
-        "lemma": "growing",
         "importance": 2
       },
       {
@@ -28269,10 +27573,6 @@
         "importance": 2
       },
       {
-        "lemma": "musical",
-        "importance": 2
-      },
-      {
         "lemma": "mutable",
         "importance": 2
       },
@@ -28617,10 +27917,6 @@
         "importance": 2
       },
       {
-        "lemma": "outdoor",
-        "importance": 2
-      },
-      {
         "lemma": "outer",
         "importance": 2
       },
@@ -28862,10 +28158,6 @@
       },
       {
         "lemma": "picky",
-        "importance": 2
-      },
-      {
-        "lemma": "picturesque",
         "importance": 2
       },
       {
@@ -29506,10 +28798,6 @@
       },
       {
         "lemma": "rhetorical",
-        "importance": 2
-      },
-      {
-        "lemma": "rhythmic",
         "importance": 2
       },
       {
@@ -30817,10 +30105,6 @@
         "importance": 2
       },
       {
-        "lemma": "unfit",
-        "importance": 2
-      },
-      {
         "lemma": "unforeseen",
         "importance": 2
       },
@@ -32033,10 +31317,6 @@
         "importance": 2
       },
       {
-        "lemma": "cheerfully",
-        "importance": 2
-      },
-      {
         "lemma": "chronologically",
         "importance": 2
       },
@@ -32658,10 +31938,6 @@
       },
       {
         "lemma": "flatout",
-        "importance": 2
-      },
-      {
-        "lemma": "flexibly",
         "importance": 2
       },
       {
@@ -33669,10 +32945,6 @@
         "importance": 2
       },
       {
-        "lemma": "outdoors",
-        "importance": 2
-      },
-      {
         "lemma": "outwardly",
         "importance": 2
       },
@@ -33942,10 +33214,6 @@
       },
       {
         "lemma": "rapturously",
-        "importance": 2
-      },
-      {
-        "lemma": "rarely",
         "importance": 2
       },
       {
@@ -35182,7 +34450,8 @@
     "nativeLang": "ru",
     "title": "Хобби и интересы. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "sportsHobbies"
     ],
     "type": "official",
     "importance": 2,
@@ -35267,7 +34536,8 @@
     "nativeLang": "ru",
     "title": "Хобби и интересы. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "sportsHobbies"
     ],
     "type": "official",
     "importance": 2,
@@ -35581,6 +34851,1221 @@
     "type": "official",
     "importance": 2,
     "items": []
+  },
+  {
+    "id": "01a0f1dc-d7b8-7c8b-8df7-5fc5e9be6021",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спортзал",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "fitness",
+        "importance": 2
+      },
+      {
+        "lemma": "gym",
+        "importance": 2
+      },
+      {
+        "lemma": "gymnastics",
+        "importance": 2
+      },
+      {
+        "lemma": "membership",
+        "importance": 2
+      },
+      {
+        "lemma": "muscle",
+        "importance": 2
+      },
+      {
+        "lemma": "weight",
+        "importance": 2
+      },
+      {
+        "lemma": "workout",
+        "importance": 2
+      },
+      {
+        "lemma": "fit",
+        "importance": 2
+      },
+      {
+        "lemma": "overweight",
+        "importance": 2
+      },
+      {
+        "lemma": "unfit",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7b11-b85d-eced834fef86",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Тренировка с тренером",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "coaching",
+        "importance": 2
+      },
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "performance",
+        "importance": 2
+      },
+      {
+        "lemma": "progress",
+        "importance": 2
+      },
+      {
+        "lemma": "session",
+        "importance": 2
+      },
+      {
+        "lemma": "technique",
+        "importance": 2
+      },
+      {
+        "lemma": "trainer",
+        "importance": 2
+      },
+      {
+        "lemma": "training",
+        "importance": 2
+      },
+      {
+        "lemma": "exercise",
+        "importance": 2
+      },
+      {
+        "lemma": "perform",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-74db-9956-23d6fc88a4ff",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Бег",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "jogging",
+        "importance": 2
+      },
+      {
+        "lemma": "marathon",
+        "importance": 2
+      },
+      {
+        "lemma": "pace",
+        "importance": 2
+      },
+      {
+        "lemma": "run",
+        "importance": 2
+      },
+      {
+        "lemma": "runner",
+        "importance": 2
+      },
+      {
+        "lemma": "running",
+        "importance": 2
+      },
+      {
+        "lemma": "sprint",
+        "importance": 2
+      },
+      {
+        "lemma": "track",
+        "importance": 2
+      },
+      {
+        "lemma": "tracksuit",
+        "importance": 2
+      },
+      {
+        "lemma": "jog",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-71d5-a047-9eefbef34784",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Йога и растяжка",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "breath",
+        "importance": 2
+      },
+      {
+        "lemma": "flexibility",
+        "importance": 2
+      },
+      {
+        "lemma": "pose",
+        "importance": 2
+      },
+      {
+        "lemma": "relaxation",
+        "importance": 2
+      },
+      {
+        "lemma": "stretching",
+        "importance": 2
+      },
+      {
+        "lemma": "yoga",
+        "importance": 2
+      },
+      {
+        "lemma": "breathe",
+        "importance": 2
+      },
+      {
+        "lemma": "relax",
+        "importance": 2
+      },
+      {
+        "lemma": "stretch",
+        "importance": 2
+      },
+      {
+        "lemma": "breathless",
+        "importance": 2
+      },
+      {
+        "lemma": "flexible",
+        "importance": 2
+      },
+      {
+        "lemma": "relaxed",
+        "importance": 2
+      },
+      {
+        "lemma": "relaxing",
+        "importance": 2
+      },
+      {
+        "lemma": "flexibly",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7c70-a40e-4bad6206be0e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Плавание",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "dive",
+        "importance": 2
+      },
+      {
+        "lemma": "diver",
+        "importance": 2
+      },
+      {
+        "lemma": "float",
+        "importance": 2
+      },
+      {
+        "lemma": "lane",
+        "importance": 2
+      },
+      {
+        "lemma": "pool",
+        "importance": 2
+      },
+      {
+        "lemma": "swim",
+        "importance": 2
+      },
+      {
+        "lemma": "swimmer",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming costume",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming pool",
+        "importance": 2
+      },
+      {
+        "lemma": "swimsuit",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-78c7-afd8-248eade55c6c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Командные игры",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "goalkeeper",
+        "importance": 2
+      },
+      {
+        "lemma": "league",
+        "importance": 2
+      },
+      {
+        "lemma": "match",
+        "importance": 2
+      },
+      {
+        "lemma": "opponent",
+        "importance": 2
+      },
+      {
+        "lemma": "player",
+        "importance": 2
+      },
+      {
+        "lemma": "referee",
+        "importance": 2
+      },
+      {
+        "lemma": "score",
+        "importance": 2
+      },
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "tournament",
+        "importance": 2
+      },
+      {
+        "lemma": "winner",
+        "importance": 2
+      },
+      {
+        "lemma": "lose",
+        "importance": 2
+      },
+      {
+        "lemma": "win",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7046-bcf7-e8f15c6b3606",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Смотреть спорт",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "audience",
+        "importance": 2
+      },
+      {
+        "lemma": "broadcast",
+        "importance": 2
+      },
+      {
+        "lemma": "broadcaster",
+        "importance": 2
+      },
+      {
+        "lemma": "championship",
+        "importance": 2
+      },
+      {
+        "lemma": "cheerfulness",
+        "importance": 2
+      },
+      {
+        "lemma": "stadium",
+        "importance": 2
+      },
+      {
+        "lemma": "cheer",
+        "importance": 2
+      },
+      {
+        "lemma": "cheerful",
+        "importance": 2
+      },
+      {
+        "lemma": "cheerfully",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-771f-8104-918bd0e4e17a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Велосипед и походы",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "backpack",
+        "importance": 2
+      },
+      {
+        "lemma": "backpacker",
+        "importance": 2
+      },
+      {
+        "lemma": "backpacking",
+        "importance": 2
+      },
+      {
+        "lemma": "bicycle",
+        "importance": 2
+      },
+      {
+        "lemma": "bike",
+        "importance": 2
+      },
+      {
+        "lemma": "camp",
+        "importance": 2
+      },
+      {
+        "lemma": "camping",
+        "importance": 2
+      },
+      {
+        "lemma": "campsite",
+        "importance": 2
+      },
+      {
+        "lemma": "cycle",
+        "importance": 2
+      },
+      {
+        "lemma": "hike",
+        "importance": 2
+      },
+      {
+        "lemma": "hiking",
+        "importance": 2
+      },
+      {
+        "lemma": "motorbike",
+        "importance": 2
+      },
+      {
+        "lemma": "motorcycle",
+        "importance": 2
+      },
+      {
+        "lemma": "mountain",
+        "importance": 2
+      },
+      {
+        "lemma": "mountaineer",
+        "importance": 2
+      },
+      {
+        "lemma": "mountaintop",
+        "importance": 2
+      },
+      {
+        "lemma": "tent",
+        "importance": 2
+      },
+      {
+        "lemma": "trail",
+        "importance": 2
+      },
+      {
+        "lemma": "outdoor",
+        "importance": 2
+      },
+      {
+        "lemma": "outdoors",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-715f-855e-f2138450e000",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Зимний спорт",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "ice",
+        "importance": 2
+      },
+      {
+        "lemma": "ice hockey",
+        "importance": 2
+      },
+      {
+        "lemma": "ice skating",
+        "importance": 2
+      },
+      {
+        "lemma": "skate",
+        "importance": 2
+      },
+      {
+        "lemma": "skateboard",
+        "importance": 2
+      },
+      {
+        "lemma": "skateboarder",
+        "importance": 2
+      },
+      {
+        "lemma": "skateboarding",
+        "importance": 2
+      },
+      {
+        "lemma": "ski",
+        "importance": 2
+      },
+      {
+        "lemma": "skiing",
+        "importance": 2
+      },
+      {
+        "lemma": "slope",
+        "importance": 2
+      },
+      {
+        "lemma": "snow",
+        "importance": 2
+      },
+      {
+        "lemma": "snowball",
+        "importance": 2
+      },
+      {
+        "lemma": "snowboard",
+        "importance": 2
+      },
+      {
+        "lemma": "snowboarding",
+        "importance": 2
+      },
+      {
+        "lemma": "snowstorm",
+        "importance": 2
+      },
+      {
+        "lemma": "snowy",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7128-a89c-112a93b696b9",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Музыка",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "band",
+        "importance": 2
+      },
+      {
+        "lemma": "classical music",
+        "importance": 2
+      },
+      {
+        "lemma": "concert",
+        "importance": 2
+      },
+      {
+        "lemma": "concerto",
+        "importance": 2
+      },
+      {
+        "lemma": "guitar",
+        "importance": 2
+      },
+      {
+        "lemma": "guitarist",
+        "importance": 2
+      },
+      {
+        "lemma": "instrument",
+        "importance": 2
+      },
+      {
+        "lemma": "lyrics",
+        "importance": 2
+      },
+      {
+        "lemma": "melody",
+        "importance": 2
+      },
+      {
+        "lemma": "music",
+        "importance": 2
+      },
+      {
+        "lemma": "musician",
+        "importance": 2
+      },
+      {
+        "lemma": "piano",
+        "importance": 2
+      },
+      {
+        "lemma": "rhythm",
+        "importance": 2
+      },
+      {
+        "lemma": "singer",
+        "importance": 2
+      },
+      {
+        "lemma": "singing",
+        "importance": 2
+      },
+      {
+        "lemma": "song",
+        "importance": 2
+      },
+      {
+        "lemma": "sing",
+        "importance": 2
+      },
+      {
+        "lemma": "musical",
+        "importance": 2
+      },
+      {
+        "lemma": "rhythmic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-72f8-8fb3-743ad5d2ea84",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Фотография",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "image",
+        "importance": 2
+      },
+      {
+        "lemma": "imagery",
+        "importance": 2
+      },
+      {
+        "lemma": "photo",
+        "importance": 2
+      },
+      {
+        "lemma": "photograph",
+        "importance": 2
+      },
+      {
+        "lemma": "photographer",
+        "importance": 2
+      },
+      {
+        "lemma": "photography",
+        "importance": 2
+      },
+      {
+        "lemma": "picture",
+        "importance": 2
+      },
+      {
+        "lemma": "shoot",
+        "importance": 2
+      },
+      {
+        "lemma": "picturesque",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-77eb-a066-14427da1b4d5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рисование и рукоделие",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "art",
+        "importance": 2
+      },
+      {
+        "lemma": "artist",
+        "importance": 2
+      },
+      {
+        "lemma": "artistry",
+        "importance": 2
+      },
+      {
+        "lemma": "brush",
+        "importance": 2
+      },
+      {
+        "lemma": "cartoon",
+        "importance": 2
+      },
+      {
+        "lemma": "craft",
+        "importance": 2
+      },
+      {
+        "lemma": "craftsman",
+        "importance": 2
+      },
+      {
+        "lemma": "drawing",
+        "importance": 2
+      },
+      {
+        "lemma": "handicraft",
+        "importance": 2
+      },
+      {
+        "lemma": "paint",
+        "importance": 2
+      },
+      {
+        "lemma": "paintbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "painter",
+        "importance": 2
+      },
+      {
+        "lemma": "painting",
+        "importance": 2
+      },
+      {
+        "lemma": "sketchbook",
+        "importance": 2
+      },
+      {
+        "lemma": "draw",
+        "importance": 2
+      },
+      {
+        "lemma": "knit",
+        "importance": 2
+      },
+      {
+        "lemma": "sew",
+        "importance": 2
+      },
+      {
+        "lemma": "sketch",
+        "importance": 2
+      },
+      {
+        "lemma": "artistic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7263-887a-5c3ce6f0a0c7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Настольные и видеоигры",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "board game",
+        "importance": 2
+      },
+      {
+        "lemma": "chess",
+        "importance": 2
+      },
+      {
+        "lemma": "controller",
+        "importance": 2
+      },
+      {
+        "lemma": "level",
+        "importance": 2
+      },
+      {
+        "lemma": "puzzle",
+        "importance": 2
+      },
+      {
+        "lemma": "video game",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7508-9f10-0305478d9ca3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Чтение",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "author",
+        "importance": 2
+      },
+      {
+        "lemma": "book",
+        "importance": 2
+      },
+      {
+        "lemma": "bookcase",
+        "importance": 2
+      },
+      {
+        "lemma": "bookshelf",
+        "importance": 2
+      },
+      {
+        "lemma": "bookshop",
+        "importance": 2
+      },
+      {
+        "lemma": "bookstore",
+        "importance": 2
+      },
+      {
+        "lemma": "chapter",
+        "importance": 2
+      },
+      {
+        "lemma": "library",
+        "importance": 2
+      },
+      {
+        "lemma": "magazine",
+        "importance": 2
+      },
+      {
+        "lemma": "novel",
+        "importance": 2
+      },
+      {
+        "lemma": "novelist",
+        "importance": 2
+      },
+      {
+        "lemma": "page",
+        "importance": 2
+      },
+      {
+        "lemma": "reader",
+        "importance": 2
+      },
+      {
+        "lemma": "reading",
+        "importance": 2
+      },
+      {
+        "lemma": "story",
+        "importance": 2
+      },
+      {
+        "lemma": "storyteller",
+        "importance": 2
+      },
+      {
+        "lemma": "textbook",
+        "importance": 2
+      },
+      {
+        "lemma": "read",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-72ec-848d-9b4e9017e856",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кулинария как хобби",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "baker",
+        "importance": 2
+      },
+      {
+        "lemma": "bakery",
+        "importance": 2
+      },
+      {
+        "lemma": "chef",
+        "importance": 2
+      },
+      {
+        "lemma": "cook",
+        "importance": 2
+      },
+      {
+        "lemma": "cooker",
+        "importance": 2
+      },
+      {
+        "lemma": "cooking",
+        "importance": 2
+      },
+      {
+        "lemma": "dish",
+        "importance": 2
+      },
+      {
+        "lemma": "ingredient",
+        "importance": 2
+      },
+      {
+        "lemma": "kitchen",
+        "importance": 2
+      },
+      {
+        "lemma": "recipe",
+        "importance": 2
+      },
+      {
+        "lemma": "bake",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this dish spicy?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7915-884f-62416265ae84",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Танцы",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "ballet",
+        "importance": 2
+      },
+      {
+        "lemma": "dance",
+        "importance": 2
+      },
+      {
+        "lemma": "dancer",
+        "importance": 2
+      },
+      {
+        "lemma": "dancing",
+        "importance": 2
+      },
+      {
+        "lemma": "movement",
+        "importance": 2
+      },
+      {
+        "lemma": "partner",
+        "importance": 2
+      },
+      {
+        "lemma": "rhythm",
+        "importance": 2
+      },
+      {
+        "lemma": "rhythmic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-73b1-b74e-511594e9b96c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сад и растения",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "flower",
+        "importance": 2
+      },
+      {
+        "lemma": "garden",
+        "importance": 2
+      },
+      {
+        "lemma": "gardener",
+        "importance": 2
+      },
+      {
+        "lemma": "gardening",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "leaf",
+        "importance": 2
+      },
+      {
+        "lemma": "plant",
+        "importance": 2
+      },
+      {
+        "lemma": "seed",
+        "importance": 2
+      },
+      {
+        "lemma": "seedling",
+        "importance": 2
+      },
+      {
+        "lemma": "sunflower",
+        "importance": 2
+      },
+      {
+        "lemma": "tree",
+        "importance": 2
+      },
+      {
+        "lemma": "grow",
+        "importance": 2
+      },
+      {
+        "lemma": "outgrow",
+        "importance": 2
+      },
+      {
+        "lemma": "growing",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7dc8-a857-2031843abfab",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Коллекционирование",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "coin",
+        "importance": 2
+      },
+      {
+        "lemma": "collection",
+        "importance": 2
+      },
+      {
+        "lemma": "collector",
+        "importance": 2
+      },
+      {
+        "lemma": "hobby",
+        "importance": 2
+      },
+      {
+        "lemma": "item",
+        "importance": 2
+      },
+      {
+        "lemma": "stamp",
+        "importance": 2
+      },
+      {
+        "lemma": "collect",
+        "importance": 2
+      },
+      {
+        "lemma": "rare",
+        "importance": 2
+      },
+      {
+        "lemma": "rarely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1dc-d7b8-7a6f-9083-38e731b7612b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кружки и курсы",
+    "categories": [
+      "sportsHobbies"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "beginner",
+        "importance": 2
+      },
+      {
+        "lemma": "class",
+        "importance": 2
+      },
+      {
+        "lemma": "classmate",
+        "importance": 2
+      },
+      {
+        "lemma": "classroom",
+        "importance": 2
+      },
+      {
+        "lemma": "club",
+        "importance": 2
+      },
+      {
+        "lemma": "instructor",
+        "importance": 2
+      },
+      {
+        "lemma": "lesson",
+        "importance": 2
+      },
+      {
+        "lemma": "workshop",
+        "importance": 2
+      },
+      {
+        "lemma": "enroll",
+        "importance": 2
+      },
+      {
+        "lemma": "classic",
+        "importance": 2
+      },
+      {
+        "lemma": "classical",
+        "importance": 2
+      }
+    ]
   },
   {
     "id": "01a0f1d6-38ba-7bfb-8ca4-c5b501b4d5d7",
