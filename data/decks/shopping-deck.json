@@ -165,6 +165,10 @@
       {
         "lemma": "cashpoint",
         "importance": 2
+      },
+      {
+        "lemma": "cheque",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -310,6 +314,26 @@
       },
       {
         "lemma": "linen",
+        "importance": 2
+      },
+      {
+        "lemma": "golden",
+        "importance": 2
+      },
+      {
+        "lemma": "silver",
+        "importance": 2
+      },
+      {
+        "lemma": "colorful",
+        "importance": 2
+      },
+      {
+        "lemma": "wooden",
+        "importance": 2
+      },
+      {
+        "lemma": "metal",
         "importance": 2
       }
     ],
@@ -670,6 +694,10 @@
       {
         "lemma": "toothpaste",
         "importance": 2
+      },
+      {
+        "lemma": "make-up",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -779,6 +807,30 @@
       },
       {
         "lemma": "MP3 player",
+        "importance": 2
+      },
+      {
+        "lemma": "audio",
+        "importance": 2
+      },
+      {
+        "lemma": "electric",
+        "importance": 2
+      },
+      {
+        "lemma": "cassette",
+        "importance": 2
+      },
+      {
+        "lemma": "sound",
+        "importance": 2
+      },
+      {
+        "lemma": "tape",
+        "importance": 2
+      },
+      {
+        "lemma": "television",
         "importance": 2
       }
     ],
@@ -988,6 +1040,10 @@
       {
         "lemma": "card",
         "importance": 2
+      },
+      {
+        "lemma": "diamond",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1118,6 +1174,22 @@
       },
       {
         "lemma": "worktable",
+        "importance": 2
+      },
+      {
+        "lemma": "sitting room",
+        "importance": 2
+      },
+      {
+        "lemma": "balcony",
+        "importance": 2
+      },
+      {
+        "lemma": "downstairs",
+        "importance": 2
+      },
+      {
+        "lemma": "upstairs",
         "importance": 2
       }
     ],

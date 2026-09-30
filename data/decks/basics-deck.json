@@ -61,59 +61,6 @@
     "importance": 2
   },
   {
-    "id": "01a0f229-1f52-72e4-b6f8-4a463cd11c14",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Числа",
-    "categories": [
-      "basics"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "thirty",
-        "importance": 2
-      },
-      {
-        "lemma": "forty",
-        "importance": 2
-      },
-      {
-        "lemma": "fifty",
-        "importance": 2
-      },
-      {
-        "lemma": "sixty",
-        "importance": 2
-      },
-      {
-        "lemma": "seventy",
-        "importance": 2
-      },
-      {
-        "lemma": "eighty",
-        "importance": 2
-      },
-      {
-        "lemma": "ninety",
-        "importance": 2
-      },
-      {
-        "lemma": "hundred",
-        "importance": 2
-      },
-      {
-        "lemma": "thousand",
-        "importance": 2
-      },
-      {
-        "lemma": "million",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
     "id": "01a0f229-1f52-77c0-b713-71019b577fdc",
     "lang": "en",
     "nativeLang": "ru",
@@ -405,6 +352,254 @@
       },
       {
         "lemma": "wonder",
+        "importance": 2
+      },
+      {
+        "lemma": "adjust",
+        "importance": 2
+      },
+      {
+        "lemma": "admit",
+        "importance": 2
+      },
+      {
+        "lemma": "beg",
+        "importance": 2
+      },
+      {
+        "lemma": "belong",
+        "importance": 2
+      },
+      {
+        "lemma": "bend",
+        "importance": 2
+      },
+      {
+        "lemma": "bother",
+        "importance": 2
+      },
+      {
+        "lemma": "bury",
+        "importance": 2
+      },
+      {
+        "lemma": "clone",
+        "importance": 2
+      },
+      {
+        "lemma": "concentrate",
+        "importance": 2
+      },
+      {
+        "lemma": "consist",
+        "importance": 2
+      },
+      {
+        "lemma": "destroy",
+        "importance": 2
+      },
+      {
+        "lemma": "die",
+        "importance": 2
+      },
+      {
+        "lemma": "disturb",
+        "importance": 2
+      },
+      {
+        "lemma": "earn",
+        "importance": 2
+      },
+      {
+        "lemma": "establish",
+        "importance": 2
+      },
+      {
+        "lemma": "forbid",
+        "importance": 2
+      },
+      {
+        "lemma": "freeze",
+        "importance": 2
+      },
+      {
+        "lemma": "harm",
+        "importance": 2
+      },
+      {
+        "lemma": "hit",
+        "importance": 2
+      },
+      {
+        "lemma": "hug",
+        "importance": 2
+      },
+      {
+        "lemma": "impress",
+        "importance": 2
+      },
+      {
+        "lemma": "injure",
+        "importance": 2
+      },
+      {
+        "lemma": "invent",
+        "importance": 2
+      },
+      {
+        "lemma": "land",
+        "importance": 2
+      },
+      {
+        "lemma": "lend",
+        "importance": 2
+      },
+      {
+        "lemma": "license",
+        "importance": 2
+      },
+      {
+        "lemma": "lie",
+        "importance": 2
+      },
+      {
+        "lemma": "operate",
+        "importance": 2
+      },
+      {
+        "lemma": "oppose",
+        "importance": 2
+      },
+      {
+        "lemma": "organize",
+        "importance": 2
+      },
+      {
+        "lemma": "pollute",
+        "importance": 2
+      },
+      {
+        "lemma": "pour",
+        "importance": 2
+      },
+      {
+        "lemma": "pray",
+        "importance": 2
+      },
+      {
+        "lemma": "predict",
+        "importance": 2
+      },
+      {
+        "lemma": "pretend",
+        "importance": 2
+      },
+      {
+        "lemma": "prevent",
+        "importance": 2
+      },
+      {
+        "lemma": "produce",
+        "importance": 2
+      },
+      {
+        "lemma": "pronounce",
+        "importance": 2
+      },
+      {
+        "lemma": "pursue",
+        "importance": 2
+      },
+      {
+        "lemma": "refer",
+        "importance": 2
+      },
+      {
+        "lemma": "reflect",
+        "importance": 2
+      },
+      {
+        "lemma": "remind",
+        "importance": 2
+      },
+      {
+        "lemma": "reveal",
+        "importance": 2
+      },
+      {
+        "lemma": "ring",
+        "importance": 2
+      },
+      {
+        "lemma": "ruin",
+        "importance": 2
+      },
+      {
+        "lemma": "satisfy",
+        "importance": 2
+      },
+      {
+        "lemma": "shine",
+        "importance": 2
+      },
+      {
+        "lemma": "shut",
+        "importance": 2
+      },
+      {
+        "lemma": "spill",
+        "importance": 2
+      },
+      {
+        "lemma": "splash",
+        "importance": 2
+      },
+      {
+        "lemma": "succeed",
+        "importance": 2
+      },
+      {
+        "lemma": "survive",
+        "importance": 2
+      },
+      {
+        "lemma": "sweat",
+        "importance": 2
+      },
+      {
+        "lemma": "terrify",
+        "importance": 2
+      },
+      {
+        "lemma": "weigh",
+        "importance": 2
+      },
+      {
+        "lemma": "blow",
+        "importance": 2
+      },
+      {
+        "lemma": "fill",
+        "importance": 2
+      },
+      {
+        "lemma": "hurt",
+        "importance": 2
+      },
+      {
+        "lemma": "pick",
+        "importance": 2
+      },
+      {
+        "lemma": "set",
+        "importance": 2
+      },
+      {
+        "lemma": "step",
+        "importance": 2
+      },
+      {
+        "lemma": "wear",
         "importance": 2
       }
     ],
@@ -963,6 +1158,258 @@
       {
         "lemma": "young",
         "importance": 2
+      },
+      {
+        "lemma": "additional",
+        "importance": 2
+      },
+      {
+        "lemma": "adult",
+        "importance": 2
+      },
+      {
+        "lemma": "aged",
+        "importance": 2
+      },
+      {
+        "lemma": "alive",
+        "importance": 2
+      },
+      {
+        "lemma": "all right",
+        "importance": 2
+      },
+      {
+        "lemma": "alright",
+        "importance": 2
+      },
+      {
+        "lemma": "ancient",
+        "importance": 2
+      },
+      {
+        "lemma": "artificial",
+        "importance": 2
+      },
+      {
+        "lemma": "attractive",
+        "importance": 2
+      },
+      {
+        "lemma": "blonde",
+        "importance": 2
+      },
+      {
+        "lemma": "chemical",
+        "importance": 2
+      },
+      {
+        "lemma": "comic",
+        "importance": 2
+      },
+      {
+        "lemma": "dead",
+        "importance": 2
+      },
+      {
+        "lemma": "developed",
+        "importance": 2
+      },
+      {
+        "lemma": "dressed",
+        "importance": 2
+      },
+      {
+        "lemma": "educational",
+        "importance": 2
+      },
+      {
+        "lemma": "elderly",
+        "importance": 2
+      },
+      {
+        "lemma": "elementary",
+        "importance": 2
+      },
+      {
+        "lemma": "female",
+        "importance": 2
+      },
+      {
+        "lemma": "foreign",
+        "importance": 2
+      },
+      {
+        "lemma": "given",
+        "importance": 2
+      },
+      {
+        "lemma": "good-looking",
+        "importance": 2
+      },
+      {
+        "lemma": "handicapped",
+        "importance": 2
+      },
+      {
+        "lemma": "harmful",
+        "importance": 2
+      },
+      {
+        "lemma": "indoor",
+        "importance": 2
+      },
+      {
+        "lemma": "inner",
+        "importance": 2
+      },
+      {
+        "lemma": "international",
+        "importance": 2
+      },
+      {
+        "lemma": "junior",
+        "importance": 2
+      },
+      {
+        "lemma": "key",
+        "importance": 2
+      },
+      {
+        "lemma": "left-hand",
+        "importance": 2
+      },
+      {
+        "lemma": "right-hand",
+        "importance": 2
+      },
+      {
+        "lemma": "living",
+        "importance": 2
+      },
+      {
+        "lemma": "lucky",
+        "importance": 2
+      },
+      {
+        "lemma": "national",
+        "importance": 2
+      },
+      {
+        "lemma": "native",
+        "importance": 2
+      },
+      {
+        "lemma": "net",
+        "importance": 2
+      },
+      {
+        "lemma": "off",
+        "importance": 2
+      },
+      {
+        "lemma": "organized",
+        "importance": 2
+      },
+      {
+        "lemma": "physical",
+        "importance": 2
+      },
+      {
+        "lemma": "plastic",
+        "importance": 2
+      },
+      {
+        "lemma": "political",
+        "importance": 2
+      },
+      {
+        "lemma": "principal",
+        "importance": 2
+      },
+      {
+        "lemma": "progressive",
+        "importance": 2
+      },
+      {
+        "lemma": "retired",
+        "importance": 2
+      },
+      {
+        "lemma": "royal",
+        "importance": 2
+      },
+      {
+        "lemma": "scientific",
+        "importance": 2
+      },
+      {
+        "lemma": "second",
+        "importance": 2
+      },
+      {
+        "lemma": "senior",
+        "importance": 2
+      },
+      {
+        "lemma": "slim",
+        "importance": 2
+      },
+      {
+        "lemma": "square",
+        "importance": 2
+      },
+      {
+        "lemma": "teenage",
+        "importance": 2
+      },
+      {
+        "lemma": "third",
+        "importance": 2
+      },
+      {
+        "lemma": "used",
+        "importance": 2
+      },
+      {
+        "lemma": "weekly",
+        "importance": 2
+      },
+      {
+        "lemma": "cute",
+        "importance": 2
+      },
+      {
+        "lemma": "fat",
+        "importance": 2
+      },
+      {
+        "lemma": "front",
+        "importance": 2
+      },
+      {
+        "lemma": "merry",
+        "importance": 2
+      },
+      {
+        "lemma": "fascinating",
+        "importance": 2
+      },
+      {
+        "lemma": "lively",
+        "importance": 2
+      },
+      {
+        "lemma": "marvelous",
+        "importance": 2
+      },
+      {
+        "lemma": "pleasing",
+        "importance": 2
+      },
+      {
+        "lemma": "military",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1076,6 +1523,118 @@
       },
       {
         "lemma": "lunchtime",
+        "importance": 2
+      },
+      {
+        "lemma": "calendar",
+        "importance": 2
+      },
+      {
+        "lemma": "alarm clock",
+        "importance": 2
+      },
+      {
+        "lemma": "a.m.",
+        "importance": 2
+      },
+      {
+        "lemma": "p.m.",
+        "importance": 2
+      },
+      {
+        "lemma": "again",
+        "importance": 2
+      },
+      {
+        "lemma": "ago",
+        "importance": 2
+      },
+      {
+        "lemma": "already",
+        "importance": 2
+      },
+      {
+        "lemma": "always",
+        "importance": 2
+      },
+      {
+        "lemma": "before",
+        "importance": 2
+      },
+      {
+        "lemma": "finally",
+        "importance": 2
+      },
+      {
+        "lemma": "forever",
+        "importance": 2
+      },
+      {
+        "lemma": "just",
+        "importance": 2
+      },
+      {
+        "lemma": "later",
+        "importance": 2
+      },
+      {
+        "lemma": "never",
+        "importance": 2
+      },
+      {
+        "lemma": "next",
+        "importance": 2
+      },
+      {
+        "lemma": "nowadays",
+        "importance": 2
+      },
+      {
+        "lemma": "once",
+        "importance": 2
+      },
+      {
+        "lemma": "past",
+        "importance": 2
+      },
+      {
+        "lemma": "recently",
+        "importance": 2
+      },
+      {
+        "lemma": "soon",
+        "importance": 2
+      },
+      {
+        "lemma": "someday",
+        "importance": 2
+      },
+      {
+        "lemma": "then",
+        "importance": 2
+      },
+      {
+        "lemma": "usually",
+        "importance": 2
+      },
+      {
+        "lemma": "yet",
+        "importance": 2
+      },
+      {
+        "lemma": "latter",
+        "importance": 2
+      },
+      {
+        "lemma": "often",
+        "importance": 2
+      },
+      {
+        "lemma": "anymore",
+        "importance": 2
+      },
+      {
+        "lemma": "ever",
         "importance": 2
       }
     ],
@@ -1254,6 +1813,402 @@
       {
         "lemma": "dream",
         "importance": 2
+      },
+      {
+        "lemma": "act",
+        "importance": 2
+      },
+      {
+        "lemma": "addition",
+        "importance": 2
+      },
+      {
+        "lemma": "advertisement",
+        "importance": 2
+      },
+      {
+        "lemma": "advertising",
+        "importance": 2
+      },
+      {
+        "lemma": "affair",
+        "importance": 2
+      },
+      {
+        "lemma": "ambition",
+        "importance": 2
+      },
+      {
+        "lemma": "amusement",
+        "importance": 2
+      },
+      {
+        "lemma": "appearance",
+        "importance": 2
+      },
+      {
+        "lemma": "association",
+        "importance": 2
+      },
+      {
+        "lemma": "atom",
+        "importance": 2
+      },
+      {
+        "lemma": "attempt",
+        "importance": 2
+      },
+      {
+        "lemma": "attention",
+        "importance": 2
+      },
+      {
+        "lemma": "attitude",
+        "importance": 2
+      },
+      {
+        "lemma": "background",
+        "importance": 2
+      },
+      {
+        "lemma": "base",
+        "importance": 2
+      },
+      {
+        "lemma": "batch",
+        "importance": 2
+      },
+      {
+        "lemma": "beginning",
+        "importance": 2
+      },
+      {
+        "lemma": "bit",
+        "importance": 2
+      },
+      {
+        "lemma": "bloom",
+        "importance": 2
+      },
+      {
+        "lemma": "chain",
+        "importance": 2
+      },
+      {
+        "lemma": "challenge",
+        "importance": 2
+      },
+      {
+        "lemma": "chance",
+        "importance": 2
+      },
+      {
+        "lemma": "clue",
+        "importance": 2
+      },
+      {
+        "lemma": "concern",
+        "importance": 2
+      },
+      {
+        "lemma": "consequence",
+        "importance": 2
+      },
+      {
+        "lemma": "context",
+        "importance": 2
+      },
+      {
+        "lemma": "contrast",
+        "importance": 2
+      },
+      {
+        "lemma": "control",
+        "importance": 2
+      },
+      {
+        "lemma": "convenience",
+        "importance": 2
+      },
+      {
+        "lemma": "creativity",
+        "importance": 2
+      },
+      {
+        "lemma": "death",
+        "importance": 2
+      },
+      {
+        "lemma": "dislike",
+        "importance": 2
+      },
+      {
+        "lemma": "effect",
+        "importance": 2
+      },
+      {
+        "lemma": "entertainment",
+        "importance": 2
+      },
+      {
+        "lemma": "escape",
+        "importance": 2
+      },
+      {
+        "lemma": "expression",
+        "importance": 2
+      },
+      {
+        "lemma": "fact",
+        "importance": 2
+      },
+      {
+        "lemma": "fashion",
+        "importance": 2
+      },
+      {
+        "lemma": "fortune",
+        "importance": 2
+      },
+      {
+        "lemma": "gender",
+        "importance": 2
+      },
+      {
+        "lemma": "generation",
+        "importance": 2
+      },
+      {
+        "lemma": "impact",
+        "importance": 2
+      },
+      {
+        "lemma": "inspiration",
+        "importance": 2
+      },
+      {
+        "lemma": "interest",
+        "importance": 2
+      },
+      {
+        "lemma": "invention",
+        "importance": 2
+      },
+      {
+        "lemma": "kind",
+        "importance": 2
+      },
+      {
+        "lemma": "lack",
+        "importance": 2
+      },
+      {
+        "lemma": "laziness",
+        "importance": 2
+      },
+      {
+        "lemma": "leisure",
+        "importance": 2
+      },
+      {
+        "lemma": "load",
+        "importance": 2
+      },
+      {
+        "lemma": "manner",
+        "importance": 2
+      },
+      {
+        "lemma": "method",
+        "importance": 2
+      },
+      {
+        "lemma": "model",
+        "importance": 2
+      },
+      {
+        "lemma": "part",
+        "importance": 2
+      },
+      {
+        "lemma": "permission",
+        "importance": 2
+      },
+      {
+        "lemma": "personality",
+        "importance": 2
+      },
+      {
+        "lemma": "plenty",
+        "importance": 2
+      },
+      {
+        "lemma": "prediction",
+        "importance": 2
+      },
+      {
+        "lemma": "promise",
+        "importance": 2
+      },
+      {
+        "lemma": "public",
+        "importance": 2
+      },
+      {
+        "lemma": "range",
+        "importance": 2
+      },
+      {
+        "lemma": "response",
+        "importance": 2
+      },
+      {
+        "lemma": "rumor",
+        "importance": 2
+      },
+      {
+        "lemma": "secret",
+        "importance": 2
+      },
+      {
+        "lemma": "sense",
+        "importance": 2
+      },
+      {
+        "lemma": "shape",
+        "importance": 2
+      },
+      {
+        "lemma": "situation",
+        "importance": 2
+      },
+      {
+        "lemma": "source",
+        "importance": 2
+      },
+      {
+        "lemma": "spread",
+        "importance": 2
+      },
+      {
+        "lemma": "staff",
+        "importance": 2
+      },
+      {
+        "lemma": "state",
+        "importance": 2
+      },
+      {
+        "lemma": "structure",
+        "importance": 2
+      },
+      {
+        "lemma": "style",
+        "importance": 2
+      },
+      {
+        "lemma": "symbol",
+        "importance": 2
+      },
+      {
+        "lemma": "thought",
+        "importance": 2
+      },
+      {
+        "lemma": "title",
+        "importance": 2
+      },
+      {
+        "lemma": "tone",
+        "importance": 2
+      },
+      {
+        "lemma": "treasure",
+        "importance": 2
+      },
+      {
+        "lemma": "trick",
+        "importance": 2
+      },
+      {
+        "lemma": "trouble",
+        "importance": 2
+      },
+      {
+        "lemma": "unit",
+        "importance": 2
+      },
+      {
+        "lemma": "view",
+        "importance": 2
+      },
+      {
+        "lemma": "vote",
+        "importance": 2
+      },
+      {
+        "lemma": "war",
+        "importance": 2
+      },
+      {
+        "lemma": "zone",
+        "importance": 2
+      },
+      {
+        "lemma": "detail",
+        "importance": 2
+      },
+      {
+        "lemma": "habit",
+        "importance": 2
+      },
+      {
+        "lemma": "idea",
+        "importance": 2
+      },
+      {
+        "lemma": "information",
+        "importance": 2
+      },
+      {
+        "lemma": "life",
+        "importance": 2
+      },
+      {
+        "lemma": "future",
+        "importance": 2
+      },
+      {
+        "lemma": "world",
+        "importance": 2
+      },
+      {
+        "lemma": "mind",
+        "importance": 2
+      },
+      {
+        "lemma": "memory",
+        "importance": 2
+      },
+      {
+        "lemma": "nation",
+        "importance": 2
+      },
+      {
+        "lemma": "population",
+        "importance": 2
+      },
+      {
+        "lemma": "rush",
+        "importance": 2
+      },
+      {
+        "lemma": "pollution",
+        "importance": 2
+      },
+      {
+        "lemma": "worldwide",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1314,6 +2269,338 @@
       },
       {
         "lemma": "fool",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f298-04f7-7b16-89b8-d3a85dd6bd37",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Место и направление",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "along",
+        "importance": 2
+      },
+      {
+        "lemma": "across",
+        "importance": 2
+      },
+      {
+        "lemma": "ahead",
+        "importance": 2
+      },
+      {
+        "lemma": "round",
+        "importance": 2
+      },
+      {
+        "lemma": "here",
+        "importance": 2
+      },
+      {
+        "lemma": "there",
+        "importance": 2
+      },
+      {
+        "lemma": "elsewhere",
+        "importance": 2
+      },
+      {
+        "lemma": "somewhere",
+        "importance": 2
+      },
+      {
+        "lemma": "anywhere",
+        "importance": 2
+      },
+      {
+        "lemma": "everywhere",
+        "importance": 2
+      },
+      {
+        "lemma": "overseas",
+        "importance": 2
+      },
+      {
+        "lemma": "apart",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f298-04f7-703d-a6c3-f07cfb7ae93d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Степень",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "almost",
+        "importance": 2
+      },
+      {
+        "lemma": "much",
+        "importance": 2
+      },
+      {
+        "lemma": "quite",
+        "importance": 2
+      },
+      {
+        "lemma": "very",
+        "importance": 2
+      },
+      {
+        "lemma": "fully",
+        "importance": 2
+      },
+      {
+        "lemma": "fairly",
+        "importance": 2
+      },
+      {
+        "lemma": "rather",
+        "importance": 2
+      },
+      {
+        "lemma": "extremely",
+        "importance": 2
+      },
+      {
+        "lemma": "especially",
+        "importance": 2
+      },
+      {
+        "lemma": "perfectly",
+        "importance": 2
+      },
+      {
+        "lemma": "nearly",
+        "importance": 2
+      },
+      {
+        "lemma": "roughly",
+        "importance": 2
+      },
+      {
+        "lemma": "exactly",
+        "importance": 2
+      },
+      {
+        "lemma": "hardly",
+        "importance": 2
+      },
+      {
+        "lemma": "even",
+        "importance": 2
+      },
+      {
+        "lemma": "enough",
+        "importance": 2
+      },
+      {
+        "lemma": "less",
+        "importance": 2
+      },
+      {
+        "lemma": "mostly",
+        "importance": 2
+      },
+      {
+        "lemma": "mainly",
+        "importance": 2
+      },
+      {
+        "lemma": "greatly",
+        "importance": 2
+      },
+      {
+        "lemma": "strongly",
+        "importance": 2
+      },
+      {
+        "lemma": "deeply",
+        "importance": 2
+      },
+      {
+        "lemma": "deep",
+        "importance": 2
+      },
+      {
+        "lemma": "widely",
+        "importance": 2
+      },
+      {
+        "lemma": "importantly",
+        "importance": 2
+      },
+      {
+        "lemma": "lot",
+        "importance": 2
+      },
+      {
+        "lemma": "about",
+        "importance": 2
+      },
+      {
+        "lemma": "heavily",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f298-04f7-7621-a724-1cb138654949",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Манера действия",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "angrily",
+        "importance": 2
+      },
+      {
+        "lemma": "badly",
+        "importance": 2
+      },
+      {
+        "lemma": "clearly",
+        "importance": 2
+      },
+      {
+        "lemma": "correctly",
+        "importance": 2
+      },
+      {
+        "lemma": "differently",
+        "importance": 2
+      },
+      {
+        "lemma": "easily",
+        "importance": 2
+      },
+      {
+        "lemma": "happily",
+        "importance": 2
+      },
+      {
+        "lemma": "loudly",
+        "importance": 2
+      },
+      {
+        "lemma": "quietly",
+        "importance": 2
+      },
+      {
+        "lemma": "seriously",
+        "importance": 2
+      },
+      {
+        "lemma": "silently",
+        "importance": 2
+      },
+      {
+        "lemma": "simply",
+        "importance": 2
+      },
+      {
+        "lemma": "slowly",
+        "importance": 2
+      },
+      {
+        "lemma": "smoothly",
+        "importance": 2
+      },
+      {
+        "lemma": "softly",
+        "importance": 2
+      },
+      {
+        "lemma": "successfully",
+        "importance": 2
+      },
+      {
+        "lemma": "truly",
+        "importance": 2
+      },
+      {
+        "lemma": "physically",
+        "importance": 2
+      },
+      {
+        "lemma": "gradually",
+        "importance": 2
+      },
+      {
+        "lemma": "basically",
+        "importance": 2
+      },
+      {
+        "lemma": "quickly",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f298-04f7-76b7-9844-dbc80dc25c52",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вероятность и уверенность",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "maybe",
+        "importance": 2
+      },
+      {
+        "lemma": "perhaps",
+        "importance": 2
+      },
+      {
+        "lemma": "possibly",
+        "importance": 2
+      },
+      {
+        "lemma": "probably",
+        "importance": 2
+      },
+      {
+        "lemma": "apparently",
+        "importance": 2
+      },
+      {
+        "lemma": "indeed",
+        "importance": 2
+      },
+      {
+        "lemma": "luckily",
+        "importance": 2
+      },
+      {
+        "lemma": "fortunately",
+        "importance": 2
+      },
+      {
+        "lemma": "unfortunately",
         "importance": 2
       }
     ],

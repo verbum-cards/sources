@@ -896,6 +896,10 @@
       {
         "lemma": "note",
         "importance": 2
+      },
+      {
+        "lemma": "vacation",
+        "importance": 2
       }
     ],
     "importance": 2

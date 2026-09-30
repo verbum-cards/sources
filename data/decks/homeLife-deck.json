@@ -68,6 +68,10 @@
       {
         "lemma": "napkin",
         "importance": 2
+      },
+      {
+        "lemma": "cooler",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -160,6 +164,10 @@
       },
       {
         "lemma": "slice",
+        "importance": 2
+      },
+      {
+        "lemma": "barbecue",
         "importance": 2
       }
     ],
@@ -564,6 +572,14 @@
       {
         "lemma": "scheduled",
         "importance": 2
+      },
+      {
+        "lemma": "wake",
+        "importance": 2
+      },
+      {
+        "lemma": "supper",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -751,6 +767,14 @@
       },
       {
         "lemma": "hostess",
+        "importance": 2
+      },
+      {
+        "lemma": "reunion",
+        "importance": 2
+      },
+      {
+        "lemma": "knock",
         "importance": 2
       }
     ],

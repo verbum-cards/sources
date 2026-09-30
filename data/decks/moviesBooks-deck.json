@@ -56,6 +56,14 @@
       {
         "lemma": "genre",
         "importance": 2
+      },
+      {
+        "lemma": "fiction",
+        "importance": 2
+      },
+      {
+        "lemma": "mysterious",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -187,6 +195,10 @@
       {
         "lemma": "subplot",
         "importance": 2
+      },
+      {
+        "lemma": "script",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -277,6 +289,18 @@
       },
       {
         "lemma": "slang",
+        "importance": 2
+      },
+      {
+        "lemma": "joke",
+        "importance": 2
+      },
+      {
+        "lemma": "yeah",
+        "importance": 2
+      },
+      {
+        "lemma": "hey",
         "importance": 2
       }
     ],
@@ -465,6 +489,10 @@
       },
       {
         "lemma": "protagonist",
+        "importance": 2
+      },
+      {
+        "lemma": "spy",
         "importance": 2
       }
     ],

@@ -80,6 +80,10 @@
       {
         "lemma": "web page",
         "importance": 2
+      },
+      {
+        "lemma": "search",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -731,6 +735,10 @@
       },
       {
         "lemma": "What are the requirements for this position?",
+        "importance": 2
+      },
+      {
+        "lemma": "expert",
         "importance": 2
       }
     ],

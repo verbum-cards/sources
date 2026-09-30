@@ -677,6 +677,14 @@
       {
         "lemma": "unmanageable",
         "importance": 2
+      },
+      {
+        "lemma": "committee",
+        "importance": 2
+      },
+      {
+        "lemma": "commitment",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -737,6 +745,10 @@
       },
       {
         "lemma": "skillfully",
+        "importance": 2
+      },
+      {
+        "lemma": "retire",
         "importance": 2
       }
     ],

@@ -48,6 +48,10 @@
       {
         "lemma": "booking",
         "importance": 2
+      },
+      {
+        "lemma": "cruise",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -272,6 +276,18 @@
       {
         "lemma": "visa",
         "importance": 2
+      },
+      {
+        "lemma": "country",
+        "importance": 2
+      },
+      {
+        "lemma": "ID",
+        "importance": 2
+      },
+      {
+        "lemma": "ID card",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -472,6 +488,30 @@
       {
         "lemma": "cathedral",
         "importance": 2
+      },
+      {
+        "lemma": "gallery",
+        "importance": 2
+      },
+      {
+        "lemma": "architecture",
+        "importance": 2
+      },
+      {
+        "lemma": "portrait",
+        "importance": 2
+      },
+      {
+        "lemma": "capital",
+        "importance": 2
+      },
+      {
+        "lemma": "exhibition",
+        "importance": 2
+      },
+      {
+        "lemma": "mosque",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -564,6 +604,10 @@
       },
       {
         "lemma": "surfing",
+        "importance": 2
+      },
+      {
+        "lemma": "underwater",
         "importance": 2
       }
     ],
@@ -761,6 +805,58 @@
       },
       {
         "lemma": "moon",
+        "importance": 2
+      },
+      {
+        "lemma": "wild",
+        "importance": 2
+      },
+      {
+        "lemma": "windy",
+        "importance": 2
+      },
+      {
+        "lemma": "bush",
+        "importance": 2
+      },
+      {
+        "lemma": "grass",
+        "importance": 2
+      },
+      {
+        "lemma": "wood",
+        "importance": 2
+      },
+      {
+        "lemma": "dam",
+        "importance": 2
+      },
+      {
+        "lemma": "harvest",
+        "importance": 2
+      },
+      {
+        "lemma": "endangered",
+        "importance": 2
+      },
+      {
+        "lemma": "flood",
+        "importance": 2
+      },
+      {
+        "lemma": "earth",
+        "importance": 2
+      },
+      {
+        "lemma": "path",
+        "importance": 2
+      },
+      {
+        "lemma": "ray",
+        "importance": 2
+      },
+      {
+        "lemma": "recycle",
         "importance": 2
       }
     ],

@@ -48,6 +48,10 @@
       {
         "lemma": "weight",
         "importance": 2
+      },
+      {
+        "lemma": "scale",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -353,6 +357,14 @@
       {
         "lemma": "winner",
         "importance": 2
+      },
+      {
+        "lemma": "competition",
+        "importance": 2
+      },
+      {
+        "lemma": "medal",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -461,6 +473,10 @@
       },
       {
         "lemma": "sports center",
+        "importance": 2
+      },
+      {
+        "lemma": "Olympic",
         "importance": 2
       }
     ],
@@ -760,6 +776,10 @@
       },
       {
         "lemma": "hip hop",
+        "importance": 2
+      },
+      {
+        "lemma": "lyric",
         "importance": 2
       }
     ],

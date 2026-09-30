@@ -298,6 +298,10 @@
       {
         "lemma": "status",
         "importance": 2
+      },
+      {
+        "lemma": "record",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -560,6 +564,10 @@
       },
       {
         "lemma": "resignation",
+        "importance": 2
+      },
+      {
+        "lemma": "strike",
         "importance": 2
       }
     ],

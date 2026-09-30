@@ -641,6 +641,10 @@
       {
         "lemma": "granny",
         "importance": 2
+      },
+      {
+        "lemma": "ancestor",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -839,6 +843,14 @@
       },
       {
         "lemma": "belt",
+        "importance": 2
+      },
+      {
+        "lemma": "suit",
+        "importance": 2
+      },
+      {
+        "lemma": "jewelry",
         "importance": 2
       }
     ],
@@ -1964,6 +1976,14 @@
       {
         "lemma": "astronaut",
         "importance": 2
+      },
+      {
+        "lemma": "fighter",
+        "importance": 2
+      },
+      {
+        "lemma": "clown",
+        "importance": 2
       }
     ],
     "importance": 1
@@ -2041,6 +2061,14 @@
       },
       {
         "lemma": "well",
+        "importance": 2
+      },
+      {
+        "lemma": "thirsty",
+        "importance": 2
+      },
+      {
+        "lemma": "ill",
         "importance": 2
       }
     ],

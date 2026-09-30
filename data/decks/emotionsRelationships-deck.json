@@ -108,6 +108,82 @@
       {
         "lemma": "relieved",
         "importance": 2
+      },
+      {
+        "lemma": "amused",
+        "importance": 2
+      },
+      {
+        "lemma": "bored",
+        "importance": 2
+      },
+      {
+        "lemma": "frightened",
+        "importance": 2
+      },
+      {
+        "lemma": "frightening",
+        "importance": 2
+      },
+      {
+        "lemma": "embarrassing",
+        "importance": 2
+      },
+      {
+        "lemma": "annoying",
+        "importance": 2
+      },
+      {
+        "lemma": "annoy",
+        "importance": 2
+      },
+      {
+        "lemma": "admire",
+        "importance": 2
+      },
+      {
+        "lemma": "hate",
+        "importance": 2
+      },
+      {
+        "lemma": "regret",
+        "importance": 2
+      },
+      {
+        "lemma": "uneasy",
+        "importance": 2
+      },
+      {
+        "lemma": "mad",
+        "importance": 2
+      },
+      {
+        "lemma": "frighten",
+        "importance": 2
+      },
+      {
+        "lemma": "shock",
+        "importance": 2
+      },
+      {
+        "lemma": "silence",
+        "importance": 2
+      },
+      {
+        "lemma": "tear",
+        "importance": 2
+      },
+      {
+        "lemma": "weep",
+        "importance": 2
+      },
+      {
+        "lemma": "scream",
+        "importance": 2
+      },
+      {
+        "lemma": "shout",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -205,6 +281,14 @@
       },
       {
         "lemma": "reassure",
+        "importance": 2
+      },
+      {
+        "lemma": "advise",
+        "importance": 2
+      },
+      {
+        "lemma": "advice",
         "importance": 2
       }
     ],
@@ -474,6 +558,26 @@
       },
       {
         "lemma": "affectionately",
+        "importance": 2
+      },
+      {
+        "lemma": "married",
+        "importance": 2
+      },
+      {
+        "lemma": "marry",
+        "importance": 2
+      },
+      {
+        "lemma": "sweetheart",
+        "importance": 2
+      },
+      {
+        "lemma": "wedding",
+        "importance": 2
+      },
+      {
+        "lemma": "bride",
         "importance": 2
       }
     ],
@@ -763,6 +867,22 @@
       },
       {
         "lemma": "strict",
+        "importance": 2
+      },
+      {
+        "lemma": "energetic",
+        "importance": 2
+      },
+      {
+        "lemma": "frank",
+        "importance": 2
+      },
+      {
+        "lemma": "greedy",
+        "importance": 2
+      },
+      {
+        "lemma": "playful",
         "importance": 2
       }
     ],

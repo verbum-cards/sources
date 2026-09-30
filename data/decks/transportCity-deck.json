@@ -425,6 +425,18 @@
       {
         "lemma": "to be stuck in traffic",
         "importance": 2
+      },
+      {
+        "lemma": "highway",
+        "importance": 2
+      },
+      {
+        "lemma": "motorway",
+        "importance": 2
+      },
+      {
+        "lemma": "brake",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -613,6 +625,30 @@
       {
         "lemma": "route",
         "importance": 2
+      },
+      {
+        "lemma": "east",
+        "importance": 2
+      },
+      {
+        "lemma": "west",
+        "importance": 2
+      },
+      {
+        "lemma": "north",
+        "importance": 2
+      },
+      {
+        "lemma": "south",
+        "importance": 2
+      },
+      {
+        "lemma": "downtown",
+        "importance": 2
+      },
+      {
+        "lemma": "area",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -657,6 +693,10 @@
       },
       {
         "lemma": "walker",
+        "importance": 2
+      },
+      {
+        "lemma": "bench",
         "importance": 2
       }
     ],
@@ -759,6 +799,34 @@
       {
         "lemma": "panic",
         "importance": 2
+      },
+      {
+        "lemma": "armed",
+        "importance": 2
+      },
+      {
+        "lemma": "gun",
+        "importance": 2
+      },
+      {
+        "lemma": "violent",
+        "importance": 2
+      },
+      {
+        "lemma": "terrorist",
+        "importance": 2
+      },
+      {
+        "lemma": "rob",
+        "importance": 2
+      },
+      {
+        "lemma": "kill",
+        "importance": 2
+      },
+      {
+        "lemma": "invade",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -856,6 +924,10 @@
       },
       {
         "lemma": "nightclub",
+        "importance": 2
+      },
+      {
+        "lemma": "crowd",
         "importance": 2
       }
     ],

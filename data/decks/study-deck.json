@@ -109,6 +109,10 @@
       {
         "lemma": "lecturer",
         "importance": 2
+      },
+      {
+        "lemma": "cafeteria",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -350,6 +354,22 @@
       {
         "lemma": "citation",
         "importance": 2
+      },
+      {
+        "lemma": "print",
+        "importance": 2
+      },
+      {
+        "lemma": "publish",
+        "importance": 2
+      },
+      {
+        "lemma": "diary",
+        "importance": 2
+      },
+      {
+        "lemma": "description",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -403,6 +423,10 @@
       {
         "lemma": "conclusion",
         "importance": 2
+      },
+      {
+        "lemma": "explanation",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -451,6 +475,10 @@
       },
       {
         "lemma": "collaborate",
+        "importance": 2
+      },
+      {
+        "lemma": "brainstorm",
         "importance": 2
       }
     ],
@@ -561,6 +589,14 @@
       },
       {
         "lemma": "capital letter",
+        "importance": 2
+      },
+      {
+        "lemma": "singular",
+        "importance": 2
+      },
+      {
+        "lemma": "learner",
         "importance": 2
       }
     ],
