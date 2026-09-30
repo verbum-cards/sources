@@ -1136,6 +1136,811 @@
     ]
   },
   {
+    "id": "01a0f201-7de8-7f1d-81c4-237a27db7b33",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Резюме и сопроводительное письмо",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "achievement",
+        "importance": 2
+      },
+      {
+        "lemma": "CV",
+        "importance": 2
+      },
+      {
+        "lemma": "education",
+        "importance": 2
+      },
+      {
+        "lemma": "qualification",
+        "importance": 2
+      },
+      {
+        "lemma": "reference",
+        "importance": 2
+      },
+      {
+        "lemma": "skill",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-73c0-97ec-bf28f7bc5d95",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вопросы работодателю",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "benefit",
+        "importance": 2
+      },
+      {
+        "lemma": "employer",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "opportunity",
+        "importance": 2
+      },
+      {
+        "lemma": "requirement",
+        "importance": 2
+      },
+      {
+        "lemma": "responsibility",
+        "importance": 2
+      },
+      {
+        "lemma": "role",
+        "importance": 2
+      },
+      {
+        "lemma": "What are the requirements for this position?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7aed-a9f6-a406ebd269b1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Зарплата и условия",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "benefit",
+        "importance": 2
+      },
+      {
+        "lemma": "bonus",
+        "importance": 2
+      },
+      {
+        "lemma": "contract",
+        "importance": 2
+      },
+      {
+        "lemma": "insurance",
+        "importance": 2
+      },
+      {
+        "lemma": "pension",
+        "importance": 2
+      },
+      {
+        "lemma": "salary",
+        "importance": 2
+      },
+      {
+        "lemma": "wage",
+        "importance": 2
+      },
+      {
+        "lemma": "raise",
+        "importance": 2
+      },
+      {
+        "lemma": "overtime",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7df3-a471-3f4d7cb0c733",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Переговоры",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "compromise",
+        "importance": 2
+      },
+      {
+        "lemma": "deal",
+        "importance": 2
+      },
+      {
+        "lemma": "dealer",
+        "importance": 2
+      },
+      {
+        "lemma": "disagreement",
+        "importance": 2
+      },
+      {
+        "lemma": "negotiation",
+        "importance": 2
+      },
+      {
+        "lemma": "offer",
+        "importance": 2
+      },
+      {
+        "lemma": "agree",
+        "importance": 2
+      },
+      {
+        "lemma": "disagree",
+        "importance": 2
+      },
+      {
+        "lemma": "negotiate",
+        "importance": 2
+      },
+      {
+        "lemma": "to reach an agreement",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7f3a-b8d6-c4b773c5b111",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Презентации",
+    "categories": [
+      "businessCareer",
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "audience",
+        "importance": 2
+      },
+      {
+        "lemma": "pitch",
+        "importance": 2
+      },
+      {
+        "lemma": "presentation",
+        "importance": 2
+      },
+      {
+        "lemma": "presenter",
+        "importance": 2
+      },
+      {
+        "lemma": "slide",
+        "importance": 2
+      },
+      {
+        "lemma": "speech",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-72b0-8373-a7e00fcbb7ff",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Выступления и питчи",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "confidence",
+        "importance": 2
+      },
+      {
+        "lemma": "nervousness",
+        "importance": 2
+      },
+      {
+        "lemma": "pitch",
+        "importance": 2
+      },
+      {
+        "lemma": "self-confidence",
+        "importance": 2
+      },
+      {
+        "lemma": "speaker",
+        "importance": 2
+      },
+      {
+        "lemma": "speech",
+        "importance": 2
+      },
+      {
+        "lemma": "stage",
+        "importance": 2
+      },
+      {
+        "lemma": "nervous",
+        "importance": 2
+      },
+      {
+        "lemma": "onstage",
+        "importance": 2
+      },
+      {
+        "lemma": "nervously",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7572-9b76-7610641b661e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Нетворкинг",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "connection",
+        "importance": 2
+      },
+      {
+        "lemma": "contact",
+        "importance": 2
+      },
+      {
+        "lemma": "network",
+        "importance": 2
+      },
+      {
+        "lemma": "introduce",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7388-9ca3-9a311a29636c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Продажи",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bestseller",
+        "importance": 2
+      },
+      {
+        "lemma": "customer",
+        "importance": 2
+      },
+      {
+        "lemma": "deal",
+        "importance": 2
+      },
+      {
+        "lemma": "dealer",
+        "importance": 2
+      },
+      {
+        "lemma": "pitch",
+        "importance": 2
+      },
+      {
+        "lemma": "quotation",
+        "importance": 2
+      },
+      {
+        "lemma": "sale",
+        "importance": 2
+      },
+      {
+        "lemma": "salesman",
+        "importance": 2
+      },
+      {
+        "lemma": "salesmanship",
+        "importance": 2
+      },
+      {
+        "lemma": "salesperson",
+        "importance": 2
+      },
+      {
+        "lemma": "saleswoman",
+        "importance": 2
+      },
+      {
+        "lemma": "seller",
+        "importance": 2
+      },
+      {
+        "lemma": "target",
+        "importance": 2
+      },
+      {
+        "lemma": "sell",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7c4c-bcf3-4960b598c00e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Клиенты и партнёры",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "client",
+        "importance": 2
+      },
+      {
+        "lemma": "customer",
+        "importance": 2
+      },
+      {
+        "lemma": "partner",
+        "importance": 2
+      },
+      {
+        "lemma": "partnership",
+        "importance": 2
+      },
+      {
+        "lemma": "supplier",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-79b4-b3a6-96d63815e5e4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Деньги и финансы",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "budget",
+        "importance": 2
+      },
+      {
+        "lemma": "expense",
+        "importance": 2
+      },
+      {
+        "lemma": "income",
+        "importance": 2
+      },
+      {
+        "lemma": "investment",
+        "importance": 2
+      },
+      {
+        "lemma": "investor",
+        "importance": 2
+      },
+      {
+        "lemma": "loss",
+        "importance": 2
+      },
+      {
+        "lemma": "money",
+        "importance": 2
+      },
+      {
+        "lemma": "profit",
+        "importance": 2
+      },
+      {
+        "lemma": "revenue",
+        "importance": 2
+      },
+      {
+        "lemma": "finance",
+        "importance": 2
+      },
+      {
+        "lemma": "invest",
+        "importance": 2
+      },
+      {
+        "lemma": "financial",
+        "importance": 2
+      },
+      {
+        "lemma": "profitable",
+        "importance": 2
+      },
+      {
+        "lemma": "financially",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7134-a1df-8f152484bf43",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Цифры и графики",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "chart",
+        "importance": 2
+      },
+      {
+        "lemma": "decrease",
+        "importance": 2
+      },
+      {
+        "lemma": "graph",
+        "importance": 2
+      },
+      {
+        "lemma": "graphics",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "number",
+        "importance": 2
+      },
+      {
+        "lemma": "percentage",
+        "importance": 2
+      },
+      {
+        "lemma": "statistics",
+        "importance": 2
+      },
+      {
+        "lemma": "trend",
+        "importance": 2
+      },
+      {
+        "lemma": "increase",
+        "importance": 2
+      },
+      {
+        "lemma": "graphic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-74b9-9b03-cfecc055dbd0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стратегия и цели",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "mission",
+        "importance": 2
+      },
+      {
+        "lemma": "objective",
+        "importance": 2
+      },
+      {
+        "lemma": "plan",
+        "importance": 2
+      },
+      {
+        "lemma": "planning",
+        "importance": 2
+      },
+      {
+        "lemma": "strategy",
+        "importance": 2
+      },
+      {
+        "lemma": "target",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7100-a115-46b8235ee3c2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Руководство командой",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "delegate",
+        "importance": 2
+      },
+      {
+        "lemma": "lead",
+        "importance": 2
+      },
+      {
+        "lemma": "leader",
+        "importance": 2
+      },
+      {
+        "lemma": "leadership",
+        "importance": 2
+      },
+      {
+        "lemma": "management",
+        "importance": 2
+      },
+      {
+        "lemma": "manager",
+        "importance": 2
+      },
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "manage",
+        "importance": 2
+      },
+      {
+        "lemma": "motivate",
+        "importance": 2
+      },
+      {
+        "lemma": "supervise",
+        "importance": 2
+      },
+      {
+        "lemma": "leading",
+        "importance": 2
+      },
+      {
+        "lemma": "motivated",
+        "importance": 2
+      },
+      {
+        "lemma": "unmanageable",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7f85-a675-2c842549004d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Карьерный рост",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "advancement",
+        "importance": 2
+      },
+      {
+        "lemma": "career",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "opportunity",
+        "importance": 2
+      },
+      {
+        "lemma": "promotion",
+        "importance": 2
+      },
+      {
+        "lemma": "skill",
+        "importance": 2
+      },
+      {
+        "lemma": "advance",
+        "importance": 2
+      },
+      {
+        "lemma": "promote",
+        "importance": 2
+      },
+      {
+        "lemma": "advanced",
+        "importance": 2
+      },
+      {
+        "lemma": "skilled",
+        "importance": 2
+      },
+      {
+        "lemma": "skillful",
+        "importance": 2
+      },
+      {
+        "lemma": "skillfully",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-757a-b4b3-0d1cd31b3862",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Своё дело",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "business",
+        "importance": 2
+      },
+      {
+        "lemma": "businessman",
+        "importance": 2
+      },
+      {
+        "lemma": "businesswoman",
+        "importance": 2
+      },
+      {
+        "lemma": "company",
+        "importance": 2
+      },
+      {
+        "lemma": "entrepreneur",
+        "importance": 2
+      },
+      {
+        "lemma": "investor",
+        "importance": 2
+      },
+      {
+        "lemma": "launch",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f201-7de8-7f27-b972-9b7b193ea587",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Деловая переписка",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "correspondence",
+        "importance": 2
+      },
+      {
+        "lemma": "formality",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "correspond",
+        "importance": 2
+      },
+      {
+        "lemma": "respond",
+        "importance": 2
+      },
+      {
+        "lemma": "attached",
+        "importance": 2
+      },
+      {
+        "lemma": "dear",
+        "importance": 2
+      },
+      {
+        "lemma": "formal",
+        "importance": 2
+      },
+      {
+        "lemma": "informal",
+        "importance": 2
+      },
+      {
+        "lemma": "formally",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "01a0f1ce-b18d-7b12-97a1-6f45be587b0c",
     "lang": "en",
     "nativeLang": "ru",
@@ -1869,7 +2674,8 @@
     "nativeLang": "ru",
     "title": "Деловой обед",
     "categories": [
-      "cafeRestaurant"
+      "cafeRestaurant",
+      "businessCareer"
     ],
     "type": "official",
     "importance": 2,
@@ -1910,7 +2716,8 @@
     "nativeLang": "ru",
     "title": "Свидание в ресторане",
     "categories": [
-      "cafeRestaurant"
+      "cafeRestaurant",
+      "emotionsRelationships"
     ],
     "type": "official",
     "importance": 2,
@@ -1937,6 +2744,755 @@
       },
       {
         "lemma": "romantic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-79d6-90dc-9da43ad6a3f5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Оттенки чувств",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "anxiety",
+        "importance": 2
+      },
+      {
+        "lemma": "calmness",
+        "importance": 2
+      },
+      {
+        "lemma": "content",
+        "importance": 2
+      },
+      {
+        "lemma": "envy",
+        "importance": 2
+      },
+      {
+        "lemma": "frustration",
+        "importance": 2
+      },
+      {
+        "lemma": "guilt",
+        "importance": 2
+      },
+      {
+        "lemma": "mood",
+        "importance": 2
+      },
+      {
+        "lemma": "pride",
+        "importance": 2
+      },
+      {
+        "lemma": "relief",
+        "importance": 2
+      },
+      {
+        "lemma": "irritate",
+        "importance": 2
+      },
+      {
+        "lemma": "anxious",
+        "importance": 2
+      },
+      {
+        "lemma": "ashamed",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      },
+      {
+        "lemma": "disappointed",
+        "importance": 2
+      },
+      {
+        "lemma": "frustrated",
+        "importance": 2
+      },
+      {
+        "lemma": "guilty",
+        "importance": 2
+      },
+      {
+        "lemma": "irritated",
+        "importance": 2
+      },
+      {
+        "lemma": "jealous",
+        "importance": 2
+      },
+      {
+        "lemma": "moody",
+        "importance": 2
+      },
+      {
+        "lemma": "proud",
+        "importance": 2
+      },
+      {
+        "lemma": "relieved",
+        "importance": 2
+      },
+      {
+        "lemma": "anxiously",
+        "importance": 2
+      },
+      {
+        "lemma": "calmly",
+        "importance": 2
+      },
+      {
+        "lemma": "jealously",
+        "importance": 2
+      },
+      {
+        "lemma": "proudly",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7cfd-89ff-a491d0b7913c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спросить, как дела по-настоящему",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "worry",
+        "importance": 2
+      },
+      {
+        "lemma": "seem",
+        "importance": 2
+      },
+      {
+        "lemma": "worried",
+        "importance": 2
+      },
+      {
+        "lemma": "worrying",
+        "importance": 2
+      },
+      {
+        "lemma": "actually",
+        "importance": 2
+      },
+      {
+        "lemma": "honestly",
+        "importance": 2
+      },
+      {
+        "lemma": "really",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-70b7-99b2-457c335face2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поддержка",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "comfort",
+        "importance": 2
+      },
+      {
+        "lemma": "encouragement",
+        "importance": 2
+      },
+      {
+        "lemma": "listener",
+        "importance": 2
+      },
+      {
+        "lemma": "support",
+        "importance": 2
+      },
+      {
+        "lemma": "supporter",
+        "importance": 2
+      },
+      {
+        "lemma": "encourage",
+        "importance": 2
+      },
+      {
+        "lemma": "listen",
+        "importance": 2
+      },
+      {
+        "lemma": "reassure",
+        "importance": 2
+      },
+      {
+        "lemma": "understand",
+        "importance": 2
+      },
+      {
+        "lemma": "supportive",
+        "importance": 2
+      },
+      {
+        "lemma": "understanding",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7fcd-aa3d-a361ffde3dde",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Радоваться за другого",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "celebrate",
+        "importance": 2
+      },
+      {
+        "lemma": "congratulate",
+        "importance": 2
+      },
+      {
+        "lemma": "delighted",
+        "importance": 2
+      },
+      {
+        "lemma": "proud",
+        "importance": 2
+      },
+      {
+        "lemma": "thrilled",
+        "importance": 2
+      },
+      {
+        "lemma": "proudly",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7cf3-92ff-a35fdcaf284c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Благодарность",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "appreciation",
+        "importance": 2
+      },
+      {
+        "lemma": "gratitude",
+        "importance": 2
+      },
+      {
+        "lemma": "thanks",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciate",
+        "importance": 2
+      },
+      {
+        "lemma": "thank",
+        "importance": 2
+      },
+      {
+        "lemma": "grateful",
+        "importance": 2
+      },
+      {
+        "lemma": "thankful",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-70f4-9141-adc17809e676",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Комплименты",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "compliment",
+        "importance": 2
+      },
+      {
+        "lemma": "amazing",
+        "importance": 2
+      },
+      {
+        "lemma": "beautiful",
+        "importance": 2
+      },
+      {
+        "lemma": "gorgeous",
+        "importance": 2
+      },
+      {
+        "lemma": "handsome",
+        "importance": 2
+      },
+      {
+        "lemma": "impressive",
+        "importance": 2
+      },
+      {
+        "lemma": "talented",
+        "importance": 2
+      },
+      {
+        "lemma": "untalented",
+        "importance": 2
+      },
+      {
+        "lemma": "wonderful",
+        "importance": 2
+      },
+      {
+        "lemma": "amazingly",
+        "importance": 2
+      },
+      {
+        "lemma": "beautifully",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-75c8-86d7-2a725ab224af",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дружба",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "closeness",
+        "importance": 2
+      },
+      {
+        "lemma": "friend",
+        "importance": 2
+      },
+      {
+        "lemma": "friendliness",
+        "importance": 2
+      },
+      {
+        "lemma": "friendship",
+        "importance": 2
+      },
+      {
+        "lemma": "loyalty",
+        "importance": 2
+      },
+      {
+        "lemma": "penfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "trust",
+        "importance": 2
+      },
+      {
+        "lemma": "close",
+        "importance": 2
+      },
+      {
+        "lemma": "friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "loyal",
+        "importance": 2
+      },
+      {
+        "lemma": "trustworthy",
+        "importance": 2
+      },
+      {
+        "lemma": "unfriendly",
+        "importance": 2
+      },
+      {
+        "lemma": "closely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7bd9-9cde-3619f8fa636a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Романтические отношения",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "affection",
+        "importance": 2
+      },
+      {
+        "lemma": "boyfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "couple",
+        "importance": 2
+      },
+      {
+        "lemma": "crush",
+        "importance": 2
+      },
+      {
+        "lemma": "girlfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "kiss",
+        "importance": 2
+      },
+      {
+        "lemma": "love",
+        "importance": 2
+      },
+      {
+        "lemma": "lover",
+        "importance": 2
+      },
+      {
+        "lemma": "relationship",
+        "importance": 2
+      },
+      {
+        "lemma": "affectionate",
+        "importance": 2
+      },
+      {
+        "lemma": "beloved",
+        "importance": 2
+      },
+      {
+        "lemma": "lovely",
+        "importance": 2
+      },
+      {
+        "lemma": "romantic",
+        "importance": 2
+      },
+      {
+        "lemma": "affectionately",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-76b7-9f3e-0379e8bea093",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ссоры и примирение",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "fight",
+        "importance": 2
+      },
+      {
+        "lemma": "fighting",
+        "importance": 2
+      },
+      {
+        "lemma": "quarrel",
+        "importance": 2
+      },
+      {
+        "lemma": "reconciliation",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "forgive",
+        "importance": 2
+      },
+      {
+        "lemma": "reconcile",
+        "importance": 2
+      },
+      {
+        "lemma": "quarrelsome",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7f22-b4d9-9e3bd2f5d67d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Границы",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "limit",
+        "importance": 2
+      },
+      {
+        "lemma": "limitation",
+        "importance": 2
+      },
+      {
+        "lemma": "norms",
+        "importance": 2
+      },
+      {
+        "lemma": "respect",
+        "importance": 2
+      },
+      {
+        "lemma": "limited",
+        "importance": 2
+      },
+      {
+        "lemma": "no",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7dce-a34e-b93e84cb955c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Расставание",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "breakup",
+        "importance": 2
+      },
+      {
+        "lemma": "divorce",
+        "importance": 2
+      },
+      {
+        "lemma": "separation",
+        "importance": 2
+      },
+      {
+        "lemma": "divorced",
+        "importance": 2
+      },
+      {
+        "lemma": "separate",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-77fa-9e0f-618ed453590e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сочувствие в трудной ситуации",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "difficulty",
+        "importance": 2
+      },
+      {
+        "lemma": "grief",
+        "importance": 2
+      },
+      {
+        "lemma": "loss",
+        "importance": 2
+      },
+      {
+        "lemma": "sympathy",
+        "importance": 2
+      },
+      {
+        "lemma": "toughness",
+        "importance": 2
+      },
+      {
+        "lemma": "sympathize",
+        "importance": 2
+      },
+      {
+        "lemma": "difficult",
+        "importance": 2
+      },
+      {
+        "lemma": "tough",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f206-e97e-7bde-933d-69a72d6f0ca2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Описать человека",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "dishonesty",
+        "importance": 2
+      },
+      {
+        "lemma": "honesty",
+        "importance": 2
+      },
+      {
+        "lemma": "kindness",
+        "importance": 2
+      },
+      {
+        "lemma": "caring",
+        "importance": 2
+      },
+      {
+        "lemma": "confident",
+        "importance": 2
+      },
+      {
+        "lemma": "dishonest",
+        "importance": 2
+      },
+      {
+        "lemma": "generous",
+        "importance": 2
+      },
+      {
+        "lemma": "honest",
+        "importance": 2
+      },
+      {
+        "lemma": "impatient",
+        "importance": 2
+      },
+      {
+        "lemma": "insensitive",
+        "importance": 2
+      },
+      {
+        "lemma": "kindly",
+        "importance": 2
+      },
+      {
+        "lemma": "self-confident",
+        "importance": 2
+      },
+      {
+        "lemma": "sensitive",
+        "importance": 2
+      },
+      {
+        "lemma": "stubborn",
+        "importance": 2
+      },
+      {
+        "lemma": "unkind",
+        "importance": 2
+      },
+      {
+        "lemma": "confidently",
+        "importance": 2
+      },
+      {
+        "lemma": "generously",
+        "importance": 2
+      },
+      {
+        "lemma": "honestly",
+        "importance": 2
+      },
+      {
+        "lemma": "impatiently",
+        "importance": 2
+      },
+      {
+        "lemma": "insensitively",
+        "importance": 2
+      },
+      {
+        "lemma": "patiently",
+        "importance": 2
+      },
+      {
+        "lemma": "stubbornly",
         "importance": 2
       }
     ]
@@ -2463,7 +4019,8 @@
     "title": "Семья",
     "categories": [
       "firstSteps",
-      "homeLife"
+      "homeLife",
+      "emotionsRelationships"
     ],
     "type": "official",
     "importance": 2,
@@ -3583,7 +5140,8 @@
     "nativeLang": "ru",
     "title": "Самочувствие",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "emotionsRelationships"
     ],
     "type": "official",
     "importance": 1,
@@ -6101,7 +7659,8 @@
     "nativeLang": "ru",
     "title": "Собеседование в IT",
     "categories": [
-      "itTech"
+      "itTech",
+      "businessCareer"
     ],
     "type": "official",
     "importance": 2,
@@ -6593,7 +8152,8 @@
     "nativeLang": "ru",
     "title": "Эмоции героев",
     "categories": [
-      "moviesBooks"
+      "moviesBooks",
+      "emotionsRelationships"
     ],
     "type": "official",
     "importance": 2,
@@ -6792,7 +8352,8 @@
     "nativeLang": "ru",
     "title": "Книжный магазин и библиотека",
     "categories": [
-      "moviesBooks"
+      "moviesBooks",
+      "study"
     ],
     "type": "official",
     "importance": 2,
@@ -7635,10 +9196,6 @@
         "importance": 2
       },
       {
-        "lemma": "achievement",
-        "importance": 2
-      },
-      {
         "lemma": "acid",
         "importance": 2
       },
@@ -7719,19 +9276,11 @@
         "importance": 2
       },
       {
-        "lemma": "advancement",
-        "importance": 2
-      },
-      {
         "lemma": "advantage",
         "importance": 2
       },
       {
         "lemma": "advent",
-        "importance": 2
-      },
-      {
-        "lemma": "adventure",
         "importance": 2
       },
       {
@@ -7779,10 +9328,6 @@
         "importance": 2
       },
       {
-        "lemma": "affection",
-        "importance": 2
-      },
-      {
         "lemma": "agency",
         "importance": 2
       },
@@ -7823,15 +9368,7 @@
         "importance": 2
       },
       {
-        "lemma": "aircrew",
-        "importance": 2
-      },
-      {
         "lemma": "airline",
-        "importance": 2
-      },
-      {
-        "lemma": "airplane",
         "importance": 2
       },
       {
@@ -8091,14 +9628,6 @@
         "importance": 2
       },
       {
-        "lemma": "application",
-        "importance": 2
-      },
-      {
-        "lemma": "appreciation",
-        "importance": 2
-      },
-      {
         "lemma": "apprentice",
         "importance": 2
       },
@@ -8183,10 +9712,6 @@
         "importance": 2
       },
       {
-        "lemma": "arrival",
-        "importance": 2
-      },
-      {
         "lemma": "arrow",
         "importance": 2
       },
@@ -8236,10 +9761,6 @@
       },
       {
         "lemma": "assessment",
-        "importance": 2
-      },
-      {
-        "lemma": "assignment",
         "importance": 2
       },
       {
@@ -8316,10 +9837,6 @@
       },
       {
         "lemma": "attitude",
-        "importance": 2
-      },
-      {
-        "lemma": "attraction",
         "importance": 2
       },
       {
@@ -8408,10 +9925,6 @@
       },
       {
         "lemma": "badminton",
-        "importance": 2
-      },
-      {
-        "lemma": "baggage",
         "importance": 2
       },
       {
@@ -8543,10 +10056,6 @@
         "importance": 2
       },
       {
-        "lemma": "beach",
-        "importance": 2
-      },
-      {
         "lemma": "beagle",
         "importance": 2
       },
@@ -8639,19 +10148,11 @@
         "importance": 2
       },
       {
-        "lemma": "benefit",
-        "importance": 2
-      },
-      {
         "lemma": "benevolence",
         "importance": 2
       },
       {
         "lemma": "berry",
-        "importance": 2
-      },
-      {
-        "lemma": "bestseller",
         "importance": 2
       },
       {
@@ -8679,15 +10180,7 @@
         "importance": 2
       },
       {
-        "lemma": "biochemistry",
-        "importance": 2
-      },
-      {
         "lemma": "biography",
-        "importance": 2
-      },
-      {
-        "lemma": "biology",
         "importance": 2
       },
       {
@@ -8827,10 +10320,6 @@
         "importance": 2
       },
       {
-        "lemma": "bonus",
-        "importance": 2
-      },
-      {
         "lemma": "booklet",
         "importance": 2
       },
@@ -8848,10 +10337,6 @@
       },
       {
         "lemma": "booth",
-        "importance": 2
-      },
-      {
-        "lemma": "border",
         "importance": 2
       },
       {
@@ -8888,10 +10373,6 @@
       },
       {
         "lemma": "boxing",
-        "importance": 2
-      },
-      {
-        "lemma": "boyfriend",
         "importance": 2
       },
       {
@@ -8944,10 +10425,6 @@
       },
       {
         "lemma": "breakthrough",
-        "importance": 2
-      },
-      {
-        "lemma": "breakup",
         "importance": 2
       },
       {
@@ -9039,10 +10516,6 @@
         "importance": 2
       },
       {
-        "lemma": "budget",
-        "importance": 2
-      },
-      {
         "lemma": "buffer",
         "importance": 2
       },
@@ -9115,18 +10588,6 @@
         "importance": 2
       },
       {
-        "lemma": "business",
-        "importance": 2
-      },
-      {
-        "lemma": "businessman",
-        "importance": 2
-      },
-      {
-        "lemma": "businesswoman",
-        "importance": 2
-      },
-      {
         "lemma": "butcher",
         "importance": 2
       },
@@ -9152,10 +10613,6 @@
       },
       {
         "lemma": "cabbage",
-        "importance": 2
-      },
-      {
-        "lemma": "cabin",
         "importance": 2
       },
       {
@@ -9191,10 +10648,6 @@
         "importance": 2
       },
       {
-        "lemma": "calmness",
-        "importance": 2
-      },
-      {
         "lemma": "calorie",
         "importance": 2
       },
@@ -9204,10 +10657,6 @@
       },
       {
         "lemma": "campaign",
-        "importance": 2
-      },
-      {
-        "lemma": "campus",
         "importance": 2
       },
       {
@@ -9299,10 +10748,6 @@
         "importance": 2
       },
       {
-        "lemma": "career",
-        "importance": 2
-      },
-      {
         "lemma": "carelessness",
         "importance": 2
       },
@@ -9347,10 +10792,6 @@
         "importance": 2
       },
       {
-        "lemma": "castle",
-        "importance": 2
-      },
-      {
         "lemma": "catalog",
         "importance": 2
       },
@@ -9376,10 +10817,6 @@
       },
       {
         "lemma": "catering",
-        "importance": 2
-      },
-      {
-        "lemma": "cathedral",
         "importance": 2
       },
       {
@@ -9523,10 +10960,6 @@
         "importance": 2
       },
       {
-        "lemma": "check-in desk",
-        "importance": 2
-      },
-      {
         "lemma": "checkout",
         "importance": 2
       },
@@ -9540,10 +10973,6 @@
       },
       {
         "lemma": "chemist",
-        "importance": 2
-      },
-      {
-        "lemma": "chemistry",
         "importance": 2
       },
       {
@@ -9663,10 +11092,6 @@
         "importance": 2
       },
       {
-        "lemma": "citation",
-        "importance": 2
-      },
-      {
         "lemma": "city",
         "importance": 2
       },
@@ -9744,10 +11169,6 @@
       },
       {
         "lemma": "cloister",
-        "importance": 2
-      },
-      {
-        "lemma": "closeness",
         "importance": 2
       },
       {
@@ -9839,10 +11260,6 @@
         "importance": 2
       },
       {
-        "lemma": "college",
-        "importance": 2
-      },
-      {
         "lemma": "collider",
         "importance": 2
       },
@@ -9888,10 +11305,6 @@
       },
       {
         "lemma": "comet",
-        "importance": 2
-      },
-      {
-        "lemma": "comfort",
         "importance": 2
       },
       {
@@ -9980,10 +11393,6 @@
       },
       {
         "lemma": "compliance",
-        "importance": 2
-      },
-      {
-        "lemma": "compliment",
         "importance": 2
       },
       {
@@ -10091,15 +11500,7 @@
         "importance": 2
       },
       {
-        "lemma": "confidence",
-        "importance": 2
-      },
-      {
         "lemma": "confinement",
-        "importance": 2
-      },
-      {
-        "lemma": "confirmation",
         "importance": 2
       },
       {
@@ -10124,10 +11525,6 @@
       },
       {
         "lemma": "conjunction",
-        "importance": 2
-      },
-      {
-        "lemma": "connection",
         "importance": 2
       },
       {
@@ -10227,10 +11624,6 @@
         "importance": 2
       },
       {
-        "lemma": "content",
-        "importance": 2
-      },
-      {
         "lemma": "contest",
         "importance": 2
       },
@@ -10244,10 +11637,6 @@
       },
       {
         "lemma": "continuity",
-        "importance": 2
-      },
-      {
-        "lemma": "contract",
         "importance": 2
       },
       {
@@ -10431,10 +11820,6 @@
         "importance": 2
       },
       {
-        "lemma": "couple",
-        "importance": 2
-      },
-      {
         "lemma": "courage",
         "importance": 2
       },
@@ -10511,10 +11896,6 @@
         "importance": 2
       },
       {
-        "lemma": "crew",
-        "importance": 2
-      },
-      {
         "lemma": "cricket",
         "importance": 2
       },
@@ -10572,10 +11953,6 @@
       },
       {
         "lemma": "crumb",
-        "importance": 2
-      },
-      {
-        "lemma": "crush",
         "importance": 2
       },
       {
@@ -10795,10 +12172,6 @@
         "importance": 2
       },
       {
-        "lemma": "decrease",
-        "importance": 2
-      },
-      {
         "lemma": "dedication",
         "importance": 2
       },
@@ -10840,14 +12213,6 @@
       },
       {
         "lemma": "degradation",
-        "importance": 2
-      },
-      {
-        "lemma": "degree",
-        "importance": 2
-      },
-      {
-        "lemma": "delegate",
         "importance": 2
       },
       {
@@ -10900,14 +12265,6 @@
       },
       {
         "lemma": "denunciation",
-        "importance": 2
-      },
-      {
-        "lemma": "department",
-        "importance": 2
-      },
-      {
-        "lemma": "departure",
         "importance": 2
       },
       {
@@ -10964,10 +12321,6 @@
       },
       {
         "lemma": "desperation",
-        "importance": 2
-      },
-      {
-        "lemma": "destination",
         "importance": 2
       },
       {
@@ -11064,10 +12417,6 @@
       },
       {
         "lemma": "difference",
-        "importance": 2
-      },
-      {
-        "lemma": "difficulty",
         "importance": 2
       },
       {
@@ -11187,10 +12536,6 @@
         "importance": 2
       },
       {
-        "lemma": "dishonesty",
-        "importance": 2
-      },
-      {
         "lemma": "disillusionment",
         "importance": 2
       },
@@ -11279,10 +12624,6 @@
         "importance": 2
       },
       {
-        "lemma": "distraction",
-        "importance": 2
-      },
-      {
         "lemma": "distribution",
         "importance": 2
       },
@@ -11320,10 +12661,6 @@
       },
       {
         "lemma": "division",
-        "importance": 2
-      },
-      {
-        "lemma": "divorce",
         "importance": 2
       },
       {
@@ -11387,14 +12724,6 @@
         "importance": 2
       },
       {
-        "lemma": "dorm",
-        "importance": 2
-      },
-      {
-        "lemma": "dormitory",
-        "importance": 2
-      },
-      {
         "lemma": "dot",
         "importance": 2
       },
@@ -11416,10 +12745,6 @@
       },
       {
         "lemma": "drabness",
-        "importance": 2
-      },
-      {
-        "lemma": "draft",
         "importance": 2
       },
       {
@@ -11631,10 +12956,6 @@
         "importance": 2
       },
       {
-        "lemma": "education",
-        "importance": 2
-      },
-      {
         "lemma": "educator",
         "importance": 2
       },
@@ -11755,10 +13076,6 @@
         "importance": 2
       },
       {
-        "lemma": "employer",
-        "importance": 2
-      },
-      {
         "lemma": "employment",
         "importance": 2
       },
@@ -11780,10 +13097,6 @@
       },
       {
         "lemma": "encounter",
-        "importance": 2
-      },
-      {
-        "lemma": "encouragement",
         "importance": 2
       },
       {
@@ -11855,10 +13168,6 @@
         "importance": 2
       },
       {
-        "lemma": "entrepreneur",
-        "importance": 2
-      },
-      {
         "lemma": "entry",
         "importance": 2
       },
@@ -11868,10 +13177,6 @@
       },
       {
         "lemma": "environmentalist",
-        "importance": 2
-      },
-      {
-        "lemma": "envy",
         "importance": 2
       },
       {
@@ -11916,10 +13221,6 @@
       },
       {
         "lemma": "escape",
-        "importance": 2
-      },
-      {
-        "lemma": "essay",
         "importance": 2
       },
       {
@@ -11971,10 +13272,6 @@
         "importance": 2
       },
       {
-        "lemma": "evidence",
-        "importance": 2
-      },
-      {
         "lemma": "evolution",
         "importance": 2
       },
@@ -11995,19 +13292,7 @@
         "importance": 2
       },
       {
-        "lemma": "exam",
-        "importance": 2
-      },
-      {
-        "lemma": "examination",
-        "importance": 2
-      },
-      {
         "lemma": "examinee",
-        "importance": 2
-      },
-      {
-        "lemma": "examiner",
         "importance": 2
       },
       {
@@ -12032,10 +13317,6 @@
       },
       {
         "lemma": "exclusion",
-        "importance": 2
-      },
-      {
-        "lemma": "excursion",
         "importance": 2
       },
       {
@@ -12195,14 +13476,6 @@
         "importance": 2
       },
       {
-        "lemma": "faculty",
-        "importance": 2
-      },
-      {
-        "lemma": "failure",
-        "importance": 2
-      },
-      {
         "lemma": "fairy",
         "importance": 2
       },
@@ -12323,15 +13596,7 @@
         "importance": 2
       },
       {
-        "lemma": "fight",
-        "importance": 2
-      },
-      {
         "lemma": "fighter",
-        "importance": 2
-      },
-      {
-        "lemma": "fighting",
         "importance": 2
       },
       {
@@ -12483,10 +13748,6 @@
         "importance": 2
       },
       {
-        "lemma": "fluency",
-        "importance": 2
-      },
-      {
         "lemma": "flute",
         "importance": 2
       },
@@ -12556,10 +13817,6 @@
       },
       {
         "lemma": "foreman",
-        "importance": 2
-      },
-      {
-        "lemma": "forest",
         "importance": 2
       },
       {
@@ -12647,22 +13904,6 @@
         "importance": 2
       },
       {
-        "lemma": "freshman",
-        "importance": 2
-      },
-      {
-        "lemma": "friend",
-        "importance": 2
-      },
-      {
-        "lemma": "friendliness",
-        "importance": 2
-      },
-      {
-        "lemma": "friendship",
-        "importance": 2
-      },
-      {
         "lemma": "frigate",
         "importance": 2
       },
@@ -12680,10 +13921,6 @@
       },
       {
         "lemma": "fruition",
-        "importance": 2
-      },
-      {
-        "lemma": "frustration",
         "importance": 2
       },
       {
@@ -12831,10 +14068,6 @@
         "importance": 2
       },
       {
-        "lemma": "geography",
-        "importance": 2
-      },
-      {
         "lemma": "geology",
         "importance": 2
       },
@@ -12876,10 +14109,6 @@
       },
       {
         "lemma": "girl",
-        "importance": 2
-      },
-      {
-        "lemma": "girlfriend",
         "importance": 2
       },
       {
@@ -13015,10 +14244,6 @@
         "importance": 2
       },
       {
-        "lemma": "grade",
-        "importance": 2
-      },
-      {
         "lemma": "graduation",
         "importance": 2
       },
@@ -13028,10 +14253,6 @@
       },
       {
         "lemma": "gram",
-        "importance": 2
-      },
-      {
-        "lemma": "grammar",
         "importance": 2
       },
       {
@@ -13083,10 +14304,6 @@
         "importance": 2
       },
       {
-        "lemma": "gratitude",
-        "importance": 2
-      },
-      {
         "lemma": "grave",
         "importance": 2
       },
@@ -13115,10 +14332,6 @@
         "importance": 2
       },
       {
-        "lemma": "grief",
-        "importance": 2
-      },
-      {
         "lemma": "grin",
         "importance": 2
       },
@@ -13139,10 +14352,6 @@
         "importance": 2
       },
       {
-        "lemma": "grouping",
-        "importance": 2
-      },
-      {
         "lemma": "guard",
         "importance": 2
       },
@@ -13155,19 +14364,7 @@
         "importance": 2
       },
       {
-        "lemma": "guide",
-        "importance": 2
-      },
-      {
-        "lemma": "guidebook",
-        "importance": 2
-      },
-      {
         "lemma": "guideline",
-        "importance": 2
-      },
-      {
-        "lemma": "guilt",
         "importance": 2
       },
       {
@@ -13260,10 +14457,6 @@
       },
       {
         "lemma": "handshake",
-        "importance": 2
-      },
-      {
-        "lemma": "handwriting",
         "importance": 2
       },
       {
@@ -13475,10 +14668,6 @@
         "importance": 2
       },
       {
-        "lemma": "history",
-        "importance": 2
-      },
-      {
         "lemma": "HIV",
         "importance": 2
       },
@@ -13507,15 +14696,7 @@
         "importance": 2
       },
       {
-        "lemma": "homework",
-        "importance": 2
-      },
-      {
         "lemma": "hone",
-        "importance": 2
-      },
-      {
-        "lemma": "honesty",
         "importance": 2
       },
       {
@@ -13560,10 +14741,6 @@
       },
       {
         "lemma": "hospice",
-        "importance": 2
-      },
-      {
-        "lemma": "hostel",
         "importance": 2
       },
       {
@@ -13792,10 +14969,6 @@
       },
       {
         "lemma": "impresario",
-        "importance": 2
-      },
-      {
-        "lemma": "impression",
         "importance": 2
       },
       {
@@ -14131,14 +15304,6 @@
         "importance": 2
       },
       {
-        "lemma": "investment",
-        "importance": 2
-      },
-      {
-        "lemma": "investor",
-        "importance": 2
-      },
-      {
         "lemma": "involvement",
         "importance": 2
       },
@@ -14172,10 +15337,6 @@
       },
       {
         "lemma": "IT",
-        "importance": 2
-      },
-      {
-        "lemma": "itinerary",
         "importance": 2
       },
       {
@@ -14347,19 +15508,11 @@
         "importance": 2
       },
       {
-        "lemma": "kindness",
-        "importance": 2
-      },
-      {
         "lemma": "king",
         "importance": 2
       },
       {
         "lemma": "kingdom",
-        "importance": 2
-      },
-      {
-        "lemma": "kiss",
         "importance": 2
       },
       {
@@ -14416,10 +15569,6 @@
       },
       {
         "lemma": "lance",
-        "importance": 2
-      },
-      {
-        "lemma": "landing",
         "importance": 2
       },
       {
@@ -14516,14 +15665,6 @@
       },
       {
         "lemma": "leavening",
-        "importance": 2
-      },
-      {
-        "lemma": "lecture",
-        "importance": 2
-      },
-      {
-        "lemma": "lecturer",
         "importance": 2
       },
       {
@@ -14631,14 +15772,6 @@
         "importance": 2
       },
       {
-        "lemma": "limit",
-        "importance": 2
-      },
-      {
-        "lemma": "limitation",
-        "importance": 2
-      },
-      {
         "lemma": "liner",
         "importance": 2
       },
@@ -14655,10 +15788,6 @@
         "importance": 2
       },
       {
-        "lemma": "literature",
-        "importance": 2
-      },
-      {
         "lemma": "litter",
         "importance": 2
       },
@@ -14672,10 +15801,6 @@
       },
       {
         "lemma": "loan",
-        "importance": 2
-      },
-      {
-        "lemma": "lobby",
         "importance": 2
       },
       {
@@ -14715,10 +15840,6 @@
         "importance": 2
       },
       {
-        "lemma": "loss",
-        "importance": 2
-      },
-      {
         "lemma": "lottery",
         "importance": 2
       },
@@ -14727,19 +15848,7 @@
         "importance": 2
       },
       {
-        "lemma": "love",
-        "importance": 2
-      },
-      {
-        "lemma": "lover",
-        "importance": 2
-      },
-      {
         "lemma": "lowland",
-        "importance": 2
-      },
-      {
-        "lemma": "loyalty",
         "importance": 2
       },
       {
@@ -14851,10 +15960,6 @@
         "importance": 2
       },
       {
-        "lemma": "management",
-        "importance": 2
-      },
-      {
         "lemma": "maneuver",
         "importance": 2
       },
@@ -14915,10 +16020,6 @@
         "importance": 2
       },
       {
-        "lemma": "mark",
-        "importance": 2
-      },
-      {
         "lemma": "mark-up",
         "importance": 2
       },
@@ -14971,15 +16072,7 @@
         "importance": 2
       },
       {
-        "lemma": "math",
-        "importance": 2
-      },
-      {
         "lemma": "mathematician",
-        "importance": 2
-      },
-      {
-        "lemma": "mathematics",
         "importance": 2
       },
       {
@@ -15072,10 +16165,6 @@
       },
       {
         "lemma": "menace",
-        "importance": 2
-      },
-      {
-        "lemma": "mentor",
         "importance": 2
       },
       {
@@ -15251,10 +16340,6 @@
         "importance": 2
       },
       {
-        "lemma": "mission",
-        "importance": 2
-      },
-      {
         "lemma": "mist",
         "importance": 2
       },
@@ -15403,10 +16488,6 @@
         "importance": 2
       },
       {
-        "lemma": "motivation",
-        "importance": 2
-      },
-      {
         "lemma": "motive",
         "importance": 2
       },
@@ -15475,10 +16556,6 @@
         "importance": 2
       },
       {
-        "lemma": "museum",
-        "importance": 2
-      },
-      {
         "lemma": "mushroom",
         "importance": 2
       },
@@ -15543,15 +16620,7 @@
         "importance": 2
       },
       {
-        "lemma": "native speaker",
-        "importance": 2
-      },
-      {
         "lemma": "naturalness",
-        "importance": 2
-      },
-      {
-        "lemma": "nature",
         "importance": 2
       },
       {
@@ -15572,10 +16641,6 @@
       },
       {
         "lemma": "neglect",
-        "importance": 2
-      },
-      {
-        "lemma": "negotiation",
         "importance": 2
       },
       {
@@ -15667,10 +16732,6 @@
         "importance": 2
       },
       {
-        "lemma": "norms",
-        "importance": 2
-      },
-      {
         "lemma": "nostalgia",
         "importance": 2
       },
@@ -15715,10 +16776,6 @@
         "importance": 2
       },
       {
-        "lemma": "number",
-        "importance": 2
-      },
-      {
         "lemma": "nursery",
         "importance": 2
       },
@@ -15759,10 +16816,6 @@
         "importance": 2
       },
       {
-        "lemma": "objective",
-        "importance": 2
-      },
-      {
         "lemma": "obligation",
         "importance": 2
       },
@@ -15784,10 +16837,6 @@
       },
       {
         "lemma": "occupant",
-        "importance": 2
-      },
-      {
-        "lemma": "ocean",
         "importance": 2
       },
       {
@@ -15840,10 +16889,6 @@
       },
       {
         "lemma": "opera",
-        "importance": 2
-      },
-      {
-        "lemma": "opportunity",
         "importance": 2
       },
       {
@@ -16111,10 +17156,6 @@
         "importance": 2
       },
       {
-        "lemma": "paragraph",
-        "importance": 2
-      },
-      {
         "lemma": "paralysis",
         "importance": 2
       },
@@ -16156,10 +17197,6 @@
       },
       {
         "lemma": "partisan",
-        "importance": 2
-      },
-      {
-        "lemma": "partnership",
         "importance": 2
       },
       {
@@ -16251,10 +17288,6 @@
         "importance": 2
       },
       {
-        "lemma": "peak",
-        "importance": 2
-      },
-      {
         "lemma": "pear",
         "importance": 2
       },
@@ -16312,10 +17345,6 @@
       },
       {
         "lemma": "penny",
-        "importance": 2
-      },
-      {
-        "lemma": "pension",
         "importance": 2
       },
       {
@@ -16459,10 +17488,6 @@
         "importance": 2
       },
       {
-        "lemma": "physics",
-        "importance": 2
-      },
-      {
         "lemma": "physique",
         "importance": 2
       },
@@ -16547,10 +17572,6 @@
         "importance": 2
       },
       {
-        "lemma": "pitch",
-        "importance": 2
-      },
-      {
         "lemma": "pity",
         "importance": 2
       },
@@ -16560,10 +17581,6 @@
       },
       {
         "lemma": "plague",
-        "importance": 2
-      },
-      {
-        "lemma": "plane",
         "importance": 2
       },
       {
@@ -16843,10 +17860,6 @@
         "importance": 2
       },
       {
-        "lemma": "practice",
-        "importance": 2
-      },
-      {
         "lemma": "prance",
         "importance": 2
       },
@@ -16935,10 +17948,6 @@
         "importance": 2
       },
       {
-        "lemma": "presenter",
-        "importance": 2
-      },
-      {
         "lemma": "preservation",
         "importance": 2
       },
@@ -16980,10 +17989,6 @@
       },
       {
         "lemma": "prick",
-        "importance": 2
-      },
-      {
-        "lemma": "pride",
         "importance": 2
       },
       {
@@ -17059,14 +18064,6 @@
         "importance": 2
       },
       {
-        "lemma": "professor",
-        "importance": 2
-      },
-      {
-        "lemma": "profit",
-        "importance": 2
-      },
-      {
         "lemma": "profitability",
         "importance": 2
       },
@@ -17100,10 +18097,6 @@
       },
       {
         "lemma": "pronoun",
-        "importance": 2
-      },
-      {
-        "lemma": "pronunciation",
         "importance": 2
       },
       {
@@ -17295,10 +18288,6 @@
         "importance": 2
       },
       {
-        "lemma": "qualification",
-        "importance": 2
-      },
-      {
         "lemma": "quality",
         "importance": 2
       },
@@ -17312,10 +18301,6 @@
       },
       {
         "lemma": "quarantine",
-        "importance": 2
-      },
-      {
-        "lemma": "quarrel",
         "importance": 2
       },
       {
@@ -17360,14 +18345,6 @@
       },
       {
         "lemma": "quiver",
-        "importance": 2
-      },
-      {
-        "lemma": "quiz",
-        "importance": 2
-      },
-      {
-        "lemma": "quotation",
         "importance": 2
       },
       {
@@ -17444,10 +18421,6 @@
       },
       {
         "lemma": "rainfall",
-        "importance": 2
-      },
-      {
-        "lemma": "rainforest",
         "importance": 2
       },
       {
@@ -17563,10 +18536,6 @@
         "importance": 2
       },
       {
-        "lemma": "reception",
-        "importance": 2
-      },
-      {
         "lemma": "recess",
         "importance": 2
       },
@@ -17588,10 +18557,6 @@
       },
       {
         "lemma": "recollection",
-        "importance": 2
-      },
-      {
-        "lemma": "reconciliation",
         "importance": 2
       },
       {
@@ -17632,10 +18597,6 @@
       },
       {
         "lemma": "reef",
-        "importance": 2
-      },
-      {
-        "lemma": "reference",
         "importance": 2
       },
       {
@@ -17727,10 +18688,6 @@
         "importance": 2
       },
       {
-        "lemma": "relationship",
-        "importance": 2
-      },
-      {
         "lemma": "relativity",
         "importance": 2
       },
@@ -17744,10 +18701,6 @@
       },
       {
         "lemma": "relic",
-        "importance": 2
-      },
-      {
-        "lemma": "relief",
         "importance": 2
       },
       {
@@ -17835,10 +18788,6 @@
         "importance": 2
       },
       {
-        "lemma": "research",
-        "importance": 2
-      },
-      {
         "lemma": "researcher",
         "importance": 2
       },
@@ -17871,10 +18820,6 @@
         "importance": 2
       },
       {
-        "lemma": "respect",
-        "importance": 2
-      },
-      {
         "lemma": "respiration",
         "importance": 2
       },
@@ -17884,10 +18829,6 @@
       },
       {
         "lemma": "response",
-        "importance": 2
-      },
-      {
-        "lemma": "responsibility",
         "importance": 2
       },
       {
@@ -17960,10 +18901,6 @@
       },
       {
         "lemma": "reverence",
-        "importance": 2
-      },
-      {
-        "lemma": "revision",
         "importance": 2
       },
       {
@@ -18056,10 +18993,6 @@
       },
       {
         "lemma": "rocket",
-        "importance": 2
-      },
-      {
-        "lemma": "role",
         "importance": 2
       },
       {
@@ -18219,10 +19152,6 @@
         "importance": 2
       },
       {
-        "lemma": "sand",
-        "importance": 2
-      },
-      {
         "lemma": "sandstone",
         "importance": 2
       },
@@ -18307,10 +19236,6 @@
         "importance": 2
       },
       {
-        "lemma": "scholarship",
-        "importance": 2
-      },
-      {
         "lemma": "scholasticism",
         "importance": 2
       },
@@ -18332,10 +19257,6 @@
       },
       {
         "lemma": "schoolwork",
-        "importance": 2
-      },
-      {
-        "lemma": "science",
         "importance": 2
       },
       {
@@ -18399,31 +19320,11 @@
         "importance": 2
       },
       {
-        "lemma": "sea",
-        "importance": 2
-      },
-      {
-        "lemma": "seafood",
-        "importance": 2
-      },
-      {
         "lemma": "seal",
         "importance": 2
       },
       {
         "lemma": "search",
-        "importance": 2
-      },
-      {
-        "lemma": "seaside",
-        "importance": 2
-      },
-      {
-        "lemma": "seawater",
-        "importance": 2
-      },
-      {
-        "lemma": "seaweed",
         "importance": 2
       },
       {
@@ -18475,19 +19376,7 @@
         "importance": 2
       },
       {
-        "lemma": "self-confidence",
-        "importance": 2
-      },
-      {
         "lemma": "self-worth",
-        "importance": 2
-      },
-      {
-        "lemma": "seller",
-        "importance": 2
-      },
-      {
-        "lemma": "semester",
         "importance": 2
       },
       {
@@ -18520,10 +19409,6 @@
       },
       {
         "lemma": "sentiment",
-        "importance": 2
-      },
-      {
-        "lemma": "separation",
         "importance": 2
       },
       {
@@ -18783,10 +19668,6 @@
         "importance": 2
       },
       {
-        "lemma": "slide",
-        "importance": 2
-      },
-      {
         "lemma": "slight",
         "importance": 2
       },
@@ -18999,10 +19880,6 @@
         "importance": 2
       },
       {
-        "lemma": "speaker",
-        "importance": 2
-      },
-      {
         "lemma": "specialist",
         "importance": 2
       },
@@ -19032,10 +19909,6 @@
       },
       {
         "lemma": "speculation",
-        "importance": 2
-      },
-      {
-        "lemma": "speech",
         "importance": 2
       },
       {
@@ -19168,10 +20041,6 @@
       },
       {
         "lemma": "staff",
-        "importance": 2
-      },
-      {
-        "lemma": "stage",
         "importance": 2
       },
       {
@@ -19339,10 +20208,6 @@
         "importance": 2
       },
       {
-        "lemma": "strategy",
-        "importance": 2
-      },
-      {
         "lemma": "stratosphere",
         "importance": 2
       },
@@ -19380,10 +20245,6 @@
       },
       {
         "lemma": "struggle",
-        "importance": 2
-      },
-      {
-        "lemma": "student",
         "importance": 2
       },
       {
@@ -19551,15 +20412,7 @@
         "importance": 2
       },
       {
-        "lemma": "supplier",
-        "importance": 2
-      },
-      {
         "lemma": "supply",
-        "importance": 2
-      },
-      {
-        "lemma": "supporter",
         "importance": 2
       },
       {
@@ -19659,10 +20512,6 @@
         "importance": 2
       },
       {
-        "lemma": "sympathy",
-        "importance": 2
-      },
-      {
         "lemma": "symphony",
         "importance": 2
       },
@@ -19719,10 +20568,6 @@
         "importance": 2
       },
       {
-        "lemma": "takeoff",
-        "importance": 2
-      },
-      {
         "lemma": "tale",
         "importance": 2
       },
@@ -19748,10 +20593,6 @@
       },
       {
         "lemma": "tape",
-        "importance": 2
-      },
-      {
-        "lemma": "target",
         "importance": 2
       },
       {
@@ -19908,10 +20749,6 @@
       },
       {
         "lemma": "thermometer",
-        "importance": 2
-      },
-      {
-        "lemma": "thesis",
         "importance": 2
       },
       {
@@ -20079,22 +20916,6 @@
         "importance": 2
       },
       {
-        "lemma": "toughness",
-        "importance": 2
-      },
-      {
-        "lemma": "tour guide",
-        "importance": 2
-      },
-      {
-        "lemma": "tourism",
-        "importance": 2
-      },
-      {
-        "lemma": "tourist",
-        "importance": 2
-      },
-      {
         "lemma": "town",
         "importance": 2
       },
@@ -20227,10 +21048,6 @@
         "importance": 2
       },
       {
-        "lemma": "trend",
-        "importance": 2
-      },
-      {
         "lemma": "trial",
         "importance": 2
       },
@@ -20260,10 +21077,6 @@
       },
       {
         "lemma": "trio",
-        "importance": 2
-      },
-      {
-        "lemma": "trip",
         "importance": 2
       },
       {
@@ -20347,10 +21160,6 @@
         "importance": 2
       },
       {
-        "lemma": "turbulence",
-        "importance": 2
-      },
-      {
         "lemma": "turkey",
         "importance": 2
       },
@@ -20368,10 +21177,6 @@
       },
       {
         "lemma": "turtle",
-        "importance": 2
-      },
-      {
-        "lemma": "tutor",
         "importance": 2
       },
       {
@@ -20408,10 +21213,6 @@
       },
       {
         "lemma": "tyrant",
-        "importance": 2
-      },
-      {
-        "lemma": "undergraduate",
         "importance": 2
       },
       {
@@ -20456,10 +21257,6 @@
       },
       {
         "lemma": "universe",
-        "importance": 2
-      },
-      {
-        "lemma": "university",
         "importance": 2
       },
       {
@@ -20516,10 +21313,6 @@
       },
       {
         "lemma": "valentine",
-        "importance": 2
-      },
-      {
-        "lemma": "valley",
         "importance": 2
       },
       {
@@ -20711,10 +21504,6 @@
         "importance": 2
       },
       {
-        "lemma": "vocabulary",
-        "importance": 2
-      },
-      {
         "lemma": "vocalist",
         "importance": 2
       },
@@ -20760,10 +21549,6 @@
       },
       {
         "lemma": "voyage",
-        "importance": 2
-      },
-      {
-        "lemma": "wage",
         "importance": 2
       },
       {
@@ -20832,10 +21617,6 @@
       },
       {
         "lemma": "waterfront",
-        "importance": 2
-      },
-      {
-        "lemma": "wave",
         "importance": 2
       },
       {
@@ -20939,10 +21720,6 @@
         "importance": 2
       },
       {
-        "lemma": "wildlife",
-        "importance": 2
-      },
-      {
         "lemma": "willingness",
         "importance": 2
       },
@@ -21039,10 +21816,6 @@
         "importance": 2
       },
       {
-        "lemma": "worry",
-        "importance": 2
-      },
-      {
         "lemma": "worship",
         "importance": 2
       },
@@ -21052,10 +21825,6 @@
       },
       {
         "lemma": "wristwatch",
-        "importance": 2
-      },
-      {
-        "lemma": "writing",
         "importance": 2
       },
       {
@@ -21211,10 +21980,6 @@
         "importance": 2
       },
       {
-        "lemma": "advance",
-        "importance": 2
-      },
-      {
         "lemma": "advertise",
         "importance": 2
       },
@@ -21311,15 +22076,7 @@
         "importance": 2
       },
       {
-        "lemma": "apply",
-        "importance": 2
-      },
-      {
         "lemma": "appoint",
-        "importance": 2
-      },
-      {
-        "lemma": "appreciate",
         "importance": 2
       },
       {
@@ -21663,10 +22420,6 @@
         "importance": 2
       },
       {
-        "lemma": "claim",
-        "importance": 2
-      },
-      {
         "lemma": "clap",
         "importance": 2
       },
@@ -21700,10 +22453,6 @@
       },
       {
         "lemma": "coincide",
-        "importance": 2
-      },
-      {
-        "lemma": "collaborate",
         "importance": 2
       },
       {
@@ -21811,19 +22560,11 @@
         "importance": 2
       },
       {
-        "lemma": "confirm",
-        "importance": 2
-      },
-      {
         "lemma": "conform",
         "importance": 2
       },
       {
         "lemma": "confront",
-        "importance": 2
-      },
-      {
-        "lemma": "congratulate",
         "importance": 2
       },
       {
@@ -21919,10 +22660,6 @@
         "importance": 2
       },
       {
-        "lemma": "correspond",
-        "importance": 2
-      },
-      {
         "lemma": "cosset",
         "importance": 2
       },
@@ -21996,10 +22733,6 @@
       },
       {
         "lemma": "decide",
-        "importance": 2
-      },
-      {
-        "lemma": "declare",
         "importance": 2
       },
       {
@@ -22279,10 +23012,6 @@
         "importance": 2
       },
       {
-        "lemma": "divide",
-        "importance": 2
-      },
-      {
         "lemma": "dole out",
         "importance": 2
       },
@@ -22408,10 +23137,6 @@
       },
       {
         "lemma": "encompass",
-        "importance": 2
-      },
-      {
-        "lemma": "encourage",
         "importance": 2
       },
       {
@@ -22563,10 +23288,6 @@
         "importance": 2
       },
       {
-        "lemma": "explain",
-        "importance": 2
-      },
-      {
         "lemma": "explode",
         "importance": 2
       },
@@ -22600,10 +23321,6 @@
       },
       {
         "lemma": "fade",
-        "importance": 2
-      },
-      {
-        "lemma": "fail",
         "importance": 2
       },
       {
@@ -22676,10 +23393,6 @@
       },
       {
         "lemma": "flunk",
-        "importance": 2
-      },
-      {
-        "lemma": "focus",
         "importance": 2
       },
       {
@@ -22768,10 +23481,6 @@
       },
       {
         "lemma": "grab",
-        "importance": 2
-      },
-      {
-        "lemma": "graduate",
         "importance": 2
       },
       {
@@ -22975,10 +23684,6 @@
         "importance": 2
       },
       {
-        "lemma": "increase",
-        "importance": 2
-      },
-      {
         "lemma": "incur",
         "importance": 2
       },
@@ -23127,10 +23832,6 @@
         "importance": 2
       },
       {
-        "lemma": "invest",
-        "importance": 2
-      },
-      {
         "lemma": "investigate",
         "importance": 2
       },
@@ -23140,10 +23841,6 @@
       },
       {
         "lemma": "involve",
-        "importance": 2
-      },
-      {
-        "lemma": "irritate",
         "importance": 2
       },
       {
@@ -23200,10 +23897,6 @@
       },
       {
         "lemma": "laugh",
-        "importance": 2
-      },
-      {
-        "lemma": "launch",
         "importance": 2
       },
       {
@@ -23391,10 +24084,6 @@
         "importance": 2
       },
       {
-        "lemma": "motivate",
-        "importance": 2
-      },
-      {
         "lemma": "mourn",
         "importance": 2
       },
@@ -23492,10 +24181,6 @@
       },
       {
         "lemma": "outdo",
-        "importance": 2
-      },
-      {
-        "lemma": "outline",
         "importance": 2
       },
       {
@@ -23791,10 +24476,6 @@
         "importance": 2
       },
       {
-        "lemma": "promote",
-        "importance": 2
-      },
-      {
         "lemma": "pronounce",
         "importance": 2
       },
@@ -23879,10 +24560,6 @@
         "importance": 2
       },
       {
-        "lemma": "raise",
-        "importance": 2
-      },
-      {
         "lemma": "ravish",
         "importance": 2
       },
@@ -23940,10 +24617,6 @@
       },
       {
         "lemma": "recollect",
-        "importance": 2
-      },
-      {
-        "lemma": "reconcile",
         "importance": 2
       },
       {
@@ -24207,10 +24880,6 @@
         "importance": 2
       },
       {
-        "lemma": "revise",
-        "importance": 2
-      },
-      {
         "lemma": "revive",
         "importance": 2
       },
@@ -24220,10 +24889,6 @@
       },
       {
         "lemma": "revolve",
-        "importance": 2
-      },
-      {
-        "lemma": "rewrite",
         "importance": 2
       },
       {
@@ -24323,15 +24988,7 @@
         "importance": 2
       },
       {
-        "lemma": "seem",
-        "importance": 2
-      },
-      {
         "lemma": "seize",
-        "importance": 2
-      },
-      {
-        "lemma": "sell",
         "importance": 2
       },
       {
@@ -24679,14 +25336,6 @@
         "importance": 2
       },
       {
-        "lemma": "sunbathe",
-        "importance": 2
-      },
-      {
-        "lemma": "supervise",
-        "importance": 2
-      },
-      {
         "lemma": "suppose",
         "importance": 2
       },
@@ -24724,10 +25373,6 @@
       },
       {
         "lemma": "swivel",
-        "importance": 2
-      },
-      {
-        "lemma": "sympathize",
         "importance": 2
       },
       {
@@ -24839,10 +25484,6 @@
         "importance": 2
       },
       {
-        "lemma": "translate",
-        "importance": 2
-      },
-      {
         "lemma": "transmit",
         "importance": 2
       },
@@ -24852,10 +25493,6 @@
       },
       {
         "lemma": "tremble",
-        "importance": 2
-      },
-      {
-        "lemma": "trust",
         "importance": 2
       },
       {
@@ -24876,10 +25513,6 @@
       },
       {
         "lemma": "undergo",
-        "importance": 2
-      },
-      {
-        "lemma": "understand",
         "importance": 2
       },
       {
@@ -25207,10 +25840,6 @@
         "importance": 2
       },
       {
-        "lemma": "advanced",
-        "importance": 2
-      },
-      {
         "lemma": "advantageous",
         "importance": 2
       },
@@ -25232,10 +25861,6 @@
       },
       {
         "lemma": "aesthetic",
-        "importance": 2
-      },
-      {
-        "lemma": "affectionate",
         "importance": 2
       },
       {
@@ -25308,10 +25933,6 @@
       },
       {
         "lemma": "amazed",
-        "importance": 2
-      },
-      {
-        "lemma": "amazing",
         "importance": 2
       },
       {
@@ -25415,10 +26036,6 @@
         "importance": 2
       },
       {
-        "lemma": "anxious",
-        "importance": 2
-      },
-      {
         "lemma": "appalling",
         "importance": 2
       },
@@ -25483,10 +26100,6 @@
         "importance": 2
       },
       {
-        "lemma": "ashamed",
-        "importance": 2
-      },
-      {
         "lemma": "astonished",
         "importance": 2
       },
@@ -25504,10 +26117,6 @@
       },
       {
         "lemma": "atomic",
-        "importance": 2
-      },
-      {
-        "lemma": "attached",
         "importance": 2
       },
       {
@@ -25627,19 +26236,11 @@
         "importance": 2
       },
       {
-        "lemma": "beautiful",
-        "importance": 2
-      },
-      {
         "lemma": "beguiling",
         "importance": 2
       },
       {
         "lemma": "belligerent",
-        "importance": 2
-      },
-      {
-        "lemma": "beloved",
         "importance": 2
       },
       {
@@ -25839,10 +26440,6 @@
         "importance": 2
       },
       {
-        "lemma": "caring",
-        "importance": 2
-      },
-      {
         "lemma": "casual",
         "importance": 2
       },
@@ -25960,10 +26557,6 @@
       },
       {
         "lemma": "cloistered",
-        "importance": 2
-      },
-      {
-        "lemma": "close",
         "importance": 2
       },
       {
@@ -26096,10 +26689,6 @@
       },
       {
         "lemma": "conditional",
-        "importance": 2
-      },
-      {
-        "lemma": "confident",
         "importance": 2
       },
       {
@@ -26343,10 +26932,6 @@
         "importance": 2
       },
       {
-        "lemma": "dear",
-        "importance": 2
-      },
-      {
         "lemma": "decent",
         "importance": 2
       },
@@ -26380,10 +26965,6 @@
       },
       {
         "lemma": "delicate",
-        "importance": 2
-      },
-      {
-        "lemma": "delighted",
         "importance": 2
       },
       {
@@ -26503,10 +27084,6 @@
         "importance": 2
       },
       {
-        "lemma": "disappointed",
-        "importance": 2
-      },
-      {
         "lemma": "disappointing",
         "importance": 2
       },
@@ -26520,10 +27097,6 @@
       },
       {
         "lemma": "disgusting",
-        "importance": 2
-      },
-      {
-        "lemma": "dishonest",
         "importance": 2
       },
       {
@@ -26575,15 +27148,7 @@
         "importance": 2
       },
       {
-        "lemma": "divided",
-        "importance": 2
-      },
-      {
         "lemma": "divine",
-        "importance": 2
-      },
-      {
-        "lemma": "divorced",
         "importance": 2
       },
       {
@@ -26620,10 +27185,6 @@
       },
       {
         "lemma": "drunk",
-        "importance": 2
-      },
-      {
-        "lemma": "due",
         "importance": 2
       },
       {
@@ -27035,10 +27596,6 @@
         "importance": 2
       },
       {
-        "lemma": "famous",
-        "importance": 2
-      },
-      {
         "lemma": "fanatic",
         "importance": 2
       },
@@ -27159,10 +27716,6 @@
         "importance": 2
       },
       {
-        "lemma": "fluent",
-        "importance": 2
-      },
-      {
         "lemma": "fluid",
         "importance": 2
       },
@@ -27256,10 +27809,6 @@
       },
       {
         "lemma": "frugal",
-        "importance": 2
-      },
-      {
-        "lemma": "frustrated",
         "importance": 2
       },
       {
@@ -27391,10 +27940,6 @@
         "importance": 2
       },
       {
-        "lemma": "gorgeous",
-        "importance": 2
-      },
-      {
         "lemma": "gourmet",
         "importance": 2
       },
@@ -27408,10 +27953,6 @@
       },
       {
         "lemma": "grand",
-        "importance": 2
-      },
-      {
-        "lemma": "grateful",
         "importance": 2
       },
       {
@@ -27447,10 +27988,6 @@
         "importance": 2
       },
       {
-        "lemma": "guilty",
-        "importance": 2
-      },
-      {
         "lemma": "gushing",
         "importance": 2
       },
@@ -27472,10 +28009,6 @@
       },
       {
         "lemma": "handicapped",
-        "importance": 2
-      },
-      {
-        "lemma": "handsome",
         "importance": 2
       },
       {
@@ -27559,10 +28092,6 @@
         "importance": 2
       },
       {
-        "lemma": "helpless",
-        "importance": 2
-      },
-      {
         "lemma": "hermetic",
         "importance": 2
       },
@@ -27608,10 +28137,6 @@
       },
       {
         "lemma": "homeward",
-        "importance": 2
-      },
-      {
-        "lemma": "honest",
         "importance": 2
       },
       {
@@ -27743,10 +28268,6 @@
         "importance": 2
       },
       {
-        "lemma": "impatient",
-        "importance": 2
-      },
-      {
         "lemma": "impeccable",
         "importance": 2
       },
@@ -27792,10 +28313,6 @@
       },
       {
         "lemma": "impressionistic",
-        "importance": 2
-      },
-      {
-        "lemma": "impressive",
         "importance": 2
       },
       {
@@ -28035,10 +28552,6 @@
         "importance": 2
       },
       {
-        "lemma": "insensitive",
-        "importance": 2
-      },
-      {
         "lemma": "inseparable",
         "importance": 2
       },
@@ -28187,10 +28700,6 @@
         "importance": 2
       },
       {
-        "lemma": "irritated",
-        "importance": 2
-      },
-      {
         "lemma": "irritating",
         "importance": 2
       },
@@ -28200,10 +28709,6 @@
       },
       {
         "lemma": "jarring",
-        "importance": 2
-      },
-      {
-        "lemma": "jealous",
         "importance": 2
       },
       {
@@ -28232,10 +28737,6 @@
       },
       {
         "lemma": "key",
-        "importance": 2
-      },
-      {
-        "lemma": "kindly",
         "importance": 2
       },
       {
@@ -28335,10 +28836,6 @@
         "importance": 2
       },
       {
-        "lemma": "limited",
-        "importance": 2
-      },
-      {
         "lemma": "limitless",
         "importance": 2
       },
@@ -28391,15 +28888,7 @@
         "importance": 2
       },
       {
-        "lemma": "lovely",
-        "importance": 2
-      },
-      {
         "lemma": "low",
-        "importance": 2
-      },
-      {
-        "lemma": "loyal",
         "importance": 2
       },
       {
@@ -28567,10 +29056,6 @@
         "importance": 2
       },
       {
-        "lemma": "memorable",
-        "importance": 2
-      },
-      {
         "lemma": "menacing",
         "importance": 2
       },
@@ -28663,10 +29148,6 @@
         "importance": 2
       },
       {
-        "lemma": "missing",
-        "importance": 2
-      },
-      {
         "lemma": "mistrustful",
         "importance": 2
       },
@@ -28707,10 +29188,6 @@
         "importance": 2
       },
       {
-        "lemma": "moody",
-        "importance": 2
-      },
-      {
         "lemma": "moribund",
         "importance": 2
       },
@@ -28720,10 +29197,6 @@
       },
       {
         "lemma": "motionless",
-        "importance": 2
-      },
-      {
-        "lemma": "motivated",
         "importance": 2
       },
       {
@@ -29028,10 +29501,6 @@
       },
       {
         "lemma": "only",
-        "importance": 2
-      },
-      {
-        "lemma": "onstage",
         "importance": 2
       },
       {
@@ -29575,10 +30044,6 @@
         "importance": 2
       },
       {
-        "lemma": "profitable",
-        "importance": 2
-      },
-      {
         "lemma": "profound",
         "importance": 2
       },
@@ -29647,10 +30112,6 @@
         "importance": 2
       },
       {
-        "lemma": "proud",
-        "importance": 2
-      },
-      {
         "lemma": "proven",
         "importance": 2
       },
@@ -29712,10 +30173,6 @@
       },
       {
         "lemma": "qualitative",
-        "importance": 2
-      },
-      {
-        "lemma": "quarrelsome",
         "importance": 2
       },
       {
@@ -29852,10 +30309,6 @@
       },
       {
         "lemma": "reliable",
-        "importance": 2
-      },
-      {
-        "lemma": "relieved",
         "importance": 2
       },
       {
@@ -30067,10 +30520,6 @@
         "importance": 2
       },
       {
-        "lemma": "sandy",
-        "importance": 2
-      },
-      {
         "lemma": "sanitary",
         "importance": 2
       },
@@ -30155,10 +30604,6 @@
         "importance": 2
       },
       {
-        "lemma": "self-confident",
-        "importance": 2
-      },
-      {
         "lemma": "self-conscious",
         "importance": 2
       },
@@ -30183,19 +30628,11 @@
         "importance": 2
       },
       {
-        "lemma": "sensitive",
-        "importance": 2
-      },
-      {
         "lemma": "sentient",
         "importance": 2
       },
       {
         "lemma": "sentimental",
-        "importance": 2
-      },
-      {
-        "lemma": "separate",
         "importance": 2
       },
       {
@@ -30719,10 +31156,6 @@
         "importance": 2
       },
       {
-        "lemma": "talented",
-        "importance": 2
-      },
-      {
         "lemma": "talkative",
         "importance": 2
       },
@@ -30823,10 +31256,6 @@
         "importance": 2
       },
       {
-        "lemma": "thankful",
-        "importance": 2
-      },
-      {
         "lemma": "thick",
         "importance": 2
       },
@@ -30856,10 +31285,6 @@
       },
       {
         "lemma": "threatening",
-        "importance": 2
-      },
-      {
-        "lemma": "thrilled",
         "importance": 2
       },
       {
@@ -30916,10 +31341,6 @@
       },
       {
         "lemma": "totemic",
-        "importance": 2
-      },
-      {
-        "lemma": "tough",
         "importance": 2
       },
       {
@@ -30984,10 +31405,6 @@
       },
       {
         "lemma": "true",
-        "importance": 2
-      },
-      {
-        "lemma": "trustworthy",
         "importance": 2
       },
       {
@@ -31123,10 +31540,6 @@
         "importance": 2
       },
       {
-        "lemma": "understanding",
-        "importance": 2
-      },
-      {
         "lemma": "underwater",
         "importance": 2
       },
@@ -31203,10 +31616,6 @@
         "importance": 2
       },
       {
-        "lemma": "unforgettable",
-        "importance": 2
-      },
-      {
         "lemma": "unfortunate",
         "importance": 2
       },
@@ -31259,10 +31668,6 @@
         "importance": 2
       },
       {
-        "lemma": "unkind",
-        "importance": 2
-      },
-      {
         "lemma": "unknown",
         "importance": 2
       },
@@ -31280,10 +31685,6 @@
       },
       {
         "lemma": "unlucky",
-        "importance": 2
-      },
-      {
-        "lemma": "unmanageable",
         "importance": 2
       },
       {
@@ -31396,10 +31797,6 @@
       },
       {
         "lemma": "unsustainable",
-        "importance": 2
-      },
-      {
-        "lemma": "untalented",
         "importance": 2
       },
       {
@@ -31747,10 +32144,6 @@
         "importance": 2
       },
       {
-        "lemma": "wonderful",
-        "importance": 2
-      },
-      {
         "lemma": "wondrous",
         "importance": 2
       },
@@ -31780,14 +32173,6 @@
       },
       {
         "lemma": "wornout",
-        "importance": 2
-      },
-      {
-        "lemma": "worried",
-        "importance": 2
-      },
-      {
-        "lemma": "worrying",
         "importance": 2
       },
       {
@@ -31875,10 +32260,6 @@
         "importance": 2
       },
       {
-        "lemma": "abroad",
-        "importance": 2
-      },
-      {
         "lemma": "abruptly",
         "importance": 2
       },
@@ -31948,10 +32329,6 @@
       },
       {
         "lemma": "aesthetically",
-        "importance": 2
-      },
-      {
-        "lemma": "affectionately",
         "importance": 2
       },
       {
@@ -32043,10 +32420,6 @@
         "importance": 2
       },
       {
-        "lemma": "amazingly",
-        "importance": 2
-      },
-      {
         "lemma": "amid",
         "importance": 2
       },
@@ -32096,10 +32469,6 @@
       },
       {
         "lemma": "anticlimactically",
-        "importance": 2
-      },
-      {
-        "lemma": "anxiously",
         "importance": 2
       },
       {
@@ -32223,10 +32592,6 @@
         "importance": 2
       },
       {
-        "lemma": "beautifully",
-        "importance": 2
-      },
-      {
         "lemma": "because of",
         "importance": 2
       },
@@ -32331,10 +32696,6 @@
         "importance": 2
       },
       {
-        "lemma": "calmly",
-        "importance": 2
-      },
-      {
         "lemma": "can",
         "importance": 2
       },
@@ -32379,10 +32740,6 @@
         "importance": 2
       },
       {
-        "lemma": "closely",
-        "importance": 2
-      },
-      {
         "lemma": "cogently",
         "importance": 2
       },
@@ -32424,10 +32781,6 @@
       },
       {
         "lemma": "conditionally",
-        "importance": 2
-      },
-      {
-        "lemma": "confidently",
         "importance": 2
       },
       {
@@ -32955,10 +33308,6 @@
         "importance": 2
       },
       {
-        "lemma": "financially",
-        "importance": 2
-      },
-      {
         "lemma": "finely",
         "importance": 2
       },
@@ -32972,10 +33321,6 @@
       },
       {
         "lemma": "flatout",
-        "importance": 2
-      },
-      {
-        "lemma": "fluently",
         "importance": 2
       },
       {
@@ -33072,10 +33417,6 @@
       },
       {
         "lemma": "generally",
-        "importance": 2
-      },
-      {
-        "lemma": "generously",
         "importance": 2
       },
       {
@@ -33207,10 +33548,6 @@
         "importance": 2
       },
       {
-        "lemma": "honestly",
-        "importance": 2
-      },
-      {
         "lemma": "hopefully",
         "importance": 2
       },
@@ -33260,10 +33597,6 @@
       },
       {
         "lemma": "immensely",
-        "importance": 2
-      },
-      {
-        "lemma": "impatiently",
         "importance": 2
       },
       {
@@ -33403,10 +33736,6 @@
         "importance": 2
       },
       {
-        "lemma": "insensitively",
-        "importance": 2
-      },
-      {
         "lemma": "inside",
         "importance": 2
       },
@@ -33500,10 +33829,6 @@
       },
       {
         "lemma": "itself",
-        "importance": 2
-      },
-      {
-        "lemma": "jealously",
         "importance": 2
       },
       {
@@ -33807,10 +34132,6 @@
         "importance": 2
       },
       {
-        "lemma": "no",
-        "importance": 2
-      },
-      {
         "lemma": "no one",
         "importance": 2
       },
@@ -33971,10 +34292,6 @@
         "importance": 2
       },
       {
-        "lemma": "overtime",
-        "importance": 2
-      },
-      {
         "lemma": "owing to",
         "importance": 2
       },
@@ -34008,10 +34325,6 @@
       },
       {
         "lemma": "patchily",
-        "importance": 2
-      },
-      {
-        "lemma": "patiently",
         "importance": 2
       },
       {
@@ -34175,10 +34488,6 @@
         "importance": 2
       },
       {
-        "lemma": "proudly",
-        "importance": 2
-      },
-      {
         "lemma": "provided",
         "importance": 2
       },
@@ -34232,10 +34541,6 @@
       },
       {
         "lemma": "readily",
-        "importance": 2
-      },
-      {
-        "lemma": "really",
         "importance": 2
       },
       {
@@ -34567,10 +34872,6 @@
         "importance": 2
       },
       {
-        "lemma": "stubbornly",
-        "importance": 2
-      },
-      {
         "lemma": "stuffily",
         "importance": 2
       },
@@ -34736,10 +35037,6 @@
       },
       {
         "lemma": "thereby",
-        "importance": 2
-      },
-      {
-        "lemma": "therefore",
         "importance": 2
       },
       {
@@ -36191,7 +36488,8 @@
     "nativeLang": "ru",
     "title": "Покупки за границей",
     "categories": [
-      "shopping"
+      "shopping",
+      "travelLeisure"
     ],
     "type": "official",
     "importance": 2,
@@ -36256,7 +36554,8 @@
     "nativeLang": "ru",
     "title": "Знакомство. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "travelLeisure"
     ],
     "type": "official",
     "importance": 2,
@@ -36313,7 +36612,8 @@
     "nativeLang": "ru",
     "title": "Знакомство. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "travelLeisure"
     ],
     "type": "official",
     "importance": 2,
@@ -38081,7 +38381,8 @@
     "nativeLang": "ru",
     "title": "Кружки и курсы",
     "categories": [
-      "sportsHobbies"
+      "sportsHobbies",
+      "study"
     ],
     "type": "official",
     "importance": 2,
@@ -38133,12 +38434,672 @@
     ]
   },
   {
+    "id": "01a0f209-e04a-7962-825f-02dfbc504b7d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Школьные предметы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "biochemistry",
+        "importance": 2
+      },
+      {
+        "lemma": "biology",
+        "importance": 2
+      },
+      {
+        "lemma": "chemistry",
+        "importance": 2
+      },
+      {
+        "lemma": "geography",
+        "importance": 2
+      },
+      {
+        "lemma": "grammar",
+        "importance": 2
+      },
+      {
+        "lemma": "gym",
+        "importance": 2
+      },
+      {
+        "lemma": "gymnastics",
+        "importance": 2
+      },
+      {
+        "lemma": "history",
+        "importance": 2
+      },
+      {
+        "lemma": "literature",
+        "importance": 2
+      },
+      {
+        "lemma": "math",
+        "importance": 2
+      },
+      {
+        "lemma": "mathematics",
+        "importance": 2
+      },
+      {
+        "lemma": "physics",
+        "importance": 2
+      },
+      {
+        "lemma": "science",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7f97-9235-c1362f2a2392",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Университет",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "campus",
+        "importance": 2
+      },
+      {
+        "lemma": "college",
+        "importance": 2
+      },
+      {
+        "lemma": "degree",
+        "importance": 2
+      },
+      {
+        "lemma": "department",
+        "importance": 2
+      },
+      {
+        "lemma": "faculty",
+        "importance": 2
+      },
+      {
+        "lemma": "lecture",
+        "importance": 2
+      },
+      {
+        "lemma": "lecturer",
+        "importance": 2
+      },
+      {
+        "lemma": "semester",
+        "importance": 2
+      },
+      {
+        "lemma": "university",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7565-b434-2c7da32c4332",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поступление",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "acceptance",
+        "importance": 2
+      },
+      {
+        "lemma": "admission",
+        "importance": 2
+      },
+      {
+        "lemma": "application",
+        "importance": 2
+      },
+      {
+        "lemma": "requirement",
+        "importance": 2
+      },
+      {
+        "lemma": "scholarship",
+        "importance": 2
+      },
+      {
+        "lemma": "apply",
+        "importance": 2
+      },
+      {
+        "lemma": "enroll",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-70ec-b0c7-b0dcede0026f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Преподаватель",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "instructor",
+        "importance": 2
+      },
+      {
+        "lemma": "lecturer",
+        "importance": 2
+      },
+      {
+        "lemma": "mentor",
+        "importance": 2
+      },
+      {
+        "lemma": "professor",
+        "importance": 2
+      },
+      {
+        "lemma": "supervisor",
+        "importance": 2
+      },
+      {
+        "lemma": "teacher",
+        "importance": 2
+      },
+      {
+        "lemma": "tutor",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7a01-a461-5ed4d8da2cfa",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Домашнее задание",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "assignment",
+        "importance": 2
+      },
+      {
+        "lemma": "homework",
+        "importance": 2
+      },
+      {
+        "lemma": "task",
+        "importance": 2
+      },
+      {
+        "lemma": "exercise",
+        "importance": 2
+      },
+      {
+        "lemma": "submit",
+        "importance": 2
+      },
+      {
+        "lemma": "due",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-70c9-b403-126510970af3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Экзамены и оценки",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "exam",
+        "importance": 2
+      },
+      {
+        "lemma": "examination",
+        "importance": 2
+      },
+      {
+        "lemma": "examiner",
+        "importance": 2
+      },
+      {
+        "lemma": "failure",
+        "importance": 2
+      },
+      {
+        "lemma": "grade",
+        "importance": 2
+      },
+      {
+        "lemma": "mark",
+        "importance": 2
+      },
+      {
+        "lemma": "result",
+        "importance": 2
+      },
+      {
+        "lemma": "revision",
+        "importance": 2
+      },
+      {
+        "lemma": "score",
+        "importance": 2
+      },
+      {
+        "lemma": "test",
+        "importance": 2
+      },
+      {
+        "lemma": "fail",
+        "importance": 2
+      },
+      {
+        "lemma": "revise",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-72a9-835c-5b29c170f89d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Письменные работы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "citation",
+        "importance": 2
+      },
+      {
+        "lemma": "draft",
+        "importance": 2
+      },
+      {
+        "lemma": "essay",
+        "importance": 2
+      },
+      {
+        "lemma": "handwriting",
+        "importance": 2
+      },
+      {
+        "lemma": "paragraph",
+        "importance": 2
+      },
+      {
+        "lemma": "reference",
+        "importance": 2
+      },
+      {
+        "lemma": "thesis",
+        "importance": 2
+      },
+      {
+        "lemma": "writer",
+        "importance": 2
+      },
+      {
+        "lemma": "writing",
+        "importance": 2
+      },
+      {
+        "lemma": "outline",
+        "importance": 2
+      },
+      {
+        "lemma": "rewrite",
+        "importance": 2
+      },
+      {
+        "lemma": "write",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7edb-9364-bfc29ec40e02",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Академическая речь",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "analysis",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "conclusion",
+        "importance": 2
+      },
+      {
+        "lemma": "evidence",
+        "importance": 2
+      },
+      {
+        "lemma": "analyze",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "claim",
+        "importance": 2
+      },
+      {
+        "lemma": "conclude",
+        "importance": 2
+      },
+      {
+        "lemma": "however",
+        "importance": 2
+      },
+      {
+        "lemma": "therefore",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7498-a418-dc8656f4b120",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Групповой проект",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "deadline",
+        "importance": 2
+      },
+      {
+        "lemma": "group",
+        "importance": 2
+      },
+      {
+        "lemma": "grouping",
+        "importance": 2
+      },
+      {
+        "lemma": "project",
+        "importance": 2
+      },
+      {
+        "lemma": "role",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "collaborate",
+        "importance": 2
+      },
+      {
+        "lemma": "divide",
+        "importance": 2
+      },
+      {
+        "lemma": "divided",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7f0f-825e-cbba60e6fbb7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Онлайн-курсы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "certificate",
+        "importance": 2
+      },
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "enroll",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7487-8e47-4c82a610dbae",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Изучение языков",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "fluency",
+        "importance": 2
+      },
+      {
+        "lemma": "grammar",
+        "importance": 2
+      },
+      {
+        "lemma": "native speaker",
+        "importance": 2
+      },
+      {
+        "lemma": "practice",
+        "importance": 2
+      },
+      {
+        "lemma": "pronunciation",
+        "importance": 2
+      },
+      {
+        "lemma": "vocabulary",
+        "importance": 2
+      },
+      {
+        "lemma": "translate",
+        "importance": 2
+      },
+      {
+        "lemma": "fluent",
+        "importance": 2
+      },
+      {
+        "lemma": "fluently",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7035-9b45-174853e1d65d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Учёба за границей",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "visa",
+        "importance": 2
+      },
+      {
+        "lemma": "abroad",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7441-9564-56801cd34db7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Студенческая жизнь",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "campus",
+        "importance": 2
+      },
+      {
+        "lemma": "dorm",
+        "importance": 2
+      },
+      {
+        "lemma": "dormitory",
+        "importance": 2
+      },
+      {
+        "lemma": "freshman",
+        "importance": 2
+      },
+      {
+        "lemma": "roommate",
+        "importance": 2
+      },
+      {
+        "lemma": "student",
+        "importance": 2
+      },
+      {
+        "lemma": "undergraduate",
+        "importance": 2
+      },
+      {
+        "lemma": "graduate",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-7036-a3bb-5f7b0ee9cb34",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Тайм-менеджмент и мотивация",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "distraction",
+        "importance": 2
+      },
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "motivation",
+        "importance": 2
+      },
+      {
+        "lemma": "focus",
+        "importance": 2
+      },
+      {
+        "lemma": "motivated",
+        "importance": 2
+      },
+      {
+        "lemma": "productive",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f209-e04a-71de-882e-342ddaf2b9c2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Учёба с другом",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "classmate",
+        "importance": 2
+      },
+      {
+        "lemma": "quiz",
+        "importance": 2
+      },
+      {
+        "lemma": "explain",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "01a0f1d6-38ba-7bfb-8ca4-c5b501b4d5d7",
     "lang": "en",
     "nativeLang": "ru",
     "title": "Как пройти",
     "categories": [
-      "transportCity"
+      "transportCity",
+      "travelLeisure"
     ],
     "type": "official",
     "importance": 2,
@@ -38962,6 +39923,833 @@
     ]
   },
   {
+    "id": "01a0f204-7906-7cf6-86fe-4cefcef812ed",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Планирование поездки",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "booking",
+        "importance": 2
+      },
+      {
+        "lemma": "budget",
+        "importance": 2
+      },
+      {
+        "lemma": "destination",
+        "importance": 2
+      },
+      {
+        "lemma": "itinerary",
+        "importance": 2
+      },
+      {
+        "lemma": "journey",
+        "importance": 2
+      },
+      {
+        "lemma": "plan",
+        "importance": 2
+      },
+      {
+        "lemma": "planning",
+        "importance": 2
+      },
+      {
+        "lemma": "research",
+        "importance": 2
+      },
+      {
+        "lemma": "route",
+        "importance": 2
+      },
+      {
+        "lemma": "trip",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7f5c-8a64-2aea6ab50e09",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Бронирование",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "booking",
+        "importance": 2
+      },
+      {
+        "lemma": "confirmation",
+        "importance": 2
+      },
+      {
+        "lemma": "reservation",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "confirm",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-75cb-b22c-07b5f4119d47",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аэропорт",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "airport",
+        "importance": 2
+      },
+      {
+        "lemma": "arrival",
+        "importance": 2
+      },
+      {
+        "lemma": "baggage",
+        "importance": 2
+      },
+      {
+        "lemma": "boarding pass",
+        "importance": 2
+      },
+      {
+        "lemma": "check-in",
+        "importance": 2
+      },
+      {
+        "lemma": "check-in counter",
+        "importance": 2
+      },
+      {
+        "lemma": "check-in desk",
+        "importance": 2
+      },
+      {
+        "lemma": "customs",
+        "importance": 2
+      },
+      {
+        "lemma": "departure",
+        "importance": 2
+      },
+      {
+        "lemma": "gate",
+        "importance": 2
+      },
+      {
+        "lemma": "luggage",
+        "importance": 2
+      },
+      {
+        "lemma": "passport control",
+        "importance": 2
+      },
+      {
+        "lemma": "security",
+        "importance": 2
+      },
+      {
+        "lemma": "security check",
+        "importance": 2
+      },
+      {
+        "lemma": "My luggage is missing",
+        "importance": 2
+      },
+      {
+        "lemma": "Where is the check-in counter?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7620-92e4-a814106d51b8",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "В самолёте",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "aircrew",
+        "importance": 2
+      },
+      {
+        "lemma": "airplane",
+        "importance": 2
+      },
+      {
+        "lemma": "cabin",
+        "importance": 2
+      },
+      {
+        "lemma": "crew",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      },
+      {
+        "lemma": "flight",
+        "importance": 2
+      },
+      {
+        "lemma": "landing",
+        "importance": 2
+      },
+      {
+        "lemma": "plane",
+        "importance": 2
+      },
+      {
+        "lemma": "seat",
+        "importance": 2
+      },
+      {
+        "lemma": "takeoff",
+        "importance": 2
+      },
+      {
+        "lemma": "turbulence",
+        "importance": 2
+      },
+      {
+        "lemma": "to miss a flight",
+        "importance": 2
+      },
+      {
+        "lemma": "Could I have a window seat?",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this flight on time?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-79e4-8581-07da39297ed0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Паспортный контроль и таможня",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "border",
+        "importance": 2
+      },
+      {
+        "lemma": "customs",
+        "importance": 2
+      },
+      {
+        "lemma": "immigration",
+        "importance": 2
+      },
+      {
+        "lemma": "passport",
+        "importance": 2
+      },
+      {
+        "lemma": "passport control",
+        "importance": 2
+      },
+      {
+        "lemma": "visa",
+        "importance": 2
+      },
+      {
+        "lemma": "declare",
+        "importance": 2
+      },
+      {
+        "lemma": "duty-free",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-79b1-b4ae-848055c104b8",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Отель",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "check-in",
+        "importance": 2
+      },
+      {
+        "lemma": "check-in counter",
+        "importance": 2
+      },
+      {
+        "lemma": "check-in desk",
+        "importance": 2
+      },
+      {
+        "lemma": "check-out",
+        "importance": 2
+      },
+      {
+        "lemma": "hotel",
+        "importance": 2
+      },
+      {
+        "lemma": "key card",
+        "importance": 2
+      },
+      {
+        "lemma": "lobby",
+        "importance": 2
+      },
+      {
+        "lemma": "reception",
+        "importance": 2
+      },
+      {
+        "lemma": "receptionist",
+        "importance": 2
+      },
+      {
+        "lemma": "reservation",
+        "importance": 2
+      },
+      {
+        "lemma": "room service",
+        "importance": 2
+      },
+      {
+        "lemma": "to leave luggage at reception",
+        "importance": 2
+      },
+      {
+        "lemma": "Where is the check-in counter?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7ed9-815e-3717a30b683e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Апартаменты и хостел",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "apartment",
+        "importance": 2
+      },
+      {
+        "lemma": "dorm",
+        "importance": 2
+      },
+      {
+        "lemma": "dormitory",
+        "importance": 2
+      },
+      {
+        "lemma": "hostel",
+        "importance": 2
+      },
+      {
+        "lemma": "roommate",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7aa6-ac97-cc2ab23aff22",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Экскурсии",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "attraction",
+        "importance": 2
+      },
+      {
+        "lemma": "excursion",
+        "importance": 2
+      },
+      {
+        "lemma": "group",
+        "importance": 2
+      },
+      {
+        "lemma": "guide",
+        "importance": 2
+      },
+      {
+        "lemma": "guidebook",
+        "importance": 2
+      },
+      {
+        "lemma": "itinerary",
+        "importance": 2
+      },
+      {
+        "lemma": "sightseeing",
+        "importance": 2
+      },
+      {
+        "lemma": "tour",
+        "importance": 2
+      },
+      {
+        "lemma": "tour guide",
+        "importance": 2
+      },
+      {
+        "lemma": "tourism",
+        "importance": 2
+      },
+      {
+        "lemma": "tourist",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7066-a519-7fb369054ffb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Достопримечательности",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "attraction",
+        "importance": 2
+      },
+      {
+        "lemma": "castle",
+        "importance": 2
+      },
+      {
+        "lemma": "cathedral",
+        "importance": 2
+      },
+      {
+        "lemma": "landmark",
+        "importance": 2
+      },
+      {
+        "lemma": "monument",
+        "importance": 2
+      },
+      {
+        "lemma": "museum",
+        "importance": 2
+      },
+      {
+        "lemma": "statue",
+        "importance": 2
+      },
+      {
+        "lemma": "famous",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7551-a1f7-dd16f343af78",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Пляж и море",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "beach",
+        "importance": 2
+      },
+      {
+        "lemma": "ocean",
+        "importance": 2
+      },
+      {
+        "lemma": "sand",
+        "importance": 2
+      },
+      {
+        "lemma": "sandal",
+        "importance": 2
+      },
+      {
+        "lemma": "sea",
+        "importance": 2
+      },
+      {
+        "lemma": "seafood",
+        "importance": 2
+      },
+      {
+        "lemma": "seaside",
+        "importance": 2
+      },
+      {
+        "lemma": "seawater",
+        "importance": 2
+      },
+      {
+        "lemma": "seaweed",
+        "importance": 2
+      },
+      {
+        "lemma": "swim",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming costume",
+        "importance": 2
+      },
+      {
+        "lemma": "swimming pool",
+        "importance": 2
+      },
+      {
+        "lemma": "swimsuit",
+        "importance": 2
+      },
+      {
+        "lemma": "towel",
+        "importance": 2
+      },
+      {
+        "lemma": "wave",
+        "importance": 2
+      },
+      {
+        "lemma": "sunbathe",
+        "importance": 2
+      },
+      {
+        "lemma": "sandy",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-70ce-92f8-637a2a69e9ac",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Горы и природа",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "forest",
+        "importance": 2
+      },
+      {
+        "lemma": "hike",
+        "importance": 2
+      },
+      {
+        "lemma": "hiking",
+        "importance": 2
+      },
+      {
+        "lemma": "mountain",
+        "importance": 2
+      },
+      {
+        "lemma": "mountaineer",
+        "importance": 2
+      },
+      {
+        "lemma": "mountaintop",
+        "importance": 2
+      },
+      {
+        "lemma": "nature",
+        "importance": 2
+      },
+      {
+        "lemma": "peak",
+        "importance": 2
+      },
+      {
+        "lemma": "rainforest",
+        "importance": 2
+      },
+      {
+        "lemma": "trail",
+        "importance": 2
+      },
+      {
+        "lemma": "valley",
+        "importance": 2
+      },
+      {
+        "lemma": "wildlife",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-79a7-bdf5-f82b65deb6bf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сувениры",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "gift",
+        "importance": 2
+      },
+      {
+        "lemma": "postcard",
+        "importance": 2
+      },
+      {
+        "lemma": "souvenir",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7f94-a9d6-cbaf28112528",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Если что-то пошло не так",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "delay",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      },
+      {
+        "lemma": "emergency",
+        "importance": 2
+      },
+      {
+        "lemma": "helper",
+        "importance": 2
+      },
+      {
+        "lemma": "problem",
+        "importance": 2
+      },
+      {
+        "lemma": "cancel",
+        "importance": 2
+      },
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "helpful",
+        "importance": 2
+      },
+      {
+        "lemma": "helpless",
+        "importance": 2
+      },
+      {
+        "lemma": "lost",
+        "importance": 2
+      },
+      {
+        "lemma": "missing",
+        "importance": 2
+      },
+      {
+        "lemma": "unhelpful",
+        "importance": 2
+      },
+      {
+        "lemma": "My luggage is missing",
+        "importance": 2
+      },
+      {
+        "lemma": "There's a problem with my room",
+        "importance": 2
+      },
+      {
+        "lemma": "to be lost",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7720-bbff-12536df83cf6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Здоровье в поездке",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "doctor",
+        "importance": 2
+      },
+      {
+        "lemma": "insurance",
+        "importance": 2
+      },
+      {
+        "lemma": "medicine",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacy",
+        "importance": 2
+      },
+      {
+        "lemma": "sickness",
+        "importance": 2
+      },
+      {
+        "lemma": "vaccine",
+        "importance": 2
+      },
+      {
+        "lemma": "allergic",
+        "importance": 2
+      },
+      {
+        "lemma": "sick",
+        "importance": 2
+      },
+      {
+        "lemma": "I'm allergic to...",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f204-7906-7bea-968e-20e6d31907c0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Впечатления",
+    "categories": [
+      "travelLeisure"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "adventure",
+        "importance": 2
+      },
+      {
+        "lemma": "experience",
+        "importance": 2
+      },
+      {
+        "lemma": "impression",
+        "importance": 2
+      },
+      {
+        "lemma": "amazing",
+        "importance": 2
+      },
+      {
+        "lemma": "experienced",
+        "importance": 2
+      },
+      {
+        "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "memorable",
+        "importance": 2
+      },
+      {
+        "lemma": "unforgettable",
+        "importance": 2
+      },
+      {
+        "lemma": "wonderful",
+        "importance": 2
+      },
+      {
+        "lemma": "amazingly",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "01a0f1fe-f3b3-7e98-8fef-1795d161a189",
     "lang": "en",
     "nativeLang": "ru",
@@ -39421,7 +41209,8 @@
     "nativeLang": "ru",
     "title": "Ошибки и извинения",
     "categories": [
-      "workOffice"
+      "workOffice",
+      "emotionsRelationships"
     ],
     "type": "official",
     "importance": 2,

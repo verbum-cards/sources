@@ -1,829 +1,804 @@
 [
   {
-    "id": "01a0f1d6-38ba-7bfb-8ca4-c5b501b4d5d7",
+    "id": "01a0f201-7de8-7f1d-81c4-237a27db7b33",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Как пройти",
+    "title": "Резюме и сопроводительное письмо",
     "categories": [
-      "transportCity",
-      "travelLeisure"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "direction",
+        "lemma": "skill",
         "importance": 2
       },
       {
-        "lemma": "corner",
+        "lemma": "education",
         "importance": 2
       },
       {
-        "lemma": "far",
+        "lemma": "achievement",
         "importance": 2
       },
       {
-        "lemma": "near",
+        "lemma": "CV",
         "importance": 2
       },
       {
-        "lemma": "way",
+        "lemma": "qualification",
         "importance": 2
       },
       {
-        "lemma": "opposite",
-        "importance": 2
-      },
-      {
-        "lemma": "next to",
-        "importance": 2
-      },
-      {
-        "lemma": "between",
-        "importance": 2
-      },
-      {
-        "lemma": "crossing",
-        "importance": 2
-      },
-      {
-        "lemma": "crossroads",
-        "importance": 2
-      },
-      {
-        "lemma": "nearby",
-        "importance": 2
-      },
-      {
-        "lemma": "straight",
-        "importance": 2
-      },
-      {
-        "lemma": "Is it far from here?",
-        "importance": 2
-      },
-      {
-        "lemma": "Which way is...?",
-        "importance": 2
-      },
-      {
-        "lemma": "to go straight",
-        "importance": 2
-      },
-      {
-        "lemma": "to turn left / right",
-        "importance": 2
-      },
-      {
-        "lemma": "Is this the shortest way?",
+        "lemma": "reference",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7bfe-a6b4-dc8a0f4b695d",
+    "id": "01a0f201-7de8-73c0-97ec-bf28f7bc5d95",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Метро",
+    "title": "Вопросы работодателю",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "subway",
+        "lemma": "requirement",
         "importance": 2
       },
       {
-        "lemma": "line",
+        "lemma": "role",
         "importance": 2
       },
       {
-        "lemma": "station",
+        "lemma": "opportunity",
         "importance": 2
       },
       {
-        "lemma": "tube",
+        "lemma": "benefit",
         "importance": 2
       },
       {
-        "lemma": "entrance",
+        "lemma": "growth",
         "importance": 2
       },
       {
-        "lemma": "escalator",
+        "lemma": "responsibility",
         "importance": 2
       },
       {
-        "lemma": "exit",
+        "lemma": "employer",
         "importance": 2
       },
       {
-        "lemma": "platform",
-        "importance": 2
-      },
-      {
-        "lemma": "underground",
+        "lemma": "What are the requirements for this position?",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7ed2-984d-ff5fc0333ad3",
+    "id": "01a0f201-7de8-7aed-a9f6-a406ebd269b1",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Автобус и трамвай",
+    "title": "Зарплата и условия",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "bus",
+        "lemma": "bonus",
         "importance": 2
       },
       {
-        "lemma": "stop",
+        "lemma": "raise",
         "importance": 2
       },
       {
-        "lemma": "bus station",
-        "importance": 2
-      },
-      {
-        "lemma": "bus stop",
-        "importance": 2
-      },
-      {
-        "lemma": "tram",
-        "importance": 2
-      },
-      {
-        "lemma": "route",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-75d7-9a00-a56ef6f6a751",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Билеты и проездные",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "ticket",
-        "importance": 2
-      },
-      {
-        "lemma": "fare",
-        "importance": 2
-      },
-      {
-        "lemma": "pass",
-        "importance": 2
-      },
-      {
-        "lemma": "passenger",
-        "importance": 2
-      },
-      {
-        "lemma": "single",
-        "importance": 2
-      },
-      {
-        "lemma": "boarding pass",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-707c-b8b9-57af9bed004f",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Такси",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "taxi",
-        "importance": 2
-      },
-      {
-        "lemma": "cab",
-        "importance": 2
-      },
-      {
-        "lemma": "driver",
-        "importance": 2
-      },
-      {
-        "lemma": "fare",
-        "importance": 2
-      },
-      {
-        "lemma": "ride",
-        "importance": 2
-      },
-      {
-        "lemma": "meter",
-        "importance": 2
-      },
-      {
-        "lemma": "taxi rank",
-        "importance": 2
-      },
-      {
-        "lemma": "to book a taxi",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-77bb-863b-a78cacfbcd2d",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Приложения для поездок",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "rating",
-        "importance": 2
-      },
-      {
-        "lemma": "cancel",
-        "importance": 2
-      },
-      {
-        "lemma": "estimate",
-        "importance": 2
-      },
-      {
-        "lemma": "estimated",
-        "importance": 2
-      },
-      {
-        "lemma": "route",
-        "importance": 2
-      },
-      {
-        "lemma": "timetable",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-7d8c-9443-0845f47ef314",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Поезд",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "train",
-        "importance": 2
-      },
-      {
-        "lemma": "station",
-        "importance": 2
-      },
-      {
-        "lemma": "express",
-        "importance": 2
-      },
-      {
-        "lemma": "carriage",
-        "importance": 2
-      },
-      {
-        "lemma": "platform",
-        "importance": 2
-      },
-      {
-        "lemma": "railway",
-        "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-7e65-87a2-58a567d45055",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "Аренда машины",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
-      {
-        "lemma": "rent",
-        "importance": 2
-      },
-      {
-        "lemma": "rental",
-        "importance": 2
-      },
-      {
-        "lemma": "deposit",
+        "lemma": "benefit",
         "importance": 2
       },
       {
         "lemma": "insurance",
         "importance": 2
-      }
-    ],
-    "importance": 2
-  },
-  {
-    "id": "01a0f1d6-38ba-79e4-9a8f-3f764f057cf1",
-    "lang": "en",
-    "nativeLang": "ru",
-    "title": "За рулём",
-    "categories": [
-      "transportCity"
-    ],
-    "type": "official",
-    "items": [
+      },
       {
-        "lemma": "driver",
+        "lemma": "contract",
         "importance": 2
       },
       {
-        "lemma": "drive",
+        "lemma": "overtime",
         "importance": 2
       },
       {
-        "lemma": "car park",
+        "lemma": "pension",
         "importance": 2
       },
       {
-        "lemma": "driver's license",
+        "lemma": "salary",
         "importance": 2
       },
       {
-        "lemma": "lane",
-        "importance": 2
-      },
-      {
-        "lemma": "petrol",
-        "importance": 2
-      },
-      {
-        "lemma": "petrol station",
-        "importance": 2
-      },
-      {
-        "lemma": "speed",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic light",
-        "importance": 2
-      },
-      {
-        "lemma": "fuel",
-        "importance": 2
-      },
-      {
-        "lemma": "parking",
-        "importance": 2
-      },
-      {
-        "lemma": "signal",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic jam",
-        "importance": 2
-      },
-      {
-        "lemma": "steering wheel",
-        "importance": 2
-      },
-      {
-        "lemma": "to be stuck in traffic",
+        "lemma": "wage",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7f2e-8b20-30b2360f5701",
+    "id": "01a0f201-7de8-7df3-a471-3f4d7cb0c733",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Велосипед и самокат",
+    "title": "Переговоры",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "bicycle",
+        "lemma": "negotiate",
         "importance": 2
       },
       {
-        "lemma": "bike",
+        "lemma": "to reach an agreement",
         "importance": 2
       },
       {
-        "lemma": "cycle",
+        "lemma": "agree",
         "importance": 2
       },
       {
-        "lemma": "helmet",
+        "lemma": "deal",
         "importance": 2
       },
       {
-        "lemma": "motorcycle",
+        "lemma": "disagree",
         "importance": 2
       },
       {
-        "lemma": "motorbike",
+        "lemma": "offer",
         "importance": 2
       },
       {
-        "lemma": "pedal",
+        "lemma": "agreement",
         "importance": 2
       },
       {
-        "lemma": "scooter",
+        "lemma": "compromise",
+        "importance": 2
+      },
+      {
+        "lemma": "dealer",
+        "importance": 2
+      },
+      {
+        "lemma": "disagreement",
+        "importance": 2
+      },
+      {
+        "lemma": "negotiation",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-742a-bf40-65efa136cbda",
+    "id": "01a0f201-7de8-7f3a-b8d6-c4b773c5b111",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Задержки и проблемы",
+    "title": "Презентации",
     "categories": [
-      "transportCity"
+      "businessCareer",
+      "study"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "broken",
+        "lemma": "speech",
         "importance": 2
       },
       {
-        "lemma": "late",
+        "lemma": "audience",
         "importance": 2
       },
       {
-        "lemma": "problem",
+        "lemma": "slide",
         "importance": 2
       },
       {
-        "lemma": "delay",
+        "lemma": "presentation",
         "importance": 2
       },
       {
-        "lemma": "stuck",
+        "lemma": "pitch",
         "importance": 2
       },
       {
-        "lemma": "cancel",
-        "importance": 2
-      },
-      {
-        "lemma": "delayed flight",
-        "importance": 2
-      },
-      {
-        "lemma": "to be stuck in traffic",
-        "importance": 2
-      },
-      {
-        "lemma": "traffic jam",
-        "importance": 2
-      },
-      {
-        "lemma": "latecomer",
-        "importance": 2
-      },
-      {
-        "lemma": "breakdown",
+        "lemma": "presenter",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-77b8-a15a-8db06c179deb",
+    "id": "01a0f201-7de8-72b0-8373-a7e00fcbb7ff",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Ориентиры в городе",
+    "title": "Выступления и питчи",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "landmark",
+        "lemma": "speech",
         "importance": 2
       },
       {
-        "lemma": "bridge",
+        "lemma": "stage",
         "importance": 2
       },
       {
-        "lemma": "tower",
+        "lemma": "nervous",
         "importance": 2
       },
       {
-        "lemma": "roundabout",
+        "lemma": "speaker",
         "importance": 2
       },
       {
-        "lemma": "statue",
+        "lemma": "confidence",
         "importance": 2
       },
       {
-        "lemma": "crossing",
+        "lemma": "nervousness",
         "importance": 2
       },
       {
-        "lemma": "fountain",
+        "lemma": "onstage",
         "importance": 2
       },
       {
-        "lemma": "monument",
+        "lemma": "nervously",
+        "importance": 2
+      },
+      {
+        "lemma": "pitch",
+        "importance": 2
+      },
+      {
+        "lemma": "self-confidence",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7226-9366-d8898cfda328",
+    "id": "01a0f201-7de8-7572-9b76-7610641b661e",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Карта и навигация",
+    "title": "Нетворкинг",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "address",
+        "lemma": "introduce",
         "importance": 2
       },
       {
-        "lemma": "map",
+        "lemma": "contact",
         "importance": 2
       },
       {
-        "lemma": "direction",
+        "lemma": "connection",
         "importance": 2
       },
       {
-        "lemma": "location",
-        "importance": 2
-      },
-      {
-        "lemma": "navigate",
-        "importance": 2
-      },
-      {
-        "lemma": "navigation",
-        "importance": 2
-      },
-      {
-        "lemma": "route",
+        "lemma": "network",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7439-92b9-57363cdd5f2f",
+    "id": "01a0f201-7de8-7388-9ca3-9a311a29636c",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Прогулка по городу",
+    "title": "Продажи",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "wander",
+        "lemma": "sale",
         "importance": 2
       },
       {
-        "lemma": "walk",
+        "lemma": "sell",
         "importance": 2
       },
       {
-        "lemma": "explore",
+        "lemma": "customer",
         "importance": 2
       },
       {
-        "lemma": "sightseeing",
+        "lemma": "deal",
         "importance": 2
       },
       {
-        "lemma": "walking",
+        "lemma": "target",
         "importance": 2
       },
       {
-        "lemma": "sidewalk",
+        "lemma": "dealer",
         "importance": 2
       },
       {
-        "lemma": "pedestrian",
+        "lemma": "salesman",
         "importance": 2
       },
       {
-        "lemma": "walker",
+        "lemma": "bestseller",
+        "importance": 2
+      },
+      {
+        "lemma": "pitch",
+        "importance": 2
+      },
+      {
+        "lemma": "quotation",
+        "importance": 2
+      },
+      {
+        "lemma": "salesmanship",
+        "importance": 2
+      },
+      {
+        "lemma": "salesperson",
+        "importance": 2
+      },
+      {
+        "lemma": "saleswoman",
+        "importance": 2
+      },
+      {
+        "lemma": "seller",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7167-8008-e4f3091fe3bd",
+    "id": "01a0f201-7de8-7c4c-bcf3-4960b598c00e",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Безопасность в городе",
+    "title": "Клиенты и партнёры",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "to be lost",
+        "lemma": "partner",
         "importance": 2
       },
       {
-        "lemma": "crime",
+        "lemma": "customer",
         "importance": 2
       },
       {
-        "lemma": "danger",
+        "lemma": "client",
         "importance": 2
       },
       {
-        "lemma": "dangerous",
+        "lemma": "partnership",
         "importance": 2
       },
       {
-        "lemma": "emergency",
-        "importance": 2
-      },
-      {
-        "lemma": "lost",
-        "importance": 2
-      },
-      {
-        "lemma": "safe",
-        "importance": 2
-      },
-      {
-        "lemma": "steal",
-        "importance": 2
-      },
-      {
-        "lemma": "endanger",
-        "importance": 2
-      },
-      {
-        "lemma": "safety",
-        "importance": 2
-      },
-      {
-        "lemma": "theft",
-        "importance": 2
-      },
-      {
-        "lemma": "unsafe",
-        "importance": 2
-      },
-      {
-        "lemma": "safely",
-        "importance": 2
-      },
-      {
-        "lemma": "dangerously",
+        "lemma": "supplier",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7945-92f3-3b831b61edc6",
+    "id": "01a0f201-7de8-79b4-b3a6-96d63815e5e4",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Доступная среда",
+    "title": "Деньги и финансы",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "elevator",
+        "lemma": "money",
         "importance": 2
       },
       {
-        "lemma": "wheelchair",
+        "lemma": "budget",
         "importance": 2
       },
       {
-        "lemma": "accessible",
+        "lemma": "expense",
         "importance": 2
       },
       {
-        "lemma": "disability",
+        "lemma": "finance",
         "importance": 2
       },
       {
-        "lemma": "disabled",
+        "lemma": "financial",
         "importance": 2
       },
       {
-        "lemma": "lift",
+        "lemma": "income",
         "importance": 2
       },
       {
-        "lemma": "accessibility",
+        "lemma": "invest",
         "importance": 2
       },
       {
-        "lemma": "ramp",
+        "lemma": "loss",
+        "importance": 2
+      },
+      {
+        "lemma": "financially",
+        "importance": 2
+      },
+      {
+        "lemma": "investment",
+        "importance": 2
+      },
+      {
+        "lemma": "investor",
+        "importance": 2
+      },
+      {
+        "lemma": "profit",
+        "importance": 2
+      },
+      {
+        "lemma": "profitable",
+        "importance": 2
+      },
+      {
+        "lemma": "revenue",
         "importance": 2
       }
     ],
     "importance": 2
   },
   {
-    "id": "01a0f1d6-38ba-7d3a-9334-ddcfd0dec8bc",
+    "id": "01a0f201-7de8-7134-a1df-8f152484bf43",
     "lang": "en",
     "nativeLang": "ru",
-    "title": "Ночной город",
+    "title": "Цифры и графики",
     "categories": [
-      "transportCity"
+      "businessCareer"
     ],
     "type": "official",
     "items": [
       {
-        "lemma": "club",
+        "lemma": "number",
         "importance": 2
       },
       {
-        "lemma": "dark",
+        "lemma": "chart",
         "importance": 2
       },
       {
-        "lemma": "good night",
+        "lemma": "increase",
         "importance": 2
       },
       {
-        "lemma": "night",
+        "lemma": "decrease",
         "importance": 2
       },
       {
-        "lemma": "tonight",
+        "lemma": "graph",
         "importance": 2
       },
       {
-        "lemma": "midnight",
+        "lemma": "graphic",
         "importance": 2
       },
       {
-        "lemma": "nightlife",
+        "lemma": "graphics",
         "importance": 2
       },
       {
-        "lemma": "overnight",
+        "lemma": "growth",
         "importance": 2
       },
       {
-        "lemma": "darkness",
+        "lemma": "trend",
         "importance": 2
       },
       {
-        "lemma": "nightclub",
+        "lemma": "percentage",
+        "importance": 2
+      },
+      {
+        "lemma": "statistics",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f201-7de8-74b9-9b03-cfecc055dbd0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стратегия и цели",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "plan",
+        "importance": 2
+      },
+      {
+        "lemma": "strategy",
+        "importance": 2
+      },
+      {
+        "lemma": "target",
+        "importance": 2
+      },
+      {
+        "lemma": "mission",
+        "importance": 2
+      },
+      {
+        "lemma": "objective",
+        "importance": 2
+      },
+      {
+        "lemma": "planning",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f201-7de8-7100-a115-46b8235ee3c2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Руководство командой",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "leader",
+        "importance": 2
+      },
+      {
+        "lemma": "lead",
+        "importance": 2
+      },
+      {
+        "lemma": "manage",
+        "importance": 2
+      },
+      {
+        "lemma": "manager",
+        "importance": 2
+      },
+      {
+        "lemma": "leadership",
+        "importance": 2
+      },
+      {
+        "lemma": "leading",
+        "importance": 2
+      },
+      {
+        "lemma": "management",
+        "importance": 2
+      },
+      {
+        "lemma": "motivate",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "delegate",
+        "importance": 2
+      },
+      {
+        "lemma": "motivated",
+        "importance": 2
+      },
+      {
+        "lemma": "supervise",
+        "importance": 2
+      },
+      {
+        "lemma": "unmanageable",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f201-7de8-7f85-a675-2c842549004d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Карьерный рост",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "skill",
+        "importance": 2
+      },
+      {
+        "lemma": "advanced",
+        "importance": 2
+      },
+      {
+        "lemma": "opportunity",
+        "importance": 2
+      },
+      {
+        "lemma": "advance",
+        "importance": 2
+      },
+      {
+        "lemma": "career",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "promote",
+        "importance": 2
+      },
+      {
+        "lemma": "promotion",
+        "importance": 2
+      },
+      {
+        "lemma": "advancement",
+        "importance": 2
+      },
+      {
+        "lemma": "skilled",
+        "importance": 2
+      },
+      {
+        "lemma": "skillful",
+        "importance": 2
+      },
+      {
+        "lemma": "skillfully",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f201-7de8-757a-b4b3-0d1cd31b3862",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Своё дело",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "business",
+        "importance": 2
+      },
+      {
+        "lemma": "businessman",
+        "importance": 2
+      },
+      {
+        "lemma": "businesswoman",
+        "importance": 2
+      },
+      {
+        "lemma": "company",
+        "importance": 2
+      },
+      {
+        "lemma": "launch",
+        "importance": 2
+      },
+      {
+        "lemma": "entrepreneur",
+        "importance": 2
+      },
+      {
+        "lemma": "investor",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f201-7de8-7f27-b972-9b7b193ea587",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Деловая переписка",
+    "categories": [
+      "businessCareer"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "dear",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "formal",
+        "importance": 2
+      },
+      {
+        "lemma": "formally",
+        "importance": 2
+      },
+      {
+        "lemma": "respond",
+        "importance": 2
+      },
+      {
+        "lemma": "attached",
+        "importance": 2
+      },
+      {
+        "lemma": "correspond",
+        "importance": 2
+      },
+      {
+        "lemma": "correspondence",
+        "importance": 2
+      },
+      {
+        "lemma": "informal",
+        "importance": 2
+      },
+      {
+        "lemma": "formality",
         "importance": 2
       }
     ],

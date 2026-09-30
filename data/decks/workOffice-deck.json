@@ -459,7 +459,8 @@
     "nativeLang": "ru",
     "title": "Ошибки и извинения",
     "categories": [
-      "workOffice"
+      "workOffice",
+      "emotionsRelationships"
     ],
     "type": "official",
     "items": [

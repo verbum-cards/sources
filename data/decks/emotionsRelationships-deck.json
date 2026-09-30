@@ -1,0 +1,751 @@
+[
+  {
+    "id": "01a0f206-e97e-79d6-90dc-9da43ad6a3f5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Оттенки чувств",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "anxious",
+        "importance": 2
+      },
+      {
+        "lemma": "disappointed",
+        "importance": 2
+      },
+      {
+        "lemma": "envy",
+        "importance": 2
+      },
+      {
+        "lemma": "mood",
+        "importance": 2
+      },
+      {
+        "lemma": "pride",
+        "importance": 2
+      },
+      {
+        "lemma": "anxiety",
+        "importance": 2
+      },
+      {
+        "lemma": "anxiously",
+        "importance": 2
+      },
+      {
+        "lemma": "ashamed",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      },
+      {
+        "lemma": "calmness",
+        "importance": 2
+      },
+      {
+        "lemma": "content",
+        "importance": 2
+      },
+      {
+        "lemma": "frustrated",
+        "importance": 2
+      },
+      {
+        "lemma": "frustration",
+        "importance": 2
+      },
+      {
+        "lemma": "guilt",
+        "importance": 2
+      },
+      {
+        "lemma": "guilty",
+        "importance": 2
+      },
+      {
+        "lemma": "irritate",
+        "importance": 2
+      },
+      {
+        "lemma": "jealous",
+        "importance": 2
+      },
+      {
+        "lemma": "proud",
+        "importance": 2
+      },
+      {
+        "lemma": "calmly",
+        "importance": 2
+      },
+      {
+        "lemma": "irritated",
+        "importance": 2
+      },
+      {
+        "lemma": "jealously",
+        "importance": 2
+      },
+      {
+        "lemma": "moody",
+        "importance": 2
+      },
+      {
+        "lemma": "proudly",
+        "importance": 2
+      },
+      {
+        "lemma": "relief",
+        "importance": 2
+      },
+      {
+        "lemma": "relieved",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7cfd-89ff-a491d0b7913c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спросить, как дела по-настоящему",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "really",
+        "importance": 2
+      },
+      {
+        "lemma": "worry",
+        "importance": 2
+      },
+      {
+        "lemma": "actually",
+        "importance": 2
+      },
+      {
+        "lemma": "seem",
+        "importance": 2
+      },
+      {
+        "lemma": "worried",
+        "importance": 2
+      },
+      {
+        "lemma": "honestly",
+        "importance": 2
+      },
+      {
+        "lemma": "worrying",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-70b7-99b2-457c335face2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поддержка",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "listen",
+        "importance": 2
+      },
+      {
+        "lemma": "encourage",
+        "importance": 2
+      },
+      {
+        "lemma": "support",
+        "importance": 2
+      },
+      {
+        "lemma": "understand",
+        "importance": 2
+      },
+      {
+        "lemma": "comfort",
+        "importance": 2
+      },
+      {
+        "lemma": "encouragement",
+        "importance": 2
+      },
+      {
+        "lemma": "supporter",
+        "importance": 2
+      },
+      {
+        "lemma": "supportive",
+        "importance": 2
+      },
+      {
+        "lemma": "listener",
+        "importance": 2
+      },
+      {
+        "lemma": "understanding",
+        "importance": 2
+      },
+      {
+        "lemma": "reassure",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7fcd-aa3d-a361ffde3dde",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Радоваться за другого",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "celebrate",
+        "importance": 2
+      },
+      {
+        "lemma": "congratulate",
+        "importance": 2
+      },
+      {
+        "lemma": "delighted",
+        "importance": 2
+      },
+      {
+        "lemma": "proud",
+        "importance": 2
+      },
+      {
+        "lemma": "proudly",
+        "importance": 2
+      },
+      {
+        "lemma": "thrilled",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7cf3-92ff-a35fdcaf284c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Благодарность",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "thank",
+        "importance": 2
+      },
+      {
+        "lemma": "thanks",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciate",
+        "importance": 2
+      },
+      {
+        "lemma": "grateful",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciation",
+        "importance": 2
+      },
+      {
+        "lemma": "gratitude",
+        "importance": 2
+      },
+      {
+        "lemma": "thankful",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-70f4-9141-adc17809e676",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Комплименты",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "beautiful",
+        "importance": 2
+      },
+      {
+        "lemma": "handsome",
+        "importance": 2
+      },
+      {
+        "lemma": "wonderful",
+        "importance": 2
+      },
+      {
+        "lemma": "amazing",
+        "importance": 2
+      },
+      {
+        "lemma": "beautifully",
+        "importance": 2
+      },
+      {
+        "lemma": "compliment",
+        "importance": 2
+      },
+      {
+        "lemma": "gorgeous",
+        "importance": 2
+      },
+      {
+        "lemma": "impressive",
+        "importance": 2
+      },
+      {
+        "lemma": "talented",
+        "importance": 2
+      },
+      {
+        "lemma": "amazingly",
+        "importance": 2
+      },
+      {
+        "lemma": "untalented",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-75c8-86d7-2a725ab224af",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дружба",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "close",
+        "importance": 2
+      },
+      {
+        "lemma": "friend",
+        "importance": 2
+      },
+      {
+        "lemma": "friendship",
+        "importance": 2
+      },
+      {
+        "lemma": "penfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "trust",
+        "importance": 2
+      },
+      {
+        "lemma": "closely",
+        "importance": 2
+      },
+      {
+        "lemma": "friendliness",
+        "importance": 2
+      },
+      {
+        "lemma": "loyal",
+        "importance": 2
+      },
+      {
+        "lemma": "loyalty",
+        "importance": 2
+      },
+      {
+        "lemma": "trustworthy",
+        "importance": 2
+      },
+      {
+        "lemma": "unfriendly",
+        "importance": 2
+      },
+      {
+        "lemma": "closeness",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7bd9-9cde-3619f8fa636a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Романтические отношения",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "boyfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "girlfriend",
+        "importance": 2
+      },
+      {
+        "lemma": "kiss",
+        "importance": 2
+      },
+      {
+        "lemma": "love",
+        "importance": 2
+      },
+      {
+        "lemma": "lovely",
+        "importance": 2
+      },
+      {
+        "lemma": "couple",
+        "importance": 2
+      },
+      {
+        "lemma": "lover",
+        "importance": 2
+      },
+      {
+        "lemma": "romantic",
+        "importance": 2
+      },
+      {
+        "lemma": "affection",
+        "importance": 2
+      },
+      {
+        "lemma": "beloved",
+        "importance": 2
+      },
+      {
+        "lemma": "crush",
+        "importance": 2
+      },
+      {
+        "lemma": "relationship",
+        "importance": 2
+      },
+      {
+        "lemma": "affectionate",
+        "importance": 2
+      },
+      {
+        "lemma": "affectionately",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-76b7-9f3e-0379e8bea093",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ссоры и примирение",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "fight",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "forgive",
+        "importance": 2
+      },
+      {
+        "lemma": "fighting",
+        "importance": 2
+      },
+      {
+        "lemma": "quarrel",
+        "importance": 2
+      },
+      {
+        "lemma": "quarrelsome",
+        "importance": 2
+      },
+      {
+        "lemma": "reconcile",
+        "importance": 2
+      },
+      {
+        "lemma": "reconciliation",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7f22-b4d9-9e3bd2f5d67d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Границы",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "no",
+        "importance": 2
+      },
+      {
+        "lemma": "limit",
+        "importance": 2
+      },
+      {
+        "lemma": "limitation",
+        "importance": 2
+      },
+      {
+        "lemma": "limited",
+        "importance": 2
+      },
+      {
+        "lemma": "respect",
+        "importance": 2
+      },
+      {
+        "lemma": "norms",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7dce-a34e-b93e84cb955c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Расставание",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "divorced",
+        "importance": 2
+      },
+      {
+        "lemma": "separate",
+        "importance": 2
+      },
+      {
+        "lemma": "separation",
+        "importance": 2
+      },
+      {
+        "lemma": "breakup",
+        "importance": 2
+      },
+      {
+        "lemma": "divorce",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-77fa-9e0f-618ed453590e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сочувствие в трудной ситуации",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "difficult",
+        "importance": 2
+      },
+      {
+        "lemma": "difficulty",
+        "importance": 2
+      },
+      {
+        "lemma": "loss",
+        "importance": 2
+      },
+      {
+        "lemma": "sympathy",
+        "importance": 2
+      },
+      {
+        "lemma": "grief",
+        "importance": 2
+      },
+      {
+        "lemma": "sympathize",
+        "importance": 2
+      },
+      {
+        "lemma": "tough",
+        "importance": 2
+      },
+      {
+        "lemma": "toughness",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f206-e97e-7bde-933d-69a72d6f0ca2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Описать человека",
+    "categories": [
+      "emotionsRelationships"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "stubborn",
+        "importance": 2
+      },
+      {
+        "lemma": "generous",
+        "importance": 2
+      },
+      {
+        "lemma": "confident",
+        "importance": 2
+      },
+      {
+        "lemma": "kindly",
+        "importance": 2
+      },
+      {
+        "lemma": "honest",
+        "importance": 2
+      },
+      {
+        "lemma": "honestly",
+        "importance": 2
+      },
+      {
+        "lemma": "honesty",
+        "importance": 2
+      },
+      {
+        "lemma": "kindness",
+        "importance": 2
+      },
+      {
+        "lemma": "caring",
+        "importance": 2
+      },
+      {
+        "lemma": "confidently",
+        "importance": 2
+      },
+      {
+        "lemma": "generously",
+        "importance": 2
+      },
+      {
+        "lemma": "self-confident",
+        "importance": 2
+      },
+      {
+        "lemma": "sensitive",
+        "importance": 2
+      },
+      {
+        "lemma": "stubbornly",
+        "importance": 2
+      },
+      {
+        "lemma": "unkind",
+        "importance": 2
+      },
+      {
+        "lemma": "insensitive",
+        "importance": 2
+      },
+      {
+        "lemma": "insensitively",
+        "importance": 2
+      },
+      {
+        "lemma": "dishonest",
+        "importance": 2
+      },
+      {
+        "lemma": "dishonesty",
+        "importance": 2
+      },
+      {
+        "lemma": "impatient",
+        "importance": 2
+      },
+      {
+        "lemma": "impatiently",
+        "importance": 2
+      },
+      {
+        "lemma": "patiently",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

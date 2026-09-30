@@ -29,7 +29,8 @@
     "nativeLang": "ru",
     "title": "Знакомство. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "travelLeisure"
     ],
     "type": "official",
     "items": [
@@ -86,7 +87,8 @@
     "nativeLang": "ru",
     "title": "Знакомство. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "travelLeisure"
     ],
     "type": "official",
     "items": [

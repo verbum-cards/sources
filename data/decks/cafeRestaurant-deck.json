@@ -733,7 +733,8 @@
     "nativeLang": "ru",
     "title": "Деловой обед",
     "categories": [
-      "cafeRestaurant"
+      "cafeRestaurant",
+      "businessCareer"
     ],
     "type": "official",
     "items": [
@@ -774,7 +775,8 @@
     "nativeLang": "ru",
     "title": "Свидание в ресторане",
     "categories": [
-      "cafeRestaurant"
+      "cafeRestaurant",
+      "emotionsRelationships"
     ],
     "type": "official",
     "items": [

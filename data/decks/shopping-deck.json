@@ -998,7 +998,8 @@
     "nativeLang": "ru",
     "title": "Покупки за границей",
     "categories": [
-      "shopping"
+      "shopping",
+      "travelLeisure"
     ],
     "type": "official",
     "items": [

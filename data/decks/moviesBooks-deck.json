@@ -317,7 +317,8 @@
     "nativeLang": "ru",
     "title": "Эмоции героев",
     "categories": [
-      "moviesBooks"
+      "moviesBooks",
+      "emotionsRelationships"
     ],
     "type": "official",
     "items": [
@@ -516,7 +517,8 @@
     "nativeLang": "ru",
     "title": "Книжный магазин и библиотека",
     "categories": [
-      "moviesBooks"
+      "moviesBooks",
+      "study"
     ],
     "type": "official",
     "items": [

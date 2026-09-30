@@ -1164,7 +1164,8 @@
     "nativeLang": "ru",
     "title": "Кружки и курсы",
     "categories": [
-      "sportsHobbies"
+      "sportsHobbies",
+      "study"
     ],
     "type": "official",
     "items": [

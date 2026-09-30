@@ -521,7 +521,8 @@
     "title": "Семья",
     "categories": [
       "firstSteps",
-      "homeLife"
+      "homeLife",
+      "emotionsRelationships"
     ],
     "type": "official",
     "items": [
@@ -1641,7 +1642,8 @@
     "nativeLang": "ru",
     "title": "Самочувствие",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "emotionsRelationships"
     ],
     "type": "official",
     "items": [

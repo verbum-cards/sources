@@ -1,0 +1,661 @@
+[
+  {
+    "id": "01a0f209-e04a-7962-825f-02dfbc504b7d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Школьные предметы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "grammar",
+        "importance": 2
+      },
+      {
+        "lemma": "history",
+        "importance": 2
+      },
+      {
+        "lemma": "math",
+        "importance": 2
+      },
+      {
+        "lemma": "science",
+        "importance": 2
+      },
+      {
+        "lemma": "biology",
+        "importance": 2
+      },
+      {
+        "lemma": "chemistry",
+        "importance": 2
+      },
+      {
+        "lemma": "geography",
+        "importance": 2
+      },
+      {
+        "lemma": "gym",
+        "importance": 2
+      },
+      {
+        "lemma": "literature",
+        "importance": 2
+      },
+      {
+        "lemma": "mathematics",
+        "importance": 2
+      },
+      {
+        "lemma": "physics",
+        "importance": 2
+      },
+      {
+        "lemma": "biochemistry",
+        "importance": 2
+      },
+      {
+        "lemma": "gymnastics",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7f97-9235-c1362f2a2392",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Университет",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "college",
+        "importance": 2
+      },
+      {
+        "lemma": "campus",
+        "importance": 2
+      },
+      {
+        "lemma": "degree",
+        "importance": 2
+      },
+      {
+        "lemma": "semester",
+        "importance": 2
+      },
+      {
+        "lemma": "university",
+        "importance": 2
+      },
+      {
+        "lemma": "department",
+        "importance": 2
+      },
+      {
+        "lemma": "lecture",
+        "importance": 2
+      },
+      {
+        "lemma": "faculty",
+        "importance": 2
+      },
+      {
+        "lemma": "lecturer",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7565-b434-2c7da32c4332",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поступление",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "requirement",
+        "importance": 2
+      },
+      {
+        "lemma": "apply",
+        "importance": 2
+      },
+      {
+        "lemma": "acceptance",
+        "importance": 2
+      },
+      {
+        "lemma": "admission",
+        "importance": 2
+      },
+      {
+        "lemma": "application",
+        "importance": 2
+      },
+      {
+        "lemma": "scholarship",
+        "importance": 2
+      },
+      {
+        "lemma": "enroll",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-70ec-b0c7-b0dcede0026f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Преподаватель",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "teacher",
+        "importance": 2
+      },
+      {
+        "lemma": "instructor",
+        "importance": 2
+      },
+      {
+        "lemma": "professor",
+        "importance": 2
+      },
+      {
+        "lemma": "lecturer",
+        "importance": 2
+      },
+      {
+        "lemma": "mentor",
+        "importance": 2
+      },
+      {
+        "lemma": "supervisor",
+        "importance": 2
+      },
+      {
+        "lemma": "tutor",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7a01-a461-5ed4d8da2cfa",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Домашнее задание",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "exercise",
+        "importance": 2
+      },
+      {
+        "lemma": "homework",
+        "importance": 2
+      },
+      {
+        "lemma": "task",
+        "importance": 2
+      },
+      {
+        "lemma": "assignment",
+        "importance": 2
+      },
+      {
+        "lemma": "submit",
+        "importance": 2
+      },
+      {
+        "lemma": "due",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-70c9-b403-126510970af3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Экзамены и оценки",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "grade",
+        "importance": 2
+      },
+      {
+        "lemma": "result",
+        "importance": 2
+      },
+      {
+        "lemma": "test",
+        "importance": 2
+      },
+      {
+        "lemma": "exam",
+        "importance": 2
+      },
+      {
+        "lemma": "fail",
+        "importance": 2
+      },
+      {
+        "lemma": "mark",
+        "importance": 2
+      },
+      {
+        "lemma": "examination",
+        "importance": 2
+      },
+      {
+        "lemma": "examiner",
+        "importance": 2
+      },
+      {
+        "lemma": "failure",
+        "importance": 2
+      },
+      {
+        "lemma": "revise",
+        "importance": 2
+      },
+      {
+        "lemma": "revision",
+        "importance": 2
+      },
+      {
+        "lemma": "score",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-72a9-835c-5b29c170f89d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Письменные работы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "paragraph",
+        "importance": 2
+      },
+      {
+        "lemma": "write",
+        "importance": 2
+      },
+      {
+        "lemma": "writer",
+        "importance": 2
+      },
+      {
+        "lemma": "essay",
+        "importance": 2
+      },
+      {
+        "lemma": "writing",
+        "importance": 2
+      },
+      {
+        "lemma": "handwriting",
+        "importance": 2
+      },
+      {
+        "lemma": "outline",
+        "importance": 2
+      },
+      {
+        "lemma": "rewrite",
+        "importance": 2
+      },
+      {
+        "lemma": "draft",
+        "importance": 2
+      },
+      {
+        "lemma": "reference",
+        "importance": 2
+      },
+      {
+        "lemma": "thesis",
+        "importance": 2
+      },
+      {
+        "lemma": "citation",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7edb-9364-bfc29ec40e02",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Академическая речь",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "claim",
+        "importance": 2
+      },
+      {
+        "lemma": "evidence",
+        "importance": 2
+      },
+      {
+        "lemma": "however",
+        "importance": 2
+      },
+      {
+        "lemma": "therefore",
+        "importance": 2
+      },
+      {
+        "lemma": "analysis",
+        "importance": 2
+      },
+      {
+        "lemma": "analyze",
+        "importance": 2
+      },
+      {
+        "lemma": "conclude",
+        "importance": 2
+      },
+      {
+        "lemma": "conclusion",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7498-a418-dc8656f4b120",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Групповой проект",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "deadline",
+        "importance": 2
+      },
+      {
+        "lemma": "group",
+        "importance": 2
+      },
+      {
+        "lemma": "role",
+        "importance": 2
+      },
+      {
+        "lemma": "divide",
+        "importance": 2
+      },
+      {
+        "lemma": "grouping",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "divided",
+        "importance": 2
+      },
+      {
+        "lemma": "project",
+        "importance": 2
+      },
+      {
+        "lemma": "collaborate",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7f0f-825e-cbba60e6fbb7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Онлайн-курсы",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "certificate",
+        "importance": 2
+      },
+      {
+        "lemma": "enroll",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7487-8e47-4c82a610dbae",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Изучение языков",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "grammar",
+        "importance": 2
+      },
+      {
+        "lemma": "practice",
+        "importance": 2
+      },
+      {
+        "lemma": "pronunciation",
+        "importance": 2
+      },
+      {
+        "lemma": "vocabulary",
+        "importance": 2
+      },
+      {
+        "lemma": "fluent",
+        "importance": 2
+      },
+      {
+        "lemma": "fluently",
+        "importance": 2
+      },
+      {
+        "lemma": "translate",
+        "importance": 2
+      },
+      {
+        "lemma": "fluency",
+        "importance": 2
+      },
+      {
+        "lemma": "native speaker",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7035-9b45-174853e1d65d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Учёба за границей",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "abroad",
+        "importance": 2
+      },
+      {
+        "lemma": "visa",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7441-9564-56801cd34db7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Студенческая жизнь",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "student",
+        "importance": 2
+      },
+      {
+        "lemma": "campus",
+        "importance": 2
+      },
+      {
+        "lemma": "graduate",
+        "importance": 2
+      },
+      {
+        "lemma": "freshman",
+        "importance": 2
+      },
+      {
+        "lemma": "dorm",
+        "importance": 2
+      },
+      {
+        "lemma": "dormitory",
+        "importance": 2
+      },
+      {
+        "lemma": "roommate",
+        "importance": 2
+      },
+      {
+        "lemma": "undergraduate",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-7036-a3bb-5f7b0ee9cb34",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Тайм-менеджмент и мотивация",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "focus",
+        "importance": 2
+      },
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "motivation",
+        "importance": 2
+      },
+      {
+        "lemma": "productive",
+        "importance": 2
+      },
+      {
+        "lemma": "distraction",
+        "importance": 2
+      },
+      {
+        "lemma": "motivated",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f209-e04a-71de-882e-342ddaf2b9c2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Учёба с другом",
+    "categories": [
+      "study"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "classmate",
+        "importance": 2
+      },
+      {
+        "lemma": "explain",
+        "importance": 2
+      },
+      {
+        "lemma": "quiz",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]
