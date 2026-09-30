@@ -901,7 +901,8 @@
     "nativeLang": "ru",
     "title": "Жалобы и возвраты",
     "categories": [
-      "abroad"
+      "abroad",
+      "shopping"
     ],
     "type": "official",
     "importance": 2,
@@ -2621,7 +2622,8 @@
     "nativeLang": "ru",
     "title": "Одежда",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "shopping"
     ],
     "type": "official",
     "importance": 1,
@@ -4905,10 +4907,6 @@
         "importance": 2
       },
       {
-        "lemma": "aisle",
-        "importance": 2
-      },
-      {
         "lemma": "alarm",
         "importance": 2
       },
@@ -5257,10 +5255,6 @@
         "importance": 2
       },
       {
-        "lemma": "armchair",
-        "importance": 2
-      },
-      {
         "lemma": "armful",
         "importance": 2
       },
@@ -5585,10 +5579,6 @@
         "importance": 2
       },
       {
-        "lemma": "bargain",
-        "importance": 2
-      },
-      {
         "lemma": "bark",
         "importance": 2
       },
@@ -5630,10 +5620,6 @@
       },
       {
         "lemma": "basis",
-        "importance": 2
-      },
-      {
-        "lemma": "basket",
         "importance": 2
       },
       {
@@ -5710,14 +5696,6 @@
       },
       {
         "lemma": "beaver",
-        "importance": 2
-      },
-      {
-        "lemma": "bed",
-        "importance": 2
-      },
-      {
-        "lemma": "bedside",
         "importance": 2
       },
       {
@@ -5834,10 +5812,6 @@
       },
       {
         "lemma": "birdcage",
-        "importance": 2
-      },
-      {
-        "lemma": "birthday",
         "importance": 2
       },
       {
@@ -5990,10 +5964,6 @@
       },
       {
         "lemma": "boost",
-        "importance": 2
-      },
-      {
-        "lemma": "boot",
         "importance": 2
       },
       {
@@ -6342,10 +6312,6 @@
       },
       {
         "lemma": "cabinet",
-        "importance": 2
-      },
-      {
-        "lemma": "cable",
         "importance": 2
       },
       {
@@ -7677,15 +7643,7 @@
         "importance": 2
       },
       {
-        "lemma": "cost",
-        "importance": 2
-      },
-      {
         "lemma": "costume",
-        "importance": 2
-      },
-      {
-        "lemma": "cotton",
         "importance": 2
       },
       {
@@ -7766,10 +7724,6 @@
       },
       {
         "lemma": "craving",
-        "importance": 2
-      },
-      {
-        "lemma": "cream",
         "importance": 2
       },
       {
@@ -7929,10 +7883,6 @@
         "importance": 2
       },
       {
-        "lemma": "currency",
-        "importance": 2
-      },
-      {
         "lemma": "curriculum",
         "importance": 2
       },
@@ -7949,23 +7899,7 @@
         "importance": 2
       },
       {
-        "lemma": "curtain",
-        "importance": 2
-      },
-      {
         "lemma": "curve",
-        "importance": 2
-      },
-      {
-        "lemma": "cushion",
-        "importance": 2
-      },
-      {
-        "lemma": "customer",
-        "importance": 2
-      },
-      {
-        "lemma": "customs",
         "importance": 2
       },
       {
@@ -8082,14 +8016,6 @@
       },
       {
         "lemma": "dazzle",
-        "importance": 2
-      },
-      {
-        "lemma": "deal",
-        "importance": 2
-      },
-      {
-        "lemma": "dealer",
         "importance": 2
       },
       {
@@ -8253,10 +8179,6 @@
         "importance": 2
       },
       {
-        "lemma": "denim",
-        "importance": 2
-      },
-      {
         "lemma": "denotation",
         "importance": 2
       },
@@ -8266,10 +8188,6 @@
       },
       {
         "lemma": "department",
-        "importance": 2
-      },
-      {
-        "lemma": "department store",
         "importance": 2
       },
       {
@@ -8558,10 +8476,6 @@
       },
       {
         "lemma": "discomfort",
-        "importance": 2
-      },
-      {
-        "lemma": "discount",
         "importance": 2
       },
       {
@@ -9113,10 +9027,6 @@
         "importance": 2
       },
       {
-        "lemma": "electronics",
-        "importance": 2
-      },
-      {
         "lemma": "elegance",
         "importance": 2
       },
@@ -9489,10 +9399,6 @@
         "importance": 2
       },
       {
-        "lemma": "exchange rate",
-        "importance": 2
-      },
-      {
         "lemma": "excitement",
         "importance": 2
       },
@@ -9593,10 +9499,6 @@
         "importance": 2
       },
       {
-        "lemma": "export",
-        "importance": 2
-      },
-      {
         "lemma": "expression",
         "importance": 2
       },
@@ -9630,10 +9532,6 @@
       },
       {
         "lemma": "exuberance",
-        "importance": 2
-      },
-      {
-        "lemma": "fabric",
         "importance": 2
       },
       {
@@ -9905,10 +9803,6 @@
         "importance": 2
       },
       {
-        "lemma": "first floor",
-        "importance": 2
-      },
-      {
         "lemma": "first lady",
         "importance": 2
       },
@@ -10006,10 +9900,6 @@
       },
       {
         "lemma": "floodgates",
-        "importance": 2
-      },
-      {
-        "lemma": "flour",
         "importance": 2
       },
       {
@@ -10273,14 +10163,6 @@
         "importance": 2
       },
       {
-        "lemma": "fur",
-        "importance": 2
-      },
-      {
-        "lemma": "furniture",
-        "importance": 2
-      },
-      {
         "lemma": "furor",
         "importance": 2
       },
@@ -10294,10 +10176,6 @@
       },
       {
         "lemma": "future",
-        "importance": 2
-      },
-      {
-        "lemma": "gadget",
         "importance": 2
       },
       {
@@ -10438,10 +10316,6 @@
       },
       {
         "lemma": "ghost",
-        "importance": 2
-      },
-      {
-        "lemma": "gift",
         "importance": 2
       },
       {
@@ -10661,10 +10535,6 @@
         "importance": 2
       },
       {
-        "lemma": "grapefruit",
-        "importance": 2
-      },
-      {
         "lemma": "graph",
         "importance": 2
       },
@@ -10725,19 +10595,11 @@
         "importance": 2
       },
       {
-        "lemma": "grocery store",
-        "importance": 2
-      },
-      {
         "lemma": "groom",
         "importance": 2
       },
       {
         "lemma": "ground",
-        "importance": 2
-      },
-      {
-        "lemma": "ground floor",
         "importance": 2
       },
       {
@@ -10969,10 +10831,6 @@
         "importance": 2
       },
       {
-        "lemma": "headphone",
-        "importance": 2
-      },
-      {
         "lemma": "headquarters",
         "importance": 2
       },
@@ -11014,10 +10872,6 @@
       },
       {
         "lemma": "hedgehog",
-        "importance": 2
-      },
-      {
-        "lemma": "heel",
         "importance": 2
       },
       {
@@ -12129,10 +11983,6 @@
         "importance": 2
       },
       {
-        "lemma": "lamp",
-        "importance": 2
-      },
-      {
         "lemma": "lance",
         "importance": 2
       },
@@ -12158,10 +12008,6 @@
       },
       {
         "lemma": "lapse",
-        "importance": 2
-      },
-      {
-        "lemma": "laptop",
         "importance": 2
       },
       {
@@ -12254,10 +12100,6 @@
       },
       {
         "lemma": "leash",
-        "importance": 2
-      },
-      {
-        "lemma": "leather",
         "importance": 2
       },
       {
@@ -12386,10 +12228,6 @@
       },
       {
         "lemma": "limitation",
-        "importance": 2
-      },
-      {
-        "lemma": "linen",
         "importance": 2
       },
       {
@@ -12609,10 +12447,6 @@
         "importance": 2
       },
       {
-        "lemma": "mall",
-        "importance": 2
-      },
-      {
         "lemma": "malleability",
         "importance": 2
       },
@@ -12626,10 +12460,6 @@
       },
       {
         "lemma": "management",
-        "importance": 2
-      },
-      {
-        "lemma": "manager",
         "importance": 2
       },
       {
@@ -12738,10 +12568,6 @@
       },
       {
         "lemma": "mate",
-        "importance": 2
-      },
-      {
-        "lemma": "material",
         "importance": 2
       },
       {
@@ -12937,10 +12763,6 @@
         "importance": 2
       },
       {
-        "lemma": "microphone",
-        "importance": 2
-      },
-      {
         "lemma": "microscope",
         "importance": 2
       },
@@ -13022,10 +12844,6 @@
       },
       {
         "lemma": "miracle",
-        "importance": 2
-      },
-      {
-        "lemma": "mirror",
         "importance": 2
       },
       {
@@ -13617,10 +13435,6 @@
         "importance": 2
       },
       {
-        "lemma": "occasion",
-        "importance": 2
-      },
-      {
         "lemma": "occupant",
         "importance": 2
       },
@@ -13645,23 +13459,11 @@
         "importance": 2
       },
       {
-        "lemma": "offer",
-        "importance": 2
-      },
-      {
         "lemma": "offspring",
         "importance": 2
       },
       {
-        "lemma": "oil",
-        "importance": 2
-      },
-      {
         "lemma": "olive",
-        "importance": 2
-      },
-      {
-        "lemma": "olive oil",
         "importance": 2
       },
       {
@@ -14089,10 +13891,6 @@
         "importance": 2
       },
       {
-        "lemma": "pattern",
-        "importance": 2
-      },
-      {
         "lemma": "pause",
         "importance": 2
       },
@@ -14221,14 +14019,6 @@
         "importance": 2
       },
       {
-        "lemma": "percent",
-        "importance": 2
-      },
-      {
-        "lemma": "percentage",
-        "importance": 2
-      },
-      {
         "lemma": "perception",
         "importance": 2
       },
@@ -14238,10 +14028,6 @@
       },
       {
         "lemma": "performer",
-        "importance": 2
-      },
-      {
-        "lemma": "perfume",
         "importance": 2
       },
       {
@@ -14873,10 +14659,6 @@
         "importance": 2
       },
       {
-        "lemma": "present",
-        "importance": 2
-      },
-      {
         "lemma": "presentation",
         "importance": 2
       },
@@ -15078,10 +14860,6 @@
       },
       {
         "lemma": "promise",
-        "importance": 2
-      },
-      {
-        "lemma": "promotion",
         "importance": 2
       },
       {
@@ -15993,10 +15771,6 @@
         "importance": 2
       },
       {
-        "lemma": "review",
-        "importance": 2
-      },
-      {
         "lemma": "revision",
         "importance": 2
       },
@@ -16161,10 +15935,6 @@
         "importance": 2
       },
       {
-        "lemma": "rug",
-        "importance": 2
-      },
-      {
         "lemma": "rugby",
         "importance": 2
       },
@@ -16245,26 +16015,6 @@
         "importance": 2
       },
       {
-        "lemma": "sale",
-        "importance": 2
-      },
-      {
-        "lemma": "salesman",
-        "importance": 2
-      },
-      {
-        "lemma": "salesmanship",
-        "importance": 2
-      },
-      {
-        "lemma": "salesperson",
-        "importance": 2
-      },
-      {
-        "lemma": "saleswoman",
-        "importance": 2
-      },
-      {
         "lemma": "salmon",
         "importance": 2
       },
@@ -16281,10 +16031,6 @@
         "importance": 2
       },
       {
-        "lemma": "salt",
-        "importance": 2
-      },
-      {
         "lemma": "salvation",
         "importance": 2
       },
@@ -16298,10 +16044,6 @@
       },
       {
         "lemma": "sand",
-        "importance": 2
-      },
-      {
-        "lemma": "sandal",
         "importance": 2
       },
       {
@@ -16705,10 +16447,6 @@
         "importance": 2
       },
       {
-        "lemma": "shampoo",
-        "importance": 2
-      },
-      {
         "lemma": "shape",
         "importance": 2
       },
@@ -16722,10 +16460,6 @@
       },
       {
         "lemma": "sheet",
-        "importance": 2
-      },
-      {
-        "lemma": "shelf",
         "importance": 2
       },
       {
@@ -16765,10 +16499,6 @@
         "importance": 2
       },
       {
-        "lemma": "shop assistant",
-        "importance": 2
-      },
-      {
         "lemma": "shopkeeper",
         "importance": 2
       },
@@ -16778,14 +16508,6 @@
       },
       {
         "lemma": "shoplifting",
-        "importance": 2
-      },
-      {
-        "lemma": "shopper",
-        "importance": 2
-      },
-      {
-        "lemma": "shopping",
         "importance": 2
       },
       {
@@ -16849,10 +16571,6 @@
         "importance": 2
       },
       {
-        "lemma": "silk",
-        "importance": 2
-      },
-      {
         "lemma": "silverware",
         "importance": 2
       },
@@ -16890,10 +16608,6 @@
       },
       {
         "lemma": "situation",
-        "importance": 2
-      },
-      {
-        "lemma": "size",
         "importance": 2
       },
       {
@@ -17037,10 +16751,6 @@
         "importance": 2
       },
       {
-        "lemma": "soap",
-        "importance": 2
-      },
-      {
         "lemma": "soap opera",
         "importance": 2
       },
@@ -17054,10 +16764,6 @@
       },
       {
         "lemma": "sock",
-        "importance": 2
-      },
-      {
-        "lemma": "sofa",
         "importance": 2
       },
       {
@@ -17142,10 +16848,6 @@
       },
       {
         "lemma": "source",
-        "importance": 2
-      },
-      {
-        "lemma": "souvenir",
         "importance": 2
       },
       {
@@ -17589,10 +17291,6 @@
         "importance": 2
       },
       {
-        "lemma": "stripe",
-        "importance": 2
-      },
-      {
         "lemma": "stroke",
         "importance": 2
       },
@@ -17706,10 +17404,6 @@
       },
       {
         "lemma": "suffix",
-        "importance": 2
-      },
-      {
-        "lemma": "sugar",
         "importance": 2
       },
       {
@@ -17845,10 +17539,6 @@
         "importance": 2
       },
       {
-        "lemma": "surprise",
-        "importance": 2
-      },
-      {
         "lemma": "surrealism",
         "importance": 2
       },
@@ -17958,10 +17648,6 @@
       },
       {
         "lemma": "table tennis",
-        "importance": 2
-      },
-      {
-        "lemma": "tablecloth",
         "importance": 2
       },
       {
@@ -18094,10 +17780,6 @@
       },
       {
         "lemma": "telegram",
-        "importance": 2
-      },
-      {
-        "lemma": "telephone",
         "importance": 2
       },
       {
@@ -18610,10 +18292,6 @@
       },
       {
         "lemma": "triumph",
-        "importance": 2
-      },
-      {
-        "lemma": "trolley",
         "importance": 2
       },
       {
@@ -19165,10 +18843,6 @@
         "importance": 2
       },
       {
-        "lemma": "wardrobe",
-        "importance": 2
-      },
-      {
         "lemma": "wares",
         "importance": 2
       },
@@ -19258,10 +18932,6 @@
       },
       {
         "lemma": "webcam",
-        "importance": 2
-      },
-      {
-        "lemma": "website",
         "importance": 2
       },
       {
@@ -19365,10 +19035,6 @@
         "importance": 2
       },
       {
-        "lemma": "wire",
-        "importance": 2
-      },
-      {
         "lemma": "wisdom",
         "importance": 2
       },
@@ -19394,10 +19060,6 @@
       },
       {
         "lemma": "woodcarving",
-        "importance": 2
-      },
-      {
-        "lemma": "wool",
         "importance": 2
       },
       {
@@ -19429,10 +19091,6 @@
         "importance": 2
       },
       {
-        "lemma": "worktable",
-        "importance": 2
-      },
-      {
         "lemma": "world",
         "importance": 2
       },
@@ -19450,14 +19108,6 @@
       },
       {
         "lemma": "worship",
-        "importance": 2
-      },
-      {
-        "lemma": "wrap",
-        "importance": 2
-      },
-      {
-        "lemma": "wrapping",
         "importance": 2
       },
       {
@@ -19642,10 +19292,6 @@
       },
       {
         "lemma": "affect",
-        "importance": 2
-      },
-      {
-        "lemma": "afford",
         "importance": 2
       },
       {
@@ -21337,10 +20983,6 @@
         "importance": 2
       },
       {
-        "lemma": "haggle",
-        "importance": 2
-      },
-      {
         "lemma": "hail",
         "importance": 2
       },
@@ -21502,10 +21144,6 @@
       },
       {
         "lemma": "imply",
-        "importance": 2
-      },
-      {
-        "lemma": "import",
         "importance": 2
       },
       {
@@ -23889,10 +23527,6 @@
         "importance": 2
       },
       {
-        "lemma": "affordable",
-        "importance": 2
-      },
-      {
         "lemma": "aged",
         "importance": 2
       },
@@ -24565,10 +24199,6 @@
         "importance": 2
       },
       {
-        "lemma": "cheap",
-        "importance": 2
-      },
-      {
         "lemma": "cheeky",
         "importance": 2
       },
@@ -24922,10 +24552,6 @@
       },
       {
         "lemma": "cost-effective",
-        "importance": 2
-      },
-      {
-        "lemma": "costly",
         "importance": 2
       },
       {
@@ -25381,10 +25007,6 @@
         "importance": 2
       },
       {
-        "lemma": "duty-free",
-        "importance": 2
-      },
-      {
         "lemma": "dynamic",
         "importance": 2
       },
@@ -25478,10 +25100,6 @@
       },
       {
         "lemma": "electrical",
-        "importance": 2
-      },
-      {
-        "lemma": "electronic",
         "importance": 2
       },
       {
@@ -25693,10 +25311,6 @@
         "importance": 2
       },
       {
-        "lemma": "expensive",
-        "importance": 2
-      },
-      {
         "lemma": "experienced",
         "importance": 2
       },
@@ -25838,10 +25452,6 @@
       },
       {
         "lemma": "fatal",
-        "importance": 2
-      },
-      {
-        "lemma": "faulty",
         "importance": 2
       },
       {
@@ -26121,10 +25731,6 @@
         "importance": 2
       },
       {
-        "lemma": "gifted",
-        "importance": 2
-      },
-      {
         "lemma": "given",
         "importance": 2
       },
@@ -26246,10 +25852,6 @@
       },
       {
         "lemma": "hairy",
-        "importance": 2
-      },
-      {
-        "lemma": "half-price",
         "importance": 2
       },
       {
@@ -26742,10 +26344,6 @@
       },
       {
         "lemma": "inexorable",
-        "importance": 2
-      },
-      {
-        "lemma": "inexpensive",
         "importance": 2
       },
       {
@@ -27813,10 +27411,6 @@
         "importance": 2
       },
       {
-        "lemma": "occasional",
-        "importance": 2
-      },
-      {
         "lemma": "occupational",
         "importance": 2
       },
@@ -28865,10 +28459,6 @@
         "importance": 2
       },
       {
-        "lemma": "rude",
-        "importance": 2
-      },
-      {
         "lemma": "rudimentary",
         "importance": 2
       },
@@ -29525,10 +29115,6 @@
         "importance": 2
       },
       {
-        "lemma": "surprised",
-        "importance": 2
-      },
-      {
         "lemma": "surprising",
         "importance": 2
       },
@@ -29798,10 +29384,6 @@
       },
       {
         "lemma": "torturous",
-        "importance": 2
-      },
-      {
-        "lemma": "total",
         "importance": 2
       },
       {
@@ -31681,10 +31263,6 @@
         "importance": 2
       },
       {
-        "lemma": "electronically",
-        "importance": 2
-      },
-      {
         "lemma": "elegantly",
         "importance": 2
       },
@@ -32865,10 +32443,6 @@
         "importance": 2
       },
       {
-        "lemma": "occasionally",
-        "importance": 2
-      },
-      {
         "lemma": "of",
         "importance": 2
       },
@@ -33322,10 +32896,6 @@
       },
       {
         "lemma": "round",
-        "importance": 2
-      },
-      {
-        "lemma": "rudely",
         "importance": 2
       },
       {
@@ -34214,6 +33784,1038 @@
       },
       {
         "lemma": "yourself",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-72c2-b0a9-51253c684393",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "В магазине",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "aisle",
+        "importance": 2
+      },
+      {
+        "lemma": "basket",
+        "importance": 2
+      },
+      {
+        "lemma": "customer",
+        "importance": 2
+      },
+      {
+        "lemma": "department store",
+        "importance": 2
+      },
+      {
+        "lemma": "grocery store",
+        "importance": 2
+      },
+      {
+        "lemma": "shelf",
+        "importance": 2
+      },
+      {
+        "lemma": "shop",
+        "importance": 2
+      },
+      {
+        "lemma": "shop assistant",
+        "importance": 2
+      },
+      {
+        "lemma": "shopper",
+        "importance": 2
+      },
+      {
+        "lemma": "shopping",
+        "importance": 2
+      },
+      {
+        "lemma": "store",
+        "importance": 2
+      },
+      {
+        "lemma": "trolley",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-741c-a134-f17e63885631",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Цены и оплата",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "card",
+        "importance": 2
+      },
+      {
+        "lemma": "cash",
+        "importance": 2
+      },
+      {
+        "lemma": "cashpoint",
+        "importance": 2
+      },
+      {
+        "lemma": "change",
+        "importance": 2
+      },
+      {
+        "lemma": "cost",
+        "importance": 2
+      },
+      {
+        "lemma": "credit card",
+        "importance": 2
+      },
+      {
+        "lemma": "debit card",
+        "importance": 2
+      },
+      {
+        "lemma": "discount",
+        "importance": 2
+      },
+      {
+        "lemma": "exchange",
+        "importance": 2
+      },
+      {
+        "lemma": "exchange rate",
+        "importance": 2
+      },
+      {
+        "lemma": "pay",
+        "importance": 2
+      },
+      {
+        "lemma": "payment",
+        "importance": 2
+      },
+      {
+        "lemma": "price",
+        "importance": 2
+      },
+      {
+        "lemma": "receipt",
+        "importance": 2
+      },
+      {
+        "lemma": "afford",
+        "importance": 2
+      },
+      {
+        "lemma": "affordable",
+        "importance": 2
+      },
+      {
+        "lemma": "cheap",
+        "importance": 2
+      },
+      {
+        "lemma": "costly",
+        "importance": 2
+      },
+      {
+        "lemma": "expensive",
+        "importance": 2
+      },
+      {
+        "lemma": "half-price",
+        "importance": 2
+      },
+      {
+        "lemma": "inexpensive",
+        "importance": 2
+      },
+      {
+        "lemma": "total",
+        "importance": 2
+      },
+      {
+        "lemma": "to pay by card",
+        "importance": 2
+      },
+      {
+        "lemma": "How much will it cost?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7d7d-8348-b6b6737032bc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обувь",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "boot",
+        "importance": 2
+      },
+      {
+        "lemma": "heel",
+        "importance": 2
+      },
+      {
+        "lemma": "sandal",
+        "importance": 2
+      },
+      {
+        "lemma": "shoe",
+        "importance": 2
+      },
+      {
+        "lemma": "size",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-70ac-8c96-da3862f6ebe0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Цвета, ткани и узоры",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "color",
+        "importance": 2
+      },
+      {
+        "lemma": "cotton",
+        "importance": 2
+      },
+      {
+        "lemma": "denim",
+        "importance": 2
+      },
+      {
+        "lemma": "fabric",
+        "importance": 2
+      },
+      {
+        "lemma": "fur",
+        "importance": 2
+      },
+      {
+        "lemma": "leather",
+        "importance": 2
+      },
+      {
+        "lemma": "linen",
+        "importance": 2
+      },
+      {
+        "lemma": "material",
+        "importance": 2
+      },
+      {
+        "lemma": "pattern",
+        "importance": 2
+      },
+      {
+        "lemma": "purple",
+        "importance": 2
+      },
+      {
+        "lemma": "silk",
+        "importance": 2
+      },
+      {
+        "lemma": "stripe",
+        "importance": 2
+      },
+      {
+        "lemma": "wool",
+        "importance": 2
+      },
+      {
+        "lemma": "black",
+        "importance": 2
+      },
+      {
+        "lemma": "blue",
+        "importance": 2
+      },
+      {
+        "lemma": "bright",
+        "importance": 2
+      },
+      {
+        "lemma": "brown",
+        "importance": 2
+      },
+      {
+        "lemma": "gold",
+        "importance": 2
+      },
+      {
+        "lemma": "gray",
+        "importance": 2
+      },
+      {
+        "lemma": "green",
+        "importance": 2
+      },
+      {
+        "lemma": "orange",
+        "importance": 2
+      },
+      {
+        "lemma": "pink",
+        "importance": 2
+      },
+      {
+        "lemma": "red",
+        "importance": 2
+      },
+      {
+        "lemma": "white",
+        "importance": 2
+      },
+      {
+        "lemma": "yellow",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7b1c-80c2-66f2dccea4d7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Продукты",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bread",
+        "importance": 2
+      },
+      {
+        "lemma": "cheese",
+        "importance": 2
+      },
+      {
+        "lemma": "egg",
+        "importance": 2
+      },
+      {
+        "lemma": "fish",
+        "importance": 2
+      },
+      {
+        "lemma": "flour",
+        "importance": 2
+      },
+      {
+        "lemma": "fruit",
+        "importance": 2
+      },
+      {
+        "lemma": "grapefruit",
+        "importance": 2
+      },
+      {
+        "lemma": "meat",
+        "importance": 2
+      },
+      {
+        "lemma": "milk",
+        "importance": 2
+      },
+      {
+        "lemma": "oil",
+        "importance": 2
+      },
+      {
+        "lemma": "olive oil",
+        "importance": 2
+      },
+      {
+        "lemma": "rice",
+        "importance": 2
+      },
+      {
+        "lemma": "salt",
+        "importance": 2
+      },
+      {
+        "lemma": "sugar",
+        "importance": 2
+      },
+      {
+        "lemma": "vegetable",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7f81-bdcd-cf8479d3fc90",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рынок",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bargain",
+        "importance": 2
+      },
+      {
+        "lemma": "market",
+        "importance": 2
+      },
+      {
+        "lemma": "stall",
+        "importance": 2
+      },
+      {
+        "lemma": "stand",
+        "importance": 2
+      },
+      {
+        "lemma": "supermarket",
+        "importance": 2
+      },
+      {
+        "lemma": "haggle",
+        "importance": 2
+      },
+      {
+        "lemma": "fresh",
+        "importance": 2
+      },
+      {
+        "lemma": "local",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-78c9-98e6-4c5f96d03176",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аптека и косметика",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "capsule",
+        "importance": 2
+      },
+      {
+        "lemma": "cream",
+        "importance": 2
+      },
+      {
+        "lemma": "dose",
+        "importance": 2
+      },
+      {
+        "lemma": "drug",
+        "importance": 2
+      },
+      {
+        "lemma": "drugstore",
+        "importance": 2
+      },
+      {
+        "lemma": "medication",
+        "importance": 2
+      },
+      {
+        "lemma": "medicine",
+        "importance": 2
+      },
+      {
+        "lemma": "ointment",
+        "importance": 2
+      },
+      {
+        "lemma": "perfume",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacist",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacy",
+        "importance": 2
+      },
+      {
+        "lemma": "pill",
+        "importance": 2
+      },
+      {
+        "lemma": "prescription",
+        "importance": 2
+      },
+      {
+        "lemma": "shampoo",
+        "importance": 2
+      },
+      {
+        "lemma": "soap",
+        "importance": 2
+      },
+      {
+        "lemma": "toothpaste",
+        "importance": 2
+      },
+      {
+        "lemma": "vitamin",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-71f9-88e2-f2c116d924aa",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Электроника",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "battery",
+        "importance": 2
+      },
+      {
+        "lemma": "cable",
+        "importance": 2
+      },
+      {
+        "lemma": "charger",
+        "importance": 2
+      },
+      {
+        "lemma": "computer",
+        "importance": 2
+      },
+      {
+        "lemma": "device",
+        "importance": 2
+      },
+      {
+        "lemma": "electronics",
+        "importance": 2
+      },
+      {
+        "lemma": "gadget",
+        "importance": 2
+      },
+      {
+        "lemma": "headphone",
+        "importance": 2
+      },
+      {
+        "lemma": "laptop",
+        "importance": 2
+      },
+      {
+        "lemma": "microphone",
+        "importance": 2
+      },
+      {
+        "lemma": "mobile phone",
+        "importance": 2
+      },
+      {
+        "lemma": "phone",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "telephone",
+        "importance": 2
+      },
+      {
+        "lemma": "wire",
+        "importance": 2
+      },
+      {
+        "lemma": "electronic",
+        "importance": 2
+      },
+      {
+        "lemma": "electronically",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7a2a-bb8f-93355bd57d41",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Распродажи и акции",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bargain",
+        "importance": 2
+      },
+      {
+        "lemma": "deal",
+        "importance": 2
+      },
+      {
+        "lemma": "dealer",
+        "importance": 2
+      },
+      {
+        "lemma": "discount",
+        "importance": 2
+      },
+      {
+        "lemma": "offer",
+        "importance": 2
+      },
+      {
+        "lemma": "percent",
+        "importance": 2
+      },
+      {
+        "lemma": "percentage",
+        "importance": 2
+      },
+      {
+        "lemma": "promotion",
+        "importance": 2
+      },
+      {
+        "lemma": "sale",
+        "importance": 2
+      },
+      {
+        "lemma": "salesman",
+        "importance": 2
+      },
+      {
+        "lemma": "salesmanship",
+        "importance": 2
+      },
+      {
+        "lemma": "salesperson",
+        "importance": 2
+      },
+      {
+        "lemma": "saleswoman",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-760c-9f0d-f39e189ce56a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Онлайн-покупки",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "password",
+        "importance": 2
+      },
+      {
+        "lemma": "rating",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "website",
+        "importance": 2
+      },
+      {
+        "lemma": "click",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7ce9-81b3-36fe840553b6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Доставка и получение",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "address",
+        "importance": 2
+      },
+      {
+        "lemma": "addressee",
+        "importance": 2
+      },
+      {
+        "lemma": "delivery",
+        "importance": 2
+      },
+      {
+        "lemma": "package",
+        "importance": 2
+      },
+      {
+        "lemma": "parcel",
+        "importance": 2
+      },
+      {
+        "lemma": "collect",
+        "importance": 2
+      },
+      {
+        "lemma": "deliver",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7a9f-a467-6555b4af12be",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Подарки",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "birthday",
+        "importance": 2
+      },
+      {
+        "lemma": "card",
+        "importance": 2
+      },
+      {
+        "lemma": "gift",
+        "importance": 2
+      },
+      {
+        "lemma": "occasion",
+        "importance": 2
+      },
+      {
+        "lemma": "present",
+        "importance": 2
+      },
+      {
+        "lemma": "surprise",
+        "importance": 2
+      },
+      {
+        "lemma": "wrap",
+        "importance": 2
+      },
+      {
+        "lemma": "wrapping",
+        "importance": 2
+      },
+      {
+        "lemma": "gifted",
+        "importance": 2
+      },
+      {
+        "lemma": "occasional",
+        "importance": 2
+      },
+      {
+        "lemma": "surprised",
+        "importance": 2
+      },
+      {
+        "lemma": "occasionally",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-78eb-8e37-8d974a1ce7f6",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Торговый центр",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "elevator",
+        "importance": 2
+      },
+      {
+        "lemma": "entrance",
+        "importance": 2
+      },
+      {
+        "lemma": "escalator",
+        "importance": 2
+      },
+      {
+        "lemma": "exit",
+        "importance": 2
+      },
+      {
+        "lemma": "first floor",
+        "importance": 2
+      },
+      {
+        "lemma": "floor",
+        "importance": 2
+      },
+      {
+        "lemma": "ground floor",
+        "importance": 2
+      },
+      {
+        "lemma": "mall",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7d31-ad9e-cab218a31418",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Мебель и товары для дома",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "armchair",
+        "importance": 2
+      },
+      {
+        "lemma": "bed",
+        "importance": 2
+      },
+      {
+        "lemma": "bedroom",
+        "importance": 2
+      },
+      {
+        "lemma": "bedside",
+        "importance": 2
+      },
+      {
+        "lemma": "bookshelf",
+        "importance": 2
+      },
+      {
+        "lemma": "chair",
+        "importance": 2
+      },
+      {
+        "lemma": "curtain",
+        "importance": 2
+      },
+      {
+        "lemma": "cushion",
+        "importance": 2
+      },
+      {
+        "lemma": "furniture",
+        "importance": 2
+      },
+      {
+        "lemma": "lamp",
+        "importance": 2
+      },
+      {
+        "lemma": "mirror",
+        "importance": 2
+      },
+      {
+        "lemma": "rug",
+        "importance": 2
+      },
+      {
+        "lemma": "shelf",
+        "importance": 2
+      },
+      {
+        "lemma": "sofa",
+        "importance": 2
+      },
+      {
+        "lemma": "table",
+        "importance": 2
+      },
+      {
+        "lemma": "tablecloth",
+        "importance": 2
+      },
+      {
+        "lemma": "wardrobe",
+        "importance": 2
+      },
+      {
+        "lemma": "worktable",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7fcf-81d8-c1e96432d241",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жалобы продавцу",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "complaint",
+        "importance": 2
+      },
+      {
+        "lemma": "manager",
+        "importance": 2
+      },
+      {
+        "lemma": "refund",
+        "importance": 2
+      },
+      {
+        "lemma": "replacement",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "complain",
+        "importance": 2
+      },
+      {
+        "lemma": "replace",
+        "importance": 2
+      },
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "faulty",
+        "importance": 2
+      },
+      {
+        "lemma": "rude",
+        "importance": 2
+      },
+      {
+        "lemma": "rudely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e0-c57f-7941-9fb7-0ec4b0b0bcf0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Покупки за границей",
+    "categories": [
+      "shopping"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "currency",
+        "importance": 2
+      },
+      {
+        "lemma": "customs",
+        "importance": 2
+      },
+      {
+        "lemma": "exchange rate",
+        "importance": 2
+      },
+      {
+        "lemma": "export",
+        "importance": 2
+      },
+      {
+        "lemma": "souvenir",
+        "importance": 2
+      },
+      {
+        "lemma": "import",
+        "importance": 2
+      },
+      {
+        "lemma": "duty-free",
         "importance": 2
       }
     ]

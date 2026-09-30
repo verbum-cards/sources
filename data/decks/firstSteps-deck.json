@@ -682,7 +682,8 @@
     "nativeLang": "ru",
     "title": "Одежда",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "shopping"
     ],
     "type": "official",
     "items": [
