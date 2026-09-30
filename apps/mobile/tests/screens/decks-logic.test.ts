@@ -8,7 +8,7 @@ import { DeckCategorySchema } from '@cards/contracts';
 import { getOrCreateLocalUserId } from '../../src/db/entities/user/app-meta';
 import { loadUserDeckIds } from '../../src/db/entities/user/user-deck';
 import { migrate } from '../../src/db/migrate';
-import { DECKS, REVIEW_DECK_ID } from '../../src/mocks/decks';
+import { DECKS, REVIEW_DECK_IDS } from '../../src/mocks/decks';
 import type { DeckWord, MockDeck } from '../../src/mocks/decks';
 import {
   addDeckToUser,
@@ -77,9 +77,9 @@ test('DECKS: categories — только известные значения Dec
   }
 });
 
-test('DECKS: реальный каталог — каждая колода состоит хотя бы в одной категории, кроме служебной «Проверка партий»', () => {
+test('DECKS: реальный каталог — каждая колода состоит хотя бы в одной категории, кроме служебных «Проверка партий»', () => {
   for (const deck of DECKS) {
-    if (deck.id === REVIEW_DECK_ID) continue;
+    if (REVIEW_DECK_IDS.includes(deck.id)) continue;
     assert.ok(
       deck.categories.length > 0,
       `колода "${deck.title}" не привязана ни к одной категории`

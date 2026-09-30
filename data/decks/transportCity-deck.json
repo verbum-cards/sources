@@ -727,6 +727,38 @@
       {
         "lemma": "dangerously",
         "importance": 2
+      },
+      {
+        "lemma": "accident",
+        "importance": 2
+      },
+      {
+        "lemma": "attack",
+        "importance": 2
+      },
+      {
+        "lemma": "robbery",
+        "importance": 2
+      },
+      {
+        "lemma": "murder",
+        "importance": 2
+      },
+      {
+        "lemma": "killer",
+        "importance": 2
+      },
+      {
+        "lemma": "thief",
+        "importance": 2
+      },
+      {
+        "lemma": "trap",
+        "importance": 2
+      },
+      {
+        "lemma": "panic",
+        "importance": 2
       }
     ],
     "importance": 2

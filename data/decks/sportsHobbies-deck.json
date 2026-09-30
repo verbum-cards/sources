@@ -430,6 +430,38 @@
       {
         "lemma": "Olympics",
         "importance": 2
+      },
+      {
+        "lemma": "badminton",
+        "importance": 2
+      },
+      {
+        "lemma": "cricket",
+        "importance": 2
+      },
+      {
+        "lemma": "golf",
+        "importance": 2
+      },
+      {
+        "lemma": "hockey",
+        "importance": 2
+      },
+      {
+        "lemma": "rugby",
+        "importance": 2
+      },
+      {
+        "lemma": "table tennis",
+        "importance": 2
+      },
+      {
+        "lemma": "racket",
+        "importance": 2
+      },
+      {
+        "lemma": "sports center",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -523,6 +555,10 @@
       {
         "lemma": "mountaineer",
         "importance": 2
+      },
+      {
+        "lemma": "cycling",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -599,6 +635,10 @@
       },
       {
         "lemma": "snowball",
+        "importance": 2
+      },
+      {
+        "lemma": "skating",
         "importance": 2
       }
     ],
@@ -700,6 +740,26 @@
       },
       {
         "lemma": "pop",
+        "importance": 2
+      },
+      {
+        "lemma": "violin",
+        "importance": 2
+      },
+      {
+        "lemma": "symphony",
+        "importance": 2
+      },
+      {
+        "lemma": "tune",
+        "importance": 2
+      },
+      {
+        "lemma": "rap",
+        "importance": 2
+      },
+      {
+        "lemma": "hip hop",
         "importance": 2
       }
     ],
@@ -1251,6 +1311,10 @@
       },
       {
         "lemma": "classmate",
+        "importance": 2
+      },
+      {
+        "lemma": "blackboard",
         "importance": 2
       }
     ],

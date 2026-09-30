@@ -40,7 +40,7 @@ import { WordRow } from '../../components/WordRow';
 import { useDb } from '../../hooks/use-db.hook';
 import { useQuery } from '../../hooks/use-query.hook';
 import { useToast } from '../../hooks/use-toast.hook';
-import { DECKS, REVIEW_DECK_ID, type DeckWord, type MockDeck } from '../../mocks/decks';
+import { DECKS, REVIEW_DECK_IDS, type DeckWord, type MockDeck } from '../../mocks/decks';
 import { useTheme } from '../../providers/theme.provider';
 import { groupWords } from '../../utilities/word-category';
 import { SessionScreen } from '../session/session.screen';
@@ -115,12 +115,14 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
   const [selectedCategory, setSelectedCategory] = useState<DeckCategory | null>(null);
   const { data: addedDeckIds } = useQuery(loadAddedDeckIds, { tables: ['user_deck'] });
 
-  // Служебная колода для проверки партий словаря (generate-senses.ts) —
-  // не для пользователей беты, видна всегда, но только пока в ней есть
-  // слова (после разбора конвейер туда больше ничего не кладёт сам). Не
-  // категория — отдельная строка вне списка ниже.
-  const reviewDeck = DECKS.find((deck) => deck.id === REVIEW_DECK_ID);
-  const showReviewDeck = reviewDeck != null && reviewDeck.items.length > 0;
+  // Служебные колоды для проверки партий словаря (generate-senses.ts) — не
+  // для пользователей беты, по одной на уровень CEFR (review_a1_a2.json и
+  // т.д.), видны всегда, но только пока в них есть слова (после разбора
+  // конвейер туда больше ничего не кладёт сам). Не категория — отдельные
+  // строки вне списка ниже.
+  const reviewDecks = REVIEW_DECK_IDS.map((id) => DECKS.find((deck) => deck.id === id)).filter(
+    (deck): deck is MockDeck => deck != null && deck.items.length > 0
+  );
 
   useImperativeHandle(
     ref,
@@ -197,13 +199,14 @@ export const DecksScreen = ({ ref }: { ref?: React.Ref<DecksScreenHandle> }) => 
             label={t('userDecks.title')}
             onPress={() => setShowMyDecks(true)}
           />
-          {showReviewDeck && reviewDeck ? (
+          {reviewDecks.map((deck) => (
             <NavRow
+              key={deck.id}
               icon={Wrench}
-              label={t('reviewQueue')}
-              onPress={() => setSelectedDeck(reviewDeck)}
+              label={deck.title}
+              onPress={() => setSelectedDeck(deck)}
             />
-          ) : null}
+          ))}
         </View>
 
         <View style={{ gap: space[3] }}>

@@ -234,6 +234,22 @@
       {
         "lemma": "bloodstream",
         "importance": 2
+      },
+      {
+        "lemma": "belly",
+        "importance": 2
+      },
+      {
+        "lemma": "cheek",
+        "importance": 2
+      },
+      {
+        "lemma": "chin",
+        "importance": 2
+      },
+      {
+        "lemma": "toe",
+        "importance": 2
       }
     ],
     "importance": 2

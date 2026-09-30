@@ -11,7 +11,6 @@
   "addWord": "Добавить слово",
   "wordAdded": "«{{word}}» добавлено",
   "goToProgress": "Перейти к тренировкам",
-  "reviewQueue": "Проверка партий",
   "categoryEmpty": "Пока нет колод в этой категории",
   "categories": {
     "nouns": "Существительные",

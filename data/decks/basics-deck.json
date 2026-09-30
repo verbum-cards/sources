@@ -966,5 +966,357 @@
       }
     ],
     "importance": 2
+  },
+  {
+    "id": "01a0f235-af04-7895-b4cc-4bb89f38acc1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Меры и единицы",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "centimeter",
+        "importance": 2
+      },
+      {
+        "lemma": "gram",
+        "importance": 2
+      },
+      {
+        "lemma": "inch",
+        "importance": 2
+      },
+      {
+        "lemma": "kilo",
+        "importance": 2
+      },
+      {
+        "lemma": "kilogram",
+        "importance": 2
+      },
+      {
+        "lemma": "kilometer",
+        "importance": 2
+      },
+      {
+        "lemma": "liter",
+        "importance": 2
+      },
+      {
+        "lemma": "cent",
+        "importance": 2
+      },
+      {
+        "lemma": "euro",
+        "importance": 2
+      },
+      {
+        "lemma": "pence",
+        "importance": 2
+      },
+      {
+        "lemma": "max",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f235-af04-7fc1-b425-b1e946f88aa3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Время",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "day",
+        "importance": 2
+      },
+      {
+        "lemma": "week",
+        "importance": 2
+      },
+      {
+        "lemma": "month",
+        "importance": 2
+      },
+      {
+        "lemma": "year",
+        "importance": 2
+      },
+      {
+        "lemma": "moment",
+        "importance": 2
+      },
+      {
+        "lemma": "period",
+        "importance": 2
+      },
+      {
+        "lemma": "century",
+        "importance": 2
+      },
+      {
+        "lemma": "midday",
+        "importance": 2
+      },
+      {
+        "lemma": "noon",
+        "importance": 2
+      },
+      {
+        "lemma": "weekday",
+        "importance": 2
+      },
+      {
+        "lemma": "lunchtime",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f235-af04-7928-8c23-4fa43bbd787a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Абстрактные понятия",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "ability",
+        "importance": 2
+      },
+      {
+        "lemma": "advantage",
+        "importance": 2
+      },
+      {
+        "lemma": "disadvantage",
+        "importance": 2
+      },
+      {
+        "lemma": "beauty",
+        "importance": 2
+      },
+      {
+        "lemma": "behavior",
+        "importance": 2
+      },
+      {
+        "lemma": "effort",
+        "importance": 2
+      },
+      {
+        "lemma": "freedom",
+        "importance": 2
+      },
+      {
+        "lemma": "liberty",
+        "importance": 2
+      },
+      {
+        "lemma": "independence",
+        "importance": 2
+      },
+      {
+        "lemma": "happiness",
+        "importance": 2
+      },
+      {
+        "lemma": "harmony",
+        "importance": 2
+      },
+      {
+        "lemma": "honor",
+        "importance": 2
+      },
+      {
+        "lemma": "hope",
+        "importance": 2
+      },
+      {
+        "lemma": "imagination",
+        "importance": 2
+      },
+      {
+        "lemma": "importance",
+        "importance": 2
+      },
+      {
+        "lemma": "influence",
+        "importance": 2
+      },
+      {
+        "lemma": "intelligence",
+        "importance": 2
+      },
+      {
+        "lemma": "joy",
+        "importance": 2
+      },
+      {
+        "lemma": "knowledge",
+        "importance": 2
+      },
+      {
+        "lemma": "meaning",
+        "importance": 2
+      },
+      {
+        "lemma": "pity",
+        "importance": 2
+      },
+      {
+        "lemma": "pleasure",
+        "importance": 2
+      },
+      {
+        "lemma": "power",
+        "importance": 2
+      },
+      {
+        "lemma": "pressure",
+        "importance": 2
+      },
+      {
+        "lemma": "purpose",
+        "importance": 2
+      },
+      {
+        "lemma": "quality",
+        "importance": 2
+      },
+      {
+        "lemma": "strength",
+        "importance": 2
+      },
+      {
+        "lemma": "success",
+        "importance": 2
+      },
+      {
+        "lemma": "talent",
+        "importance": 2
+      },
+      {
+        "lemma": "truth",
+        "importance": 2
+      },
+      {
+        "lemma": "value",
+        "importance": 2
+      },
+      {
+        "lemma": "wealth",
+        "importance": 2
+      },
+      {
+        "lemma": "wisdom",
+        "importance": 2
+      },
+      {
+        "lemma": "wish",
+        "importance": 2
+      },
+      {
+        "lemma": "fear",
+        "importance": 2
+      },
+      {
+        "lemma": "force",
+        "importance": 2
+      },
+      {
+        "lemma": "grace",
+        "importance": 2
+      },
+      {
+        "lemma": "peace",
+        "importance": 2
+      },
+      {
+        "lemma": "luck",
+        "importance": 2
+      },
+      {
+        "lemma": "being",
+        "importance": 2
+      },
+      {
+        "lemma": "dream",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f235-af04-71e3-bc7c-30f3c8e801ab",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Люди вокруг",
+    "categories": [
+      "basics"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "kid",
+        "importance": 2
+      },
+      {
+        "lemma": "girl",
+        "importance": 2
+      },
+      {
+        "lemma": "lady",
+        "importance": 2
+      },
+      {
+        "lemma": "man",
+        "importance": 2
+      },
+      {
+        "lemma": "woman",
+        "importance": 2
+      },
+      {
+        "lemma": "person",
+        "importance": 2
+      },
+      {
+        "lemma": "member",
+        "importance": 2
+      },
+      {
+        "lemma": "pal",
+        "importance": 2
+      },
+      {
+        "lemma": "teenager",
+        "importance": 2
+      },
+      {
+        "lemma": "youth",
+        "importance": 2
+      },
+      {
+        "lemma": "male",
+        "importance": 2
+      },
+      {
+        "lemma": "fool",
+        "importance": 2
+      }
+    ],
+    "importance": 2
   }
 ]

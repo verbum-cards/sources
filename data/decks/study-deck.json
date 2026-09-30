@@ -526,6 +526,42 @@
       {
         "lemma": "native speaker",
         "importance": 2
+      },
+      {
+        "lemma": "adjective",
+        "importance": 2
+      },
+      {
+        "lemma": "noun",
+        "importance": 2
+      },
+      {
+        "lemma": "verb",
+        "importance": 2
+      },
+      {
+        "lemma": "plural",
+        "importance": 2
+      },
+      {
+        "lemma": "punctuation",
+        "importance": 2
+      },
+      {
+        "lemma": "comparative",
+        "importance": 2
+      },
+      {
+        "lemma": "superlative",
+        "importance": 2
+      },
+      {
+        "lemma": "sentence",
+        "importance": 2
+      },
+      {
+        "lemma": "capital letter",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -591,6 +627,18 @@
       },
       {
         "lemma": "undergraduate",
+        "importance": 2
+      },
+      {
+        "lemma": "schoolchild",
+        "importance": 2
+      },
+      {
+        "lemma": "schoolwork",
+        "importance": 2
+      },
+      {
+        "lemma": "high school",
         "importance": 2
       }
     ],

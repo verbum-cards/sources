@@ -48,6 +48,26 @@
       {
         "lemma": "microwave",
         "importance": 2
+      },
+      {
+        "lemma": "spoon",
+        "importance": 2
+      },
+      {
+        "lemma": "fork",
+        "importance": 2
+      },
+      {
+        "lemma": "plate",
+        "importance": 2
+      },
+      {
+        "lemma": "tablespoon",
+        "importance": 2
+      },
+      {
+        "lemma": "napkin",
+        "importance": 2
       }
     ],
     "importance": 2

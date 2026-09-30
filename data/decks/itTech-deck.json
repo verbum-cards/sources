@@ -64,6 +64,22 @@
       {
         "lemma": "install",
         "importance": 2
+      },
+      {
+        "lemma": "display",
+        "importance": 2
+      },
+      {
+        "lemma": "PC",
+        "importance": 2
+      },
+      {
+        "lemma": "IT",
+        "importance": 2
+      },
+      {
+        "lemma": "web page",
+        "importance": 2
       }
     ],
     "importance": 2

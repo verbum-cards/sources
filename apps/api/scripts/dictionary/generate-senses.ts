@@ -20,11 +20,11 @@ import { parseLlmInputsCsv, type LlmInput } from './llm-inputs';
 //   в моках — задача настоящей модели данных (T1.6), не этого скрипта.
 // "expressions" из ответа в mocks тоже не идут в этом проходе — не входили
 // в задачу "по 100 слов", остаются в сыром JSON для отдельного шага;
-// - data/decks.json — та же лемма добавляется в items служебной колоды
-//   «Проверка партий» (REVIEW_DECK_ID), apps/mobile/src/mocks/decks-data.json
-//   пересобирается тем же build-decks.ts::buildDecksData(), чтобы владелец
-//   продукта мог открыть партию на телефоне и проверить, не разбирая
-//   мок-файлы руками.
+// - data/decks/review_*.json — та же лемма добавляется в items служебной
+//   колоды «Проверка партий» нужного уровня (REVIEW_DECK_ID_BY_CEFR),
+//   apps/mobile/src/mocks/decks-data.json пересобирается тем же
+//   build-decks.ts::buildDecksData(), чтобы владелец продукта мог открыть
+//   партию на телефоне и проверить, не разбирая мок-файлы руками.
 
 const MODEL_BY_LEVEL: Record<Cefr, string> = {
   A0: 'gpt-5.4-mini',
@@ -46,11 +46,22 @@ const CONCURRENCY_BY_MODEL: Record<string, number> = {
   'gpt-4o': 2,
 };
 
-// Должен совпадать с REVIEW_DECK_ID в apps/mobile/src/mocks/decks.ts и с id
-// служебной колоды «Проверка партий» в data/decks.json — не читаем его через
-// динамический import decks.ts (лишняя, хрупкая зависимость: тому пришлось
-// бы резолвить все леммы через words-data.json ради одной константы).
-const REVIEW_DECK_ID = '0195d000-0000-7000-8000-000000000009';
+// Должны совпадать с REVIEW_DECK_ID_A1_A2/B1_B2/C1_C2 в
+// apps/mobile/src/mocks/decks.ts и с id служебных колод «Проверка партий» в
+// data/decks/review_*.json — не читаем их через динамический import
+// decks.ts (лишняя, хрупкая зависимость: тому пришлось бы резолвить все
+// леммы через words-data.json ради трёх констант). Колоды разбиты по уровню
+// CEFR — партия на несколько тысяч слов в одной колоде тормозила даже с
+// виртуализацией списка на устройстве.
+const REVIEW_DECK_FILE_BY_CEFR: Record<Cefr, { fileName: string; deckId: string }> = {
+  A0: { fileName: 'review_a1_a2.json', deckId: '0195d000-0000-7000-8000-00000000000a' },
+  A1: { fileName: 'review_a1_a2.json', deckId: '0195d000-0000-7000-8000-00000000000a' },
+  A2: { fileName: 'review_a1_a2.json', deckId: '0195d000-0000-7000-8000-00000000000a' },
+  B1: { fileName: 'review_b1_b2.json', deckId: '0195d000-0000-7000-8000-00000000000b' },
+  B2: { fileName: 'review_b1_b2.json', deckId: '0195d000-0000-7000-8000-00000000000b' },
+  C1: { fileName: 'review_c1_c2.json', deckId: '0195d000-0000-7000-8000-00000000000c' },
+  C2: { fileName: 'review_c1_c2.json', deckId: '0195d000-0000-7000-8000-00000000000c' },
+};
 
 const ExampleZ = z.object({
   text: z.string().min(1),
@@ -365,24 +376,34 @@ interface DeckSpecForReview {
   items: { lemma: string; importance: 1 | 2 | 3 }[];
 }
 
-// Служебная колода «Проверка партий» (REVIEW_DECK_ID) — правит её items
-// прямо в data/decks.json (источник правды), не в собранном
+// Служебные колоды «Проверка партий» (REVIEW_DECK_FILE_BY_CEFR) — правят
+// items прямо в data/decks/review_*.json (источник правды), не в собранном
 // apps/mobile/src/mocks/decks-data.json: его перезапишет buildDecksData()
-// следующим вызовом (см. main() ниже).
-function appendToReviewDeck(
-  specPath: string,
-  reviewDeckId: string,
-  drafts: readonly MockWordDraft[]
-): void {
+// следующим вызовом (см. main() ниже). Каждый черновик уходит в файл своего
+// уровня CEFR, поэтому сначала группируем по файлу и пишем каждый один раз.
+function appendToReviewDecks(decksDir: string, drafts: readonly MockWordDraft[]): void {
   if (drafts.length === 0) return;
 
-  const specs = JSON.parse(readFileSync(specPath, 'utf8')) as DeckSpecForReview[];
-  const reviewDeck = specs.find((deck) => deck.id === reviewDeckId);
-  if (!reviewDeck) {
-    throw new Error(`appendToReviewDeck: не нашёл колоду ${reviewDeckId} в ${specPath}`);
+  const draftsByFile = new Map<string, { deckId: string; drafts: MockWordDraft[] }>();
+  for (const draft of drafts) {
+    const { fileName, deckId } = REVIEW_DECK_FILE_BY_CEFR[draft.cefr];
+    const bucket = draftsByFile.get(fileName);
+    if (bucket) bucket.drafts.push(draft);
+    else draftsByFile.set(fileName, { deckId, drafts: [draft] });
   }
-  reviewDeck.items.push(...drafts.map((draft) => ({ lemma: draft.lemma, importance: 2 as const })));
-  writeFileSync(specPath, `${JSON.stringify(specs, null, 2)}\n`, 'utf8');
+
+  for (const [fileName, { deckId, drafts: fileDrafts }] of draftsByFile) {
+    const specPath = join(decksDir, fileName);
+    const specs = JSON.parse(readFileSync(specPath, 'utf8')) as DeckSpecForReview[];
+    const reviewDeck = specs.find((deck) => deck.id === deckId);
+    if (!reviewDeck) {
+      throw new Error(`appendToReviewDecks: не нашёл колоду ${deckId} в ${specPath}`);
+    }
+    reviewDeck.items.push(
+      ...fileDrafts.map((draft) => ({ lemma: draft.lemma, importance: 2 as const }))
+    );
+    writeFileSync(specPath, `${JSON.stringify(specs, null, 2)}\n`, 'utf8');
+  }
 }
 
 async function main(): Promise<void> {
@@ -407,7 +428,7 @@ async function main(): Promise<void> {
   const dataDir = join(repoRoot, 'data');
   const preparedPath = join(dataDir, 'cefr_seed_prepared.csv');
   const mocksDataPath = join(repoRoot, 'apps', 'mobile', 'src', 'mocks', 'words-data.json');
-  const decksSpecPath = join(dataDir, 'decks', 'review.json');
+  const decksDir = join(dataDir, 'decks');
   const tagsPath = join(
     repoRoot,
     '.claude',
@@ -469,7 +490,7 @@ async function main(): Promise<void> {
 
   const drafts = ok.map((result) => result.draft!);
   appendToMocks(mocksDataPath, drafts);
-  appendToReviewDeck(decksSpecPath, REVIEW_DECK_ID, drafts);
+  appendToReviewDecks(decksDir, drafts);
   if (drafts.length > 0) buildDecksData();
 
   const batchStamp = new Date().toISOString().replace(/[:.]/g, '-');
@@ -512,7 +533,7 @@ async function main(): Promise<void> {
   console.log(`Готово: ${ok.length} успешно, ${failed.length} с ошибкой.`);
   console.log(`Добавлено в ${mocksDataPath}: ${drafts.length} слов.`);
   console.log(
-    `Добавлено в служебную колоду «Проверка партий» (${decksSpecPath}, пересобран decks-data.json): ${drafts.length} слов.`
+    `Добавлено в служебные колоды «Проверка партий» (${decksDir}/review_*.json, пересобран decks-data.json): ${drafts.length} слов.`
   );
   console.log(`Полный ответ модели: ${join(rawDir, `${batchStamp}.json`)}`);
   for (const [model, usage] of usageByModel) {

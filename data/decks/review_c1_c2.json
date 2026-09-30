@@ -1,0 +1,6933 @@
+[
+  {
+    "id": "0195d000-0000-7000-8000-00000000000c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Проверка партий (C1, C2)",
+    "categories": [],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "abound",
+        "importance": 2
+      },
+      {
+        "lemma": "abstraction",
+        "importance": 2
+      },
+      {
+        "lemma": "accustomed",
+        "importance": 2
+      },
+      {
+        "lemma": "acidic",
+        "importance": 2
+      },
+      {
+        "lemma": "acoustic",
+        "importance": 2
+      },
+      {
+        "lemma": "acoustically",
+        "importance": 2
+      },
+      {
+        "lemma": "acoustics",
+        "importance": 2
+      },
+      {
+        "lemma": "acre",
+        "importance": 2
+      },
+      {
+        "lemma": "acutely",
+        "importance": 2
+      },
+      {
+        "lemma": "adjoin",
+        "importance": 2
+      },
+      {
+        "lemma": "adjoining",
+        "importance": 2
+      },
+      {
+        "lemma": "adjustable",
+        "importance": 2
+      },
+      {
+        "lemma": "adrenaline",
+        "importance": 2
+      },
+      {
+        "lemma": "advantageous",
+        "importance": 2
+      },
+      {
+        "lemma": "adversary",
+        "importance": 2
+      },
+      {
+        "lemma": "advisory",
+        "importance": 2
+      },
+      {
+        "lemma": "aesthetic",
+        "importance": 2
+      },
+      {
+        "lemma": "aesthetically",
+        "importance": 2
+      },
+      {
+        "lemma": "aimless",
+        "importance": 2
+      },
+      {
+        "lemma": "aimlessly",
+        "importance": 2
+      },
+      {
+        "lemma": "alienate",
+        "importance": 2
+      },
+      {
+        "lemma": "align",
+        "importance": 2
+      },
+      {
+        "lemma": "alignment",
+        "importance": 2
+      },
+      {
+        "lemma": "allege",
+        "importance": 2
+      },
+      {
+        "lemma": "alleviate",
+        "importance": 2
+      },
+      {
+        "lemma": "altruism",
+        "importance": 2
+      },
+      {
+        "lemma": "altruistic",
+        "importance": 2
+      },
+      {
+        "lemma": "amateur",
+        "importance": 2
+      },
+      {
+        "lemma": "amplification",
+        "importance": 2
+      },
+      {
+        "lemma": "amply",
+        "importance": 2
+      },
+      {
+        "lemma": "anchored",
+        "importance": 2
+      },
+      {
+        "lemma": "animatedly",
+        "importance": 2
+      },
+      {
+        "lemma": "anthropologist",
+        "importance": 2
+      },
+      {
+        "lemma": "anthropology",
+        "importance": 2
+      },
+      {
+        "lemma": "antics",
+        "importance": 2
+      },
+      {
+        "lemma": "apprehensive",
+        "importance": 2
+      },
+      {
+        "lemma": "blithely",
+        "importance": 2
+      },
+      {
+        "lemma": "clan",
+        "importance": 2
+      },
+      {
+        "lemma": "daunt",
+        "importance": 2
+      },
+      {
+        "lemma": "daunting",
+        "importance": 2
+      },
+      {
+        "lemma": "daydream",
+        "importance": 2
+      },
+      {
+        "lemma": "deceit",
+        "importance": 2
+      },
+      {
+        "lemma": "depiction",
+        "importance": 2
+      },
+      {
+        "lemma": "deprivation",
+        "importance": 2
+      },
+      {
+        "lemma": "immensely",
+        "importance": 2
+      },
+      {
+        "lemma": "impede",
+        "importance": 2
+      },
+      {
+        "lemma": "impediment",
+        "importance": 2
+      },
+      {
+        "lemma": "anticlimactic",
+        "importance": 2
+      },
+      {
+        "lemma": "antiquated",
+        "importance": 2
+      },
+      {
+        "lemma": "antiquity",
+        "importance": 2
+      },
+      {
+        "lemma": "appall",
+        "importance": 2
+      },
+      {
+        "lemma": "appalling",
+        "importance": 2
+      },
+      {
+        "lemma": "appallingly",
+        "importance": 2
+      },
+      {
+        "lemma": "appliance",
+        "importance": 2
+      },
+      {
+        "lemma": "apprentice",
+        "importance": 2
+      },
+      {
+        "lemma": "apprenticeship",
+        "importance": 2
+      },
+      {
+        "lemma": "apt",
+        "importance": 2
+      },
+      {
+        "lemma": "apt to",
+        "importance": 2
+      },
+      {
+        "lemma": "aqua",
+        "importance": 2
+      },
+      {
+        "lemma": "aquarium",
+        "importance": 2
+      },
+      {
+        "lemma": "artistically",
+        "importance": 2
+      },
+      {
+        "lemma": "assertion",
+        "importance": 2
+      },
+      {
+        "lemma": "astray",
+        "importance": 2
+      },
+      {
+        "lemma": "atmospheric",
+        "importance": 2
+      },
+      {
+        "lemma": "avid",
+        "importance": 2
+      },
+      {
+        "lemma": "baldly",
+        "importance": 2
+      },
+      {
+        "lemma": "batter",
+        "importance": 2
+      },
+      {
+        "lemma": "battered",
+        "importance": 2
+      },
+      {
+        "lemma": "bearded",
+        "importance": 2
+      },
+      {
+        "lemma": "beforehand",
+        "importance": 2
+      },
+      {
+        "lemma": "beguiling",
+        "importance": 2
+      },
+      {
+        "lemma": "beguilingly",
+        "importance": 2
+      },
+      {
+        "lemma": "believably",
+        "importance": 2
+      },
+      {
+        "lemma": "benign",
+        "importance": 2
+      },
+      {
+        "lemma": "benignly",
+        "importance": 2
+      },
+      {
+        "lemma": "bequeath",
+        "importance": 2
+      },
+      {
+        "lemma": "billiards",
+        "importance": 2
+      },
+      {
+        "lemma": "blankness",
+        "importance": 2
+      },
+      {
+        "lemma": "bliss",
+        "importance": 2
+      },
+      {
+        "lemma": "blister",
+        "importance": 2
+      },
+      {
+        "lemma": "blockbuster",
+        "importance": 2
+      },
+      {
+        "lemma": "bouquet",
+        "importance": 2
+      },
+      {
+        "lemma": "brainwash",
+        "importance": 2
+      },
+      {
+        "lemma": "brainwashing",
+        "importance": 2
+      },
+      {
+        "lemma": "bribe",
+        "importance": 2
+      },
+      {
+        "lemma": "bribery",
+        "importance": 2
+      },
+      {
+        "lemma": "bubbly",
+        "importance": 2
+      },
+      {
+        "lemma": "buffer",
+        "importance": 2
+      },
+      {
+        "lemma": "buffoon",
+        "importance": 2
+      },
+      {
+        "lemma": "bulk",
+        "importance": 2
+      },
+      {
+        "lemma": "bulk up",
+        "importance": 2
+      },
+      {
+        "lemma": "bureaucratically",
+        "importance": 2
+      },
+      {
+        "lemma": "buzzer",
+        "importance": 2
+      },
+      {
+        "lemma": "bypass",
+        "importance": 2
+      },
+      {
+        "lemma": "calorie",
+        "importance": 2
+      },
+      {
+        "lemma": "candid",
+        "importance": 2
+      },
+      {
+        "lemma": "candidly",
+        "importance": 2
+      },
+      {
+        "lemma": "canoe",
+        "importance": 2
+      },
+      {
+        "lemma": "carpentry",
+        "importance": 2
+      },
+      {
+        "lemma": "carrier",
+        "importance": 2
+      },
+      {
+        "lemma": "ceaseless",
+        "importance": 2
+      },
+      {
+        "lemma": "ceaselessly",
+        "importance": 2
+      },
+      {
+        "lemma": "cessation",
+        "importance": 2
+      },
+      {
+        "lemma": "chaotically",
+        "importance": 2
+      },
+      {
+        "lemma": "charter",
+        "importance": 2
+      },
+      {
+        "lemma": "chauffer",
+        "importance": 2
+      },
+      {
+        "lemma": "chill",
+        "importance": 2
+      },
+      {
+        "lemma": "chilly",
+        "importance": 2
+      },
+      {
+        "lemma": "chisel",
+        "importance": 2
+      },
+      {
+        "lemma": "chiselled",
+        "importance": 2
+      },
+      {
+        "lemma": "churn",
+        "importance": 2
+      },
+      {
+        "lemma": "circulate",
+        "importance": 2
+      },
+      {
+        "lemma": "circulation",
+        "importance": 2
+      },
+      {
+        "lemma": "clammy",
+        "importance": 2
+      },
+      {
+        "lemma": "classy",
+        "importance": 2
+      },
+      {
+        "lemma": "claustrophobia",
+        "importance": 2
+      },
+      {
+        "lemma": "claustrophobic",
+        "importance": 2
+      },
+      {
+        "lemma": "cleanly",
+        "importance": 2
+      },
+      {
+        "lemma": "clench",
+        "importance": 2
+      },
+      {
+        "lemma": "cleverness",
+        "importance": 2
+      },
+      {
+        "lemma": "climactic",
+        "importance": 2
+      },
+      {
+        "lemma": "cloak",
+        "importance": 2
+      },
+      {
+        "lemma": "clutch",
+        "importance": 2
+      },
+      {
+        "lemma": "clutter",
+        "importance": 2
+      },
+      {
+        "lemma": "collaboration",
+        "importance": 2
+      },
+      {
+        "lemma": "collaborative",
+        "importance": 2
+      },
+      {
+        "lemma": "commendation",
+        "importance": 2
+      },
+      {
+        "lemma": "commercially",
+        "importance": 2
+      },
+      {
+        "lemma": "compel",
+        "importance": 2
+      },
+      {
+        "lemma": "complementary",
+        "importance": 2
+      },
+      {
+        "lemma": "compliance",
+        "importance": 2
+      },
+      {
+        "lemma": "compliant",
+        "importance": 2
+      },
+      {
+        "lemma": "compliantly",
+        "importance": 2
+      },
+      {
+        "lemma": "complimentary",
+        "importance": 2
+      },
+      {
+        "lemma": "comply",
+        "importance": 2
+      },
+      {
+        "lemma": "comprise",
+        "importance": 2
+      },
+      {
+        "lemma": "compulsion",
+        "importance": 2
+      },
+      {
+        "lemma": "con",
+        "importance": 2
+      },
+      {
+        "lemma": "concur",
+        "importance": 2
+      },
+      {
+        "lemma": "conditionally",
+        "importance": 2
+      },
+      {
+        "lemma": "confide",
+        "importance": 2
+      },
+      {
+        "lemma": "confinement",
+        "importance": 2
+      },
+      {
+        "lemma": "conform",
+        "importance": 2
+      },
+      {
+        "lemma": "conformity",
+        "importance": 2
+      },
+      {
+        "lemma": "congregate",
+        "importance": 2
+      },
+      {
+        "lemma": "conjure",
+        "importance": 2
+      },
+      {
+        "lemma": "connoisseur",
+        "importance": 2
+      },
+      {
+        "lemma": "conscientiously",
+        "importance": 2
+      },
+      {
+        "lemma": "conservatory",
+        "importance": 2
+      },
+      {
+        "lemma": "conserve",
+        "importance": 2
+      },
+      {
+        "lemma": "constraint",
+        "importance": 2
+      },
+      {
+        "lemma": "consultancy",
+        "importance": 2
+      },
+      {
+        "lemma": "contested",
+        "importance": 2
+      },
+      {
+        "lemma": "contextual",
+        "importance": 2
+      },
+      {
+        "lemma": "contextually",
+        "importance": 2
+      },
+      {
+        "lemma": "continuity",
+        "importance": 2
+      },
+      {
+        "lemma": "contractor",
+        "importance": 2
+      },
+      {
+        "lemma": "convict",
+        "importance": 2
+      },
+      {
+        "lemma": "conviction",
+        "importance": 2
+      },
+      {
+        "lemma": "convoluted",
+        "importance": 2
+      },
+      {
+        "lemma": "corps",
+        "importance": 2
+      },
+      {
+        "lemma": "cost-effective",
+        "importance": 2
+      },
+      {
+        "lemma": "coverage",
+        "importance": 2
+      },
+      {
+        "lemma": "crave",
+        "importance": 2
+      },
+      {
+        "lemma": "craving",
+        "importance": 2
+      },
+      {
+        "lemma": "credential",
+        "importance": 2
+      },
+      {
+        "lemma": "credibility",
+        "importance": 2
+      },
+      {
+        "lemma": "credible",
+        "importance": 2
+      },
+      {
+        "lemma": "credibly",
+        "importance": 2
+      },
+      {
+        "lemma": "criteria",
+        "importance": 2
+      },
+      {
+        "lemma": "crude",
+        "importance": 2
+      },
+      {
+        "lemma": "crudely",
+        "importance": 2
+      },
+      {
+        "lemma": "crumb",
+        "importance": 2
+      },
+      {
+        "lemma": "crumble",
+        "importance": 2
+      },
+      {
+        "lemma": "customary",
+        "importance": 2
+      },
+      {
+        "lemma": "cynic",
+        "importance": 2
+      },
+      {
+        "lemma": "cynical",
+        "importance": 2
+      },
+      {
+        "lemma": "damply",
+        "importance": 2
+      },
+      {
+        "lemma": "darkroom",
+        "importance": 2
+      },
+      {
+        "lemma": "debut",
+        "importance": 2
+      },
+      {
+        "lemma": "degradation",
+        "importance": 2
+      },
+      {
+        "lemma": "degrade",
+        "importance": 2
+      },
+      {
+        "lemma": "degrading",
+        "importance": 2
+      },
+      {
+        "lemma": "demise",
+        "importance": 2
+      },
+      {
+        "lemma": "demo",
+        "importance": 2
+      },
+      {
+        "lemma": "demographic",
+        "importance": 2
+      },
+      {
+        "lemma": "demographically",
+        "importance": 2
+      },
+      {
+        "lemma": "demography",
+        "importance": 2
+      },
+      {
+        "lemma": "demolition",
+        "importance": 2
+      },
+      {
+        "lemma": "depict",
+        "importance": 2
+      },
+      {
+        "lemma": "descent",
+        "importance": 2
+      },
+      {
+        "lemma": "desertion",
+        "importance": 2
+      },
+      {
+        "lemma": "detest",
+        "importance": 2
+      },
+      {
+        "lemma": "detestable",
+        "importance": 2
+      },
+      {
+        "lemma": "detriment",
+        "importance": 2
+      },
+      {
+        "lemma": "detrimental",
+        "importance": 2
+      },
+      {
+        "lemma": "detrimentally",
+        "importance": 2
+      },
+      {
+        "lemma": "detritus",
+        "importance": 2
+      },
+      {
+        "lemma": "devotee",
+        "importance": 2
+      },
+      {
+        "lemma": "discard",
+        "importance": 2
+      },
+      {
+        "lemma": "discourse",
+        "importance": 2
+      },
+      {
+        "lemma": "disillusionment",
+        "importance": 2
+      },
+      {
+        "lemma": "dislodge",
+        "importance": 2
+      },
+      {
+        "lemma": "dismal",
+        "importance": 2
+      },
+      {
+        "lemma": "dismally",
+        "importance": 2
+      },
+      {
+        "lemma": "dismay",
+        "importance": 2
+      },
+      {
+        "lemma": "dispensary",
+        "importance": 2
+      },
+      {
+        "lemma": "dispense",
+        "importance": 2
+      },
+      {
+        "lemma": "disquieting",
+        "importance": 2
+      },
+      {
+        "lemma": "dissect",
+        "importance": 2
+      },
+      {
+        "lemma": "dissection",
+        "importance": 2
+      },
+      {
+        "lemma": "dither",
+        "importance": 2
+      },
+      {
+        "lemma": "diverge",
+        "importance": 2
+      },
+      {
+        "lemma": "divergence",
+        "importance": 2
+      },
+      {
+        "lemma": "divergent",
+        "importance": 2
+      },
+      {
+        "lemma": "diversity",
+        "importance": 2
+      },
+      {
+        "lemma": "docilely",
+        "importance": 2
+      },
+      {
+        "lemma": "domestically",
+        "importance": 2
+      },
+      {
+        "lemma": "domesticate",
+        "importance": 2
+      },
+      {
+        "lemma": "domestication",
+        "importance": 2
+      },
+      {
+        "lemma": "dominant",
+        "importance": 2
+      },
+      {
+        "lemma": "dominantly",
+        "importance": 2
+      },
+      {
+        "lemma": "domination",
+        "importance": 2
+      },
+      {
+        "lemma": "dramatist",
+        "importance": 2
+      },
+      {
+        "lemma": "drawback",
+        "importance": 2
+      },
+      {
+        "lemma": "durable",
+        "importance": 2
+      },
+      {
+        "lemma": "duration",
+        "importance": 2
+      },
+      {
+        "lemma": "dutiful",
+        "importance": 2
+      },
+      {
+        "lemma": "dutifully",
+        "importance": 2
+      },
+      {
+        "lemma": "dynamically",
+        "importance": 2
+      },
+      {
+        "lemma": "eccentric",
+        "importance": 2
+      },
+      {
+        "lemma": "eccentrically",
+        "importance": 2
+      },
+      {
+        "lemma": "eclectic",
+        "importance": 2
+      },
+      {
+        "lemma": "eclectically",
+        "importance": 2
+      },
+      {
+        "lemma": "ecstatically",
+        "importance": 2
+      },
+      {
+        "lemma": "ego",
+        "importance": 2
+      },
+      {
+        "lemma": "elaborate",
+        "importance": 2
+      },
+      {
+        "lemma": "elaboration",
+        "importance": 2
+      },
+      {
+        "lemma": "elastic",
+        "importance": 2
+      },
+      {
+        "lemma": "elevation",
+        "importance": 2
+      },
+      {
+        "lemma": "elitist",
+        "importance": 2
+      },
+      {
+        "lemma": "elongate",
+        "importance": 2
+      },
+      {
+        "lemma": "elude",
+        "importance": 2
+      },
+      {
+        "lemma": "elusive",
+        "importance": 2
+      },
+      {
+        "lemma": "embark",
+        "importance": 2
+      },
+      {
+        "lemma": "endorsement",
+        "importance": 2
+      },
+      {
+        "lemma": "engross",
+        "importance": 2
+      },
+      {
+        "lemma": "engrossing",
+        "importance": 2
+      },
+      {
+        "lemma": "enormously",
+        "importance": 2
+      },
+      {
+        "lemma": "enterprising",
+        "importance": 2
+      },
+      {
+        "lemma": "enviable",
+        "importance": 2
+      },
+      {
+        "lemma": "estimation",
+        "importance": 2
+      },
+      {
+        "lemma": "ethical",
+        "importance": 2
+      },
+      {
+        "lemma": "ethically",
+        "importance": 2
+      },
+      {
+        "lemma": "evoke",
+        "importance": 2
+      },
+      {
+        "lemma": "ewe",
+        "importance": 2
+      },
+      {
+        "lemma": "exert",
+        "importance": 2
+      },
+      {
+        "lemma": "exhibitionist",
+        "importance": 2
+      },
+      {
+        "lemma": "exhilarate",
+        "importance": 2
+      },
+      {
+        "lemma": "exhilarating",
+        "importance": 2
+      },
+      {
+        "lemma": "exhilaration",
+        "importance": 2
+      },
+      {
+        "lemma": "exodus",
+        "importance": 2
+      },
+      {
+        "lemma": "exotically",
+        "importance": 2
+      },
+      {
+        "lemma": "expedite",
+        "importance": 2
+      },
+      {
+        "lemma": "explanatory",
+        "importance": 2
+      },
+      {
+        "lemma": "exploitation",
+        "importance": 2
+      },
+      {
+        "lemma": "exterior",
+        "importance": 2
+      },
+      {
+        "lemma": "extortion",
+        "importance": 2
+      },
+      {
+        "lemma": "extravagance",
+        "importance": 2
+      },
+      {
+        "lemma": "exuberance",
+        "importance": 2
+      },
+      {
+        "lemma": "exuberant",
+        "importance": 2
+      },
+      {
+        "lemma": "exuberantly",
+        "importance": 2
+      },
+      {
+        "lemma": "fabulously",
+        "importance": 2
+      },
+      {
+        "lemma": "facial",
+        "importance": 2
+      },
+      {
+        "lemma": "facilitation",
+        "importance": 2
+      },
+      {
+        "lemma": "faction",
+        "importance": 2
+      },
+      {
+        "lemma": "fanatic",
+        "importance": 2
+      },
+      {
+        "lemma": "fanatically",
+        "importance": 2
+      },
+      {
+        "lemma": "farce",
+        "importance": 2
+      },
+      {
+        "lemma": "fatality",
+        "importance": 2
+      },
+      {
+        "lemma": "favorably",
+        "importance": 2
+      },
+      {
+        "lemma": "ferociously",
+        "importance": 2
+      },
+      {
+        "lemma": "fiddle",
+        "importance": 2
+      },
+      {
+        "lemma": "fiddler",
+        "importance": 2
+      },
+      {
+        "lemma": "fiddly",
+        "importance": 2
+      },
+      {
+        "lemma": "fiend",
+        "importance": 2
+      },
+      {
+        "lemma": "fiendish",
+        "importance": 2
+      },
+      {
+        "lemma": "fiendishly",
+        "importance": 2
+      },
+      {
+        "lemma": "fiercely",
+        "importance": 2
+      },
+      {
+        "lemma": "fissure",
+        "importance": 2
+      },
+      {
+        "lemma": "flashback",
+        "importance": 2
+      },
+      {
+        "lemma": "flask",
+        "importance": 2
+      },
+      {
+        "lemma": "flatter",
+        "importance": 2
+      },
+      {
+        "lemma": "flattery",
+        "importance": 2
+      },
+      {
+        "lemma": "flick",
+        "importance": 2
+      },
+      {
+        "lemma": "flicker",
+        "importance": 2
+      },
+      {
+        "lemma": "folktale",
+        "importance": 2
+      },
+      {
+        "lemma": "forensic",
+        "importance": 2
+      },
+      {
+        "lemma": "forfeit",
+        "importance": 2
+      },
+      {
+        "lemma": "formulate",
+        "importance": 2
+      },
+      {
+        "lemma": "fossil",
+        "importance": 2
+      },
+      {
+        "lemma": "fraction",
+        "importance": 2
+      },
+      {
+        "lemma": "fragmentation",
+        "importance": 2
+      },
+      {
+        "lemma": "frostily",
+        "importance": 2
+      },
+      {
+        "lemma": "frosty",
+        "importance": 2
+      },
+      {
+        "lemma": "fuse",
+        "importance": 2
+      },
+      {
+        "lemma": "fusion",
+        "importance": 2
+      },
+      {
+        "lemma": "gamely",
+        "importance": 2
+      },
+      {
+        "lemma": "gape",
+        "importance": 2
+      },
+      {
+        "lemma": "gem",
+        "importance": 2
+      },
+      {
+        "lemma": "genome",
+        "importance": 2
+      },
+      {
+        "lemma": "geological",
+        "importance": 2
+      },
+      {
+        "lemma": "geologically",
+        "importance": 2
+      },
+      {
+        "lemma": "ghostly",
+        "importance": 2
+      },
+      {
+        "lemma": "gig",
+        "importance": 2
+      },
+      {
+        "lemma": "glean",
+        "importance": 2
+      },
+      {
+        "lemma": "glum",
+        "importance": 2
+      },
+      {
+        "lemma": "glumly",
+        "importance": 2
+      },
+      {
+        "lemma": "gnaw",
+        "importance": 2
+      },
+      {
+        "lemma": "goose",
+        "importance": 2
+      },
+      {
+        "lemma": "gourmet",
+        "importance": 2
+      },
+      {
+        "lemma": "graft",
+        "importance": 2
+      },
+      {
+        "lemma": "grounds",
+        "importance": 2
+      },
+      {
+        "lemma": "gruelling",
+        "importance": 2
+      },
+      {
+        "lemma": "gruesome",
+        "importance": 2
+      },
+      {
+        "lemma": "gruesomely",
+        "importance": 2
+      },
+      {
+        "lemma": "gushing",
+        "importance": 2
+      },
+      {
+        "lemma": "gushingly",
+        "importance": 2
+      },
+      {
+        "lemma": "gusto",
+        "importance": 2
+      },
+      {
+        "lemma": "gypsy",
+        "importance": 2
+      },
+      {
+        "lemma": "harass",
+        "importance": 2
+      },
+      {
+        "lemma": "harassment",
+        "importance": 2
+      },
+      {
+        "lemma": "headstrong",
+        "importance": 2
+      },
+      {
+        "lemma": "hedgehog",
+        "importance": 2
+      },
+      {
+        "lemma": "heifer",
+        "importance": 2
+      },
+      {
+        "lemma": "heighten",
+        "importance": 2
+      },
+      {
+        "lemma": "hence",
+        "importance": 2
+      },
+      {
+        "lemma": "hibernate",
+        "importance": 2
+      },
+      {
+        "lemma": "hibernation",
+        "importance": 2
+      },
+      {
+        "lemma": "homely",
+        "importance": 2
+      },
+      {
+        "lemma": "honk",
+        "importance": 2
+      },
+      {
+        "lemma": "hostile",
+        "importance": 2
+      },
+      {
+        "lemma": "hostility",
+        "importance": 2
+      },
+      {
+        "lemma": "hypocrisy",
+        "importance": 2
+      },
+      {
+        "lemma": "hypocrite",
+        "importance": 2
+      },
+      {
+        "lemma": "hypocritical",
+        "importance": 2
+      },
+      {
+        "lemma": "hypocritically",
+        "importance": 2
+      },
+      {
+        "lemma": "immense",
+        "importance": 2
+      },
+      {
+        "lemma": "immortalize",
+        "importance": 2
+      },
+      {
+        "lemma": "imp",
+        "importance": 2
+      },
+      {
+        "lemma": "impersonal",
+        "importance": 2
+      },
+      {
+        "lemma": "impersonally",
+        "importance": 2
+      },
+      {
+        "lemma": "impersonate",
+        "importance": 2
+      },
+      {
+        "lemma": "impersonation",
+        "importance": 2
+      },
+      {
+        "lemma": "impersonator",
+        "importance": 2
+      },
+      {
+        "lemma": "impervious",
+        "importance": 2
+      },
+      {
+        "lemma": "impish",
+        "importance": 2
+      },
+      {
+        "lemma": "impishly",
+        "importance": 2
+      },
+      {
+        "lemma": "impoverished",
+        "importance": 2
+      },
+      {
+        "lemma": "incisor",
+        "importance": 2
+      },
+      {
+        "lemma": "inclusion",
+        "importance": 2
+      },
+      {
+        "lemma": "inclusive",
+        "importance": 2
+      },
+      {
+        "lemma": "inclusively",
+        "importance": 2
+      },
+      {
+        "lemma": "indefinite",
+        "importance": 2
+      },
+      {
+        "lemma": "indefinitely",
+        "importance": 2
+      },
+      {
+        "lemma": "induct",
+        "importance": 2
+      },
+      {
+        "lemma": "induction",
+        "importance": 2
+      },
+      {
+        "lemma": "inexcusable",
+        "importance": 2
+      },
+      {
+        "lemma": "inexcusably",
+        "importance": 2
+      },
+      {
+        "lemma": "inexhaustible",
+        "importance": 2
+      },
+      {
+        "lemma": "inexplicable",
+        "importance": 2
+      },
+      {
+        "lemma": "inexplicably",
+        "importance": 2
+      },
+      {
+        "lemma": "ingenious",
+        "importance": 2
+      },
+      {
+        "lemma": "ingenuity",
+        "importance": 2
+      },
+      {
+        "lemma": "inherent",
+        "importance": 2
+      },
+      {
+        "lemma": "inheritance",
+        "importance": 2
+      },
+      {
+        "lemma": "injustice",
+        "importance": 2
+      },
+      {
+        "lemma": "innovate",
+        "importance": 2
+      },
+      {
+        "lemma": "insecure",
+        "importance": 2
+      },
+      {
+        "lemma": "insecurely",
+        "importance": 2
+      },
+      {
+        "lemma": "insightful",
+        "importance": 2
+      },
+      {
+        "lemma": "insightfully",
+        "importance": 2
+      },
+      {
+        "lemma": "instinctive",
+        "importance": 2
+      },
+      {
+        "lemma": "instinctively",
+        "importance": 2
+      },
+      {
+        "lemma": "insubordinate",
+        "importance": 2
+      },
+      {
+        "lemma": "insubordination",
+        "importance": 2
+      },
+      {
+        "lemma": "integral",
+        "importance": 2
+      },
+      {
+        "lemma": "intellect",
+        "importance": 2
+      },
+      {
+        "lemma": "interject",
+        "importance": 2
+      },
+      {
+        "lemma": "interjection",
+        "importance": 2
+      },
+      {
+        "lemma": "intuit",
+        "importance": 2
+      },
+      {
+        "lemma": "intuition",
+        "importance": 2
+      },
+      {
+        "lemma": "intuitively",
+        "importance": 2
+      },
+      {
+        "lemma": "irate",
+        "importance": 2
+      },
+      {
+        "lemma": "irately",
+        "importance": 2
+      },
+      {
+        "lemma": "irony",
+        "importance": 2
+      },
+      {
+        "lemma": "isolate",
+        "importance": 2
+      },
+      {
+        "lemma": "isolated",
+        "importance": 2
+      },
+      {
+        "lemma": "jersey",
+        "importance": 2
+      },
+      {
+        "lemma": "jurisdiction",
+        "importance": 2
+      },
+      {
+        "lemma": "justly",
+        "importance": 2
+      },
+      {
+        "lemma": "juvenile",
+        "importance": 2
+      },
+      {
+        "lemma": "knowledgeable",
+        "importance": 2
+      },
+      {
+        "lemma": "lackluster",
+        "importance": 2
+      },
+      {
+        "lemma": "lapse",
+        "importance": 2
+      },
+      {
+        "lemma": "latent",
+        "importance": 2
+      },
+      {
+        "lemma": "lavatory",
+        "importance": 2
+      },
+      {
+        "lemma": "legacy",
+        "importance": 2
+      },
+      {
+        "lemma": "lethargic",
+        "importance": 2
+      },
+      {
+        "lemma": "lethargically",
+        "importance": 2
+      },
+      {
+        "lemma": "liaison",
+        "importance": 2
+      },
+      {
+        "lemma": "limitless",
+        "importance": 2
+      },
+      {
+        "lemma": "linear",
+        "importance": 2
+      },
+      {
+        "lemma": "linearly",
+        "importance": 2
+      },
+      {
+        "lemma": "loom",
+        "importance": 2
+      },
+      {
+        "lemma": "ludicrous",
+        "importance": 2
+      },
+      {
+        "lemma": "lust",
+        "importance": 2
+      },
+      {
+        "lemma": "macabre",
+        "importance": 2
+      },
+      {
+        "lemma": "magnetic",
+        "importance": 2
+      },
+      {
+        "lemma": "magnetically",
+        "importance": 2
+      },
+      {
+        "lemma": "magnetism",
+        "importance": 2
+      },
+      {
+        "lemma": "maneuver",
+        "importance": 2
+      },
+      {
+        "lemma": "manicure",
+        "importance": 2
+      },
+      {
+        "lemma": "manipulation",
+        "importance": 2
+      },
+      {
+        "lemma": "marginal",
+        "importance": 2
+      },
+      {
+        "lemma": "marginally",
+        "importance": 2
+      },
+      {
+        "lemma": "mark-up",
+        "importance": 2
+      },
+      {
+        "lemma": "marvel",
+        "importance": 2
+      },
+      {
+        "lemma": "maternal",
+        "importance": 2
+      },
+      {
+        "lemma": "meaningless",
+        "importance": 2
+      },
+      {
+        "lemma": "meaninglessly",
+        "importance": 2
+      },
+      {
+        "lemma": "mechanism",
+        "importance": 2
+      },
+      {
+        "lemma": "methodical",
+        "importance": 2
+      },
+      {
+        "lemma": "misplace",
+        "importance": 2
+      },
+      {
+        "lemma": "monotonous",
+        "importance": 2
+      },
+      {
+        "lemma": "monotonously",
+        "importance": 2
+      },
+      {
+        "lemma": "monotony",
+        "importance": 2
+      },
+      {
+        "lemma": "muscular",
+        "importance": 2
+      },
+      {
+        "lemma": "mutually",
+        "importance": 2
+      },
+      {
+        "lemma": "mythological",
+        "importance": 2
+      },
+      {
+        "lemma": "mythology",
+        "importance": 2
+      },
+      {
+        "lemma": "naive",
+        "importance": 2
+      },
+      {
+        "lemma": "naively",
+        "importance": 2
+      },
+      {
+        "lemma": "naivety",
+        "importance": 2
+      },
+      {
+        "lemma": "neglectful",
+        "importance": 2
+      },
+      {
+        "lemma": "negligent",
+        "importance": 2
+      },
+      {
+        "lemma": "negligible",
+        "importance": 2
+      },
+      {
+        "lemma": "neutralization",
+        "importance": 2
+      },
+      {
+        "lemma": "neutralize",
+        "importance": 2
+      },
+      {
+        "lemma": "niche",
+        "importance": 2
+      },
+      {
+        "lemma": "nocturnal",
+        "importance": 2
+      },
+      {
+        "lemma": "nondescript",
+        "importance": 2
+      },
+      {
+        "lemma": "notable",
+        "importance": 2
+      },
+      {
+        "lemma": "numb",
+        "importance": 2
+      },
+      {
+        "lemma": "oblige",
+        "importance": 2
+      },
+      {
+        "lemma": "obscurely",
+        "importance": 2
+      },
+      {
+        "lemma": "occupant",
+        "importance": 2
+      },
+      {
+        "lemma": "occupational",
+        "importance": 2
+      },
+      {
+        "lemma": "oddity",
+        "importance": 2
+      },
+      {
+        "lemma": "offspring",
+        "importance": 2
+      },
+      {
+        "lemma": "ordinarily",
+        "importance": 2
+      },
+      {
+        "lemma": "organizational",
+        "importance": 2
+      },
+      {
+        "lemma": "ornamental",
+        "importance": 2
+      },
+      {
+        "lemma": "otter",
+        "importance": 2
+      },
+      {
+        "lemma": "outset",
+        "importance": 2
+      },
+      {
+        "lemma": "overalls",
+        "importance": 2
+      },
+      {
+        "lemma": "oversee",
+        "importance": 2
+      },
+      {
+        "lemma": "panorama",
+        "importance": 2
+      },
+      {
+        "lemma": "parasite",
+        "importance": 2
+      },
+      {
+        "lemma": "paternal",
+        "importance": 2
+      },
+      {
+        "lemma": "paternalistic",
+        "importance": 2
+      },
+      {
+        "lemma": "pathos",
+        "importance": 2
+      },
+      {
+        "lemma": "paywall",
+        "importance": 2
+      },
+      {
+        "lemma": "peacock",
+        "importance": 2
+      },
+      {
+        "lemma": "peasant",
+        "importance": 2
+      },
+      {
+        "lemma": "pedicure",
+        "importance": 2
+      },
+      {
+        "lemma": "pendulous",
+        "importance": 2
+      },
+      {
+        "lemma": "pendulum",
+        "importance": 2
+      },
+      {
+        "lemma": "peninsula",
+        "importance": 2
+      },
+      {
+        "lemma": "perceptive",
+        "importance": 2
+      },
+      {
+        "lemma": "perceptively",
+        "importance": 2
+      },
+      {
+        "lemma": "perpetuate",
+        "importance": 2
+      },
+      {
+        "lemma": "persecute",
+        "importance": 2
+      },
+      {
+        "lemma": "persecution",
+        "importance": 2
+      },
+      {
+        "lemma": "personalization",
+        "importance": 2
+      },
+      {
+        "lemma": "personalize",
+        "importance": 2
+      },
+      {
+        "lemma": "persuasively",
+        "importance": 2
+      },
+      {
+        "lemma": "pertain to",
+        "importance": 2
+      },
+      {
+        "lemma": "pertinent",
+        "importance": 2
+      },
+      {
+        "lemma": "phenomenally",
+        "importance": 2
+      },
+      {
+        "lemma": "physique",
+        "importance": 2
+      },
+      {
+        "lemma": "pigeon",
+        "importance": 2
+      },
+      {
+        "lemma": "pinnacle",
+        "importance": 2
+      },
+      {
+        "lemma": "pioneer",
+        "importance": 2
+      },
+      {
+        "lemma": "placid",
+        "importance": 2
+      },
+      {
+        "lemma": "plaque",
+        "importance": 2
+      },
+      {
+        "lemma": "plaster",
+        "importance": 2
+      },
+      {
+        "lemma": "plausibility",
+        "importance": 2
+      },
+      {
+        "lemma": "plausible",
+        "importance": 2
+      },
+      {
+        "lemma": "plausibly",
+        "importance": 2
+      },
+      {
+        "lemma": "pleasurable",
+        "importance": 2
+      },
+      {
+        "lemma": "ploy",
+        "importance": 2
+      },
+      {
+        "lemma": "plummet",
+        "importance": 2
+      },
+      {
+        "lemma": "plunge",
+        "importance": 2
+      },
+      {
+        "lemma": "poetess",
+        "importance": 2
+      },
+      {
+        "lemma": "poise",
+        "importance": 2
+      },
+      {
+        "lemma": "popularization",
+        "importance": 2
+      },
+      {
+        "lemma": "portable",
+        "importance": 2
+      },
+      {
+        "lemma": "portray",
+        "importance": 2
+      },
+      {
+        "lemma": "portrayal",
+        "importance": 2
+      },
+      {
+        "lemma": "possessor",
+        "importance": 2
+      },
+      {
+        "lemma": "posture",
+        "importance": 2
+      },
+      {
+        "lemma": "pounce",
+        "importance": 2
+      },
+      {
+        "lemma": "preach",
+        "importance": 2
+      },
+      {
+        "lemma": "preacher",
+        "importance": 2
+      },
+      {
+        "lemma": "precision",
+        "importance": 2
+      },
+      {
+        "lemma": "predecessor",
+        "importance": 2
+      },
+      {
+        "lemma": "premier",
+        "importance": 2
+      },
+      {
+        "lemma": "premise",
+        "importance": 2
+      },
+      {
+        "lemma": "premises",
+        "importance": 2
+      },
+      {
+        "lemma": "primitively",
+        "importance": 2
+      },
+      {
+        "lemma": "principally",
+        "importance": 2
+      },
+      {
+        "lemma": "privileged",
+        "importance": 2
+      },
+      {
+        "lemma": "profess",
+        "importance": 2
+      },
+      {
+        "lemma": "professionalism",
+        "importance": 2
+      },
+      {
+        "lemma": "profound",
+        "importance": 2
+      },
+      {
+        "lemma": "profoundly",
+        "importance": 2
+      },
+      {
+        "lemma": "prohibitive",
+        "importance": 2
+      },
+      {
+        "lemma": "prohibitively",
+        "importance": 2
+      },
+      {
+        "lemma": "proliferate",
+        "importance": 2
+      },
+      {
+        "lemma": "prolific",
+        "importance": 2
+      },
+      {
+        "lemma": "prolifically",
+        "importance": 2
+      },
+      {
+        "lemma": "prop",
+        "importance": 2
+      },
+      {
+        "lemma": "prophetic",
+        "importance": 2
+      },
+      {
+        "lemma": "prospective",
+        "importance": 2
+      },
+      {
+        "lemma": "provisions",
+        "importance": 2
+      },
+      {
+        "lemma": "provocative",
+        "importance": 2
+      },
+      {
+        "lemma": "provoke",
+        "importance": 2
+      },
+      {
+        "lemma": "prowl",
+        "importance": 2
+      },
+      {
+        "lemma": "psyche",
+        "importance": 2
+      },
+      {
+        "lemma": "psychiatric",
+        "importance": 2
+      },
+      {
+        "lemma": "purity",
+        "importance": 2
+      },
+      {
+        "lemma": "quarry",
+        "importance": 2
+      },
+      {
+        "lemma": "quest",
+        "importance": 2
+      },
+      {
+        "lemma": "quip",
+        "importance": 2
+      },
+      {
+        "lemma": "quirk",
+        "importance": 2
+      },
+      {
+        "lemma": "radiator",
+        "importance": 2
+      },
+      {
+        "lemma": "rapport",
+        "importance": 2
+      },
+      {
+        "lemma": "rarity",
+        "importance": 2
+      },
+      {
+        "lemma": "raunchily",
+        "importance": 2
+      },
+      {
+        "lemma": "raunchy",
+        "importance": 2
+      },
+      {
+        "lemma": "readable",
+        "importance": 2
+      },
+      {
+        "lemma": "realism",
+        "importance": 2
+      },
+      {
+        "lemma": "realist",
+        "importance": 2
+      },
+      {
+        "lemma": "reap",
+        "importance": 2
+      },
+      {
+        "lemma": "recess",
+        "importance": 2
+      },
+      {
+        "lemma": "recessive",
+        "importance": 2
+      },
+      {
+        "lemma": "recharge",
+        "importance": 2
+      },
+      {
+        "lemma": "recognizable",
+        "importance": 2
+      },
+      {
+        "lemma": "recognizably",
+        "importance": 2
+      },
+      {
+        "lemma": "reenact",
+        "importance": 2
+      },
+      {
+        "lemma": "refreshingly",
+        "importance": 2
+      },
+      {
+        "lemma": "refurbishment",
+        "importance": 2
+      },
+      {
+        "lemma": "relapse",
+        "importance": 2
+      },
+      {
+        "lemma": "relinquish",
+        "importance": 2
+      },
+      {
+        "lemma": "reluctantly",
+        "importance": 2
+      },
+      {
+        "lemma": "remedial",
+        "importance": 2
+      },
+      {
+        "lemma": "reminisce",
+        "importance": 2
+      },
+      {
+        "lemma": "reminiscent",
+        "importance": 2
+      },
+      {
+        "lemma": "remorse",
+        "importance": 2
+      },
+      {
+        "lemma": "remorsefully",
+        "importance": 2
+      },
+      {
+        "lemma": "remorselessly",
+        "importance": 2
+      },
+      {
+        "lemma": "removed",
+        "importance": 2
+      },
+      {
+        "lemma": "render",
+        "importance": 2
+      },
+      {
+        "lemma": "renown",
+        "importance": 2
+      },
+      {
+        "lemma": "repel",
+        "importance": 2
+      },
+      {
+        "lemma": "repellant",
+        "importance": 2
+      },
+      {
+        "lemma": "repertory",
+        "importance": 2
+      },
+      {
+        "lemma": "resent",
+        "importance": 2
+      },
+      {
+        "lemma": "resilience",
+        "importance": 2
+      },
+      {
+        "lemma": "resin",
+        "importance": 2
+      },
+      {
+        "lemma": "resonate",
+        "importance": 2
+      },
+      {
+        "lemma": "respite",
+        "importance": 2
+      },
+      {
+        "lemma": "restoration",
+        "importance": 2
+      },
+      {
+        "lemma": "restorative",
+        "importance": 2
+      },
+      {
+        "lemma": "retention",
+        "importance": 2
+      },
+      {
+        "lemma": "retrace",
+        "importance": 2
+      },
+      {
+        "lemma": "revealing",
+        "importance": 2
+      },
+      {
+        "lemma": "revere",
+        "importance": 2
+      },
+      {
+        "lemma": "riveting",
+        "importance": 2
+      },
+      {
+        "lemma": "robust",
+        "importance": 2
+      },
+      {
+        "lemma": "robustly",
+        "importance": 2
+      },
+      {
+        "lemma": "rotate",
+        "importance": 2
+      },
+      {
+        "lemma": "roundup",
+        "importance": 2
+      },
+      {
+        "lemma": "rudimentary",
+        "importance": 2
+      },
+      {
+        "lemma": "rudiments",
+        "importance": 2
+      },
+      {
+        "lemma": "rumble",
+        "importance": 2
+      },
+      {
+        "lemma": "rustle",
+        "importance": 2
+      },
+      {
+        "lemma": "ruthless",
+        "importance": 2
+      },
+      {
+        "lemma": "ruthlessness",
+        "importance": 2
+      },
+      {
+        "lemma": "sacrifice",
+        "importance": 2
+      },
+      {
+        "lemma": "salivate",
+        "importance": 2
+      },
+      {
+        "lemma": "saloon",
+        "importance": 2
+      },
+      {
+        "lemma": "salvage",
+        "importance": 2
+      },
+      {
+        "lemma": "salvation",
+        "importance": 2
+      },
+      {
+        "lemma": "salve",
+        "importance": 2
+      },
+      {
+        "lemma": "sanctity",
+        "importance": 2
+      },
+      {
+        "lemma": "sap",
+        "importance": 2
+      },
+      {
+        "lemma": "sarcasm",
+        "importance": 2
+      },
+      {
+        "lemma": "sarcastic",
+        "importance": 2
+      },
+      {
+        "lemma": "sarcastically",
+        "importance": 2
+      },
+      {
+        "lemma": "sauna",
+        "importance": 2
+      },
+      {
+        "lemma": "scathing",
+        "importance": 2
+      },
+      {
+        "lemma": "scenario",
+        "importance": 2
+      },
+      {
+        "lemma": "scoff",
+        "importance": 2
+      },
+      {
+        "lemma": "scorn",
+        "importance": 2
+      },
+      {
+        "lemma": "scornful",
+        "importance": 2
+      },
+      {
+        "lemma": "scornfully",
+        "importance": 2
+      },
+      {
+        "lemma": "screenplay",
+        "importance": 2
+      },
+      {
+        "lemma": "screenwriter",
+        "importance": 2
+      },
+      {
+        "lemma": "scrutinize",
+        "importance": 2
+      },
+      {
+        "lemma": "sedate",
+        "importance": 2
+      },
+      {
+        "lemma": "sedately",
+        "importance": 2
+      },
+      {
+        "lemma": "sedentary",
+        "importance": 2
+      },
+      {
+        "lemma": "self-conscious",
+        "importance": 2
+      },
+      {
+        "lemma": "self-worth",
+        "importance": 2
+      },
+      {
+        "lemma": "sentient",
+        "importance": 2
+      },
+      {
+        "lemma": "sentiment",
+        "importance": 2
+      },
+      {
+        "lemma": "sentimental",
+        "importance": 2
+      },
+      {
+        "lemma": "sentimentally",
+        "importance": 2
+      },
+      {
+        "lemma": "sequel",
+        "importance": 2
+      },
+      {
+        "lemma": "settee",
+        "importance": 2
+      },
+      {
+        "lemma": "shambles",
+        "importance": 2
+      },
+      {
+        "lemma": "shortlist",
+        "importance": 2
+      },
+      {
+        "lemma": "showy",
+        "importance": 2
+      },
+      {
+        "lemma": "silhouette",
+        "importance": 2
+      },
+      {
+        "lemma": "simplicity",
+        "importance": 2
+      },
+      {
+        "lemma": "slack",
+        "importance": 2
+      },
+      {
+        "lemma": "slob",
+        "importance": 2
+      },
+      {
+        "lemma": "smug",
+        "importance": 2
+      },
+      {
+        "lemma": "smugly",
+        "importance": 2
+      },
+      {
+        "lemma": "snail",
+        "importance": 2
+      },
+      {
+        "lemma": "snooze",
+        "importance": 2
+      },
+      {
+        "lemma": "socialization",
+        "importance": 2
+      },
+      {
+        "lemma": "somber",
+        "importance": 2
+      },
+      {
+        "lemma": "somberly",
+        "importance": 2
+      },
+      {
+        "lemma": "somersault",
+        "importance": 2
+      },
+      {
+        "lemma": "spacious",
+        "importance": 2
+      },
+      {
+        "lemma": "spartan",
+        "importance": 2
+      },
+      {
+        "lemma": "specification",
+        "importance": 2
+      },
+      {
+        "lemma": "specimen",
+        "importance": 2
+      },
+      {
+        "lemma": "speculate",
+        "importance": 2
+      },
+      {
+        "lemma": "speculation",
+        "importance": 2
+      },
+      {
+        "lemma": "speculative",
+        "importance": 2
+      },
+      {
+        "lemma": "sponsorship",
+        "importance": 2
+      },
+      {
+        "lemma": "spontaneous",
+        "importance": 2
+      },
+      {
+        "lemma": "spontaneously",
+        "importance": 2
+      },
+      {
+        "lemma": "sprawl",
+        "importance": 2
+      },
+      {
+        "lemma": "sprout",
+        "importance": 2
+      },
+      {
+        "lemma": "squander",
+        "importance": 2
+      },
+      {
+        "lemma": "staccato",
+        "importance": 2
+      },
+      {
+        "lemma": "staggering",
+        "importance": 2
+      },
+      {
+        "lemma": "staple",
+        "importance": 2
+      },
+      {
+        "lemma": "startling",
+        "importance": 2
+      },
+      {
+        "lemma": "startlingly",
+        "importance": 2
+      },
+      {
+        "lemma": "stately",
+        "importance": 2
+      },
+      {
+        "lemma": "stiffen",
+        "importance": 2
+      },
+      {
+        "lemma": "stimuli",
+        "importance": 2
+      },
+      {
+        "lemma": "stoke",
+        "importance": 2
+      },
+      {
+        "lemma": "strap",
+        "importance": 2
+      },
+      {
+        "lemma": "strapping",
+        "importance": 2
+      },
+      {
+        "lemma": "stray",
+        "importance": 2
+      },
+      {
+        "lemma": "stressfully",
+        "importance": 2
+      },
+      {
+        "lemma": "structural",
+        "importance": 2
+      },
+      {
+        "lemma": "structurally",
+        "importance": 2
+      },
+      {
+        "lemma": "stuffily",
+        "importance": 2
+      },
+      {
+        "lemma": "stuffiness",
+        "importance": 2
+      },
+      {
+        "lemma": "stuffy",
+        "importance": 2
+      },
+      {
+        "lemma": "stylistic",
+        "importance": 2
+      },
+      {
+        "lemma": "subordinate",
+        "importance": 2
+      },
+      {
+        "lemma": "substantially",
+        "importance": 2
+      },
+      {
+        "lemma": "subtly",
+        "importance": 2
+      },
+      {
+        "lemma": "suburban",
+        "importance": 2
+      },
+      {
+        "lemma": "suburbia",
+        "importance": 2
+      },
+      {
+        "lemma": "succession",
+        "importance": 2
+      },
+      {
+        "lemma": "succulent",
+        "importance": 2
+      },
+      {
+        "lemma": "succulently",
+        "importance": 2
+      },
+      {
+        "lemma": "suds",
+        "importance": 2
+      },
+      {
+        "lemma": "suffice",
+        "importance": 2
+      },
+      {
+        "lemma": "suitor",
+        "importance": 2
+      },
+      {
+        "lemma": "superficial",
+        "importance": 2
+      },
+      {
+        "lemma": "superficially",
+        "importance": 2
+      },
+      {
+        "lemma": "supple",
+        "importance": 2
+      },
+      {
+        "lemma": "sustainable",
+        "importance": 2
+      },
+      {
+        "lemma": "sustainably",
+        "importance": 2
+      },
+      {
+        "lemma": "synthetic",
+        "importance": 2
+      },
+      {
+        "lemma": "synthetically",
+        "importance": 2
+      },
+      {
+        "lemma": "tactful",
+        "importance": 2
+      },
+      {
+        "lemma": "tailor",
+        "importance": 2
+      },
+      {
+        "lemma": "tangle",
+        "importance": 2
+      },
+      {
+        "lemma": "tantamount",
+        "importance": 2
+      },
+      {
+        "lemma": "tantrum",
+        "importance": 2
+      },
+      {
+        "lemma": "tastebud",
+        "importance": 2
+      },
+      {
+        "lemma": "taut",
+        "importance": 2
+      },
+      {
+        "lemma": "tedious",
+        "importance": 2
+      },
+      {
+        "lemma": "tediously",
+        "importance": 2
+      },
+      {
+        "lemma": "tedium",
+        "importance": 2
+      },
+      {
+        "lemma": "telltale",
+        "importance": 2
+      },
+      {
+        "lemma": "temperamental",
+        "importance": 2
+      },
+      {
+        "lemma": "temperamentally",
+        "importance": 2
+      },
+      {
+        "lemma": "terrain",
+        "importance": 2
+      },
+      {
+        "lemma": "testament",
+        "importance": 2
+      },
+      {
+        "lemma": "thereby",
+        "importance": 2
+      },
+      {
+        "lemma": "timid",
+        "importance": 2
+      },
+      {
+        "lemma": "tinker",
+        "importance": 2
+      },
+      {
+        "lemma": "torment",
+        "importance": 2
+      },
+      {
+        "lemma": "tract",
+        "importance": 2
+      },
+      {
+        "lemma": "trampoline",
+        "importance": 2
+      },
+      {
+        "lemma": "tranquil",
+        "importance": 2
+      },
+      {
+        "lemma": "tranquility",
+        "importance": 2
+      },
+      {
+        "lemma": "transatlantic",
+        "importance": 2
+      },
+      {
+        "lemma": "transfix",
+        "importance": 2
+      },
+      {
+        "lemma": "transit",
+        "importance": 2
+      },
+      {
+        "lemma": "trying",
+        "importance": 2
+      },
+      {
+        "lemma": "turmoil",
+        "importance": 2
+      },
+      {
+        "lemma": "turn to",
+        "importance": 2
+      },
+      {
+        "lemma": "twitch",
+        "importance": 2
+      },
+      {
+        "lemma": "tycoon",
+        "importance": 2
+      },
+      {
+        "lemma": "unassisted",
+        "importance": 2
+      },
+      {
+        "lemma": "unconventional",
+        "importance": 2
+      },
+      {
+        "lemma": "unconvincing",
+        "importance": 2
+      },
+      {
+        "lemma": "unconvincingly",
+        "importance": 2
+      },
+      {
+        "lemma": "unenviable",
+        "importance": 2
+      },
+      {
+        "lemma": "uneventful",
+        "importance": 2
+      },
+      {
+        "lemma": "uninspiring",
+        "importance": 2
+      },
+      {
+        "lemma": "unison",
+        "importance": 2
+      },
+      {
+        "lemma": "unmanned",
+        "importance": 2
+      },
+      {
+        "lemma": "unmusically",
+        "importance": 2
+      },
+      {
+        "lemma": "unoccupied",
+        "importance": 2
+      },
+      {
+        "lemma": "unplug",
+        "importance": 2
+      },
+      {
+        "lemma": "unreliably",
+        "importance": 2
+      },
+      {
+        "lemma": "unsettle",
+        "importance": 2
+      },
+      {
+        "lemma": "unsettling",
+        "importance": 2
+      },
+      {
+        "lemma": "unsustainable",
+        "importance": 2
+      },
+      {
+        "lemma": "unsustainably",
+        "importance": 2
+      },
+      {
+        "lemma": "untangle",
+        "importance": 2
+      },
+      {
+        "lemma": "untangled",
+        "importance": 2
+      },
+      {
+        "lemma": "unwavering",
+        "importance": 2
+      },
+      {
+        "lemma": "unwaveringly",
+        "importance": 2
+      },
+      {
+        "lemma": "upheaval",
+        "importance": 2
+      },
+      {
+        "lemma": "vegetation",
+        "importance": 2
+      },
+      {
+        "lemma": "veneration",
+        "importance": 2
+      },
+      {
+        "lemma": "ventilate",
+        "importance": 2
+      },
+      {
+        "lemma": "ventilation",
+        "importance": 2
+      },
+      {
+        "lemma": "verandah",
+        "importance": 2
+      },
+      {
+        "lemma": "verdict",
+        "importance": 2
+      },
+      {
+        "lemma": "versatile",
+        "importance": 2
+      },
+      {
+        "lemma": "versatility",
+        "importance": 2
+      },
+      {
+        "lemma": "verve",
+        "importance": 2
+      },
+      {
+        "lemma": "vicious",
+        "importance": 2
+      },
+      {
+        "lemma": "viciously",
+        "importance": 2
+      },
+      {
+        "lemma": "victorious",
+        "importance": 2
+      },
+      {
+        "lemma": "victoriously",
+        "importance": 2
+      },
+      {
+        "lemma": "vitality",
+        "importance": 2
+      },
+      {
+        "lemma": "voluntarily",
+        "importance": 2
+      },
+      {
+        "lemma": "voluntary",
+        "importance": 2
+      },
+      {
+        "lemma": "voracious",
+        "importance": 2
+      },
+      {
+        "lemma": "voraciously",
+        "importance": 2
+      },
+      {
+        "lemma": "wares",
+        "importance": 2
+      },
+      {
+        "lemma": "waterfront",
+        "importance": 2
+      },
+      {
+        "lemma": "wayside",
+        "importance": 2
+      },
+      {
+        "lemma": "wicked",
+        "importance": 2
+      },
+      {
+        "lemma": "wickedly",
+        "importance": 2
+      },
+      {
+        "lemma": "withdrawn",
+        "importance": 2
+      },
+      {
+        "lemma": "wizened",
+        "importance": 2
+      },
+      {
+        "lemma": "woo",
+        "importance": 2
+      },
+      {
+        "lemma": "wooded",
+        "importance": 2
+      },
+      {
+        "lemma": "wrench",
+        "importance": 2
+      },
+      {
+        "lemma": "wry",
+        "importance": 2
+      },
+      {
+        "lemma": "wryly",
+        "importance": 2
+      },
+      {
+        "lemma": "aberration",
+        "importance": 2
+      },
+      {
+        "lemma": "abhor",
+        "importance": 2
+      },
+      {
+        "lemma": "abhorrent",
+        "importance": 2
+      },
+      {
+        "lemma": "abhorrently",
+        "importance": 2
+      },
+      {
+        "lemma": "abject",
+        "importance": 2
+      },
+      {
+        "lemma": "abundantly",
+        "importance": 2
+      },
+      {
+        "lemma": "accrue",
+        "importance": 2
+      },
+      {
+        "lemma": "acreage",
+        "importance": 2
+      },
+      {
+        "lemma": "acrobatically",
+        "importance": 2
+      },
+      {
+        "lemma": "acrobatics",
+        "importance": 2
+      },
+      {
+        "lemma": "ad lib",
+        "importance": 2
+      },
+      {
+        "lemma": "ad-lib",
+        "importance": 2
+      },
+      {
+        "lemma": "additive",
+        "importance": 2
+      },
+      {
+        "lemma": "adept",
+        "importance": 2
+      },
+      {
+        "lemma": "adhere",
+        "importance": 2
+      },
+      {
+        "lemma": "adornment",
+        "importance": 2
+      },
+      {
+        "lemma": "adulterate",
+        "importance": 2
+      },
+      {
+        "lemma": "affectation",
+        "importance": 2
+      },
+      {
+        "lemma": "aghast",
+        "importance": 2
+      },
+      {
+        "lemma": "agile",
+        "importance": 2
+      },
+      {
+        "lemma": "agility",
+        "importance": 2
+      },
+      {
+        "lemma": "allegorical",
+        "importance": 2
+      },
+      {
+        "lemma": "allegory",
+        "importance": 2
+      },
+      {
+        "lemma": "allot",
+        "importance": 2
+      },
+      {
+        "lemma": "allotment",
+        "importance": 2
+      },
+      {
+        "lemma": "allude",
+        "importance": 2
+      },
+      {
+        "lemma": "amorphously",
+        "importance": 2
+      },
+      {
+        "lemma": "anarchic",
+        "importance": 2
+      },
+      {
+        "lemma": "angst",
+        "importance": 2
+      },
+      {
+        "lemma": "angsty",
+        "importance": 2
+      },
+      {
+        "lemma": "angular",
+        "importance": 2
+      },
+      {
+        "lemma": "angularity",
+        "importance": 2
+      },
+      {
+        "lemma": "annex",
+        "importance": 2
+      },
+      {
+        "lemma": "anonymity",
+        "importance": 2
+      },
+      {
+        "lemma": "antediluvian",
+        "importance": 2
+      },
+      {
+        "lemma": "anthology",
+        "importance": 2
+      },
+      {
+        "lemma": "anthropological",
+        "importance": 2
+      },
+      {
+        "lemma": "anticlimactically",
+        "importance": 2
+      },
+      {
+        "lemma": "antidote",
+        "importance": 2
+      },
+      {
+        "lemma": "antithetical",
+        "importance": 2
+      },
+      {
+        "lemma": "apostle",
+        "importance": 2
+      },
+      {
+        "lemma": "apprehend",
+        "importance": 2
+      },
+      {
+        "lemma": "aptitude",
+        "importance": 2
+      },
+      {
+        "lemma": "arcane",
+        "importance": 2
+      },
+      {
+        "lemma": "arcanely",
+        "importance": 2
+      },
+      {
+        "lemma": "archetypal",
+        "importance": 2
+      },
+      {
+        "lemma": "archetype",
+        "importance": 2
+      },
+      {
+        "lemma": "archival",
+        "importance": 2
+      },
+      {
+        "lemma": "arduous",
+        "importance": 2
+      },
+      {
+        "lemma": "arduously",
+        "importance": 2
+      },
+      {
+        "lemma": "armory",
+        "importance": 2
+      },
+      {
+        "lemma": "articulation",
+        "importance": 2
+      },
+      {
+        "lemma": "artifact",
+        "importance": 2
+      },
+      {
+        "lemma": "artifice",
+        "importance": 2
+      },
+      {
+        "lemma": "assimilate",
+        "importance": 2
+      },
+      {
+        "lemma": "assimilation",
+        "importance": 2
+      },
+      {
+        "lemma": "astringent",
+        "importance": 2
+      },
+      {
+        "lemma": "athleticism",
+        "importance": 2
+      },
+      {
+        "lemma": "attrition",
+        "importance": 2
+      },
+      {
+        "lemma": "attuned",
+        "importance": 2
+      },
+      {
+        "lemma": "austere",
+        "importance": 2
+      },
+      {
+        "lemma": "austerely",
+        "importance": 2
+      },
+      {
+        "lemma": "austerity",
+        "importance": 2
+      },
+      {
+        "lemma": "authenticity",
+        "importance": 2
+      },
+      {
+        "lemma": "autonomous",
+        "importance": 2
+      },
+      {
+        "lemma": "autonomously",
+        "importance": 2
+      },
+      {
+        "lemma": "averse",
+        "importance": 2
+      },
+      {
+        "lemma": "avian",
+        "importance": 2
+      },
+      {
+        "lemma": "axiom",
+        "importance": 2
+      },
+      {
+        "lemma": "babble",
+        "importance": 2
+      },
+      {
+        "lemma": "banish",
+        "importance": 2
+      },
+      {
+        "lemma": "baroque",
+        "importance": 2
+      },
+      {
+        "lemma": "bauble",
+        "importance": 2
+      },
+      {
+        "lemma": "behest",
+        "importance": 2
+      },
+      {
+        "lemma": "belligerent",
+        "importance": 2
+      },
+      {
+        "lemma": "beneficiary",
+        "importance": 2
+      },
+      {
+        "lemma": "bereft",
+        "importance": 2
+      },
+      {
+        "lemma": "bereftly",
+        "importance": 2
+      },
+      {
+        "lemma": "besiege",
+        "importance": 2
+      },
+      {
+        "lemma": "blandishment",
+        "importance": 2
+      },
+      {
+        "lemma": "blight",
+        "importance": 2
+      },
+      {
+        "lemma": "blitz",
+        "importance": 2
+      },
+      {
+        "lemma": "blubber",
+        "importance": 2
+      },
+      {
+        "lemma": "blubbery",
+        "importance": 2
+      },
+      {
+        "lemma": "blurb",
+        "importance": 2
+      },
+      {
+        "lemma": "bogus",
+        "importance": 2
+      },
+      {
+        "lemma": "bona fide",
+        "importance": 2
+      },
+      {
+        "lemma": "brandish",
+        "importance": 2
+      },
+      {
+        "lemma": "breadwinner",
+        "importance": 2
+      },
+      {
+        "lemma": "brevity",
+        "importance": 2
+      },
+      {
+        "lemma": "brim",
+        "importance": 2
+      },
+      {
+        "lemma": "brink",
+        "importance": 2
+      },
+      {
+        "lemma": "brood",
+        "importance": 2
+      },
+      {
+        "lemma": "brouhaha",
+        "importance": 2
+      },
+      {
+        "lemma": "buccaneer",
+        "importance": 2
+      },
+      {
+        "lemma": "buffoonery",
+        "importance": 2
+      },
+      {
+        "lemma": "burgeoning",
+        "importance": 2
+      },
+      {
+        "lemma": "buzzard",
+        "importance": 2
+      },
+      {
+        "lemma": "caffeinate",
+        "importance": 2
+      },
+      {
+        "lemma": "calamitously",
+        "importance": 2
+      },
+      {
+        "lemma": "calamity",
+        "importance": 2
+      },
+      {
+        "lemma": "callous",
+        "importance": 2
+      },
+      {
+        "lemma": "callously",
+        "importance": 2
+      },
+      {
+        "lemma": "calorific",
+        "importance": 2
+      },
+      {
+        "lemma": "capacious",
+        "importance": 2
+      },
+      {
+        "lemma": "carbonize",
+        "importance": 2
+      },
+      {
+        "lemma": "catastrophically",
+        "importance": 2
+      },
+      {
+        "lemma": "cay",
+        "importance": 2
+      },
+      {
+        "lemma": "centralized",
+        "importance": 2
+      },
+      {
+        "lemma": "choreographical",
+        "importance": 2
+      },
+      {
+        "lemma": "choreography",
+        "importance": 2
+      },
+      {
+        "lemma": "chronologically",
+        "importance": 2
+      },
+      {
+        "lemma": "chrysalis",
+        "importance": 2
+      },
+      {
+        "lemma": "cinematographer",
+        "importance": 2
+      },
+      {
+        "lemma": "cinematography",
+        "importance": 2
+      },
+      {
+        "lemma": "circumnavigate",
+        "importance": 2
+      },
+      {
+        "lemma": "clinch",
+        "importance": 2
+      },
+      {
+        "lemma": "cloister",
+        "importance": 2
+      },
+      {
+        "lemma": "bulky",
+        "importance": 2
+      },
+      {
+        "lemma": "carpenter",
+        "importance": 2
+      },
+      {
+        "lemma": "cite",
+        "importance": 2
+      },
+      {
+        "lemma": "climax",
+        "importance": 2
+      },
+      {
+        "lemma": "collaborator",
+        "importance": 2
+      },
+      {
+        "lemma": "commend",
+        "importance": 2
+      },
+      {
+        "lemma": "conditional",
+        "importance": 2
+      },
+      {
+        "lemma": "conscientious",
+        "importance": 2
+      },
+      {
+        "lemma": "coupled",
+        "importance": 2
+      },
+      {
+        "lemma": "creamy",
+        "importance": 2
+      },
+      {
+        "lemma": "cynically",
+        "importance": 2
+      },
+      {
+        "lemma": "cynicism",
+        "importance": 2
+      },
+      {
+        "lemma": "disdain",
+        "importance": 2
+      },
+      {
+        "lemma": "docile",
+        "importance": 2
+      },
+      {
+        "lemma": "effortless",
+        "importance": 2
+      },
+      {
+        "lemma": "elevate",
+        "importance": 2
+      },
+      {
+        "lemma": "envisage",
+        "importance": 2
+      },
+      {
+        "lemma": "explosively",
+        "importance": 2
+      },
+      {
+        "lemma": "fanciful",
+        "importance": 2
+      },
+      {
+        "lemma": "ferocious",
+        "importance": 2
+      },
+      {
+        "lemma": "flourish",
+        "importance": 2
+      },
+      {
+        "lemma": "grumble",
+        "importance": 2
+      },
+      {
+        "lemma": "gush",
+        "importance": 2
+      },
+      {
+        "lemma": "gutsy",
+        "importance": 2
+      },
+      {
+        "lemma": "implicate",
+        "importance": 2
+      },
+      {
+        "lemma": "incision",
+        "importance": 2
+      },
+      {
+        "lemma": "individuality",
+        "importance": 2
+      },
+      {
+        "lemma": "inherently",
+        "importance": 2
+      },
+      {
+        "lemma": "insubordinately",
+        "importance": 2
+      },
+      {
+        "lemma": "intuitive",
+        "importance": 2
+      },
+      {
+        "lemma": "lethargy",
+        "importance": 2
+      },
+      {
+        "lemma": "likelihood",
+        "importance": 2
+      },
+      {
+        "lemma": "ludicrously",
+        "importance": 2
+      },
+      {
+        "lemma": "maternalistic",
+        "importance": 2
+      },
+      {
+        "lemma": "minutiae",
+        "importance": 2
+      },
+      {
+        "lemma": "motley",
+        "importance": 2
+      },
+      {
+        "lemma": "munch",
+        "importance": 2
+      },
+      {
+        "lemma": "naturalness",
+        "importance": 2
+      },
+      {
+        "lemma": "negligently",
+        "importance": 2
+      },
+      {
+        "lemma": "obscure",
+        "importance": 2
+      },
+      {
+        "lemma": "orchard",
+        "importance": 2
+      },
+      {
+        "lemma": "overseer",
+        "importance": 2
+      },
+      {
+        "lemma": "panoramic",
+        "importance": 2
+      },
+      {
+        "lemma": "phenomenal",
+        "importance": 2
+      },
+      {
+        "lemma": "physicality",
+        "importance": 2
+      },
+      {
+        "lemma": "placidly",
+        "importance": 2
+      },
+      {
+        "lemma": "prophet",
+        "importance": 2
+      },
+      {
+        "lemma": "provocatively",
+        "importance": 2
+      },
+      {
+        "lemma": "psychiatrist",
+        "importance": 2
+      },
+      {
+        "lemma": "quirky",
+        "importance": 2
+      },
+      {
+        "lemma": "reassurance",
+        "importance": 2
+      },
+      {
+        "lemma": "rediscover",
+        "importance": 2
+      },
+      {
+        "lemma": "refurbish",
+        "importance": 2
+      },
+      {
+        "lemma": "remorseless",
+        "importance": 2
+      },
+      {
+        "lemma": "rendering",
+        "importance": 2
+      },
+      {
+        "lemma": "repute",
+        "importance": 2
+      },
+      {
+        "lemma": "slackly",
+        "importance": 2
+      },
+      {
+        "lemma": "stamina",
+        "importance": 2
+      },
+      {
+        "lemma": "stylistically",
+        "importance": 2
+      },
+      {
+        "lemma": "suspension",
+        "importance": 2
+      },
+      {
+        "lemma": "synopsis",
+        "importance": 2
+      },
+      {
+        "lemma": "tact",
+        "importance": 2
+      },
+      {
+        "lemma": "tactfully",
+        "importance": 2
+      },
+      {
+        "lemma": "tangled",
+        "importance": 2
+      },
+      {
+        "lemma": "tautly",
+        "importance": 2
+      },
+      {
+        "lemma": "temperament",
+        "importance": 2
+      },
+      {
+        "lemma": "torturous",
+        "importance": 2
+      },
+      {
+        "lemma": "trauma",
+        "importance": 2
+      },
+      {
+        "lemma": "traumatic",
+        "importance": 2
+      },
+      {
+        "lemma": "undaunted",
+        "importance": 2
+      },
+      {
+        "lemma": "unenviably",
+        "importance": 2
+      },
+      {
+        "lemma": "uniformity",
+        "importance": 2
+      },
+      {
+        "lemma": "unmusical",
+        "importance": 2
+      },
+      {
+        "lemma": "unscathing",
+        "importance": 2
+      },
+      {
+        "lemma": "utensil",
+        "importance": 2
+      },
+      {
+        "lemma": "venerate",
+        "importance": 2
+      },
+      {
+        "lemma": "vertical",
+        "importance": 2
+      },
+      {
+        "lemma": "violet",
+        "importance": 2
+      },
+      {
+        "lemma": "wary",
+        "importance": 2
+      },
+      {
+        "lemma": "washtub",
+        "importance": 2
+      },
+      {
+        "lemma": "wrangle",
+        "importance": 2
+      },
+      {
+        "lemma": "zany",
+        "importance": 2
+      },
+      {
+        "lemma": "accountability",
+        "importance": 2
+      },
+      {
+        "lemma": "acrobatic",
+        "importance": 2
+      },
+      {
+        "lemma": "adhesion",
+        "importance": 2
+      },
+      {
+        "lemma": "all-encompassing",
+        "importance": 2
+      },
+      {
+        "lemma": "allusion",
+        "importance": 2
+      },
+      {
+        "lemma": "amorphous",
+        "importance": 2
+      },
+      {
+        "lemma": "anthropologically",
+        "importance": 2
+      },
+      {
+        "lemma": "antithesis",
+        "importance": 2
+      },
+      {
+        "lemma": "ardor",
+        "importance": 2
+      },
+      {
+        "lemma": "attributive",
+        "importance": 2
+      },
+      {
+        "lemma": "autopilot",
+        "importance": 2
+      },
+      {
+        "lemma": "axiomatic",
+        "importance": 2
+      },
+      {
+        "lemma": "banishment",
+        "importance": 2
+      },
+      {
+        "lemma": "belligerence",
+        "importance": 2
+      },
+      {
+        "lemma": "bout",
+        "importance": 2
+      },
+      {
+        "lemma": "brimstone",
+        "importance": 2
+      },
+      {
+        "lemma": "calamitous",
+        "importance": 2
+      },
+      {
+        "lemma": "chronology",
+        "importance": 2
+      },
+      {
+        "lemma": "circumnavigation",
+        "importance": 2
+      },
+      {
+        "lemma": "cloistered",
+        "importance": 2
+      },
+      {
+        "lemma": "coax",
+        "importance": 2
+      },
+      {
+        "lemma": "cocoon",
+        "importance": 2
+      },
+      {
+        "lemma": "cogent",
+        "importance": 2
+      },
+      {
+        "lemma": "cogently",
+        "importance": 2
+      },
+      {
+        "lemma": "cognitive",
+        "importance": 2
+      },
+      {
+        "lemma": "collide",
+        "importance": 2
+      },
+      {
+        "lemma": "collider",
+        "importance": 2
+      },
+      {
+        "lemma": "colloquial",
+        "importance": 2
+      },
+      {
+        "lemma": "colloquially",
+        "importance": 2
+      },
+      {
+        "lemma": "colloquium",
+        "importance": 2
+      },
+      {
+        "lemma": "combustion",
+        "importance": 2
+      },
+      {
+        "lemma": "commensurate",
+        "importance": 2
+      },
+      {
+        "lemma": "commensurately",
+        "importance": 2
+      },
+      {
+        "lemma": "commode",
+        "importance": 2
+      },
+      {
+        "lemma": "commodity",
+        "importance": 2
+      },
+      {
+        "lemma": "compellingly",
+        "importance": 2
+      },
+      {
+        "lemma": "computerize",
+        "importance": 2
+      },
+      {
+        "lemma": "conciliation",
+        "importance": 2
+      },
+      {
+        "lemma": "conciliatory",
+        "importance": 2
+      },
+      {
+        "lemma": "concurrence",
+        "importance": 2
+      },
+      {
+        "lemma": "condensation",
+        "importance": 2
+      },
+      {
+        "lemma": "condone",
+        "importance": 2
+      },
+      {
+        "lemma": "conduit",
+        "importance": 2
+      },
+      {
+        "lemma": "confabulate",
+        "importance": 2
+      },
+      {
+        "lemma": "confabulation",
+        "importance": 2
+      },
+      {
+        "lemma": "confection",
+        "importance": 2
+      },
+      {
+        "lemma": "confrontational",
+        "importance": 2
+      },
+      {
+        "lemma": "confrontationally",
+        "importance": 2
+      },
+      {
+        "lemma": "conglomerate",
+        "importance": 2
+      },
+      {
+        "lemma": "conjecture",
+        "importance": 2
+      },
+      {
+        "lemma": "connotation",
+        "importance": 2
+      },
+      {
+        "lemma": "connote",
+        "importance": 2
+      },
+      {
+        "lemma": "consign",
+        "importance": 2
+      },
+      {
+        "lemma": "consignment",
+        "importance": 2
+      },
+      {
+        "lemma": "consternation",
+        "importance": 2
+      },
+      {
+        "lemma": "constrained",
+        "importance": 2
+      },
+      {
+        "lemma": "contagion",
+        "importance": 2
+      },
+      {
+        "lemma": "contemptuous",
+        "importance": 2
+      },
+      {
+        "lemma": "contemptuously",
+        "importance": 2
+      },
+      {
+        "lemma": "contractual",
+        "importance": 2
+      },
+      {
+        "lemma": "contractually",
+        "importance": 2
+      },
+      {
+        "lemma": "contraption",
+        "importance": 2
+      },
+      {
+        "lemma": "contrive",
+        "importance": 2
+      },
+      {
+        "lemma": "cordon",
+        "importance": 2
+      },
+      {
+        "lemma": "corpse",
+        "importance": 2
+      },
+      {
+        "lemma": "corpus",
+        "importance": 2
+      },
+      {
+        "lemma": "correlate",
+        "importance": 2
+      },
+      {
+        "lemma": "correlation",
+        "importance": 2
+      },
+      {
+        "lemma": "cosmic",
+        "importance": 2
+      },
+      {
+        "lemma": "cosset",
+        "importance": 2
+      },
+      {
+        "lemma": "counsel",
+        "importance": 2
+      },
+      {
+        "lemma": "counterproductive",
+        "importance": 2
+      },
+      {
+        "lemma": "counterproductively",
+        "importance": 2
+      },
+      {
+        "lemma": "crippling",
+        "importance": 2
+      },
+      {
+        "lemma": "crony",
+        "importance": 2
+      },
+      {
+        "lemma": "crystallization",
+        "importance": 2
+      },
+      {
+        "lemma": "cull",
+        "importance": 2
+      },
+      {
+        "lemma": "cultish",
+        "importance": 2
+      },
+      {
+        "lemma": "curate",
+        "importance": 2
+      },
+      {
+        "lemma": "curator",
+        "importance": 2
+      },
+      {
+        "lemma": "dampen",
+        "importance": 2
+      },
+      {
+        "lemma": "deaden",
+        "importance": 2
+      },
+      {
+        "lemma": "decentralize",
+        "importance": 2
+      },
+      {
+        "lemma": "declination",
+        "importance": 2
+      },
+      {
+        "lemma": "deficient",
+        "importance": 2
+      },
+      {
+        "lemma": "deficiently",
+        "importance": 2
+      },
+      {
+        "lemma": "delicatessen",
+        "importance": 2
+      },
+      {
+        "lemma": "demystification",
+        "importance": 2
+      },
+      {
+        "lemma": "demystify",
+        "importance": 2
+      },
+      {
+        "lemma": "denotation",
+        "importance": 2
+      },
+      {
+        "lemma": "denote",
+        "importance": 2
+      },
+      {
+        "lemma": "denounce",
+        "importance": 2
+      },
+      {
+        "lemma": "denunciation",
+        "importance": 2
+      },
+      {
+        "lemma": "depraved",
+        "importance": 2
+      },
+      {
+        "lemma": "depravity",
+        "importance": 2
+      },
+      {
+        "lemma": "deprecate",
+        "importance": 2
+      },
+      {
+        "lemma": "deprecatingly",
+        "importance": 2
+      },
+      {
+        "lemma": "depressive",
+        "importance": 2
+      },
+      {
+        "lemma": "derelict",
+        "importance": 2
+      },
+      {
+        "lemma": "derision",
+        "importance": 2
+      },
+      {
+        "lemma": "derisive",
+        "importance": 2
+      },
+      {
+        "lemma": "derisively",
+        "importance": 2
+      },
+      {
+        "lemma": "deterrent",
+        "importance": 2
+      },
+      {
+        "lemma": "detract",
+        "importance": 2
+      },
+      {
+        "lemma": "deviant",
+        "importance": 2
+      },
+      {
+        "lemma": "deviantly",
+        "importance": 2
+      },
+      {
+        "lemma": "diffuse",
+        "importance": 2
+      },
+      {
+        "lemma": "diligently",
+        "importance": 2
+      },
+      {
+        "lemma": "diminish",
+        "importance": 2
+      },
+      {
+        "lemma": "disdainful",
+        "importance": 2
+      },
+      {
+        "lemma": "disparage",
+        "importance": 2
+      },
+      {
+        "lemma": "disparagement",
+        "importance": 2
+      },
+      {
+        "lemma": "disparaging",
+        "importance": 2
+      },
+      {
+        "lemma": "disparagingly",
+        "importance": 2
+      },
+      {
+        "lemma": "dispersal",
+        "importance": 2
+      },
+      {
+        "lemma": "disperse",
+        "importance": 2
+      },
+      {
+        "lemma": "dissemble",
+        "importance": 2
+      },
+      {
+        "lemma": "disseminate",
+        "importance": 2
+      },
+      {
+        "lemma": "dissemination",
+        "importance": 2
+      },
+      {
+        "lemma": "dissension",
+        "importance": 2
+      },
+      {
+        "lemma": "distill",
+        "importance": 2
+      },
+      {
+        "lemma": "distillation",
+        "importance": 2
+      },
+      {
+        "lemma": "divination",
+        "importance": 2
+      },
+      {
+        "lemma": "dole out",
+        "importance": 2
+      },
+      {
+        "lemma": "domesticity",
+        "importance": 2
+      },
+      {
+        "lemma": "drabness",
+        "importance": 2
+      },
+      {
+        "lemma": "dribble",
+        "importance": 2
+      },
+      {
+        "lemma": "drudgery",
+        "importance": 2
+      },
+      {
+        "lemma": "dubiously",
+        "importance": 2
+      },
+      {
+        "lemma": "dwarfism",
+        "importance": 2
+      },
+      {
+        "lemma": "ebb",
+        "importance": 2
+      },
+      {
+        "lemma": "eccentricity",
+        "importance": 2
+      },
+      {
+        "lemma": "echo",
+        "importance": 2
+      },
+      {
+        "lemma": "echolocate",
+        "importance": 2
+      },
+      {
+        "lemma": "echolocation",
+        "importance": 2
+      },
+      {
+        "lemma": "economize",
+        "importance": 2
+      },
+      {
+        "lemma": "ecotourism",
+        "importance": 2
+      },
+      {
+        "lemma": "edification",
+        "importance": 2
+      },
+      {
+        "lemma": "edifice",
+        "importance": 2
+      },
+      {
+        "lemma": "edify",
+        "importance": 2
+      },
+      {
+        "lemma": "egalitarian",
+        "importance": 2
+      },
+      {
+        "lemma": "eke out",
+        "importance": 2
+      },
+      {
+        "lemma": "elasticity",
+        "importance": 2
+      },
+      {
+        "lemma": "elated",
+        "importance": 2
+      },
+      {
+        "lemma": "elation",
+        "importance": 2
+      },
+      {
+        "lemma": "electrode",
+        "importance": 2
+      },
+      {
+        "lemma": "elephantine",
+        "importance": 2
+      },
+      {
+        "lemma": "embed",
+        "importance": 2
+      },
+      {
+        "lemma": "embodiment",
+        "importance": 2
+      },
+      {
+        "lemma": "embody",
+        "importance": 2
+      },
+      {
+        "lemma": "eminence",
+        "importance": 2
+      },
+      {
+        "lemma": "eminent",
+        "importance": 2
+      },
+      {
+        "lemma": "emolument",
+        "importance": 2
+      },
+      {
+        "lemma": "emulate",
+        "importance": 2
+      },
+      {
+        "lemma": "emulation",
+        "importance": 2
+      },
+      {
+        "lemma": "emulsification",
+        "importance": 2
+      },
+      {
+        "lemma": "emulsifier",
+        "importance": 2
+      },
+      {
+        "lemma": "emulsify",
+        "importance": 2
+      },
+      {
+        "lemma": "enabler",
+        "importance": 2
+      },
+      {
+        "lemma": "encompass",
+        "importance": 2
+      },
+      {
+        "lemma": "encumber",
+        "importance": 2
+      },
+      {
+        "lemma": "encumbrance",
+        "importance": 2
+      },
+      {
+        "lemma": "enduringly",
+        "importance": 2
+      },
+      {
+        "lemma": "engender",
+        "importance": 2
+      },
+      {
+        "lemma": "enthuse",
+        "importance": 2
+      },
+      {
+        "lemma": "ephemera",
+        "importance": 2
+      },
+      {
+        "lemma": "ephemeral",
+        "importance": 2
+      },
+      {
+        "lemma": "ephemerality",
+        "importance": 2
+      },
+      {
+        "lemma": "epoxy",
+        "importance": 2
+      },
+      {
+        "lemma": "equable",
+        "importance": 2
+      },
+      {
+        "lemma": "equilibrium",
+        "importance": 2
+      },
+      {
+        "lemma": "etch",
+        "importance": 2
+      },
+      {
+        "lemma": "etching",
+        "importance": 2
+      },
+      {
+        "lemma": "ethos",
+        "importance": 2
+      },
+      {
+        "lemma": "euphemism",
+        "importance": 2
+      },
+      {
+        "lemma": "euphemistic",
+        "importance": 2
+      },
+      {
+        "lemma": "euphemistically",
+        "importance": 2
+      },
+      {
+        "lemma": "euphoria",
+        "importance": 2
+      },
+      {
+        "lemma": "euphoric",
+        "importance": 2
+      },
+      {
+        "lemma": "euphorically",
+        "importance": 2
+      },
+      {
+        "lemma": "evokingly",
+        "importance": 2
+      },
+      {
+        "lemma": "exalted",
+        "importance": 2
+      },
+      {
+        "lemma": "exaltedly",
+        "importance": 2
+      },
+      {
+        "lemma": "exorcism",
+        "importance": 2
+      },
+      {
+        "lemma": "exorcist",
+        "importance": 2
+      },
+      {
+        "lemma": "extant",
+        "importance": 2
+      },
+      {
+        "lemma": "extracurricular",
+        "importance": 2
+      },
+      {
+        "lemma": "exude",
+        "importance": 2
+      },
+      {
+        "lemma": "fabled",
+        "importance": 2
+      },
+      {
+        "lemma": "fabricate",
+        "importance": 2
+      },
+      {
+        "lemma": "fabrication",
+        "importance": 2
+      },
+      {
+        "lemma": "fabulate",
+        "importance": 2
+      },
+      {
+        "lemma": "fabulation",
+        "importance": 2
+      },
+      {
+        "lemma": "facsimile",
+        "importance": 2
+      },
+      {
+        "lemma": "fallacy",
+        "importance": 2
+      },
+      {
+        "lemma": "farcical",
+        "importance": 2
+      },
+      {
+        "lemma": "feign",
+        "importance": 2
+      },
+      {
+        "lemma": "ferocity",
+        "importance": 2
+      },
+      {
+        "lemma": "fete",
+        "importance": 2
+      },
+      {
+        "lemma": "figuratively",
+        "importance": 2
+      },
+      {
+        "lemma": "flagging",
+        "importance": 2
+      },
+      {
+        "lemma": "flatout",
+        "importance": 2
+      },
+      {
+        "lemma": "flightiness",
+        "importance": 2
+      },
+      {
+        "lemma": "flighty",
+        "importance": 2
+      },
+      {
+        "lemma": "flit",
+        "importance": 2
+      },
+      {
+        "lemma": "floe",
+        "importance": 2
+      },
+      {
+        "lemma": "floodgates",
+        "importance": 2
+      },
+      {
+        "lemma": "fluctuate",
+        "importance": 2
+      },
+      {
+        "lemma": "fluctuation",
+        "importance": 2
+      },
+      {
+        "lemma": "forfeiture",
+        "importance": 2
+      },
+      {
+        "lemma": "forlorn",
+        "importance": 2
+      },
+      {
+        "lemma": "forlornly",
+        "importance": 2
+      },
+      {
+        "lemma": "formidably",
+        "importance": 2
+      },
+      {
+        "lemma": "fractious",
+        "importance": 2
+      },
+      {
+        "lemma": "frolic",
+        "importance": 2
+      },
+      {
+        "lemma": "fruition",
+        "importance": 2
+      },
+      {
+        "lemma": "gale",
+        "importance": 2
+      },
+      {
+        "lemma": "gambit",
+        "importance": 2
+      },
+      {
+        "lemma": "gauche",
+        "importance": 2
+      },
+      {
+        "lemma": "genomic",
+        "importance": 2
+      },
+      {
+        "lemma": "genomically",
+        "importance": 2
+      },
+      {
+        "lemma": "glitz",
+        "importance": 2
+      },
+      {
+        "lemma": "glitzy",
+        "importance": 2
+      },
+      {
+        "lemma": "glory in",
+        "importance": 2
+      },
+      {
+        "lemma": "gout",
+        "importance": 2
+      },
+      {
+        "lemma": "gravitate",
+        "importance": 2
+      },
+      {
+        "lemma": "gravitational",
+        "importance": 2
+      },
+      {
+        "lemma": "gravitationally",
+        "importance": 2
+      },
+      {
+        "lemma": "habitation",
+        "importance": 2
+      },
+      {
+        "lemma": "hamper",
+        "importance": 2
+      },
+      {
+        "lemma": "haphazard",
+        "importance": 2
+      },
+      {
+        "lemma": "haphazardly",
+        "importance": 2
+      },
+      {
+        "lemma": "hapless",
+        "importance": 2
+      },
+      {
+        "lemma": "happenstance",
+        "importance": 2
+      },
+      {
+        "lemma": "haughtily",
+        "importance": 2
+      },
+      {
+        "lemma": "haughty",
+        "importance": 2
+      },
+      {
+        "lemma": "hauntingly",
+        "importance": 2
+      },
+      {
+        "lemma": "headmistress",
+        "importance": 2
+      },
+      {
+        "lemma": "helm",
+        "importance": 2
+      },
+      {
+        "lemma": "herald",
+        "importance": 2
+      },
+      {
+        "lemma": "hermetic",
+        "importance": 2
+      },
+      {
+        "lemma": "hermit",
+        "importance": 2
+      },
+      {
+        "lemma": "hinder",
+        "importance": 2
+      },
+      {
+        "lemma": "hindrance",
+        "importance": 2
+      },
+      {
+        "lemma": "hindsight",
+        "importance": 2
+      },
+      {
+        "lemma": "histrionic",
+        "importance": 2
+      },
+      {
+        "lemma": "histrionically",
+        "importance": 2
+      },
+      {
+        "lemma": "hitch",
+        "importance": 2
+      },
+      {
+        "lemma": "hitherto",
+        "importance": 2
+      },
+      {
+        "lemma": "hoist",
+        "importance": 2
+      },
+      {
+        "lemma": "homestead",
+        "importance": 2
+      },
+      {
+        "lemma": "hotelier",
+        "importance": 2
+      },
+      {
+        "lemma": "huddle",
+        "importance": 2
+      },
+      {
+        "lemma": "hull",
+        "importance": 2
+      },
+      {
+        "lemma": "hypnotherapy",
+        "importance": 2
+      },
+      {
+        "lemma": "hypothesis",
+        "importance": 2
+      },
+      {
+        "lemma": "hypothesize",
+        "importance": 2
+      },
+      {
+        "lemma": "hypothetical",
+        "importance": 2
+      },
+      {
+        "lemma": "hysteria",
+        "importance": 2
+      },
+      {
+        "lemma": "hysterical",
+        "importance": 2
+      },
+      {
+        "lemma": "hysterically",
+        "importance": 2
+      },
+      {
+        "lemma": "idiomatic",
+        "importance": 2
+      },
+      {
+        "lemma": "idiomatically",
+        "importance": 2
+      },
+      {
+        "lemma": "idiosyncrasy",
+        "importance": 2
+      },
+      {
+        "lemma": "idiosyncratic",
+        "importance": 2
+      },
+      {
+        "lemma": "ignominious",
+        "importance": 2
+      },
+      {
+        "lemma": "ignominiously",
+        "importance": 2
+      },
+      {
+        "lemma": "impeccable",
+        "importance": 2
+      },
+      {
+        "lemma": "impeccably",
+        "importance": 2
+      },
+      {
+        "lemma": "imperceptible",
+        "importance": 2
+      },
+      {
+        "lemma": "imperceptibly",
+        "importance": 2
+      },
+      {
+        "lemma": "imposition",
+        "importance": 2
+      },
+      {
+        "lemma": "impresario",
+        "importance": 2
+      },
+      {
+        "lemma": "impressionistic",
+        "importance": 2
+      },
+      {
+        "lemma": "impressionistically",
+        "importance": 2
+      },
+      {
+        "lemma": "improvisational",
+        "importance": 2
+      },
+      {
+        "lemma": "inartistic",
+        "importance": 2
+      },
+      {
+        "lemma": "inchoate",
+        "importance": 2
+      },
+      {
+        "lemma": "inchoately",
+        "importance": 2
+      },
+      {
+        "lemma": "incipient",
+        "importance": 2
+      },
+      {
+        "lemma": "incise",
+        "importance": 2
+      },
+      {
+        "lemma": "incongruity",
+        "importance": 2
+      },
+      {
+        "lemma": "incongruous",
+        "importance": 2
+      },
+      {
+        "lemma": "incongruously",
+        "importance": 2
+      },
+      {
+        "lemma": "incumbent",
+        "importance": 2
+      },
+      {
+        "lemma": "indignant",
+        "importance": 2
+      },
+      {
+        "lemma": "indignantly",
+        "importance": 2
+      },
+      {
+        "lemma": "indiscrete",
+        "importance": 2
+      },
+      {
+        "lemma": "indiscretion",
+        "importance": 2
+      },
+      {
+        "lemma": "individualism",
+        "importance": 2
+      },
+      {
+        "lemma": "indolence",
+        "importance": 2
+      },
+      {
+        "lemma": "indolent",
+        "importance": 2
+      },
+      {
+        "lemma": "indolently",
+        "importance": 2
+      },
+      {
+        "lemma": "induce",
+        "importance": 2
+      },
+      {
+        "lemma": "inducement",
+        "importance": 2
+      },
+      {
+        "lemma": "indulgence",
+        "importance": 2
+      },
+      {
+        "lemma": "indulgently",
+        "importance": 2
+      },
+      {
+        "lemma": "inexorability",
+        "importance": 2
+      },
+      {
+        "lemma": "inexorable",
+        "importance": 2
+      },
+      {
+        "lemma": "inexorably",
+        "importance": 2
+      },
+      {
+        "lemma": "infallibility",
+        "importance": 2
+      },
+      {
+        "lemma": "infallible",
+        "importance": 2
+      },
+      {
+        "lemma": "infallibly",
+        "importance": 2
+      },
+      {
+        "lemma": "infernal",
+        "importance": 2
+      },
+      {
+        "lemma": "infernally",
+        "importance": 2
+      },
+      {
+        "lemma": "informant",
+        "importance": 2
+      },
+      {
+        "lemma": "ingenuous",
+        "importance": 2
+      },
+      {
+        "lemma": "ingenuously",
+        "importance": 2
+      },
+      {
+        "lemma": "ingrate",
+        "importance": 2
+      },
+      {
+        "lemma": "ingratiate",
+        "importance": 2
+      },
+      {
+        "lemma": "ingratiating",
+        "importance": 2
+      },
+      {
+        "lemma": "ingratiatingly",
+        "importance": 2
+      },
+      {
+        "lemma": "innuendo",
+        "importance": 2
+      },
+      {
+        "lemma": "inscrutable",
+        "importance": 2
+      },
+      {
+        "lemma": "instantaneous",
+        "importance": 2
+      },
+      {
+        "lemma": "instantaneously",
+        "importance": 2
+      },
+      {
+        "lemma": "insular",
+        "importance": 2
+      },
+      {
+        "lemma": "integration",
+        "importance": 2
+      },
+      {
+        "lemma": "interlocking",
+        "importance": 2
+      },
+      {
+        "lemma": "interlude",
+        "importance": 2
+      },
+      {
+        "lemma": "intermediary",
+        "importance": 2
+      },
+      {
+        "lemma": "interrogate",
+        "importance": 2
+      },
+      {
+        "lemma": "interrogation",
+        "importance": 2
+      },
+      {
+        "lemma": "interrogative",
+        "importance": 2
+      },
+      {
+        "lemma": "interrogatively",
+        "importance": 2
+      },
+      {
+        "lemma": "intersperse",
+        "importance": 2
+      },
+      {
+        "lemma": "interweave",
+        "importance": 2
+      },
+      {
+        "lemma": "intrinsic",
+        "importance": 2
+      },
+      {
+        "lemma": "intrinsically",
+        "importance": 2
+      },
+      {
+        "lemma": "ironic",
+        "importance": 2
+      },
+      {
+        "lemma": "irrelevancy",
+        "importance": 2
+      },
+      {
+        "lemma": "irrevocable",
+        "importance": 2
+      },
+      {
+        "lemma": "irrevocably",
+        "importance": 2
+      },
+      {
+        "lemma": "jargon",
+        "importance": 2
+      },
+      {
+        "lemma": "jarring",
+        "importance": 2
+      },
+      {
+        "lemma": "kinetic",
+        "importance": 2
+      },
+      {
+        "lemma": "kinetically",
+        "importance": 2
+      },
+      {
+        "lemma": "knack",
+        "importance": 2
+      },
+      {
+        "lemma": "lament",
+        "importance": 2
+      },
+      {
+        "lemma": "lamentation",
+        "importance": 2
+      },
+      {
+        "lemma": "laryngitis",
+        "importance": 2
+      },
+      {
+        "lemma": "lassitude",
+        "importance": 2
+      },
+      {
+        "lemma": "laud",
+        "importance": 2
+      },
+      {
+        "lemma": "laudatory",
+        "importance": 2
+      },
+      {
+        "lemma": "leaven",
+        "importance": 2
+      },
+      {
+        "lemma": "leavening",
+        "importance": 2
+      },
+      {
+        "lemma": "legion",
+        "importance": 2
+      },
+      {
+        "lemma": "liaise",
+        "importance": 2
+      },
+      {
+        "lemma": "locomotion",
+        "importance": 2
+      },
+      {
+        "lemma": "locomotive",
+        "importance": 2
+      },
+      {
+        "lemma": "loiter",
+        "importance": 2
+      },
+      {
+        "lemma": "lurid",
+        "importance": 2
+      },
+      {
+        "lemma": "luridly",
+        "importance": 2
+      },
+      {
+        "lemma": "lyrical",
+        "importance": 2
+      },
+      {
+        "lemma": "lyrically",
+        "importance": 2
+      },
+      {
+        "lemma": "lyricist",
+        "importance": 2
+      },
+      {
+        "lemma": "maelstrom",
+        "importance": 2
+      },
+      {
+        "lemma": "maggot",
+        "importance": 2
+      },
+      {
+        "lemma": "magnanimity",
+        "importance": 2
+      },
+      {
+        "lemma": "magnanimous",
+        "importance": 2
+      },
+      {
+        "lemma": "magnanimously",
+        "importance": 2
+      },
+      {
+        "lemma": "magnate",
+        "importance": 2
+      },
+      {
+        "lemma": "magpie",
+        "importance": 2
+      },
+      {
+        "lemma": "malice",
+        "importance": 2
+      },
+      {
+        "lemma": "malicious",
+        "importance": 2
+      },
+      {
+        "lemma": "maliciously",
+        "importance": 2
+      },
+      {
+        "lemma": "malleability",
+        "importance": 2
+      },
+      {
+        "lemma": "malleable",
+        "importance": 2
+      },
+      {
+        "lemma": "mangle",
+        "importance": 2
+      },
+      {
+        "lemma": "mariner",
+        "importance": 2
+      },
+      {
+        "lemma": "marketability",
+        "importance": 2
+      },
+      {
+        "lemma": "materialism",
+        "importance": 2
+      },
+      {
+        "lemma": "materialistic",
+        "importance": 2
+      },
+      {
+        "lemma": "materialization",
+        "importance": 2
+      },
+      {
+        "lemma": "materialize",
+        "importance": 2
+      },
+      {
+        "lemma": "maverick",
+        "importance": 2
+      },
+      {
+        "lemma": "meager",
+        "importance": 2
+      },
+      {
+        "lemma": "mediate",
+        "importance": 2
+      },
+      {
+        "lemma": "mediation",
+        "importance": 2
+      },
+      {
+        "lemma": "mediocrity",
+        "importance": 2
+      },
+      {
+        "lemma": "melancholy",
+        "importance": 2
+      },
+      {
+        "lemma": "melodious",
+        "importance": 2
+      },
+      {
+        "lemma": "melodiously",
+        "importance": 2
+      },
+      {
+        "lemma": "menace",
+        "importance": 2
+      },
+      {
+        "lemma": "menacing",
+        "importance": 2
+      },
+      {
+        "lemma": "menacingly",
+        "importance": 2
+      },
+      {
+        "lemma": "menial",
+        "importance": 2
+      },
+      {
+        "lemma": "mercantile",
+        "importance": 2
+      },
+      {
+        "lemma": "mercenary",
+        "importance": 2
+      },
+      {
+        "lemma": "merit",
+        "importance": 2
+      },
+      {
+        "lemma": "mesh",
+        "importance": 2
+      },
+      {
+        "lemma": "mesmeric",
+        "importance": 2
+      },
+      {
+        "lemma": "metalled",
+        "importance": 2
+      },
+      {
+        "lemma": "meteorological",
+        "importance": 2
+      },
+      {
+        "lemma": "meteorology",
+        "importance": 2
+      },
+      {
+        "lemma": "methodological",
+        "importance": 2
+      },
+      {
+        "lemma": "methodologically",
+        "importance": 2
+      },
+      {
+        "lemma": "methodology",
+        "importance": 2
+      },
+      {
+        "lemma": "meticulous",
+        "importance": 2
+      },
+      {
+        "lemma": "meticulously",
+        "importance": 2
+      },
+      {
+        "lemma": "mien",
+        "importance": 2
+      },
+      {
+        "lemma": "milieu",
+        "importance": 2
+      },
+      {
+        "lemma": "minefield",
+        "importance": 2
+      },
+      {
+        "lemma": "minster",
+        "importance": 2
+      },
+      {
+        "lemma": "misdemeanor",
+        "importance": 2
+      },
+      {
+        "lemma": "modernism",
+        "importance": 2
+      },
+      {
+        "lemma": "monastic",
+        "importance": 2
+      },
+      {
+        "lemma": "moor",
+        "importance": 2
+      },
+      {
+        "lemma": "moribund",
+        "importance": 2
+      },
+      {
+        "lemma": "mottled",
+        "importance": 2
+      },
+      {
+        "lemma": "mull over",
+        "importance": 2
+      },
+      {
+        "lemma": "mundanity",
+        "importance": 2
+      },
+      {
+        "lemma": "munificence",
+        "importance": 2
+      },
+      {
+        "lemma": "muscle-bound",
+        "importance": 2
+      },
+      {
+        "lemma": "mutinous",
+        "importance": 2
+      },
+      {
+        "lemma": "mutinously",
+        "importance": 2
+      },
+      {
+        "lemma": "myriad",
+        "importance": 2
+      },
+      {
+        "lemma": "mystique",
+        "importance": 2
+      },
+      {
+        "lemma": "nascent",
+        "importance": 2
+      },
+      {
+        "lemma": "neophyte",
+        "importance": 2
+      },
+      {
+        "lemma": "nigh",
+        "importance": 2
+      },
+      {
+        "lemma": "nonchalant",
+        "importance": 2
+      },
+      {
+        "lemma": "nonchalantly",
+        "importance": 2
+      },
+      {
+        "lemma": "nostalgia",
+        "importance": 2
+      },
+      {
+        "lemma": "nostalgic",
+        "importance": 2
+      },
+      {
+        "lemma": "nostalgically",
+        "importance": 2
+      },
+      {
+        "lemma": "notoriety",
+        "importance": 2
+      },
+      {
+        "lemma": "notoriously",
+        "importance": 2
+      },
+      {
+        "lemma": "oblique",
+        "importance": 2
+      },
+      {
+        "lemma": "octogenarian",
+        "importance": 2
+      },
+      {
+        "lemma": "opacity",
+        "importance": 2
+      },
+      {
+        "lemma": "opaque",
+        "importance": 2
+      },
+      {
+        "lemma": "opulence",
+        "importance": 2
+      },
+      {
+        "lemma": "opulent",
+        "importance": 2
+      },
+      {
+        "lemma": "opulently",
+        "importance": 2
+      },
+      {
+        "lemma": "ordain",
+        "importance": 2
+      },
+      {
+        "lemma": "ore",
+        "importance": 2
+      },
+      {
+        "lemma": "ornate",
+        "importance": 2
+      },
+      {
+        "lemma": "ostensible",
+        "importance": 2
+      },
+      {
+        "lemma": "ostensibly",
+        "importance": 2
+      },
+      {
+        "lemma": "outmoded",
+        "importance": 2
+      },
+      {
+        "lemma": "overlay",
+        "importance": 2
+      },
+      {
+        "lemma": "painstaking",
+        "importance": 2
+      },
+      {
+        "lemma": "painstakingly",
+        "importance": 2
+      },
+      {
+        "lemma": "palatable",
+        "importance": 2
+      },
+      {
+        "lemma": "palate",
+        "importance": 2
+      },
+      {
+        "lemma": "parable",
+        "importance": 2
+      },
+      {
+        "lemma": "paradoxical",
+        "importance": 2
+      },
+      {
+        "lemma": "paradoxically",
+        "importance": 2
+      },
+      {
+        "lemma": "paralyzingly",
+        "importance": 2
+      },
+      {
+        "lemma": "parameter",
+        "importance": 2
+      },
+      {
+        "lemma": "paramount",
+        "importance": 2
+      },
+      {
+        "lemma": "parasitic",
+        "importance": 2
+      },
+      {
+        "lemma": "parochial",
+        "importance": 2
+      },
+      {
+        "lemma": "patchily",
+        "importance": 2
+      },
+      {
+        "lemma": "patchy",
+        "importance": 2
+      },
+      {
+        "lemma": "patronize",
+        "importance": 2
+      },
+      {
+        "lemma": "patronizing",
+        "importance": 2
+      },
+      {
+        "lemma": "patronizingly",
+        "importance": 2
+      },
+      {
+        "lemma": "pedestal",
+        "importance": 2
+      },
+      {
+        "lemma": "perch",
+        "importance": 2
+      },
+      {
+        "lemma": "pervasive",
+        "importance": 2
+      },
+      {
+        "lemma": "pervasiveness",
+        "importance": 2
+      },
+      {
+        "lemma": "perverse",
+        "importance": 2
+      },
+      {
+        "lemma": "perversity",
+        "importance": 2
+      },
+      {
+        "lemma": "philanthropic",
+        "importance": 2
+      },
+      {
+        "lemma": "philanthropically",
+        "importance": 2
+      },
+      {
+        "lemma": "philanthropist",
+        "importance": 2
+      },
+      {
+        "lemma": "philanthropy",
+        "importance": 2
+      },
+      {
+        "lemma": "philistine",
+        "importance": 2
+      },
+      {
+        "lemma": "physiological",
+        "importance": 2
+      },
+      {
+        "lemma": "physiologically",
+        "importance": 2
+      },
+      {
+        "lemma": "plumage",
+        "importance": 2
+      },
+      {
+        "lemma": "plume",
+        "importance": 2
+      },
+      {
+        "lemma": "plutocrat",
+        "importance": 2
+      },
+      {
+        "lemma": "polysyllabic",
+        "importance": 2
+      },
+      {
+        "lemma": "ponderous",
+        "importance": 2
+      },
+      {
+        "lemma": "ponderously",
+        "importance": 2
+      },
+      {
+        "lemma": "porten",
+        "importance": 2
+      },
+      {
+        "lemma": "portraiture",
+        "importance": 2
+      },
+      {
+        "lemma": "posit",
+        "importance": 2
+      },
+      {
+        "lemma": "posterity",
+        "importance": 2
+      },
+      {
+        "lemma": "postural",
+        "importance": 2
+      },
+      {
+        "lemma": "posturing",
+        "importance": 2
+      },
+      {
+        "lemma": "precocious",
+        "importance": 2
+      },
+      {
+        "lemma": "precociously",
+        "importance": 2
+      },
+      {
+        "lemma": "preconception",
+        "importance": 2
+      },
+      {
+        "lemma": "predilection",
+        "importance": 2
+      },
+      {
+        "lemma": "preeminent",
+        "importance": 2
+      },
+      {
+        "lemma": "preoccupation",
+        "importance": 2
+      },
+      {
+        "lemma": "prescriptive",
+        "importance": 2
+      },
+      {
+        "lemma": "presentational",
+        "importance": 2
+      },
+      {
+        "lemma": "preservationist",
+        "importance": 2
+      },
+      {
+        "lemma": "pressurization",
+        "importance": 2
+      },
+      {
+        "lemma": "pressurize",
+        "importance": 2
+      },
+      {
+        "lemma": "presuppose",
+        "importance": 2
+      },
+      {
+        "lemma": "presupposition",
+        "importance": 2
+      },
+      {
+        "lemma": "primeval",
+        "importance": 2
+      },
+      {
+        "lemma": "prise",
+        "importance": 2
+      },
+      {
+        "lemma": "prissy",
+        "importance": 2
+      },
+      {
+        "lemma": "procedural",
+        "importance": 2
+      },
+      {
+        "lemma": "profitability",
+        "importance": 2
+      },
+      {
+        "lemma": "proliferation",
+        "importance": 2
+      },
+      {
+        "lemma": "prolong",
+        "importance": 2
+      },
+      {
+        "lemma": "promenade",
+        "importance": 2
+      },
+      {
+        "lemma": "promotable",
+        "importance": 2
+      },
+      {
+        "lemma": "prone",
+        "importance": 2
+      },
+      {
+        "lemma": "proportional",
+        "importance": 2
+      },
+      {
+        "lemma": "proportionally",
+        "importance": 2
+      },
+      {
+        "lemma": "proposition",
+        "importance": 2
+      },
+      {
+        "lemma": "proprietary",
+        "importance": 2
+      },
+      {
+        "lemma": "proprietorial",
+        "importance": 2
+      },
+      {
+        "lemma": "proscribe",
+        "importance": 2
+      },
+      {
+        "lemma": "proscription",
+        "importance": 2
+      },
+      {
+        "lemma": "prostrate",
+        "importance": 2
+      },
+      {
+        "lemma": "protrude",
+        "importance": 2
+      },
+      {
+        "lemma": "protrusion",
+        "importance": 2
+      },
+      {
+        "lemma": "proverbial",
+        "importance": 2
+      },
+      {
+        "lemma": "provincial",
+        "importance": 2
+      },
+      {
+        "lemma": "provocation",
+        "importance": 2
+      },
+      {
+        "lemma": "proximal",
+        "importance": 2
+      },
+      {
+        "lemma": "prurience",
+        "importance": 2
+      },
+      {
+        "lemma": "prurient",
+        "importance": 2
+      },
+      {
+        "lemma": "punitive",
+        "importance": 2
+      },
+      {
+        "lemma": "punitively",
+        "importance": 2
+      },
+      {
+        "lemma": "puritanical",
+        "importance": 2
+      },
+      {
+        "lemma": "pyre",
+        "importance": 2
+      },
+      {
+        "lemma": "qualitative",
+        "importance": 2
+      },
+      {
+        "lemma": "qualm",
+        "importance": 2
+      },
+      {
+        "lemma": "quiver",
+        "importance": 2
+      },
+      {
+        "lemma": "rapture",
+        "importance": 2
+      },
+      {
+        "lemma": "rapturous",
+        "importance": 2
+      },
+      {
+        "lemma": "rapturously",
+        "importance": 2
+      },
+      {
+        "lemma": "ravish",
+        "importance": 2
+      },
+      {
+        "lemma": "rebound",
+        "importance": 2
+      },
+      {
+        "lemma": "rebuke",
+        "importance": 2
+      },
+      {
+        "lemma": "recitation",
+        "importance": 2
+      },
+      {
+        "lemma": "recluse",
+        "importance": 2
+      },
+      {
+        "lemma": "reclusive",
+        "importance": 2
+      },
+      {
+        "lemma": "recourse",
+        "importance": 2
+      },
+      {
+        "lemma": "recumbent",
+        "importance": 2
+      },
+      {
+        "lemma": "recuperate",
+        "importance": 2
+      },
+      {
+        "lemma": "recuperation",
+        "importance": 2
+      },
+      {
+        "lemma": "recuperative",
+        "importance": 2
+      },
+      {
+        "lemma": "redundancy",
+        "importance": 2
+      },
+      {
+        "lemma": "redundantly",
+        "importance": 2
+      },
+      {
+        "lemma": "regulatory",
+        "importance": 2
+      },
+      {
+        "lemma": "reissue",
+        "importance": 2
+      },
+      {
+        "lemma": "relegate",
+        "importance": 2
+      },
+      {
+        "lemma": "remit",
+        "importance": 2
+      },
+      {
+        "lemma": "remittance",
+        "importance": 2
+      },
+      {
+        "lemma": "remonstrance",
+        "importance": 2
+      },
+      {
+        "lemma": "remonstrate",
+        "importance": 2
+      },
+      {
+        "lemma": "remorseful",
+        "importance": 2
+      },
+      {
+        "lemma": "repose",
+        "importance": 2
+      },
+      {
+        "lemma": "reproach",
+        "importance": 2
+      },
+      {
+        "lemma": "reptilian",
+        "importance": 2
+      },
+      {
+        "lemma": "requisition",
+        "importance": 2
+      },
+      {
+        "lemma": "residual",
+        "importance": 2
+      },
+      {
+        "lemma": "residue",
+        "importance": 2
+      },
+      {
+        "lemma": "resound",
+        "importance": 2
+      },
+      {
+        "lemma": "resounding",
+        "importance": 2
+      },
+      {
+        "lemma": "resoundingly",
+        "importance": 2
+      },
+      {
+        "lemma": "resuscitate",
+        "importance": 2
+      },
+      {
+        "lemma": "resuscitation",
+        "importance": 2
+      },
+      {
+        "lemma": "retrospection",
+        "importance": 2
+      },
+      {
+        "lemma": "retrospective",
+        "importance": 2
+      },
+      {
+        "lemma": "revelatory",
+        "importance": 2
+      },
+      {
+        "lemma": "reverb",
+        "importance": 2
+      },
+      {
+        "lemma": "reverberate",
+        "importance": 2
+      },
+      {
+        "lemma": "reverberation",
+        "importance": 2
+      },
+      {
+        "lemma": "revile",
+        "importance": 2
+      },
+      {
+        "lemma": "revulsion",
+        "importance": 2
+      },
+      {
+        "lemma": "rhetoric",
+        "importance": 2
+      },
+      {
+        "lemma": "rhetorical",
+        "importance": 2
+      },
+      {
+        "lemma": "rhetorically",
+        "importance": 2
+      },
+      {
+        "lemma": "rickety",
+        "importance": 2
+      },
+      {
+        "lemma": "rife",
+        "importance": 2
+      },
+      {
+        "lemma": "rift",
+        "importance": 2
+      },
+      {
+        "lemma": "romp",
+        "importance": 2
+      },
+      {
+        "lemma": "romper",
+        "importance": 2
+      },
+      {
+        "lemma": "ruminant",
+        "importance": 2
+      },
+      {
+        "lemma": "ruminate",
+        "importance": 2
+      },
+      {
+        "lemma": "rumination",
+        "importance": 2
+      },
+      {
+        "lemma": "ruminative",
+        "importance": 2
+      },
+      {
+        "lemma": "salivary",
+        "importance": 2
+      },
+      {
+        "lemma": "sandwiched",
+        "importance": 2
+      },
+      {
+        "lemma": "scavenger",
+        "importance": 2
+      },
+      {
+        "lemma": "scholarly",
+        "importance": 2
+      },
+      {
+        "lemma": "scroll",
+        "importance": 2
+      },
+      {
+        "lemma": "secular",
+        "importance": 2
+      },
+      {
+        "lemma": "secularly",
+        "importance": 2
+      },
+      {
+        "lemma": "seedy",
+        "importance": 2
+      },
+      {
+        "lemma": "seismic",
+        "importance": 2
+      },
+      {
+        "lemma": "selectivity",
+        "importance": 2
+      },
+      {
+        "lemma": "self-aggrandizement",
+        "importance": 2
+      },
+      {
+        "lemma": "shamble",
+        "importance": 2
+      },
+      {
+        "lemma": "sheaf",
+        "importance": 2
+      },
+      {
+        "lemma": "shimmer",
+        "importance": 2
+      },
+      {
+        "lemma": "shoal",
+        "importance": 2
+      },
+      {
+        "lemma": "side-step",
+        "importance": 2
+      },
+      {
+        "lemma": "singe",
+        "importance": 2
+      },
+      {
+        "lemma": "skew",
+        "importance": 2
+      },
+      {
+        "lemma": "slab",
+        "importance": 2
+      },
+      {
+        "lemma": "slither",
+        "importance": 2
+      },
+      {
+        "lemma": "smattering",
+        "importance": 2
+      },
+      {
+        "lemma": "snippet",
+        "importance": 2
+      },
+      {
+        "lemma": "snobbery",
+        "importance": 2
+      },
+      {
+        "lemma": "solicit",
+        "importance": 2
+      },
+      {
+        "lemma": "soliloquize",
+        "importance": 2
+      },
+      {
+        "lemma": "solipsism",
+        "importance": 2
+      },
+      {
+        "lemma": "solitariness",
+        "importance": 2
+      },
+      {
+        "lemma": "solitary",
+        "importance": 2
+      },
+      {
+        "lemma": "solitude",
+        "importance": 2
+      },
+      {
+        "lemma": "spatial",
+        "importance": 2
+      },
+      {
+        "lemma": "spatially",
+        "importance": 2
+      },
+      {
+        "lemma": "spire",
+        "importance": 2
+      },
+      {
+        "lemma": "splinter",
+        "importance": 2
+      },
+      {
+        "lemma": "spontaneity",
+        "importance": 2
+      },
+      {
+        "lemma": "spurious",
+        "importance": 2
+      },
+      {
+        "lemma": "spuriously",
+        "importance": 2
+      },
+      {
+        "lemma": "squint",
+        "importance": 2
+      },
+      {
+        "lemma": "squirm",
+        "importance": 2
+      },
+      {
+        "lemma": "squirmy",
+        "importance": 2
+      },
+      {
+        "lemma": "stabilize",
+        "importance": 2
+      },
+      {
+        "lemma": "standing",
+        "importance": 2
+      },
+      {
+        "lemma": "sterility",
+        "importance": 2
+      },
+      {
+        "lemma": "stipulate",
+        "importance": 2
+      },
+      {
+        "lemma": "stipulation",
+        "importance": 2
+      },
+      {
+        "lemma": "stoicism",
+        "importance": 2
+      },
+      {
+        "lemma": "stratosphere",
+        "importance": 2
+      },
+      {
+        "lemma": "stringent",
+        "importance": 2
+      },
+      {
+        "lemma": "stringently",
+        "importance": 2
+      },
+      {
+        "lemma": "stultify",
+        "importance": 2
+      },
+      {
+        "lemma": "stultifyingly",
+        "importance": 2
+      },
+      {
+        "lemma": "subsidize",
+        "importance": 2
+      },
+      {
+        "lemma": "subsidy",
+        "importance": 2
+      },
+      {
+        "lemma": "subsist",
+        "importance": 2
+      },
+      {
+        "lemma": "subsistence",
+        "importance": 2
+      },
+      {
+        "lemma": "substantiate",
+        "importance": 2
+      },
+      {
+        "lemma": "succumb",
+        "importance": 2
+      },
+      {
+        "lemma": "suffuse",
+        "importance": 2
+      },
+      {
+        "lemma": "sulphur",
+        "importance": 2
+      },
+      {
+        "lemma": "sulphuric",
+        "importance": 2
+      },
+      {
+        "lemma": "summarily",
+        "importance": 2
+      },
+      {
+        "lemma": "superfluous",
+        "importance": 2
+      },
+      {
+        "lemma": "superfluously",
+        "importance": 2
+      },
+      {
+        "lemma": "surrealism",
+        "importance": 2
+      },
+      {
+        "lemma": "surrealist",
+        "importance": 2
+      },
+      {
+        "lemma": "surreptitious",
+        "importance": 2
+      },
+      {
+        "lemma": "surreptitiously",
+        "importance": 2
+      },
+      {
+        "lemma": "swivel",
+        "importance": 2
+      },
+      {
+        "lemma": "syllabic",
+        "importance": 2
+      },
+      {
+        "lemma": "synthesis",
+        "importance": 2
+      },
+      {
+        "lemma": "tacit",
+        "importance": 2
+      },
+      {
+        "lemma": "tacitly",
+        "importance": 2
+      },
+      {
+        "lemma": "taciturn",
+        "importance": 2
+      },
+      {
+        "lemma": "taciturnity",
+        "importance": 2
+      },
+      {
+        "lemma": "tactic",
+        "importance": 2
+      },
+      {
+        "lemma": "tactical",
+        "importance": 2
+      },
+      {
+        "lemma": "tactically",
+        "importance": 2
+      },
+      {
+        "lemma": "tantalize",
+        "importance": 2
+      },
+      {
+        "lemma": "tantalizingly",
+        "importance": 2
+      },
+      {
+        "lemma": "taste-maker",
+        "importance": 2
+      },
+      {
+        "lemma": "teem",
+        "importance": 2
+      },
+      {
+        "lemma": "telescopic",
+        "importance": 2
+      },
+      {
+        "lemma": "telescopically",
+        "importance": 2
+      },
+      {
+        "lemma": "tenacious",
+        "importance": 2
+      },
+      {
+        "lemma": "tenaciously",
+        "importance": 2
+      },
+      {
+        "lemma": "tenacity",
+        "importance": 2
+      },
+      {
+        "lemma": "testimonial",
+        "importance": 2
+      },
+      {
+        "lemma": "tetchy",
+        "importance": 2
+      },
+      {
+        "lemma": "thicket",
+        "importance": 2
+      },
+      {
+        "lemma": "timidity",
+        "importance": 2
+      },
+      {
+        "lemma": "topographical",
+        "importance": 2
+      },
+      {
+        "lemma": "topographically",
+        "importance": 2
+      },
+      {
+        "lemma": "topography",
+        "importance": 2
+      },
+      {
+        "lemma": "topple",
+        "importance": 2
+      },
+      {
+        "lemma": "torrential",
+        "importance": 2
+      },
+      {
+        "lemma": "totemic",
+        "importance": 2
+      },
+      {
+        "lemma": "totter",
+        "importance": 2
+      },
+      {
+        "lemma": "tranquilize",
+        "importance": 2
+      },
+      {
+        "lemma": "transmitter",
+        "importance": 2
+      },
+      {
+        "lemma": "treacherous",
+        "importance": 2
+      },
+      {
+        "lemma": "treacherously",
+        "importance": 2
+      },
+      {
+        "lemma": "treachery",
+        "importance": 2
+      },
+      {
+        "lemma": "trifle",
+        "importance": 2
+      },
+      {
+        "lemma": "truism",
+        "importance": 2
+      },
+      {
+        "lemma": "turret",
+        "importance": 2
+      },
+      {
+        "lemma": "unadulterated",
+        "importance": 2
+      },
+      {
+        "lemma": "uncanny",
+        "importance": 2
+      },
+      {
+        "lemma": "undemonstrative",
+        "importance": 2
+      },
+      {
+        "lemma": "undemonstratively",
+        "importance": 2
+      },
+      {
+        "lemma": "undiminishing",
+        "importance": 2
+      },
+      {
+        "lemma": "unencumbered",
+        "importance": 2
+      },
+      {
+        "lemma": "unequivocal",
+        "importance": 2
+      },
+      {
+        "lemma": "unequivocally",
+        "importance": 2
+      },
+      {
+        "lemma": "unexceptional",
+        "importance": 2
+      },
+      {
+        "lemma": "unexceptionally",
+        "importance": 2
+      },
+      {
+        "lemma": "unexcused",
+        "importance": 2
+      },
+      {
+        "lemma": "unfeasible",
+        "importance": 2
+      },
+      {
+        "lemma": "unfeasibly",
+        "importance": 2
+      },
+      {
+        "lemma": "unharried",
+        "importance": 2
+      },
+      {
+        "lemma": "unmediated",
+        "importance": 2
+      },
+      {
+        "lemma": "unnerve",
+        "importance": 2
+      },
+      {
+        "lemma": "unnerving",
+        "importance": 2
+      },
+      {
+        "lemma": "unnervingly",
+        "importance": 2
+      },
+      {
+        "lemma": "unobtrusive",
+        "importance": 2
+      },
+      {
+        "lemma": "unobtrusively",
+        "importance": 2
+      },
+      {
+        "lemma": "unobtrusiveness",
+        "importance": 2
+      },
+      {
+        "lemma": "unpromising",
+        "importance": 2
+      },
+      {
+        "lemma": "unravel",
+        "importance": 2
+      },
+      {
+        "lemma": "unsurpassed",
+        "importance": 2
+      },
+      {
+        "lemma": "unsuspected",
+        "importance": 2
+      },
+      {
+        "lemma": "utilitarian",
+        "importance": 2
+      },
+      {
+        "lemma": "utilization",
+        "importance": 2
+      },
+      {
+        "lemma": "vandal",
+        "importance": 2
+      },
+      {
+        "lemma": "vandalize",
+        "importance": 2
+      },
+      {
+        "lemma": "venomous",
+        "importance": 2
+      },
+      {
+        "lemma": "venomously",
+        "importance": 2
+      },
+      {
+        "lemma": "verbatim",
+        "importance": 2
+      },
+      {
+        "lemma": "verily",
+        "importance": 2
+      },
+      {
+        "lemma": "verisimilitude",
+        "importance": 2
+      },
+      {
+        "lemma": "veritable",
+        "importance": 2
+      },
+      {
+        "lemma": "vermin",
+        "importance": 2
+      },
+      {
+        "lemma": "vestigial",
+        "importance": 2
+      },
+      {
+        "lemma": "vestigially",
+        "importance": 2
+      },
+      {
+        "lemma": "vicinity",
+        "importance": 2
+      },
+      {
+        "lemma": "vindicate",
+        "importance": 2
+      },
+      {
+        "lemma": "vindication",
+        "importance": 2
+      },
+      {
+        "lemma": "virginal",
+        "importance": 2
+      },
+      {
+        "lemma": "virtuosity",
+        "importance": 2
+      },
+      {
+        "lemma": "virtuoso",
+        "importance": 2
+      },
+      {
+        "lemma": "vocational",
+        "importance": 2
+      },
+      {
+        "lemma": "voracity",
+        "importance": 2
+      },
+      {
+        "lemma": "vortex",
+        "importance": 2
+      },
+      {
+        "lemma": "wallow",
+        "importance": 2
+      },
+      {
+        "lemma": "wane",
+        "importance": 2
+      },
+      {
+        "lemma": "wayward",
+        "importance": 2
+      },
+      {
+        "lemma": "wheeze",
+        "importance": 2
+      },
+      {
+        "lemma": "whir",
+        "importance": 2
+      },
+      {
+        "lemma": "whirlwind",
+        "importance": 2
+      },
+      {
+        "lemma": "wholly",
+        "importance": 2
+      },
+      {
+        "lemma": "wistful",
+        "importance": 2
+      },
+      {
+        "lemma": "wistfully",
+        "importance": 2
+      },
+      {
+        "lemma": "wordage",
+        "importance": 2
+      },
+      {
+        "lemma": "wordsmith",
+        "importance": 2
+      },
+      {
+        "lemma": "wrack",
+        "importance": 2
+      },
+      {
+        "lemma": "zoologist",
+        "importance": 2
+      },
+      {
+        "lemma": "zoology",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

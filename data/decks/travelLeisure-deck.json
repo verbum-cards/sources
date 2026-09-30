@@ -557,6 +557,14 @@
       {
         "lemma": "sunbathe",
         "importance": 2
+      },
+      {
+        "lemma": "sailing",
+        "importance": 2
+      },
+      {
+        "lemma": "surfing",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -661,6 +669,98 @@
       },
       {
         "lemma": "winter",
+        "importance": 2
+      },
+      {
+        "lemma": "village",
+        "importance": 2
+      },
+      {
+        "lemma": "lake",
+        "importance": 2
+      },
+      {
+        "lemma": "desert",
+        "importance": 2
+      },
+      {
+        "lemma": "coast",
+        "importance": 2
+      },
+      {
+        "lemma": "shore",
+        "importance": 2
+      },
+      {
+        "lemma": "bay",
+        "importance": 2
+      },
+      {
+        "lemma": "breeze",
+        "importance": 2
+      },
+      {
+        "lemma": "continent",
+        "importance": 2
+      },
+      {
+        "lemma": "countryside",
+        "importance": 2
+      },
+      {
+        "lemma": "earthquake",
+        "importance": 2
+      },
+      {
+        "lemma": "fog",
+        "importance": 2
+      },
+      {
+        "lemma": "globe",
+        "importance": 2
+      },
+      {
+        "lemma": "oak",
+        "importance": 2
+      },
+      {
+        "lemma": "rock",
+        "importance": 2
+      },
+      {
+        "lemma": "root",
+        "importance": 2
+      },
+      {
+        "lemma": "storm",
+        "importance": 2
+      },
+      {
+        "lemma": "thunderstorm",
+        "importance": 2
+      },
+      {
+        "lemma": "landscape",
+        "importance": 2
+      },
+      {
+        "lemma": "scenery",
+        "importance": 2
+      },
+      {
+        "lemma": "sunshine",
+        "importance": 2
+      },
+      {
+        "lemma": "daylight",
+        "importance": 2
+      },
+      {
+        "lemma": "heat",
+        "importance": 2
+      },
+      {
+        "lemma": "moon",
         "importance": 2
       }
     ],

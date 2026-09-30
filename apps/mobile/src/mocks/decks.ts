@@ -44,15 +44,25 @@ function resolveDeck(spec: DeckSpec): MockDeck {
   };
 }
 
-// Служебная колода для проверки партий словаря (apps/api/scripts/dictionary/generate-senses.ts,
+// Служебные колоды для проверки партий словаря (apps/api/scripts/dictionary/generate-senses.ts,
 // skill dictionary-pipeline) — не для пользователей беты, только чтобы
 // владелец продукта мог открыть только что сгенерированные слова на телефоне
 // и проверить их, прежде чем разложить по настоящим колодам или отбраковать.
-// categories пустой — не категория, decks.screen.tsx показывает её отдельной
-// строкой вне каталога категорий, только пока в ней есть слова.
-// generate-senses.ts сам дописывает сюда лемму каждого успешно
-// сгенерированного слова прямо в data/decks.json (build-decks.ts::buildDecksData)
+// Разбиты по уровню CEFR (data/decks/review_a1_a2.json и т.д.) — партия на
+// несколько тысяч слов в одной колоде тормозила даже с виртуализацией
+// списка, а разбор явно проще вести по уровню сложности. categories пустой —
+// не категория, decks.screen.tsx показывает их отдельными строками вне
+// каталога категорий, только пока в них есть слова. generate-senses.ts сам
+// дописывает сюда лемму каждого успешно сгенерированного слова прямо в
+// нужный data/decks/review_*.json по уровню (build-decks.ts::buildDecksData)
 // — руками список не редактируется, кроме удаления уже проверенных слов.
-export const REVIEW_DECK_ID = '0195d000-0000-7000-8000-000000000009';
+export const REVIEW_DECK_ID_A1_A2 = '0195d000-0000-7000-8000-00000000000a';
+export const REVIEW_DECK_ID_B1_B2 = '0195d000-0000-7000-8000-00000000000b';
+export const REVIEW_DECK_ID_C1_C2 = '0195d000-0000-7000-8000-00000000000c';
+export const REVIEW_DECK_IDS: readonly string[] = [
+  REVIEW_DECK_ID_A1_A2,
+  REVIEW_DECK_ID_B1_B2,
+  REVIEW_DECK_ID_C1_C2,
+];
 
 export const DECKS: readonly MockDeck[] = (decksData as readonly DeckSpec[]).map(resolveDeck);

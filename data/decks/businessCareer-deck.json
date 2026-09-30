@@ -372,6 +372,14 @@
       {
         "lemma": "seller",
         "importance": 2
+      },
+      {
+        "lemma": "brand",
+        "importance": 2
+      },
+      {
+        "lemma": "trade",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -473,6 +481,30 @@
       },
       {
         "lemma": "revenue",
+        "importance": 2
+      },
+      {
+        "lemma": "agency",
+        "importance": 2
+      },
+      {
+        "lemma": "agent",
+        "importance": 2
+      },
+      {
+        "lemma": "banking",
+        "importance": 2
+      },
+      {
+        "lemma": "credit",
+        "importance": 2
+      },
+      {
+        "lemma": "rate",
+        "importance": 2
+      },
+      {
+        "lemma": "statement",
         "importance": 2
       }
     ],

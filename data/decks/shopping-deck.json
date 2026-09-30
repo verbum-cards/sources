@@ -452,6 +452,98 @@
       {
         "lemma": "yogurt",
         "importance": 2
+      },
+      {
+        "lemma": "carrot",
+        "importance": 2
+      },
+      {
+        "lemma": "garlic",
+        "importance": 2
+      },
+      {
+        "lemma": "onion",
+        "importance": 2
+      },
+      {
+        "lemma": "pea",
+        "importance": 2
+      },
+      {
+        "lemma": "pear",
+        "importance": 2
+      },
+      {
+        "lemma": "lemon",
+        "importance": 2
+      },
+      {
+        "lemma": "melon",
+        "importance": 2
+      },
+      {
+        "lemma": "mushroom",
+        "importance": 2
+      },
+      {
+        "lemma": "pepper",
+        "importance": 2
+      },
+      {
+        "lemma": "ham",
+        "importance": 2
+      },
+      {
+        "lemma": "sausage",
+        "importance": 2
+      },
+      {
+        "lemma": "pasta",
+        "importance": 2
+      },
+      {
+        "lemma": "spaghetti",
+        "importance": 2
+      },
+      {
+        "lemma": "honey",
+        "importance": 2
+      },
+      {
+        "lemma": "jam",
+        "importance": 2
+      },
+      {
+        "lemma": "jelly",
+        "importance": 2
+      },
+      {
+        "lemma": "sauce",
+        "importance": 2
+      },
+      {
+        "lemma": "chili",
+        "importance": 2
+      },
+      {
+        "lemma": "cola",
+        "importance": 2
+      },
+      {
+        "lemma": "crisp",
+        "importance": 2
+      },
+      {
+        "lemma": "curry",
+        "importance": 2
+      },
+      {
+        "lemma": "steak",
+        "importance": 2
+      },
+      {
+        "lemma": "champagne",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -683,6 +775,10 @@
       },
       {
         "lemma": "video",
+        "importance": 2
+      },
+      {
+        "lemma": "MP3 player",
         "importance": 2
       }
     ],
