@@ -98,7 +98,8 @@
     "nativeLang": "ru",
     "title": "Коммунальные сервисы",
     "categories": [
-      "abroad"
+      "abroad",
+      "homeLife"
     ],
     "type": "official",
     "importance": 2,
@@ -710,7 +711,8 @@
     "nativeLang": "ru",
     "title": "Мобильная связь и интернет",
     "categories": [
-      "abroad"
+      "abroad",
+      "itTech"
     ],
     "type": "official",
     "importance": 2,
@@ -2460,7 +2462,8 @@
     "nativeLang": "ru",
     "title": "Семья",
     "categories": [
-      "firstSteps"
+      "firstSteps",
+      "homeLife"
     ],
     "type": "official",
     "importance": 2,
@@ -4504,7 +4507,8 @@
     "nativeLang": "ru",
     "title": "Больничный",
     "categories": [
-      "health"
+      "health",
+      "workOffice"
     ],
     "type": "official",
     "importance": 2,
@@ -4622,6 +4626,2954 @@
     ]
   },
   {
+    "id": "01a0f1e6-81a0-749a-9377-56af1ef4d6bc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кухня",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cupboard",
+        "importance": 2
+      },
+      {
+        "lemma": "dishwasher",
+        "importance": 2
+      },
+      {
+        "lemma": "fridge",
+        "importance": 2
+      },
+      {
+        "lemma": "kettle",
+        "importance": 2
+      },
+      {
+        "lemma": "kitchen",
+        "importance": 2
+      },
+      {
+        "lemma": "microwave",
+        "importance": 2
+      },
+      {
+        "lemma": "oven",
+        "importance": 2
+      },
+      {
+        "lemma": "refrigerator",
+        "importance": 2
+      },
+      {
+        "lemma": "sink",
+        "importance": 2
+      },
+      {
+        "lemma": "stove",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7ae9-9017-ce864e4ec339",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Готовка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cook",
+        "importance": 2
+      },
+      {
+        "lemma": "cooker",
+        "importance": 2
+      },
+      {
+        "lemma": "cooking",
+        "importance": 2
+      },
+      {
+        "lemma": "fry",
+        "importance": 2
+      },
+      {
+        "lemma": "frying pan",
+        "importance": 2
+      },
+      {
+        "lemma": "ingredient",
+        "importance": 2
+      },
+      {
+        "lemma": "mixing bowl",
+        "importance": 2
+      },
+      {
+        "lemma": "mixture",
+        "importance": 2
+      },
+      {
+        "lemma": "pan",
+        "importance": 2
+      },
+      {
+        "lemma": "peel",
+        "importance": 2
+      },
+      {
+        "lemma": "pot",
+        "importance": 2
+      },
+      {
+        "lemma": "recipe",
+        "importance": 2
+      },
+      {
+        "lemma": "saucepan",
+        "importance": 2
+      },
+      {
+        "lemma": "slice",
+        "importance": 2
+      },
+      {
+        "lemma": "bake",
+        "importance": 2
+      },
+      {
+        "lemma": "boil",
+        "importance": 2
+      },
+      {
+        "lemma": "chop",
+        "importance": 2
+      },
+      {
+        "lemma": "mix",
+        "importance": 2
+      },
+      {
+        "lemma": "stir",
+        "importance": 2
+      },
+      {
+        "lemma": "boiled",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-757b-9597-e31c45241204",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уборка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bin",
+        "importance": 2
+      },
+      {
+        "lemma": "cleaner",
+        "importance": 2
+      },
+      {
+        "lemma": "dust",
+        "importance": 2
+      },
+      {
+        "lemma": "dustbin",
+        "importance": 2
+      },
+      {
+        "lemma": "mess",
+        "importance": 2
+      },
+      {
+        "lemma": "rubbish",
+        "importance": 2
+      },
+      {
+        "lemma": "trash",
+        "importance": 2
+      },
+      {
+        "lemma": "sweep",
+        "importance": 2
+      },
+      {
+        "lemma": "wipe",
+        "importance": 2
+      },
+      {
+        "lemma": "clean",
+        "importance": 2
+      },
+      {
+        "lemma": "dusty",
+        "importance": 2
+      },
+      {
+        "lemma": "messy",
+        "importance": 2
+      },
+      {
+        "lemma": "tidy",
+        "importance": 2
+      },
+      {
+        "lemma": "untidy",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-77e5-9178-707c340b5f2d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стирка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "fold",
+        "importance": 2
+      },
+      {
+        "lemma": "hairdryer",
+        "importance": 2
+      },
+      {
+        "lemma": "iron",
+        "importance": 2
+      },
+      {
+        "lemma": "ironing",
+        "importance": 2
+      },
+      {
+        "lemma": "laundry",
+        "importance": 2
+      },
+      {
+        "lemma": "stain",
+        "importance": 2
+      },
+      {
+        "lemma": "wash",
+        "importance": 2
+      },
+      {
+        "lemma": "washbowl",
+        "importance": 2
+      },
+      {
+        "lemma": "washing machine",
+        "importance": 2
+      },
+      {
+        "lemma": "washing-up",
+        "importance": 2
+      },
+      {
+        "lemma": "unfold",
+        "importance": 2
+      },
+      {
+        "lemma": "dry",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-76b9-b40b-c41e1909c442",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ванная",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bath",
+        "importance": 2
+      },
+      {
+        "lemma": "bathhouse",
+        "importance": 2
+      },
+      {
+        "lemma": "bathroom",
+        "importance": 2
+      },
+      {
+        "lemma": "mirror",
+        "importance": 2
+      },
+      {
+        "lemma": "shampoo",
+        "importance": 2
+      },
+      {
+        "lemma": "shower",
+        "importance": 2
+      },
+      {
+        "lemma": "sink",
+        "importance": 2
+      },
+      {
+        "lemma": "soap",
+        "importance": 2
+      },
+      {
+        "lemma": "tap",
+        "importance": 2
+      },
+      {
+        "lemma": "toilet",
+        "importance": 2
+      },
+      {
+        "lemma": "toothbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "toothpaste",
+        "importance": 2
+      },
+      {
+        "lemma": "towel",
+        "importance": 2
+      },
+      {
+        "lemma": "bathe",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7716-9a78-37ca5b077d75",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поломки и ремонт",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "crack",
+        "importance": 2
+      },
+      {
+        "lemma": "damage",
+        "importance": 2
+      },
+      {
+        "lemma": "fix",
+        "importance": 2
+      },
+      {
+        "lemma": "fixture",
+        "importance": 2
+      },
+      {
+        "lemma": "leak",
+        "importance": 2
+      },
+      {
+        "lemma": "repair",
+        "importance": 2
+      },
+      {
+        "lemma": "malfunction",
+        "importance": 2
+      },
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "damaged",
+        "importance": 2
+      },
+      {
+        "lemma": "faulty",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-772f-8f7f-22bef4db6b52",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Инструменты",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "drill",
+        "importance": 2
+      },
+      {
+        "lemma": "hammer",
+        "importance": 2
+      },
+      {
+        "lemma": "ladder",
+        "importance": 2
+      },
+      {
+        "lemma": "saw",
+        "importance": 2
+      },
+      {
+        "lemma": "screw",
+        "importance": 2
+      },
+      {
+        "lemma": "tool",
+        "importance": 2
+      },
+      {
+        "lemma": "wire",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-709f-9b54-8be9b6d3854e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ремонт квартиры",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "builder",
+        "importance": 2
+      },
+      {
+        "lemma": "ceiling",
+        "importance": 2
+      },
+      {
+        "lemma": "construction",
+        "importance": 2
+      },
+      {
+        "lemma": "first floor",
+        "importance": 2
+      },
+      {
+        "lemma": "floor",
+        "importance": 2
+      },
+      {
+        "lemma": "ground floor",
+        "importance": 2
+      },
+      {
+        "lemma": "paint",
+        "importance": 2
+      },
+      {
+        "lemma": "paintbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "repaint",
+        "importance": 2
+      },
+      {
+        "lemma": "tile",
+        "importance": 2
+      },
+      {
+        "lemma": "wall",
+        "importance": 2
+      },
+      {
+        "lemma": "wallboard",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7ec1-af50-fcdd36eb66d2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Распорядок дня",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "breakfast",
+        "importance": 2
+      },
+      {
+        "lemma": "evening",
+        "importance": 2
+      },
+      {
+        "lemma": "morning",
+        "importance": 2
+      },
+      {
+        "lemma": "routine",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "shower",
+        "importance": 2
+      },
+      {
+        "lemma": "daily",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      },
+      {
+        "lemma": "good morning",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7031-b971-180f9397f3ad",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Покупки для дома",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "basket",
+        "importance": 2
+      },
+      {
+        "lemma": "grocery store",
+        "importance": 2
+      },
+      {
+        "lemma": "household",
+        "importance": 2
+      },
+      {
+        "lemma": "list",
+        "importance": 2
+      },
+      {
+        "lemma": "shopping",
+        "importance": 2
+      },
+      {
+        "lemma": "trolley",
+        "importance": 2
+      },
+      {
+        "lemma": "need",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7718-9487-4674a1010860",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Домашние животные",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "birdcage",
+        "importance": 2
+      },
+      {
+        "lemma": "cage",
+        "importance": 2
+      },
+      {
+        "lemma": "cat",
+        "importance": 2
+      },
+      {
+        "lemma": "collar",
+        "importance": 2
+      },
+      {
+        "lemma": "dog",
+        "importance": 2
+      },
+      {
+        "lemma": "feed",
+        "importance": 2
+      },
+      {
+        "lemma": "kitten",
+        "importance": 2
+      },
+      {
+        "lemma": "leash",
+        "importance": 2
+      },
+      {
+        "lemma": "pet",
+        "importance": 2
+      },
+      {
+        "lemma": "puppy",
+        "importance": 2
+      },
+      {
+        "lemma": "vet",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7f97-934f-7cfe57475ec3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Растения в доме",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "leaf",
+        "importance": 2
+      },
+      {
+        "lemma": "plant",
+        "importance": 2
+      },
+      {
+        "lemma": "pot",
+        "importance": 2
+      },
+      {
+        "lemma": "seedling",
+        "importance": 2
+      },
+      {
+        "lemma": "shade",
+        "importance": 2
+      },
+      {
+        "lemma": "sunlight",
+        "importance": 2
+      },
+      {
+        "lemma": "water",
+        "importance": 2
+      },
+      {
+        "lemma": "grow",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7e61-84a9-56de92857120",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Гости",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "guest",
+        "importance": 2
+      },
+      {
+        "lemma": "host",
+        "importance": 2
+      },
+      {
+        "lemma": "hostess",
+        "importance": 2
+      },
+      {
+        "lemma": "invitation",
+        "importance": 2
+      },
+      {
+        "lemma": "visit",
+        "importance": 2
+      },
+      {
+        "lemma": "visitor",
+        "importance": 2
+      },
+      {
+        "lemma": "invite",
+        "importance": 2
+      },
+      {
+        "lemma": "welcome",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-74e9-aa12-15b460772b79",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Безопасность дома",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "alarm",
+        "importance": 2
+      },
+      {
+        "lemma": "burglar",
+        "importance": 2
+      },
+      {
+        "lemma": "burglary",
+        "importance": 2
+      },
+      {
+        "lemma": "intruder",
+        "importance": 2
+      },
+      {
+        "lemma": "lock",
+        "importance": 2
+      },
+      {
+        "lemma": "security",
+        "importance": 2
+      },
+      {
+        "lemma": "unlock",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1e6-81a0-7ba4-9e5e-9f75bd58ff30",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Переезд в новую квартиру",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "box",
+        "importance": 2
+      },
+      {
+        "lemma": "furniture",
+        "importance": 2
+      },
+      {
+        "lemma": "landlord",
+        "importance": 2
+      },
+      {
+        "lemma": "lease",
+        "importance": 2
+      },
+      {
+        "lemma": "move",
+        "importance": 2
+      },
+      {
+        "lemma": "pack",
+        "importance": 2
+      },
+      {
+        "lemma": "packing",
+        "importance": 2
+      },
+      {
+        "lemma": "tenant",
+        "importance": 2
+      },
+      {
+        "lemma": "remove",
+        "importance": 2
+      },
+      {
+        "lemma": "unpack",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7adc-8526-ba672a269744",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Работа с компьютером",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "browser",
+        "importance": 2
+      },
+      {
+        "lemma": "copy",
+        "importance": 2
+      },
+      {
+        "lemma": "file",
+        "importance": 2
+      },
+      {
+        "lemma": "folder",
+        "importance": 2
+      },
+      {
+        "lemma": "keyboard",
+        "importance": 2
+      },
+      {
+        "lemma": "mouse",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "software",
+        "importance": 2
+      },
+      {
+        "lemma": "window",
+        "importance": 2
+      },
+      {
+        "lemma": "delete",
+        "importance": 2
+      },
+      {
+        "lemma": "download",
+        "importance": 2
+      },
+      {
+        "lemma": "install",
+        "importance": 2
+      },
+      {
+        "lemma": "update",
+        "importance": 2
+      },
+      {
+        "lemma": "upload",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7ec9-b3a6-5d0735c08cc5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Смартфон и приложения",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "battery",
+        "importance": 2
+      },
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "download",
+        "importance": 2
+      },
+      {
+        "lemma": "install",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7ee4-a621-74937a9dcc7a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аккаунты и безопасность",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "antivirus",
+        "importance": 2
+      },
+      {
+        "lemma": "firewall",
+        "importance": 2
+      },
+      {
+        "lemma": "hack",
+        "importance": 2
+      },
+      {
+        "lemma": "password",
+        "importance": 2
+      },
+      {
+        "lemma": "privacy",
+        "importance": 2
+      },
+      {
+        "lemma": "virus",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-717f-99b9-555180824268",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Техподдержка",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bug",
+        "importance": 2
+      },
+      {
+        "lemma": "crash",
+        "importance": 2
+      },
+      {
+        "lemma": "error",
+        "importance": 2
+      },
+      {
+        "lemma": "fix",
+        "importance": 2
+      },
+      {
+        "lemma": "helper",
+        "importance": 2
+      },
+      {
+        "lemma": "issue",
+        "importance": 2
+      },
+      {
+        "lemma": "support",
+        "importance": 2
+      },
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "resolve",
+        "importance": 2
+      },
+      {
+        "lemma": "solve",
+        "importance": 2
+      },
+      {
+        "lemma": "helpful",
+        "importance": 2
+      },
+      {
+        "lemma": "supportive",
+        "importance": 2
+      },
+      {
+        "lemma": "unhelpful",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-71c2-a81c-98d34f5b2ddc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Разработка",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bug",
+        "importance": 2
+      },
+      {
+        "lemma": "code",
+        "importance": 2
+      },
+      {
+        "lemma": "development",
+        "importance": 2
+      },
+      {
+        "lemma": "functionality",
+        "importance": 2
+      },
+      {
+        "lemma": "program",
+        "importance": 2
+      },
+      {
+        "lemma": "programmer",
+        "importance": 2
+      },
+      {
+        "lemma": "programming",
+        "importance": 2
+      },
+      {
+        "lemma": "software",
+        "importance": 2
+      },
+      {
+        "lemma": "test",
+        "importance": 2
+      },
+      {
+        "lemma": "function",
+        "importance": 2
+      },
+      {
+        "lemma": "functional",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-72a6-8834-990b5c189ffc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Код-ревью",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "branch",
+        "importance": 2
+      },
+      {
+        "lemma": "comment",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "approve",
+        "importance": 2
+      },
+      {
+        "lemma": "commit",
+        "importance": 2
+      },
+      {
+        "lemma": "disapprove",
+        "importance": 2
+      },
+      {
+        "lemma": "merge",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7053-a3b3-754539125e15",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Созвоны в команде",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agenda",
+        "importance": 2
+      },
+      {
+        "lemma": "call",
+        "importance": 2
+      },
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "microphone",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7600-bad8-2b5bb284d1d5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Задачи и планирование",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "deadline",
+        "importance": 2
+      },
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "plan",
+        "importance": 2
+      },
+      {
+        "lemma": "planning",
+        "importance": 2
+      },
+      {
+        "lemma": "priority",
+        "importance": 2
+      },
+      {
+        "lemma": "progress",
+        "importance": 2
+      },
+      {
+        "lemma": "project",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "task",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-723e-b42e-b90f1fc51937",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Продукт и пользователи",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "customer",
+        "importance": 2
+      },
+      {
+        "lemma": "experience",
+        "importance": 2
+      },
+      {
+        "lemma": "feature",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      },
+      {
+        "lemma": "product",
+        "importance": 2
+      },
+      {
+        "lemma": "production",
+        "importance": 2
+      },
+      {
+        "lemma": "user",
+        "importance": 2
+      },
+      {
+        "lemma": "experienced",
+        "importance": 2
+      },
+      {
+        "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "productive",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7bd9-b507-f974af5d0da4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дизайн и интерфейсы",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "button",
+        "importance": 2
+      },
+      {
+        "lemma": "design",
+        "importance": 2
+      },
+      {
+        "lemma": "designer",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-75c8-8d15-f477f157bbc1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Данные и аналитика",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "analysis",
+        "importance": 2
+      },
+      {
+        "lemma": "chart",
+        "importance": 2
+      },
+      {
+        "lemma": "data",
+        "importance": 2
+      },
+      {
+        "lemma": "database",
+        "importance": 2
+      },
+      {
+        "lemma": "graph",
+        "importance": 2
+      },
+      {
+        "lemma": "graphics",
+        "importance": 2
+      },
+      {
+        "lemma": "report",
+        "importance": 2
+      },
+      {
+        "lemma": "statistics",
+        "importance": 2
+      },
+      {
+        "lemma": "analyze",
+        "importance": 2
+      },
+      {
+        "lemma": "graphic",
+        "importance": 2
+      },
+      {
+        "lemma": "metric",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7396-9a16-9dc92da29182",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Инфраструктура",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "backup",
+        "importance": 2
+      },
+      {
+        "lemma": "cloud",
+        "importance": 2
+      },
+      {
+        "lemma": "network",
+        "importance": 2
+      },
+      {
+        "lemma": "server",
+        "importance": 2
+      },
+      {
+        "lemma": "storage",
+        "importance": 2
+      },
+      {
+        "lemma": "system",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7b6d-ac19-9421140ea1cd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Искусственный интеллект",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "machine",
+        "importance": 2
+      },
+      {
+        "lemma": "robot",
+        "importance": 2
+      },
+      {
+        "lemma": "automate",
+        "importance": 2
+      },
+      {
+        "lemma": "automatic",
+        "importance": 2
+      },
+      {
+        "lemma": "intelligent",
+        "importance": 2
+      },
+      {
+        "lemma": "smart",
+        "importance": 2
+      },
+      {
+        "lemma": "automatically",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7c3b-9524-18b50de3d8a7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Собеседование в IT",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "candidate",
+        "importance": 2
+      },
+      {
+        "lemma": "CV",
+        "importance": 2
+      },
+      {
+        "lemma": "experience",
+        "importance": 2
+      },
+      {
+        "lemma": "interview",
+        "importance": 2
+      },
+      {
+        "lemma": "interviewee",
+        "importance": 2
+      },
+      {
+        "lemma": "interviewer",
+        "importance": 2
+      },
+      {
+        "lemma": "offer",
+        "importance": 2
+      },
+      {
+        "lemma": "position",
+        "importance": 2
+      },
+      {
+        "lemma": "salary",
+        "importance": 2
+      },
+      {
+        "lemma": "skill",
+        "importance": 2
+      },
+      {
+        "lemma": "hire",
+        "importance": 2
+      },
+      {
+        "lemma": "experienced",
+        "importance": 2
+      },
+      {
+        "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "skilled",
+        "importance": 2
+      },
+      {
+        "lemma": "skillful",
+        "importance": 2
+      },
+      {
+        "lemma": "What are the requirements for this position?",
+        "importance": 2
+      },
+      {
+        "lemma": "skillfully",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7b41-83a3-4a1439a3911c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Удалённая работа",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "office",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "flexible",
+        "importance": 2
+      },
+      {
+        "lemma": "remote",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      },
+      {
+        "lemma": "remotely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ec-005e-7194-8413-cff6201f7e4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Технологии в жизни",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "device",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "digitalization",
+        "importance": 2
+      },
+      {
+        "lemma": "gadget",
+        "importance": 2
+      },
+      {
+        "lemma": "innovation",
+        "importance": 2
+      },
+      {
+        "lemma": "technology",
+        "importance": 2
+      },
+      {
+        "lemma": "digitalize",
+        "importance": 2
+      },
+      {
+        "lemma": "digital",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-76a6-998a-1cd814b32510",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жанры",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "action",
+        "importance": 2
+      },
+      {
+        "lemma": "animation",
+        "importance": 2
+      },
+      {
+        "lemma": "comedy",
+        "importance": 2
+      },
+      {
+        "lemma": "documentary",
+        "importance": 2
+      },
+      {
+        "lemma": "drama",
+        "importance": 2
+      },
+      {
+        "lemma": "fantasy",
+        "importance": 2
+      },
+      {
+        "lemma": "genre",
+        "importance": 2
+      },
+      {
+        "lemma": "horror",
+        "importance": 2
+      },
+      {
+        "lemma": "mystery",
+        "importance": 2
+      },
+      {
+        "lemma": "romance",
+        "importance": 2
+      },
+      {
+        "lemma": "thriller",
+        "importance": 2
+      },
+      {
+        "lemma": "dramatic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7825-af5a-23cafe2e4132",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поход в кино",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cinema",
+        "importance": 2
+      },
+      {
+        "lemma": "popcorn",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "seat",
+        "importance": 2
+      },
+      {
+        "lemma": "ticket",
+        "importance": 2
+      },
+      {
+        "lemma": "trailer",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7e9e-ab80-2a740f9669e2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сериалы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "chat show",
+        "importance": 2
+      },
+      {
+        "lemma": "episode",
+        "importance": 2
+      },
+      {
+        "lemma": "season",
+        "importance": 2
+      },
+      {
+        "lemma": "series",
+        "importance": 2
+      },
+      {
+        "lemma": "showbiz",
+        "importance": 2
+      },
+      {
+        "lemma": "show",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7687-8f2e-64b698154711",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсудить фильм",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "actor",
+        "importance": 2
+      },
+      {
+        "lemma": "actress",
+        "importance": 2
+      },
+      {
+        "lemma": "cast",
+        "importance": 2
+      },
+      {
+        "lemma": "director",
+        "importance": 2
+      },
+      {
+        "lemma": "film",
+        "importance": 2
+      },
+      {
+        "lemma": "film-maker",
+        "importance": 2
+      },
+      {
+        "lemma": "movie",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "scene",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7b79-a4bc-c6b8cebc7b59",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рекомендации",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "recommendation",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "recommend",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      },
+      {
+        "lemma": "to recommend",
+        "importance": 2
+      },
+      {
+        "lemma": "recommendable",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-757c-a0e9-fc8d2bd52437",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Разговорные фразы из кино",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "line",
+        "importance": 2
+      },
+      {
+        "lemma": "quote",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-78e3-a993-f69f55004e64",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сленг",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "guy",
+        "importance": 2
+      },
+      {
+        "lemma": "slang",
+        "importance": 2
+      },
+      {
+        "lemma": "stuff",
+        "importance": 2
+      },
+      {
+        "lemma": "awesome",
+        "importance": 2
+      },
+      {
+        "lemma": "cool",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7b5e-ad32-e7ddf06bd037",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Фразовые глаголы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": []
+  },
+  {
+    "id": "01a0f1fb-35f6-7793-b253-eb11b2819465",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Идиомы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "idiom",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-713e-a6b0-f6da3574d7d4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Эмоции героев",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "emotion",
+        "importance": 2
+      },
+      {
+        "lemma": "feeling",
+        "importance": 2
+      },
+      {
+        "lemma": "nervousness",
+        "importance": 2
+      },
+      {
+        "lemma": "sadness",
+        "importance": 2
+      },
+      {
+        "lemma": "afraid",
+        "importance": 2
+      },
+      {
+        "lemma": "angry",
+        "importance": 2
+      },
+      {
+        "lemma": "emotional",
+        "importance": 2
+      },
+      {
+        "lemma": "excited",
+        "importance": 2
+      },
+      {
+        "lemma": "happy",
+        "importance": 2
+      },
+      {
+        "lemma": "nervous",
+        "importance": 2
+      },
+      {
+        "lemma": "sad",
+        "importance": 2
+      },
+      {
+        "lemma": "scared",
+        "importance": 2
+      },
+      {
+        "lemma": "shocked",
+        "importance": 2
+      },
+      {
+        "lemma": "surprised",
+        "importance": 2
+      },
+      {
+        "lemma": "unafraid",
+        "importance": 2
+      },
+      {
+        "lemma": "unhappy",
+        "importance": 2
+      },
+      {
+        "lemma": "emotionally",
+        "importance": 2
+      },
+      {
+        "lemma": "excitedly",
+        "importance": 2
+      },
+      {
+        "lemma": "nervously",
+        "importance": 2
+      },
+      {
+        "lemma": "sadly",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-71f7-8d31-7124ef81facf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сюжет и персонажи",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "character",
+        "importance": 2
+      },
+      {
+        "lemma": "characteristic",
+        "importance": 2
+      },
+      {
+        "lemma": "characterization",
+        "importance": 2
+      },
+      {
+        "lemma": "ending",
+        "importance": 2
+      },
+      {
+        "lemma": "hero",
+        "importance": 2
+      },
+      {
+        "lemma": "heroine",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "protagonist",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      },
+      {
+        "lemma": "twist",
+        "importance": 2
+      },
+      {
+        "lemma": "characterize",
+        "importance": 2
+      },
+      {
+        "lemma": "twisted",
+        "importance": 2
+      },
+      {
+        "lemma": "uncharacteristic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-714f-8789-94504045eb14",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рассказать о книге",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "character",
+        "importance": 2
+      },
+      {
+        "lemma": "characteristic",
+        "importance": 2
+      },
+      {
+        "lemma": "characterization",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      },
+      {
+        "lemma": "characterize",
+        "importance": 2
+      },
+      {
+        "lemma": "uncharacteristic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7723-8703-ec74d31207ad",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Книжный магазин и библиотека",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "librarian",
+        "importance": 2
+      },
+      {
+        "lemma": "return",
+        "importance": 2
+      },
+      {
+        "lemma": "shelf",
+        "importance": 2
+      },
+      {
+        "lemma": "borrow",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7659-8307-65ec8edf7160",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аудиокниги и подкасты",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "episode",
+        "importance": 2
+      },
+      {
+        "lemma": "listener",
+        "importance": 2
+      },
+      {
+        "lemma": "narrator",
+        "importance": 2
+      },
+      {
+        "lemma": "listen",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7da2-9464-41632cff9b27",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Смотреть в оригинале",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "accent",
+        "importance": 2
+      },
+      {
+        "lemma": "originality",
+        "importance": 2
+      },
+      {
+        "lemma": "subtitle",
+        "importance": 2
+      },
+      {
+        "lemma": "translation",
+        "importance": 2
+      },
+      {
+        "lemma": "original",
+        "importance": 2
+      },
+      {
+        "lemma": "originally",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-7fb7-96cb-2c327dea9fac",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Отзывы и рейтинги",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "critic",
+        "importance": 2
+      },
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "rating",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "score",
+        "importance": 2
+      },
+      {
+        "lemma": "star",
+        "importance": 2
+      },
+      {
+        "lemma": "superstar",
+        "importance": 2
+      },
+      {
+        "lemma": "criticize",
+        "importance": 2
+      },
+      {
+        "lemma": "critical",
+        "importance": 2
+      },
+      {
+        "lemma": "critically",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fb-35f6-76fd-8448-1c4aaa30ed7f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стриминговые сервисы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "stream",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7465-b98b-769c28def346",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Своё мнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "opinion",
+        "importance": 2
+      },
+      {
+        "lemma": "perspective",
+        "importance": 2
+      },
+      {
+        "lemma": "point of view",
+        "importance": 2
+      },
+      {
+        "lemma": "believe",
+        "importance": 2
+      },
+      {
+        "lemma": "think",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-79cc-9283-24a9ea97e6de",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Согласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "agree",
+        "importance": 2
+      },
+      {
+        "lemma": "agreeable",
+        "importance": 2
+      },
+      {
+        "lemma": "sure",
+        "importance": 2
+      },
+      {
+        "lemma": "surely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7331-96f9-e8baf284b5bd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Несогласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "disagreement",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "disagree",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7536-b6b3-e80e897d1673",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Частичное согласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agree",
+        "importance": 2
+      },
+      {
+        "lemma": "partly",
+        "importance": 2
+      },
+      {
+        "lemma": "somewhat",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7ae8-a07f-870651e89f23",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аргументы",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "reason",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "convince",
+        "importance": 2
+      },
+      {
+        "lemma": "persuade",
+        "importance": 2
+      },
+      {
+        "lemma": "convinced",
+        "importance": 2
+      },
+      {
+        "lemma": "because",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-77ff-ab33-5440cfc1d6aa",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уверенность и сомнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "certainty",
+        "importance": 2
+      },
+      {
+        "lemma": "doubt",
+        "importance": 2
+      },
+      {
+        "lemma": "uncertainty",
+        "importance": 2
+      },
+      {
+        "lemma": "assure",
+        "importance": 2
+      },
+      {
+        "lemma": "reassure",
+        "importance": 2
+      },
+      {
+        "lemma": "certain",
+        "importance": 2
+      },
+      {
+        "lemma": "doubtful",
+        "importance": 2
+      },
+      {
+        "lemma": "sure",
+        "importance": 2
+      },
+      {
+        "lemma": "uncertain",
+        "importance": 2
+      },
+      {
+        "lemma": "unsure",
+        "importance": 2
+      },
+      {
+        "lemma": "certainly",
+        "importance": 2
+      },
+      {
+        "lemma": "surely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-77f5-b691-6f901fa0ec28",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спросить мнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "opinion",
+        "importance": 2
+      },
+      {
+        "lemma": "perspective",
+        "importance": 2
+      },
+      {
+        "lemma": "point of view",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-784f-878f-0622ee2230b4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уточнить и переспросить",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "clarify",
+        "importance": 2
+      },
+      {
+        "lemma": "confuse",
+        "importance": 2
+      },
+      {
+        "lemma": "repeat",
+        "importance": 2
+      },
+      {
+        "lemma": "confused",
+        "importance": 2
+      },
+      {
+        "lemma": "confusing",
+        "importance": 2
+      },
+      {
+        "lemma": "Could you repeat that, please?",
+        "importance": 2
+      },
+      {
+        "lemma": "repeatedly",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-74de-89cc-212e5735f66b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Перебить и вернуться к теме",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "interruption",
+        "importance": 2
+      },
+      {
+        "lemma": "topic",
+        "importance": 2
+      },
+      {
+        "lemma": "interrupt",
+        "importance": 2
+      },
+      {
+        "lemma": "anyway",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-72e6-a448-33c3a8f8ee4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сравнить варианты",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "choice",
+        "importance": 2
+      },
+      {
+        "lemma": "comparison",
+        "importance": 2
+      },
+      {
+        "lemma": "option",
+        "importance": 2
+      },
+      {
+        "lemma": "compare",
+        "importance": 2
+      },
+      {
+        "lemma": "versus",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-770d-9f89-c5a46e0b78a0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Предложить решение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "resolution",
+        "importance": 2
+      },
+      {
+        "lemma": "solution",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "propose",
+        "importance": 2
+      },
+      {
+        "lemma": "resolve",
+        "importance": 2
+      },
+      {
+        "lemma": "solve",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      },
+      {
+        "lemma": "proposed",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7e7f-afb5-f27760c054b3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Компромисс",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "compromise",
+        "importance": 2
+      },
+      {
+        "lemma": "compromised",
+        "importance": 2
+      },
+      {
+        "lemma": "to reach an agreement",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7790-95f1-d8a34a6256e4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вежливая критика",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "criticize",
+        "importance": 2
+      },
+      {
+        "lemma": "polite",
+        "importance": 2
+      },
+      {
+        "lemma": "politely",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7d15-baa6-3565e577e611",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Реакция на критику",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "apology",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      },
+      {
+        "lemma": "convinced",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7dd7-8c43-a6f56d2b9de0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спор без конфликта",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "debate",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      },
+      {
+        "lemma": "but",
+        "importance": 2
+      },
+      {
+        "lemma": "however",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7abd-8127-55b30ad775c4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Подвести итог",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "closure",
+        "importance": 2
+      },
+      {
+        "lemma": "conclusion",
+        "importance": 2
+      },
+      {
+        "lemma": "summary",
+        "importance": 2
+      },
+      {
+        "lemma": "conclude",
+        "importance": 2
+      },
+      {
+        "lemma": "summarize",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-75da-830f-8e5f755c18b2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсуждение на работе",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "client",
+        "importance": 2
+      },
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "discuss",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1ea-37a2-7b7f-9f96-795785ade3b7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсуждение новостей",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "news",
+        "importance": 2
+      },
+      {
+        "lemma": "topic",
+        "importance": 2
+      },
+      {
+        "lemma": "discuss",
+        "importance": 2
+      },
+      {
+        "lemma": "actually",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "0195d000-0000-7000-8000-000000000009",
     "lang": "en",
     "nativeLang": "ru",
@@ -4660,18 +7612,6 @@
       },
       {
         "lemma": "academy",
-        "importance": 2
-      },
-      {
-        "lemma": "accent",
-        "importance": 2
-      },
-      {
-        "lemma": "acceptance",
-        "importance": 2
-      },
-      {
-        "lemma": "access",
         "importance": 2
       },
       {
@@ -4731,15 +7671,7 @@
         "importance": 2
       },
       {
-        "lemma": "action",
-        "importance": 2
-      },
-      {
         "lemma": "activity",
-        "importance": 2
-      },
-      {
-        "lemma": "actress",
         "importance": 2
       },
       {
@@ -4855,10 +7787,6 @@
         "importance": 2
       },
       {
-        "lemma": "agenda",
-        "importance": 2
-      },
-      {
         "lemma": "agent",
         "importance": 2
       },
@@ -4904,10 +7832,6 @@
       },
       {
         "lemma": "airplane",
-        "importance": 2
-      },
-      {
-        "lemma": "alarm",
         "importance": 2
       },
       {
@@ -5063,10 +7987,6 @@
         "importance": 2
       },
       {
-        "lemma": "animation",
-        "importance": 2
-      },
-      {
         "lemma": "annex",
         "importance": 2
       },
@@ -5128,10 +8048,6 @@
       },
       {
         "lemma": "antithesis",
-        "importance": 2
-      },
-      {
-        "lemma": "antivirus",
         "importance": 2
       },
       {
@@ -5240,10 +8156,6 @@
       },
       {
         "lemma": "arena",
-        "importance": 2
-      },
-      {
-        "lemma": "argument",
         "importance": 2
       },
       {
@@ -5387,10 +8299,6 @@
         "importance": 2
       },
       {
-        "lemma": "attachment",
-        "importance": 2
-      },
-      {
         "lemma": "attack",
         "importance": 2
       },
@@ -5400,10 +8308,6 @@
       },
       {
         "lemma": "attempt",
-        "importance": 2
-      },
-      {
-        "lemma": "attendance",
         "importance": 2
       },
       {
@@ -5471,10 +8375,6 @@
         "importance": 2
       },
       {
-        "lemma": "award",
-        "importance": 2
-      },
-      {
         "lemma": "awareness",
         "importance": 2
       },
@@ -5503,15 +8403,7 @@
         "importance": 2
       },
       {
-        "lemma": "backup",
-        "importance": 2
-      },
-      {
         "lemma": "backyard",
-        "importance": 2
-      },
-      {
-        "lemma": "badge",
         "importance": 2
       },
       {
@@ -5628,14 +8520,6 @@
       },
       {
         "lemma": "batch",
-        "importance": 2
-      },
-      {
-        "lemma": "bath",
-        "importance": 2
-      },
-      {
-        "lemma": "bathhouse",
         "importance": 2
       },
       {
@@ -5811,10 +8695,6 @@
         "importance": 2
       },
       {
-        "lemma": "birdcage",
-        "importance": 2
-      },
-      {
         "lemma": "birthplace",
         "importance": 2
       },
@@ -5979,10 +8859,6 @@
         "importance": 2
       },
       {
-        "lemma": "boss",
-        "importance": 2
-      },
-      {
         "lemma": "botany",
         "importance": 2
       },
@@ -6048,10 +8924,6 @@
       },
       {
         "lemma": "brake",
-        "importance": 2
-      },
-      {
-        "lemma": "branch",
         "importance": 2
       },
       {
@@ -6147,10 +9019,6 @@
         "importance": 2
       },
       {
-        "lemma": "browser",
-        "importance": 2
-      },
-      {
         "lemma": "bubble",
         "importance": 2
       },
@@ -6184,14 +9052,6 @@
       },
       {
         "lemma": "buffoonery",
-        "importance": 2
-      },
-      {
-        "lemma": "bug",
-        "importance": 2
-      },
-      {
-        "lemma": "builder",
         "importance": 2
       },
       {
@@ -6247,14 +9107,6 @@
         "importance": 2
       },
       {
-        "lemma": "burglar",
-        "importance": 2
-      },
-      {
-        "lemma": "burglary",
-        "importance": 2
-      },
-      {
         "lemma": "burial",
         "importance": 2
       },
@@ -6280,10 +9132,6 @@
       },
       {
         "lemma": "butter",
-        "importance": 2
-      },
-      {
-        "lemma": "button",
         "importance": 2
       },
       {
@@ -6316,10 +9164,6 @@
       },
       {
         "lemma": "cafeteria",
-        "importance": 2
-      },
-      {
-        "lemma": "cage",
         "importance": 2
       },
       {
@@ -6368,10 +9212,6 @@
       },
       {
         "lemma": "canal",
-        "importance": 2
-      },
-      {
-        "lemma": "candidate",
         "importance": 2
       },
       {
@@ -6507,10 +9347,6 @@
         "importance": 2
       },
       {
-        "lemma": "cast",
-        "importance": 2
-      },
-      {
         "lemma": "castle",
         "importance": 2
       },
@@ -6575,10 +9411,6 @@
         "importance": 2
       },
       {
-        "lemma": "ceiling",
-        "importance": 2
-      },
-      {
         "lemma": "cell",
         "importance": 2
       },
@@ -6623,10 +9455,6 @@
         "importance": 2
       },
       {
-        "lemma": "certainty",
-        "importance": 2
-      },
-      {
         "lemma": "certification",
         "importance": 2
       },
@@ -6663,23 +9491,7 @@
         "importance": 2
       },
       {
-        "lemma": "channel",
-        "importance": 2
-      },
-      {
         "lemma": "chaos",
-        "importance": 2
-      },
-      {
-        "lemma": "character",
-        "importance": 2
-      },
-      {
-        "lemma": "characteristic",
-        "importance": 2
-      },
-      {
-        "lemma": "characterization",
         "importance": 2
       },
       {
@@ -6699,19 +9511,11 @@
         "importance": 2
       },
       {
-        "lemma": "chart",
-        "importance": 2
-      },
-      {
         "lemma": "charter",
         "importance": 2
       },
       {
         "lemma": "chase",
-        "importance": 2
-      },
-      {
-        "lemma": "chat show",
         "importance": 2
       },
       {
@@ -6792,10 +9596,6 @@
       },
       {
         "lemma": "chocolate",
-        "importance": 2
-      },
-      {
-        "lemma": "choice",
         "importance": 2
       },
       {
@@ -6895,10 +9695,6 @@
         "importance": 2
       },
       {
-        "lemma": "cleaner",
-        "importance": 2
-      },
-      {
         "lemma": "clearness",
         "importance": 2
       },
@@ -6952,10 +9748,6 @@
       },
       {
         "lemma": "closeness",
-        "importance": 2
-      },
-      {
-        "lemma": "closure",
         "importance": 2
       },
       {
@@ -7015,10 +9807,6 @@
         "importance": 2
       },
       {
-        "lemma": "code",
-        "importance": 2
-      },
-      {
         "lemma": "coffin",
         "importance": 2
       },
@@ -7048,10 +9836,6 @@
       },
       {
         "lemma": "collapse",
-        "importance": 2
-      },
-      {
-        "lemma": "collar",
         "importance": 2
       },
       {
@@ -7103,10 +9887,6 @@
         "importance": 2
       },
       {
-        "lemma": "comedy",
-        "importance": 2
-      },
-      {
         "lemma": "comet",
         "importance": 2
       },
@@ -7128,10 +9908,6 @@
       },
       {
         "lemma": "commendation",
-        "importance": 2
-      },
-      {
-        "lemma": "comment",
         "importance": 2
       },
       {
@@ -7168,10 +9944,6 @@
       },
       {
         "lemma": "comparative",
-        "importance": 2
-      },
-      {
-        "lemma": "comparison",
         "importance": 2
       },
       {
@@ -7243,10 +10015,6 @@
         "importance": 2
       },
       {
-        "lemma": "compromise",
-        "importance": 2
-      },
-      {
         "lemma": "compulsion",
         "importance": 2
       },
@@ -7283,10 +10051,6 @@
         "importance": 2
       },
       {
-        "lemma": "conclusion",
-        "importance": 2
-      },
-      {
         "lemma": "concurrence",
         "importance": 2
       },
@@ -7316,10 +10080,6 @@
       },
       {
         "lemma": "confection",
-        "importance": 2
-      },
-      {
-        "lemma": "conference",
         "importance": 2
       },
       {
@@ -7436,10 +10196,6 @@
       },
       {
         "lemma": "constraint",
-        "importance": 2
-      },
-      {
-        "lemma": "construction",
         "importance": 2
       },
       {
@@ -7564,10 +10320,6 @@
       },
       {
         "lemma": "copper",
-        "importance": 2
-      },
-      {
-        "lemma": "copy",
         "importance": 2
       },
       {
@@ -7715,10 +10467,6 @@
         "importance": 2
       },
       {
-        "lemma": "crack",
-        "importance": 2
-      },
-      {
         "lemma": "crater",
         "importance": 2
       },
@@ -7784,14 +10532,6 @@
       },
       {
         "lemma": "criteria",
-        "importance": 2
-      },
-      {
-        "lemma": "critic",
-        "importance": 2
-      },
-      {
-        "lemma": "criticism",
         "importance": 2
       },
       {
@@ -7867,10 +10607,6 @@
         "importance": 2
       },
       {
-        "lemma": "cupboard",
-        "importance": 2
-      },
-      {
         "lemma": "curator",
         "importance": 2
       },
@@ -7900,10 +10636,6 @@
       },
       {
         "lemma": "curve",
-        "importance": 2
-      },
-      {
-        "lemma": "CV",
         "importance": 2
       },
       {
@@ -7959,10 +10691,6 @@
         "importance": 2
       },
       {
-        "lemma": "damage",
-        "importance": 2
-      },
-      {
         "lemma": "dandelion",
         "importance": 2
       },
@@ -7972,14 +10700,6 @@
       },
       {
         "lemma": "dash",
-        "importance": 2
-      },
-      {
-        "lemma": "data",
-        "importance": 2
-      },
-      {
-        "lemma": "database",
         "importance": 2
       },
       {
@@ -8020,10 +10740,6 @@
       },
       {
         "lemma": "death",
-        "importance": 2
-      },
-      {
-        "lemma": "debate",
         "importance": 2
       },
       {
@@ -8235,23 +10951,7 @@
         "importance": 2
       },
       {
-        "lemma": "design",
-        "importance": 2
-      },
-      {
-        "lemma": "designer",
-        "importance": 2
-      },
-      {
         "lemma": "desire",
-        "importance": 2
-      },
-      {
-        "lemma": "desk",
-        "importance": 2
-      },
-      {
-        "lemma": "desktop",
         "importance": 2
       },
       {
@@ -8308,10 +11008,6 @@
       },
       {
         "lemma": "detritus",
-        "importance": 2
-      },
-      {
-        "lemma": "development",
         "importance": 2
       },
       {
@@ -8383,10 +11079,6 @@
         "importance": 2
       },
       {
-        "lemma": "digitalization",
-        "importance": 2
-      },
-      {
         "lemma": "dignity",
         "importance": 2
       },
@@ -8427,19 +11119,11 @@
         "importance": 2
       },
       {
-        "lemma": "director",
-        "importance": 2
-      },
-      {
         "lemma": "dirt",
         "importance": 2
       },
       {
         "lemma": "disadvantage",
-        "importance": 2
-      },
-      {
-        "lemma": "disagreement",
         "importance": 2
       },
       {
@@ -8491,10 +11175,6 @@
         "importance": 2
       },
       {
-        "lemma": "discussion",
-        "importance": 2
-      },
-      {
         "lemma": "disdain",
         "importance": 2
       },
@@ -8508,10 +11188,6 @@
       },
       {
         "lemma": "dishonesty",
-        "importance": 2
-      },
-      {
-        "lemma": "dishwasher",
         "importance": 2
       },
       {
@@ -8667,10 +11343,6 @@
         "importance": 2
       },
       {
-        "lemma": "documentary",
-        "importance": 2
-      },
-      {
         "lemma": "doll",
         "importance": 2
       },
@@ -8727,10 +11399,6 @@
         "importance": 2
       },
       {
-        "lemma": "doubt",
-        "importance": 2
-      },
-      {
         "lemma": "dove",
         "importance": 2
       },
@@ -8759,10 +11427,6 @@
         "importance": 2
       },
       {
-        "lemma": "drama",
-        "importance": 2
-      },
-      {
         "lemma": "dramatist",
         "importance": 2
       },
@@ -8784,10 +11448,6 @@
       },
       {
         "lemma": "dribble",
-        "importance": 2
-      },
-      {
-        "lemma": "drill",
         "importance": 2
       },
       {
@@ -8836,10 +11496,6 @@
       },
       {
         "lemma": "duration",
-        "importance": 2
-      },
-      {
-        "lemma": "dust",
         "importance": 2
       },
       {
@@ -9055,10 +11711,6 @@
         "importance": 2
       },
       {
-        "lemma": "email",
-        "importance": 2
-      },
-      {
         "lemma": "embarrassment",
         "importance": 2
       },
@@ -9084,10 +11736,6 @@
       },
       {
         "lemma": "emolument",
-        "importance": 2
-      },
-      {
-        "lemma": "emotion",
         "importance": 2
       },
       {
@@ -9152,10 +11800,6 @@
       },
       {
         "lemma": "endeavor",
-        "importance": 2
-      },
-      {
-        "lemma": "ending",
         "importance": 2
       },
       {
@@ -9239,10 +11883,6 @@
         "importance": 2
       },
       {
-        "lemma": "episode",
-        "importance": 2
-      },
-      {
         "lemma": "epoxy",
         "importance": 2
       },
@@ -9268,10 +11908,6 @@
       },
       {
         "lemma": "era",
-        "importance": 2
-      },
-      {
-        "lemma": "error",
         "importance": 2
       },
       {
@@ -9332,14 +11968,6 @@
       },
       {
         "lemma": "euro",
-        "importance": 2
-      },
-      {
-        "lemma": "evaluation",
-        "importance": 2
-      },
-      {
-        "lemma": "event",
         "importance": 2
       },
       {
@@ -9460,14 +12088,6 @@
       },
       {
         "lemma": "expedition",
-        "importance": 2
-      },
-      {
-        "lemma": "expense",
-        "importance": 2
-      },
-      {
-        "lemma": "experience",
         "importance": 2
       },
       {
@@ -9603,15 +12223,7 @@
         "importance": 2
       },
       {
-        "lemma": "fantasy",
-        "importance": 2
-      },
-      {
         "lemma": "farce",
-        "importance": 2
-      },
-      {
-        "lemma": "farewell",
         "importance": 2
       },
       {
@@ -9647,14 +12259,6 @@
         "importance": 2
       },
       {
-        "lemma": "fault",
-        "importance": 2
-      },
-      {
-        "lemma": "favor",
-        "importance": 2
-      },
-      {
         "lemma": "fear",
         "importance": 2
       },
@@ -9664,22 +12268,6 @@
       },
       {
         "lemma": "feather",
-        "importance": 2
-      },
-      {
-        "lemma": "feature",
-        "importance": 2
-      },
-      {
-        "lemma": "feed",
-        "importance": 2
-      },
-      {
-        "lemma": "feedback",
-        "importance": 2
-      },
-      {
-        "lemma": "feeling",
         "importance": 2
       },
       {
@@ -9751,14 +12339,6 @@
         "importance": 2
       },
       {
-        "lemma": "film",
-        "importance": 2
-      },
-      {
-        "lemma": "film-maker",
-        "importance": 2
-      },
-      {
         "lemma": "filter",
         "importance": 2
       },
@@ -9791,10 +12371,6 @@
         "importance": 2
       },
       {
-        "lemma": "firewall",
-        "importance": 2
-      },
-      {
         "lemma": "firework",
         "importance": 2
       },
@@ -9824,14 +12400,6 @@
       },
       {
         "lemma": "fissure",
-        "importance": 2
-      },
-      {
-        "lemma": "fix",
-        "importance": 2
-      },
-      {
-        "lemma": "fixture",
         "importance": 2
       },
       {
@@ -9876,10 +12444,6 @@
       },
       {
         "lemma": "flicker",
-        "importance": 2
-      },
-      {
-        "lemma": "flight",
         "importance": 2
       },
       {
@@ -9932,14 +12496,6 @@
       },
       {
         "lemma": "fog",
-        "importance": 2
-      },
-      {
-        "lemma": "fold",
-        "importance": 2
-      },
-      {
-        "lemma": "folder",
         "importance": 2
       },
       {
@@ -10095,10 +12651,6 @@
         "importance": 2
       },
       {
-        "lemma": "fridge",
-        "importance": 2
-      },
-      {
         "lemma": "friend",
         "importance": 2
       },
@@ -10135,19 +12687,11 @@
         "importance": 2
       },
       {
-        "lemma": "frying pan",
-        "importance": 2
-      },
-      {
         "lemma": "full stop",
         "importance": 2
       },
       {
         "lemma": "fume",
-        "importance": 2
-      },
-      {
-        "lemma": "functionality",
         "importance": 2
       },
       {
@@ -10280,10 +12824,6 @@
       },
       {
         "lemma": "genome",
-        "importance": 2
-      },
-      {
-        "lemma": "genre",
         "importance": 2
       },
       {
@@ -10535,14 +13075,6 @@
         "importance": 2
       },
       {
-        "lemma": "graph",
-        "importance": 2
-      },
-      {
-        "lemma": "graphics",
-        "importance": 2
-      },
-      {
         "lemma": "grasp",
         "importance": 2
       },
@@ -10667,10 +13199,6 @@
         "importance": 2
       },
       {
-        "lemma": "guy",
-        "importance": 2
-      },
-      {
         "lemma": "gypsy",
         "importance": 2
       },
@@ -10691,10 +13219,6 @@
         "importance": 2
       },
       {
-        "lemma": "hack",
-        "importance": 2
-      },
-      {
         "lemma": "haircut",
         "importance": 2
       },
@@ -10703,19 +13227,11 @@
         "importance": 2
       },
       {
-        "lemma": "hairdryer",
-        "importance": 2
-      },
-      {
         "lemma": "half",
         "importance": 2
       },
       {
         "lemma": "ham",
-        "importance": 2
-      },
-      {
-        "lemma": "hammer",
         "importance": 2
       },
       {
@@ -10891,10 +13407,6 @@
         "importance": 2
       },
       {
-        "lemma": "helper",
-        "importance": 2
-      },
-      {
         "lemma": "hemp",
         "importance": 2
       },
@@ -10912,14 +13424,6 @@
       },
       {
         "lemma": "hermit",
-        "importance": 2
-      },
-      {
-        "lemma": "hero",
-        "importance": 2
-      },
-      {
-        "lemma": "heroine",
         "importance": 2
       },
       {
@@ -11055,23 +13559,11 @@
         "importance": 2
       },
       {
-        "lemma": "horror",
-        "importance": 2
-      },
-      {
         "lemma": "hospice",
         "importance": 2
       },
       {
-        "lemma": "host",
-        "importance": 2
-      },
-      {
         "lemma": "hostel",
-        "importance": 2
-      },
-      {
-        "lemma": "hostess",
         "importance": 2
       },
       {
@@ -11224,10 +13716,6 @@
       },
       {
         "lemma": "ideology",
-        "importance": 2
-      },
-      {
-        "lemma": "idiom",
         "importance": 2
       },
       {
@@ -11487,10 +13975,6 @@
         "importance": 2
       },
       {
-        "lemma": "innovation",
-        "importance": 2
-      },
-      {
         "lemma": "innovator",
         "importance": 2
       },
@@ -11611,27 +14095,7 @@
         "importance": 2
       },
       {
-        "lemma": "interruption",
-        "importance": 2
-      },
-      {
         "lemma": "interval",
-        "importance": 2
-      },
-      {
-        "lemma": "interview",
-        "importance": 2
-      },
-      {
-        "lemma": "interviewee",
-        "importance": 2
-      },
-      {
-        "lemma": "interviewer",
-        "importance": 2
-      },
-      {
-        "lemma": "intruder",
         "importance": 2
       },
       {
@@ -11675,19 +14139,7 @@
         "importance": 2
       },
       {
-        "lemma": "invitation",
-        "importance": 2
-      },
-      {
         "lemma": "involvement",
-        "importance": 2
-      },
-      {
-        "lemma": "iron",
-        "importance": 2
-      },
-      {
-        "lemma": "ironing",
         "importance": 2
       },
       {
@@ -11716,10 +14168,6 @@
       },
       {
         "lemma": "isolation",
-        "importance": 2
-      },
-      {
-        "lemma": "issue",
         "importance": 2
       },
       {
@@ -11863,14 +14311,6 @@
         "importance": 2
       },
       {
-        "lemma": "kettle",
-        "importance": 2
-      },
-      {
-        "lemma": "keyboard",
-        "importance": 2
-      },
-      {
         "lemma": "keystroke",
         "importance": 2
       },
@@ -11931,10 +14371,6 @@
         "importance": 2
       },
       {
-        "lemma": "kitten",
-        "importance": 2
-      },
-      {
         "lemma": "knack",
         "importance": 2
       },
@@ -11960,10 +14396,6 @@
       },
       {
         "lemma": "lack",
-        "importance": 2
-      },
-      {
-        "lemma": "ladder",
         "importance": 2
       },
       {
@@ -12035,10 +14467,6 @@
         "importance": 2
       },
       {
-        "lemma": "laundry",
-        "importance": 2
-      },
-      {
         "lemma": "lava",
         "importance": 2
       },
@@ -12075,18 +14503,6 @@
         "importance": 2
       },
       {
-        "lemma": "lead",
-        "importance": 2
-      },
-      {
-        "lemma": "leader",
-        "importance": 2
-      },
-      {
-        "lemma": "leadership",
-        "importance": 2
-      },
-      {
         "lemma": "leaflet",
         "importance": 2
       },
@@ -12096,10 +14512,6 @@
       },
       {
         "lemma": "learning",
-        "importance": 2
-      },
-      {
-        "lemma": "leash",
         "importance": 2
       },
       {
@@ -12175,10 +14587,6 @@
         "importance": 2
       },
       {
-        "lemma": "librarian",
-        "importance": 2
-      },
-      {
         "lemma": "lid",
         "importance": 2
       },
@@ -12243,14 +14651,6 @@
         "importance": 2
       },
       {
-        "lemma": "list",
-        "importance": 2
-      },
-      {
-        "lemma": "listener",
-        "importance": 2
-      },
-      {
         "lemma": "liter",
         "importance": 2
       },
@@ -12276,10 +14676,6 @@
       },
       {
         "lemma": "lobby",
-        "importance": 2
-      },
-      {
-        "lemma": "lock",
         "importance": 2
       },
       {
@@ -12364,10 +14760,6 @@
       },
       {
         "lemma": "lyricist",
-        "importance": 2
-      },
-      {
-        "lemma": "machine",
         "importance": 2
       },
       {
@@ -12683,10 +15075,6 @@
         "importance": 2
       },
       {
-        "lemma": "mention",
-        "importance": 2
-      },
-      {
         "lemma": "mentor",
         "importance": 2
       },
@@ -12712,10 +15100,6 @@
       },
       {
         "lemma": "merit",
-        "importance": 2
-      },
-      {
-        "lemma": "mess",
         "importance": 2
       },
       {
@@ -12768,10 +15152,6 @@
       },
       {
         "lemma": "microscopy",
-        "importance": 2
-      },
-      {
-        "lemma": "microwave",
         "importance": 2
       },
       {
@@ -12880,14 +15260,6 @@
       },
       {
         "lemma": "misunderstanding",
-        "importance": 2
-      },
-      {
-        "lemma": "mixing bowl",
-        "importance": 2
-      },
-      {
-        "lemma": "mixture",
         "importance": 2
       },
       {
@@ -13055,10 +15427,6 @@
         "importance": 2
       },
       {
-        "lemma": "move",
-        "importance": 2
-      },
-      {
         "lemma": "mover",
         "importance": 2
       },
@@ -13135,10 +15503,6 @@
         "importance": 2
       },
       {
-        "lemma": "mystery",
-        "importance": 2
-      },
-      {
         "lemma": "mystique",
         "importance": 2
       },
@@ -13168,10 +15532,6 @@
       },
       {
         "lemma": "napkin",
-        "importance": 2
-      },
-      {
-        "lemma": "narrator",
         "importance": 2
       },
       {
@@ -13235,10 +15595,6 @@
         "importance": 2
       },
       {
-        "lemma": "nervousness",
-        "importance": 2
-      },
-      {
         "lemma": "ness",
         "importance": 2
       },
@@ -13252,14 +15608,6 @@
       },
       {
         "lemma": "neutralization",
-        "importance": 2
-      },
-      {
-        "lemma": "newcomer",
-        "importance": 2
-      },
-      {
-        "lemma": "news",
         "importance": 2
       },
       {
@@ -13495,10 +15843,6 @@
         "importance": 2
       },
       {
-        "lemma": "opinion",
-        "importance": 2
-      },
-      {
         "lemma": "opportunity",
         "importance": 2
       },
@@ -13516,10 +15860,6 @@
       },
       {
         "lemma": "optimist",
-        "importance": 2
-      },
-      {
-        "lemma": "option",
         "importance": 2
       },
       {
@@ -13572,10 +15912,6 @@
       },
       {
         "lemma": "organizer",
-        "importance": 2
-      },
-      {
-        "lemma": "originality",
         "importance": 2
       },
       {
@@ -13647,10 +15983,6 @@
         "importance": 2
       },
       {
-        "lemma": "oven",
-        "importance": 2
-      },
-      {
         "lemma": "overalls",
         "importance": 2
       },
@@ -13699,15 +16031,7 @@
         "importance": 2
       },
       {
-        "lemma": "pack",
-        "importance": 2
-      },
-      {
         "lemma": "packet",
-        "importance": 2
-      },
-      {
-        "lemma": "packing",
         "importance": 2
       },
       {
@@ -13744,10 +16068,6 @@
       },
       {
         "lemma": "palm",
-        "importance": 2
-      },
-      {
-        "lemma": "pan",
         "importance": 2
       },
       {
@@ -13820,10 +16140,6 @@
       },
       {
         "lemma": "part",
-        "importance": 2
-      },
-      {
-        "lemma": "participant",
         "importance": 2
       },
       {
@@ -13963,10 +16279,6 @@
         "importance": 2
       },
       {
-        "lemma": "peel",
-        "importance": 2
-      },
-      {
         "lemma": "peep",
         "importance": 2
       },
@@ -14072,10 +16384,6 @@
       },
       {
         "lemma": "personnel",
-        "importance": 2
-      },
-      {
-        "lemma": "perspective",
         "importance": 2
       },
       {
@@ -14255,19 +16563,11 @@
         "importance": 2
       },
       {
-        "lemma": "plan",
-        "importance": 2
-      },
-      {
         "lemma": "plane",
         "importance": 2
       },
       {
         "lemma": "planet",
-        "importance": 2
-      },
-      {
-        "lemma": "planning",
         "importance": 2
       },
       {
@@ -14308,10 +16608,6 @@
       },
       {
         "lemma": "plenty",
-        "importance": 2
-      },
-      {
-        "lemma": "plot",
         "importance": 2
       },
       {
@@ -14379,10 +16675,6 @@
         "importance": 2
       },
       {
-        "lemma": "point of view",
-        "importance": 2
-      },
-      {
         "lemma": "poise",
         "importance": 2
       },
@@ -14447,10 +16739,6 @@
         "importance": 2
       },
       {
-        "lemma": "popcorn",
-        "importance": 2
-      },
-      {
         "lemma": "popularity",
         "importance": 2
       },
@@ -14495,10 +16783,6 @@
         "importance": 2
       },
       {
-        "lemma": "position",
-        "importance": 2
-      },
-      {
         "lemma": "possession",
         "importance": 2
       },
@@ -14524,10 +16808,6 @@
       },
       {
         "lemma": "posturing",
-        "importance": 2
-      },
-      {
-        "lemma": "pot",
         "importance": 2
       },
       {
@@ -14564,10 +16844,6 @@
       },
       {
         "lemma": "practice",
-        "importance": 2
-      },
-      {
-        "lemma": "praise",
         "importance": 2
       },
       {
@@ -14659,10 +16935,6 @@
         "importance": 2
       },
       {
-        "lemma": "presentation",
-        "importance": 2
-      },
-      {
         "lemma": "presenter",
         "importance": 2
       },
@@ -14739,23 +17011,11 @@
         "importance": 2
       },
       {
-        "lemma": "printer",
-        "importance": 2
-      },
-      {
-        "lemma": "priority",
-        "importance": 2
-      },
-      {
         "lemma": "prison",
         "importance": 2
       },
       {
         "lemma": "prisoner",
-        "importance": 2
-      },
-      {
-        "lemma": "privacy",
         "importance": 2
       },
       {
@@ -14795,14 +17055,6 @@
         "importance": 2
       },
       {
-        "lemma": "product",
-        "importance": 2
-      },
-      {
-        "lemma": "production",
-        "importance": 2
-      },
-      {
         "lemma": "professionalism",
         "importance": 2
       },
@@ -14819,23 +17071,7 @@
         "importance": 2
       },
       {
-        "lemma": "program",
-        "importance": 2
-      },
-      {
-        "lemma": "programmer",
-        "importance": 2
-      },
-      {
-        "lemma": "programming",
-        "importance": 2
-      },
-      {
         "lemma": "prohibition",
-        "importance": 2
-      },
-      {
-        "lemma": "project",
         "importance": 2
       },
       {
@@ -14916,10 +17152,6 @@
       },
       {
         "lemma": "prosperity",
-        "importance": 2
-      },
-      {
-        "lemma": "protagonist",
         "importance": 2
       },
       {
@@ -15035,10 +17267,6 @@
         "importance": 2
       },
       {
-        "lemma": "puppy",
-        "importance": 2
-      },
-      {
         "lemma": "purchase",
         "importance": 2
       },
@@ -15140,10 +17368,6 @@
       },
       {
         "lemma": "quotation",
-        "importance": 2
-      },
-      {
-        "lemma": "quote",
         "importance": 2
       },
       {
@@ -15323,10 +17547,6 @@
         "importance": 2
       },
       {
-        "lemma": "reason",
-        "importance": 2
-      },
-      {
         "lemma": "reassurance",
         "importance": 2
       },
@@ -15368,10 +17588,6 @@
       },
       {
         "lemma": "recollection",
-        "importance": 2
-      },
-      {
-        "lemma": "recommendation",
         "importance": 2
       },
       {
@@ -15444,10 +17660,6 @@
       },
       {
         "lemma": "refreshments",
-        "importance": 2
-      },
-      {
-        "lemma": "refrigerator",
         "importance": 2
       },
       {
@@ -15587,10 +17799,6 @@
         "importance": 2
       },
       {
-        "lemma": "repaint",
-        "importance": 2
-      },
-      {
         "lemma": "repertory",
         "importance": 2
       },
@@ -15600,10 +17808,6 @@
       },
       {
         "lemma": "replica",
-        "importance": 2
-      },
-      {
-        "lemma": "report",
         "importance": 2
       },
       {
@@ -15627,10 +17831,6 @@
         "importance": 2
       },
       {
-        "lemma": "request",
-        "importance": 2
-      },
-      {
         "lemma": "requisition",
         "importance": 2
       },
@@ -15651,10 +17851,6 @@
         "importance": 2
       },
       {
-        "lemma": "resignation",
-        "importance": 2
-      },
-      {
         "lemma": "resilience",
         "importance": 2
       },
@@ -15664,10 +17860,6 @@
       },
       {
         "lemma": "resistance",
-        "importance": 2
-      },
-      {
-        "lemma": "resolution",
         "importance": 2
       },
       {
@@ -15859,10 +18051,6 @@
         "importance": 2
       },
       {
-        "lemma": "robot",
-        "importance": 2
-      },
-      {
         "lemma": "rock",
         "importance": 2
       },
@@ -15876,10 +18064,6 @@
       },
       {
         "lemma": "roll",
-        "importance": 2
-      },
-      {
-        "lemma": "romance",
         "importance": 2
       },
       {
@@ -15908,10 +18092,6 @@
       },
       {
         "lemma": "roundup",
-        "importance": 2
-      },
-      {
-        "lemma": "routine",
         "importance": 2
       },
       {
@@ -15980,10 +18160,6 @@
       },
       {
         "lemma": "sacrifice",
-        "importance": 2
-      },
-      {
-        "lemma": "sadness",
         "importance": 2
       },
       {
@@ -16075,10 +18251,6 @@
         "importance": 2
       },
       {
-        "lemma": "saucepan",
-        "importance": 2
-      },
-      {
         "lemma": "saucer",
         "importance": 2
       },
@@ -16092,10 +18264,6 @@
       },
       {
         "lemma": "saving",
-        "importance": 2
-      },
-      {
-        "lemma": "saw",
         "importance": 2
       },
       {
@@ -16123,19 +18291,11 @@
         "importance": 2
       },
       {
-        "lemma": "scene",
-        "importance": 2
-      },
-      {
         "lemma": "scenery",
         "importance": 2
       },
       {
         "lemma": "scent",
-        "importance": 2
-      },
-      {
-        "lemma": "schedule",
         "importance": 2
       },
       {
@@ -16211,10 +18371,6 @@
         "importance": 2
       },
       {
-        "lemma": "screw",
-        "importance": 2
-      },
-      {
         "lemma": "scribble",
         "importance": 2
       },
@@ -16260,10 +18416,6 @@
       },
       {
         "lemma": "seaside",
-        "importance": 2
-      },
-      {
-        "lemma": "season",
         "importance": 2
       },
       {
@@ -16383,15 +18535,7 @@
         "importance": 2
       },
       {
-        "lemma": "series",
-        "importance": 2
-      },
-      {
         "lemma": "servant",
-        "importance": 2
-      },
-      {
-        "lemma": "server",
         "importance": 2
       },
       {
@@ -16424,10 +18568,6 @@
       },
       {
         "lemma": "sexism",
-        "importance": 2
-      },
-      {
-        "lemma": "shade",
         "importance": 2
       },
       {
@@ -16531,15 +18671,7 @@
         "importance": 2
       },
       {
-        "lemma": "showbiz",
-        "importance": 2
-      },
-      {
         "lemma": "showcase",
-        "importance": 2
-      },
-      {
-        "lemma": "shower",
         "importance": 2
       },
       {
@@ -16591,10 +18723,6 @@
         "importance": 2
       },
       {
-        "lemma": "sink",
-        "importance": 2
-      },
-      {
         "lemma": "sister-in-law",
         "importance": 2
       },
@@ -16619,10 +18747,6 @@
         "importance": 2
       },
       {
-        "lemma": "skill",
-        "importance": 2
-      },
-      {
         "lemma": "skylark",
         "importance": 2
       },
@@ -16632,10 +18756,6 @@
       },
       {
         "lemma": "slab",
-        "importance": 2
-      },
-      {
-        "lemma": "slang",
         "importance": 2
       },
       {
@@ -16660,10 +18780,6 @@
       },
       {
         "lemma": "sleeve",
-        "importance": 2
-      },
-      {
-        "lemma": "slice",
         "importance": 2
       },
       {
@@ -16771,10 +18887,6 @@
         "importance": 2
       },
       {
-        "lemma": "software",
-        "importance": 2
-      },
-      {
         "lemma": "soldier",
         "importance": 2
       },
@@ -16796,10 +18908,6 @@
       },
       {
         "lemma": "solitude",
-        "importance": 2
-      },
-      {
-        "lemma": "solution",
         "importance": 2
       },
       {
@@ -17071,10 +19179,6 @@
         "importance": 2
       },
       {
-        "lemma": "stain",
-        "importance": 2
-      },
-      {
         "lemma": "stair",
         "importance": 2
       },
@@ -17107,10 +19211,6 @@
         "importance": 2
       },
       {
-        "lemma": "star",
-        "importance": 2
-      },
-      {
         "lemma": "start",
         "importance": 2
       },
@@ -17128,14 +19228,6 @@
       },
       {
         "lemma": "statesman",
-        "importance": 2
-      },
-      {
-        "lemma": "statistics",
-        "importance": 2
-      },
-      {
-        "lemma": "status",
         "importance": 2
       },
       {
@@ -17227,15 +19319,7 @@
         "importance": 2
       },
       {
-        "lemma": "storage",
-        "importance": 2
-      },
-      {
         "lemma": "storm",
-        "importance": 2
-      },
-      {
-        "lemma": "stove",
         "importance": 2
       },
       {
@@ -17268,10 +19352,6 @@
       },
       {
         "lemma": "strawberry",
-        "importance": 2
-      },
-      {
-        "lemma": "stream",
         "importance": 2
       },
       {
@@ -17311,10 +19391,6 @@
         "importance": 2
       },
       {
-        "lemma": "stuff",
-        "importance": 2
-      },
-      {
         "lemma": "stuffiness",
         "importance": 2
       },
@@ -17339,10 +19415,6 @@
         "importance": 2
       },
       {
-        "lemma": "subject",
-        "importance": 2
-      },
-      {
         "lemma": "subjunctive",
         "importance": 2
       },
@@ -17352,10 +19424,6 @@
       },
       {
         "lemma": "subordinate",
-        "importance": 2
-      },
-      {
-        "lemma": "subplot",
         "importance": 2
       },
       {
@@ -17372,10 +19440,6 @@
       },
       {
         "lemma": "substitute",
-        "importance": 2
-      },
-      {
-        "lemma": "subtitle",
         "importance": 2
       },
       {
@@ -17407,10 +19471,6 @@
         "importance": 2
       },
       {
-        "lemma": "suggestion",
-        "importance": 2
-      },
-      {
         "lemma": "suicide",
         "importance": 2
       },
@@ -17439,10 +19499,6 @@
         "importance": 2
       },
       {
-        "lemma": "summary",
-        "importance": 2
-      },
-      {
         "lemma": "summer",
         "importance": 2
       },
@@ -17456,10 +19512,6 @@
       },
       {
         "lemma": "sundial",
-        "importance": 2
-      },
-      {
-        "lemma": "sunlight",
         "importance": 2
       },
       {
@@ -17483,19 +19535,11 @@
         "importance": 2
       },
       {
-        "lemma": "superstar",
-        "importance": 2
-      },
-      {
         "lemma": "superstition",
         "importance": 2
       },
       {
         "lemma": "supervision",
-        "importance": 2
-      },
-      {
-        "lemma": "supervisor",
         "importance": 2
       },
       {
@@ -17512,10 +19556,6 @@
       },
       {
         "lemma": "supply",
-        "importance": 2
-      },
-      {
-        "lemma": "support",
         "importance": 2
       },
       {
@@ -17643,10 +19683,6 @@
         "importance": 2
       },
       {
-        "lemma": "system",
-        "importance": 2
-      },
-      {
         "lemma": "table tennis",
         "importance": 2
       },
@@ -17711,19 +19747,11 @@
         "importance": 2
       },
       {
-        "lemma": "tap",
-        "importance": 2
-      },
-      {
         "lemma": "tape",
         "importance": 2
       },
       {
         "lemma": "target",
-        "importance": 2
-      },
-      {
-        "lemma": "task",
         "importance": 2
       },
       {
@@ -17760,10 +19788,6 @@
       },
       {
         "lemma": "teaspoon",
-        "importance": 2
-      },
-      {
-        "lemma": "technology",
         "importance": 2
       },
       {
@@ -17851,10 +19875,6 @@
         "importance": 2
       },
       {
-        "lemma": "test",
-        "importance": 2
-      },
-      {
         "lemma": "testament",
         "importance": 2
       },
@@ -17927,15 +19947,7 @@
         "importance": 2
       },
       {
-        "lemma": "thread",
-        "importance": 2
-      },
-      {
         "lemma": "thrill",
-        "importance": 2
-      },
-      {
-        "lemma": "thriller",
         "importance": 2
       },
       {
@@ -17972,10 +19984,6 @@
       },
       {
         "lemma": "tights",
-        "importance": 2
-      },
-      {
-        "lemma": "tile",
         "importance": 2
       },
       {
@@ -18019,10 +20027,6 @@
         "importance": 2
       },
       {
-        "lemma": "toilet",
-        "importance": 2
-      },
-      {
         "lemma": "toll",
         "importance": 2
       },
@@ -18048,10 +20052,6 @@
       },
       {
         "lemma": "top",
-        "importance": 2
-      },
-      {
-        "lemma": "topic",
         "importance": 2
       },
       {
@@ -18083,10 +20083,6 @@
         "importance": 2
       },
       {
-        "lemma": "tour",
-        "importance": 2
-      },
-      {
         "lemma": "tour guide",
         "importance": 2
       },
@@ -18096,10 +20092,6 @@
       },
       {
         "lemma": "tourist",
-        "importance": 2
-      },
-      {
-        "lemma": "towel",
         "importance": 2
       },
       {
@@ -18124,10 +20116,6 @@
       },
       {
         "lemma": "tragedy",
-        "importance": 2
-      },
-      {
-        "lemma": "trailer",
         "importance": 2
       },
       {
@@ -18183,10 +20171,6 @@
         "importance": 2
       },
       {
-        "lemma": "translation",
-        "importance": 2
-      },
-      {
         "lemma": "translator",
         "importance": 2
       },
@@ -18212,14 +20196,6 @@
       },
       {
         "lemma": "trauma",
-        "importance": 2
-      },
-      {
-        "lemma": "travel agent",
-        "importance": 2
-      },
-      {
-        "lemma": "traveler",
         "importance": 2
       },
       {
@@ -18411,10 +20387,6 @@
         "importance": 2
       },
       {
-        "lemma": "twist",
-        "importance": 2
-      },
-      {
         "lemma": "twitch",
         "importance": 2
       },
@@ -18436,10 +20408,6 @@
       },
       {
         "lemma": "tyrant",
-        "importance": 2
-      },
-      {
-        "lemma": "uncertainty",
         "importance": 2
       },
       {
@@ -18524,10 +20492,6 @@
       },
       {
         "lemma": "usage",
-        "importance": 2
-      },
-      {
-        "lemma": "user",
         "importance": 2
       },
       {
@@ -18743,10 +20707,6 @@
         "importance": 2
       },
       {
-        "lemma": "virus",
-        "importance": 2
-      },
-      {
         "lemma": "vitality",
         "importance": 2
       },
@@ -18827,10 +20787,6 @@
         "importance": 2
       },
       {
-        "lemma": "wallboard",
-        "importance": 2
-      },
-      {
         "lemma": "wallet",
         "importance": 2
       },
@@ -18860,22 +20816,6 @@
       },
       {
         "lemma": "wartime",
-        "importance": 2
-      },
-      {
-        "lemma": "wash",
-        "importance": 2
-      },
-      {
-        "lemma": "washbowl",
-        "importance": 2
-      },
-      {
-        "lemma": "washing machine",
-        "importance": 2
-      },
-      {
-        "lemma": "washing-up",
         "importance": 2
       },
       {
@@ -18948,10 +20888,6 @@
       },
       {
         "lemma": "weekday",
-        "importance": 2
-      },
-      {
-        "lemma": "weekend",
         "importance": 2
       },
       {
@@ -19195,10 +21131,6 @@
         "importance": 2
       },
       {
-        "lemma": "accept",
-        "importance": 2
-      },
-      {
         "lemma": "accompany",
         "importance": 2
       },
@@ -19299,10 +21231,6 @@
         "importance": 2
       },
       {
-        "lemma": "agree",
-        "importance": 2
-      },
-      {
         "lemma": "alert",
         "importance": 2
       },
@@ -19355,10 +21283,6 @@
         "importance": 2
       },
       {
-        "lemma": "analyze",
-        "importance": 2
-      },
-      {
         "lemma": "animate",
         "importance": 2
       },
@@ -19403,15 +21327,7 @@
         "importance": 2
       },
       {
-        "lemma": "approve",
-        "importance": 2
-      },
-      {
         "lemma": "apt to",
-        "importance": 2
-      },
-      {
-        "lemma": "argue",
         "importance": 2
       },
       {
@@ -19459,10 +21375,6 @@
         "importance": 2
       },
       {
-        "lemma": "assist",
-        "importance": 2
-      },
-      {
         "lemma": "associate",
         "importance": 2
       },
@@ -19471,15 +21383,7 @@
         "importance": 2
       },
       {
-        "lemma": "assure",
-        "importance": 2
-      },
-      {
         "lemma": "astonish",
-        "importance": 2
-      },
-      {
-        "lemma": "attach",
         "importance": 2
       },
       {
@@ -19487,15 +21391,7 @@
         "importance": 2
       },
       {
-        "lemma": "attend",
-        "importance": 2
-      },
-      {
         "lemma": "attract",
-        "importance": 2
-      },
-      {
-        "lemma": "automate",
         "importance": 2
       },
       {
@@ -19516,10 +21412,6 @@
       },
       {
         "lemma": "bankrupt",
-        "importance": 2
-      },
-      {
-        "lemma": "bathe",
         "importance": 2
       },
       {
@@ -19544,10 +21436,6 @@
       },
       {
         "lemma": "behave",
-        "importance": 2
-      },
-      {
-        "lemma": "believe",
         "importance": 2
       },
       {
@@ -19592,10 +21480,6 @@
       },
       {
         "lemma": "bind",
-        "importance": 2
-      },
-      {
-        "lemma": "blame",
         "importance": 2
       },
       {
@@ -19739,10 +21623,6 @@
         "importance": 2
       },
       {
-        "lemma": "characterize",
-        "importance": 2
-      },
-      {
         "lemma": "cheat",
         "importance": 2
       },
@@ -19767,10 +21647,6 @@
         "importance": 2
       },
       {
-        "lemma": "chop",
-        "importance": 2
-      },
-      {
         "lemma": "churn",
         "importance": 2
       },
@@ -19792,10 +21668,6 @@
       },
       {
         "lemma": "clap",
-        "importance": 2
-      },
-      {
-        "lemma": "clarify",
         "importance": 2
       },
       {
@@ -19851,15 +21723,7 @@
         "importance": 2
       },
       {
-        "lemma": "commit",
-        "importance": 2
-      },
-      {
         "lemma": "commute",
-        "importance": 2
-      },
-      {
-        "lemma": "compare",
         "importance": 2
       },
       {
@@ -19919,10 +21783,6 @@
         "importance": 2
       },
       {
-        "lemma": "conclude",
-        "importance": 2
-      },
-      {
         "lemma": "concur",
         "importance": 2
       },
@@ -19960,10 +21820,6 @@
       },
       {
         "lemma": "confront",
-        "importance": 2
-      },
-      {
-        "lemma": "confuse",
         "importance": 2
       },
       {
@@ -20051,10 +21907,6 @@
         "importance": 2
       },
       {
-        "lemma": "convince",
-        "importance": 2
-      },
-      {
         "lemma": "cooperate",
         "importance": 2
       },
@@ -20092,10 +21944,6 @@
       },
       {
         "lemma": "create",
-        "importance": 2
-      },
-      {
-        "lemma": "criticize",
         "importance": 2
       },
       {
@@ -20192,10 +22040,6 @@
       },
       {
         "lemma": "dehumanize",
-        "importance": 2
-      },
-      {
-        "lemma": "delete",
         "importance": 2
       },
       {
@@ -20307,10 +22151,6 @@
         "importance": 2
       },
       {
-        "lemma": "digitalize",
-        "importance": 2
-      },
-      {
         "lemma": "dignify",
         "importance": 2
       },
@@ -20327,19 +22167,11 @@
         "importance": 2
       },
       {
-        "lemma": "disagree",
-        "importance": 2
-      },
-      {
         "lemma": "disappear",
         "importance": 2
       },
       {
         "lemma": "disappoint",
-        "importance": 2
-      },
-      {
-        "lemma": "disapprove",
         "importance": 2
       },
       {
@@ -20360,10 +22192,6 @@
       },
       {
         "lemma": "discriminate",
-        "importance": 2
-      },
-      {
-        "lemma": "discuss",
         "importance": 2
       },
       {
@@ -20468,10 +22296,6 @@
       },
       {
         "lemma": "donate",
-        "importance": 2
-      },
-      {
-        "lemma": "download",
         "importance": 2
       },
       {
@@ -20679,10 +22503,6 @@
         "importance": 2
       },
       {
-        "lemma": "evaluate",
-        "importance": 2
-      },
-      {
         "lemma": "evoke",
         "importance": 2
       },
@@ -20883,10 +22703,6 @@
         "importance": 2
       },
       {
-        "lemma": "forgive",
-        "importance": 2
-      },
-      {
         "lemma": "formulate",
         "importance": 2
       },
@@ -20912,10 +22728,6 @@
       },
       {
         "lemma": "fulfill",
-        "importance": 2
-      },
-      {
-        "lemma": "function",
         "importance": 2
       },
       {
@@ -21040,10 +22852,6 @@
       },
       {
         "lemma": "hinder",
-        "importance": 2
-      },
-      {
-        "lemma": "hire",
         "importance": 2
       },
       {
@@ -21295,10 +23103,6 @@
         "importance": 2
       },
       {
-        "lemma": "interrupt",
-        "importance": 2
-      },
-      {
         "lemma": "intersperse",
         "importance": 2
       },
@@ -21328,10 +23132,6 @@
       },
       {
         "lemma": "investigate",
-        "importance": 2
-      },
-      {
-        "lemma": "invite",
         "importance": 2
       },
       {
@@ -21471,10 +23271,6 @@
         "importance": 2
       },
       {
-        "lemma": "listen",
-        "importance": 2
-      },
-      {
         "lemma": "live",
         "importance": 2
       },
@@ -21500,10 +23296,6 @@
       },
       {
         "lemma": "maintain",
-        "importance": 2
-      },
-      {
-        "lemma": "malfunction",
         "importance": 2
       },
       {
@@ -21555,10 +23347,6 @@
         "importance": 2
       },
       {
-        "lemma": "merge",
-        "importance": 2
-      },
-      {
         "lemma": "mesh",
         "importance": 2
       },
@@ -21588,10 +23376,6 @@
       },
       {
         "lemma": "misunderstand",
-        "importance": 2
-      },
-      {
-        "lemma": "mix",
         "importance": 2
       },
       {
@@ -21847,10 +23631,6 @@
         "importance": 2
       },
       {
-        "lemma": "persuade",
-        "importance": 2
-      },
-      {
         "lemma": "pertain to",
         "importance": 2
       },
@@ -22095,10 +23875,6 @@
         "importance": 2
       },
       {
-        "lemma": "quit",
-        "importance": 2
-      },
-      {
         "lemma": "radiate",
         "importance": 2
       },
@@ -22128,10 +23904,6 @@
       },
       {
         "lemma": "rearrange",
-        "importance": 2
-      },
-      {
-        "lemma": "reassure",
         "importance": 2
       },
       {
@@ -22303,10 +24075,6 @@
         "importance": 2
       },
       {
-        "lemma": "remove",
-        "importance": 2
-      },
-      {
         "lemma": "render",
         "importance": 2
       },
@@ -22320,10 +24088,6 @@
       },
       {
         "lemma": "repay",
-        "importance": 2
-      },
-      {
-        "lemma": "repeat",
         "importance": 2
       },
       {
@@ -22367,15 +24131,7 @@
         "importance": 2
       },
       {
-        "lemma": "resign",
-        "importance": 2
-      },
-      {
         "lemma": "resist",
-        "importance": 2
-      },
-      {
-        "lemma": "resolve",
         "importance": 2
       },
       {
@@ -22623,10 +24379,6 @@
         "importance": 2
       },
       {
-        "lemma": "show",
-        "importance": 2
-      },
-      {
         "lemma": "shrug",
         "importance": 2
       },
@@ -22712,10 +24464,6 @@
       },
       {
         "lemma": "soliloquize",
-        "importance": 2
-      },
-      {
-        "lemma": "solve",
         "importance": 2
       },
       {
@@ -22843,10 +24591,6 @@
         "importance": 2
       },
       {
-        "lemma": "stir",
-        "importance": 2
-      },
-      {
         "lemma": "stoke",
         "importance": 2
       },
@@ -22935,14 +24679,6 @@
         "importance": 2
       },
       {
-        "lemma": "suggest",
-        "importance": 2
-      },
-      {
-        "lemma": "summarize",
-        "importance": 2
-      },
-      {
         "lemma": "sunbathe",
         "importance": 2
       },
@@ -22984,10 +24720,6 @@
       },
       {
         "lemma": "sweat",
-        "importance": 2
-      },
-      {
-        "lemma": "sweep",
         "importance": 2
       },
       {
@@ -23163,10 +24895,6 @@
         "importance": 2
       },
       {
-        "lemma": "unfold",
-        "importance": 2
-      },
-      {
         "lemma": "unify",
         "importance": 2
       },
@@ -23179,15 +24907,7 @@
         "importance": 2
       },
       {
-        "lemma": "unlock",
-        "importance": 2
-      },
-      {
         "lemma": "unnerve",
-        "importance": 2
-      },
-      {
-        "lemma": "unpack",
         "importance": 2
       },
       {
@@ -23208,10 +24928,6 @@
       },
       {
         "lemma": "untie",
-        "importance": 2
-      },
-      {
-        "lemma": "upload",
         "importance": 2
       },
       {
@@ -23304,10 +25020,6 @@
       },
       {
         "lemma": "widen",
-        "importance": 2
-      },
-      {
-        "lemma": "wipe",
         "importance": 2
       },
       {
@@ -23547,10 +25259,6 @@
         "importance": 2
       },
       {
-        "lemma": "agreeable",
-        "importance": 2
-      },
-      {
         "lemma": "agricultural",
         "importance": 2
       },
@@ -23779,10 +25487,6 @@
         "importance": 2
       },
       {
-        "lemma": "assistant",
-        "importance": 2
-      },
-      {
         "lemma": "astonished",
         "importance": 2
       },
@@ -23843,10 +25547,6 @@
         "importance": 2
       },
       {
-        "lemma": "automatic",
-        "importance": 2
-      },
-      {
         "lemma": "autonomous",
         "importance": 2
       },
@@ -23876,10 +25576,6 @@
       },
       {
         "lemma": "aware",
-        "importance": 2
-      },
-      {
-        "lemma": "awesome",
         "importance": 2
       },
       {
@@ -24039,10 +25735,6 @@
         "importance": 2
       },
       {
-        "lemma": "bossy",
-        "importance": 2
-      },
-      {
         "lemma": "bothered",
         "importance": 2
       },
@@ -24115,10 +25807,6 @@
         "importance": 2
       },
       {
-        "lemma": "calm",
-        "importance": 2
-      },
-      {
         "lemma": "calorific",
         "importance": 2
       },
@@ -24180,10 +25868,6 @@
       },
       {
         "lemma": "centralized",
-        "importance": 2
-      },
-      {
-        "lemma": "certain",
         "importance": 2
       },
       {
@@ -24391,10 +26075,6 @@
         "importance": 2
       },
       {
-        "lemma": "compromised",
-        "importance": 2
-      },
-      {
         "lemma": "compulsory",
         "importance": 2
       },
@@ -24424,14 +26104,6 @@
       },
       {
         "lemma": "confrontational",
-        "importance": 2
-      },
-      {
-        "lemma": "confused",
-        "importance": 2
-      },
-      {
-        "lemma": "confusing",
         "importance": 2
       },
       {
@@ -24511,15 +26183,7 @@
         "importance": 2
       },
       {
-        "lemma": "convinced",
-        "importance": 2
-      },
-      {
         "lemma": "convoluted",
-        "importance": 2
-      },
-      {
-        "lemma": "cool",
         "importance": 2
       },
       {
@@ -24603,10 +26267,6 @@
         "importance": 2
       },
       {
-        "lemma": "critical",
-        "importance": 2
-      },
-      {
         "lemma": "crucial",
         "importance": 2
       },
@@ -24644,10 +26304,6 @@
       },
       {
         "lemma": "daft",
-        "importance": 2
-      },
-      {
-        "lemma": "damaged",
         "importance": 2
       },
       {
@@ -24835,10 +26491,6 @@
         "importance": 2
       },
       {
-        "lemma": "digital",
-        "importance": 2
-      },
-      {
         "lemma": "diligent",
         "importance": 2
       },
@@ -24951,15 +26603,7 @@
         "importance": 2
       },
       {
-        "lemma": "doubtful",
-        "importance": 2
-      },
-      {
         "lemma": "downward",
-        "importance": 2
-      },
-      {
-        "lemma": "dramatic",
         "importance": 2
       },
       {
@@ -24979,10 +26623,6 @@
         "importance": 2
       },
       {
-        "lemma": "dry",
-        "importance": 2
-      },
-      {
         "lemma": "due",
         "importance": 2
       },
@@ -24996,10 +26636,6 @@
       },
       {
         "lemma": "durable",
-        "importance": 2
-      },
-      {
-        "lemma": "dusty",
         "importance": 2
       },
       {
@@ -25140,10 +26776,6 @@
       },
       {
         "lemma": "eminent",
-        "importance": 2
-      },
-      {
-        "lemma": "emotional",
         "importance": 2
       },
       {
@@ -25291,10 +26923,6 @@
         "importance": 2
       },
       {
-        "lemma": "executive",
-        "importance": 2
-      },
-      {
         "lemma": "exhilarating",
         "importance": 2
       },
@@ -25308,10 +26936,6 @@
       },
       {
         "lemma": "expected",
-        "importance": 2
-      },
-      {
-        "lemma": "experienced",
         "importance": 2
       },
       {
@@ -25452,10 +27076,6 @@
       },
       {
         "lemma": "fatal",
-        "importance": 2
-      },
-      {
-        "lemma": "favorable",
         "importance": 2
       },
       {
@@ -25655,10 +27275,6 @@
         "importance": 2
       },
       {
-        "lemma": "functional",
-        "importance": 2
-      },
-      {
         "lemma": "fundamental",
         "importance": 2
       },
@@ -25792,10 +27408,6 @@
       },
       {
         "lemma": "grand",
-        "importance": 2
-      },
-      {
-        "lemma": "graphic",
         "importance": 2
       },
       {
@@ -25944,10 +27556,6 @@
       },
       {
         "lemma": "heavy",
-        "importance": 2
-      },
-      {
-        "lemma": "helpful",
         "importance": 2
       },
       {
@@ -26347,10 +27955,6 @@
         "importance": 2
       },
       {
-        "lemma": "inexperienced",
-        "importance": 2
-      },
-      {
         "lemma": "inexplicable",
         "importance": 2
       },
@@ -26476,10 +28080,6 @@
       },
       {
         "lemma": "intellectual",
-        "importance": 2
-      },
-      {
-        "lemma": "intelligent",
         "importance": 2
       },
       {
@@ -26684,10 +28284,6 @@
       },
       {
         "lemma": "lazy",
-        "importance": 2
-      },
-      {
-        "lemma": "leading",
         "importance": 2
       },
       {
@@ -27003,10 +28599,6 @@
         "importance": 2
       },
       {
-        "lemma": "messy",
-        "importance": 2
-      },
-      {
         "lemma": "metalled",
         "importance": 2
       },
@@ -27024,10 +28616,6 @@
       },
       {
         "lemma": "meticulous",
-        "importance": 2
-      },
-      {
-        "lemma": "metric",
         "importance": 2
       },
       {
@@ -27279,10 +28867,6 @@
         "importance": 2
       },
       {
-        "lemma": "nervous",
-        "importance": 2
-      },
-      {
         "lemma": "net",
         "importance": 2
       },
@@ -27488,10 +29072,6 @@
       },
       {
         "lemma": "organized",
-        "importance": 2
-      },
-      {
-        "lemma": "original",
         "importance": 2
       },
       {
@@ -27991,10 +29571,6 @@
         "importance": 2
       },
       {
-        "lemma": "productive",
-        "importance": 2
-      },
-      {
         "lemma": "professional",
         "importance": 2
       },
@@ -28044,10 +29620,6 @@
       },
       {
         "lemma": "proportional",
-        "importance": 2
-      },
-      {
-        "lemma": "proposed",
         "importance": 2
       },
       {
@@ -28231,10 +29803,6 @@
         "importance": 2
       },
       {
-        "lemma": "recommendable",
-        "importance": 2
-      },
-      {
         "lemma": "rectangular",
         "importance": 2
       },
@@ -28316,10 +29884,6 @@
       },
       {
         "lemma": "remorseless",
-        "importance": 2
-      },
-      {
-        "lemma": "remote",
         "importance": 2
       },
       {
@@ -28523,10 +30087,6 @@
         "importance": 2
       },
       {
-        "lemma": "scared",
-        "importance": 2
-      },
-      {
         "lemma": "scary",
         "importance": 2
       },
@@ -28536,10 +30096,6 @@
       },
       {
         "lemma": "scenic",
-        "importance": 2
-      },
-      {
-        "lemma": "scheduled",
         "importance": 2
       },
       {
@@ -28707,10 +30263,6 @@
         "importance": 2
       },
       {
-        "lemma": "shocked",
-        "importance": 2
-      },
-      {
         "lemma": "shocking",
         "importance": 2
       },
@@ -28755,14 +30307,6 @@
         "importance": 2
       },
       {
-        "lemma": "skilled",
-        "importance": 2
-      },
-      {
-        "lemma": "skillful",
-        "importance": 2
-      },
-      {
         "lemma": "slack",
         "importance": 2
       },
@@ -28772,10 +30316,6 @@
       },
       {
         "lemma": "sloppy",
-        "importance": 2
-      },
-      {
-        "lemma": "smart",
         "importance": 2
       },
       {
@@ -29107,14 +30647,6 @@
         "importance": 2
       },
       {
-        "lemma": "supportive",
-        "importance": 2
-      },
-      {
-        "lemma": "sure",
-        "importance": 2
-      },
-      {
         "lemma": "surprising",
         "importance": 2
       },
@@ -29339,10 +30871,6 @@
         "importance": 2
       },
       {
-        "lemma": "tidy",
-        "importance": 2
-      },
-      {
         "lemma": "tight",
         "importance": 2
       },
@@ -29479,10 +31007,6 @@
         "importance": 2
       },
       {
-        "lemma": "twisted",
-        "importance": 2
-      },
-      {
         "lemma": "typical",
         "importance": 2
       },
@@ -29504,10 +31028,6 @@
       },
       {
         "lemma": "unadulterated",
-        "importance": 2
-      },
-      {
-        "lemma": "unafraid",
         "importance": 2
       },
       {
@@ -29547,15 +31067,7 @@
         "importance": 2
       },
       {
-        "lemma": "uncertain",
-        "importance": 2
-      },
-      {
         "lemma": "unchanged",
-        "importance": 2
-      },
-      {
-        "lemma": "uncharacteristic",
         "importance": 2
       },
       {
@@ -29699,15 +31211,7 @@
         "importance": 2
       },
       {
-        "lemma": "unfriendly",
-        "importance": 2
-      },
-      {
         "lemma": "ungodly",
-        "importance": 2
-      },
-      {
-        "lemma": "unhappy",
         "importance": 2
       },
       {
@@ -29716,10 +31220,6 @@
       },
       {
         "lemma": "unheard",
-        "importance": 2
-      },
-      {
-        "lemma": "unhelpful",
         "importance": 2
       },
       {
@@ -29887,10 +31387,6 @@
         "importance": 2
       },
       {
-        "lemma": "unsure",
-        "importance": 2
-      },
-      {
         "lemma": "unsurpassed",
         "importance": 2
       },
@@ -29908,10 +31404,6 @@
       },
       {
         "lemma": "untangled",
-        "importance": 2
-      },
-      {
-        "lemma": "untidy",
         "importance": 2
       },
       {
@@ -30431,10 +31923,6 @@
         "importance": 2
       },
       {
-        "lemma": "actually",
-        "importance": 2
-      },
-      {
         "lemma": "acutely",
         "importance": 2
       },
@@ -30639,10 +32127,6 @@
         "importance": 2
       },
       {
-        "lemma": "anyway",
-        "importance": 2
-      },
-      {
         "lemma": "anywhere",
         "importance": 2
       },
@@ -30711,10 +32195,6 @@
         "importance": 2
       },
       {
-        "lemma": "automatically",
-        "importance": 2
-      },
-      {
         "lemma": "autonomously",
         "importance": 2
       },
@@ -30744,10 +32224,6 @@
       },
       {
         "lemma": "beautifully",
-        "importance": 2
-      },
-      {
-        "lemma": "because",
         "importance": 2
       },
       {
@@ -30843,10 +32319,6 @@
         "importance": 2
       },
       {
-        "lemma": "but",
-        "importance": 2
-      },
-      {
         "lemma": "by",
         "importance": 2
       },
@@ -30888,10 +32360,6 @@
       },
       {
         "lemma": "ceaselessly",
-        "importance": 2
-      },
-      {
-        "lemma": "certainly",
         "importance": 2
       },
       {
@@ -31028,10 +32496,6 @@
       },
       {
         "lemma": "credibly",
-        "importance": 2
-      },
-      {
-        "lemma": "critically",
         "importance": 2
       },
       {
@@ -31275,10 +32739,6 @@
         "importance": 2
       },
       {
-        "lemma": "emotionally",
-        "importance": 2
-      },
-      {
         "lemma": "emphatically",
         "importance": 2
       },
@@ -31400,10 +32860,6 @@
       },
       {
         "lemma": "exceptionally",
-        "importance": 2
-      },
-      {
-        "lemma": "excitedly",
         "importance": 2
       },
       {
@@ -31564,10 +33020,6 @@
       },
       {
         "lemma": "forty",
-        "importance": 2
-      },
-      {
-        "lemma": "forward",
         "importance": 2
       },
       {
@@ -31760,10 +33212,6 @@
       },
       {
         "lemma": "hopefully",
-        "importance": 2
-      },
-      {
-        "lemma": "however",
         "importance": 2
       },
       {
@@ -32319,10 +33767,6 @@
         "importance": 2
       },
       {
-        "lemma": "need",
-        "importance": 2
-      },
-      {
         "lemma": "negatively",
         "importance": 2
       },
@@ -32332,10 +33776,6 @@
       },
       {
         "lemma": "neither",
-        "importance": 2
-      },
-      {
-        "lemma": "nervously",
         "importance": 2
       },
       {
@@ -32487,10 +33927,6 @@
         "importance": 2
       },
       {
-        "lemma": "originally",
-        "importance": 2
-      },
-      {
         "lemma": "ostensibly",
         "importance": 2
       },
@@ -32560,10 +33996,6 @@
       },
       {
         "lemma": "particularly",
-        "importance": 2
-      },
-      {
-        "lemma": "partly",
         "importance": 2
       },
       {
@@ -32863,14 +34295,6 @@
         "importance": 2
       },
       {
-        "lemma": "remotely",
-        "importance": 2
-      },
-      {
-        "lemma": "repeatedly",
-        "importance": 2
-      },
-      {
         "lemma": "resoundingly",
         "importance": 2
       },
@@ -32896,10 +34320,6 @@
       },
       {
         "lemma": "round",
-        "importance": 2
-      },
-      {
-        "lemma": "sadly",
         "importance": 2
       },
       {
@@ -33007,10 +34427,6 @@
         "importance": 2
       },
       {
-        "lemma": "skillfully",
-        "importance": 2
-      },
-      {
         "lemma": "skyward",
         "importance": 2
       },
@@ -33080,10 +34496,6 @@
       },
       {
         "lemma": "sometimes",
-        "importance": 2
-      },
-      {
-        "lemma": "somewhat",
         "importance": 2
       },
       {
@@ -33212,10 +34624,6 @@
       },
       {
         "lemma": "supposedly",
-        "importance": 2
-      },
-      {
-        "lemma": "surely",
         "importance": 2
       },
       {
@@ -33584,10 +34992,6 @@
       },
       {
         "lemma": "verily",
-        "importance": 2
-      },
-      {
-        "lemma": "versus",
         "importance": 2
       },
       {
@@ -34309,7 +35713,8 @@
     "nativeLang": "ru",
     "title": "Электроника",
     "categories": [
-      "shopping"
+      "shopping",
+      "itTech"
     ],
     "type": "official",
     "importance": 2,
@@ -34643,7 +36048,8 @@
     "nativeLang": "ru",
     "title": "Мебель и товары для дома",
     "categories": [
-      "shopping"
+      "shopping",
+      "homeLife"
     ],
     "type": "official",
     "importance": 2,
@@ -35028,11 +36434,41 @@
     "nativeLang": "ru",
     "title": "Просьбы. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "workOffice"
     ],
     "type": "official",
     "importance": 2,
-    "items": []
+    "items": [
+      {
+        "lemma": "favor",
+        "importance": 2
+      },
+      {
+        "lemma": "request",
+        "importance": 2
+      },
+      {
+        "lemma": "ask",
+        "importance": 2
+      },
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "assistant",
+        "importance": 2
+      },
+      {
+        "lemma": "helpful",
+        "importance": 2
+      },
+      {
+        "lemma": "please",
+        "importance": 2
+      }
+    ]
   },
   {
     "id": "01a0f10e-1771-79ce-93cd-5275fff33d7b",
@@ -35040,11 +36476,37 @@
     "nativeLang": "ru",
     "title": "Просьбы. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "workOffice"
     ],
     "type": "official",
     "importance": 2,
-    "items": []
+    "items": [
+      {
+        "lemma": "assistance",
+        "importance": 2
+      },
+      {
+        "lemma": "helper",
+        "importance": 2
+      },
+      {
+        "lemma": "assist",
+        "importance": 2
+      },
+      {
+        "lemma": "favorable",
+        "importance": 2
+      },
+      {
+        "lemma": "unhelpful",
+        "importance": 2
+      },
+      {
+        "lemma": "Could you repeat that, please?",
+        "importance": 2
+      }
+    ]
   },
   {
     "id": "01a0f10e-1772-7476-a969-d338be1e0e62",
@@ -36309,7 +37771,8 @@
     "nativeLang": "ru",
     "title": "Чтение",
     "categories": [
-      "sportsHobbies"
+      "sportsHobbies",
+      "moviesBooks"
     ],
     "type": "official",
     "importance": 2,
@@ -37494,6 +38957,571 @@
       },
       {
         "lemma": "tonight",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7e98-8fef-1795d161a189",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Первый день",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "newcomer",
+        "importance": 2
+      },
+      {
+        "lemma": "tour",
+        "importance": 2
+      },
+      {
+        "lemma": "introduce",
+        "importance": 2
+      },
+      {
+        "lemma": "nervous",
+        "importance": 2
+      },
+      {
+        "lemma": "new",
+        "importance": 2
+      },
+      {
+        "lemma": "welcome",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-75cd-90bf-459a887c6925",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Офис и рабочее место",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "badge",
+        "importance": 2
+      },
+      {
+        "lemma": "chair",
+        "importance": 2
+      },
+      {
+        "lemma": "desk",
+        "importance": 2
+      },
+      {
+        "lemma": "desktop",
+        "importance": 2
+      },
+      {
+        "lemma": "office",
+        "importance": 2
+      },
+      {
+        "lemma": "printer",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-750a-9816-751864c05891",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Коллеги и small talk",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "weekend",
+        "importance": 2
+      },
+      {
+        "lemma": "chat",
+        "importance": 2
+      },
+      {
+        "lemma": "friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "unfriendly",
+        "importance": 2
+      },
+      {
+        "lemma": "How's it going?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-75f9-9c71-1859ef876a9b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Email",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "acceptance",
+        "importance": 2
+      },
+      {
+        "lemma": "access",
+        "importance": 2
+      },
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "attachment",
+        "importance": 2
+      },
+      {
+        "lemma": "email",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "subject",
+        "importance": 2
+      },
+      {
+        "lemma": "accept",
+        "importance": 2
+      },
+      {
+        "lemma": "attach",
+        "importance": 2
+      },
+      {
+        "lemma": "forward",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7d6f-916b-477f4b6fc05f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рабочие чаты",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "channel",
+        "importance": 2
+      },
+      {
+        "lemma": "mention",
+        "importance": 2
+      },
+      {
+        "lemma": "message",
+        "importance": 2
+      },
+      {
+        "lemma": "message board",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "text message",
+        "importance": 2
+      },
+      {
+        "lemma": "thread",
+        "importance": 2
+      },
+      {
+        "lemma": "chat",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-75a6-aeed-56e3dad1fc89",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Встречи",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "agenda",
+        "importance": 2
+      },
+      {
+        "lemma": "attendance",
+        "importance": 2
+      },
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "participant",
+        "importance": 2
+      },
+      {
+        "lemma": "attend",
+        "importance": 2
+      },
+      {
+        "lemma": "discuss",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7f68-94b6-9a857d649c4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Отчёты и статусы",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "presentation",
+        "importance": 2
+      },
+      {
+        "lemma": "progress",
+        "importance": 2
+      },
+      {
+        "lemma": "report",
+        "importance": 2
+      },
+      {
+        "lemma": "status",
+        "importance": 2
+      },
+      {
+        "lemma": "summary",
+        "importance": 2
+      },
+      {
+        "lemma": "update",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7cd4-b894-211f947d6a85",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обратная связь",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "comment",
+        "importance": 2
+      },
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "evaluation",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      },
+      {
+        "lemma": "performance",
+        "importance": 2
+      },
+      {
+        "lemma": "praise",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "evaluate",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7c1a-a187-1c1838fa7d45",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Руководитель",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "boss",
+        "importance": 2
+      },
+      {
+        "lemma": "director",
+        "importance": 2
+      },
+      {
+        "lemma": "lead",
+        "importance": 2
+      },
+      {
+        "lemma": "leader",
+        "importance": 2
+      },
+      {
+        "lemma": "leadership",
+        "importance": 2
+      },
+      {
+        "lemma": "manager",
+        "importance": 2
+      },
+      {
+        "lemma": "supervisor",
+        "importance": 2
+      },
+      {
+        "lemma": "bossy",
+        "importance": 2
+      },
+      {
+        "lemma": "executive",
+        "importance": 2
+      },
+      {
+        "lemma": "leading",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-723d-9d28-b84e9c2a4e46",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Командировки",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "conference",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      },
+      {
+        "lemma": "expense",
+        "importance": 2
+      },
+      {
+        "lemma": "flight",
+        "importance": 2
+      },
+      {
+        "lemma": "hotel",
+        "importance": 2
+      },
+      {
+        "lemma": "travel agent",
+        "importance": 2
+      },
+      {
+        "lemma": "traveler",
+        "importance": 2
+      },
+      {
+        "lemma": "travel",
+        "importance": 2
+      },
+      {
+        "lemma": "to miss a flight",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this flight on time?",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7990-82f4-cbdf97839245",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ошибки и извинения",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "error",
+        "importance": 2
+      },
+      {
+        "lemma": "fault",
+        "importance": 2
+      },
+      {
+        "lemma": "mistake",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "blame",
+        "importance": 2
+      },
+      {
+        "lemma": "forgive",
+        "importance": 2
+      },
+      {
+        "lemma": "faulty",
+        "importance": 2
+      },
+      {
+        "lemma": "sorry",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-75ac-ab2f-d73fdd571843",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Корпоративные мероприятия",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "anniversary",
+        "importance": 2
+      },
+      {
+        "lemma": "award",
+        "importance": 2
+      },
+      {
+        "lemma": "celebration",
+        "importance": 2
+      },
+      {
+        "lemma": "event",
+        "importance": 2
+      },
+      {
+        "lemma": "party",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1fe-f3b3-7b64-b795-bd05a686f2bf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Увольнение и переход",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "farewell",
+        "importance": 2
+      },
+      {
+        "lemma": "layoffs",
+        "importance": 2
+      },
+      {
+        "lemma": "resignation",
+        "importance": 2
+      },
+      {
+        "lemma": "quit",
+        "importance": 2
+      },
+      {
+        "lemma": "resign",
         "importance": 2
       }
     ]

@@ -520,7 +520,8 @@
     "nativeLang": "ru",
     "title": "Электроника",
     "categories": [
-      "shopping"
+      "shopping",
+      "itTech"
     ],
     "type": "official",
     "items": [
@@ -854,7 +855,8 @@
     "nativeLang": "ru",
     "title": "Мебель и товары для дома",
     "categories": [
-      "shopping"
+      "shopping",
+      "homeLife"
     ],
     "type": "official",
     "items": [

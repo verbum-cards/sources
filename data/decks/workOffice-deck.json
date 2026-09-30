@@ -1,0 +1,567 @@
+[
+  {
+    "id": "01a0f1fe-f3b3-7e98-8fef-1795d161a189",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Первый день",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "introduce",
+        "importance": 2
+      },
+      {
+        "lemma": "new",
+        "importance": 2
+      },
+      {
+        "lemma": "welcome",
+        "importance": 2
+      },
+      {
+        "lemma": "nervous",
+        "importance": 2
+      },
+      {
+        "lemma": "newcomer",
+        "importance": 2
+      },
+      {
+        "lemma": "tour",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-75cd-90bf-459a887c6925",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Офис и рабочее место",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "chair",
+        "importance": 2
+      },
+      {
+        "lemma": "desk",
+        "importance": 2
+      },
+      {
+        "lemma": "office",
+        "importance": 2
+      },
+      {
+        "lemma": "printer",
+        "importance": 2
+      },
+      {
+        "lemma": "badge",
+        "importance": 2
+      },
+      {
+        "lemma": "desktop",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-750a-9816-751864c05891",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Коллеги и small talk",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "How's it going?",
+        "importance": 2
+      },
+      {
+        "lemma": "friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "weekend",
+        "importance": 2
+      },
+      {
+        "lemma": "chat",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "unfriendly",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-75f9-9c71-1859ef876a9b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Email",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "email",
+        "importance": 2
+      },
+      {
+        "lemma": "subject",
+        "importance": 2
+      },
+      {
+        "lemma": "accept",
+        "importance": 2
+      },
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "acceptance",
+        "importance": 2
+      },
+      {
+        "lemma": "access",
+        "importance": 2
+      },
+      {
+        "lemma": "attach",
+        "importance": 2
+      },
+      {
+        "lemma": "attachment",
+        "importance": 2
+      },
+      {
+        "lemma": "forward",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7d6f-916b-477f4b6fc05f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рабочие чаты",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "message",
+        "importance": 2
+      },
+      {
+        "lemma": "chat",
+        "importance": 2
+      },
+      {
+        "lemma": "mention",
+        "importance": 2
+      },
+      {
+        "lemma": "reply",
+        "importance": 2
+      },
+      {
+        "lemma": "text message",
+        "importance": 2
+      },
+      {
+        "lemma": "channel",
+        "importance": 2
+      },
+      {
+        "lemma": "message board",
+        "importance": 2
+      },
+      {
+        "lemma": "thread",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-75a6-aeed-56e3dad1fc89",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Встречи",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "discuss",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "agenda",
+        "importance": 2
+      },
+      {
+        "lemma": "attend",
+        "importance": 2
+      },
+      {
+        "lemma": "participant",
+        "importance": 2
+      },
+      {
+        "lemma": "attendance",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7f68-94b6-9a857d649c4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Отчёты и статусы",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "update",
+        "importance": 2
+      },
+      {
+        "lemma": "report",
+        "importance": 2
+      },
+      {
+        "lemma": "summary",
+        "importance": 2
+      },
+      {
+        "lemma": "presentation",
+        "importance": 2
+      },
+      {
+        "lemma": "progress",
+        "importance": 2
+      },
+      {
+        "lemma": "status",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7cd4-b894-211f947d6a85",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обратная связь",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "performance",
+        "importance": 2
+      },
+      {
+        "lemma": "comment",
+        "importance": 2
+      },
+      {
+        "lemma": "praise",
+        "importance": 2
+      },
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "evaluate",
+        "importance": 2
+      },
+      {
+        "lemma": "evaluation",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7c1a-a187-1c1838fa7d45",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Руководитель",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "leader",
+        "importance": 2
+      },
+      {
+        "lemma": "boss",
+        "importance": 2
+      },
+      {
+        "lemma": "director",
+        "importance": 2
+      },
+      {
+        "lemma": "lead",
+        "importance": 2
+      },
+      {
+        "lemma": "manager",
+        "importance": 2
+      },
+      {
+        "lemma": "leadership",
+        "importance": 2
+      },
+      {
+        "lemma": "leading",
+        "importance": 2
+      },
+      {
+        "lemma": "bossy",
+        "importance": 2
+      },
+      {
+        "lemma": "executive",
+        "importance": 2
+      },
+      {
+        "lemma": "supervisor",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-723d-9d28-b84e9c2a4e46",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Командировки",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "hotel",
+        "importance": 2
+      },
+      {
+        "lemma": "travel",
+        "importance": 2
+      },
+      {
+        "lemma": "flight",
+        "importance": 2
+      },
+      {
+        "lemma": "traveler",
+        "importance": 2
+      },
+      {
+        "lemma": "expense",
+        "importance": 2
+      },
+      {
+        "lemma": "travel agent",
+        "importance": 2
+      },
+      {
+        "lemma": "conference",
+        "importance": 2
+      },
+      {
+        "lemma": "to miss a flight",
+        "importance": 2
+      },
+      {
+        "lemma": "Is this flight on time?",
+        "importance": 2
+      },
+      {
+        "lemma": "delayed flight",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7990-82f4-cbdf97839245",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ошибки и извинения",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "sorry",
+        "importance": 2
+      },
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "blame",
+        "importance": 2
+      },
+      {
+        "lemma": "error",
+        "importance": 2
+      },
+      {
+        "lemma": "fault",
+        "importance": 2
+      },
+      {
+        "lemma": "mistake",
+        "importance": 2
+      },
+      {
+        "lemma": "forgive",
+        "importance": 2
+      },
+      {
+        "lemma": "faulty",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-75ac-ab2f-d73fdd571843",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Корпоративные мероприятия",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "celebration",
+        "importance": 2
+      },
+      {
+        "lemma": "event",
+        "importance": 2
+      },
+      {
+        "lemma": "party",
+        "importance": 2
+      },
+      {
+        "lemma": "anniversary",
+        "importance": 2
+      },
+      {
+        "lemma": "award",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fe-f3b3-7b64-b795-bd05a686f2bf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Увольнение и переход",
+    "categories": [
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "layoffs",
+        "importance": 2
+      },
+      {
+        "lemma": "quit",
+        "importance": 2
+      },
+      {
+        "lemma": "farewell",
+        "importance": 2
+      },
+      {
+        "lemma": "resign",
+        "importance": 2
+      },
+      {
+        "lemma": "resignation",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

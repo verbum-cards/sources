@@ -1,0 +1,821 @@
+[
+  {
+    "id": "01a0f1ec-005e-7adc-8526-ba672a269744",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Работа с компьютером",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "file",
+        "importance": 2
+      },
+      {
+        "lemma": "copy",
+        "importance": 2
+      },
+      {
+        "lemma": "mouse",
+        "importance": 2
+      },
+      {
+        "lemma": "window",
+        "importance": 2
+      },
+      {
+        "lemma": "download",
+        "importance": 2
+      },
+      {
+        "lemma": "folder",
+        "importance": 2
+      },
+      {
+        "lemma": "software",
+        "importance": 2
+      },
+      {
+        "lemma": "delete",
+        "importance": 2
+      },
+      {
+        "lemma": "keyboard",
+        "importance": 2
+      },
+      {
+        "lemma": "upload",
+        "importance": 2
+      },
+      {
+        "lemma": "browser",
+        "importance": 2
+      },
+      {
+        "lemma": "update",
+        "importance": 2
+      },
+      {
+        "lemma": "install",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7ec9-b3a6-5d0735c08cc5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Смартфон и приложения",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "install",
+        "importance": 2
+      },
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "battery",
+        "importance": 2
+      },
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "download",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7ee4-a621-74937a9dcc7a",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аккаунты и безопасность",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "password",
+        "importance": 2
+      },
+      {
+        "lemma": "account",
+        "importance": 2
+      },
+      {
+        "lemma": "privacy",
+        "importance": 2
+      },
+      {
+        "lemma": "virus",
+        "importance": 2
+      },
+      {
+        "lemma": "antivirus",
+        "importance": 2
+      },
+      {
+        "lemma": "firewall",
+        "importance": 2
+      },
+      {
+        "lemma": "hack",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-717f-99b9-555180824268",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Техподдержка",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "solve",
+        "importance": 2
+      },
+      {
+        "lemma": "bug",
+        "importance": 2
+      },
+      {
+        "lemma": "error",
+        "importance": 2
+      },
+      {
+        "lemma": "fix",
+        "importance": 2
+      },
+      {
+        "lemma": "helpful",
+        "importance": 2
+      },
+      {
+        "lemma": "issue",
+        "importance": 2
+      },
+      {
+        "lemma": "support",
+        "importance": 2
+      },
+      {
+        "lemma": "crash",
+        "importance": 2
+      },
+      {
+        "lemma": "resolve",
+        "importance": 2
+      },
+      {
+        "lemma": "supportive",
+        "importance": 2
+      },
+      {
+        "lemma": "helper",
+        "importance": 2
+      },
+      {
+        "lemma": "unhelpful",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-71c2-a81c-98d34f5b2ddc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Разработка",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "code",
+        "importance": 2
+      },
+      {
+        "lemma": "program",
+        "importance": 2
+      },
+      {
+        "lemma": "test",
+        "importance": 2
+      },
+      {
+        "lemma": "bug",
+        "importance": 2
+      },
+      {
+        "lemma": "function",
+        "importance": 2
+      },
+      {
+        "lemma": "software",
+        "importance": 2
+      },
+      {
+        "lemma": "development",
+        "importance": 2
+      },
+      {
+        "lemma": "programmer",
+        "importance": 2
+      },
+      {
+        "lemma": "programming",
+        "importance": 2
+      },
+      {
+        "lemma": "functional",
+        "importance": 2
+      },
+      {
+        "lemma": "functionality",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-72a6-8834-990b5c189ffc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Код-ревью",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "branch",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      },
+      {
+        "lemma": "approve",
+        "importance": 2
+      },
+      {
+        "lemma": "comment",
+        "importance": 2
+      },
+      {
+        "lemma": "commit",
+        "importance": 2
+      },
+      {
+        "lemma": "disapprove",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      },
+      {
+        "lemma": "merge",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7053-a3b3-754539125e15",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Созвоны в команде",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "call",
+        "importance": 2
+      },
+      {
+        "lemma": "camera",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "agenda",
+        "importance": 2
+      },
+      {
+        "lemma": "microphone",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7600-bad8-2b5bb284d1d5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Задачи и планирование",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "deadline",
+        "importance": 2
+      },
+      {
+        "lemma": "goal",
+        "importance": 2
+      },
+      {
+        "lemma": "plan",
+        "importance": 2
+      },
+      {
+        "lemma": "task",
+        "importance": 2
+      },
+      {
+        "lemma": "progress",
+        "importance": 2
+      },
+      {
+        "lemma": "planning",
+        "importance": 2
+      },
+      {
+        "lemma": "priority",
+        "importance": 2
+      },
+      {
+        "lemma": "project",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-723e-b42e-b90f1fc51937",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Продукт и пользователи",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "customer",
+        "importance": 2
+      },
+      {
+        "lemma": "experience",
+        "importance": 2
+      },
+      {
+        "lemma": "feature",
+        "importance": 2
+      },
+      {
+        "lemma": "product",
+        "importance": 2
+      },
+      {
+        "lemma": "production",
+        "importance": 2
+      },
+      {
+        "lemma": "experienced",
+        "importance": 2
+      },
+      {
+        "lemma": "productive",
+        "importance": 2
+      },
+      {
+        "lemma": "feedback",
+        "importance": 2
+      },
+      {
+        "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "user",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7bd9-b507-f974af5d0da4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Дизайн и интерфейсы",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "button",
+        "importance": 2
+      },
+      {
+        "lemma": "design",
+        "importance": 2
+      },
+      {
+        "lemma": "designer",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-75c8-8d15-f477f157bbc1",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Данные и аналитика",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "chart",
+        "importance": 2
+      },
+      {
+        "lemma": "report",
+        "importance": 2
+      },
+      {
+        "lemma": "analysis",
+        "importance": 2
+      },
+      {
+        "lemma": "analyze",
+        "importance": 2
+      },
+      {
+        "lemma": "graph",
+        "importance": 2
+      },
+      {
+        "lemma": "graphic",
+        "importance": 2
+      },
+      {
+        "lemma": "graphics",
+        "importance": 2
+      },
+      {
+        "lemma": "data",
+        "importance": 2
+      },
+      {
+        "lemma": "database",
+        "importance": 2
+      },
+      {
+        "lemma": "statistics",
+        "importance": 2
+      },
+      {
+        "lemma": "metric",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7396-9a16-9dc92da29182",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Инфраструктура",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cloud",
+        "importance": 2
+      },
+      {
+        "lemma": "system",
+        "importance": 2
+      },
+      {
+        "lemma": "network",
+        "importance": 2
+      },
+      {
+        "lemma": "server",
+        "importance": 2
+      },
+      {
+        "lemma": "storage",
+        "importance": 2
+      },
+      {
+        "lemma": "backup",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7b6d-ac19-9421140ea1cd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Искусственный интеллект",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "machine",
+        "importance": 2
+      },
+      {
+        "lemma": "smart",
+        "importance": 2
+      },
+      {
+        "lemma": "automatic",
+        "importance": 2
+      },
+      {
+        "lemma": "automatically",
+        "importance": 2
+      },
+      {
+        "lemma": "intelligent",
+        "importance": 2
+      },
+      {
+        "lemma": "robot",
+        "importance": 2
+      },
+      {
+        "lemma": "automate",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7c3b-9524-18b50de3d8a7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Собеседование в IT",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "interview",
+        "importance": 2
+      },
+      {
+        "lemma": "interviewer",
+        "importance": 2
+      },
+      {
+        "lemma": "skill",
+        "importance": 2
+      },
+      {
+        "lemma": "experience",
+        "importance": 2
+      },
+      {
+        "lemma": "offer",
+        "importance": 2
+      },
+      {
+        "lemma": "position",
+        "importance": 2
+      },
+      {
+        "lemma": "CV",
+        "importance": 2
+      },
+      {
+        "lemma": "experienced",
+        "importance": 2
+      },
+      {
+        "lemma": "hire",
+        "importance": 2
+      },
+      {
+        "lemma": "interviewee",
+        "importance": 2
+      },
+      {
+        "lemma": "candidate",
+        "importance": 2
+      },
+      {
+        "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "salary",
+        "importance": 2
+      },
+      {
+        "lemma": "skilled",
+        "importance": 2
+      },
+      {
+        "lemma": "skillful",
+        "importance": 2
+      },
+      {
+        "lemma": "skillfully",
+        "importance": 2
+      },
+      {
+        "lemma": "What are the requirements for this position?",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7b41-83a3-4a1439a3911c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Удалённая работа",
+    "categories": [
+      "itTech",
+      "workOffice"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "team",
+        "importance": 2
+      },
+      {
+        "lemma": "office",
+        "importance": 2
+      },
+      {
+        "lemma": "remote",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "teammate",
+        "importance": 2
+      },
+      {
+        "lemma": "teamwork",
+        "importance": 2
+      },
+      {
+        "lemma": "flexible",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      },
+      {
+        "lemma": "remotely",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ec-005e-7194-8413-cff6201f7e4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Технологии в жизни",
+    "categories": [
+      "itTech"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "device",
+        "importance": 2
+      },
+      {
+        "lemma": "technology",
+        "importance": 2
+      },
+      {
+        "lemma": "digital camera",
+        "importance": 2
+      },
+      {
+        "lemma": "online",
+        "importance": 2
+      },
+      {
+        "lemma": "digital",
+        "importance": 2
+      },
+      {
+        "lemma": "innovation",
+        "importance": 2
+      },
+      {
+        "lemma": "digitalization",
+        "importance": 2
+      },
+      {
+        "lemma": "digitalize",
+        "importance": 2
+      },
+      {
+        "lemma": "gadget",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

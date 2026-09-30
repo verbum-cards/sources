@@ -852,7 +852,8 @@
     "nativeLang": "ru",
     "title": "Больничный",
     "categories": [
-      "health"
+      "health",
+      "workOffice"
     ],
     "type": "official",
     "items": [

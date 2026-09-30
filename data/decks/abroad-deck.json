@@ -98,7 +98,8 @@
     "nativeLang": "ru",
     "title": "Коммунальные сервисы",
     "categories": [
-      "abroad"
+      "abroad",
+      "homeLife"
     ],
     "type": "official",
     "items": [
@@ -710,7 +711,8 @@
     "nativeLang": "ru",
     "title": "Мобильная связь и интернет",
     "categories": [
-      "abroad"
+      "abroad",
+      "itTech"
     ],
     "type": "official",
     "items": [

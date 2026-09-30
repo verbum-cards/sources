@@ -1,0 +1,833 @@
+[
+  {
+    "id": "01a0f1e6-81a0-749a-9377-56af1ef4d6bc",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Кухня",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "kitchen",
+        "importance": 2
+      },
+      {
+        "lemma": "cupboard",
+        "importance": 2
+      },
+      {
+        "lemma": "fridge",
+        "importance": 2
+      },
+      {
+        "lemma": "oven",
+        "importance": 2
+      },
+      {
+        "lemma": "refrigerator",
+        "importance": 2
+      },
+      {
+        "lemma": "sink",
+        "importance": 2
+      },
+      {
+        "lemma": "stove",
+        "importance": 2
+      },
+      {
+        "lemma": "dishwasher",
+        "importance": 2
+      },
+      {
+        "lemma": "kettle",
+        "importance": 2
+      },
+      {
+        "lemma": "microwave",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7ae9-9017-ce864e4ec339",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Готовка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cook",
+        "importance": 2
+      },
+      {
+        "lemma": "bake",
+        "importance": 2
+      },
+      {
+        "lemma": "boil",
+        "importance": 2
+      },
+      {
+        "lemma": "boiled",
+        "importance": 2
+      },
+      {
+        "lemma": "cooker",
+        "importance": 2
+      },
+      {
+        "lemma": "cooking",
+        "importance": 2
+      },
+      {
+        "lemma": "fry",
+        "importance": 2
+      },
+      {
+        "lemma": "mix",
+        "importance": 2
+      },
+      {
+        "lemma": "pan",
+        "importance": 2
+      },
+      {
+        "lemma": "frying pan",
+        "importance": 2
+      },
+      {
+        "lemma": "ingredient",
+        "importance": 2
+      },
+      {
+        "lemma": "mixing bowl",
+        "importance": 2
+      },
+      {
+        "lemma": "pot",
+        "importance": 2
+      },
+      {
+        "lemma": "saucepan",
+        "importance": 2
+      },
+      {
+        "lemma": "stir",
+        "importance": 2
+      },
+      {
+        "lemma": "chop",
+        "importance": 2
+      },
+      {
+        "lemma": "mixture",
+        "importance": 2
+      },
+      {
+        "lemma": "peel",
+        "importance": 2
+      },
+      {
+        "lemma": "recipe",
+        "importance": 2
+      },
+      {
+        "lemma": "slice",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-757b-9597-e31c45241204",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уборка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "clean",
+        "importance": 2
+      },
+      {
+        "lemma": "cleaner",
+        "importance": 2
+      },
+      {
+        "lemma": "dust",
+        "importance": 2
+      },
+      {
+        "lemma": "tidy",
+        "importance": 2
+      },
+      {
+        "lemma": "bin",
+        "importance": 2
+      },
+      {
+        "lemma": "dustbin",
+        "importance": 2
+      },
+      {
+        "lemma": "dusty",
+        "importance": 2
+      },
+      {
+        "lemma": "mess",
+        "importance": 2
+      },
+      {
+        "lemma": "messy",
+        "importance": 2
+      },
+      {
+        "lemma": "rubbish",
+        "importance": 2
+      },
+      {
+        "lemma": "trash",
+        "importance": 2
+      },
+      {
+        "lemma": "untidy",
+        "importance": 2
+      },
+      {
+        "lemma": "sweep",
+        "importance": 2
+      },
+      {
+        "lemma": "wipe",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-77e5-9178-707c340b5f2d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стирка",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "dry",
+        "importance": 2
+      },
+      {
+        "lemma": "wash",
+        "importance": 2
+      },
+      {
+        "lemma": "washing machine",
+        "importance": 2
+      },
+      {
+        "lemma": "washing-up",
+        "importance": 2
+      },
+      {
+        "lemma": "fold",
+        "importance": 2
+      },
+      {
+        "lemma": "hairdryer",
+        "importance": 2
+      },
+      {
+        "lemma": "iron",
+        "importance": 2
+      },
+      {
+        "lemma": "ironing",
+        "importance": 2
+      },
+      {
+        "lemma": "unfold",
+        "importance": 2
+      },
+      {
+        "lemma": "washbowl",
+        "importance": 2
+      },
+      {
+        "lemma": "laundry",
+        "importance": 2
+      },
+      {
+        "lemma": "stain",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-76b9-b40b-c41e1909c442",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ванная",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "bath",
+        "importance": 2
+      },
+      {
+        "lemma": "bathroom",
+        "importance": 2
+      },
+      {
+        "lemma": "shower",
+        "importance": 2
+      },
+      {
+        "lemma": "toilet",
+        "importance": 2
+      },
+      {
+        "lemma": "towel",
+        "importance": 2
+      },
+      {
+        "lemma": "mirror",
+        "importance": 2
+      },
+      {
+        "lemma": "shampoo",
+        "importance": 2
+      },
+      {
+        "lemma": "sink",
+        "importance": 2
+      },
+      {
+        "lemma": "soap",
+        "importance": 2
+      },
+      {
+        "lemma": "tap",
+        "importance": 2
+      },
+      {
+        "lemma": "toothbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "bathe",
+        "importance": 2
+      },
+      {
+        "lemma": "toothpaste",
+        "importance": 2
+      },
+      {
+        "lemma": "bathhouse",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7716-9a78-37ca5b077d75",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поломки и ремонт",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "broken",
+        "importance": 2
+      },
+      {
+        "lemma": "fix",
+        "importance": 2
+      },
+      {
+        "lemma": "repair",
+        "importance": 2
+      },
+      {
+        "lemma": "damage",
+        "importance": 2
+      },
+      {
+        "lemma": "damaged",
+        "importance": 2
+      },
+      {
+        "lemma": "crack",
+        "importance": 2
+      },
+      {
+        "lemma": "faulty",
+        "importance": 2
+      },
+      {
+        "lemma": "leak",
+        "importance": 2
+      },
+      {
+        "lemma": "malfunction",
+        "importance": 2
+      },
+      {
+        "lemma": "fixture",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-772f-8f7f-22bef4db6b52",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Инструменты",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "saw",
+        "importance": 2
+      },
+      {
+        "lemma": "tool",
+        "importance": 2
+      },
+      {
+        "lemma": "drill",
+        "importance": 2
+      },
+      {
+        "lemma": "screw",
+        "importance": 2
+      },
+      {
+        "lemma": "hammer",
+        "importance": 2
+      },
+      {
+        "lemma": "ladder",
+        "importance": 2
+      },
+      {
+        "lemma": "wire",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-709f-9b54-8be9b6d3854e",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ремонт квартиры",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "floor",
+        "importance": 2
+      },
+      {
+        "lemma": "paint",
+        "importance": 2
+      },
+      {
+        "lemma": "wall",
+        "importance": 2
+      },
+      {
+        "lemma": "builder",
+        "importance": 2
+      },
+      {
+        "lemma": "construction",
+        "importance": 2
+      },
+      {
+        "lemma": "first floor",
+        "importance": 2
+      },
+      {
+        "lemma": "ground floor",
+        "importance": 2
+      },
+      {
+        "lemma": "tile",
+        "importance": 2
+      },
+      {
+        "lemma": "ceiling",
+        "importance": 2
+      },
+      {
+        "lemma": "paintbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "repaint",
+        "importance": 2
+      },
+      {
+        "lemma": "wallboard",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7ec1-af50-fcdd36eb66d2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Распорядок дня",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "breakfast",
+        "importance": 2
+      },
+      {
+        "lemma": "evening",
+        "importance": 2
+      },
+      {
+        "lemma": "good morning",
+        "importance": 2
+      },
+      {
+        "lemma": "morning",
+        "importance": 2
+      },
+      {
+        "lemma": "shower",
+        "importance": 2
+      },
+      {
+        "lemma": "daily",
+        "importance": 2
+      },
+      {
+        "lemma": "schedule",
+        "importance": 2
+      },
+      {
+        "lemma": "routine",
+        "importance": 2
+      },
+      {
+        "lemma": "scheduled",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7031-b971-180f9397f3ad",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Покупки для дома",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "household",
+        "importance": 2
+      },
+      {
+        "lemma": "list",
+        "importance": 2
+      },
+      {
+        "lemma": "need",
+        "importance": 2
+      },
+      {
+        "lemma": "shopping",
+        "importance": 2
+      },
+      {
+        "lemma": "grocery store",
+        "importance": 2
+      },
+      {
+        "lemma": "basket",
+        "importance": 2
+      },
+      {
+        "lemma": "trolley",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7718-9487-4674a1010860",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Домашние животные",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cat",
+        "importance": 2
+      },
+      {
+        "lemma": "dog",
+        "importance": 2
+      },
+      {
+        "lemma": "pet",
+        "importance": 2
+      },
+      {
+        "lemma": "feed",
+        "importance": 2
+      },
+      {
+        "lemma": "cage",
+        "importance": 2
+      },
+      {
+        "lemma": "collar",
+        "importance": 2
+      },
+      {
+        "lemma": "kitten",
+        "importance": 2
+      },
+      {
+        "lemma": "puppy",
+        "importance": 2
+      },
+      {
+        "lemma": "vet",
+        "importance": 2
+      },
+      {
+        "lemma": "leash",
+        "importance": 2
+      },
+      {
+        "lemma": "birdcage",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7f97-934f-7cfe57475ec3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Растения в доме",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "plant",
+        "importance": 2
+      },
+      {
+        "lemma": "leaf",
+        "importance": 2
+      },
+      {
+        "lemma": "grow",
+        "importance": 2
+      },
+      {
+        "lemma": "water",
+        "importance": 2
+      },
+      {
+        "lemma": "pot",
+        "importance": 2
+      },
+      {
+        "lemma": "shade",
+        "importance": 2
+      },
+      {
+        "lemma": "sunlight",
+        "importance": 2
+      },
+      {
+        "lemma": "seedling",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7e61-84a9-56de92857120",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Гости",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "guest",
+        "importance": 2
+      },
+      {
+        "lemma": "visit",
+        "importance": 2
+      },
+      {
+        "lemma": "welcome",
+        "importance": 2
+      },
+      {
+        "lemma": "host",
+        "importance": 2
+      },
+      {
+        "lemma": "invite",
+        "importance": 2
+      },
+      {
+        "lemma": "visitor",
+        "importance": 2
+      },
+      {
+        "lemma": "invitation",
+        "importance": 2
+      },
+      {
+        "lemma": "hostess",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-74e9-aa12-15b460772b79",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Безопасность дома",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "lock",
+        "importance": 2
+      },
+      {
+        "lemma": "unlock",
+        "importance": 2
+      },
+      {
+        "lemma": "alarm",
+        "importance": 2
+      },
+      {
+        "lemma": "burglar",
+        "importance": 2
+      },
+      {
+        "lemma": "burglary",
+        "importance": 2
+      },
+      {
+        "lemma": "security",
+        "importance": 2
+      },
+      {
+        "lemma": "intruder",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1e6-81a0-7ba4-9e5e-9f75bd58ff30",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Переезд в новую квартиру",
+    "categories": [
+      "homeLife"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "box",
+        "importance": 2
+      },
+      {
+        "lemma": "move",
+        "importance": 2
+      },
+      {
+        "lemma": "furniture",
+        "importance": 2
+      },
+      {
+        "lemma": "pack",
+        "importance": 2
+      },
+      {
+        "lemma": "landlord",
+        "importance": 2
+      },
+      {
+        "lemma": "packing",
+        "importance": 2
+      },
+      {
+        "lemma": "remove",
+        "importance": 2
+      },
+      {
+        "lemma": "unpack",
+        "importance": 2
+      },
+      {
+        "lemma": "lease",
+        "importance": 2
+      },
+      {
+        "lemma": "tenant",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

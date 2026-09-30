@@ -854,7 +854,8 @@
     "nativeLang": "ru",
     "title": "Чтение",
     "categories": [
-      "sportsHobbies"
+      "sportsHobbies",
+      "moviesBooks"
     ],
     "type": "official",
     "items": [

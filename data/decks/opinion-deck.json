@@ -1,0 +1,620 @@
+[
+  {
+    "id": "01a0f1ea-37a2-7465-b98b-769c28def346",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Своё мнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "opinion",
+        "importance": 2
+      },
+      {
+        "lemma": "think",
+        "importance": 2
+      },
+      {
+        "lemma": "believe",
+        "importance": 2
+      },
+      {
+        "lemma": "perspective",
+        "importance": 2
+      },
+      {
+        "lemma": "point of view",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-79cc-9283-24a9ea97e6de",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Согласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "agree",
+        "importance": 2
+      },
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "agreeable",
+        "importance": 2
+      },
+      {
+        "lemma": "sure",
+        "importance": 2
+      },
+      {
+        "lemma": "surely",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7331-96f9-e8baf284b5bd",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Несогласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "disagree",
+        "importance": 2
+      },
+      {
+        "lemma": "disagreement",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7536-b6b3-e80e897d1673",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Частичное согласие",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "partly",
+        "importance": 2
+      },
+      {
+        "lemma": "somewhat",
+        "importance": 2
+      },
+      {
+        "lemma": "agree",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7ae8-a07f-870651e89f23",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аргументы",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "convince",
+        "importance": 2
+      },
+      {
+        "lemma": "convinced",
+        "importance": 2
+      },
+      {
+        "lemma": "persuade",
+        "importance": 2
+      },
+      {
+        "lemma": "reason",
+        "importance": 2
+      },
+      {
+        "lemma": "because",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-77ff-ab33-5440cfc1d6aa",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уверенность и сомнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "certain",
+        "importance": 2
+      },
+      {
+        "lemma": "certainly",
+        "importance": 2
+      },
+      {
+        "lemma": "certainty",
+        "importance": 2
+      },
+      {
+        "lemma": "uncertain",
+        "importance": 2
+      },
+      {
+        "lemma": "uncertainty",
+        "importance": 2
+      },
+      {
+        "lemma": "sure",
+        "importance": 2
+      },
+      {
+        "lemma": "surely",
+        "importance": 2
+      },
+      {
+        "lemma": "unsure",
+        "importance": 2
+      },
+      {
+        "lemma": "doubt",
+        "importance": 2
+      },
+      {
+        "lemma": "doubtful",
+        "importance": 2
+      },
+      {
+        "lemma": "assure",
+        "importance": 2
+      },
+      {
+        "lemma": "reassure",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-77f5-b691-6f901fa0ec28",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спросить мнение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "opinion",
+        "importance": 2
+      },
+      {
+        "lemma": "point of view",
+        "importance": 2
+      },
+      {
+        "lemma": "perspective",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-784f-878f-0622ee2230b4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Уточнить и переспросить",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "clarify",
+        "importance": 2
+      },
+      {
+        "lemma": "Could you repeat that, please?",
+        "importance": 2
+      },
+      {
+        "lemma": "repeat",
+        "importance": 2
+      },
+      {
+        "lemma": "repeatedly",
+        "importance": 2
+      },
+      {
+        "lemma": "confuse",
+        "importance": 2
+      },
+      {
+        "lemma": "confused",
+        "importance": 2
+      },
+      {
+        "lemma": "confusing",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-74de-89cc-212e5735f66b",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Перебить и вернуться к теме",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "interrupt",
+        "importance": 2
+      },
+      {
+        "lemma": "interruption",
+        "importance": 2
+      },
+      {
+        "lemma": "anyway",
+        "importance": 2
+      },
+      {
+        "lemma": "topic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-72e6-a448-33c3a8f8ee4d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сравнить варианты",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "compare",
+        "importance": 2
+      },
+      {
+        "lemma": "comparison",
+        "importance": 2
+      },
+      {
+        "lemma": "option",
+        "importance": 2
+      },
+      {
+        "lemma": "versus",
+        "importance": 2
+      },
+      {
+        "lemma": "choice",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-770d-9f89-c5a46e0b78a0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Предложить решение",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "propose",
+        "importance": 2
+      },
+      {
+        "lemma": "proposed",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "solution",
+        "importance": 2
+      },
+      {
+        "lemma": "solve",
+        "importance": 2
+      },
+      {
+        "lemma": "resolve",
+        "importance": 2
+      },
+      {
+        "lemma": "resolution",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7e7f-afb5-f27760c054b3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Компромисс",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "compromise",
+        "importance": 2
+      },
+      {
+        "lemma": "compromised",
+        "importance": 2
+      },
+      {
+        "lemma": "agreement",
+        "importance": 2
+      },
+      {
+        "lemma": "to reach an agreement",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7790-95f1-d8a34a6256e4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Вежливая критика",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "criticize",
+        "importance": 2
+      },
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "polite",
+        "importance": 2
+      },
+      {
+        "lemma": "politely",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7d15-baa6-3565e577e611",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Реакция на критику",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "apologize",
+        "importance": 2
+      },
+      {
+        "lemma": "apology",
+        "importance": 2
+      },
+      {
+        "lemma": "convinced",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7dd7-8c43-a6f56d2b9de0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Спор без конфликта",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "debate",
+        "importance": 2
+      },
+      {
+        "lemma": "argue",
+        "importance": 2
+      },
+      {
+        "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "calm",
+        "importance": 2
+      },
+      {
+        "lemma": "however",
+        "importance": 2
+      },
+      {
+        "lemma": "but",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7abd-8127-55b30ad775c4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Подвести итог",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "summary",
+        "importance": 2
+      },
+      {
+        "lemma": "summarize",
+        "importance": 2
+      },
+      {
+        "lemma": "conclude",
+        "importance": 2
+      },
+      {
+        "lemma": "conclusion",
+        "importance": 2
+      },
+      {
+        "lemma": "closure",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-75da-830f-8e5f755c18b2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсуждение на работе",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "discuss",
+        "importance": 2
+      },
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "meeting",
+        "importance": 2
+      },
+      {
+        "lemma": "colleague",
+        "importance": 2
+      },
+      {
+        "lemma": "client",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1ea-37a2-7b7f-9f96-795785ade3b7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсуждение новостей",
+    "categories": [
+      "opinion"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "discuss",
+        "importance": 2
+      },
+      {
+        "lemma": "discussion",
+        "importance": 2
+      },
+      {
+        "lemma": "news",
+        "importance": 2
+      },
+      {
+        "lemma": "topic",
+        "importance": 2
+      },
+      {
+        "lemma": "actually",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

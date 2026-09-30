@@ -1,0 +1,682 @@
+[
+  {
+    "id": "01a0f1fb-35f6-76a6-998a-1cd814b32510",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Жанры",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "action",
+        "importance": 2
+      },
+      {
+        "lemma": "drama",
+        "importance": 2
+      },
+      {
+        "lemma": "horror",
+        "importance": 2
+      },
+      {
+        "lemma": "mystery",
+        "importance": 2
+      },
+      {
+        "lemma": "romance",
+        "importance": 2
+      },
+      {
+        "lemma": "animation",
+        "importance": 2
+      },
+      {
+        "lemma": "comedy",
+        "importance": 2
+      },
+      {
+        "lemma": "documentary",
+        "importance": 2
+      },
+      {
+        "lemma": "dramatic",
+        "importance": 2
+      },
+      {
+        "lemma": "fantasy",
+        "importance": 2
+      },
+      {
+        "lemma": "thriller",
+        "importance": 2
+      },
+      {
+        "lemma": "genre",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7825-af5a-23cafe2e4132",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Поход в кино",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "screen",
+        "importance": 2
+      },
+      {
+        "lemma": "cinema",
+        "importance": 2
+      },
+      {
+        "lemma": "seat",
+        "importance": 2
+      },
+      {
+        "lemma": "ticket",
+        "importance": 2
+      },
+      {
+        "lemma": "popcorn",
+        "importance": 2
+      },
+      {
+        "lemma": "trailer",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7e9e-ab80-2a740f9669e2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сериалы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "episode",
+        "importance": 2
+      },
+      {
+        "lemma": "season",
+        "importance": 2
+      },
+      {
+        "lemma": "series",
+        "importance": 2
+      },
+      {
+        "lemma": "show",
+        "importance": 2
+      },
+      {
+        "lemma": "showbiz",
+        "importance": 2
+      },
+      {
+        "lemma": "chat show",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7687-8f2e-64b698154711",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Обсудить фильм",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "actor",
+        "importance": 2
+      },
+      {
+        "lemma": "movie",
+        "importance": 2
+      },
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "director",
+        "importance": 2
+      },
+      {
+        "lemma": "film",
+        "importance": 2
+      },
+      {
+        "lemma": "scene",
+        "importance": 2
+      },
+      {
+        "lemma": "actress",
+        "importance": 2
+      },
+      {
+        "lemma": "film-maker",
+        "importance": 2
+      },
+      {
+        "lemma": "cast",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7b79-a4bc-c6b8cebc7b59",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рекомендации",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "recommend",
+        "importance": 2
+      },
+      {
+        "lemma": "suggestion",
+        "importance": 2
+      },
+      {
+        "lemma": "suggest",
+        "importance": 2
+      },
+      {
+        "lemma": "recommendation",
+        "importance": 2
+      },
+      {
+        "lemma": "recommendable",
+        "importance": 2
+      },
+      {
+        "lemma": "to recommend",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-757c-a0e9-fc8d2bd52437",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Разговорные фразы из кино",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "quote",
+        "importance": 2
+      },
+      {
+        "lemma": "line",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-78e3-a993-f69f55004e64",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сленг",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "cool",
+        "importance": 2
+      },
+      {
+        "lemma": "guy",
+        "importance": 2
+      },
+      {
+        "lemma": "stuff",
+        "importance": 2
+      },
+      {
+        "lemma": "awesome",
+        "importance": 2
+      },
+      {
+        "lemma": "slang",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7b5e-ad32-e7ddf06bd037",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Фразовые глаголы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7793-b253-eb11b2819465",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Идиомы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "idiom",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-713e-a6b0-f6da3574d7d4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Эмоции героев",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "afraid",
+        "importance": 2
+      },
+      {
+        "lemma": "angry",
+        "importance": 2
+      },
+      {
+        "lemma": "excited",
+        "importance": 2
+      },
+      {
+        "lemma": "feeling",
+        "importance": 2
+      },
+      {
+        "lemma": "happy",
+        "importance": 2
+      },
+      {
+        "lemma": "sad",
+        "importance": 2
+      },
+      {
+        "lemma": "nervous",
+        "importance": 2
+      },
+      {
+        "lemma": "sadly",
+        "importance": 2
+      },
+      {
+        "lemma": "surprised",
+        "importance": 2
+      },
+      {
+        "lemma": "unhappy",
+        "importance": 2
+      },
+      {
+        "lemma": "emotion",
+        "importance": 2
+      },
+      {
+        "lemma": "emotional",
+        "importance": 2
+      },
+      {
+        "lemma": "emotionally",
+        "importance": 2
+      },
+      {
+        "lemma": "excitedly",
+        "importance": 2
+      },
+      {
+        "lemma": "nervousness",
+        "importance": 2
+      },
+      {
+        "lemma": "sadness",
+        "importance": 2
+      },
+      {
+        "lemma": "scared",
+        "importance": 2
+      },
+      {
+        "lemma": "shocked",
+        "importance": 2
+      },
+      {
+        "lemma": "unafraid",
+        "importance": 2
+      },
+      {
+        "lemma": "nervously",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-71f7-8d31-7124ef81facf",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сюжет и персонажи",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "character",
+        "importance": 2
+      },
+      {
+        "lemma": "ending",
+        "importance": 2
+      },
+      {
+        "lemma": "hero",
+        "importance": 2
+      },
+      {
+        "lemma": "characteristic",
+        "importance": 2
+      },
+      {
+        "lemma": "characterize",
+        "importance": 2
+      },
+      {
+        "lemma": "twist",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      },
+      {
+        "lemma": "twisted",
+        "importance": 2
+      },
+      {
+        "lemma": "uncharacteristic",
+        "importance": 2
+      },
+      {
+        "lemma": "characterization",
+        "importance": 2
+      },
+      {
+        "lemma": "heroine",
+        "importance": 2
+      },
+      {
+        "lemma": "protagonist",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-714f-8789-94504045eb14",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Рассказать о книге",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "character",
+        "importance": 2
+      },
+      {
+        "lemma": "characteristic",
+        "importance": 2
+      },
+      {
+        "lemma": "characterize",
+        "importance": 2
+      },
+      {
+        "lemma": "plot",
+        "importance": 2
+      },
+      {
+        "lemma": "subplot",
+        "importance": 2
+      },
+      {
+        "lemma": "characterization",
+        "importance": 2
+      },
+      {
+        "lemma": "uncharacteristic",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7723-8703-ec74d31207ad",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Книжный магазин и библиотека",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "borrow",
+        "importance": 2
+      },
+      {
+        "lemma": "shelf",
+        "importance": 2
+      },
+      {
+        "lemma": "return",
+        "importance": 2
+      },
+      {
+        "lemma": "librarian",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7659-8307-65ec8edf7160",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аудиокниги и подкасты",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "listen",
+        "importance": 2
+      },
+      {
+        "lemma": "episode",
+        "importance": 2
+      },
+      {
+        "lemma": "listener",
+        "importance": 2
+      },
+      {
+        "lemma": "narrator",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7da2-9464-41632cff9b27",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Смотреть в оригинале",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "original",
+        "importance": 2
+      },
+      {
+        "lemma": "accent",
+        "importance": 2
+      },
+      {
+        "lemma": "originality",
+        "importance": 2
+      },
+      {
+        "lemma": "originally",
+        "importance": 2
+      },
+      {
+        "lemma": "subtitle",
+        "importance": 2
+      },
+      {
+        "lemma": "translation",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-7fb7-96cb-2c327dea9fac",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Отзывы и рейтинги",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "review",
+        "importance": 2
+      },
+      {
+        "lemma": "star",
+        "importance": 2
+      },
+      {
+        "lemma": "criticize",
+        "importance": 2
+      },
+      {
+        "lemma": "rating",
+        "importance": 2
+      },
+      {
+        "lemma": "superstar",
+        "importance": 2
+      },
+      {
+        "lemma": "critic",
+        "importance": 2
+      },
+      {
+        "lemma": "critical",
+        "importance": 2
+      },
+      {
+        "lemma": "critically",
+        "importance": 2
+      },
+      {
+        "lemma": "criticism",
+        "importance": 2
+      },
+      {
+        "lemma": "score",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  },
+  {
+    "id": "01a0f1fb-35f6-76fd-8448-1c4aaa30ed7f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стриминговые сервисы",
+    "categories": [
+      "moviesBooks"
+    ],
+    "type": "official",
+    "items": [
+      {
+        "lemma": "platform",
+        "importance": 2
+      },
+      {
+        "lemma": "stream",
+        "importance": 2
+      }
+    ],
+    "importance": 2
+  }
+]

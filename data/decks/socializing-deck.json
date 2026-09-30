@@ -207,10 +207,40 @@
     "nativeLang": "ru",
     "title": "Просьбы. Базовый",
     "categories": [
-      "socializing"
+      "socializing",
+      "workOffice"
     ],
     "type": "official",
-    "items": [],
+    "items": [
+      {
+        "lemma": "ask",
+        "importance": 2
+      },
+      {
+        "lemma": "favor",
+        "importance": 2
+      },
+      {
+        "lemma": "help",
+        "importance": 2
+      },
+      {
+        "lemma": "please",
+        "importance": 2
+      },
+      {
+        "lemma": "assistant",
+        "importance": 2
+      },
+      {
+        "lemma": "helpful",
+        "importance": 2
+      },
+      {
+        "lemma": "request",
+        "importance": 2
+      }
+    ],
     "importance": 2
   },
   {
@@ -219,10 +249,36 @@
     "nativeLang": "ru",
     "title": "Просьбы. Продвинутый",
     "categories": [
-      "socializing"
+      "socializing",
+      "workOffice"
     ],
     "type": "official",
-    "items": [],
+    "items": [
+      {
+        "lemma": "assist",
+        "importance": 2
+      },
+      {
+        "lemma": "assistance",
+        "importance": 2
+      },
+      {
+        "lemma": "favorable",
+        "importance": 2
+      },
+      {
+        "lemma": "helper",
+        "importance": 2
+      },
+      {
+        "lemma": "unhelpful",
+        "importance": 2
+      },
+      {
+        "lemma": "Could you repeat that, please?",
+        "importance": 2
+      }
+    ],
     "importance": 2
   },
   {
