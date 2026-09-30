@@ -44,6 +44,24 @@ export interface BuildDecksResult {
   outPath: string;
 }
 
+// Порт apps/mobile/src/utilities/word-category.ts (categorizeWord,
+// CATEGORY_ORDER) — та же логика группировки, что использует
+// decks.screen.tsx, но здесь она определяет порядок показа (position), а не
+// просто заголовки групп: внутри своей части речи слова сортируются по
+// убыванию importance, при равном importance — по алфавиту.
+const CATEGORY_ORDER = ['nouns', 'verbs', 'adjectives', 'phrases', 'questions', 'other'] as const;
+
+function categorizeItem(itemType: string, lemma: string, pos?: string): (typeof CATEGORY_ORDER)[number] {
+  if (itemType === 'expression') {
+    return lemma.trim().endsWith('?') ? 'questions' : 'phrases';
+  }
+  if (pos === 'noun' || pos === 'noun phrase') return 'nouns';
+  if (pos === 'verb') return 'verbs';
+  if (pos === 'adjective') return 'adjectives';
+
+  return 'other';
+}
+
 // Порт apps/mobile/src/utilities/id.ts::uuidv7 (та же копия уже в
 // generate-senses.ts) — этот скрипт выполняется через Node, не через
 // мобильное приложение, общих небиблиотечных утилит между apps/mobile и
@@ -146,8 +164,10 @@ export function buildDecksData(): BuildDecksResult {
   const words = JSON.parse(readFileSync(wordsDataPath, 'utf8')) as {
     lemma: string;
     itemId: string;
+    itemType: string;
+    pos?: string;
   }[];
-  const itemIdByLemma = new Map(words.map((word) => [word.lemma, word.itemId]));
+  const wordByLemma = new Map(words.map((word) => [word.lemma, word]));
 
   // Слово может быть в нескольких колодах сразу (например, "hospital" — и в
   // «Места в городе», и в «Скорая помощь») — единственное реальное
@@ -158,7 +178,7 @@ export function buildDecksData(): BuildDecksResult {
   for (const deck of decks) {
     const seenInDeck = new Set<string>();
     for (const item of deck.items) {
-      if (!itemIdByLemma.has(item.lemma)) {
+      if (!wordByLemma.has(item.lemma)) {
         missingLemmas.push(`"${item.lemma}" (колода "${deck.title}")`);
       }
       if (seenInDeck.has(item.lemma)) {
@@ -171,6 +191,24 @@ export function buildDecksData(): BuildDecksResult {
   }
   if (missingLemmas.length > 0) {
     throw new Error(`data/decks/: леммы не найдены в WORDS:\n  ${missingLemmas.join('\n  ')}`);
+  }
+
+  // Порядок показа (position) внутри колоды куратор не расставляет руками —
+  // сортировка детерминирована: сначала группа части речи в том же порядке,
+  // что и на экране колоды (CATEGORY_ORDER), внутри группы — по убыванию
+  // importance, при равном importance — по алфавиту.
+  const categoryRank = new Map(CATEGORY_ORDER.map((category, index) => [category, index]));
+  for (const deck of decks) {
+    deck.items = [...deck.items].sort((a, b) => {
+      const wordA = wordByLemma.get(a.lemma)!;
+      const wordB = wordByLemma.get(b.lemma)!;
+      const rankA = categoryRank.get(categorizeItem(wordA.itemType, a.lemma, wordA.pos))!;
+      const rankB = categoryRank.get(categorizeItem(wordB.itemType, b.lemma, wordB.pos))!;
+      if (rankA !== rankB) return rankA - rankB;
+      if (a.importance !== b.importance) return b.importance - a.importance;
+
+      return a.lemma.toLowerCase().localeCompare(b.lemma.toLowerCase());
+    });
   }
 
   writeFileSync(outPath, `${JSON.stringify(decks, null, 2)}\n`, 'utf8');
