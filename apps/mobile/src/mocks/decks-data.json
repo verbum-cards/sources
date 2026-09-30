@@ -293,7 +293,8 @@
     "nativeLang": "ru",
     "title": "Скорая помощь",
     "categories": [
-      "abroad"
+      "abroad",
+      "health"
     ],
     "type": "official",
     "importance": 2,
@@ -679,7 +680,8 @@
     "nativeLang": "ru",
     "title": "Медицинская страховка",
     "categories": [
-      "abroad"
+      "abroad",
+      "health"
     ],
     "type": "official",
     "importance": 2,
@@ -2841,6 +2843,976 @@
     ]
   },
   {
+    "id": "01a0f1c0-bb9f-74ae-b025-98994395932c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "У врача",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "appointment",
+        "importance": 2
+      },
+      {
+        "lemma": "clinic",
+        "importance": 2
+      },
+      {
+        "lemma": "consultation",
+        "importance": 2
+      },
+      {
+        "lemma": "doctor",
+        "importance": 2
+      },
+      {
+        "lemma": "outpatient",
+        "importance": 2
+      },
+      {
+        "lemma": "patient",
+        "importance": 2
+      },
+      {
+        "lemma": "practitioner",
+        "importance": 2
+      },
+      {
+        "lemma": "visit",
+        "importance": 2
+      },
+      {
+        "lemma": "consult",
+        "importance": 2
+      },
+      {
+        "lemma": "examine",
+        "importance": 2
+      },
+      {
+        "lemma": "clinical",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7260-b45d-6ae83a331ba0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Симптомы",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "ache",
+        "importance": 2
+      },
+      {
+        "lemma": "backache",
+        "importance": 2
+      },
+      {
+        "lemma": "earache",
+        "importance": 2
+      },
+      {
+        "lemma": "fatigue",
+        "importance": 2
+      },
+      {
+        "lemma": "fever",
+        "importance": 2
+      },
+      {
+        "lemma": "headache",
+        "importance": 2
+      },
+      {
+        "lemma": "sneeze",
+        "importance": 2
+      },
+      {
+        "lemma": "stomachache",
+        "importance": 2
+      },
+      {
+        "lemma": "symptom",
+        "importance": 2
+      },
+      {
+        "lemma": "temperature",
+        "importance": 2
+      },
+      {
+        "lemma": "toothache",
+        "importance": 2
+      },
+      {
+        "lemma": "vomit",
+        "importance": 2
+      },
+      {
+        "lemma": "cough",
+        "importance": 2
+      },
+      {
+        "lemma": "itch",
+        "importance": 2
+      },
+      {
+        "lemma": "swell",
+        "importance": 2
+      },
+      {
+        "lemma": "dizzy",
+        "importance": 2
+      },
+      {
+        "lemma": "symptomatic",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7873-859d-72d9cec532ba",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Тело и органы",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "ankle",
+        "importance": 2
+      },
+      {
+        "lemma": "artery",
+        "importance": 2
+      },
+      {
+        "lemma": "blood",
+        "importance": 2
+      },
+      {
+        "lemma": "bloodstream",
+        "importance": 2
+      },
+      {
+        "lemma": "bone",
+        "importance": 2
+      },
+      {
+        "lemma": "brain",
+        "importance": 2
+      },
+      {
+        "lemma": "chest",
+        "importance": 2
+      },
+      {
+        "lemma": "elbow",
+        "importance": 2
+      },
+      {
+        "lemma": "heart",
+        "importance": 2
+      },
+      {
+        "lemma": "knee",
+        "importance": 2
+      },
+      {
+        "lemma": "lip",
+        "importance": 2
+      },
+      {
+        "lemma": "liver",
+        "importance": 2
+      },
+      {
+        "lemma": "lung",
+        "importance": 2
+      },
+      {
+        "lemma": "muscle",
+        "importance": 2
+      },
+      {
+        "lemma": "nerve",
+        "importance": 2
+      },
+      {
+        "lemma": "rib",
+        "importance": 2
+      },
+      {
+        "lemma": "shoulder",
+        "importance": 2
+      },
+      {
+        "lemma": "skin",
+        "importance": 2
+      },
+      {
+        "lemma": "stomach",
+        "importance": 2
+      },
+      {
+        "lemma": "throat",
+        "importance": 2
+      },
+      {
+        "lemma": "vein",
+        "importance": 2
+      },
+      {
+        "lemma": "wrist",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-74c4-92dd-de3ac3095f26",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аптека",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "capsule",
+        "importance": 2
+      },
+      {
+        "lemma": "dose",
+        "importance": 2
+      },
+      {
+        "lemma": "drug",
+        "importance": 2
+      },
+      {
+        "lemma": "drugstore",
+        "importance": 2
+      },
+      {
+        "lemma": "medication",
+        "importance": 2
+      },
+      {
+        "lemma": "medicine",
+        "importance": 2
+      },
+      {
+        "lemma": "ointment",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacist",
+        "importance": 2
+      },
+      {
+        "lemma": "pharmacy",
+        "importance": 2
+      },
+      {
+        "lemma": "pill",
+        "importance": 2
+      },
+      {
+        "lemma": "prescription",
+        "importance": 2
+      },
+      {
+        "lemma": "vitamin",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-74b1-95bd-76259df4876c",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Как принимать лекарства",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "dose",
+        "importance": 2
+      },
+      {
+        "lemma": "instruction",
+        "importance": 2
+      },
+      {
+        "lemma": "label",
+        "importance": 2
+      },
+      {
+        "lemma": "expire",
+        "importance": 2
+      },
+      {
+        "lemma": "swallow",
+        "importance": 2
+      },
+      {
+        "lemma": "daily",
+        "importance": 2
+      },
+      {
+        "lemma": "regularly",
+        "importance": 2
+      },
+      {
+        "lemma": "twice",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-79b4-b6cc-38a38f338dd4",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Стоматолог",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cavity",
+        "importance": 2
+      },
+      {
+        "lemma": "dentist",
+        "importance": 2
+      },
+      {
+        "lemma": "filling",
+        "importance": 2
+      },
+      {
+        "lemma": "tooth",
+        "importance": 2
+      },
+      {
+        "lemma": "toothache",
+        "importance": 2
+      },
+      {
+        "lemma": "toothbrush",
+        "importance": 2
+      },
+      {
+        "lemma": "toothpaste",
+        "importance": 2
+      },
+      {
+        "lemma": "dental",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-70e4-a512-226ec1e5d4e5",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Анализы и обследования",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "analysis",
+        "importance": 2
+      },
+      {
+        "lemma": "lab",
+        "importance": 2
+      },
+      {
+        "lemma": "result",
+        "importance": 2
+      },
+      {
+        "lemma": "sample",
+        "importance": 2
+      },
+      {
+        "lemma": "scan",
+        "importance": 2
+      },
+      {
+        "lemma": "X-ray",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7d30-972b-741ee7f8bc74",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Больница",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "admission",
+        "importance": 2
+      },
+      {
+        "lemma": "discharge",
+        "importance": 2
+      },
+      {
+        "lemma": "hospital",
+        "importance": 2
+      },
+      {
+        "lemma": "nurse",
+        "importance": 2
+      },
+      {
+        "lemma": "operation",
+        "importance": 2
+      },
+      {
+        "lemma": "surgeon",
+        "importance": 2
+      },
+      {
+        "lemma": "surgery",
+        "importance": 2
+      },
+      {
+        "lemma": "ward",
+        "importance": 2
+      },
+      {
+        "lemma": "hospitalize",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-75f6-8f46-0268a79f4bdb",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Травмы",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "bruise",
+        "importance": 2
+      },
+      {
+        "lemma": "burn",
+        "importance": 2
+      },
+      {
+        "lemma": "injury",
+        "importance": 2
+      },
+      {
+        "lemma": "scar",
+        "importance": 2
+      },
+      {
+        "lemma": "wound",
+        "importance": 2
+      },
+      {
+        "lemma": "bleed",
+        "importance": 2
+      },
+      {
+        "lemma": "break",
+        "importance": 2
+      },
+      {
+        "lemma": "cut",
+        "importance": 2
+      },
+      {
+        "lemma": "acute",
+        "importance": 2
+      },
+      {
+        "lemma": "injured",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-754e-9cff-4b8d83ec8fd3",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Аллергии и непереносимость",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "peanut",
+        "importance": 2
+      },
+      {
+        "lemma": "reaction",
+        "importance": 2
+      },
+      {
+        "lemma": "sneeze",
+        "importance": 2
+      },
+      {
+        "lemma": "allergic",
+        "importance": 2
+      },
+      {
+        "lemma": "I'm allergic to...",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7c5e-9229-727cc4d45fff",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Хронические болезни",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "cancer",
+        "importance": 2
+      },
+      {
+        "lemma": "condition",
+        "importance": 2
+      },
+      {
+        "lemma": "disease",
+        "importance": 2
+      },
+      {
+        "lemma": "disorder",
+        "importance": 2
+      },
+      {
+        "lemma": "illness",
+        "importance": 2
+      },
+      {
+        "lemma": "long-term",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7ac8-8925-fcaa4437700f",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Сон, стресс и настроение",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "anxiety",
+        "importance": 2
+      },
+      {
+        "lemma": "depression",
+        "importance": 2
+      },
+      {
+        "lemma": "exhaustion",
+        "importance": 2
+      },
+      {
+        "lemma": "mood",
+        "importance": 2
+      },
+      {
+        "lemma": "nightmare",
+        "importance": 2
+      },
+      {
+        "lemma": "rest",
+        "importance": 2
+      },
+      {
+        "lemma": "stress",
+        "importance": 2
+      },
+      {
+        "lemma": "tiredness",
+        "importance": 2
+      },
+      {
+        "lemma": "relax",
+        "importance": 2
+      },
+      {
+        "lemma": "sleep",
+        "importance": 2
+      },
+      {
+        "lemma": "asleep",
+        "importance": 2
+      },
+      {
+        "lemma": "depressed",
+        "importance": 2
+      },
+      {
+        "lemma": "depressing",
+        "importance": 2
+      },
+      {
+        "lemma": "exhausted",
+        "importance": 2
+      },
+      {
+        "lemma": "exhausting",
+        "importance": 2
+      },
+      {
+        "lemma": "relaxed",
+        "importance": 2
+      },
+      {
+        "lemma": "relaxing",
+        "importance": 2
+      },
+      {
+        "lemma": "sleepless",
+        "importance": 2
+      },
+      {
+        "lemma": "sleepy",
+        "importance": 2
+      },
+      {
+        "lemma": "stressed",
+        "importance": 2
+      },
+      {
+        "lemma": "stressful",
+        "importance": 2
+      },
+      {
+        "lemma": "tired",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7078-8ede-12d40af63824",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Ребёнок у врача",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "baby",
+        "importance": 2
+      },
+      {
+        "lemma": "child",
+        "importance": 2
+      },
+      {
+        "lemma": "childhood",
+        "importance": 2
+      },
+      {
+        "lemma": "growth",
+        "importance": 2
+      },
+      {
+        "lemma": "height",
+        "importance": 2
+      },
+      {
+        "lemma": "infant",
+        "importance": 2
+      },
+      {
+        "lemma": "weight",
+        "importance": 2
+      },
+      {
+        "lemma": "overweight",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-74ff-876b-4d35ba7283b0",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Беременность",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "birth",
+        "importance": 2
+      },
+      {
+        "lemma": "delivery",
+        "importance": 2
+      },
+      {
+        "lemma": "labor",
+        "importance": 2
+      },
+      {
+        "lemma": "midwife",
+        "importance": 2
+      },
+      {
+        "lemma": "midwifery",
+        "importance": 2
+      },
+      {
+        "lemma": "deliver",
+        "importance": 2
+      },
+      {
+        "lemma": "newborn",
+        "importance": 2
+      },
+      {
+        "lemma": "pregnant",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7cf1-8fe1-73459eb29475",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Зрение",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "blindness",
+        "importance": 2
+      },
+      {
+        "lemma": "eye",
+        "importance": 2
+      },
+      {
+        "lemma": "eyebrow",
+        "importance": 2
+      },
+      {
+        "lemma": "eyelash",
+        "importance": 2
+      },
+      {
+        "lemma": "eyelid",
+        "importance": 2
+      },
+      {
+        "lemma": "eyesight",
+        "importance": 2
+      },
+      {
+        "lemma": "glasses",
+        "importance": 2
+      },
+      {
+        "lemma": "sight",
+        "importance": 2
+      },
+      {
+        "lemma": "sunglasses",
+        "importance": 2
+      },
+      {
+        "lemma": "vision",
+        "importance": 2
+      },
+      {
+        "lemma": "blind",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7d25-96c3-3752f5cf66d2",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Больничный",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "absence",
+        "importance": 2
+      },
+      {
+        "lemma": "certificate",
+        "importance": 2
+      },
+      {
+        "lemma": "note",
+        "importance": 2
+      },
+      {
+        "lemma": "sickness",
+        "importance": 2
+      },
+      {
+        "lemma": "leave",
+        "importance": 2
+      },
+      {
+        "lemma": "sick",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-723b-99ac-ea37dc80ca29",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Прививки",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "injection",
+        "importance": 2
+      },
+      {
+        "lemma": "needle",
+        "importance": 2
+      },
+      {
+        "lemma": "shot",
+        "importance": 2
+      },
+      {
+        "lemma": "vaccine",
+        "importance": 2
+      },
+      {
+        "lemma": "inject",
+        "importance": 2
+      }
+    ]
+  },
+  {
+    "id": "01a0f1c0-bb9f-7b6c-9964-abef74c4c4a7",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Здоровый образ жизни",
+    "categories": [
+      "health"
+    ],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "diet",
+        "importance": 2
+      },
+      {
+        "lemma": "fitness",
+        "importance": 2
+      },
+      {
+        "lemma": "lifestyle",
+        "importance": 2
+      },
+      {
+        "lemma": "nutrition",
+        "importance": 2
+      },
+      {
+        "lemma": "workout",
+        "importance": 2
+      },
+      {
+        "lemma": "exercise",
+        "importance": 2
+      },
+      {
+        "lemma": "balanced",
+        "importance": 2
+      },
+      {
+        "lemma": "healthy",
+        "importance": 2
+      },
+      {
+        "lemma": "unhealthy",
+        "importance": 2
+      },
+      {
+        "lemma": "well-balanced",
+        "importance": 2
+      }
+    ]
+  },
+  {
     "id": "0195d000-0000-7000-8000-000000000009",
     "lang": "en",
     "nativeLang": "ru",
@@ -2859,10 +3831,6 @@
       },
       {
         "lemma": "aborigine",
-        "importance": 2
-      },
-      {
-        "lemma": "absence",
         "importance": 2
       },
       {
@@ -2919,10 +3887,6 @@
       },
       {
         "lemma": "accusation",
-        "importance": 2
-      },
-      {
-        "lemma": "ache",
         "importance": 2
       },
       {
@@ -3007,10 +3971,6 @@
       },
       {
         "lemma": "admiration",
-        "importance": 2
-      },
-      {
-        "lemma": "admission",
         "importance": 2
       },
       {
@@ -3258,10 +4218,6 @@
         "importance": 2
       },
       {
-        "lemma": "analysis",
-        "importance": 2
-      },
-      {
         "lemma": "analyst",
         "importance": 2
       },
@@ -3311,10 +4267,6 @@
       },
       {
         "lemma": "animation",
-        "importance": 2
-      },
-      {
-        "lemma": "ankle",
         "importance": 2
       },
       {
@@ -3394,10 +4346,6 @@
         "importance": 2
       },
       {
-        "lemma": "anxiety",
-        "importance": 2
-      },
-      {
         "lemma": "ape",
         "importance": 2
       },
@@ -3439,10 +4387,6 @@
       },
       {
         "lemma": "application",
-        "importance": 2
-      },
-      {
-        "lemma": "appointment",
         "importance": 2
       },
       {
@@ -3551,10 +4495,6 @@
       },
       {
         "lemma": "art",
-        "importance": 2
-      },
-      {
-        "lemma": "artery",
         "importance": 2
       },
       {
@@ -3791,10 +4731,6 @@
       },
       {
         "lemma": "babysitter",
-        "importance": 2
-      },
-      {
-        "lemma": "backache",
         "importance": 2
       },
       {
@@ -4190,10 +5126,6 @@
         "importance": 2
       },
       {
-        "lemma": "birth",
-        "importance": 2
-      },
-      {
         "lemma": "birthday",
         "importance": 2
       },
@@ -4250,10 +5182,6 @@
         "importance": 2
       },
       {
-        "lemma": "blindness",
-        "importance": 2
-      },
-      {
         "lemma": "bliss",
         "importance": 2
       },
@@ -4275,14 +5203,6 @@
       },
       {
         "lemma": "blogger",
-        "importance": 2
-      },
-      {
-        "lemma": "blood",
-        "importance": 2
-      },
-      {
-        "lemma": "bloodstream",
         "importance": 2
       },
       {
@@ -4590,10 +5510,6 @@
         "importance": 2
       },
       {
-        "lemma": "bruise",
-        "importance": 2
-      },
-      {
         "lemma": "brush",
         "importance": 2
       },
@@ -4707,10 +5623,6 @@
       },
       {
         "lemma": "burial",
-        "importance": 2
-      },
-      {
-        "lemma": "burn",
         "importance": 2
       },
       {
@@ -4854,10 +5766,6 @@
         "importance": 2
       },
       {
-        "lemma": "cancer",
-        "importance": 2
-      },
-      {
         "lemma": "candidate",
         "importance": 2
       },
@@ -4903,10 +5811,6 @@
       },
       {
         "lemma": "capital letter",
-        "importance": 2
-      },
-      {
-        "lemma": "capsule",
         "importance": 2
       },
       {
@@ -5066,10 +5970,6 @@
         "importance": 2
       },
       {
-        "lemma": "cavity",
-        "importance": 2
-      },
-      {
         "lemma": "cay",
         "importance": 2
       },
@@ -5139,10 +6039,6 @@
       },
       {
         "lemma": "certainty",
-        "importance": 2
-      },
-      {
-        "lemma": "certificate",
         "importance": 2
       },
       {
@@ -5298,19 +6194,11 @@
         "importance": 2
       },
       {
-        "lemma": "chest",
-        "importance": 2
-      },
-      {
         "lemma": "chest of drawers",
         "importance": 2
       },
       {
         "lemma": "chewing gum",
-        "importance": 2
-      },
-      {
-        "lemma": "childhood",
         "importance": 2
       },
       {
@@ -5507,10 +6395,6 @@
       },
       {
         "lemma": "climbing",
-        "importance": 2
-      },
-      {
-        "lemma": "clinic",
         "importance": 2
       },
       {
@@ -5898,10 +6782,6 @@
         "importance": 2
       },
       {
-        "lemma": "condition",
-        "importance": 2
-      },
-      {
         "lemma": "conduct",
         "importance": 2
       },
@@ -6055,10 +6935,6 @@
       },
       {
         "lemma": "consultant",
-        "importance": 2
-      },
-      {
-        "lemma": "consultation",
         "importance": 2
       },
       {
@@ -6890,10 +7766,6 @@
         "importance": 2
       },
       {
-        "lemma": "dentist",
-        "importance": 2
-      },
-      {
         "lemma": "denunciation",
         "importance": 2
       },
@@ -6919,10 +7791,6 @@
       },
       {
         "lemma": "depravity",
-        "importance": 2
-      },
-      {
-        "lemma": "depression",
         "importance": 2
       },
       {
@@ -7094,10 +7962,6 @@
         "importance": 2
       },
       {
-        "lemma": "diet",
-        "importance": 2
-      },
-      {
         "lemma": "difference",
         "importance": 2
       },
@@ -7206,10 +8070,6 @@
         "importance": 2
       },
       {
-        "lemma": "discharge",
-        "importance": 2
-      },
-      {
         "lemma": "disciple",
         "importance": 2
       },
@@ -7250,10 +8110,6 @@
         "importance": 2
       },
       {
-        "lemma": "disease",
-        "importance": 2
-      },
-      {
         "lemma": "disgrace",
         "importance": 2
       },
@@ -7287,10 +8143,6 @@
       },
       {
         "lemma": "dismay",
-        "importance": 2
-      },
-      {
-        "lemma": "disorder",
         "importance": 2
       },
       {
@@ -7494,10 +8346,6 @@
         "importance": 2
       },
       {
-        "lemma": "dose",
-        "importance": 2
-      },
-      {
         "lemma": "dot",
         "importance": 2
       },
@@ -7590,14 +8438,6 @@
         "importance": 2
       },
       {
-        "lemma": "drug",
-        "importance": 2
-      },
-      {
-        "lemma": "drugstore",
-        "importance": 2
-      },
-      {
         "lemma": "drum",
         "importance": 2
       },
@@ -7667,10 +8507,6 @@
       },
       {
         "lemma": "eagle",
-        "importance": 2
-      },
-      {
-        "lemma": "earache",
         "importance": 2
       },
       {
@@ -7807,10 +8643,6 @@
       },
       {
         "lemma": "elation",
-        "importance": 2
-      },
-      {
-        "lemma": "elbow",
         "importance": 2
       },
       {
@@ -8238,10 +9070,6 @@
         "importance": 2
       },
       {
-        "lemma": "exhaustion",
-        "importance": 2
-      },
-      {
         "lemma": "exhibition",
         "importance": 2
       },
@@ -8370,22 +9198,6 @@
         "importance": 2
       },
       {
-        "lemma": "eyebrow",
-        "importance": 2
-      },
-      {
-        "lemma": "eyelash",
-        "importance": 2
-      },
-      {
-        "lemma": "eyelid",
-        "importance": 2
-      },
-      {
-        "lemma": "eyesight",
-        "importance": 2
-      },
-      {
         "lemma": "fabric",
         "importance": 2
       },
@@ -8506,10 +9318,6 @@
         "importance": 2
       },
       {
-        "lemma": "fatigue",
-        "importance": 2
-      },
-      {
         "lemma": "fault",
         "importance": 2
       },
@@ -8570,10 +9378,6 @@
         "importance": 2
       },
       {
-        "lemma": "fever",
-        "importance": 2
-      },
-      {
         "lemma": "fiber",
         "importance": 2
       },
@@ -8615,10 +9419,6 @@
       },
       {
         "lemma": "figure",
-        "importance": 2
-      },
-      {
-        "lemma": "filling",
         "importance": 2
       },
       {
@@ -8699,10 +9499,6 @@
       },
       {
         "lemma": "fissure",
-        "importance": 2
-      },
-      {
-        "lemma": "fitness",
         "importance": 2
       },
       {
@@ -9570,10 +10366,6 @@
         "importance": 2
       },
       {
-        "lemma": "growth",
-        "importance": 2
-      },
-      {
         "lemma": "guard",
         "importance": 2
       },
@@ -9867,10 +10659,6 @@
       },
       {
         "lemma": "heifer",
-        "importance": 2
-      },
-      {
-        "lemma": "height",
         "importance": 2
       },
       {
@@ -10266,10 +11054,6 @@
         "importance": 2
       },
       {
-        "lemma": "illness",
-        "importance": 2
-      },
-      {
         "lemma": "illustration",
         "importance": 2
       },
@@ -10446,10 +11230,6 @@
         "importance": 2
       },
       {
-        "lemma": "infant",
-        "importance": 2
-      },
-      {
         "lemma": "infection",
         "importance": 2
       },
@@ -10518,10 +11298,6 @@
         "importance": 2
       },
       {
-        "lemma": "injection",
-        "importance": 2
-      },
-      {
         "lemma": "injustice",
         "importance": 2
       },
@@ -10587,10 +11363,6 @@
       },
       {
         "lemma": "institution",
-        "importance": 2
-      },
-      {
-        "lemma": "instruction",
         "importance": 2
       },
       {
@@ -11014,18 +11786,6 @@
         "importance": 2
       },
       {
-        "lemma": "lab",
-        "importance": 2
-      },
-      {
-        "lemma": "label",
-        "importance": 2
-      },
-      {
-        "lemma": "labor",
-        "importance": 2
-      },
-      {
         "lemma": "laboratory",
         "importance": 2
       },
@@ -11298,10 +12058,6 @@
         "importance": 2
       },
       {
-        "lemma": "lifestyle",
-        "importance": 2
-      },
-      {
         "lemma": "lifetime",
         "importance": 2
       },
@@ -11362,10 +12118,6 @@
         "importance": 2
       },
       {
-        "lemma": "lip",
-        "importance": 2
-      },
-      {
         "lemma": "list",
         "importance": 2
       },
@@ -11383,10 +12135,6 @@
       },
       {
         "lemma": "litter",
-        "importance": 2
-      },
-      {
-        "lemma": "liver",
         "importance": 2
       },
       {
@@ -11483,10 +12231,6 @@
       },
       {
         "lemma": "lunchtime",
-        "importance": 2
-      },
-      {
-        "lemma": "lung",
         "importance": 2
       },
       {
@@ -11826,10 +12570,6 @@
         "importance": 2
       },
       {
-        "lemma": "medication",
-        "importance": 2
-      },
-      {
         "lemma": "mediocrity",
         "importance": 2
       },
@@ -11979,14 +12719,6 @@
       },
       {
         "lemma": "midst",
-        "importance": 2
-      },
-      {
-        "lemma": "midwife",
-        "importance": 2
-      },
-      {
-        "lemma": "midwifery",
         "importance": 2
       },
       {
@@ -12198,10 +12930,6 @@
         "importance": 2
       },
       {
-        "lemma": "mood",
-        "importance": 2
-      },
-      {
         "lemma": "moon",
         "importance": 2
       },
@@ -12362,10 +13090,6 @@
         "importance": 2
       },
       {
-        "lemma": "muscle",
-        "importance": 2
-      },
-      {
         "lemma": "museum",
         "importance": 2
       },
@@ -12474,10 +13198,6 @@
         "importance": 2
       },
       {
-        "lemma": "needle",
-        "importance": 2
-      },
-      {
         "lemma": "neglect",
         "importance": 2
       },
@@ -12495,10 +13215,6 @@
       },
       {
         "lemma": "nephew",
-        "importance": 2
-      },
-      {
-        "lemma": "nerve",
         "importance": 2
       },
       {
@@ -12562,10 +13278,6 @@
         "importance": 2
       },
       {
-        "lemma": "nightmare",
-        "importance": 2
-      },
-      {
         "lemma": "nobility",
         "importance": 2
       },
@@ -12611,10 +13323,6 @@
       },
       {
         "lemma": "nostril",
-        "importance": 2
-      },
-      {
-        "lemma": "note",
         "importance": 2
       },
       {
@@ -12675,10 +13383,6 @@
       },
       {
         "lemma": "nutrient",
-        "importance": 2
-      },
-      {
-        "lemma": "nutrition",
         "importance": 2
       },
       {
@@ -12774,10 +13478,6 @@
         "importance": 2
       },
       {
-        "lemma": "ointment",
-        "importance": 2
-      },
-      {
         "lemma": "olive",
         "importance": 2
       },
@@ -12815,10 +13515,6 @@
       },
       {
         "lemma": "opera",
-        "importance": 2
-      },
-      {
-        "lemma": "operation",
         "importance": 2
       },
       {
@@ -12951,10 +13647,6 @@
       },
       {
         "lemma": "outlook",
-        "importance": 2
-      },
-      {
-        "lemma": "outpatient",
         "importance": 2
       },
       {
@@ -13242,10 +13934,6 @@
         "importance": 2
       },
       {
-        "lemma": "patient",
-        "importance": 2
-      },
-      {
         "lemma": "patriot",
         "importance": 2
       },
@@ -13315,10 +14003,6 @@
       },
       {
         "lemma": "peak",
-        "importance": 2
-      },
-      {
-        "lemma": "peanut",
         "importance": 2
       },
       {
@@ -13514,10 +14198,6 @@
         "importance": 2
       },
       {
-        "lemma": "pharmacist",
-        "importance": 2
-      },
-      {
         "lemma": "phase",
         "importance": 2
       },
@@ -13619,10 +14299,6 @@
       },
       {
         "lemma": "pilgrim",
-        "importance": 2
-      },
-      {
-        "lemma": "pill",
         "importance": 2
       },
       {
@@ -14015,10 +14691,6 @@
       },
       {
         "lemma": "practice",
-        "importance": 2
-      },
-      {
-        "lemma": "practitioner",
         "importance": 2
       },
       {
@@ -14798,10 +15470,6 @@
         "importance": 2
       },
       {
-        "lemma": "reaction",
-        "importance": 2
-      },
-      {
         "lemma": "reader",
         "importance": 2
       },
@@ -15226,19 +15894,11 @@
         "importance": 2
       },
       {
-        "lemma": "rest",
-        "importance": 2
-      },
-      {
         "lemma": "restoration",
         "importance": 2
       },
       {
         "lemma": "restriction",
-        "importance": 2
-      },
-      {
-        "lemma": "result",
         "importance": 2
       },
       {
@@ -15339,10 +15999,6 @@
       },
       {
         "lemma": "rhythm",
-        "importance": 2
-      },
-      {
-        "lemma": "rib",
         "importance": 2
       },
       {
@@ -15638,10 +16294,6 @@
         "importance": 2
       },
       {
-        "lemma": "sample",
-        "importance": 2
-      },
-      {
         "lemma": "sanctity",
         "importance": 2
       },
@@ -15714,15 +16366,7 @@
         "importance": 2
       },
       {
-        "lemma": "scan",
-        "importance": 2
-      },
-      {
         "lemma": "scandal",
-        "importance": 2
-      },
-      {
-        "lemma": "scar",
         "importance": 2
       },
       {
@@ -16182,10 +16826,6 @@
         "importance": 2
       },
       {
-        "lemma": "shot",
-        "importance": 2
-      },
-      {
         "lemma": "shout",
         "importance": 2
       },
@@ -16210,10 +16850,6 @@
         "importance": 2
       },
       {
-        "lemma": "sickness",
-        "importance": 2
-      },
-      {
         "lemma": "side",
         "importance": 2
       },
@@ -16223,10 +16859,6 @@
       },
       {
         "lemma": "sigh",
-        "importance": 2
-      },
-      {
-        "lemma": "sight",
         "importance": 2
       },
       {
@@ -16339,10 +16971,6 @@
       },
       {
         "lemma": "skill",
-        "importance": 2
-      },
-      {
-        "lemma": "skin",
         "importance": 2
       },
       {
@@ -16463,10 +17091,6 @@
       },
       {
         "lemma": "sneer",
-        "importance": 2
-      },
-      {
-        "lemma": "sneeze",
         "importance": 2
       },
       {
@@ -17006,10 +17630,6 @@
         "importance": 2
       },
       {
-        "lemma": "stomach",
-        "importance": 2
-      },
-      {
         "lemma": "stone",
         "importance": 2
       },
@@ -17091,10 +17711,6 @@
       },
       {
         "lemma": "strength",
-        "importance": 2
-      },
-      {
-        "lemma": "stress",
         "importance": 2
       },
       {
@@ -17294,10 +17910,6 @@
         "importance": 2
       },
       {
-        "lemma": "sunglasses",
-        "importance": 2
-      },
-      {
         "lemma": "sunlight",
         "importance": 2
       },
@@ -17375,14 +17987,6 @@
       },
       {
         "lemma": "surge",
-        "importance": 2
-      },
-      {
-        "lemma": "surgeon",
-        "importance": 2
-      },
-      {
-        "lemma": "surgery",
         "importance": 2
       },
       {
@@ -17495,10 +18099,6 @@
       },
       {
         "lemma": "symphony",
-        "importance": 2
-      },
-      {
-        "lemma": "symptom",
         "importance": 2
       },
       {
@@ -17706,10 +18306,6 @@
         "importance": 2
       },
       {
-        "lemma": "temperature",
-        "importance": 2
-      },
-      {
         "lemma": "temple",
         "importance": 2
       },
@@ -17866,10 +18462,6 @@
         "importance": 2
       },
       {
-        "lemma": "throat",
-        "importance": 2
-      },
-      {
         "lemma": "throw",
         "importance": 2
       },
@@ -17938,10 +18530,6 @@
         "importance": 2
       },
       {
-        "lemma": "tiredness",
-        "importance": 2
-      },
-      {
         "lemma": "tissue",
         "importance": 2
       },
@@ -17987,14 +18575,6 @@
       },
       {
         "lemma": "tongue",
-        "importance": 2
-      },
-      {
-        "lemma": "toothbrush",
-        "importance": 2
-      },
-      {
-        "lemma": "toothpaste",
         "importance": 2
       },
       {
@@ -18598,10 +19178,6 @@
         "importance": 2
       },
       {
-        "lemma": "vein",
-        "importance": 2
-      },
-      {
         "lemma": "veneration",
         "importance": 2
       },
@@ -18758,19 +19334,7 @@
         "importance": 2
       },
       {
-        "lemma": "vision",
-        "importance": 2
-      },
-      {
-        "lemma": "visit",
-        "importance": 2
-      },
-      {
         "lemma": "vitality",
-        "importance": 2
-      },
-      {
-        "lemma": "vitamin",
         "importance": 2
       },
       {
@@ -18795,10 +19359,6 @@
       },
       {
         "lemma": "volume",
-        "importance": 2
-      },
-      {
-        "lemma": "vomit",
         "importance": 2
       },
       {
@@ -18879,10 +19439,6 @@
       },
       {
         "lemma": "war",
-        "importance": 2
-      },
-      {
-        "lemma": "ward",
         "importance": 2
       },
       {
@@ -19011,10 +19567,6 @@
       },
       {
         "lemma": "weep",
-        "importance": 2
-      },
-      {
-        "lemma": "weight",
         "importance": 2
       },
       {
@@ -19166,10 +19718,6 @@
         "importance": 2
       },
       {
-        "lemma": "workout",
-        "importance": 2
-      },
-      {
         "lemma": "workplace",
         "importance": 2
       },
@@ -19202,10 +19750,6 @@
         "importance": 2
       },
       {
-        "lemma": "wound",
-        "importance": 2
-      },
-      {
         "lemma": "wrap",
         "importance": 2
       },
@@ -19218,19 +19762,11 @@
         "importance": 2
       },
       {
-        "lemma": "wrist",
-        "importance": 2
-      },
-      {
         "lemma": "wristwatch",
         "importance": 2
       },
       {
         "lemma": "writing",
-        "importance": 2
-      },
-      {
-        "lemma": "X-ray",
         "importance": 2
       },
       {
@@ -19726,10 +20262,6 @@
         "importance": 2
       },
       {
-        "lemma": "bleed",
-        "importance": 2
-      },
-      {
         "lemma": "blend",
         "importance": 2
       },
@@ -19775,10 +20307,6 @@
       },
       {
         "lemma": "brandish",
-        "importance": 2
-      },
-      {
-        "lemma": "break",
         "importance": 2
       },
       {
@@ -20174,10 +20702,6 @@
         "importance": 2
       },
       {
-        "lemma": "consult",
-        "importance": 2
-      },
-      {
         "lemma": "consume",
         "importance": 2
       },
@@ -20238,10 +20762,6 @@
         "importance": 2
       },
       {
-        "lemma": "cough",
-        "importance": 2
-      },
-      {
         "lemma": "count",
         "importance": 2
       },
@@ -20283,10 +20803,6 @@
       },
       {
         "lemma": "curate",
-        "importance": 2
-      },
-      {
-        "lemma": "cut",
         "importance": 2
       },
       {
@@ -20367,10 +20883,6 @@
       },
       {
         "lemma": "delete",
-        "importance": 2
-      },
-      {
-        "lemma": "deliver",
         "importance": 2
       },
       {
@@ -20878,10 +21390,6 @@
         "importance": 2
       },
       {
-        "lemma": "examine",
-        "importance": 2
-      },
-      {
         "lemma": "exceed",
         "importance": 2
       },
@@ -20899,10 +21407,6 @@
       },
       {
         "lemma": "execute",
-        "importance": 2
-      },
-      {
-        "lemma": "exercise",
         "importance": 2
       },
       {
@@ -20931,10 +21435,6 @@
       },
       {
         "lemma": "expedite",
-        "importance": 2
-      },
-      {
-        "lemma": "expire",
         "importance": 2
       },
       {
@@ -21270,10 +21770,6 @@
         "importance": 2
       },
       {
-        "lemma": "hospitalize",
-        "importance": 2
-      },
-      {
         "lemma": "hover",
         "importance": 2
       },
@@ -21446,10 +21942,6 @@
         "importance": 2
       },
       {
-        "lemma": "inject",
-        "importance": 2
-      },
-      {
         "lemma": "injure",
         "importance": 2
       },
@@ -21574,10 +22066,6 @@
         "importance": 2
       },
       {
-        "lemma": "itch",
-        "importance": 2
-      },
-      {
         "lemma": "jeopardize",
         "importance": 2
       },
@@ -21643,10 +22131,6 @@
       },
       {
         "lemma": "leap",
-        "importance": 2
-      },
-      {
-        "lemma": "leave",
         "importance": 2
       },
       {
@@ -22522,10 +23006,6 @@
         "importance": 2
       },
       {
-        "lemma": "relax",
-        "importance": 2
-      },
-      {
         "lemma": "relegate",
         "importance": 2
       },
@@ -22962,10 +23442,6 @@
         "importance": 2
       },
       {
-        "lemma": "sleep",
-        "importance": 2
-      },
-      {
         "lemma": "slither",
         "importance": 2
       },
@@ -23282,10 +23758,6 @@
         "importance": 2
       },
       {
-        "lemma": "swallow",
-        "importance": 2
-      },
-      {
         "lemma": "swear",
         "importance": 2
       },
@@ -23295,10 +23767,6 @@
       },
       {
         "lemma": "sweep",
-        "importance": 2
-      },
-      {
-        "lemma": "swell",
         "importance": 2
       },
       {
@@ -23758,10 +24226,6 @@
         "importance": 2
       },
       {
-        "lemma": "acute",
-        "importance": 2
-      },
-      {
         "lemma": "ad lib",
         "importance": 2
       },
@@ -23907,10 +24371,6 @@
       },
       {
         "lemma": "allegorical",
-        "importance": 2
-      },
-      {
-        "lemma": "allergic",
         "importance": 2
       },
       {
@@ -24114,10 +24574,6 @@
         "importance": 2
       },
       {
-        "lemma": "asleep",
-        "importance": 2
-      },
-      {
         "lemma": "assistant",
         "importance": 2
       },
@@ -24238,10 +24694,6 @@
         "importance": 2
       },
       {
-        "lemma": "balanced",
-        "importance": 2
-      },
-      {
         "lemma": "bald",
         "importance": 2
       },
@@ -24335,10 +24787,6 @@
       },
       {
         "lemma": "blank",
-        "importance": 2
-      },
-      {
-        "lemma": "blind",
         "importance": 2
       },
       {
@@ -24647,10 +25095,6 @@
       },
       {
         "lemma": "climactic",
-        "importance": 2
-      },
-      {
-        "lemma": "clinical",
         "importance": 2
       },
       {
@@ -25030,10 +25474,6 @@
         "importance": 2
       },
       {
-        "lemma": "daily",
-        "importance": 2
-      },
-      {
         "lemma": "damaged",
         "importance": 2
       },
@@ -25142,10 +25582,6 @@
         "importance": 2
       },
       {
-        "lemma": "dental",
-        "importance": 2
-      },
-      {
         "lemma": "dependable",
         "importance": 2
       },
@@ -25155,14 +25591,6 @@
       },
       {
         "lemma": "depraved",
-        "importance": 2
-      },
-      {
-        "lemma": "depressed",
-        "importance": 2
-      },
-      {
-        "lemma": "depressing",
         "importance": 2
       },
       {
@@ -25339,10 +25767,6 @@
       },
       {
         "lemma": "divorced",
-        "importance": 2
-      },
-      {
-        "lemma": "dizzy",
         "importance": 2
       },
       {
@@ -25723,10 +26147,6 @@
       },
       {
         "lemma": "executive",
-        "importance": 2
-      },
-      {
-        "lemma": "exhausting",
         "importance": 2
       },
       {
@@ -27270,10 +27690,6 @@
         "importance": 2
       },
       {
-        "lemma": "long-term",
-        "importance": 2
-      },
-      {
         "lemma": "loose",
         "importance": 2
       },
@@ -27798,10 +28214,6 @@
         "importance": 2
       },
       {
-        "lemma": "newborn",
-        "importance": 2
-      },
-      {
         "lemma": "newsworthy",
         "importance": 2
       },
@@ -28071,10 +28483,6 @@
       },
       {
         "lemma": "oversize",
-        "importance": 2
-      },
-      {
-        "lemma": "overweight",
         "importance": 2
       },
       {
@@ -28423,10 +28831,6 @@
       },
       {
         "lemma": "preferable",
-        "importance": 2
-      },
-      {
-        "lemma": "pregnant",
         "importance": 2
       },
       {
@@ -28831,14 +29235,6 @@
       },
       {
         "lemma": "relative",
-        "importance": 2
-      },
-      {
-        "lemma": "relaxed",
-        "importance": 2
-      },
-      {
-        "lemma": "relaxing",
         "importance": 2
       },
       {
@@ -29354,14 +29750,6 @@
         "importance": 2
       },
       {
-        "lemma": "sleepless",
-        "importance": 2
-      },
-      {
-        "lemma": "sleepy",
-        "importance": 2
-      },
-      {
         "lemma": "slim",
         "importance": 2
       },
@@ -29606,14 +29994,6 @@
         "importance": 2
       },
       {
-        "lemma": "stressed",
-        "importance": 2
-      },
-      {
-        "lemma": "stressful",
-        "importance": 2
-      },
-      {
         "lemma": "stricken",
         "importance": 2
       },
@@ -29787,10 +30167,6 @@
       },
       {
         "lemma": "sympathetic",
-        "importance": 2
-      },
-      {
-        "lemma": "symptomatic",
         "importance": 2
       },
       {
@@ -30374,10 +30750,6 @@
         "importance": 2
       },
       {
-        "lemma": "unhealthy",
-        "importance": 2
-      },
-      {
         "lemma": "unheard",
         "importance": 2
       },
@@ -30835,10 +31207,6 @@
       },
       {
         "lemma": "weird",
-        "importance": 2
-      },
-      {
-        "lemma": "well-balanced",
         "importance": 2
       },
       {
@@ -33554,10 +33922,6 @@
         "importance": 2
       },
       {
-        "lemma": "regularly",
-        "importance": 2
-      },
-      {
         "lemma": "relatively",
         "importance": 2
       },
@@ -34155,10 +34519,6 @@
       },
       {
         "lemma": "truly",
-        "importance": 2
-      },
-      {
-        "lemma": "twice",
         "importance": 2
       },
       {

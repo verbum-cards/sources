@@ -293,7 +293,8 @@
     "nativeLang": "ru",
     "title": "Скорая помощь",
     "categories": [
-      "abroad"
+      "abroad",
+      "health"
     ],
     "type": "official",
     "items": [
@@ -679,7 +680,8 @@
     "nativeLang": "ru",
     "title": "Медицинская страховка",
     "categories": [
-      "abroad"
+      "abroad",
+      "health"
     ],
     "type": "official",
     "items": [
