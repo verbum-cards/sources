@@ -1,0 +1,18 @@
+{
+  "id": "0195d000-0000-7000-8000-000000000001",
+  "lang": "en",
+  "nativeLang": "ru",
+  "title": "Ресторан и кафе",
+  "categories": [
+    "basics"
+  ],
+  "type": "official",
+  "context": {
+    "situation": "",
+    "roles": {},
+    "register": "",
+    "branches": [],
+    "cultureNotes": []
+  },
+  "items": []
+}

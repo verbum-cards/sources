@@ -72,3 +72,29 @@
 Колонки: `lemma, pos, seedLevel, ipaUs, ipaUk`.
 
 9895 строк `cefr_seed.csv` → 9777 слов (118 схлопнутых дублей).
+
+## decks.json
+
+Источник правды для официальных колод (ADR-35) — куратор (skill
+deck-authoring) правит этот файл, не `apps/mobile/src/mocks/decks.ts`.
+Формат: массив колод `{ id, lang, nativeLang, title, categories, type,
+context?, items }`, где `items` — ссылки на слова по лемме (`{lemma,
+importance}`), не готовые данные слова — само слово (перевод, примеры, IPA)
+берётся из `WORDS` (`apps/mobile/src/mocks/words.ts`) на этапе сборки.
+`categories` — значения `DeckCategorySchema` (`@cards/contracts`), колода
+может быть в нескольких сразу; пустой массив — не категория (так у служебной
+«Проверки партий», `REVIEW_DECK_ID`).
+
+Собирается и проверяется `apps/api/scripts/dictionary/build-decks.ts`
+(`npm run build-decks --workspace=@cards/api`) — без сети: схема (zod),
+уникальность `id`, что каждая `lemma` реально есть в `WORDS`, что слово
+(itemId) не встречается в двух колодах сразу. Результат —
+`apps/mobile/src/mocks/decks-data.json`, который `mocks/decks.ts` импортирует
+и резолвит в полные `DeckWord` (`wordByLemma`). `apps/mobile` не может
+импортировать `data/` напрямую — Metro резолвит модули только внутри своего
+root, поэтому нужен этот промежуточный, уже провалидированный файл внутри
+`apps/mobile/src`.
+
+`apps/api/scripts/dictionary/generate-senses.ts` сам дописывает сюда леммы
+успешно сгенерированных слов — в items служебной колоды «Проверка партий» — и
+пересобирает `decks-data.json` тем же `buildDecksData()`.

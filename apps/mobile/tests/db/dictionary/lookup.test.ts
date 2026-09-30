@@ -34,7 +34,11 @@ test('searchPackWordsByPrefix: короче 2 символов -> пусто', a
 test('searchPackWordsByPrefix: находит точный префикс леммы, без учёта регистра', async () => {
   const { db } = await setupPack();
 
-  const results = await searchPackWordsByPrefix(db, 'MEN');
+  // Не 'MEN' — при росте словаря у этого префикса уже больше 8 совпадений
+  // (menace, mental, mention...), 'menu' может не попасть в лимит выдачи.
+  // 'MENU' сам по себе даёт то же самое (регистр, префиксный поиск), но без
+  // риска столкнуться с лимитом при добавлении новых слов.
+  const results = await searchPackWordsByPrefix(db, 'MENU');
   assert.ok(results.some((word) => word.lemma === 'menu'));
 });
 

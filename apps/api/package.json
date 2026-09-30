@@ -11,6 +11,7 @@
     "test": "node --import tsx --test scripts/**/*.test.ts",
     "build-seed": "tsx scripts/dictionary/build-seed.ts",
     "prepare-llm-inputs": "tsx scripts/dictionary/prepare-llm-inputs.ts",
-    "generate-senses": "tsx scripts/dictionary/generate-senses.ts"
+    "generate-senses": "tsx scripts/dictionary/generate-senses.ts",
+    "build-decks": "tsx scripts/dictionary/build-decks.ts"
   }
 }

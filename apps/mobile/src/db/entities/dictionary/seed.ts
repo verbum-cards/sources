@@ -108,23 +108,38 @@ async function seedDeck(db: DbExecutor, deck: MockDeck): Promise<void> {
 // Слова из колод уже входят в WORDS (mocks/decks.ts ссылается на них по
 // лемме) — seedWord для них не повторяется в seedDeck, там только сама
 // колода и её ссылки (deck_item) на уже засеянные значения/выражения.
+//
+// Одна транзакция на весь сид, а не по инструкции — без неё каждый INSERT
+// (их ~6 на слово: lexeme, sense, translation, 2×example+перевод,
+// search_term) коммитится на диск отдельно; при росте словаря до тысяч слов
+// (skill dictionary-pipeline целится в 5 000–20 000) это разворачивается на
+// устройстве при первом запуске и легко выйдет за бюджет холодного старта
+// (apps/mobile/CLAUDE.md). BEGIN EXCLUSIVE — тот же приём, что и в
+// migrate.ts, пакет в этот момент ещё не отдан читателям.
 export async function seedDictionaryPackage(
   db: DbExecutor,
   builtAt: string = new Date().toISOString()
 ): Promise<void> {
-  for (const word of WORDS) {
-    await seedWord(db, word);
-  }
-  for (const deck of DECKS) {
-    await seedDeck(db, deck);
-  }
+  await db.execRaw('BEGIN EXCLUSIVE');
+  try {
+    for (const word of WORDS) {
+      await seedWord(db, word);
+    }
+    for (const deck of DECKS) {
+      await seedDeck(db, deck);
+    }
 
-  const senseCount = WORDS.filter((word) => word.itemType === 'sense').length;
-  await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'content_version'`, ['1']);
-  await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'sense_count'`, [String(senseCount)]);
-  await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'built_at'`, [builtAt]);
-  await db.run(`INSERT INTO pack_meta (key, value) VALUES (?, ?)`, [
-    'seed_source_hash',
-    computeSeedSourceHash(),
-  ]);
+    const senseCount = WORDS.filter((word) => word.itemType === 'sense').length;
+    await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'content_version'`, ['1']);
+    await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'sense_count'`, [String(senseCount)]);
+    await db.run(`UPDATE pack_meta SET value = ? WHERE key = 'built_at'`, [builtAt]);
+    await db.run(`INSERT INTO pack_meta (key, value) VALUES (?, ?)`, [
+      'seed_source_hash',
+      computeSeedSourceHash(),
+    ]);
+    await db.execRaw('COMMIT');
+  } catch (err) {
+    await db.execRaw('ROLLBACK');
+    throw err;
+  }
 }
