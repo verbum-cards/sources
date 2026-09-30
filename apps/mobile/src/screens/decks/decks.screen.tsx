@@ -1,6 +1,6 @@
 import React, { useEffect, useImperativeHandle, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, SectionList, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   Briefcase,
@@ -661,75 +661,98 @@ const DeckDetail = ({
 
   return (
     <SafeAreaView edges={['top']} style={{ flex: 1, backgroundColor: colors.paper }}>
-      <ScrollView contentContainerStyle={{ padding: space[5], gap: space[4] }}>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('back')}
-          onPress={onBack}
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            gap: space[1],
-            minHeight: 44,
-            alignSelf: 'flex-start',
-          }}
-        >
-          <ChevronLeft size={20} color={colors.inkMuted} />
-          <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
-        </Pressable>
+      <SectionList
+        contentContainerStyle={{ padding: space[5] }}
+        // Виртуализация (не ScrollView + map по всем словам разом) — у
+        // служебной колоды «Проверка партий» бывают тысячи карточек, без
+        // неё экран подвисал на монтировании всех WordRow одновременно.
+        sections={groupWords(deck.items).map((group) => ({
+          title: group.category,
+          data: group.items,
+        }))}
+        keyExtractor={(word) => `${word.itemType}:${word.itemId}`}
+        ListHeaderComponent={
+          <View style={{ gap: space[4], marginBottom: space[2] }}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={t('back')}
+              onPress={onBack}
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: space[1],
+                minHeight: 44,
+                alignSelf: 'flex-start',
+              }}
+            >
+              <ChevronLeft size={20} color={colors.inkMuted} />
+              <Text style={[type.bodyS, { color: colors.inkMuted }]}>{t('back')}</Text>
+            </Pressable>
 
-        <View style={{ gap: space[2] }}>
-          <Text
-            accessibilityRole="header"
-            style={[type.displayL, { fontSize: 32, color: colors.ink }]}
-          >
-            {deck.title}
-          </Text>
-          {deck.context ? (
-            <Text style={[type.body, { color: colors.inkMuted }]}>{deck.context.situation}</Text>
-          ) : null}
-        </View>
-
-        <View style={{ gap: space[4] }}>
-          {groupWords(deck.items).map((group) => (
-            <View key={group.category} style={{ gap: space[2] }}>
+            <View style={{ gap: space[2] }}>
               <Text
                 accessibilityRole="header"
-                style={[type.button, { fontSize: 15, color: colors.ink }]}
+                style={[type.displayL, { fontSize: 32, color: colors.ink }]}
               >
-                {t(`categories.${group.category}`)}
+                {deck.title}
               </Text>
-              <View
-                style={{
-                  backgroundColor: colors.surface,
-                  borderRadius: radius.md,
-                  borderWidth: 1,
-                  borderColor: colors.line,
-                  overflow: 'hidden',
-                }}
-              >
-                {group.items.map((word, i, all) => (
-                  <WordRow
-                    key={word.itemId}
-                    word={word.lemma}
-                    ipa={word.ipa}
-                    cefr={word.cefr}
-                    translation={word.translation}
-                    last={i === all.length - 1}
-                    // Вся колода уже добавлена — галочка/плюс на каждом слове
-                    // ничего не сообщают (по определению уже добавлено) и
-                    // выглядят как приглашение добавить то, что и так есть.
-                    added={isAdded ? undefined : isDeckWordAdded(addedItemIds ?? new Set(), word)}
-                    addLabel={isAdded ? undefined : t('addWord')}
-                    onAdd={isAdded ? undefined : () => void handleAddWord(word)}
-                    onPress={() => setSelectedWord(word)}
-                  />
-                ))}
-              </View>
+              {deck.context ? (
+                <Text style={[type.body, { color: colors.inkMuted }]}>
+                  {deck.context.situation}
+                </Text>
+              ) : null}
             </View>
-          ))}
-        </View>
-      </ScrollView>
+          </View>
+        }
+        renderSectionHeader={({ section }) => (
+          <Text
+            accessibilityRole="header"
+            style={[
+              type.button,
+              { fontSize: 15, color: colors.ink, marginTop: space[4], marginBottom: space[2] },
+            ]}
+          >
+            {t(`categories.${section.title}`)}
+          </Text>
+        )}
+        renderItem={({ item: word, index, section }) => {
+          const isFirst = index === 0;
+          const isLast = index === section.data.length - 1;
+
+          return (
+            <View
+              style={{
+                backgroundColor: colors.surface,
+                borderColor: colors.line,
+                borderLeftWidth: 1,
+                borderRightWidth: 1,
+                borderTopWidth: isFirst ? 1 : 0,
+                borderBottomWidth: isLast ? 1 : 0,
+                borderTopLeftRadius: isFirst ? radius.md : 0,
+                borderTopRightRadius: isFirst ? radius.md : 0,
+                borderBottomLeftRadius: isLast ? radius.md : 0,
+                borderBottomRightRadius: isLast ? radius.md : 0,
+                overflow: 'hidden',
+              }}
+            >
+              <WordRow
+                word={word.lemma}
+                ipa={word.ipa}
+                cefr={word.cefr}
+                translation={word.translation}
+                last={isLast}
+                // Вся колода уже добавлена — галочка/плюс на каждом слове
+                // ничего не сообщают (по определению уже добавлено) и
+                // выглядят как приглашение добавить то, что и так есть.
+                added={isAdded ? undefined : isDeckWordAdded(addedItemIds ?? new Set(), word)}
+                addLabel={isAdded ? undefined : t('addWord')}
+                onAdd={isAdded ? undefined : () => void handleAddWord(word)}
+                onPress={() => setSelectedWord(word)}
+              />
+            </View>
+          );
+        }}
+      />
 
       <View
         style={{
