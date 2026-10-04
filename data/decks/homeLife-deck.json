@@ -72,6 +72,30 @@
       {
         "lemma": "cooler",
         "importance": 2
+      },
+      {
+        "lemma": "saucer",
+        "importance": 2
+      },
+      {
+        "lemma": "jar",
+        "importance": 2
+      },
+      {
+        "lemma": "jug",
+        "importance": 2
+      },
+      {
+        "lemma": "freezer",
+        "importance": 2
+      },
+      {
+        "lemma": "cellar",
+        "importance": 2
+      },
+      {
+        "lemma": "cardboard",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -169,6 +193,14 @@
       {
         "lemma": "barbecue",
         "importance": 2
+      },
+      {
+        "lemma": "finely",
+        "importance": 2
+      },
+      {
+        "lemma": "herb",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -238,6 +270,26 @@
       {
         "lemma": "wipe",
         "importance": 2
+      },
+      {
+        "lemma": "dirt",
+        "importance": 2
+      },
+      {
+        "lemma": "refuse",
+        "importance": 2
+      },
+      {
+        "lemma": "housework",
+        "importance": 2
+      },
+      {
+        "lemma": "disposal",
+        "importance": 2
+      },
+      {
+        "lemma": "germ",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -298,6 +350,10 @@
       },
       {
         "lemma": "stain",
+        "importance": 2
+      },
+      {
+        "lemma": "crease",
         "importance": 2
       }
     ],
@@ -367,6 +423,26 @@
       },
       {
         "lemma": "bathhouse",
+        "importance": 2
+      },
+      {
+        "lemma": "basin",
+        "importance": 2
+      },
+      {
+        "lemma": "sponge",
+        "importance": 2
+      },
+      {
+        "lemma": "tissue",
+        "importance": 2
+      },
+      {
+        "lemma": "razor",
+        "importance": 2
+      },
+      {
+        "lemma": "drain",
         "importance": 2
       }
     ],
@@ -462,6 +538,26 @@
       {
         "lemma": "wire",
         "importance": 2
+      },
+      {
+        "lemma": "equipment",
+        "importance": 2
+      },
+      {
+        "lemma": "pump",
+        "importance": 2
+      },
+      {
+        "lemma": "blade",
+        "importance": 2
+      },
+      {
+        "lemma": "bolt",
+        "importance": 2
+      },
+      {
+        "lemma": "ax",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -522,6 +618,14 @@
       },
       {
         "lemma": "wallboard",
+        "importance": 2
+      },
+      {
+        "lemma": "brick",
+        "importance": 2
+      },
+      {
+        "lemma": "chimney",
         "importance": 2
       }
     ],
@@ -776,6 +880,14 @@
       {
         "lemma": "knock",
         "importance": 2
+      },
+      {
+        "lemma": "handshake",
+        "importance": 2
+      },
+      {
+        "lemma": "nod",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -816,6 +928,10 @@
       },
       {
         "lemma": "intruder",
+        "importance": 2
+      },
+      {
+        "lemma": "hazardous",
         "importance": 2
       }
     ],

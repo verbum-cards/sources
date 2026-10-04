@@ -169,6 +169,10 @@
       {
         "lemma": "cheque",
         "importance": 2
+      },
+      {
+        "lemma": "slip",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -334,6 +338,26 @@
       },
       {
         "lemma": "metal",
+        "importance": 2
+      },
+      {
+        "lemma": "bronze",
+        "importance": 2
+      },
+      {
+        "lemma": "brass",
+        "importance": 2
+      },
+      {
+        "lemma": "navy blue",
+        "importance": 2
+      },
+      {
+        "lemma": "marble",
+        "importance": 2
+      },
+      {
+        "lemma": "strip",
         "importance": 2
       }
     ],
@@ -568,6 +592,134 @@
       {
         "lemma": "champagne",
         "importance": 2
+      },
+      {
+        "lemma": "broccoli",
+        "importance": 2
+      },
+      {
+        "lemma": "cabbage",
+        "importance": 2
+      },
+      {
+        "lemma": "courgette",
+        "importance": 2
+      },
+      {
+        "lemma": "cucumber",
+        "importance": 2
+      },
+      {
+        "lemma": "chewing gum",
+        "importance": 2
+      },
+      {
+        "lemma": "cod",
+        "importance": 2
+      },
+      {
+        "lemma": "canned",
+        "importance": 2
+      },
+      {
+        "lemma": "pineapple",
+        "importance": 2
+      },
+      {
+        "lemma": "pork",
+        "importance": 2
+      },
+      {
+        "lemma": "raspberry",
+        "importance": 2
+      },
+      {
+        "lemma": "spinach",
+        "importance": 2
+      },
+      {
+        "lemma": "strawberry",
+        "importance": 2
+      },
+      {
+        "lemma": "salmon",
+        "importance": 2
+      },
+      {
+        "lemma": "shrimp",
+        "importance": 2
+      },
+      {
+        "lemma": "pie",
+        "importance": 2
+      },
+      {
+        "lemma": "spice",
+        "importance": 2
+      },
+      {
+        "lemma": "ginger",
+        "importance": 2
+      },
+      {
+        "lemma": "gravy",
+        "importance": 2
+      },
+      {
+        "lemma": "lettuce",
+        "importance": 2
+      },
+      {
+        "lemma": "mustard",
+        "importance": 2
+      },
+      {
+        "lemma": "loaf",
+        "importance": 2
+      },
+      {
+        "lemma": "tuna",
+        "importance": 2
+      },
+      {
+        "lemma": "berry",
+        "importance": 2
+      },
+      {
+        "lemma": "aubergine",
+        "importance": 2
+      },
+      {
+        "lemma": "barley",
+        "importance": 2
+      },
+      {
+        "lemma": "cherry",
+        "importance": 2
+      },
+      {
+        "lemma": "coconut",
+        "importance": 2
+      },
+      {
+        "lemma": "cocoa",
+        "importance": 2
+      },
+      {
+        "lemma": "bun",
+        "importance": 2
+      },
+      {
+        "lemma": "clam",
+        "importance": 2
+      },
+      {
+        "lemma": "delicacy",
+        "importance": 2
+      },
+      {
+        "lemma": "gum",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -612,6 +764,14 @@
       },
       {
         "lemma": "stand",
+        "importance": 2
+      },
+      {
+        "lemma": "booth",
+        "importance": 2
+      },
+      {
+        "lemma": "grain",
         "importance": 2
       }
     ],
@@ -697,6 +857,18 @@
       },
       {
         "lemma": "make-up",
+        "importance": 2
+      },
+      {
+        "lemma": "dye",
+        "importance": 2
+      },
+      {
+        "lemma": "fragrance",
+        "importance": 2
+      },
+      {
+        "lemma": "powder",
         "importance": 2
       }
     ],
@@ -832,6 +1004,78 @@
       {
         "lemma": "television",
         "importance": 2
+      },
+      {
+        "lemma": "CD-ROM",
+        "importance": 2
+      },
+      {
+        "lemma": "calculator",
+        "importance": 2
+      },
+      {
+        "lemma": "blog",
+        "importance": 2
+      },
+      {
+        "lemma": "electrical",
+        "importance": 2
+      },
+      {
+        "lemma": "disk",
+        "importance": 2
+      },
+      {
+        "lemma": "clip",
+        "importance": 2
+      },
+      {
+        "lemma": "photocopy",
+        "importance": 2
+      },
+      {
+        "lemma": "remote control",
+        "importance": 2
+      },
+      {
+        "lemma": "switch",
+        "importance": 2
+      },
+      {
+        "lemma": "tablet",
+        "importance": 2
+      },
+      {
+        "lemma": "plug",
+        "importance": 2
+      },
+      {
+        "lemma": "modem",
+        "importance": 2
+      },
+      {
+        "lemma": "monitor",
+        "importance": 2
+      },
+      {
+        "lemma": "loudspeaker",
+        "importance": 2
+      },
+      {
+        "lemma": "webcam",
+        "importance": 2
+      },
+      {
+        "lemma": "video clip",
+        "importance": 2
+      },
+      {
+        "lemma": "amplifier",
+        "importance": 2
+      },
+      {
+        "lemma": "bookmark",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -896,6 +1140,14 @@
       },
       {
         "lemma": "salesmanship",
+        "importance": 2
+      },
+      {
+        "lemma": "giveaway",
+        "importance": 2
+      },
+      {
+        "lemma": "impulse",
         "importance": 2
       }
     ],
@@ -1044,6 +1296,10 @@
       {
         "lemma": "diamond",
         "importance": 2
+      },
+      {
+        "lemma": "sticker",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1190,6 +1446,58 @@
       },
       {
         "lemma": "upstairs",
+        "importance": 2
+      },
+      {
+        "lemma": "basement",
+        "importance": 2
+      },
+      {
+        "lemma": "bureau",
+        "importance": 2
+      },
+      {
+        "lemma": "carpet",
+        "importance": 2
+      },
+      {
+        "lemma": "chest of drawers",
+        "importance": 2
+      },
+      {
+        "lemma": "air conditioning",
+        "importance": 2
+      },
+      {
+        "lemma": "duvet",
+        "importance": 2
+      },
+      {
+        "lemma": "pillow",
+        "importance": 2
+      },
+      {
+        "lemma": "sheet",
+        "importance": 2
+      },
+      {
+        "lemma": "tin",
+        "importance": 2
+      },
+      {
+        "lemma": "heater",
+        "importance": 2
+      },
+      {
+        "lemma": "backyard",
+        "importance": 2
+      },
+      {
+        "lemma": "cabinet",
+        "importance": 2
+      },
+      {
+        "lemma": "drapery",
         "importance": 2
       }
     ],

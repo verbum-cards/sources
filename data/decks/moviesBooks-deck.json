@@ -64,6 +64,30 @@
       {
         "lemma": "mysterious",
         "importance": 2
+      },
+      {
+        "lemma": "narrative",
+        "importance": 2
+      },
+      {
+        "lemma": "science fiction",
+        "importance": 2
+      },
+      {
+        "lemma": "tragedy",
+        "importance": 2
+      },
+      {
+        "lemma": "tragic",
+        "importance": 2
+      },
+      {
+        "lemma": "soap opera",
+        "importance": 2
+      },
+      {
+        "lemma": "tale",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -302,6 +326,10 @@
       {
         "lemma": "hey",
         "importance": 2
+      },
+      {
+        "lemma": "dude",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -330,6 +358,14 @@
     "items": [
       {
         "lemma": "idiom",
+        "importance": 2
+      },
+      {
+        "lemma": "figurative",
+        "importance": 2
+      },
+      {
+        "lemma": "proverb",
         "importance": 2
       }
     ],
@@ -425,6 +461,14 @@
       {
         "lemma": "nervously",
         "importance": 2
+      },
+      {
+        "lemma": "evil",
+        "importance": 2
+      },
+      {
+        "lemma": "grim",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -493,6 +537,14 @@
       },
       {
         "lemma": "spy",
+        "importance": 2
+      },
+      {
+        "lemma": "culmination",
+        "importance": 2
+      },
+      {
+        "lemma": "fictional",
         "importance": 2
       }
     ],
@@ -564,6 +616,10 @@
       },
       {
         "lemma": "librarian",
+        "importance": 2
+      },
+      {
+        "lemma": "encyclopedia",
         "importance": 2
       }
     ],
@@ -683,6 +739,22 @@
       },
       {
         "lemma": "score",
+        "importance": 2
+      },
+      {
+        "lemma": "entertaining",
+        "importance": 2
+      },
+      {
+        "lemma": "exceptional",
+        "importance": 2
+      },
+      {
+        "lemma": "flawless",
+        "importance": 2
+      },
+      {
+        "lemma": "hilarious",
         "importance": 2
       }
     ],

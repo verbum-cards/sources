@@ -184,6 +184,338 @@
       {
         "lemma": "shout",
         "importance": 2
+      },
+      {
+        "lemma": "amazed",
+        "importance": 2
+      },
+      {
+        "lemma": "anger",
+        "importance": 2
+      },
+      {
+        "lemma": "annoyance",
+        "importance": 2
+      },
+      {
+        "lemma": "annoyed",
+        "importance": 2
+      },
+      {
+        "lemma": "awkward",
+        "importance": 2
+      },
+      {
+        "lemma": "boredom",
+        "importance": 2
+      },
+      {
+        "lemma": "bore",
+        "importance": 2
+      },
+      {
+        "lemma": "curiosity",
+        "importance": 2
+      },
+      {
+        "lemma": "curiously",
+        "importance": 2
+      },
+      {
+        "lemma": "desire",
+        "importance": 2
+      },
+      {
+        "lemma": "despair",
+        "importance": 2
+      },
+      {
+        "lemma": "desperate",
+        "importance": 2
+      },
+      {
+        "lemma": "delight",
+        "importance": 2
+      },
+      {
+        "lemma": "delightful",
+        "importance": 2
+      },
+      {
+        "lemma": "disappoint",
+        "importance": 2
+      },
+      {
+        "lemma": "disappointment",
+        "importance": 2
+      },
+      {
+        "lemma": "embarrass",
+        "importance": 2
+      },
+      {
+        "lemma": "embarrassed",
+        "importance": 2
+      },
+      {
+        "lemma": "embarrassment",
+        "importance": 2
+      },
+      {
+        "lemma": "excitement",
+        "importance": 2
+      },
+      {
+        "lemma": "eagerness",
+        "importance": 2
+      },
+      {
+        "lemma": "blush",
+        "importance": 2
+      },
+      {
+        "lemma": "chuckle",
+        "importance": 2
+      },
+      {
+        "lemma": "concerned",
+        "importance": 2
+      },
+      {
+        "lemma": "confusion",
+        "importance": 2
+      },
+      {
+        "lemma": "discomfort",
+        "importance": 2
+      },
+      {
+        "lemma": "overjoyed",
+        "importance": 2
+      },
+      {
+        "lemma": "shame",
+        "importance": 2
+      },
+      {
+        "lemma": "shameful",
+        "importance": 2
+      },
+      {
+        "lemma": "sorrow",
+        "importance": 2
+      },
+      {
+        "lemma": "terrified",
+        "importance": 2
+      },
+      {
+        "lemma": "suspicion",
+        "importance": 2
+      },
+      {
+        "lemma": "tension",
+        "importance": 2
+      },
+      {
+        "lemma": "fright",
+        "importance": 2
+      },
+      {
+        "lemma": "hopeful",
+        "importance": 2
+      },
+      {
+        "lemma": "hopeless",
+        "importance": 2
+      },
+      {
+        "lemma": "misery",
+        "importance": 2
+      },
+      {
+        "lemma": "miserable",
+        "importance": 2
+      },
+      {
+        "lemma": "fondness",
+        "importance": 2
+      },
+      {
+        "lemma": "fond",
+        "importance": 2
+      },
+      {
+        "lemma": "horrify",
+        "importance": 2
+      },
+      {
+        "lemma": "hatred",
+        "importance": 2
+      },
+      {
+        "lemma": "urge",
+        "importance": 2
+      },
+      {
+        "lemma": "willingness",
+        "importance": 2
+      },
+      {
+        "lemma": "amazement",
+        "importance": 2
+      },
+      {
+        "lemma": "astonishment",
+        "importance": 2
+      },
+      {
+        "lemma": "astonished",
+        "importance": 2
+      },
+      {
+        "lemma": "astonishing",
+        "importance": 2
+      },
+      {
+        "lemma": "awe",
+        "importance": 2
+      },
+      {
+        "lemma": "bewilderment",
+        "importance": 2
+      },
+      {
+        "lemma": "giggle",
+        "importance": 2
+      },
+      {
+        "lemma": "sigh",
+        "importance": 2
+      },
+      {
+        "lemma": "uplifted",
+        "importance": 2
+      },
+      {
+        "lemma": "benevolence",
+        "importance": 2
+      },
+      {
+        "lemma": "bravery",
+        "importance": 2
+      },
+      {
+        "lemma": "cherished",
+        "importance": 2
+      },
+      {
+        "lemma": "compassion",
+        "importance": 2
+      },
+      {
+        "lemma": "yell",
+        "importance": 2
+      },
+      {
+        "lemma": "coziness",
+        "importance": 2
+      },
+      {
+        "lemma": "desperation",
+        "importance": 2
+      },
+      {
+        "lemma": "disapproval",
+        "importance": 2
+      },
+      {
+        "lemma": "displeasure",
+        "importance": 2
+      },
+      {
+        "lemma": "dissatisfaction",
+        "importance": 2
+      },
+      {
+        "lemma": "dissatisfied",
+        "importance": 2
+      },
+      {
+        "lemma": "distressing",
+        "importance": 2
+      },
+      {
+        "lemma": "dread",
+        "importance": 2
+      },
+      {
+        "lemma": "dreadful",
+        "importance": 2
+      },
+      {
+        "lemma": "dreamy",
+        "importance": 2
+      },
+      {
+        "lemma": "ecstatic",
+        "importance": 2
+      },
+      {
+        "lemma": "detachment",
+        "importance": 2
+      },
+      {
+        "lemma": "disillusion",
+        "importance": 2
+      },
+      {
+        "lemma": "fascination",
+        "importance": 2
+      },
+      {
+        "lemma": "fed up",
+        "importance": 2
+      },
+      {
+        "lemma": "furious",
+        "importance": 2
+      },
+      {
+        "lemma": "gasp",
+        "importance": 2
+      },
+      {
+        "lemma": "glare",
+        "importance": 2
+      },
+      {
+        "lemma": "glee",
+        "importance": 2
+      },
+      {
+        "lemma": "grin",
+        "importance": 2
+      },
+      {
+        "lemma": "impressed",
+        "importance": 2
+      },
+      {
+        "lemma": "indifferent",
+        "importance": 2
+      },
+      {
+        "lemma": "gross",
+        "importance": 2
+      },
+      {
+        "lemma": "irritating",
+        "importance": 2
+      },
+      {
+        "lemma": "irritation",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -289,6 +621,22 @@
       },
       {
         "lemma": "advice",
+        "importance": 2
+      },
+      {
+        "lemma": "encouraging",
+        "importance": 2
+      },
+      {
+        "lemma": "discourage",
+        "importance": 2
+      },
+      {
+        "lemma": "guidance",
+        "importance": 2
+      },
+      {
+        "lemma": "console",
         "importance": 2
       }
     ],
@@ -425,6 +773,10 @@
       {
         "lemma": "untalented",
         "importance": 2
+      },
+      {
+        "lemma": "fondly",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -489,6 +841,22 @@
       },
       {
         "lemma": "closeness",
+        "importance": 2
+      },
+      {
+        "lemma": "bond",
+        "importance": 2
+      },
+      {
+        "lemma": "buddy",
+        "importance": 2
+      },
+      {
+        "lemma": "companion",
+        "importance": 2
+      },
+      {
+        "lemma": "tease",
         "importance": 2
       }
     ],
@@ -579,6 +947,74 @@
       {
         "lemma": "bride",
         "importance": 2
+      },
+      {
+        "lemma": "devotion",
+        "importance": 2
+      },
+      {
+        "lemma": "cherish",
+        "importance": 2
+      },
+      {
+        "lemma": "dating",
+        "importance": 2
+      },
+      {
+        "lemma": "engaged",
+        "importance": 2
+      },
+      {
+        "lemma": "marriage",
+        "importance": 2
+      },
+      {
+        "lemma": "honeymoon",
+        "importance": 2
+      },
+      {
+        "lemma": "groom",
+        "importance": 2
+      },
+      {
+        "lemma": "compatible",
+        "importance": 2
+      },
+      {
+        "lemma": "darling",
+        "importance": 2
+      },
+      {
+        "lemma": "devote",
+        "importance": 2
+      },
+      {
+        "lemma": "devoted",
+        "importance": 2
+      },
+      {
+        "lemma": "destiny",
+        "importance": 2
+      },
+      {
+        "lemma": "embrace",
+        "importance": 2
+      },
+      {
+        "lemma": "gaze",
+        "importance": 2
+      },
+      {
+        "lemma": "irresistible",
+        "importance": 2
+      },
+      {
+        "lemma": "irresistibly",
+        "importance": 2
+      },
+      {
+        "lemma": "inseparable",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -631,6 +1067,54 @@
       },
       {
         "lemma": "reconciliation",
+        "importance": 2
+      },
+      {
+        "lemma": "conflict",
+        "importance": 2
+      },
+      {
+        "lemma": "cheat",
+        "importance": 2
+      },
+      {
+        "lemma": "betray",
+        "importance": 2
+      },
+      {
+        "lemma": "bully",
+        "importance": 2
+      },
+      {
+        "lemma": "confront",
+        "importance": 2
+      },
+      {
+        "lemma": "contempt",
+        "importance": 2
+      },
+      {
+        "lemma": "deceive",
+        "importance": 2
+      },
+      {
+        "lemma": "deceptive",
+        "importance": 2
+      },
+      {
+        "lemma": "defy",
+        "importance": 2
+      },
+      {
+        "lemma": "despise",
+        "importance": 2
+      },
+      {
+        "lemma": "dispute",
+        "importance": 2
+      },
+      {
+        "lemma": "disregard",
         "importance": 2
       }
     ],
@@ -883,6 +1367,310 @@
       },
       {
         "lemma": "playful",
+        "importance": 2
+      },
+      {
+        "lemma": "ambitious",
+        "importance": 2
+      },
+      {
+        "lemma": "aggressive",
+        "importance": 2
+      },
+      {
+        "lemma": "bold",
+        "importance": 2
+      },
+      {
+        "lemma": "boldly",
+        "importance": 2
+      },
+      {
+        "lemma": "bravely",
+        "importance": 2
+      },
+      {
+        "lemma": "capable",
+        "importance": 2
+      },
+      {
+        "lemma": "careless",
+        "importance": 2
+      },
+      {
+        "lemma": "carelessly",
+        "importance": 2
+      },
+      {
+        "lemma": "carelessness",
+        "importance": 2
+      },
+      {
+        "lemma": "cautious",
+        "importance": 2
+      },
+      {
+        "lemma": "courageous",
+        "importance": 2
+      },
+      {
+        "lemma": "courage",
+        "importance": 2
+      },
+      {
+        "lemma": "cruel",
+        "importance": 2
+      },
+      {
+        "lemma": "diligent",
+        "importance": 2
+      },
+      {
+        "lemma": "diligence",
+        "importance": 2
+      },
+      {
+        "lemma": "distant",
+        "importance": 2
+      },
+      {
+        "lemma": "dull",
+        "importance": 2
+      },
+      {
+        "lemma": "earnest",
+        "importance": 2
+      },
+      {
+        "lemma": "easygoing",
+        "importance": 2
+      },
+      {
+        "lemma": "eager",
+        "importance": 2
+      },
+      {
+        "lemma": "enthusiastic",
+        "importance": 2
+      },
+      {
+        "lemma": "talkative",
+        "importance": 2
+      },
+      {
+        "lemma": "selfish",
+        "importance": 2
+      },
+      {
+        "lemma": "reliable",
+        "importance": 2
+      },
+      {
+        "lemma": "responsible",
+        "importance": 2
+      },
+      {
+        "lemma": "faithful",
+        "importance": 2
+      },
+      {
+        "lemma": "foolish",
+        "importance": 2
+      },
+      {
+        "lemma": "graceful",
+        "importance": 2
+      },
+      {
+        "lemma": "hard-working",
+        "importance": 2
+      },
+      {
+        "lemma": "hasty",
+        "importance": 2
+      },
+      {
+        "lemma": "humorous",
+        "importance": 2
+      },
+      {
+        "lemma": "vain",
+        "importance": 2
+      },
+      {
+        "lemma": "arrogant",
+        "importance": 2
+      },
+      {
+        "lemma": "bad-tempered",
+        "importance": 2
+      },
+      {
+        "lemma": "benevolent",
+        "importance": 2
+      },
+      {
+        "lemma": "authoritative",
+        "importance": 2
+      },
+      {
+        "lemma": "adventurous",
+        "importance": 2
+      },
+      {
+        "lemma": "appreciative",
+        "importance": 2
+      },
+      {
+        "lemma": "admirable",
+        "importance": 2
+      },
+      {
+        "lemma": "carefree",
+        "importance": 2
+      },
+      {
+        "lemma": "charming",
+        "importance": 2
+      },
+      {
+        "lemma": "cheeky",
+        "importance": 2
+      },
+      {
+        "lemma": "childish",
+        "importance": 2
+      },
+      {
+        "lemma": "clumsy",
+        "importance": 2
+      },
+      {
+        "lemma": "communicative",
+        "importance": 2
+      },
+      {
+        "lemma": "compassionate",
+        "importance": 2
+      },
+      {
+        "lemma": "attentive",
+        "importance": 2
+      },
+      {
+        "lemma": "cooperative",
+        "importance": 2
+      },
+      {
+        "lemma": "coward",
+        "importance": 2
+      },
+      {
+        "lemma": "cowardly",
+        "importance": 2
+      },
+      {
+        "lemma": "decent",
+        "importance": 2
+      },
+      {
+        "lemma": "decisive",
+        "importance": 2
+      },
+      {
+        "lemma": "deliberate",
+        "importance": 2
+      },
+      {
+        "lemma": "demanding",
+        "importance": 2
+      },
+      {
+        "lemma": "dependable",
+        "importance": 2
+      },
+      {
+        "lemma": "determined",
+        "importance": 2
+      },
+      {
+        "lemma": "bony",
+        "importance": 2
+      },
+      {
+        "lemma": "bookish",
+        "importance": 2
+      },
+      {
+        "lemma": "brag",
+        "importance": 2
+      },
+      {
+        "lemma": "complexion",
+        "importance": 2
+      },
+      {
+        "lemma": "conceit",
+        "importance": 2
+      },
+      {
+        "lemma": "curl",
+        "importance": 2
+      },
+      {
+        "lemma": "disposition",
+        "importance": 2
+      },
+      {
+        "lemma": "educated",
+        "importance": 2
+      },
+      {
+        "lemma": "elegance",
+        "importance": 2
+      },
+      {
+        "lemma": "elegant",
+        "importance": 2
+      },
+      {
+        "lemma": "eloquent",
+        "importance": 2
+      },
+      {
+        "lemma": "expressive",
+        "importance": 2
+      },
+      {
+        "lemma": "generosity",
+        "importance": 2
+      },
+      {
+        "lemma": "genius",
+        "importance": 2
+      },
+      {
+        "lemma": "orderly",
+        "importance": 2
+      },
+      {
+        "lemma": "humble",
+        "importance": 2
+      },
+      {
+        "lemma": "intellectual",
+        "importance": 2
+      },
+      {
+        "lemma": "hairy",
+        "importance": 2
+      },
+      {
+        "lemma": "guts",
+        "importance": 2
+      },
+      {
+        "lemma": "irresponsible",
         "importance": 2
       }
     ],

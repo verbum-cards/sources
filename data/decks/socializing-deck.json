@@ -176,7 +176,12 @@
       "socializing"
     ],
     "type": "official",
-    "items": [],
+    "items": [
+      {
+        "lemma": "exclaim",
+        "importance": 2
+      }
+    ],
     "importance": 2
   },
   {

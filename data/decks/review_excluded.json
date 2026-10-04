@@ -1,0 +1,601 @@
+[
+  {
+    "id": "0195d000-0000-7000-8000-00000000000d",
+    "lang": "en",
+    "nativeLang": "ru",
+    "title": "Проверка партий (Исключённые)",
+    "categories": [],
+    "type": "official",
+    "importance": 2,
+    "items": [
+      {
+        "lemma": "aborigine",
+        "importance": 2
+      },
+      {
+        "lemma": "advert",
+        "importance": 2
+      },
+      {
+        "lemma": "agriculture",
+        "importance": 2
+      },
+      {
+        "lemma": "air force",
+        "importance": 2
+      },
+      {
+        "lemma": "angle",
+        "importance": 2
+      },
+      {
+        "lemma": "anti",
+        "importance": 2
+      },
+      {
+        "lemma": "army",
+        "importance": 2
+      },
+      {
+        "lemma": "arrow",
+        "importance": 2
+      },
+      {
+        "lemma": "Atlantic",
+        "importance": 2
+      },
+      {
+        "lemma": "bang",
+        "importance": 2
+      },
+      {
+        "lemma": "barrel",
+        "importance": 2
+      },
+      {
+        "lemma": "battle",
+        "importance": 2
+      },
+      {
+        "lemma": "beast",
+        "importance": 2
+      },
+      {
+        "lemma": "behalf",
+        "importance": 2
+      },
+      {
+        "lemma": "bent",
+        "importance": 2
+      },
+      {
+        "lemma": "bishop",
+        "importance": 2
+      },
+      {
+        "lemma": "blessing",
+        "importance": 2
+      },
+      {
+        "lemma": "bomb",
+        "importance": 2
+      },
+      {
+        "lemma": "boom",
+        "importance": 2
+      },
+      {
+        "lemma": "bound",
+        "importance": 2
+      },
+      {
+        "lemma": "bow",
+        "importance": 2
+      },
+      {
+        "lemma": "brainstorming",
+        "importance": 2
+      },
+      {
+        "lemma": "brotherhood",
+        "importance": 2
+      },
+      {
+        "lemma": "bubble",
+        "importance": 2
+      },
+      {
+        "lemma": "bullet",
+        "importance": 2
+      },
+      {
+        "lemma": "bulletin",
+        "importance": 2
+      },
+      {
+        "lemma": "bunch",
+        "importance": 2
+      },
+      {
+        "lemma": "caller",
+        "importance": 2
+      },
+      {
+        "lemma": "carton",
+        "importance": 2
+      },
+      {
+        "lemma": "cell",
+        "importance": 2
+      },
+      {
+        "lemma": "chariot",
+        "importance": 2
+      },
+      {
+        "lemma": "charity",
+        "importance": 2
+      },
+      {
+        "lemma": "chase",
+        "importance": 2
+      },
+      {
+        "lemma": "checkout",
+        "importance": 2
+      },
+      {
+        "lemma": "Christian",
+        "importance": 2
+      },
+      {
+        "lemma": "circus",
+        "importance": 2
+      },
+      {
+        "lemma": "civilization",
+        "importance": 2
+      },
+      {
+        "lemma": "climber",
+        "importance": 2
+      },
+      {
+        "lemma": "coal",
+        "importance": 2
+      },
+      {
+        "lemma": "coffin",
+        "importance": 2
+      },
+      {
+        "lemma": "comet",
+        "importance": 2
+      },
+      {
+        "lemma": "compound",
+        "importance": 2
+      },
+      {
+        "lemma": "constitution",
+        "importance": 2
+      },
+      {
+        "lemma": "counseling",
+        "importance": 2
+      },
+      {
+        "lemma": "county",
+        "importance": 2
+      },
+      {
+        "lemma": "creator",
+        "importance": 2
+      },
+      {
+        "lemma": "curve",
+        "importance": 2
+      },
+      {
+        "lemma": "daze",
+        "importance": 2
+      },
+      {
+        "lemma": "dazzle",
+        "importance": 2
+      },
+      {
+        "lemma": "debris",
+        "importance": 2
+      },
+      {
+        "lemma": "declaration",
+        "importance": 2
+      },
+      {
+        "lemma": "deed",
+        "importance": 2
+      },
+      {
+        "lemma": "deficiency",
+        "importance": 2
+      },
+      {
+        "lemma": "democracy",
+        "importance": 2
+      },
+      {
+        "lemma": "democratic",
+        "importance": 2
+      },
+      {
+        "lemma": "dial",
+        "importance": 2
+      },
+      {
+        "lemma": "dioxide",
+        "importance": 2
+      },
+      {
+        "lemma": "discrimination",
+        "importance": 2
+      },
+      {
+        "lemma": "disturbance",
+        "importance": 2
+      },
+      {
+        "lemma": "divine",
+        "importance": 2
+      },
+      {
+        "lemma": "doc",
+        "importance": 2
+      },
+      {
+        "lemma": "dot",
+        "importance": 2
+      },
+      {
+        "lemma": "doze",
+        "importance": 2
+      },
+      {
+        "lemma": "dump",
+        "importance": 2
+      },
+      {
+        "lemma": "dynasty",
+        "importance": 2
+      },
+      {
+        "lemma": "ecstasy",
+        "importance": 2
+      },
+      {
+        "lemma": "edge",
+        "importance": 2
+      },
+      {
+        "lemma": "election",
+        "importance": 2
+      },
+      {
+        "lemma": "electron",
+        "importance": 2
+      },
+      {
+        "lemma": "emperor",
+        "importance": 2
+      },
+      {
+        "lemma": "empire",
+        "importance": 2
+      },
+      {
+        "lemma": "enemy",
+        "importance": 2
+      },
+      {
+        "lemma": "Englishman",
+        "importance": 2
+      },
+      {
+        "lemma": "enthusiast",
+        "importance": 2
+      },
+      {
+        "lemma": "entry",
+        "importance": 2
+      },
+      {
+        "lemma": "extinction",
+        "importance": 2
+      },
+      {
+        "lemma": "feverishly",
+        "importance": 2
+      },
+      {
+        "lemma": "fifth",
+        "importance": 2
+      },
+      {
+        "lemma": "first lady",
+        "importance": 2
+      },
+      {
+        "lemma": "first-floor",
+        "importance": 2
+      },
+      {
+        "lemma": "flash",
+        "importance": 2
+      },
+      {
+        "lemma": "flow",
+        "importance": 2
+      },
+      {
+        "lemma": "folk",
+        "importance": 2
+      },
+      {
+        "lemma": "funeral",
+        "importance": 2
+      },
+      {
+        "lemma": "furnish",
+        "importance": 2
+      },
+      {
+        "lemma": "gall",
+        "importance": 2
+      },
+      {
+        "lemma": "gay",
+        "importance": 2
+      },
+      {
+        "lemma": "gee",
+        "importance": 2
+      },
+      {
+        "lemma": "glance",
+        "importance": 2
+      },
+      {
+        "lemma": "glide",
+        "importance": 2
+      },
+      {
+        "lemma": "glimpse",
+        "importance": 2
+      },
+      {
+        "lemma": "glint",
+        "importance": 2
+      },
+      {
+        "lemma": "goddess",
+        "importance": 2
+      },
+      {
+        "lemma": "goodness",
+        "importance": 2
+      },
+      {
+        "lemma": "grave",
+        "importance": 2
+      },
+      {
+        "lemma": "hanging",
+        "importance": 2
+      },
+      {
+        "lemma": "harbor",
+        "importance": 2
+      },
+      {
+        "lemma": "harness",
+        "importance": 2
+      },
+      {
+        "lemma": "hatch",
+        "importance": 2
+      },
+      {
+        "lemma": "haunt",
+        "importance": 2
+      },
+      {
+        "lemma": "haven",
+        "importance": 2
+      },
+      {
+        "lemma": "healing",
+        "importance": 2
+      },
+      {
+        "lemma": "hearted",
+        "importance": 2
+      },
+      {
+        "lemma": "hearty",
+        "importance": 2
+      },
+      {
+        "lemma": "heaven",
+        "importance": 2
+      },
+      {
+        "lemma": "heavenly",
+        "importance": 2
+      },
+      {
+        "lemma": "HIV",
+        "importance": 2
+      },
+      {
+        "lemma": "holy",
+        "importance": 2
+      },
+      {
+        "lemma": "hop",
+        "importance": 2
+      },
+      {
+        "lemma": "horn",
+        "importance": 2
+      },
+      {
+        "lemma": "hunt",
+        "importance": 2
+      },
+      {
+        "lemma": "idol",
+        "importance": 2
+      },
+      {
+        "lemma": "initial",
+        "importance": 2
+      },
+      {
+        "lemma": "innermost",
+        "importance": 2
+      },
+      {
+        "lemma": "innovator",
+        "importance": 2
+      },
+      {
+        "lemma": "insane",
+        "importance": 2
+      },
+      {
+        "lemma": "inscription",
+        "importance": 2
+      },
+      {
+        "lemma": "intermission",
+        "importance": 2
+      },
+      {
+        "lemma": "ivory",
+        "importance": 2
+      },
+      {
+        "lemma": "jade",
+        "importance": 2
+      },
+      {
+        "lemma": "jail",
+        "importance": 2
+      },
+      {
+        "lemma": "jewel",
+        "importance": 2
+      },
+      {
+        "lemma": "killing",
+        "importance": 2
+      },
+      {
+        "lemma": "liar",
+        "importance": 2
+      },
+      {
+        "lemma": "liberation",
+        "importance": 2
+      },
+      {
+        "lemma": "lighter",
+        "importance": 2
+      },
+      {
+        "lemma": "likeness",
+        "importance": 2
+      },
+      {
+        "lemma": "lodge",
+        "importance": 2
+      },
+      {
+        "lemma": "log",
+        "importance": 2
+      },
+      {
+        "lemma": "march",
+        "importance": 2
+      },
+      {
+        "lemma": "marked",
+        "importance": 2
+      },
+      {
+        "lemma": "mass",
+        "importance": 2
+      },
+      {
+        "lemma": "Mediterranean",
+        "importance": 2
+      },
+      {
+        "lemma": "mineral",
+        "importance": 2
+      },
+      {
+        "lemma": "mischief",
+        "importance": 2
+      },
+      {
+        "lemma": "moisture",
+        "importance": 2
+      },
+      {
+        "lemma": "molecule",
+        "importance": 2
+      },
+      {
+        "lemma": "monk",
+        "importance": 2
+      },
+      {
+        "lemma": "monster",
+        "importance": 2
+      },
+      {
+        "lemma": "motherland",
+        "importance": 2
+      },
+      {
+        "lemma": "motto",
+        "importance": 2
+      },
+      {
+        "lemma": "murderer",
+        "importance": 2
+      },
+      {
+        "lemma": "myth",
+        "importance": 2
+      },
+      {
+        "lemma": "naked",
+        "importance": 2
+      },
+      {
+        "lemma": "nationalist",
+        "importance": 2
+      },
+      {
+        "lemma": "nectar",
+        "importance": 2
+      },
+      {
+        "lemma": "ness",
+        "importance": 2
+      }
+    ]
+  }
+]

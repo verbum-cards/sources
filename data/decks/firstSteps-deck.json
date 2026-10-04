@@ -645,6 +645,50 @@
       {
         "lemma": "ancestor",
         "importance": 2
+      },
+      {
+        "lemma": "adopt",
+        "importance": 2
+      },
+      {
+        "lemma": "babysit",
+        "importance": 2
+      },
+      {
+        "lemma": "babysitter",
+        "importance": 2
+      },
+      {
+        "lemma": "twin",
+        "importance": 2
+      },
+      {
+        "lemma": "nephew",
+        "importance": 2
+      },
+      {
+        "lemma": "niece",
+        "importance": 2
+      },
+      {
+        "lemma": "brother-in-law",
+        "importance": 2
+      },
+      {
+        "lemma": "daughter-in-law",
+        "importance": 2
+      },
+      {
+        "lemma": "father-in-law",
+        "importance": 2
+      },
+      {
+        "lemma": "teen",
+        "importance": 2
+      },
+      {
+        "lemma": "grown-up",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -729,6 +773,14 @@
       },
       {
         "lemma": "tooth",
+        "importance": 2
+      },
+      {
+        "lemma": "fingernail",
+        "importance": 2
+      },
+      {
+        "lemma": "jaw",
         "importance": 2
       }
     ],
@@ -852,6 +904,82 @@
       {
         "lemma": "jewelry",
         "importance": 2
+      },
+      {
+        "lemma": "accessory",
+        "importance": 2
+      },
+      {
+        "lemma": "bracelet",
+        "importance": 2
+      },
+      {
+        "lemma": "garment",
+        "importance": 2
+      },
+      {
+        "lemma": "gown",
+        "importance": 2
+      },
+      {
+        "lemma": "jumper",
+        "importance": 2
+      },
+      {
+        "lemma": "handkerchief",
+        "importance": 2
+      },
+      {
+        "lemma": "necklace",
+        "importance": 2
+      },
+      {
+        "lemma": "pullover",
+        "importance": 2
+      },
+      {
+        "lemma": "purse",
+        "importance": 2
+      },
+      {
+        "lemma": "sweatshirt",
+        "importance": 2
+      },
+      {
+        "lemma": "wristwatch",
+        "importance": 2
+      },
+      {
+        "lemma": "bikini",
+        "importance": 2
+      },
+      {
+        "lemma": "sleeve",
+        "importance": 2
+      },
+      {
+        "lemma": "cardigan",
+        "importance": 2
+      },
+      {
+        "lemma": "clothing",
+        "importance": 2
+      },
+      {
+        "lemma": "cuff",
+        "importance": 2
+      },
+      {
+        "lemma": "costume",
+        "importance": 2
+      },
+      {
+        "lemma": "gaudy",
+        "importance": 2
+      },
+      {
+        "lemma": "underpants",
+        "importance": 2
       }
     ],
     "importance": 1
@@ -920,6 +1048,18 @@
       },
       {
         "lemma": "hall",
+        "importance": 2
+      },
+      {
+        "lemma": "corridor",
+        "importance": 2
+      },
+      {
+        "lemma": "doorway",
+        "importance": 2
+      },
+      {
+        "lemma": "fireplace",
         "importance": 2
       }
     ],
@@ -1361,6 +1501,18 @@
       {
         "lemma": "sky",
         "importance": 2
+      },
+      {
+        "lemma": "barometer",
+        "importance": 2
+      },
+      {
+        "lemma": "centigrade",
+        "importance": 2
+      },
+      {
+        "lemma": "gloomy",
+        "importance": 2
       }
     ],
     "importance": 1
@@ -1485,6 +1637,146 @@
       },
       {
         "lemma": "creature",
+        "importance": 2
+      },
+      {
+        "lemma": "ant",
+        "importance": 2
+      },
+      {
+        "lemma": "ape",
+        "importance": 2
+      },
+      {
+        "lemma": "beaver",
+        "importance": 2
+      },
+      {
+        "lemma": "bull",
+        "importance": 2
+      },
+      {
+        "lemma": "camel",
+        "importance": 2
+      },
+      {
+        "lemma": "cattle",
+        "importance": 2
+      },
+      {
+        "lemma": "crow",
+        "importance": 2
+      },
+      {
+        "lemma": "dolphin",
+        "importance": 2
+      },
+      {
+        "lemma": "calf",
+        "importance": 2
+      },
+      {
+        "lemma": "bark",
+        "importance": 2
+      },
+      {
+        "lemma": "breed",
+        "importance": 2
+      },
+      {
+        "lemma": "parrot",
+        "importance": 2
+      },
+      {
+        "lemma": "spider",
+        "importance": 2
+      },
+      {
+        "lemma": "swarm",
+        "importance": 2
+      },
+      {
+        "lemma": "giraffe",
+        "importance": 2
+      },
+      {
+        "lemma": "gorilla",
+        "importance": 2
+      },
+      {
+        "lemma": "mule",
+        "importance": 2
+      },
+      {
+        "lemma": "lamb",
+        "importance": 2
+      },
+      {
+        "lemma": "mosquito",
+        "importance": 2
+      },
+      {
+        "lemma": "whale",
+        "importance": 2
+      },
+      {
+        "lemma": "turtle",
+        "importance": 2
+      },
+      {
+        "lemma": "herd",
+        "importance": 2
+      },
+      {
+        "lemma": "beagle",
+        "importance": 2
+      },
+      {
+        "lemma": "beak",
+        "importance": 2
+      },
+      {
+        "lemma": "crab",
+        "importance": 2
+      },
+      {
+        "lemma": "crocodile",
+        "importance": 2
+      },
+      {
+        "lemma": "deer",
+        "importance": 2
+      },
+      {
+        "lemma": "coral",
+        "importance": 2
+      },
+      {
+        "lemma": "donkey",
+        "importance": 2
+      },
+      {
+        "lemma": "dove",
+        "importance": 2
+      },
+      {
+        "lemma": "eagle",
+        "importance": 2
+      },
+      {
+        "lemma": "flap",
+        "importance": 2
+      },
+      {
+        "lemma": "fox",
+        "importance": 2
+      },
+      {
+        "lemma": "goat",
+        "importance": 2
+      },
+      {
+        "lemma": "kangaroo",
         "importance": 2
       }
     ],
@@ -1827,6 +2119,10 @@
       {
         "lemma": "zoo",
         "importance": 2
+      },
+      {
+        "lemma": "barbershop",
+        "importance": 2
       }
     ],
     "importance": 1
@@ -1984,6 +2280,210 @@
       {
         "lemma": "clown",
         "importance": 2
+      },
+      {
+        "lemma": "architect",
+        "importance": 2
+      },
+      {
+        "lemma": "astronomer",
+        "importance": 2
+      },
+      {
+        "lemma": "chemist",
+        "importance": 2
+      },
+      {
+        "lemma": "columnist",
+        "importance": 2
+      },
+      {
+        "lemma": "comedian",
+        "importance": 2
+      },
+      {
+        "lemma": "entertainer",
+        "importance": 2
+      },
+      {
+        "lemma": "butcher",
+        "importance": 2
+      },
+      {
+        "lemma": "detective",
+        "importance": 2
+      },
+      {
+        "lemma": "blogger",
+        "importance": 2
+      },
+      {
+        "lemma": "environmentalist",
+        "importance": 2
+      },
+      {
+        "lemma": "philosopher",
+        "importance": 2
+      },
+      {
+        "lemma": "poet",
+        "importance": 2
+      },
+      {
+        "lemma": "politician",
+        "importance": 2
+      },
+      {
+        "lemma": "priest",
+        "importance": 2
+      },
+      {
+        "lemma": "producer",
+        "importance": 2
+      },
+      {
+        "lemma": "publisher",
+        "importance": 2
+      },
+      {
+        "lemma": "scholar",
+        "importance": 2
+      },
+      {
+        "lemma": "sheriff",
+        "importance": 2
+      },
+      {
+        "lemma": "specialist",
+        "importance": 2
+      },
+      {
+        "lemma": "adviser",
+        "importance": 2
+      },
+      {
+        "lemma": "historian",
+        "importance": 2
+      },
+      {
+        "lemma": "journalist",
+        "importance": 2
+      },
+      {
+        "lemma": "magician",
+        "importance": 2
+      },
+      {
+        "lemma": "mathematician",
+        "importance": 2
+      },
+      {
+        "lemma": "mayor",
+        "importance": 2
+      },
+      {
+        "lemma": "mechanic",
+        "importance": 2
+      },
+      {
+        "lemma": "merchant",
+        "importance": 2
+      },
+      {
+        "lemma": "hairdresser",
+        "importance": 2
+      },
+      {
+        "lemma": "golfer",
+        "importance": 2
+      },
+      {
+        "lemma": "governor",
+        "importance": 2
+      },
+      {
+        "lemma": "performer",
+        "importance": 2
+      },
+      {
+        "lemma": "researcher",
+        "importance": 2
+      },
+      {
+        "lemma": "lifeguard",
+        "importance": 2
+      },
+      {
+        "lemma": "archaeologist",
+        "importance": 2
+      },
+      {
+        "lemma": "ambassador",
+        "importance": 2
+      },
+      {
+        "lemma": "analyst",
+        "importance": 2
+      },
+      {
+        "lemma": "banker",
+        "importance": 2
+      },
+      {
+        "lemma": "boxer",
+        "importance": 2
+      },
+      {
+        "lemma": "president",
+        "importance": 2
+      },
+      {
+        "lemma": "correspondent",
+        "importance": 2
+      },
+      {
+        "lemma": "economist",
+        "importance": 2
+      },
+      {
+        "lemma": "ecologist",
+        "importance": 2
+      },
+      {
+        "lemma": "educator",
+        "importance": 2
+      },
+      {
+        "lemma": "diplomat",
+        "importance": 2
+      },
+      {
+        "lemma": "explorer",
+        "importance": 2
+      },
+      {
+        "lemma": "schoolteacher",
+        "importance": 2
+      },
+      {
+        "lemma": "housekeeper",
+        "importance": 2
+      },
+      {
+        "lemma": "inventor",
+        "importance": 2
+      },
+      {
+        "lemma": "interpreter",
+        "importance": 2
+      },
+      {
+        "lemma": "jeweler",
+        "importance": 2
+      },
+      {
+        "lemma": "inspector",
+        "importance": 2
       }
     ],
     "importance": 1
@@ -2069,6 +2569,18 @@
       },
       {
         "lemma": "ill",
+        "importance": 2
+      },
+      {
+        "lemma": "unwell",
+        "importance": 2
+      },
+      {
+        "lemma": "nap",
+        "importance": 2
+      },
+      {
+        "lemma": "energy",
         "importance": 2
       }
     ],

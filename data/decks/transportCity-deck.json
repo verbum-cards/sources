@@ -77,6 +77,10 @@
       {
         "lemma": "Is this the shortest way?",
         "importance": 2
+      },
+      {
+        "lemma": "turning",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -319,6 +323,10 @@
       {
         "lemma": "railway",
         "importance": 2
+      },
+      {
+        "lemma": "conductor",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -436,6 +444,78 @@
       },
       {
         "lemma": "brake",
+        "importance": 2
+      },
+      {
+        "lemma": "engine",
+        "importance": 2
+      },
+      {
+        "lemma": "motor",
+        "importance": 2
+      },
+      {
+        "lemma": "windscreen",
+        "importance": 2
+      },
+      {
+        "lemma": "van",
+        "importance": 2
+      },
+      {
+        "lemma": "vehicle",
+        "importance": 2
+      },
+      {
+        "lemma": "wagon",
+        "importance": 2
+      },
+      {
+        "lemma": "lorry",
+        "importance": 2
+      },
+      {
+        "lemma": "railroad",
+        "importance": 2
+      },
+      {
+        "lemma": "rail",
+        "importance": 2
+      },
+      {
+        "lemma": "public transport",
+        "importance": 2
+      },
+      {
+        "lemma": "transport",
+        "importance": 2
+      },
+      {
+        "lemma": "transportation",
+        "importance": 2
+      },
+      {
+        "lemma": "bumper",
+        "importance": 2
+      },
+      {
+        "lemma": "aircraft",
+        "importance": 2
+      },
+      {
+        "lemma": "carpool",
+        "importance": 2
+      },
+      {
+        "lemma": "roadside",
+        "importance": 2
+      },
+      {
+        "lemma": "exhaust",
+        "importance": 2
+      },
+      {
+        "lemma": "tank",
         "importance": 2
       }
     ],
@@ -584,6 +664,22 @@
       {
         "lemma": "monument",
         "importance": 2
+      },
+      {
+        "lemma": "avenue",
+        "importance": 2
+      },
+      {
+        "lemma": "district",
+        "importance": 2
+      },
+      {
+        "lemma": "skyscraper",
+        "importance": 2
+      },
+      {
+        "lemma": "neighborhood",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -648,6 +744,10 @@
       },
       {
         "lemma": "area",
+        "importance": 2
+      },
+      {
+        "lemma": "distance",
         "importance": 2
       }
     ],
@@ -827,6 +927,50 @@
       {
         "lemma": "invade",
         "importance": 2
+      },
+      {
+        "lemma": "deadly",
+        "importance": 2
+      },
+      {
+        "lemma": "prisoner",
+        "importance": 2
+      },
+      {
+        "lemma": "terror",
+        "importance": 2
+      },
+      {
+        "lemma": "terrorism",
+        "importance": 2
+      },
+      {
+        "lemma": "patrol",
+        "importance": 2
+      },
+      {
+        "lemma": "suspect",
+        "importance": 2
+      },
+      {
+        "lemma": "seize",
+        "importance": 2
+      },
+      {
+        "lemma": "safeguard",
+        "importance": 2
+      },
+      {
+        "lemma": "warn",
+        "importance": 2
+      },
+      {
+        "lemma": "cybercrime",
+        "importance": 2
+      },
+      {
+        "lemma": "checkpoint",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -871,6 +1015,10 @@
       },
       {
         "lemma": "ramp",
+        "importance": 2
+      },
+      {
+        "lemma": "deaf",
         "importance": 2
       }
     ],

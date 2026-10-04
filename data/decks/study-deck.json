@@ -60,6 +60,42 @@
       {
         "lemma": "gymnastics",
         "importance": 2
+      },
+      {
+        "lemma": "arithmetic",
+        "importance": 2
+      },
+      {
+        "lemma": "economics",
+        "importance": 2
+      },
+      {
+        "lemma": "engineering",
+        "importance": 2
+      },
+      {
+        "lemma": "experiment",
+        "importance": 2
+      },
+      {
+        "lemma": "astronomy",
+        "importance": 2
+      },
+      {
+        "lemma": "botany",
+        "importance": 2
+      },
+      {
+        "lemma": "philosophy",
+        "importance": 2
+      },
+      {
+        "lemma": "equation",
+        "importance": 2
+      },
+      {
+        "lemma": "geographic",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -112,6 +148,58 @@
       },
       {
         "lemma": "cafeteria",
+        "importance": 2
+      },
+      {
+        "lemma": "academic",
+        "importance": 2
+      },
+      {
+        "lemma": "academy",
+        "importance": 2
+      },
+      {
+        "lemma": "curriculum",
+        "importance": 2
+      },
+      {
+        "lemma": "canteen",
+        "importance": 2
+      },
+      {
+        "lemma": "preschool",
+        "importance": 2
+      },
+      {
+        "lemma": "primary school",
+        "importance": 2
+      },
+      {
+        "lemma": "secondary school",
+        "importance": 2
+      },
+      {
+        "lemma": "sophomore",
+        "importance": 2
+      },
+      {
+        "lemma": "graduation",
+        "importance": 2
+      },
+      {
+        "lemma": "institute",
+        "importance": 2
+      },
+      {
+        "lemma": "laboratory",
+        "importance": 2
+      },
+      {
+        "lemma": "diploma",
+        "importance": 2
+      },
+      {
+        "lemma": "elective",
         "importance": 2
       }
     ],
@@ -194,6 +282,18 @@
       },
       {
         "lemma": "tutor",
+        "importance": 2
+      },
+      {
+        "lemma": "educate",
+        "importance": 2
+      },
+      {
+        "lemma": "teaching",
+        "importance": 2
+      },
+      {
+        "lemma": "instruct",
         "importance": 2
       }
     ],
@@ -293,6 +393,14 @@
       {
         "lemma": "score",
         "importance": 2
+      },
+      {
+        "lemma": "examinee",
+        "importance": 2
+      },
+      {
+        "lemma": "oral",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -370,6 +478,66 @@
       {
         "lemma": "description",
         "importance": 2
+      },
+      {
+        "lemma": "biography",
+        "importance": 2
+      },
+      {
+        "lemma": "composition",
+        "importance": 2
+      },
+      {
+        "lemma": "correction",
+        "importance": 2
+      },
+      {
+        "lemma": "edition",
+        "importance": 2
+      },
+      {
+        "lemma": "journal",
+        "importance": 2
+      },
+      {
+        "lemma": "poetry",
+        "importance": 2
+      },
+      {
+        "lemma": "ink",
+        "importance": 2
+      },
+      {
+        "lemma": "comprehension",
+        "importance": 2
+      },
+      {
+        "lemma": "editorial",
+        "importance": 2
+      },
+      {
+        "lemma": "footnote",
+        "importance": 2
+      },
+      {
+        "lemma": "illustrate",
+        "importance": 2
+      },
+      {
+        "lemma": "illustration",
+        "importance": 2
+      },
+      {
+        "lemma": "indent",
+        "importance": 2
+      },
+      {
+        "lemma": "italicize",
+        "importance": 2
+      },
+      {
+        "lemma": "inverted commas",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -427,6 +595,94 @@
       {
         "lemma": "explanation",
         "importance": 2
+      },
+      {
+        "lemma": "chronological",
+        "importance": 2
+      },
+      {
+        "lemma": "consequently",
+        "importance": 2
+      },
+      {
+        "lemma": "contrary",
+        "importance": 2
+      },
+      {
+        "lemma": "demonstrate",
+        "importance": 2
+      },
+      {
+        "lemma": "demonstration",
+        "importance": 2
+      },
+      {
+        "lemma": "derive",
+        "importance": 2
+      },
+      {
+        "lemma": "emphasis",
+        "importance": 2
+      },
+      {
+        "lemma": "emphasize",
+        "importance": 2
+      },
+      {
+        "lemma": "judgment",
+        "importance": 2
+      },
+      {
+        "lemma": "logic",
+        "importance": 2
+      },
+      {
+        "lemma": "instance",
+        "importance": 2
+      },
+      {
+        "lemma": "inquiry",
+        "importance": 2
+      },
+      {
+        "lemma": "insight",
+        "importance": 2
+      },
+      {
+        "lemma": "analogy",
+        "importance": 2
+      },
+      {
+        "lemma": "circumstance",
+        "importance": 2
+      },
+      {
+        "lemma": "contradict",
+        "importance": 2
+      },
+      {
+        "lemma": "contradiction",
+        "importance": 2
+      },
+      {
+        "lemma": "contradictory",
+        "importance": 2
+      },
+      {
+        "lemma": "coherent",
+        "importance": 2
+      },
+      {
+        "lemma": "coherence",
+        "importance": 2
+      },
+      {
+        "lemma": "deduce",
+        "importance": 2
+      },
+      {
+        "lemma": "descriptive",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -479,6 +735,10 @@
       },
       {
         "lemma": "brainstorm",
+        "importance": 2
+      },
+      {
+        "lemma": "handout",
         "importance": 2
       }
     ],
@@ -598,6 +858,162 @@
       {
         "lemma": "learner",
         "importance": 2
+      },
+      {
+        "lemma": "adverb",
+        "importance": 2
+      },
+      {
+        "lemma": "adverbial",
+        "importance": 2
+      },
+      {
+        "lemma": "antonym",
+        "importance": 2
+      },
+      {
+        "lemma": "consonant",
+        "importance": 2
+      },
+      {
+        "lemma": "definite article",
+        "importance": 2
+      },
+      {
+        "lemma": "auxiliary",
+        "importance": 2
+      },
+      {
+        "lemma": "bilingual",
+        "importance": 2
+      },
+      {
+        "lemma": "alphabet",
+        "importance": 2
+      },
+      {
+        "lemma": "complement",
+        "importance": 2
+      },
+      {
+        "lemma": "comma",
+        "importance": 2
+      },
+      {
+        "lemma": "define",
+        "importance": 2
+      },
+      {
+        "lemma": "definition",
+        "importance": 2
+      },
+      {
+        "lemma": "participle",
+        "importance": 2
+      },
+      {
+        "lemma": "phrasal verb",
+        "importance": 2
+      },
+      {
+        "lemma": "phrase",
+        "importance": 2
+      },
+      {
+        "lemma": "preposition",
+        "importance": 2
+      },
+      {
+        "lemma": "pronoun",
+        "importance": 2
+      },
+      {
+        "lemma": "prefix",
+        "importance": 2
+      },
+      {
+        "lemma": "suffix",
+        "importance": 2
+      },
+      {
+        "lemma": "spelling",
+        "importance": 2
+      },
+      {
+        "lemma": "dialog",
+        "importance": 2
+      },
+      {
+        "lemma": "indefinite article",
+        "importance": 2
+      },
+      {
+        "lemma": "infinitive",
+        "importance": 2
+      },
+      {
+        "lemma": "modal verb",
+        "importance": 2
+      },
+      {
+        "lemma": "vowel",
+        "importance": 2
+      },
+      {
+        "lemma": "apostrophe",
+        "importance": 2
+      },
+      {
+        "lemma": "alphabetical",
+        "importance": 2
+      },
+      {
+        "lemma": "full stop",
+        "importance": 2
+      },
+      {
+        "lemma": "clause",
+        "importance": 2
+      },
+      {
+        "lemma": "conjunction",
+        "importance": 2
+      },
+      {
+        "lemma": "collocation",
+        "importance": 2
+      },
+      {
+        "lemma": "determiner",
+        "importance": 2
+      },
+      {
+        "lemma": "first language",
+        "importance": 2
+      },
+      {
+        "lemma": "first person",
+        "importance": 2
+      },
+      {
+        "lemma": "grasp",
+        "importance": 2
+      },
+      {
+        "lemma": "immerse",
+        "importance": 2
+      },
+      {
+        "lemma": "interpret",
+        "importance": 2
+      },
+      {
+        "lemma": "interpretation",
+        "importance": 2
+      },
+      {
+        "lemma": "imperative",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -713,6 +1129,22 @@
       {
         "lemma": "motivated",
         "importance": 2
+      },
+      {
+        "lemma": "concentration",
+        "importance": 2
+      },
+      {
+        "lemma": "efficiency",
+        "importance": 2
+      },
+      {
+        "lemma": "discipline",
+        "importance": 2
+      },
+      {
+        "lemma": "inspirational",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -737,6 +1169,10 @@
       },
       {
         "lemma": "quiz",
+        "importance": 2
+      },
+      {
+        "lemma": "schoolmate",
         "importance": 2
       }
     ],

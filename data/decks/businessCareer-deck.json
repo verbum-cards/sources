@@ -77,6 +77,18 @@
       {
         "lemma": "What are the requirements for this position?",
         "importance": 2
+      },
+      {
+        "lemma": "employment",
+        "importance": 2
+      },
+      {
+        "lemma": "vacancy",
+        "importance": 2
+      },
+      {
+        "lemma": "employ",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -125,6 +137,10 @@
       },
       {
         "lemma": "wage",
+        "importance": 2
+      },
+      {
+        "lemma": "hourly",
         "importance": 2
       }
     ],
@@ -182,6 +198,10 @@
       },
       {
         "lemma": "negotiation",
+        "importance": 2
+      },
+      {
+        "lemma": "goodwill",
         "importance": 2
       }
     ],
@@ -380,6 +400,78 @@
       {
         "lemma": "trade",
         "importance": 2
+      },
+      {
+        "lemma": "advertise",
+        "importance": 2
+      },
+      {
+        "lemma": "commercial",
+        "importance": 2
+      },
+      {
+        "lemma": "competitor",
+        "importance": 2
+      },
+      {
+        "lemma": "consumer",
+        "importance": 2
+      },
+      {
+        "lemma": "demand",
+        "importance": 2
+      },
+      {
+        "lemma": "distribution",
+        "importance": 2
+      },
+      {
+        "lemma": "buyer",
+        "importance": 2
+      },
+      {
+        "lemma": "retail",
+        "importance": 2
+      },
+      {
+        "lemma": "supply",
+        "importance": 2
+      },
+      {
+        "lemma": "substitute",
+        "importance": 2
+      },
+      {
+        "lemma": "logo",
+        "importance": 2
+      },
+      {
+        "lemma": "brochure",
+        "importance": 2
+      },
+      {
+        "lemma": "catalog",
+        "importance": 2
+      },
+      {
+        "lemma": "campaign",
+        "importance": 2
+      },
+      {
+        "lemma": "corporate",
+        "importance": 2
+      },
+      {
+        "lemma": "corporation",
+        "importance": 2
+      },
+      {
+        "lemma": "commerce",
+        "importance": 2
+      },
+      {
+        "lemma": "distributor",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -506,6 +598,118 @@
       {
         "lemma": "statement",
         "importance": 2
+      },
+      {
+        "lemma": "allowance",
+        "importance": 2
+      },
+      {
+        "lemma": "consumption",
+        "importance": 2
+      },
+      {
+        "lemma": "debt",
+        "importance": 2
+      },
+      {
+        "lemma": "decline",
+        "importance": 2
+      },
+      {
+        "lemma": "economy",
+        "importance": 2
+      },
+      {
+        "lemma": "poverty",
+        "importance": 2
+      },
+      {
+        "lemma": "pound",
+        "importance": 2
+      },
+      {
+        "lemma": "penny",
+        "importance": 2
+      },
+      {
+        "lemma": "pocket money",
+        "importance": 2
+      },
+      {
+        "lemma": "prosperity",
+        "importance": 2
+      },
+      {
+        "lemma": "prosperous",
+        "importance": 2
+      },
+      {
+        "lemma": "gain",
+        "importance": 2
+      },
+      {
+        "lemma": "fund",
+        "importance": 2
+      },
+      {
+        "lemma": "luxury",
+        "importance": 2
+      },
+      {
+        "lemma": "grant",
+        "importance": 2
+      },
+      {
+        "lemma": "bankrupt",
+        "importance": 2
+      },
+      {
+        "lemma": "bankruptcy",
+        "importance": 2
+      },
+      {
+        "lemma": "audit",
+        "importance": 2
+      },
+      {
+        "lemma": "debit",
+        "importance": 2
+      },
+      {
+        "lemma": "deficit",
+        "importance": 2
+      },
+      {
+        "lemma": "earnings",
+        "importance": 2
+      },
+      {
+        "lemma": "donate",
+        "importance": 2
+      },
+      {
+        "lemma": "donation",
+        "importance": 2
+      },
+      {
+        "lemma": "frugal",
+        "importance": 2
+      },
+      {
+        "lemma": "inflation",
+        "importance": 2
+      },
+      {
+        "lemma": "inherit",
+        "importance": 2
+      },
+      {
+        "lemma": "incur",
+        "importance": 2
+      },
+      {
+        "lemma": "indebted",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -563,6 +767,14 @@
       {
         "lemma": "statistics",
         "importance": 2
+      },
+      {
+        "lemma": "exceed",
+        "importance": 2
+      },
+      {
+        "lemma": "graphically",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -603,6 +815,50 @@
       },
       {
         "lemma": "planning",
+        "importance": 2
+      },
+      {
+        "lemma": "aim",
+        "importance": 2
+      },
+      {
+        "lemma": "approach",
+        "importance": 2
+      },
+      {
+        "lemma": "proposal",
+        "importance": 2
+      },
+      {
+        "lemma": "disrupt",
+        "importance": 2
+      },
+      {
+        "lemma": "effectiveness",
+        "importance": 2
+      },
+      {
+        "lemma": "enhance",
+        "importance": 2
+      },
+      {
+        "lemma": "evolve",
+        "importance": 2
+      },
+      {
+        "lemma": "expansion",
+        "importance": 2
+      },
+      {
+        "lemma": "foresee",
+        "importance": 2
+      },
+      {
+        "lemma": "fulfill",
+        "importance": 2
+      },
+      {
+        "lemma": "innovative",
         "importance": 2
       }
     ],
@@ -685,6 +941,86 @@
       {
         "lemma": "commitment",
         "importance": 2
+      },
+      {
+        "lemma": "administration",
+        "importance": 2
+      },
+      {
+        "lemma": "arrange",
+        "importance": 2
+      },
+      {
+        "lemma": "assign",
+        "importance": 2
+      },
+      {
+        "lemma": "authority",
+        "importance": 2
+      },
+      {
+        "lemma": "command",
+        "importance": 2
+      },
+      {
+        "lemma": "determine",
+        "importance": 2
+      },
+      {
+        "lemma": "ensure",
+        "importance": 2
+      },
+      {
+        "lemma": "appoint",
+        "importance": 2
+      },
+      {
+        "lemma": "chief",
+        "importance": 2
+      },
+      {
+        "lemma": "conduct",
+        "importance": 2
+      },
+      {
+        "lemma": "council",
+        "importance": 2
+      },
+      {
+        "lemma": "qualify",
+        "importance": 2
+      },
+      {
+        "lemma": "qualified",
+        "importance": 2
+      },
+      {
+        "lemma": "maintain",
+        "importance": 2
+      },
+      {
+        "lemma": "assess",
+        "importance": 2
+      },
+      {
+        "lemma": "assessment",
+        "importance": 2
+      },
+      {
+        "lemma": "administrative",
+        "importance": 2
+      },
+      {
+        "lemma": "vice president",
+        "importance": 2
+      },
+      {
+        "lemma": "compensate",
+        "importance": 2
+      },
+      {
+        "lemma": "dismiss",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -750,6 +1086,18 @@
       {
         "lemma": "retire",
         "importance": 2
+      },
+      {
+        "lemma": "excel",
+        "importance": 2
+      },
+      {
+        "lemma": "feat",
+        "importance": 2
+      },
+      {
+        "lemma": "initiative",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -790,6 +1138,14 @@
       },
       {
         "lemma": "investor",
+        "importance": 2
+      },
+      {
+        "lemma": "enterprise",
+        "importance": 2
+      },
+      {
+        "lemma": "found",
         "importance": 2
       }
     ],
@@ -843,6 +1199,10 @@
       },
       {
         "lemma": "formality",
+        "importance": 2
+      },
+      {
+        "lemma": "enclose",
         "importance": 2
       }
     ],

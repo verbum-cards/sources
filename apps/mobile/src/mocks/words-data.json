@@ -18,9 +18,7 @@
     ],
     "definition": "To walk around slowly without a fixed direction or purpose.",
     "cefr": "B1",
-    "goals": [
-      "travel"
-    ]
+    "goals": ["travel"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000002",
@@ -41,10 +39,7 @@
     ],
     "definition": "Very intense, aggressive, or powerful.",
     "cefr": "B1",
-    "goals": [
-      "media",
-      "self"
-    ]
+    "goals": ["media", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000003",
@@ -65,9 +60,7 @@
     ],
     "definition": "A person who pays rent to live in a property owned by someone else.",
     "cefr": "B1",
-    "goals": [
-      "move"
-    ]
+    "goals": ["move"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000004",
@@ -88,10 +81,7 @@
     ],
     "definition": "To take something from someone with the intention of returning it.",
     "cefr": "A2",
-    "goals": [
-      "work",
-      "self"
-    ]
+    "goals": ["work", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000005",
@@ -112,9 +102,7 @@
     ],
     "definition": "Full of people, with little space to move.",
     "cefr": "A2",
-    "goals": [
-      "travel"
-    ]
+    "goals": ["travel"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000006",
@@ -135,10 +123,7 @@
     ],
     "definition": "A person who lives near you.",
     "cefr": "A1",
-    "goals": [
-      "move",
-      "self"
-    ]
+    "goals": ["move", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000007",
@@ -159,10 +144,7 @@
     ],
     "definition": "Happening quickly and unexpectedly.",
     "cefr": "A2",
-    "goals": [
-      "media",
-      "self"
-    ]
+    "goals": ["media", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000008",
@@ -183,11 +165,7 @@
     ],
     "definition": "To make something better than it was before.",
     "cefr": "A2",
-    "goals": [
-      "work",
-      "exam",
-      "self"
-    ]
+    "goals": ["work", "exam", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000009",
@@ -208,10 +186,7 @@
     ],
     "definition": "Extremely tired, with no energy left.",
     "cefr": "B1",
-    "goals": [
-      "work",
-      "travel"
-    ]
+    "goals": ["work", "travel"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000a",
@@ -232,10 +207,7 @@
     ],
     "definition": "The latest time or date by which something must be finished.",
     "cefr": "B1",
-    "goals": [
-      "work",
-      "exam"
-    ]
+    "goals": ["work", "exam"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000b",
@@ -256,10 +228,7 @@
     ],
     "definition": "To depend on someone or something with trust or confidence.",
     "cefr": "B1",
-    "goals": [
-      "work",
-      "self"
-    ]
+    "goals": ["work", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000c",
@@ -280,9 +249,7 @@
     ],
     "definition": "Honest and genuine, without pretending.",
     "cefr": "B1",
-    "goals": [
-      "self"
-    ]
+    "goals": ["self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000d",
@@ -303,10 +270,7 @@
     ],
     "definition": "To come together in one place, or to collect things.",
     "cefr": "A2",
-    "goals": [
-      "self",
-      "work"
-    ]
+    "goals": ["self", "work"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000e",
@@ -327,9 +291,7 @@
     ],
     "definition": "Refusing to change one's mind or actions despite good reasons to do so.",
     "cefr": "B2",
-    "goals": [
-      "self"
-    ]
+    "goals": ["self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000000f",
@@ -350,10 +312,7 @@
     ],
     "definition": "A statement or sign of possible danger or harm.",
     "cefr": "B1",
-    "goals": [
-      "media",
-      "work"
-    ]
+    "goals": ["media", "work"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000010",
@@ -374,10 +333,7 @@
     ],
     "definition": "To speak very quietly, using breath rather than a full voice.",
     "cefr": "B1",
-    "goals": [
-      "media",
-      "self"
-    ]
+    "goals": ["media", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000011",
@@ -398,9 +354,7 @@
     ],
     "definition": "Willing to give more of something, such as time or money, than is expected.",
     "cefr": "A2",
-    "goals": [
-      "self"
-    ]
+    "goals": ["self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000012",
@@ -421,9 +375,7 @@
     ],
     "definition": "An act of travelling from one place to another.",
     "cefr": "A2",
-    "goals": [
-      "travel"
-    ]
+    "goals": ["travel"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000013",
@@ -444,11 +396,7 @@
     ],
     "definition": "To stay away from something or prevent it from happening.",
     "cefr": "A2",
-    "goals": [
-      "work",
-      "exam",
-      "self"
-    ]
+    "goals": ["work", "exam", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000014",
@@ -469,10 +417,7 @@
     ],
     "definition": "Eager to learn or know more about something.",
     "cefr": "A2",
-    "goals": [
-      "exam",
-      "self"
-    ]
+    "goals": ["exam", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000015",
@@ -493,10 +438,7 @@
     ],
     "definition": "To deal with a situation, task, or object.",
     "cefr": "B1",
-    "goals": [
-      "work",
-      "exam"
-    ]
+    "goals": ["work", "exam"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000016",
@@ -517,10 +459,7 @@
     ],
     "definition": "Having a small distance from one side to the other.",
     "cefr": "A2",
-    "goals": [
-      "travel",
-      "self"
-    ]
+    "goals": ["travel", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000017",
@@ -541,10 +480,7 @@
     ],
     "definition": "To grow, develop, or succeed very well.",
     "cefr": "B2",
-    "goals": [
-      "work",
-      "self"
-    ]
+    "goals": ["work", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000018",
@@ -565,10 +501,7 @@
     ],
     "definition": "Unwilling to do something and hesitant about it.",
     "cefr": "B2",
-    "goals": [
-      "work",
-      "self"
-    ]
+    "goals": ["work", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000019",
@@ -589,11 +522,7 @@
     ],
     "definition": "To successfully reach a goal or result through effort.",
     "cefr": "A2",
-    "goals": [
-      "work",
-      "exam",
-      "self"
-    ]
+    "goals": ["work", "exam", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001a",
@@ -614,10 +543,7 @@
     ],
     "definition": "Lasting only a short time, or using few words.",
     "cefr": "B1",
-    "goals": [
-      "work",
-      "exam"
-    ]
+    "goals": ["work", "exam"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001b",
@@ -638,10 +564,7 @@
     ],
     "definition": "Warm, comfortable, and pleasant to be in.",
     "cefr": "B1",
-    "goals": [
-      "move",
-      "self"
-    ]
+    "goals": ["move", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001c",
@@ -662,10 +585,7 @@
     ],
     "definition": "Worth a lot, either in money or importance.",
     "cefr": "A2",
-    "goals": [
-      "work",
-      "self"
-    ]
+    "goals": ["work", "self"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001d",
@@ -686,10 +606,7 @@
     ],
     "definition": "A stage, standard, or position on a scale.",
     "cefr": "A2",
-    "goals": [
-      "games",
-      "tech"
-    ]
+    "goals": ["games", "tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001e",
@@ -710,9 +627,7 @@
     ],
     "definition": "A person who competes against you in a game or contest.",
     "cefr": "B1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000001f",
@@ -733,9 +648,7 @@
     ],
     "definition": "A device used to operate a game or machine.",
     "cefr": "A2",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000020",
@@ -756,9 +669,7 @@
     ],
     "definition": "The number of points earned in a game or test.",
     "cefr": "A2",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000025",
@@ -779,9 +690,7 @@
     ],
     "definition": "A person who takes part in a game or sport.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000026",
@@ -802,9 +711,7 @@
     ],
     "definition": "A group of people who work or play together toward a shared goal.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000027",
@@ -825,9 +732,7 @@
     ],
     "definition": "To achieve victory in a game, contest, or competition.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000028",
@@ -848,9 +753,7 @@
     ],
     "definition": "To fail to win, or to no longer have something.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000029",
@@ -871,9 +774,7 @@
     ],
     "definition": "A statement that explains what is allowed or how to act in a situation.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002a",
@@ -894,9 +795,7 @@
     ],
     "definition": "A player's chance to act within a game, taken in a set order.",
     "cefr": "A1",
-    "goals": [
-      "games"
-    ]
+    "goals": ["games"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000021",
@@ -917,9 +816,7 @@
     ],
     "definition": "A secret word or code used to prove your identity and gain access.",
     "cefr": "A1",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000022",
@@ -940,9 +837,7 @@
     ],
     "definition": "To make something more current by adding the latest changes.",
     "cefr": "A2",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000023",
@@ -963,9 +858,7 @@
     ],
     "definition": "To set up software or equipment so it is ready to use.",
     "cefr": "A2",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000024",
@@ -986,9 +879,7 @@
     ],
     "definition": "A piece of equipment made for a particular purpose, especially electronic.",
     "cefr": "A2",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002b",
@@ -1009,9 +900,7 @@
     ],
     "definition": "The flat surface of a device that displays images or text.",
     "cefr": "A1",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002c",
@@ -1032,9 +921,7 @@
     ],
     "definition": "A device that stores and supplies electrical power.",
     "cefr": "A1",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002d",
@@ -1055,9 +942,7 @@
     ],
     "definition": "A device used to add power back into a battery.",
     "cefr": "A2",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002e",
@@ -1078,9 +963,7 @@
     ],
     "definition": "To press a button, especially on a mouse or screen.",
     "cefr": "A1",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-00000000002f",
@@ -1101,9 +984,7 @@
     ],
     "definition": "To join or link to something, such as a network or device.",
     "cefr": "A2",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195c000-0000-7000-8000-000000000030",
@@ -1124,9 +1005,7 @@
     ],
     "definition": "A collection of data stored under one name on a computer.",
     "cefr": "A1",
-    "goals": [
-      "tech"
-    ]
+    "goals": ["tech"]
   },
   {
     "itemId": "0195d100-0000-7000-8000-000000000001",
@@ -174512,5 +174391,1005 @@
     ],
     "definition": "The scientific study of animals and their behavior.",
     "cefr": "C2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04bccd0f20b1",
+    "itemType": "sense",
+    "lemma": "give up",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈɪv ˈʌp",
+    "translation": "сдаваться, бросать",
+    "examples": [
+      {
+        "text": "Don't give up, you're almost finished.",
+        "translation": "Не сдавайся, ты почти закончил."
+      },
+      {
+        "text": "She gave up smoking last year.",
+        "translation": "Она бросила курить в прошлом году."
+      }
+    ],
+    "definition": "To stop trying to do something, or to stop a habit.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04bdcde5c553",
+    "itemType": "sense",
+    "lemma": "look after",
+    "pos": "phrasal verb",
+    "ipa": "lˈʊk ˈɑːftə",
+    "translation": "заботиться о, присматривать за",
+    "examples": [
+      {
+        "text": "Can you look after my cat while I'm away?",
+        "translation": "Можешь присмотреть за моим котом, пока я в отъезде?"
+      },
+      {
+        "text": "She looks after her little brother every afternoon.",
+        "translation": "Она заботится о своём младшем брате каждый день после обеда."
+      }
+    ],
+    "definition": "To take care of someone or something.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04bee91a2873",
+    "itemType": "sense",
+    "lemma": "look for",
+    "pos": "phrasal verb",
+    "ipa": "lˈʊk fˈɔː",
+    "translation": "искать",
+    "examples": [
+      {
+        "text": "I'm looking for my keys.",
+        "translation": "Я ищу свои ключи."
+      },
+      {
+        "text": "We looked for a hotel near the beach.",
+        "translation": "Мы искали отель рядом с пляжем."
+      }
+    ],
+    "definition": "To try to find someone or something.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04bf203a3d35",
+    "itemType": "sense",
+    "lemma": "find out",
+    "pos": "phrasal verb",
+    "ipa": "fˈaɪnd ˈaʊt",
+    "translation": "узнавать, выяснять",
+    "examples": [
+      {
+        "text": "I need to find out what time the train leaves.",
+        "translation": "Мне нужно узнать, во сколько отправляется поезд."
+      },
+      {
+        "text": "She found out the truth too late.",
+        "translation": "Она узнала правду слишком поздно."
+      }
+    ],
+    "definition": "To discover information or the truth about something.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c01aaf741e",
+    "itemType": "sense",
+    "lemma": "put on",
+    "pos": "phrasal verb",
+    "ipa": "pˈʊt ˈɒn",
+    "translation": "надевать",
+    "examples": [
+      {
+        "text": "Put on your coat, it's cold outside.",
+        "translation": "Надень пальто, на улице холодно."
+      },
+      {
+        "text": "He put on his glasses to read the menu.",
+        "translation": "Он надел очки, чтобы прочитать меню."
+      }
+    ],
+    "definition": "To place clothing or an accessory onto your body.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c19602afc9",
+    "itemType": "sense",
+    "lemma": "take off",
+    "pos": "phrasal verb",
+    "ipa": "tˈeɪk ˈɒf",
+    "translation": "снимать (одежду)",
+    "examples": [
+      {
+        "text": "Please take off your shoes before coming in.",
+        "translation": "Пожалуйста, сними обувь перед тем, как войти."
+      },
+      {
+        "text": "She took off her jacket because it was warm.",
+        "translation": "Она сняла куртку, потому что было тепло."
+      }
+    ],
+    "definition": "To remove an item of clothing from your body.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c2457515b4",
+    "itemType": "sense",
+    "lemma": "pick up",
+    "pos": "phrasal verb",
+    "ipa": "pˈɪk ˈʌp",
+    "translation": "поднимать; забирать (кого-то)",
+    "examples": [
+      {
+        "text": "Can you pick up the pen you dropped?",
+        "translation": "Можешь поднять ручку, которую ты выронил?"
+      },
+      {
+        "text": "I'll pick you up from the airport at six.",
+        "translation": "Я заберу тебя из аэропорта в шесть."
+      }
+    ],
+    "definition": "To lift something from a surface, or to collect someone in a vehicle.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c355e16daa",
+    "itemType": "sense",
+    "lemma": "go on",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈəʊ ˈɒn",
+    "translation": "продолжать",
+    "examples": [
+      {
+        "text": "Please go on, I'm listening.",
+        "translation": "Пожалуйста, продолжай, я слушаю."
+      },
+      {
+        "text": "The meeting went on for two hours.",
+        "translation": "Встреча продолжалась два часа."
+      }
+    ],
+    "definition": "To continue doing or happening.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c4c2041dc6",
+    "itemType": "sense",
+    "lemma": "come back",
+    "pos": "phrasal verb",
+    "ipa": "kˈʌm bˈæk",
+    "translation": "возвращаться",
+    "examples": [
+      {
+        "text": "He will come back next week.",
+        "translation": "Он вернётся на следующей неделе."
+      },
+      {
+        "text": "I forgot my umbrella, so I came back for it.",
+        "translation": "Я забыл зонт, поэтому вернулся за ним."
+      }
+    ],
+    "definition": "To return to a place.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c562829964",
+    "itemType": "sense",
+    "lemma": "get up",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈɛt ˈʌp",
+    "translation": "вставать (с постели)",
+    "examples": [
+      {
+        "text": "I get up at seven every morning.",
+        "translation": "Я встаю в семь каждое утро."
+      },
+      {
+        "text": "She got up to answer the door.",
+        "translation": "Она встала, чтобы открыть дверь."
+      }
+    ],
+    "definition": "To rise from a bed or chair, especially after sleeping.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c60358b41c",
+    "itemType": "sense",
+    "lemma": "sit down",
+    "pos": "phrasal verb",
+    "ipa": "sˈɪt dˈaʊn",
+    "translation": "садиться",
+    "examples": [
+      {
+        "text": "Please sit down and make yourself comfortable.",
+        "translation": "Пожалуйста, садись и устраивайся поудобнее."
+      },
+      {
+        "text": "He sat down next to his friend.",
+        "translation": "Он сел рядом со своим другом."
+      }
+    ],
+    "definition": "To move into a sitting position.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c7c8fdb8b9",
+    "itemType": "sense",
+    "lemma": "stand up",
+    "pos": "phrasal verb",
+    "ipa": "stˈænd ˈʌp",
+    "translation": "встать, подняться",
+    "examples": [
+      {
+        "text": "Everyone stood up when the teacher entered.",
+        "translation": "Все встали, когда вошёл учитель."
+      },
+      {
+        "text": "Stand up straight and look forward.",
+        "translation": "Встань прямо и смотри вперёд."
+      }
+    ],
+    "definition": "To rise to a standing position.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c856d19e16",
+    "itemType": "sense",
+    "lemma": "turn off",
+    "pos": "phrasal verb",
+    "ipa": "tˈɜːn ˈɒf",
+    "translation": "выключать",
+    "examples": [
+      {
+        "text": "Turn off the lights before you leave.",
+        "translation": "Выключи свет перед тем, как уйдёшь."
+      },
+      {
+        "text": "Could you turn off the TV, please?",
+        "translation": "Можешь выключить телевизор, пожалуйста?"
+      }
+    ],
+    "definition": "To switch off a device or light.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04c9a5d34a79",
+    "itemType": "sense",
+    "lemma": "turn on",
+    "pos": "phrasal verb",
+    "ipa": "tˈɜːn ˈɒn",
+    "translation": "включать",
+    "examples": [
+      {
+        "text": "Turn on the heater, it's freezing.",
+        "translation": "Включи обогреватель, очень холодно."
+      },
+      {
+        "text": "She turned on the computer and checked her email.",
+        "translation": "Она включила компьютер и проверила почту."
+      }
+    ],
+    "definition": "To switch on a device or light.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04cabd4feb72",
+    "itemType": "sense",
+    "lemma": "turn down",
+    "pos": "phrasal verb",
+    "ipa": "tˈɜːn dˈaʊn",
+    "translation": "отклонять, отказываться",
+    "examples": [
+      {
+        "text": "She turned down the job offer.",
+        "translation": "Она отклонила предложение о работе."
+      },
+      {
+        "text": "He turned down an invitation to the party.",
+        "translation": "Он отказался от приглашения на вечеринку."
+      }
+    ],
+    "definition": "To refuse or reject an offer, request, or invitation.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04cb437586c3",
+    "itemType": "sense",
+    "lemma": "turn up",
+    "pos": "phrasal verb",
+    "ipa": "tˈɜːn ˈʌp",
+    "translation": "появляться, приходить",
+    "examples": [
+      {
+        "text": "He turned up late for the meeting.",
+        "translation": "Он появился на встрече с опозданием."
+      },
+      {
+        "text": "She turned up at the party without an invitation.",
+        "translation": "Она пришла на вечеринку без приглашения."
+      }
+    ],
+    "definition": "To arrive somewhere, especially unexpectedly.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04cc1792f453",
+    "itemType": "sense",
+    "lemma": "wake up",
+    "pos": "phrasal verb",
+    "ipa": "wˈeɪk ˈʌp",
+    "translation": "просыпаться",
+    "examples": [
+      {
+        "text": "I woke up early this morning.",
+        "translation": "Я проснулся рано этим утром."
+      },
+      {
+        "text": "The noise woke up the whole house.",
+        "translation": "Шум разбудил весь дом."
+      }
+    ],
+    "definition": "To stop sleeping.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04cd50cee975",
+    "itemType": "sense",
+    "lemma": "grow up",
+    "pos": "phrasal verb",
+    "ipa": "ɡrˈəʊ ˈʌp",
+    "translation": "расти, становиться взрослым",
+    "examples": [
+      {
+        "text": "I grew up in a small town.",
+        "translation": "Я выросла в маленьком городке."
+      },
+      {
+        "text": "Children grow up so fast.",
+        "translation": "Дети так быстро растут."
+      }
+    ],
+    "definition": "To become an adult, or to spend your childhood somewhere.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04ceaebac126",
+    "itemType": "sense",
+    "lemma": "come in",
+    "pos": "phrasal verb",
+    "ipa": "kˈʌm ˈɪn",
+    "translation": "входить",
+    "examples": [
+      {
+        "text": "Please come in and take a seat.",
+        "translation": "Пожалуйста, входите и присаживайтесь."
+      },
+      {
+        "text": "She knocked and came in without waiting.",
+        "translation": "Она постучала и вошла, не дожидаясь ответа."
+      }
+    ],
+    "definition": "To enter a place.",
+    "cefr": "A1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04cf696c7925",
+    "itemType": "sense",
+    "lemma": "go out",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈəʊ ˈaʊt",
+    "translation": "выходить (гулять)",
+    "examples": [
+      {
+        "text": "Do you want to go out for dinner tonight?",
+        "translation": "Хочешь пойти куда-нибудь поужинать сегодня?"
+      },
+      {
+        "text": "We went out for a walk after lunch.",
+        "translation": "Мы вышли на прогулку после обеда."
+      }
+    ],
+    "definition": "To leave your home to go somewhere, especially for fun.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d007054284",
+    "itemType": "sense",
+    "lemma": "get on",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈɛt ˈɒn",
+    "translation": "садиться (в транспорт)",
+    "examples": [
+      {
+        "text": "We got on the bus at the main station.",
+        "translation": "Мы сели в автобус на главной станции."
+      },
+      {
+        "text": "Hurry up, the train is here, get on!",
+        "translation": "Поторопись, поезд здесь, заходи!"
+      }
+    ],
+    "definition": "To board a bus, train, plane, or other vehicle.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d1b71ebcb6",
+    "itemType": "sense",
+    "lemma": "get off",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈɛt ˈɒf",
+    "translation": "выходить (из транспорта)",
+    "examples": [
+      {
+        "text": "I need to get off at the next stop.",
+        "translation": "Мне нужно выйти на следующей остановке."
+      },
+      {
+        "text": "She got off the train and walked home.",
+        "translation": "Она вышла из поезда и пошла домой пешком."
+      }
+    ],
+    "definition": "To leave a bus, train, plane, or other vehicle.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d2e89dc0ad",
+    "itemType": "sense",
+    "lemma": "break down",
+    "pos": "phrasal verb",
+    "ipa": "brˈeɪk dˈaʊn",
+    "translation": "ломаться (о машине, технике)",
+    "examples": [
+      {
+        "text": "Our car broke down on the highway.",
+        "translation": "Наша машина сломалась на шоссе."
+      },
+      {
+        "text": "The printer keeps breaking down.",
+        "translation": "Принтер постоянно ломается."
+      }
+    ],
+    "definition": "To stop working because of a mechanical or electrical fault.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d30c3d6adc",
+    "itemType": "sense",
+    "lemma": "break up",
+    "pos": "phrasal verb",
+    "ipa": "brˈeɪk ˈʌp",
+    "translation": "расставаться (с партнёром)",
+    "examples": [
+      {
+        "text": "They broke up after three years together.",
+        "translation": "Они расстались после трёх лет отношений."
+      },
+      {
+        "text": "I heard she broke up with her boyfriend.",
+        "translation": "Я слышал, что она расста­лась со своим парнем."
+      }
+    ],
+    "definition": "To end a romantic relationship.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d482cf6c8d",
+    "itemType": "sense",
+    "lemma": "carry on",
+    "pos": "phrasal verb",
+    "ipa": "kˈæri ˈɒn",
+    "translation": "продолжать",
+    "examples": [
+      {
+        "text": "Carry on with your work, I'll come back later.",
+        "translation": "Продолжай работать, я вернусь позже."
+      },
+      {
+        "text": "Despite the rain, they carried on with the match.",
+        "translation": "Несмотря на дождь, они продолжили матч."
+      }
+    ],
+    "definition": "To continue doing something.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d531f7b2c2",
+    "itemType": "sense",
+    "lemma": "check in",
+    "pos": "phrasal verb",
+    "ipa": "tʃˈɛk ˈɪn",
+    "translation": "зарегистрироваться (в отеле, аэропорту)",
+    "examples": [
+      {
+        "text": "We checked in at the hotel around noon.",
+        "translation": "Мы зарегистрировались в отеле около полудня."
+      },
+      {
+        "text": "You can check in online before your flight.",
+        "translation": "Вы можете пройти онлайн-регистрацию перед рейсом."
+      }
+    ],
+    "definition": "To officially register your arrival at a hotel or airport.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d69ebb8352",
+    "itemType": "sense",
+    "lemma": "check out",
+    "pos": "phrasal verb",
+    "ipa": "tʃˈɛk ˈaʊt",
+    "translation": "выписаться (из отеля)",
+    "examples": [
+      {
+        "text": "We have to check out by eleven.",
+        "translation": "Нам нужно выписаться до одиннадцати."
+      },
+      {
+        "text": "He checked out of the hotel early in the morning.",
+        "translation": "Он выписался из отеля рано утром."
+      }
+    ],
+    "definition": "To officially leave a hotel after paying the bill.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d7222df849",
+    "itemType": "sense",
+    "lemma": "fill in",
+    "pos": "phrasal verb",
+    "ipa": "fˈɪl ˈɪn",
+    "translation": "заполнять (форму)",
+    "examples": [
+      {
+        "text": "Please fill in this form with your details.",
+        "translation": "Пожалуйста, заполните эту форму своими данными."
+      },
+      {
+        "text": "She filled in the application and sent it.",
+        "translation": "Она заполнила заявку и отправила её."
+      }
+    ],
+    "definition": "To complete a form by writing information in the spaces.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d88a2b0e57",
+    "itemType": "sense",
+    "lemma": "hang out",
+    "pos": "phrasal verb",
+    "ipa": "hˈæŋ ˈaʊt",
+    "translation": "проводить время (с друзьями)",
+    "examples": [
+      {
+        "text": "We usually hang out at the café after school.",
+        "translation": "Мы обычно проводим время в кафе после школы."
+      },
+      {
+        "text": "Do you want to hang out this weekend?",
+        "translation": "Хочешь провести время вместе в эти выходные?"
+      }
+    ],
+    "definition": "To spend time with someone in a relaxed way.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04d9c023416c",
+    "itemType": "sense",
+    "lemma": "hold on",
+    "pos": "phrasal verb",
+    "ipa": "hˈəʊld ˈɒn",
+    "translation": "подождать",
+    "examples": [
+      {
+        "text": "Hold on a second, I'll be right there.",
+        "translation": "Подожди секунду, я сейчас подойду."
+      },
+      {
+        "text": "Can you hold on while I check the schedule?",
+        "translation": "Можешь подождать, пока я проверю расписание?"
+      }
+    ],
+    "definition": "To wait for a short time.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04da7c18e173",
+    "itemType": "sense",
+    "lemma": "look forward to",
+    "pos": "phrasal verb",
+    "ipa": "lˈʊk fˈɔːwəd tˈuː",
+    "translation": "с нетерпением ждать",
+    "examples": [
+      {
+        "text": "I'm looking forward to the weekend.",
+        "translation": "Я с нетерпением жду выходных."
+      },
+      {
+        "text": "We look forward to seeing you again.",
+        "translation": "Мы с нетерпением ждём новой встречи с вами."
+      }
+    ],
+    "definition": "To feel happy and excited about something that is going to happen.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04dbf408b5eb",
+    "itemType": "sense",
+    "lemma": "look up",
+    "pos": "phrasal verb",
+    "ipa": "lˈʊk ˈʌp",
+    "translation": "искать (информацию)",
+    "examples": [
+      {
+        "text": "I looked up the word in a dictionary.",
+        "translation": "Я посмотрел это слово в словаре."
+      },
+      {
+        "text": "Let's look up the restaurant's opening hours.",
+        "translation": "Давай посмотрим время работы ресторана."
+      }
+    ],
+    "definition": "To search for information, for example in a book or online.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04dcd8040c7e",
+    "itemType": "sense",
+    "lemma": "look into",
+    "pos": "phrasal verb",
+    "ipa": "lˈʊk ˈɪntʊ",
+    "translation": "расследовать, изучать",
+    "examples": [
+      {
+        "text": "The police are looking into the incident.",
+        "translation": "Полиция расследует этот случай."
+      },
+      {
+        "text": "We should look into cheaper flight options.",
+        "translation": "Нам стоит изучить более дешёвые варианты авиабилетов."
+      }
+    ],
+    "definition": "To examine or investigate something carefully.",
+    "cefr": "B2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04dd013b1283",
+    "itemType": "sense",
+    "lemma": "make up",
+    "pos": "phrasal verb",
+    "ipa": "mˈeɪk ˈʌp",
+    "translation": "придумывать (историю)",
+    "examples": [
+      {
+        "text": "He made up an excuse for being late.",
+        "translation": "Он придумал оправдание, почему опоздал."
+      },
+      {
+        "text": "She makes up stories to entertain her kids.",
+        "translation": "Она придумывает истории, чтобы развлечь своих детей."
+      }
+    ],
+    "definition": "To invent a story or explanation, often one that is not true.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04de8fc59a2e",
+    "itemType": "sense",
+    "lemma": "put off",
+    "pos": "phrasal verb",
+    "ipa": "pˈʊt ˈɒf",
+    "translation": "откладывать",
+    "examples": [
+      {
+        "text": "Don't put off your homework until tonight.",
+        "translation": "Не откладывай домашнее задание до вечера."
+      },
+      {
+        "text": "They put off the trip because of the weather.",
+        "translation": "Они отложили поездку из-за погоды."
+      }
+    ],
+    "definition": "To delay doing something until a later time.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04df8de7ad7a",
+    "itemType": "sense",
+    "lemma": "put up with",
+    "pos": "phrasal verb",
+    "ipa": "pˈʊt ˈʌp wˈɪð",
+    "translation": "терпеть",
+    "examples": [
+      {
+        "text": "I can't put up with this noise anymore.",
+        "translation": "Я больше не могу терпеть этот шум."
+      },
+      {
+        "text": "She puts up with a lot at work.",
+        "translation": "Она многое терпит на работе."
+      }
+    ],
+    "definition": "To accept or tolerate something unpleasant without complaining.",
+    "cefr": "B2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e090894748",
+    "itemType": "sense",
+    "lemma": "run out of",
+    "pos": "phrasal verb",
+    "ipa": "rˈʌn ˈaʊt ˈɒv",
+    "translation": "закончиться (о запасах)",
+    "examples": [
+      {
+        "text": "We ran out of milk this morning.",
+        "translation": "У нас закончилось молоко этим утром."
+      },
+      {
+        "text": "The car ran out of fuel on the way home.",
+        "translation": "У машины закончилось топливо на обратном пути домой."
+      }
+    ],
+    "definition": "To have no more of something left.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e13df33564",
+    "itemType": "sense",
+    "lemma": "set up",
+    "pos": "phrasal verb",
+    "ipa": "sˈɛt ˈʌp",
+    "translation": "настраивать; основывать",
+    "examples": [
+      {
+        "text": "It took an hour to set up the new printer.",
+        "translation": "Настройка нового принтера заняла час."
+      },
+      {
+        "text": "They set up their own company last year.",
+        "translation": "В прошлом году они основали свою компанию."
+      }
+    ],
+    "definition": "To arrange or prepare something for use, or to start a business or organization.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e224c7872b",
+    "itemType": "sense",
+    "lemma": "show up",
+    "pos": "phrasal verb",
+    "ipa": "ʃˈəʊ ˈʌp",
+    "translation": "появляться, приходить",
+    "examples": [
+      {
+        "text": "He didn't show up for the interview.",
+        "translation": "Он не пришёл на собеседование."
+      },
+      {
+        "text": "She showed up ten minutes late.",
+        "translation": "Она пришла на десять минут позже."
+      }
+    ],
+    "definition": "To arrive at a place, especially when expected.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e3b74b4205",
+    "itemType": "sense",
+    "lemma": "sort out",
+    "pos": "phrasal verb",
+    "ipa": "sˈɔːt ˈaʊt",
+    "translation": "разобраться (с проблемой)",
+    "examples": [
+      {
+        "text": "We need to sort out this misunderstanding.",
+        "translation": "Нам нужно разобраться с этим недопониманием."
+      },
+      {
+        "text": "I'll sort out the tickets for the trip.",
+        "translation": "Я разберусь с билетами на поездку."
+      }
+    ],
+    "definition": "To deal with or solve a problem or situation.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e4048f269b",
+    "itemType": "sense",
+    "lemma": "take over",
+    "pos": "phrasal verb",
+    "ipa": "tˈeɪk ˈəʊvə",
+    "translation": "брать на себя управление",
+    "examples": [
+      {
+        "text": "She took over the project after her manager left.",
+        "translation": "Она взяла на себя проект после того, как её руководитель ушёл."
+      },
+      {
+        "text": "The new owners took over the restaurant last month.",
+        "translation": "Новые владельцы взяли на себя управление рестораном в прошлом месяце."
+      }
+    ],
+    "definition": "To take control of something, such as a business or task.",
+    "cefr": "B2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e5b5102eb5",
+    "itemType": "sense",
+    "lemma": "throw away",
+    "pos": "phrasal verb",
+    "ipa": "θrˈəʊ əwˈeɪ",
+    "translation": "выбрасывать",
+    "examples": [
+      {
+        "text": "Don't throw away these old photos.",
+        "translation": "Не выбрасывай эти старые фотографии."
+      },
+      {
+        "text": "He threw away the broken umbrella.",
+        "translation": "Он выбросил сломанный зонт."
+      }
+    ],
+    "definition": "To get rid of something you no longer need.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e6c3105c37",
+    "itemType": "sense",
+    "lemma": "try on",
+    "pos": "phrasal verb",
+    "ipa": "trˈaɪ ˈɒn",
+    "translation": "примерять (одежду)",
+    "examples": [
+      {
+        "text": "Can I try on this jacket?",
+        "translation": "Можно примерить эту куртку?"
+      },
+      {
+        "text": "She tried on several pairs of shoes.",
+        "translation": "Она примерила несколько пар туфель."
+      }
+    ],
+    "definition": "To put on clothing to see if it fits or how it looks.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e7a9b30077",
+    "itemType": "sense",
+    "lemma": "work out",
+    "pos": "phrasal verb",
+    "ipa": "wˈɜːk ˈaʊt",
+    "translation": "получаться, срабатывать",
+    "examples": [
+      {
+        "text": "I hope everything works out for you.",
+        "translation": "Надеюсь, у тебя всё получится."
+      },
+      {
+        "text": "Their plan didn't work out as expected.",
+        "translation": "Их план не сработал так, как ожидалось."
+      }
+    ],
+    "definition": "To happen or develop in a successful or particular way.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e817562cdb",
+    "itemType": "sense",
+    "lemma": "write down",
+    "pos": "phrasal verb",
+    "ipa": "rˈaɪt dˈaʊn",
+    "translation": "записывать",
+    "examples": [
+      {
+        "text": "Write down your address so I don't forget it.",
+        "translation": "Запиши свой адрес, чтобы я не забыл."
+      },
+      {
+        "text": "She wrote down every word the teacher said.",
+        "translation": "Она записала каждое слово, сказанное учителем."
+      }
+    ],
+    "definition": "To put information on paper so you can remember it.",
+    "cefr": "A2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04e93b52df3e",
+    "itemType": "sense",
+    "lemma": "come across",
+    "pos": "phrasal verb",
+    "ipa": "kˈʌm əkrˈɒs",
+    "translation": "случайно встретить, найти",
+    "examples": [
+      {
+        "text": "I came across an old photo while cleaning.",
+        "translation": "Я случайно нашёл старую фотографию во время уборки."
+      },
+      {
+        "text": "She came across an interesting article online.",
+        "translation": "Она случайно наткнулась на интересную статью в интернете."
+      }
+    ],
+    "definition": "To find or meet someone or something by chance.",
+    "cefr": "B2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04ead366f33c",
+    "itemType": "sense",
+    "lemma": "end up",
+    "pos": "phrasal verb",
+    "ipa": "ˈɛnd ˈʌp",
+    "translation": "в итоге оказаться",
+    "examples": [
+      {
+        "text": "We ended up staying at a different hotel.",
+        "translation": "В итоге мы остановились в другом отеле."
+      },
+      {
+        "text": "If you don't study, you'll end up failing the exam.",
+        "translation": "Если ты не будешь учиться, в итоге ты провалишь экзамен."
+      }
+    ],
+    "definition": "To finally be in a particular place or situation, especially one you did not plan.",
+    "cefr": "B2"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04eb813c1129",
+    "itemType": "sense",
+    "lemma": "figure out",
+    "pos": "phrasal verb",
+    "ipa": "fˈɪɡə ˈaʊt",
+    "translation": "понять, разобраться",
+    "examples": [
+      {
+        "text": "I can't figure out how this works.",
+        "translation": "Я не могу понять, как это работает."
+      },
+      {
+        "text": "She figured out the answer by herself.",
+        "translation": "Она сама разобралась с ответом."
+      }
+    ],
+    "definition": "To understand or solve something after thinking about it.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04ec0c204ece",
+    "itemType": "sense",
+    "lemma": "get along",
+    "pos": "phrasal verb",
+    "ipa": "ɡˈɛt əlˈɒŋ",
+    "translation": "ладить (с кем-то)",
+    "examples": [
+      {
+        "text": "My sister and I get along really well.",
+        "translation": "Мы с сестрой очень хорошо ладим."
+      },
+      {
+        "text": "He doesn't get along with his new neighbor.",
+        "translation": "Он не ладит со своим новым соседом."
+      }
+    ],
+    "definition": "To have a friendly relationship with someone.",
+    "cefr": "B1"
+  },
+  {
+    "itemId": "01a105a1-8089-769d-9089-04edbacaad5a",
+    "itemType": "sense",
+    "lemma": "keep up with",
+    "pos": "phrasal verb",
+    "ipa": "kˈiːp ˈʌp wˈɪð",
+    "translation": "не отставать, успевать за",
+    "examples": [
+      {
+        "text": "It's hard to keep up with all the news.",
+        "translation": "Трудно успевать следить за всеми новостями."
+      },
+      {
+        "text": "She ran fast to keep up with her friends.",
+        "translation": "Она бежала быстро, чтобы не отставать от друзей."
+      }
+    ],
+    "definition": "To move or progress at the same rate as someone or something else.",
+    "cefr": "B2"
   }
 ]

@@ -84,6 +84,74 @@
       {
         "lemma": "search",
         "importance": 2
+      },
+      {
+        "lemma": "copyright",
+        "importance": 2
+      },
+      {
+        "lemma": "disable",
+        "importance": 2
+      },
+      {
+        "lemma": "enable",
+        "importance": 2
+      },
+      {
+        "lemma": "link",
+        "importance": 2
+      },
+      {
+        "lemma": "filter",
+        "importance": 2
+      },
+      {
+        "lemma": "compress",
+        "importance": 2
+      },
+      {
+        "lemma": "compression",
+        "importance": 2
+      },
+      {
+        "lemma": "compute",
+        "importance": 2
+      },
+      {
+        "lemma": "browse",
+        "importance": 2
+      },
+      {
+        "lemma": "cursor",
+        "importance": 2
+      },
+      {
+        "lemma": "cyberspace",
+        "importance": 2
+      },
+      {
+        "lemma": "edit",
+        "importance": 2
+      },
+      {
+        "lemma": "conversion",
+        "importance": 2
+      },
+      {
+        "lemma": "duplicate",
+        "importance": 2
+      },
+      {
+        "lemma": "hard drive",
+        "importance": 2
+      },
+      {
+        "lemma": "hardware",
+        "importance": 2
+      },
+      {
+        "lemma": "input",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -120,6 +188,10 @@
       },
       {
         "lemma": "download",
+        "importance": 2
+      },
+      {
+        "lemma": "pin",
         "importance": 2
       }
     ],
@@ -284,6 +356,18 @@
       {
         "lemma": "functionality",
         "importance": 2
+      },
+      {
+        "lemma": "bracket",
+        "importance": 2
+      },
+      {
+        "lemma": "execute",
+        "importance": 2
+      },
+      {
+        "lemma": "integrate",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -383,6 +467,10 @@
       {
         "lemma": "scheduled",
         "importance": 2
+      },
+      {
+        "lemma": "conferencing",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -437,6 +525,10 @@
       {
         "lemma": "schedule",
         "importance": 2
+      },
+      {
+        "lemma": "tick",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -490,6 +582,10 @@
       {
         "lemma": "user",
         "importance": 2
+      },
+      {
+        "lemma": "engagement",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -518,6 +614,10 @@
       },
       {
         "lemma": "designer",
+        "importance": 2
+      },
+      {
+        "lemma": "interactive",
         "importance": 2
       }
     ],
@@ -575,6 +675,30 @@
       },
       {
         "lemma": "metric",
+        "importance": 2
+      },
+      {
+        "lemma": "calculate",
+        "importance": 2
+      },
+      {
+        "lemma": "calculation",
+        "importance": 2
+      },
+      {
+        "lemma": "categorize",
+        "importance": 2
+      },
+      {
+        "lemma": "category",
+        "importance": 2
+      },
+      {
+        "lemma": "classify",
+        "importance": 2
+      },
+      {
+        "lemma": "diagram",
         "importance": 2
       }
     ],
@@ -740,6 +864,30 @@
       {
         "lemma": "expert",
         "importance": 2
+      },
+      {
+        "lemma": "applicant",
+        "importance": 2
+      },
+      {
+        "lemma": "certification",
+        "importance": 2
+      },
+      {
+        "lemma": "certify",
+        "importance": 2
+      },
+      {
+        "lemma": "competence",
+        "importance": 2
+      },
+      {
+        "lemma": "competent",
+        "importance": 2
+      },
+      {
+        "lemma": "consultant",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -838,6 +986,14 @@
       },
       {
         "lemma": "gadget",
+        "importance": 2
+      },
+      {
+        "lemma": "follower",
+        "importance": 2
+      },
+      {
+        "lemma": "satellite",
         "importance": 2
       }
     ],

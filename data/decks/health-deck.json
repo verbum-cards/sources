@@ -133,6 +133,34 @@
       {
         "lemma": "symptomatic",
         "importance": 2
+      },
+      {
+        "lemma": "swollen",
+        "importance": 2
+      },
+      {
+        "lemma": "sore",
+        "importance": 2
+      },
+      {
+        "lemma": "flu",
+        "importance": 2
+      },
+      {
+        "lemma": "infection",
+        "importance": 2
+      },
+      {
+        "lemma": "heart attack",
+        "importance": 2
+      },
+      {
+        "lemma": "poison",
+        "importance": 2
+      },
+      {
+        "lemma": "poisonous",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -250,6 +278,46 @@
       {
         "lemma": "toe",
         "importance": 2
+      },
+      {
+        "lemma": "beard",
+        "importance": 2
+      },
+      {
+        "lemma": "breast",
+        "importance": 2
+      },
+      {
+        "lemma": "finger",
+        "importance": 2
+      },
+      {
+        "lemma": "foot",
+        "importance": 2
+      },
+      {
+        "lemma": "forehead",
+        "importance": 2
+      },
+      {
+        "lemma": "hip",
+        "importance": 2
+      },
+      {
+        "lemma": "nail",
+        "importance": 2
+      },
+      {
+        "lemma": "thumb",
+        "importance": 2
+      },
+      {
+        "lemma": "tongue",
+        "importance": 2
+      },
+      {
+        "lemma": "palm",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -310,6 +378,18 @@
       },
       {
         "lemma": "vitamin",
+        "importance": 2
+      },
+      {
+        "lemma": "aspirin",
+        "importance": 2
+      },
+      {
+        "lemma": "bandage",
+        "importance": 2
+      },
+      {
+        "lemma": "chemist",
         "importance": 2
       }
     ],
@@ -400,6 +480,10 @@
       },
       {
         "lemma": "filling",
+        "importance": 2
+      },
+      {
+        "lemma": "decay",
         "importance": 2
       }
     ],
@@ -539,6 +623,10 @@
       },
       {
         "lemma": "acute",
+        "importance": 2
+      },
+      {
+        "lemma": "scratch",
         "importance": 2
       }
     ],
@@ -755,6 +843,10 @@
       },
       {
         "lemma": "infant",
+        "importance": 2
+      },
+      {
+        "lemma": "diaper",
         "importance": 2
       }
     ],
@@ -989,6 +1081,14 @@
       },
       {
         "lemma": "health",
+        "importance": 2
+      },
+      {
+        "lemma": "nutritious",
+        "importance": 2
+      },
+      {
+        "lemma": "fiber",
         "importance": 2
       }
     ],

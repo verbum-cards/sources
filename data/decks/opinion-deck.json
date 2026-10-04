@@ -28,6 +28,34 @@
       {
         "lemma": "point of view",
         "importance": 2
+      },
+      {
+        "lemma": "viewpoint",
+        "importance": 2
+      },
+      {
+        "lemma": "deem",
+        "importance": 2
+      },
+      {
+        "lemma": "essentially",
+        "importance": 2
+      },
+      {
+        "lemma": "exaggerate",
+        "importance": 2
+      },
+      {
+        "lemma": "exaggeration",
+        "importance": 2
+      },
+      {
+        "lemma": "frankly",
+        "importance": 2
+      },
+      {
+        "lemma": "ironically",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -61,6 +89,10 @@
       {
         "lemma": "surely",
         "importance": 2
+      },
+      {
+        "lemma": "endorse",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -89,6 +121,14 @@
       },
       {
         "lemma": "argument",
+        "importance": 2
+      },
+      {
+        "lemma": "condemn",
+        "importance": 2
+      },
+      {
+        "lemma": "inaccurate",
         "importance": 2
       }
     ],
@@ -156,6 +196,38 @@
       {
         "lemma": "because",
         "importance": 2
+      },
+      {
+        "lemma": "factor",
+        "importance": 2
+      },
+      {
+        "lemma": "firstly",
+        "importance": 2
+      },
+      {
+        "lemma": "generalize",
+        "importance": 2
+      },
+      {
+        "lemma": "nevertheless",
+        "importance": 2
+      },
+      {
+        "lemma": "nonetheless",
+        "importance": 2
+      },
+      {
+        "lemma": "otherwise",
+        "importance": 2
+      },
+      {
+        "lemma": "imply",
+        "importance": 2
+      },
+      {
+        "lemma": "implication",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -216,6 +288,14 @@
       },
       {
         "lemma": "reassure",
+        "importance": 2
+      },
+      {
+        "lemma": "evidently",
+        "importance": 2
+      },
+      {
+        "lemma": "flip",
         "importance": 2
       }
     ],
@@ -282,6 +362,10 @@
       },
       {
         "lemma": "confusing",
+        "importance": 2
+      },
+      {
+        "lemma": "hint",
         "importance": 2
       }
     ],
@@ -390,6 +474,10 @@
       {
         "lemma": "resolution",
         "importance": 2
+      },
+      {
+        "lemma": "ideally",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -419,6 +507,10 @@
       {
         "lemma": "to reach an agreement",
         "importance": 2
+      },
+      {
+        "lemma": "concession",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -447,6 +539,18 @@
       },
       {
         "lemma": "politely",
+        "importance": 2
+      },
+      {
+        "lemma": "flaw",
+        "importance": 2
+      },
+      {
+        "lemma": "inadequate",
+        "importance": 2
+      },
+      {
+        "lemma": "ineffective",
         "importance": 2
       }
     ],
@@ -513,6 +617,10 @@
       },
       {
         "lemma": "but",
+        "importance": 2
+      },
+      {
+        "lemma": "counter",
         "importance": 2
       }
     ],
@@ -612,6 +720,66 @@
       },
       {
         "lemma": "actually",
+        "importance": 2
+      },
+      {
+        "lemma": "controversial",
+        "importance": 2
+      },
+      {
+        "lemma": "headline",
+        "importance": 2
+      },
+      {
+        "lemma": "politics",
+        "importance": 2
+      },
+      {
+        "lemma": "consensus",
+        "importance": 2
+      },
+      {
+        "lemma": "consent",
+        "importance": 2
+      },
+      {
+        "lemma": "controversy",
+        "importance": 2
+      },
+      {
+        "lemma": "buzz",
+        "importance": 2
+      },
+      {
+        "lemma": "digest",
+        "importance": 2
+      },
+      {
+        "lemma": "environment",
+        "importance": 2
+      },
+      {
+        "lemma": "environmentally",
+        "importance": 2
+      },
+      {
+        "lemma": "environmentally friendly",
+        "importance": 2
+      },
+      {
+        "lemma": "global warming",
+        "importance": 2
+      },
+      {
+        "lemma": "globally",
+        "importance": 2
+      },
+      {
+        "lemma": "journalism",
+        "importance": 2
+      },
+      {
+        "lemma": "influential",
         "importance": 2
       }
     ],

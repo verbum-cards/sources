@@ -622,6 +622,10 @@
       {
         "lemma": "passport control",
         "importance": 2
+      },
+      {
+        "lemma": "embassy",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1097,6 +1101,14 @@
       },
       {
         "lemma": "fire brigade",
+        "importance": 2
+      },
+      {
+        "lemma": "evacuate",
+        "importance": 2
+      },
+      {
+        "lemma": "shelter",
         "importance": 2
       }
     ],

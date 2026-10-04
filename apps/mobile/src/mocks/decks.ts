@@ -59,10 +59,12 @@ function resolveDeck(spec: DeckSpec): MockDeck {
 export const REVIEW_DECK_ID_A1_A2 = '0195d000-0000-7000-8000-00000000000a';
 export const REVIEW_DECK_ID_B1_B2 = '0195d000-0000-7000-8000-00000000000b';
 export const REVIEW_DECK_ID_C1_C2 = '0195d000-0000-7000-8000-00000000000c';
+export const REVIEW_DECK_ID_EXCLUDED = '0195d000-0000-7000-8000-00000000000d';
 export const REVIEW_DECK_IDS: readonly string[] = [
   REVIEW_DECK_ID_A1_A2,
   REVIEW_DECK_ID_B1_B2,
   REVIEW_DECK_ID_C1_C2,
+  REVIEW_DECK_ID_EXCLUDED,
 ];
 
 export const DECKS: readonly MockDeck[] = (decksData as readonly DeckSpec[]).map(resolveDeck);

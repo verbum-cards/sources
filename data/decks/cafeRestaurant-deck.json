@@ -285,6 +285,14 @@
       {
         "lemma": "drinkable",
         "importance": 2
+      },
+      {
+        "lemma": "straw",
+        "importance": 2
+      },
+      {
+        "lemma": "refreshments",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -333,6 +341,18 @@
       },
       {
         "lemma": "cocktail",
+        "importance": 2
+      },
+      {
+        "lemma": "drunk",
+        "importance": 2
+      },
+      {
+        "lemma": "bourbon",
+        "importance": 2
+      },
+      {
+        "lemma": "brewery",
         "importance": 2
       }
     ],
@@ -526,6 +546,10 @@
       {
         "lemma": "takeaway",
         "importance": 2
+      },
+      {
+        "lemma": "junk food",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -665,6 +689,14 @@
       {
         "lemma": "Is this dish spicy?",
         "importance": 2
+      },
+      {
+        "lemma": "disgusting",
+        "importance": 2
+      },
+      {
+        "lemma": "exquisite",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -722,6 +754,10 @@
       },
       {
         "lemma": "ethnic",
+        "importance": 2
+      },
+      {
+        "lemma": "exotic",
         "importance": 2
       }
     ],

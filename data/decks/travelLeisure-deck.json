@@ -52,6 +52,22 @@
       {
         "lemma": "cruise",
         "importance": 2
+      },
+      {
+        "lemma": "voyage",
+        "importance": 2
+      },
+      {
+        "lemma": "ferry",
+        "importance": 2
+      },
+      {
+        "lemma": "ferryboat",
+        "importance": 2
+      },
+      {
+        "lemma": "getaway",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -162,6 +178,26 @@
       {
         "lemma": "security",
         "importance": 2
+      },
+      {
+        "lemma": "airline",
+        "importance": 2
+      },
+      {
+        "lemma": "depart",
+        "importance": 2
+      },
+      {
+        "lemma": "terminal",
+        "importance": 2
+      },
+      {
+        "lemma": "runway",
+        "importance": 2
+      },
+      {
+        "lemma": "queue",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -231,6 +267,10 @@
       {
         "lemma": "landing",
         "importance": 2
+      },
+      {
+        "lemma": "wing",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -287,6 +327,14 @@
       },
       {
         "lemma": "ID card",
+        "importance": 2
+      },
+      {
+        "lemma": "identity card",
+        "importance": 2
+      },
+      {
+        "lemma": "identification",
         "importance": 2
       }
     ],
@@ -353,6 +401,10 @@
       {
         "lemma": "lobby",
         "importance": 2
+      },
+      {
+        "lemma": "facilities",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -385,6 +437,10 @@
       },
       {
         "lemma": "roommate",
+        "importance": 2
+      },
+      {
+        "lemma": "studio",
         "importance": 2
       }
     ],
@@ -442,6 +498,22 @@
       },
       {
         "lemma": "itinerary",
+        "importance": 2
+      },
+      {
+        "lemma": "resort",
+        "importance": 2
+      },
+      {
+        "lemma": "safari",
+        "importance": 2
+      },
+      {
+        "lemma": "expedition",
+        "importance": 2
+      },
+      {
+        "lemma": "grand",
         "importance": 2
       }
     ],
@@ -608,6 +680,14 @@
       },
       {
         "lemma": "underwater",
+        "importance": 2
+      },
+      {
+        "lemma": "windsurfing",
+        "importance": 2
+      },
+      {
+        "lemma": "dip",
         "importance": 2
       }
     ],
@@ -858,6 +938,290 @@
       {
         "lemma": "recycle",
         "importance": 2
+      },
+      {
+        "lemma": "cave",
+        "importance": 2
+      },
+      {
+        "lemma": "cliff",
+        "importance": 2
+      },
+      {
+        "lemma": "coastal",
+        "importance": 2
+      },
+      {
+        "lemma": "ecology",
+        "importance": 2
+      },
+      {
+        "lemma": "ecosystem",
+        "importance": 2
+      },
+      {
+        "lemma": "ecological",
+        "importance": 2
+      },
+      {
+        "lemma": "atmosphere",
+        "importance": 2
+      },
+      {
+        "lemma": "conservation",
+        "importance": 2
+      },
+      {
+        "lemma": "climate",
+        "importance": 2
+      },
+      {
+        "lemma": "canal",
+        "importance": 2
+      },
+      {
+        "lemma": "environmental",
+        "importance": 2
+      },
+      {
+        "lemma": "crop",
+        "importance": 2
+      },
+      {
+        "lemma": "cultivate",
+        "importance": 2
+      },
+      {
+        "lemma": "eco",
+        "importance": 2
+      },
+      {
+        "lemma": "rainfall",
+        "importance": 2
+      },
+      {
+        "lemma": "reef",
+        "importance": 2
+      },
+      {
+        "lemma": "tide",
+        "importance": 2
+      },
+      {
+        "lemma": "sunrise",
+        "importance": 2
+      },
+      {
+        "lemma": "sunset",
+        "importance": 2
+      },
+      {
+        "lemma": "thunder",
+        "importance": 2
+      },
+      {
+        "lemma": "thunderous",
+        "importance": 2
+      },
+      {
+        "lemma": "stormy",
+        "importance": 2
+      },
+      {
+        "lemma": "oxygen",
+        "importance": 2
+      },
+      {
+        "lemma": "steep",
+        "importance": 2
+      },
+      {
+        "lemma": "shallow",
+        "importance": 2
+      },
+      {
+        "lemma": "geology",
+        "importance": 2
+      },
+      {
+        "lemma": "habitat",
+        "importance": 2
+      },
+      {
+        "lemma": "horizon",
+        "importance": 2
+      },
+      {
+        "lemma": "jungle",
+        "importance": 2
+      },
+      {
+        "lemma": "mud",
+        "importance": 2
+      },
+      {
+        "lemma": "moss",
+        "importance": 2
+      },
+      {
+        "lemma": "mount",
+        "importance": 2
+      },
+      {
+        "lemma": "lightning",
+        "importance": 2
+      },
+      {
+        "lemma": "frost",
+        "importance": 2
+      },
+      {
+        "lemma": "isle",
+        "importance": 2
+      },
+      {
+        "lemma": "agricultural",
+        "importance": 2
+      },
+      {
+        "lemma": "extinct",
+        "importance": 2
+      },
+      {
+        "lemma": "volcano",
+        "importance": 2
+      },
+      {
+        "lemma": "waterfall",
+        "importance": 2
+      },
+      {
+        "lemma": "wetland",
+        "importance": 2
+      },
+      {
+        "lemma": "tornado",
+        "importance": 2
+      },
+      {
+        "lemma": "tropical",
+        "importance": 2
+      },
+      {
+        "lemma": "farming",
+        "importance": 2
+      },
+      {
+        "lemma": "farmland",
+        "importance": 2
+      },
+      {
+        "lemma": "greenhouse",
+        "importance": 2
+      },
+      {
+        "lemma": "flock",
+        "importance": 2
+      },
+      {
+        "lemma": "hut",
+        "importance": 2
+      },
+      {
+        "lemma": "forecast",
+        "importance": 2
+      },
+      {
+        "lemma": "weather forecast",
+        "importance": 2
+      },
+      {
+        "lemma": "pond",
+        "importance": 2
+      },
+      {
+        "lemma": "recycled",
+        "importance": 2
+      },
+      {
+        "lemma": "recycling",
+        "importance": 2
+      },
+      {
+        "lemma": "pollutant",
+        "importance": 2
+      },
+      {
+        "lemma": "altitude",
+        "importance": 2
+      },
+      {
+        "lemma": "ash",
+        "importance": 2
+      },
+      {
+        "lemma": "barren",
+        "importance": 2
+      },
+      {
+        "lemma": "blossom",
+        "importance": 2
+      },
+      {
+        "lemma": "coastline",
+        "importance": 2
+      },
+      {
+        "lemma": "climate change",
+        "importance": 2
+      },
+      {
+        "lemma": "carbon footprint",
+        "importance": 2
+      },
+      {
+        "lemma": "bud",
+        "importance": 2
+      },
+      {
+        "lemma": "maple",
+        "importance": 2
+      },
+      {
+        "lemma": "cascade",
+        "importance": 2
+      },
+      {
+        "lemma": "crater",
+        "importance": 2
+      },
+      {
+        "lemma": "creek",
+        "importance": 2
+      },
+      {
+        "lemma": "deforestation",
+        "importance": 2
+      },
+      {
+        "lemma": "dawn",
+        "importance": 2
+      },
+      {
+        "lemma": "drought",
+        "importance": 2
+      },
+      {
+        "lemma": "erupt",
+        "importance": 2
+      },
+      {
+        "lemma": "eruption",
+        "importance": 2
+      },
+      {
+        "lemma": "gorge",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -882,6 +1246,10 @@
       },
       {
         "lemma": "souvenir",
+        "importance": 2
+      },
+      {
+        "lemma": "antique",
         "importance": 2
       }
     ],
@@ -1061,6 +1429,14 @@
       },
       {
         "lemma": "inexperienced",
+        "importance": 2
+      },
+      {
+        "lemma": "fabulous",
+        "importance": 2
+      },
+      {
+        "lemma": "indescribable",
         "importance": 2
       }
     ],

@@ -52,6 +52,10 @@
       {
         "lemma": "scale",
         "importance": 2
+      },
+      {
+        "lemma": "aerobics",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -105,6 +109,14 @@
       {
         "lemma": "perform",
         "importance": 2
+      },
+      {
+        "lemma": "judo",
+        "importance": 2
+      },
+      {
+        "lemma": "gymnastic",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -157,6 +169,18 @@
       },
       {
         "lemma": "tracksuit",
+        "importance": 2
+      },
+      {
+        "lemma": "dash",
+        "importance": 2
+      },
+      {
+        "lemma": "endurance",
+        "importance": 2
+      },
+      {
+        "lemma": "race",
         "importance": 2
       }
     ],
@@ -284,6 +308,10 @@
       {
         "lemma": "lane",
         "importance": 2
+      },
+      {
+        "lemma": "diving",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -364,6 +392,46 @@
       },
       {
         "lemma": "medal",
+        "importance": 2
+      },
+      {
+        "lemma": "beat",
+        "importance": 2
+      },
+      {
+        "lemma": "compete",
+        "importance": 2
+      },
+      {
+        "lemma": "competitive",
+        "importance": 2
+      },
+      {
+        "lemma": "defeat",
+        "importance": 2
+      },
+      {
+        "lemma": "defend",
+        "importance": 2
+      },
+      {
+        "lemma": "defender",
+        "importance": 2
+      },
+      {
+        "lemma": "defense",
+        "importance": 2
+      },
+      {
+        "lemma": "handball",
+        "importance": 2
+      },
+      {
+        "lemma": "foul",
+        "importance": 2
+      },
+      {
+        "lemma": "whistle",
         "importance": 2
       }
     ],
@@ -478,6 +546,38 @@
       {
         "lemma": "Olympic",
         "importance": 2
+      },
+      {
+        "lemma": "champion",
+        "importance": 2
+      },
+      {
+        "lemma": "boxing",
+        "importance": 2
+      },
+      {
+        "lemma": "spectator",
+        "importance": 2
+      },
+      {
+        "lemma": "athletics",
+        "importance": 2
+      },
+      {
+        "lemma": "arena",
+        "importance": 2
+      },
+      {
+        "lemma": "disqualify",
+        "importance": 2
+      },
+      {
+        "lemma": "formidable",
+        "importance": 2
+      },
+      {
+        "lemma": "victory",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -574,6 +674,14 @@
       },
       {
         "lemma": "cycling",
+        "importance": 2
+      },
+      {
+        "lemma": "cyclist",
+        "importance": 2
+      },
+      {
+        "lemma": "gear",
         "importance": 2
       }
     ],
@@ -781,6 +889,62 @@
       {
         "lemma": "lyric",
         "importance": 2
+      },
+      {
+        "lemma": "DJ",
+        "importance": 2
+      },
+      {
+        "lemma": "choir",
+        "importance": 2
+      },
+      {
+        "lemma": "compose",
+        "importance": 2
+      },
+      {
+        "lemma": "disc jockey",
+        "importance": 2
+      },
+      {
+        "lemma": "jazz",
+        "importance": 2
+      },
+      {
+        "lemma": "trumpet",
+        "importance": 2
+      },
+      {
+        "lemma": "flute",
+        "importance": 2
+      },
+      {
+        "lemma": "cellist",
+        "importance": 2
+      },
+      {
+        "lemma": "cello",
+        "importance": 2
+      },
+      {
+        "lemma": "ballad",
+        "importance": 2
+      },
+      {
+        "lemma": "orchestra",
+        "importance": 2
+      },
+      {
+        "lemma": "funk",
+        "importance": 2
+      },
+      {
+        "lemma": "funky",
+        "importance": 2
+      },
+      {
+        "lemma": "karaoke",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -837,6 +1001,14 @@
       },
       {
         "lemma": "imagery",
+        "importance": 2
+      },
+      {
+        "lemma": "capture",
+        "importance": 2
+      },
+      {
+        "lemma": "blur",
         "importance": 2
       }
     ],
@@ -926,6 +1098,14 @@
       },
       {
         "lemma": "cartoon",
+        "importance": 2
+      },
+      {
+        "lemma": "pottery",
+        "importance": 2
+      },
+      {
+        "lemma": "sculpture",
         "importance": 2
       }
     ],
@@ -1156,6 +1336,10 @@
       {
         "lemma": "movement",
         "importance": 2
+      },
+      {
+        "lemma": "gracefulness",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -1224,6 +1408,22 @@
       },
       {
         "lemma": "seedling",
+        "importance": 2
+      },
+      {
+        "lemma": "daisy",
+        "importance": 2
+      },
+      {
+        "lemma": "dandelion",
+        "importance": 2
+      },
+      {
+        "lemma": "blooming",
+        "importance": 2
+      },
+      {
+        "lemma": "wither",
         "importance": 2
       }
     ],
@@ -1335,6 +1535,10 @@
       },
       {
         "lemma": "blackboard",
+        "importance": 2
+      },
+      {
+        "lemma": "pupil",
         "importance": 2
       }
     ],

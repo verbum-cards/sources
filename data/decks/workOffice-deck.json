@@ -73,6 +73,22 @@
       {
         "lemma": "desktop",
         "importance": 2
+      },
+      {
+        "lemma": "workplace",
+        "importance": 2
+      },
+      {
+        "lemma": "clerical",
+        "importance": 2
+      },
+      {
+        "lemma": "employee",
+        "importance": 2
+      },
+      {
+        "lemma": "headquarters",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -261,6 +277,10 @@
       {
         "lemma": "attendance",
         "importance": 2
+      },
+      {
+        "lemma": "facilitate",
+        "importance": 2
       }
     ],
     "importance": 2
@@ -301,6 +321,10 @@
       },
       {
         "lemma": "record",
+        "importance": 2
+      },
+      {
+        "lemma": "guideline",
         "importance": 2
       }
     ],
@@ -399,6 +423,10 @@
       },
       {
         "lemma": "supervisor",
+        "importance": 2
+      },
+      {
+        "lemma": "deputy",
         "importance": 2
       }
     ],
@@ -531,6 +559,26 @@
       },
       {
         "lemma": "award",
+        "importance": 2
+      },
+      {
+        "lemma": "ceremony",
+        "importance": 2
+      },
+      {
+        "lemma": "firework",
+        "importance": 2
+      },
+      {
+        "lemma": "sponsor",
+        "importance": 2
+      },
+      {
+        "lemma": "catering",
+        "importance": 2
+      },
+      {
+        "lemma": "convention",
         "importance": 2
       }
     ],
